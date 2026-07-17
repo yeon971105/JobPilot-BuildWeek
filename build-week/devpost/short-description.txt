@@ -1,0 +1,1 @@
+JobPilot is an evidence-first AI job search assistant that explains required qualifications, candidate evidence, practical constraints, and transparent deterministic Fit Score mathematics before a user applies.

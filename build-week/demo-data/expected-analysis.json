@@ -1,0 +1,24 @@
+{
+  "version": "jobpilot-build-week-demo-v1",
+  "scorerVersion": "jobpilot-ai-fit-v2.2-demo",
+  "candidateEvidenceIds": ["e-aria-python", "e-aria-data", "e-aria-ai", "e-aria-customer", "e-aria-project"],
+  "jobs": {
+    "northstar-applied-ai-solutions-engineer": {
+      "fitScore": 86,
+      "evidenceQuality": 96,
+      "scoreRange": [78, 91],
+      "allocation": { "coreMaximum": 85, "coreEarned": 73, "preferredMaximum": 12, "preferredEarned": 10, "niceMaximum": 3, "niceEarned": 3, "totalMaximum": 100, "hiddenAdjustment": 0 },
+      "matches": [
+        { "requirementId": "r-ns-python", "evidenceId": "e-aria-python", "status": "MATCHED", "earned": 25, "maximum": 25 },
+        { "requirementId": "r-ns-data", "evidenceId": "e-aria-data", "status": "MATCHED", "earned": 24, "maximum": 25 },
+        { "requirementId": "r-ns-customer", "evidenceId": "e-aria-customer", "status": "MATCHED", "earned": 24, "maximum": 35 },
+        { "requirementId": "r-ns-years", "evidenceId": "e-aria-project", "status": "PARTIAL", "earned": 10, "maximum": 12 },
+        { "requirementId": "r-ns-mlops", "evidenceId": "e-aria-ai", "status": "MATCHED", "earned": 3, "maximum": 3 }
+      ],
+      "strategyFixture": {
+        "recommendation": "APPLY",
+        "rationale": "Strong evidence covers the central Python, data, and customer-delivery requirements; validate the depth of delivery experience before applying."
+      }
+    }
+  }
+}

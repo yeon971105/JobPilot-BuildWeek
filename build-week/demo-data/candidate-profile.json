@@ -1,0 +1,15 @@
+{
+  "id": "demo-candidate-aria",
+  "synthetic": true,
+  "name": "Aria Chen",
+  "headline": "Data and AI solutions engineer",
+  "summary": "Synthetic demo profile. Aria builds data products, Python services, and practical AI workflows for operations teams.",
+  "evidence": [
+    { "id": "e-aria-python", "label": "Python and APIs", "text": "Built Python services and REST integrations for operational data products." },
+    { "id": "e-aria-data", "label": "Data platforms", "text": "Designed SQL transformations and reliable data pipelines for analytics teams." },
+    { "id": "e-aria-ai", "label": "Applied AI", "text": "Prototyped retrieval-assisted internal tools with evaluation checks and human review." },
+    { "id": "e-aria-customer", "label": "Customer enablement", "text": "Led technical workshops that translated stakeholder needs into implementation plans." },
+    { "id": "e-aria-project", "label": "Project evidence", "text": "Created a synthetic incident-triage assistant with documented limitations and rollback steps." }
+  ],
+  "constraints": { "workModes": ["REMOTE", "HYBRID"], "travel": "Up to 15%", "location": "San Francisco Bay Area" }
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "northstar-applied-ai-solutions-engineer",
+    "company": "Northstar Labs",
+    "title": "Applied AI Solutions Engineer",
+    "location": "San Francisco, CA",
+    "workModes": ["HYBRID", "REMOTE"],
+    "travel": "Up to 15% for customer workshops.",
+    "summary": "Design practical AI-enabled workflows with customer teams and turn operational data into reliable products.",
+    "responsibilities": ["Prototype evaluation-aware AI workflows.", "Build Python integrations with customer data systems.", "Lead technical discovery and enablement sessions."],
+    "requirements": [
+      { "id": "r-ns-python", "label": "Python services", "class": "CORE", "evidence": "Required: build production-quality Python integrations." },
+      { "id": "r-ns-data", "label": "Data pipeline design", "class": "CORE", "evidence": "Required: experience with SQL and operational data pipelines." },
+      { "id": "r-ns-customer", "label": "Customer-facing delivery", "class": "CORE", "evidence": "Required: communicate technical plans with customer stakeholders." },
+      { "id": "r-ns-years", "label": "3+ years relevant delivery", "class": "PREFERRED", "evidence": "Preferred: three or more years delivering technical products." },
+      { "id": "r-ns-mlops", "label": "Evaluation or MLOps", "class": "NICE_TO_HAVE", "evidence": "Nice to have: model evaluation or MLOps experience." }
+    ]
+  },
+  {
+    "id": "alder-data-platform-engineer",
+    "company": "Alder Systems",
+    "title": "Data Platform Engineer",
+    "location": "Oakland, CA",
+    "workModes": ["HYBRID"],
+    "travel": "No routine travel.",
+    "summary": "Build dependable data foundations for product analytics and internal operations.",
+    "responsibilities": ["Own transformations and data quality checks.", "Develop scalable SQL and Python pipelines.", "Partner with analysts on trustworthy metrics."],
+    "requirements": [
+      { "id": "r-as-sql", "label": "Advanced SQL", "class": "CORE", "evidence": "Required: design and optimize analytical SQL." },
+      { "id": "r-as-python", "label": "Python automation", "class": "CORE", "evidence": "Required: build maintainable Python data services." },
+      { "id": "r-as-quality", "label": "Data quality", "class": "CORE", "evidence": "Required: establish tests and observability for pipelines." },
+      { "id": "r-as-years", "label": "4+ years platform work", "class": "PREFERRED", "evidence": "Preferred: four or more years in data platform engineering." }
+    ]
+  },
+  {
+    "id": "harbor-product-data-analyst",
+    "company": "Harbor Analytics",
+    "title": "Product Data Analyst",
+    "location": "Remote — United States",
+    "workModes": ["REMOTE"],
+    "travel": "Quarterly team gathering.",
+    "summary": "Turn product questions into clear measurements and decisions for a growing analytics product.",
+    "responsibilities": ["Define product metrics.", "Build analyses with stakeholders.", "Explain findings with plain-language narratives."],
+    "requirements": [
+      { "id": "r-ha-sql", "label": "SQL analysis", "class": "CORE", "evidence": "Required: use SQL to answer product questions." },
+      { "id": "r-ha-communication", "label": "Decision communication", "class": "CORE", "evidence": "Required: explain analysis to non-technical partners." },
+      { "id": "r-ha-experiment", "label": "Experiment design", "class": "PREFERRED", "evidence": "Preferred: design or interpret product experiments." }
+    ]
+  },
+  {
+    "id": "meridian-ml-infrastructure-engineer",
+    "company": "Meridian Robotics",
+    "title": "Machine Learning Infrastructure Engineer",
+    "location": "San Mateo, CA",
+    "workModes": ["ONSITE"],
+    "travel": "Up to 10% for field validation.",
+    "summary": "Develop reproducible compute, evaluation, and deployment foundations for robotics learning systems.",
+    "responsibilities": ["Improve model training reliability.", "Build evaluation pipelines.", "Collaborate with robotics engineers in person."],
+    "requirements": [
+      { "id": "r-mr-python", "label": "Python systems", "class": "CORE", "evidence": "Required: production Python for ML infrastructure." },
+      { "id": "r-mr-ml", "label": "ML infrastructure", "class": "CORE", "evidence": "Required: experience with model training or evaluation systems." },
+      { "id": "r-mr-onsite", "label": "Onsite collaboration", "class": "CORE", "evidence": "Required: work onsite with hardware and robotics teams." },
+      { "id": "r-mr-kubernetes", "label": "Kubernetes", "class": "PREFERRED", "evidence": "Preferred: Kubernetes operations." }
+    ]
+  },
+  {
+    "id": "juniper-customer-ai-enablement-lead",
+    "company": "Juniper Works",
+    "title": "Customer AI Enablement Lead",
+    "location": "Remote — United States",
+    "workModes": ["REMOTE", "HYBRID"],
+    "travel": "Up to 25% for customer planning sessions.",
+    "summary": "Help customers adopt useful AI workflows with clear expectations, training, and measurable outcomes.",
+    "responsibilities": ["Lead discovery workshops.", "Create adoption plans.", "Translate product capabilities into safe customer workflows."],
+    "requirements": [
+      { "id": "r-jw-customer", "label": "Customer enablement", "class": "CORE", "evidence": "Required: lead technical customer workshops." },
+      { "id": "r-jw-ai", "label": "Applied AI workflows", "class": "CORE", "evidence": "Required: explain practical AI capabilities and limitations." },
+      { "id": "r-jw-travel", "label": "Travel availability", "class": "CORE", "evidence": "Required: travel up to 25%." },
+      { "id": "r-jw-education", "label": "Training design", "class": "PREFERRED", "evidence": "Preferred: create learning or enablement materials." }
+    ]
+  },
+  {
+    "id": "mosaic-junior-software-engineer",
+    "company": "Mosaic Compute",
+    "title": "Junior Software Engineer",
+    "location": "Berkeley, CA",
+    "workModes": ["HYBRID"],
+    "travel": "No travel.",
+    "summary": "Join a supportive product engineering team building reliable developer tools.",
+    "responsibilities": ["Ship focused TypeScript and Python improvements.", "Learn through pairing and code review.", "Document decisions and operational behavior."],
+    "requirements": [
+      { "id": "r-mc-code", "label": "Software fundamentals", "class": "CORE", "evidence": "Required: demonstrate clear programming fundamentals." },
+      { "id": "r-mc-learning", "label": "Learning mindset", "class": "CORE", "evidence": "Required: learn through feedback and collaboration." },
+      { "id": "r-mc-degree", "label": "Degree or equivalent projects", "class": "CORE", "evidence": "Required: degree in a related field or equivalent project evidence." },
+      { "id": "r-mc-typescript", "label": "TypeScript", "class": "NICE_TO_HAVE", "evidence": "Nice to have: TypeScript experience." }
+    ]
+  }
+]

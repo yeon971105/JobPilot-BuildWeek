@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:15,000
+Job seekers spend hours reading listings, then receive opaque AI scores.
+
+2
+00:00:15,000 --> 00:00:35,000
+JobPilot is an evidence-first assistant: know why a job fits before you apply.
+
+3
+00:00:35,000 --> 00:01:00,000
+This no-login demo uses only fictional roles and a fictional candidate.
+
+4
+00:01:00,000 --> 00:01:40,000
+Each displayed match links a named requirement to candidate evidence. The score is deterministic and reconciles to 100 visible points.
+
+5
+00:01:40,000 --> 00:02:10,000
+GPT-5.6 creates a grounded application strategy with requirement and evidence IDs. It does not calculate the score or submit an application.
+
+6
+00:02:10,000 --> 00:02:35,000
+Codex helped implement the demo, provider abstraction, validation, and release package. Private Local mode remains a Beta privacy-first option.
+
+7
+00:02:35,000 --> 00:02:45,000
+JobPilot helps people decide where to spend limited application time before they apply.
