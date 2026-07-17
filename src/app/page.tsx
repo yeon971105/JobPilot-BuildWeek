@@ -1,5 +1,2 @@
-import { DemoHome } from "@/components/demo/demo-shell";
-
-export default function Home() {
-  return <DemoHome />;
-}
+import { LandingPage } from "@/components/demo/landing";
+export default function Page() { return <LandingPage />; }

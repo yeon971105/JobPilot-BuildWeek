@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "jobpilot.demo-fixture-contract.v2.2",
+  "frozenAt": "2026-07-17T23:24:47.730Z",
+  "syntheticCandidate": true,
+  "candidateProfileId": "synthetic-demo-profile-v22",
+  "candidateHash": "45d7d28fbb1ca9fc2a135e48979fd048e96baa477d21ed68023356b4535ad6ab",
+  "jobCount": 6,
+  "jobHashes": {
+    "northstar-applied-ai-solutions-engineer": "b874e8c44a1e8cb610bd2138eff0aa95099d17c3a8938438ec309fe234d9d135",
+    "alder-data-platform-engineer": "996dc1344ae8aada52948019ac4f835f43171f99d6d687b58a18629e8f8dda63",
+    "harbor-product-data-analyst": "7900c52640648484e7ddf5ec9eb69d61f51d170baff664715465b4949e7fea88",
+    "meridian-ml-infrastructure-engineer": "f6eeb9b6e6cc118b68f40881848ab773e11522b8cfb58af704c2f44624065b58",
+    "juniper-customer-ai-enablement-lead": "a714292e76260973f2f2ef3affb8a5743a6738301b7a2ea41ee1bb9107de6334",
+    "mosaic-junior-software-engineer": "068c48806f36eef021128f0010cff5e21df9e53740a6ced9f33b67afd403468d"
+  },
+  "routes": [
+    "/",
+    "/demo",
+    "/demo/jobs",
+    "/demo/jobs/[id]",
+    "/demo/tracker",
+    "/demo/trust",
+    "/about/build-week"
+  ],
+  "trackerStorage": "browser-local",
+  "productionDataRequired": false
+}

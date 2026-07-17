@@ -1,39 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const sans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const mono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const serif = Cormorant_Garamond({ variable: "--font-editorial-serif", subsets: ["latin"], weight: ["500", "600", "700"] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const metadata: Metadata = { title: { default: "JobPilot — Evidence-First AI Job Search", template: "%s · JobPilot" }, description: "Know why a job fits before you apply. Inspect evidence, exact score mathematics, constraints, and a grounded application strategy." };
 
-export const metadata: Metadata = {
-  title: {
-    default: "JobPilot · Bay Area job matches",
-    template: "%s · JobPilot",
-  },
-  description:
-    "Upload your resume and get current Bay Area jobs ranked by AI fit.",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
-  );
-}
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" data-scroll-behavior="smooth" className={`${sans.variable} ${mono.variable} ${serif.variable}`}><body>{children}</body></html>; }

@@ -1,15 +1,49 @@
 {
-  "id": "demo-candidate-aria",
+  "id": "synthetic-demo-profile-v22",
   "synthetic": true,
-  "name": "Aria Chen",
-  "headline": "Data and AI solutions engineer",
-  "summary": "Synthetic demo profile. Aria builds data products, Python services, and practical AI workflows for operations teams.",
-  "evidence": [
-    { "id": "e-aria-python", "label": "Python and APIs", "text": "Built Python services and REST integrations for operational data products." },
-    { "id": "e-aria-data", "label": "Data platforms", "text": "Designed SQL transformations and reliable data pipelines for analytics teams." },
-    { "id": "e-aria-ai", "label": "Applied AI", "text": "Prototyped retrieval-assisted internal tools with evaluation checks and human review." },
-    { "id": "e-aria-customer", "label": "Customer enablement", "text": "Led technical workshops that translated stakeholder needs into implementation plans." },
-    { "id": "e-aria-project", "label": "Project evidence", "text": "Created a synthetic incident-triage assistant with documented limitations and rollback steps." }
+  "displayName": "Demo Candidate A",
+  "label": "Synthetic demo profile",
+  "headline": "Data and applied AI solutions engineer",
+  "summary": "A fictional profile created only for the JobPilot judging flow. It contains no real person's identity, contact details, resume, education record, or employment history.",
+  "roles": [
+    {
+      "id": "role-synthetic-1",
+      "title": "Solutions Engineer",
+      "organization": "Fictional Product Studio",
+      "startMonth": "2023-01",
+      "endMonth": "2025-12",
+      "domains": ["APPLIED_AI", "CUSTOMER_ENABLEMENT", "PYTHON_ENGINEERING"]
+    },
+    {
+      "id": "role-synthetic-2",
+      "title": "Data Engineer",
+      "organization": "Fictional Data Cooperative",
+      "startMonth": "2021-07",
+      "endMonth": "2023-06",
+      "domains": ["DATA_PLATFORM", "SQL_ANALYTICS", "PYTHON_ENGINEERING"]
+    }
   ],
-  "constraints": { "workModes": ["REMOTE", "HYBRID"], "travel": "Up to 15%", "location": "San Francisco Bay Area" }
+  "projects": [
+    {
+      "id": "project-synthetic-1",
+      "name": "Evidence-aware support assistant",
+      "startMonth": "2025-02",
+      "endMonth": "2025-08",
+      "domains": ["RETRIEVAL", "MODEL_EVALUATION"]
+    }
+  ],
+  "evidence": [
+    { "id": "e-python", "label": "Modern Python engineering", "text": "Built typed Python services, REST integrations, automated tests, and documented rollback paths for fictional operational products.", "capabilities": ["MODERN_PYTHON", "API_INTEGRATION"] },
+    { "id": "e-data", "label": "Data platform delivery", "text": "Designed SQL transformations, monitored data pipelines, and data-quality checks for a fictional analytics team.", "capabilities": ["DATA_PLATFORM", "SQL", "DATA_QUALITY"] },
+    { "id": "e-ai", "label": "Applied AI and retrieval", "text": "Prototyped a retrieval-assisted workflow with embedding indexes, evaluation datasets, human review, and documented limitations.", "capabilities": ["APPLIED_AI", "RAG", "VECTOR_TOOLING", "MODEL_EVALUATION"] },
+    { "id": "e-customer", "label": "Customer enablement", "text": "Led fictional technical workshops that translated stakeholder needs into implementation plans and adoption checkpoints.", "capabilities": ["CUSTOMER_ENABLEMENT", "STAKEHOLDER_COMMUNICATION"] },
+    { "id": "e-product", "label": "Product analytics", "text": "Defined fictional product metrics, analyzed user funnels with SQL, and explained tradeoffs to non-technical partners.", "capabilities": ["PRODUCT_ANALYTICS", "SQL", "STAKEHOLDER_COMMUNICATION"] },
+    { "id": "e-delivery", "label": "Grounded project delivery", "text": "Created a fictional incident-triage assistant with test cases, deployment notes, failure modes, and measurable acceptance criteria.", "capabilities": ["SOFTWARE_DELIVERY", "MODEL_EVALUATION", "DOCUMENTATION"] },
+    { "id": "e-education", "label": "Equivalent project preparation", "text": "Demonstrates equivalent preparation through documented software and data projects; no degree or certification is claimed.", "capabilities": ["EQUIVALENT_EXPERIENCE"] }
+  ],
+  "preferences": {
+    "acceptedWorkModes": ["REMOTE", "HYBRID"],
+    "acceptedLocations": ["San Francisco Bay Area", "United States remote"],
+    "maximumTravelPercent": 15
+  }
 }

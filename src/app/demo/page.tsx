@@ -1,2 +1,2 @@
-import { DemoHome } from "@/components/demo/demo-shell";
-export default function Page() { return <DemoHome />; }
+import { DemoEntry } from "@/components/demo/demo-entry";
+export default function Page() { return <DemoEntry />; }
