@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "name": "JobPilot — Evidence-First AI Job Search",
+  "tagline": "Know why a job fits before you apply.",
+  "approvedHeadline": "Know why a job fits.",
+  "noLogin": true,
+  "syntheticOnly": true,
+  "hiringProbabilityClaim": false,
+  "scoreDisclosure": "Fit Score is an evidence-based ranking score, not a hiring probability."
+}

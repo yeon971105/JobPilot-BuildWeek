@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { extname, join, relative } from "node:path";
 import { DEMO_CANDIDATE, DEMO_JOBS, workModesFor } from "../src/lib/demo-contract";
 import { SCORER_VERSION, scoreJob } from "../src/server/build-week/scorer";
@@ -29,7 +29,7 @@ function writeJson(path: string, value: unknown) {
 }
 
 function writeMd(path: string, value: string) {
-  writeFileSync(join(root, path), `${value.trim()}\n`, "utf8");
+  writeFileSync(join(root, path), `${value.trim().replace(/[ \t]+$/gm, "")}\n`, "utf8");
 }
 
 function points(value: number) {
@@ -105,6 +105,8 @@ const failuresAndRepairs = [
   { failure: "Browser waitUntil=networkidle was unsupported.", rootCause: "In-app browser API supports DOM-content-loaded navigation for this flow.", repair: "Used domcontentloaded and explicit UI assertions.", revalidation: "Golden Path PASS." },
   { failure: "Tracker automation first used TypeScript casts and a string selectOption.", rootCause: "Browser evaluate accepts JavaScript and selectOption requires an option object.", repair: "Used plain JavaScript and { value } selection.", revalidation: "All four stages, note persistence, refresh, and restore PASS." },
   { failure: "Mobile detail overflowed by 102 px.", rootCause: "Grid children retained intrinsic width from the receipt hash.", repair: "Added min-width zero and anywhere wrapping for proof grids and code.", revalidation: "390 px detail overflow is 0." },
+  { failure: "Final lint found one warning in the proof generator.", rootCause: "existsSync was imported but unused.", repair: "Removed the unused import and regenerated every dependent artifact hash.", revalidation: "Final lint PASS with zero warnings." },
+  { failure: "Staged diff check found Markdown trailing spaces.", rootCause: "The report template used hard-break spaces after identity fields.", repair: "The Markdown writer now removes trailing horizontal whitespace before persisting artifacts.", revalidation: "git diff --cached --check PASS." },
 ];
 
 writeJson("build-week/demo-data/expected-analysis.json", {
@@ -182,7 +184,7 @@ const changes = changesRaw ? changesRaw.split(/\r?\n/).map((line) => { const [op
 const handoff = {
   schemaVersion: "jobpilot.codex-handoff.v1",
   identity: { project: "JobPilot", workItem: "JP-BW2", status: "LOCALLY_COMPLETE_WITH_LIVE_PROVIDER_HOLD", decision: "GO_BUILD_WEEK_PHASE_1_2_COMPLETE_WITH_LIVE_GPT56_HOLD", decisionClass: "GO_WITH_HOLD", timestamp },
-  repository: { originalRoot: "C:\\Users\\Jewon\\Desktop\\JobPilot", submissionMirror: root, startingBranch: branch, endingBranch: branch, startingHead, implementationHead, endingHead: implementationHead, worktreeClean: false, commitsCreated: [], pushed: false },
+  repository: { originalRoot: "C:\\Users\\Jewon\\Desktop\\JobPilot", submissionMirror: root, startingBranch: branch, endingBranch: branch, startingHead, implementationHead, endingHead: implementationHead, worktreeClean: false, commitsCreated: [{ hash: implementationHead, message: "feat: complete the Build Week judge golden path" }], pushed: false },
   parent: { previousRunActive: false, preliminaryMirrorHeadExpected: "0266dc3", preliminaryMirrorHeadObserved: startingHead, validMirrorEstablished: true, baselineReproduced: true, drift: [] },
   phase1: { landing: true, tryDemo: true, jobList: true, jobDetail: true, applicationStrategy: true, tracker: true, trustLab: true, noLogin: true, syntheticCandidate: true, syntheticJobCount: 6, goldenPathPassed: true },
   phase2: { scorerVersion: SCORER_VERSION, integerMicroPointArithmetic: true, coreBaseBudget: 85, preferredMaximum: 12, preferredExperienceMaximum: 4, niceMaximum: 3, numericAnalysesWithExact100Points: 5, incompleteAllocationErrors: 0, hiddenAdjustmentErrors: 0, classCapViolations: 0, duplicateScoringErrors: 0, arithmeticReconciled: true, scoreReceiptImplemented: true },

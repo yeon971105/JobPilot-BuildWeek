@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "cases": 60,
+  "overlapErrors": 0,
+  "preferredExperienceCapViolations": 0,
+  "passed": true
+}

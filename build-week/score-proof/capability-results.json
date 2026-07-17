@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "umbrellaExampleCases": 24,
+  "requiredPreferredCases": 30,
+  "eligibilityCases": 24,
+  "duplicateScoringErrors": 0,
+  "capViolations": 0,
+  "passed": true
+}

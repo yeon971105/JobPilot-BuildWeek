@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "unit": "calendar month",
+  "coefficients": {
+    "exact": 1,
+    "stronglyAdjacent": 0.6,
+    "transferable": 0.3,
+    "unrelated": 0
+  },
+  "overlapRule": "maximum coefficient per month; never additive",
+  "preferredExperienceMaximum": 4,
+  "cases": 60,
+  "violations": 0
+}

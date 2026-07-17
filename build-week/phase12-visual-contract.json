@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "palette": [
+    "warm ivory",
+    "deep forest green",
+    "sage",
+    "restrained gold"
+  ],
+  "typography": [
+    "editorial serif",
+    "clean sans-serif"
+  ],
+  "originalCssArtwork": true,
+  "thirdPartyLogos": 0,
+  "responsiveWidths": [
+    1440,
+    1024,
+    390
+  ],
+  "horizontalOverflow": 0
+}

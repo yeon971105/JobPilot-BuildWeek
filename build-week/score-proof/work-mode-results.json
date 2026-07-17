@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "cases": 30,
+  "technicalScoreChanges": 0,
+  "travelScoreChanges": 0,
+  "constraintRowsPerCase": 3,
+  "passed": true
+}

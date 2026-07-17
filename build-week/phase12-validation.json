@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "tests": {
+    "status": "PASS",
+    "files": 2,
+    "tests": 13,
+    "scorerProof": {
+      "propertyCases": 160,
+      "fullScoreFixtures": 36,
+      "experienceCases": 60,
+      "workModeCases": 30,
+      "requiredPreferredCases": 30,
+      "umbrellaExampleCases": 24,
+      "eligibilityCases": 24,
+      "arithmeticErrors": 0,
+      "incompleteAllocationErrors": 0,
+      "preferredCapViolations": 0,
+      "preferredExperienceCapViolations": 0,
+      "niceCapViolations": 0,
+      "duplicateScoringErrors": 0,
+      "hiddenAdjustments": 0,
+      "receiptHashInstability": 0,
+      "passed": true
+    },
+    "providerAndGroundingTests": 3
+  },
+  "typecheck": "PASS",
+  "build": "PASS",
+  "emittedPages": 16,
+  "lint": {
+    "status": "PASS",
+    "newErrors": 0,
+    "newWarnings": 0
+  },
+  "browser": "PASS",
+  "privacy": "PASS",
+  "secretScan": "PASS",
+  "dependencyAudit": {
+    "moderateAdvisories": 2,
+    "forcedFixApplied": false
+  },
+  "passed": true
+}

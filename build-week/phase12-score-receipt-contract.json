@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "receiptVersion": "jobpilot-score-receipt.v2.2",
+  "fields": [
+    "analysisId",
+    "eligibility",
+    "content hashes",
+    "provider/model metadata",
+    "prompt versions",
+    "scorer version",
+    "class totals",
+    "budget transfers",
+    "Evidence Quality",
+    "constraints",
+    "capability reconciliation",
+    "hidden adjustments",
+    "receipt hash"
+  ],
+  "reproducible": true,
+  "hashInstability": 0
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "scorerVersion": "jobpilot-ai-fit-v2.2",
+  "exactTotalMicroPoints": 100000000,
+  "proof": {
+    "propertyCases": 160,
+    "fullScoreFixtures": 36,
+    "experienceCases": 60,
+    "workModeCases": 30,
+    "requiredPreferredCases": 30,
+    "umbrellaExampleCases": 24,
+    "eligibilityCases": 24,
+    "arithmeticErrors": 0,
+    "incompleteAllocationErrors": 0,
+    "preferredCapViolations": 0,
+    "preferredExperienceCapViolations": 0,
+    "niceCapViolations": 0,
+    "duplicateScoringErrors": 0,
+    "hiddenAdjustments": 0,
+    "receiptHashInstability": 0,
+    "passed": true
+  }
+}

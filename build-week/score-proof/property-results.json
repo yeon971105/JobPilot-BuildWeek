@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "cases": 160,
+  "arithmeticErrors": 0,
+  "incompleteAllocationErrors": 0,
+  "hiddenAdjustments": 0,
+  "monotonicityErrors": 0,
+  "passed": true
+}

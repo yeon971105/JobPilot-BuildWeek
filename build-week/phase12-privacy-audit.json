@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "realResumeRecords": 0,
+  "realCandidateRecords": 0,
+  "privateDatabaseDumps": 0,
+  "protectedAttributesScored": 0,
+  "ageInference": 0,
+  "photographScoring": 0,
+  "nameScoring": 0,
+  "chainOfThoughtStored": 0,
+  "applicationSubmissions": 0,
+  "productionTrackerMutations": 0,
+  "productionCatalogMutations": 0,
+  "externalPrivateResumeTransmission": 0,
+  "thirdPartyEmployerLogos": 0,
+  "unlicensedAssets": 0,
+  "screenshotsVisuallySynthetic": true,
+  "passed": true
+}

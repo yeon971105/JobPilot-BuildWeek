@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "formula": "100 × weighted geometric mean",
+  "weights": {
+    "jobExtractionCoverage": 0.18,
+    "candidateProfileCoverage": 0.18,
+    "evidenceQuoteValidity": 0.14,
+    "evidenceOffsetValidity": 0.1,
+    "requirementClassificationCoverage": 0.14,
+    "extractorVerifierAgreement": 0.1,
+    "modelContractStability": 0.08,
+    "coreAllocationCoverage": 0.08
+  },
+  "hiringConfidence": false
+}

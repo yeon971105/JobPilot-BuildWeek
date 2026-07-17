@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "candidateCount": 1,
+  "candidateSynthetic": true,
+  "jobCount": 6,
+  "fictionalCompanies": 6,
+  "contentHashesPresent": 6,
+  "stableIdsPresent": 6,
+  "insufficientEvidenceJobs": 1,
+  "numericJobs": 5,
+  "modes": [
+    "HYBRID",
+    "REMOTE",
+    "ONSITE"
+  ],
+  "requiredExperienceCovered": true,
+  "preferredExperienceOnlyCovered": true,
+  "noNumericExperienceCovered": true,
+  "educationOrEquivalentCovered": true,
+  "travelCovered": true,
+  "customerFacingCovered": true,
+  "entryLevelCovered": true,
+  "passed": true
+}

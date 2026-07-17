@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "originalRoot": "C:\\Users\\Jewon\\Desktop\\JobPilot",
+  "originalBranch": "build-week/jobpilot-2026",
+  "originalHead": "586a1b38653213220457c72bc9728b1ebc78c4bb",
+  "originalWorktreeStatusEntries": 49,
+  "originalTrackedFiles": 19,
+  "submissionStartingHead": "0266dc38a27ebf7d1f8e18c69ae3c826e3beb668",
+  "preliminaryAssertionReproduced": true,
+  "parentRunActive": false
+}

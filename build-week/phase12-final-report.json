@@ -1,0 +1,1313 @@
+{
+  "schemaVersion": "jobpilot.codex-handoff.v1",
+  "identity": {
+    "project": "JobPilot",
+    "workItem": "JP-BW2",
+    "status": "LOCALLY_COMPLETE_WITH_LIVE_PROVIDER_HOLD",
+    "decision": "GO_BUILD_WEEK_PHASE_1_2_COMPLETE_WITH_LIVE_GPT56_HOLD",
+    "decisionClass": "GO_WITH_HOLD",
+    "timestamp": "2026-07-17T23:27:59.320Z"
+  },
+  "repository": {
+    "originalRoot": "C:\\Users\\Jewon\\Desktop\\JobPilot",
+    "submissionMirror": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+    "startingBranch": "build-week/jobpilot-2026",
+    "endingBranch": "build-week/jobpilot-2026",
+    "startingHead": "0266dc38a27ebf7d1f8e18c69ae3c826e3beb668",
+    "implementationHead": "05027f2343b96d23592bc7497e72dd37dfece0fb",
+    "endingHead": "05027f2343b96d23592bc7497e72dd37dfece0fb",
+    "worktreeClean": false,
+    "commitsCreated": [
+      {
+        "hash": "05027f2343b96d23592bc7497e72dd37dfece0fb",
+        "message": "feat: complete the Build Week judge golden path"
+      }
+    ],
+    "pushed": false
+  },
+  "parent": {
+    "previousRunActive": false,
+    "preliminaryMirrorHeadExpected": "0266dc3",
+    "preliminaryMirrorHeadObserved": "0266dc38a27ebf7d1f8e18c69ae3c826e3beb668",
+    "validMirrorEstablished": true,
+    "baselineReproduced": true,
+    "drift": []
+  },
+  "phase1": {
+    "landing": true,
+    "tryDemo": true,
+    "jobList": true,
+    "jobDetail": true,
+    "applicationStrategy": true,
+    "tracker": true,
+    "trustLab": true,
+    "noLogin": true,
+    "syntheticCandidate": true,
+    "syntheticJobCount": 6,
+    "goldenPathPassed": true
+  },
+  "phase2": {
+    "scorerVersion": "jobpilot-ai-fit-v2.2",
+    "integerMicroPointArithmetic": true,
+    "coreBaseBudget": 85,
+    "preferredMaximum": 12,
+    "preferredExperienceMaximum": 4,
+    "niceMaximum": 3,
+    "numericAnalysesWithExact100Points": 5,
+    "incompleteAllocationErrors": 0,
+    "hiddenAdjustmentErrors": 0,
+    "classCapViolations": 0,
+    "duplicateScoringErrors": 0,
+    "arithmeticReconciled": true,
+    "scoreReceiptImplemented": true
+  },
+  "demoJobs": [
+    {
+      "id": "northstar-applied-ai-solutions-engineer",
+      "company": "Northstar Labs",
+      "title": "Applied AI Solutions Engineer",
+      "contentHash": "b874e8c44a1e8cb610bd2138eff0aa95099d17c3a8938438ec309fe234d9d135",
+      "expectedContractLabel": "STRONG_MATCH",
+      "score": 97,
+      "scoreRange": {
+        "low": 93.87,
+        "mid": 96.93,
+        "high": 98.47
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 90,
+        "earned": 87.43
+      },
+      "preferred": {
+        "maximum": 9,
+        "earned": 8.5
+      },
+      "niceToHave": {
+        "maximum": 1,
+        "earned": 1
+      },
+      "totalMaximum": 100,
+      "priority": "HIGH",
+      "blockers": [],
+      "receiptHash": "62fdbaaf07763a5d82a312ef00647f98f111c83aa9ed683395f92723996a6b7e"
+    },
+    {
+      "id": "alder-data-platform-engineer",
+      "company": "Alder Systems",
+      "title": "Data Platform Engineer",
+      "contentHash": "996dc1344ae8aada52948019ac4f835f43171f99d6d687b58a18629e8f8dda63",
+      "expectedContractLabel": "MEDIUM_MATCH",
+      "score": 70,
+      "scoreRange": {
+        "low": 58.32,
+        "mid": 69.91,
+        "high": 78.61
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 92,
+        "earned": 67.71
+      },
+      "preferred": {
+        "maximum": 8,
+        "earned": 2.2
+      },
+      "niceToHave": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "totalMaximum": 100,
+      "priority": "MEDIUM",
+      "blockers": [],
+      "receiptHash": "9258d1e87146183a639ecec54a79c13bc58024ce730502265110c065535f4b1e"
+    },
+    {
+      "id": "harbor-product-data-analyst",
+      "company": "Harbor Analytics",
+      "title": "Product Data Analyst",
+      "contentHash": "7900c52640648484e7ddf5ec9eb69d61f51d170baff664715465b4949e7fea88",
+      "expectedContractLabel": "STRONG_MATCH",
+      "score": 99,
+      "scoreRange": {
+        "low": 98.65,
+        "mid": 98.88,
+        "high": 99.1
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 97.5,
+        "earned": 97.5
+      },
+      "preferred": {
+        "maximum": 1.5,
+        "earned": 0.38
+      },
+      "niceToHave": {
+        "maximum": 1,
+        "earned": 1
+      },
+      "totalMaximum": 100,
+      "priority": "HIGH",
+      "blockers": [],
+      "receiptHash": "bcf412638bdb12870f80a97baa37b94ff386aa306ac2a75e37d0d238c4162487"
+    },
+    {
+      "id": "meridian-ml-infrastructure-engineer",
+      "company": "Meridian Robotics",
+      "title": "Machine Learning Infrastructure Engineer",
+      "contentHash": "f6eeb9b6e6cc118b68f40881848ab773e11522b8cfb58af704c2f44624065b58",
+      "expectedContractLabel": "WEAK_MATCH_WITH_BLOCKER",
+      "score": 52,
+      "scoreRange": {
+        "low": 44.25,
+        "mid": 52.44,
+        "high": 58.5
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 94.5,
+        "earned": 52.44
+      },
+      "preferred": {
+        "maximum": 5.5,
+        "earned": 0
+      },
+      "niceToHave": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "totalMaximum": 100,
+      "priority": "CONFIRMED_CONSTRAINT",
+      "blockers": [
+        "WORK_MODE"
+      ],
+      "receiptHash": "094083cee01be779ca26be0abc28d7b2029800f422b170ee1922e20c934f91f5"
+    },
+    {
+      "id": "juniper-customer-ai-enablement-lead",
+      "company": "Juniper Works",
+      "title": "Customer AI Enablement Lead",
+      "contentHash": "a714292e76260973f2f2ef3affb8a5743a6738301b7a2ea41ee1bb9107de6334",
+      "expectedContractLabel": "STRONG_MATCH_WITH_BLOCKER",
+      "score": 92,
+      "scoreRange": {
+        "low": 85.34,
+        "mid": 91.98,
+        "high": 95.58
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 94.5,
+        "earned": 88.96
+      },
+      "preferred": {
+        "maximum": 5.5,
+        "earned": 3.03
+      },
+      "niceToHave": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "totalMaximum": 100,
+      "priority": "CONFIRMED_CONSTRAINT",
+      "blockers": [
+        "TRAVEL"
+      ],
+      "receiptHash": "b9c6ed8a868d2b29d4ae9391006baadf279137fcfba4a80cf7210ec51262b11f"
+    },
+    {
+      "id": "mosaic-junior-software-engineer",
+      "company": "Mosaic Compute",
+      "title": "Junior Software Engineer",
+      "contentHash": "068c48806f36eef021128f0010cff5e21df9e53740a6ced9f33b67afd403468d",
+      "expectedContractLabel": "INSUFFICIENT_EVIDENCE",
+      "score": null,
+      "scoreRange": null,
+      "evidenceQuality": 82.1,
+      "core": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "preferred": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "niceToHave": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "totalMaximum": 0,
+      "priority": "NEEDS_REVIEW",
+      "blockers": [],
+      "receiptHash": "6b9f91dbcb0462df4b3081bd2e103246041073f166527be1e8101874752d008b"
+    }
+  ],
+  "scoreProof": {
+    "propertyCases": 160,
+    "fullScoreFixtures": 36,
+    "experienceCases": 60,
+    "workModeCases": 30,
+    "requiredPreferredCases": 30,
+    "umbrellaExampleCases": 24,
+    "eligibilityCases": 24,
+    "arithmeticErrors": 0,
+    "incompleteAllocationErrors": 0,
+    "preferredCapViolations": 0,
+    "preferredExperienceCapViolations": 0,
+    "niceCapViolations": 0,
+    "duplicateScoringErrors": 0,
+    "hiddenAdjustments": 0,
+    "receiptHashInstability": 0,
+    "passed": true
+  },
+  "gpt56": {
+    "providerImplemented": true,
+    "model": "gpt-5.6-terra",
+    "responsesApi": true,
+    "structuredOutputs": true,
+    "liveKeyConfigured": false,
+    "liveRoleAnalysisCalls": 0,
+    "liveStrategyCalls": 0,
+    "fixtureCalls": 1,
+    "fixtureClearlyLabeled": true,
+    "unsupportedClaims": 0,
+    "passed": false
+  },
+  "browser": {
+    "desktop": "PASS",
+    "tablet": "PASS",
+    "mobile": "PASS",
+    "consoleErrors": 0,
+    "failedInternalRequests": 0,
+    "horizontalOverflow": 0,
+    "accessibilityPassed": true,
+    "goldenPathPassed": true
+  },
+  "privacy": {
+    "realResumeRecords": 0,
+    "realCandidateRecords": 0,
+    "secretsFound": 0,
+    "apiKeyExposed": 0,
+    "protectedAttributesScored": 0,
+    "chainOfThoughtStored": 0,
+    "applicationSubmissions": 0,
+    "productionMutations": 0,
+    "passed": true
+  },
+  "validation": {
+    "tests": {
+      "files": 2,
+      "tests": 13,
+      "status": "PASS"
+    },
+    "typecheck": "PASS",
+    "build": "PASS",
+    "newLintErrors": 0,
+    "newLintWarnings": 0,
+    "secretScan": "PASS",
+    "passed": true
+  },
+  "postRunState": {
+    "activeWorkers": 0,
+    "testServers": 0,
+    "browserProcesses": 0,
+    "activeModelRequests": 0,
+    "pendingTransactions": 0,
+    "locks": 0
+  },
+  "holds": {
+    "active": [
+      {
+        "code": "HOLD_BUILD_WEEK_LIVE_GPT56_CONFIGURATION",
+        "evidence": "OPENAI_API_KEY is absent; live calls completed: 0.",
+        "impact": "Live GPT-5.6 proof remains unverified.",
+        "clearanceCondition": "Configure a valid server-side key and pass structured role-analysis and strategy calls."
+      },
+      {
+        "code": "HOLD_AI_FIT_HUMAN_CALIBRATION",
+        "evidence": "No independent hiring-outcome calibration dataset is available.",
+        "impact": "Score remains explicitly policy-based, not a hiring probability.",
+        "clearanceCondition": "Complete documented independent human/outcome calibration."
+      }
+    ],
+    "cleared": [
+      "HOLD_BUILD_WEEK_PARENT_RUN_ACTIVE",
+      "HOLD_BUILD_WEEK_PHASE1_GOLDEN_PATH",
+      "HOLD_AI_FIT_V22_SCORING_CONTRACT"
+    ],
+    "new": []
+  },
+  "commands": [
+    {
+      "command": "npm install",
+      "cwd": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+      "durationMs": 42900,
+      "exitCode": 0,
+      "result": "442 packages installed; audit reported 2 moderate dependency advisories."
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+      "durationMs": 0,
+      "exitCode": 2,
+      "result": "Initial failure from ES target and stale incremental metadata; repaired."
+    },
+    {
+      "command": "npm test",
+      "cwd": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+      "durationMs": 0,
+      "exitCode": 1,
+      "result": "Initial boundary assertion exposed floating-point tolerance; repaired without weakening score arithmetic."
+    },
+    {
+      "command": "npm run lint",
+      "cwd": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+      "durationMs": 0,
+      "exitCode": 1,
+      "result": "Initial React effect-state rule and unused imports; repaired."
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+      "durationMs": 0,
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "npm run lint",
+      "cwd": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+      "durationMs": 0,
+      "exitCode": 0,
+      "result": "PASS: zero errors and zero warnings."
+    },
+    {
+      "command": "npm test",
+      "cwd": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+      "durationMs": 1590,
+      "exitCode": 0,
+      "result": "PASS: 2 files, 13 tests."
+    },
+    {
+      "command": "npm run build",
+      "cwd": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+      "durationMs": 8100,
+      "exitCode": 0,
+      "result": "PASS: Next.js 16.2.6; 16 static pages; all required routes emitted."
+    },
+    {
+      "command": "production route matrix on http://127.0.0.1:3100",
+      "cwd": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+      "durationMs": 600,
+      "exitCode": 0,
+      "result": "8 routes plus fixture strategy returned HTTP 200; internal error rate 0."
+    }
+  ],
+  "failuresAndRepairs": [
+    {
+      "failure": "PowerShell null-coalescing syntax was unsupported in the baseline shell.",
+      "rootCause": "Windows PowerShell version mismatch.",
+      "repair": "Retried with compatible conditional syntax.",
+      "revalidation": "Baseline completed."
+    },
+    {
+      "failure": "Official OpenAI docs MCP registration failed.",
+      "rootCause": "User-global Codex config contains an unrelated invalid service_tier value.",
+      "repair": "Did not mutate global config; used official OpenAI developer pages only.",
+      "revalidation": "Model and Structured Outputs contracts verified from official sources."
+    },
+    {
+      "failure": "Initial typecheck failed.",
+      "rootCause": "BigInt required ES2020 and stale tsbuildinfo preserved the older target.",
+      "repair": "Set ES2020 and disabled incremental metadata in the check script.",
+      "revalidation": "Typecheck PASS."
+    },
+    {
+      "failure": "Initial experience test failed at 2.3000000000000007.",
+      "rootCause": "IEEE-754 display noise at an inclusive boundary.",
+      "repair": "Used a 0.000001 assertion tolerance while preserving month-level integer logic.",
+      "revalidation": "60 experience cases PASS."
+    },
+    {
+      "failure": "Initial lint failed.",
+      "rootCause": "State mutation in an effect and unused imports.",
+      "repair": "Adopted useSyncExternalStore and removed unused imports.",
+      "revalidation": "Lint PASS with zero findings."
+    },
+    {
+      "failure": "Browser waitUntil=networkidle was unsupported.",
+      "rootCause": "In-app browser API supports DOM-content-loaded navigation for this flow.",
+      "repair": "Used domcontentloaded and explicit UI assertions.",
+      "revalidation": "Golden Path PASS."
+    },
+    {
+      "failure": "Tracker automation first used TypeScript casts and a string selectOption.",
+      "rootCause": "Browser evaluate accepts JavaScript and selectOption requires an option object.",
+      "repair": "Used plain JavaScript and { value } selection.",
+      "revalidation": "All four stages, note persistence, refresh, and restore PASS."
+    },
+    {
+      "failure": "Mobile detail overflowed by 102 px.",
+      "rootCause": "Grid children retained intrinsic width from the receipt hash.",
+      "repair": "Added min-width zero and anywhere wrapping for proof grids and code.",
+      "revalidation": "390 px detail overflow is 0."
+    },
+    {
+      "failure": "Final lint found one warning in the proof generator.",
+      "rootCause": "existsSync was imported but unused.",
+      "repair": "Removed the unused import and regenerated every dependent artifact hash.",
+      "revalidation": "Final lint PASS with zero warnings."
+    },
+    {
+      "failure": "Staged diff check found Markdown trailing spaces.",
+      "rootCause": "The report template used hard-break spaces after identity fields.",
+      "repair": "The Markdown writer now removes trailing horizontal whitespace before persisting artifacts.",
+      "revalidation": "git diff --cached --check PASS."
+    }
+  ],
+  "changes": {
+    "filesAdded": 15,
+    "filesModified": 17,
+    "filesDeleted": 1,
+    "files": [
+      {
+        "operation": "M",
+        "path": "build-week/demo-data/candidate-profile.json",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "build-week/demo-data/expected-analysis.json",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "build-week/demo-data/fixture-contract.json",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "build-week/demo-data/jobs.json",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "package-lock.json",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "package.json",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "scripts/build-week-demo-setup.ts",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "scripts/phase12-report.ts",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/app/about/build-week/page.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/app/demo/jobs/[id]/page.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/app/demo/jobs/page.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/app/demo/page.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/app/demo/tracker/page.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/app/demo/trust/page.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/app/globals.css",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/app/layout.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/app/page.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/components/demo/demo-entry.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/components/demo/demo-header.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "D",
+        "path": "src/components/demo/demo-shell.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/components/demo/demo-store.ts",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/components/demo/job-detail.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/components/demo/job-list.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/components/demo/landing.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/components/demo/tracker.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/components/demo/trust-lab.tsx",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/lib/build-week-demo.ts",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/lib/demo-contract.ts",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/server/build-week/scorer.test.ts",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "A",
+        "path": "src/server/build-week/scorer.ts",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/server/build-week/strategy.test.ts",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "src/server/build-week/strategy.ts",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      },
+      {
+        "operation": "M",
+        "path": "tsconfig.json",
+        "purpose": "Phase 1/2 product, scorer, validation, or documentation",
+        "risk": "public-safe mirror only",
+        "tests": [
+          "typecheck",
+          "lint",
+          "vitest",
+          "production build",
+          "browser QA"
+        ]
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "build-week/demo-data/expected-analysis.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 1599,
+      "sha256": "547ff635c523a0b5b60c396a797a1447e203e29ecae794433c45577dce124196",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/demo-data/fixture-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 1181,
+      "sha256": "1b015ef2d5c6eae92ca2e129c274d6550c194ec123578ecf6f7cc2395d5ed734",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-browser-desktop.png",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 50155,
+      "sha256": "482f691483d44cda9134bc27f3e7a76ed15daf4c6f5f6cb840298fc47aaed687",
+      "schemaVersion": "binary-or-markdown.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-browser-mobile-detail.png",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 36281,
+      "sha256": "79d6e548db880c2efb5f1611824c36f2e0b05c58544ab2eff25cbf9bccef3594",
+      "schemaVersion": "binary-or-markdown.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-browser-mobile.png",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 96218,
+      "sha256": "edf499cfb3a155c80f80a1aa4eeb87c07b70ea02b3b021c01fcd002b45103043",
+      "schemaVersion": "binary-or-markdown.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-browser-qa.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 1669,
+      "sha256": "8b37c0feef0b20fe569e74e60d4ca15cd4b47de4f1f6619623b6c2aa4a160447",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-browser-qa.md",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 509,
+      "sha256": "0ecc75c368606a8de43fad2b21064f837162e04611169e21798159fd1e7fd8d0",
+      "schemaVersion": "binary-or-markdown.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-browser-tablet.png",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 105801,
+      "sha256": "26af9f2ebad26d58010d330200f56c6ff2886d5362cc22af05b3c3080a472089",
+      "schemaVersion": "binary-or-markdown.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-capability-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 374,
+      "sha256": "736e6794803af6e8aaf87395b9cdb7d93de20b3614540cf0f7ce371af5a66812",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-command-log.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 2309,
+      "sha256": "64c48577a696a10d760f2ba5f45179050eb295162d5c2afeee4c6c60bdc5f020",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-demo-data-validation.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 613,
+      "sha256": "42da6fc194fc3330dc58fa7eefc2ff06dfad1985807f49cbe9974221ec2eacae",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-evidence-quality-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 484,
+      "sha256": "3a8f5c0cd6b45dd1207d9afddd2a7eafad2d15221799fdc08471b5aac771fc87",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-experience-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 365,
+      "sha256": "1020c04a8aa5fdfc5c0df23c5f62c38d3639fb87d4e68dee344a0d15f78831c9",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-failures-and-repairs.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 3168,
+      "sha256": "46b51cdca417d0a7ff186f325557062a66dfa61ba83cae632cc5a12c3e4b8666",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-final-report.md",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 4323,
+      "sha256": "e863f28f6d7d46ac5f581dbd07e9475bf0f23585151c28c0c622a53abff9c3be",
+      "schemaVersion": "binary-or-markdown.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-golden-path-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 479,
+      "sha256": "26dc8335f205edd64a0d93f14eb6f942d95fd3f81eb8024e7e2974cfbe2c7b02",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-gpt56-provider-validation.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 667,
+      "sha256": "d3c96cd7f661b8681dded4ac930ddc320b3be8b99f42df0ed6a9248af6ecf8dd",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-parent-baseline.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 466,
+      "sha256": "572d9b8b1f6ce12bce3591be98de7fe3e291d1ed60ff087909c40e9ee8741fb3",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-parent-process-audit.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 515,
+      "sha256": "834906afcb8cd9813a30ff1c37f86de5bd52224e29386feaeb1092641eaca3e1",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-post-run-integrity.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 392,
+      "sha256": "5179e90e64e04255ba913b94e7c3cf57cca9ec2e54af628d6c0b2552650d846d",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-privacy-audit.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 560,
+      "sha256": "51b6a7761fccce7386997b1f73519e298435de0c8d1ac0a9b00e33f5c233c8ba",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-product-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 418,
+      "sha256": "bbbe4ef6673ed81791eddb68999cc33ea2ed6592a8b6a9d0455d3fb3dac79ed0",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-score-receipt-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 506,
+      "sha256": "fcc8aed7498b8ffac7367146d37854926f961c2a6ab5e9448720a73abcd08bb7",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-scoring-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 551,
+      "sha256": "152254ebc7154c9e044760e532289c59d10f89899e5c509b8eaee27351182b0a",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-secret-scan.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 356,
+      "sha256": "0aecc40db85997fb9b1c24c7afd4bea61d217807008ac66b84290f994b278810",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-submission-mirror-audit.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 782,
+      "sha256": "735878f88dfc895f0417ddb269d9bfb8cd43c5545c63ab8d1b79596248a9232d",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-validation.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 1053,
+      "sha256": "75e1e0be4d678c8543db9156931e29f2119af60fa4cc972d71cd16f6314eca49",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/phase12-visual-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 392,
+      "sha256": "4a079f7575fcd506f8cd21712963d7b4766a69596a4a875e225e2df495f06d40",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/score-proof/capability-results.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 247,
+      "sha256": "cee1d8660807f81ee4e917b3bcd3b5eadcaf45b94b6d08673e1b3855d68d3f99",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/score-proof/demo-job-results.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 5069,
+      "sha256": "d24845bcc4082e4e6d7ddfcca8b89fdb2d6954c3b5c424b3ca556b6c2bf8cac5",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/score-proof/experience-results.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 184,
+      "sha256": "a496b7bd3a461b36185494ffebdbc9369f33e0f65cc2d627f81ae7e1290ff3fc",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/score-proof/final-proof-summary.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 632,
+      "sha256": "71d924b1b56a0f88a46910bb7c462d3e6bd56bc2efada4b21739ad3b311244ff",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/score-proof/property-results.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 235,
+      "sha256": "2b46e98466c96b10bf53fd65f82c8135a766586e4ea3ac635f6d05447bbd0932",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/score-proof/scoring-contract.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 669,
+      "sha256": "36da060096c6f95f99b31461018541a6b0780af4ec8d8ac2bc1df245cd5dc7ab",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    },
+    {
+      "path": "build-week/score-proof/work-mode-results.json",
+      "purpose": "JP-BW2 Phase 1/2 contract, proof, QA, audit, screenshot, or handoff",
+      "timestamp": "2026-07-17T23:27:59.320Z",
+      "byteSize": 208,
+      "sha256": "95bdd2ff3e3d11494e720c4064a34d30c7bab9594e67db18060a5fbeadab3857",
+      "schemaVersion": "jobpilot.phase12.v1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true,
+      "supportedGate": "Phase 1/2 finalization"
+    }
+  ],
+  "nextStep": {
+    "workItem": "JP-BW3",
+    "objective": "Deploy the judge build, complete live GPT-5.6 validation, record the final video, publish the judging repository, and submit to Devpost.",
+    "firstCommand": null,
+    "firstRequiredImplementation": "Configure a valid server-side OPENAI_API_KEY and execute the existing live provider validation without changing the deterministic scorer.",
+    "accountActions": [
+      "Authorize deployment target",
+      "Configure server-side OpenAI secret",
+      "Authorize/publish judging repository",
+      "Upload final video",
+      "Submit Devpost entry"
+    ],
+    "prohibitedActions": [
+      "another market",
+      "unbounded catalog backfill",
+      "auto-apply",
+      "public production data exposure",
+      "fake live GPT-5.6 evidence"
+    ],
+    "successDecision": "GO_BUILD_WEEK_SUBMISSION_READY",
+    "failureDecision": "HOLD_BUILD_WEEK_SUBMISSION_PACKAGE"
+  }
+}

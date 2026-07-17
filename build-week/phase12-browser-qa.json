@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "productionBuild": true,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "overflow": 0,
+      "screenshot": "build-week/phase12-browser-desktop.png"
+    },
+    "tablet": {
+      "width": 1024,
+      "overflow": 0,
+      "cards": 6,
+      "screenshot": "build-week/phase12-browser-tablet.png"
+    },
+    "mobile": {
+      "width": 390,
+      "listOverflow": 0,
+      "detailOverflow": 0,
+      "cards": 6,
+      "filterDrawer": true,
+      "screenshot": "build-week/phase12-browser-mobile.png",
+      "detailScreenshot": "build-week/phase12-browser-mobile-detail.png"
+    }
+  },
+  "goldenPath": {
+    "tryDemo": true,
+    "guidedTour": true,
+    "search": true,
+    "detailSectionsInOrder": true,
+    "fixtureStrategy": true,
+    "save": true,
+    "tracker": true,
+    "trustLab": true
+  },
+  "tracker": {
+    "stages": [
+      "SAVED",
+      "INTERESTED",
+      "PREPARING",
+      "APPLIED"
+    ],
+    "refreshPersistence": true,
+    "notePersistence": true,
+    "restore": true,
+    "applicationSubmitted": false
+  },
+  "sparseRole": {
+    "fitScoreDisplayed": false,
+    "insufficientEvidenceDisplayed": true,
+    "unknownDisplayedAsUnknown": true,
+    "receiptDisplayed": true
+  },
+  "accessibility": {
+    "singleH1": true,
+    "allControlsNamed": true,
+    "focusVisibleRule": true,
+    "keyboardControls": true
+  },
+  "consoleErrors": 0,
+  "consoleWarnings": 0,
+  "failedInternalRequests": 0,
+  "routeHttpErrors": 0,
+  "routeLatencyMs": [
+    130,
+    12,
+    58,
+    44,
+    21,
+    16,
+    14,
+    16
+  ],
+  "fixtureStrategyLatencyMs": 15,
+  "passed": true
+}

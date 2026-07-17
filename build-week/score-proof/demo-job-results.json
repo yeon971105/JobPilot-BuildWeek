@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "jobs": [
+    {
+      "id": "northstar-applied-ai-solutions-engineer",
+      "company": "Northstar Labs",
+      "title": "Applied AI Solutions Engineer",
+      "contentHash": "b874e8c44a1e8cb610bd2138eff0aa95099d17c3a8938438ec309fe234d9d135",
+      "expectedContractLabel": "STRONG_MATCH",
+      "score": 97,
+      "scoreRange": {
+        "low": 93.87,
+        "mid": 96.93,
+        "high": 98.47
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 90,
+        "earned": 87.43
+      },
+      "preferred": {
+        "maximum": 9,
+        "earned": 8.5
+      },
+      "niceToHave": {
+        "maximum": 1,
+        "earned": 1
+      },
+      "totalMaximum": 100,
+      "priority": "HIGH",
+      "blockers": [],
+      "receiptHash": "62fdbaaf07763a5d82a312ef00647f98f111c83aa9ed683395f92723996a6b7e"
+    },
+    {
+      "id": "alder-data-platform-engineer",
+      "company": "Alder Systems",
+      "title": "Data Platform Engineer",
+      "contentHash": "996dc1344ae8aada52948019ac4f835f43171f99d6d687b58a18629e8f8dda63",
+      "expectedContractLabel": "MEDIUM_MATCH",
+      "score": 70,
+      "scoreRange": {
+        "low": 58.32,
+        "mid": 69.91,
+        "high": 78.61
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 92,
+        "earned": 67.71
+      },
+      "preferred": {
+        "maximum": 8,
+        "earned": 2.2
+      },
+      "niceToHave": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "totalMaximum": 100,
+      "priority": "MEDIUM",
+      "blockers": [],
+      "receiptHash": "9258d1e87146183a639ecec54a79c13bc58024ce730502265110c065535f4b1e"
+    },
+    {
+      "id": "harbor-product-data-analyst",
+      "company": "Harbor Analytics",
+      "title": "Product Data Analyst",
+      "contentHash": "7900c52640648484e7ddf5ec9eb69d61f51d170baff664715465b4949e7fea88",
+      "expectedContractLabel": "STRONG_MATCH",
+      "score": 99,
+      "scoreRange": {
+        "low": 98.65,
+        "mid": 98.88,
+        "high": 99.1
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 97.5,
+        "earned": 97.5
+      },
+      "preferred": {
+        "maximum": 1.5,
+        "earned": 0.38
+      },
+      "niceToHave": {
+        "maximum": 1,
+        "earned": 1
+      },
+      "totalMaximum": 100,
+      "priority": "HIGH",
+      "blockers": [],
+      "receiptHash": "bcf412638bdb12870f80a97baa37b94ff386aa306ac2a75e37d0d238c4162487"
+    },
+    {
+      "id": "meridian-ml-infrastructure-engineer",
+      "company": "Meridian Robotics",
+      "title": "Machine Learning Infrastructure Engineer",
+      "contentHash": "f6eeb9b6e6cc118b68f40881848ab773e11522b8cfb58af704c2f44624065b58",
+      "expectedContractLabel": "WEAK_MATCH_WITH_BLOCKER",
+      "score": 52,
+      "scoreRange": {
+        "low": 44.25,
+        "mid": 52.44,
+        "high": 58.5
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 94.5,
+        "earned": 52.44
+      },
+      "preferred": {
+        "maximum": 5.5,
+        "earned": 0
+      },
+      "niceToHave": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "totalMaximum": 100,
+      "priority": "CONFIRMED_CONSTRAINT",
+      "blockers": [
+        "WORK_MODE"
+      ],
+      "receiptHash": "094083cee01be779ca26be0abc28d7b2029800f422b170ee1922e20c934f91f5"
+    },
+    {
+      "id": "juniper-customer-ai-enablement-lead",
+      "company": "Juniper Works",
+      "title": "Customer AI Enablement Lead",
+      "contentHash": "a714292e76260973f2f2ef3affb8a5743a6738301b7a2ea41ee1bb9107de6334",
+      "expectedContractLabel": "STRONG_MATCH_WITH_BLOCKER",
+      "score": 92,
+      "scoreRange": {
+        "low": 85.34,
+        "mid": 91.98,
+        "high": 95.58
+      },
+      "evidenceQuality": 98.1,
+      "core": {
+        "maximum": 94.5,
+        "earned": 88.96
+      },
+      "preferred": {
+        "maximum": 5.5,
+        "earned": 3.03
+      },
+      "niceToHave": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "totalMaximum": 100,
+      "priority": "CONFIRMED_CONSTRAINT",
+      "blockers": [
+        "TRAVEL"
+      ],
+      "receiptHash": "b9c6ed8a868d2b29d4ae9391006baadf279137fcfba4a80cf7210ec51262b11f"
+    },
+    {
+      "id": "mosaic-junior-software-engineer",
+      "company": "Mosaic Compute",
+      "title": "Junior Software Engineer",
+      "contentHash": "068c48806f36eef021128f0010cff5e21df9e53740a6ced9f33b67afd403468d",
+      "expectedContractLabel": "INSUFFICIENT_EVIDENCE",
+      "score": null,
+      "scoreRange": null,
+      "evidenceQuality": 82.1,
+      "core": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "preferred": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "niceToHave": {
+        "maximum": 0,
+        "earned": 0
+      },
+      "totalMaximum": 0,
+      "priority": "NEEDS_REVIEW",
+      "blockers": [],
+      "receiptHash": "6b9f91dbcb0462df4b3081bd2e103246041073f166527be1e8101874752d008b"
+    }
+  ],
+  "numericAnalysesWithExact100Points": 5,
+  "passed": true
+}

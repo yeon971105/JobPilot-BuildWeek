@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "steps": [
+    "Landing",
+    "Try the Demo",
+    "Browse Jobs",
+    "Open a Job",
+    "Understand the Score",
+    "Build an Application Strategy",
+    "Save the Job",
+    "View the Tracker",
+    "Inspect the Trust Lab"
+  ],
+  "routes": [
+    "/",
+    "/demo",
+    "/demo/jobs",
+    "/demo/jobs/[id]",
+    "/demo/tracker",
+    "/demo/trust",
+    "/about/build-week"
+  ],
+  "passed": true
+}

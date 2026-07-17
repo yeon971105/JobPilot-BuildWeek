@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "submissionMirrorWorkers": 0,
+  "testServers": 0,
+  "retainedBrowserTabs": 0,
+  "activeModelRequests": 0,
+  "pendingTransactions": 0,
+  "relevantLocks": 0,
+  "databaseMigrations": 0,
+  "originalWorktreeProcessesPreserved": true,
+  "productionMutations": 0,
+  "publicIndexChanges": 0,
+  "passed": true
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "scorerVersion": "jobpilot-ai-fit-v2.2",
+  "arithmeticUnit": "integer micro-point",
+  "microPointsPerPoint": 1000000,
+  "coreBase": 85,
+  "preferredMaximum": 12,
+  "preferredExperienceMaximum": 4,
+  "niceMaximum": 3,
+  "nicePerGroupMaximum": 1,
+  "totalMaximum": 100,
+  "hiddenAdjustments": 0,
+  "transfer": "unused PREFERRED and NICE_TO_HAVE capacity transfers visibly to CORE",
+  "allocation": "stable largest remainder using capability group ID tie-breaks"
+}

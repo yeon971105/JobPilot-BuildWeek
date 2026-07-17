@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "providerImplemented": true,
+  "model": "gpt-5.6-terra",
+  "runtime": "Responses API",
+  "structuredOutputs": true,
+  "schemaStrict": true,
+  "modelReturnsFinalScore": false,
+  "rawResponseExtractionValidated": true,
+  "liveKeyConfigured": false,
+  "liveCalls": 0,
+  "fixtureApiCalls": 1,
+  "fixtureClearlyLabeled": true,
+  "groundingUnsupportedClaims": 0,
+  "officialSources": [
+    "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+    "https://developers.openai.com/api/docs/guides/structured-outputs"
+  ],
+  "hold": "HOLD_BUILD_WEEK_LIVE_GPT56_CONFIGURATION"
+}

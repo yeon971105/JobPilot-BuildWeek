@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "accepted": {
+    "path": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+    "branch": "build-week/jobpilot-2026",
+    "head": "0266dc38a27ebf7d1f8e18c69ae3c826e3beb668",
+    "trackedFilesAtStart": 41,
+    "cleanAtStart": true,
+    "reason": "Exact preliminary commit and minimal public-safe tree."
+  },
+  "rejected": [
+    {
+      "path": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek",
+      "head": "3cc71881",
+      "reason": "Over-inclusive production modules; 89 tracked files."
+    },
+    {
+      "path": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Clean",
+      "head": "46dc73e3",
+      "reason": "Malformed duplicated build-week and demo path segments."
+    }
+  ]
+}

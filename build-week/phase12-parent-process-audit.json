@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "parentBuildWeekWorkerActive": false,
+  "relevantLocks": 0,
+  "submissionMirrorProcessesBeforeRun": 0,
+  "unrelatedOriginalWorktreeProcessesObserved": [
+    {
+      "type": "Next development server",
+      "port": 3000,
+      "action": "preserved"
+    },
+    {
+      "type": "Scheduled Bay Area refresh",
+      "action": "preserved"
+    }
+  ],
+  "migrationsActive": 0,
+  "pendingTransactions": 0,
+  "gitOperationsActive": 0
+}

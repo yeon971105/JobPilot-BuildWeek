@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "unit": "independent normalized capability group",
+  "aliasesAndExamplesCreatePoints": false,
+  "duplicatePolicy": "one budget per stable capabilityGroupId",
+  "concentration": {
+    "singleCoreMaximum": 35,
+    "topTwoCoreMaximum": 65
+  },
+  "cases": 24,
+  "duplicateViolations": 0
+}

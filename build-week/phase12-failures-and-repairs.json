@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "jobpilot.phase12.v1",
+  "timestamp": "2026-07-17T23:27:59.320Z",
+  "failuresAndRepairs": [
+    {
+      "failure": "PowerShell null-coalescing syntax was unsupported in the baseline shell.",
+      "rootCause": "Windows PowerShell version mismatch.",
+      "repair": "Retried with compatible conditional syntax.",
+      "revalidation": "Baseline completed."
+    },
+    {
+      "failure": "Official OpenAI docs MCP registration failed.",
+      "rootCause": "User-global Codex config contains an unrelated invalid service_tier value.",
+      "repair": "Did not mutate global config; used official OpenAI developer pages only.",
+      "revalidation": "Model and Structured Outputs contracts verified from official sources."
+    },
+    {
+      "failure": "Initial typecheck failed.",
+      "rootCause": "BigInt required ES2020 and stale tsbuildinfo preserved the older target.",
+      "repair": "Set ES2020 and disabled incremental metadata in the check script.",
+      "revalidation": "Typecheck PASS."
+    },
+    {
+      "failure": "Initial experience test failed at 2.3000000000000007.",
+      "rootCause": "IEEE-754 display noise at an inclusive boundary.",
+      "repair": "Used a 0.000001 assertion tolerance while preserving month-level integer logic.",
+      "revalidation": "60 experience cases PASS."
+    },
+    {
+      "failure": "Initial lint failed.",
+      "rootCause": "State mutation in an effect and unused imports.",
+      "repair": "Adopted useSyncExternalStore and removed unused imports.",
+      "revalidation": "Lint PASS with zero findings."
+    },
+    {
+      "failure": "Browser waitUntil=networkidle was unsupported.",
+      "rootCause": "In-app browser API supports DOM-content-loaded navigation for this flow.",
+      "repair": "Used domcontentloaded and explicit UI assertions.",
+      "revalidation": "Golden Path PASS."
+    },
+    {
+      "failure": "Tracker automation first used TypeScript casts and a string selectOption.",
+      "rootCause": "Browser evaluate accepts JavaScript and selectOption requires an option object.",
+      "repair": "Used plain JavaScript and { value } selection.",
+      "revalidation": "All four stages, note persistence, refresh, and restore PASS."
+    },
+    {
+      "failure": "Mobile detail overflowed by 102 px.",
+      "rootCause": "Grid children retained intrinsic width from the receipt hash.",
+      "repair": "Added min-width zero and anywhere wrapping for proof grids and code.",
+      "revalidation": "390 px detail overflow is 0."
+    },
+    {
+      "failure": "Final lint found one warning in the proof generator.",
+      "rootCause": "existsSync was imported but unused.",
+      "repair": "Removed the unused import and regenerated every dependent artifact hash.",
+      "revalidation": "Final lint PASS with zero warnings."
+    },
+    {
+      "failure": "Staged diff check found Markdown trailing spaces.",
+      "rootCause": "The report template used hard-break spaces after identity fields.",
+      "repair": "The Markdown writer now removes trailing horizontal whitespace before persisting artifacts.",
+      "revalidation": "git diff --cached --check PASS."
+    }
+  ]
+}
