@@ -14,10 +14,11 @@ export function LandingPage() {
         </nav>
         <div className="mt-14 grid items-center gap-14 lg:grid-cols-[1.02fr_.98fr] lg:gap-20">
           <div>
-            <p className="eyebrow"><Sparkles className="size-4" /> Evidence-first AI job search</p>
+            <p className="eyebrow"><Sparkles className="size-4" /> Local-first, evidence-first AI</p>
             <h1 className="mt-6 max-w-3xl font-serif text-6xl leading-[.94] tracking-[-.045em] text-[#123426] sm:text-7xl lg:text-[5.5rem]">Know why a job fits.</h1>
             <p className="mt-6 max-w-2xl text-xl leading-8 text-[#4b6559]">JobPilot turns job descriptions into evidence-backed career decisions. See required and preferred qualifications, relevant experience, matched evidence, truthful gaps, practical constraints, and the exact mathematics behind every Fit Score.</p>
-            <p className="mt-4 max-w-xl text-sm leading-6 text-[#62796f]">GPT-5.6 structures role intelligence and a grounded application strategy. Versioned deterministic code calculates every point.</p>
+            <p className="mt-4 max-w-xl text-sm leading-6 text-[#62796f]">Gemma 4 12B is the primary local semantic model. Versioned deterministic code calculates every point. GPT-5.6 is optional and reserved for bounded strategy and critique.</p>
+            <div className="mt-5 flex flex-wrap gap-2"><span className="pill">Local Gemma — Primary</span><span className="pill">Deterministic Score</span><span className="pill">Optional GPT Heavy Reasoning</span></div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/demo" className="button-primary">Try the Demo <ArrowRight className="size-4" /></Link>
               <Link href="/demo/trust" className="button-secondary">See How the Score Works</Link>
