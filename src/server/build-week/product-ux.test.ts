@@ -12,9 +12,9 @@ describe("JP-BW7 product UX contract", () => {
     for (const copy of [
       "NEARBY JOBS, PRIORITIZED FOR YOU",
       "Find the roles worth your time.",
-      "Stop searching job by job. Discover, compare, and apply from one clear decision view.",
+      "Spend less time searching job by job and more time applying to roles that fit.",
       "See My Best Matches",
-      "Try the Demo",
+      "Browse All Demo Jobs",
       "Use My Resume Privately",
       "Official-source discovery",
       "Private resume analysis",
@@ -25,9 +25,10 @@ describe("JP-BW7 product UX contract", () => {
 
   it("provides the required navigation and profile controls", () => {
     const navigation = read("src/components/demo/site-navigation.tsx");
-    for (const label of ["Jobs", "Tracker", "Trust Lab", "Build Week", "Profile"]) expect(navigation).toContain(`label: "${label}"`);
+    for (const label of ["For You", "Jobs", "Tracker", "Trust Lab", "Build Week"]) expect(navigation).toContain(`label: "${label}"`);
+    expect(navigation).not.toContain('label: "Profile"');
     const menu = read("src/components/profile/profile-menu.tsx");
-    for (const label of ["Demo Candidate A", "View Demo Profile", "Use My Resume Privately", "Work Preferences", "Reset Demo Session"]) expect(menu).toContain(label);
+    for (const label of ["Demo Candidate A", "View Profile", "Use Demo Profile", "Upload Resume Privately", "Edit Preferences", "Reset Demo Session"]) expect(menu).toContain(label);
   });
 
   it("progressively discloses evidence, strategy, and the technical receipt", () => {

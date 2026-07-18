@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "jobpilot.bw11r.shortlist-rationale-contract.v1",
+  "heading": "Why these three?",
+  "visibleReasons": [
+    "Best evidence fit",
+    "Works with your preferences",
+    "Recent enough to act on"
+  ],
+  "visibleBeforeCards": true,
+  "noHiddenShortlistScore": true,
+  "fullMethodCollapsed": true,
+  "defaultCardIncludes": [
+    "rank",
+    "company",
+    "title",
+    "integer Fit Score",
+    "Fit label",
+    "location",
+    "freshness",
+    "strongest evidence",
+    "one attention area",
+    "destination status",
+    "Save",
+    "Review Role",
+    "employer destination action"
+  ],
+  "defaultCardExcludes": [
+    "exact Evidence Quality decimal",
+    "repeated Apply Priority wording",
+    "algorithmic selection sentence",
+    "stable ID explanation",
+    "technical provenance"
+  ]
+}

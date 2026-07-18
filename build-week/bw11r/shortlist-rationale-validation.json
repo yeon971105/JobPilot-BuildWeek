@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "jobpilot.bw11r.shortlist-rationale-validation.v1",
+  "status": "PASS",
+  "roles": 3,
+  "visibleReasons": 3,
+  "visibleBeforeCards": true,
+  "hiddenAggregateScore": false,
+  "evidenceQualityDecimalsOnDefaultCard": 0,
+  "technicalProvenanceOnDefaultCard": 0
+}
