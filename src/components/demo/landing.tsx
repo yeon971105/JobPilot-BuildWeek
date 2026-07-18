@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Check, FileCheck2, MapPin, SearchCheck } from "lucide-react";
 import { CALIBRATION_DISCLOSURE } from "@/lib/demo-contract";
 import { SiteNavigation } from "@/components/demo/site-navigation";
+import { JudgeTour } from "@/components/demo/judge-tour";
 
 const trust = ["Official-source discovery", "Private resume analysis", "Transparent Fit Score", "No auto-apply"];
 const value = [
@@ -29,6 +30,7 @@ export function LandingPage() {
               <Link href="/demo" className="button-secondary">Try the Demo</Link>
             </div>
             <Link href="/profile/resume" className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-[#315c49] underline decoration-[#b08337] underline-offset-4">Use My Resume Privately</Link>
+            <div><JudgeTour /></div>
           </div>
           <HeroArtwork />
         </div>
