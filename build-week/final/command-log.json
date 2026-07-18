@@ -1,6 +1,6 @@
 {
   "schemaVersion": "jobpilot.bw4-command-log.v1",
-  "timestamp": "2026-07-18T01:11:59.350Z",
+  "timestamp": "2026-07-18T01:17:13.457Z",
   "privacyClassification": "PUBLIC_SAFE",
   "publicSafe": true,
   "supportedGate": "AUDIT_TRAIL",
@@ -14,6 +14,7 @@
     "npm run validate:providers; npm run validate:local-gemma",
     "npm run validate:openai-heavy (expected configuration-required exit 78)",
     "scripts/run-bw4-smoke.ps1 (20/20 local production cycles; 260 requests)",
+    "isolated clean clone: npm install, typecheck, 26/26 tests, build, and 20/20 production smoke cycles",
     "npm run bw4:report"
   ]
 }

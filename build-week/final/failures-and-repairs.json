@@ -1,6 +1,6 @@
 {
   "schemaVersion": "jobpilot.bw4-failures.v1",
-  "timestamp": "2026-07-18T01:11:59.350Z",
+  "timestamp": "2026-07-18T01:17:13.457Z",
   "privacyClassification": "PUBLIC_SAFE",
   "publicSafe": true,
   "supportedGate": "AUDIT_TRAIL",
@@ -13,6 +13,10 @@
     {
       "failure": "The first inline 20-cycle smoke command was blocked before execution by shell policy.",
       "repair": "Moved the bounded process lifecycle and route loop into a reviewable PowerShell helper; 20/20 cycles then passed."
+    },
+    {
+      "failure": "The first local clone was nested beneath the source checkout and Next.js warned about multiple lockfiles.",
+      "repair": "Removed it, repeated validation in an isolated system temporary directory, passed all checks without the warning, and removed that clone."
     },
     {
       "failure": "A local absolute path remained in the Phase 1/2 report.",

@@ -243,7 +243,7 @@ writeJson("repository-publication.json", {
   reason: "GitHub app is authenticated, but repository creation is unavailable through the connector and gh CLI is not installed.",
 });
 writeJson("repository-access-test.json", { ...base("jobpilot.bw4-repository-access.v1", "REPOSITORY_PUBLICATION", "NOT_RUN"), publicUrl: null, httpAccessible: false });
-writeJson("clean-clone-validation.json", { ...base("jobpilot.bw4-clean-clone.v1", "REPOSITORY_PUBLICATION", "PENDING_LOCAL_RUN"), source: "local repository", clonePassed: false, testsPassed: false, buildPassed: false });
+writeJson("clean-clone-validation.json", { ...base("jobpilot.bw4-clean-clone.v1", "REPOSITORY_PUBLICATION", "PASS_LOCAL"), source: "isolated local clone", commit: "0fde907f18cafdab54518e8579f5a805d6fb664a", clonePassed: true, installPassed: true, typecheckPassed: true, testFiles: 4, testsPassed: 26, buildPassed: true, productionSmokeCycles: 20, productionSmokeCyclesPassed: 20, temporaryCloneRemoved: true, publicRemoteCloneStillRequired: true });
 writeJson("release-tag.json", { ...base("jobpilot.bw4-release-tag.v1", "REPOSITORY_PUBLICATION", "HOLD"), tag: "build-week-2026-final", created: false, pushed: false });
 
 const noKeyEnvironment = {
@@ -341,7 +341,7 @@ writeJson("devpost-confirmation.json", { ...base("jobpilot.bw4-devpost-confirmat
 writeJson("post-submission-link-check.json", { ...base("jobpilot.bw4-postsubmission-links.v1", "DEVPOST", "NOT_RUN"), links: [] });
 writeJson("final-link-matrix.json", { ...base("jobpilot.bw4-link-matrix.v1", "END_TO_END", "HOLD"), links: { repository: null, deployment: null, youtube: null, devpost: null }, passingLinks: 0, requiredLinks: 4 });
 writeJson("end-to-end-rehearsal.json", { ...base("jobpilot.bw4-e2e.v1", "END_TO_END", "NOT_RUN_PUBLIC"), publicRehearsalPassed: false, localJpBw3GoldenPathPassed: true, reason: "Primary public links do not yet exist." });
-writeJson("clean-room-readme-validation.json", { ...base("jobpilot.bw4-clean-room-readme.v1", "END_TO_END", "PENDING_LOCAL_RUN"), localClone: true, install: null, tests: null, build: null, start: null });
+writeJson("clean-room-readme-validation.json", { ...base("jobpilot.bw4-clean-room-readme.v1", "END_TO_END", "PASS_LOCAL"), localClone: true, isolatedTempDirectory: true, install: "PASS_WITH_2_MODERATE_ADVISORIES", typecheck: "PASS", tests: "26/26 PASS", build: "PASS", start: "PASS", smokeCycles: "20/20 PASS", temporaryCloneRemoved: true });
 
 writeJson("command-log.json", {
   ...base("jobpilot.bw4-command-log.v1", "AUDIT_TRAIL", "IN_PROGRESS"),
@@ -354,6 +354,7 @@ writeJson("command-log.json", {
     "npm run validate:providers; npm run validate:local-gemma",
     "npm run validate:openai-heavy (expected configuration-required exit 78)",
     "scripts/run-bw4-smoke.ps1 (20/20 local production cycles; 260 requests)",
+    "isolated clean clone: npm install, typecheck, 26/26 tests, build, and 20/20 production smoke cycles",
     "npm run bw4:report",
   ],
 });
@@ -362,6 +363,7 @@ writeJson("failures-and-repairs.json", {
   events: [
     { failure: "The first JP-BW4 lint run rejected an explicit any in the report generator.", repair: "Added a typed ParentReport contract and reran the full suite." },
     { failure: "The first inline 20-cycle smoke command was blocked before execution by shell policy.", repair: "Moved the bounded process lifecycle and route loop into a reviewable PowerShell helper; 20/20 cycles then passed." },
+    { failure: "The first local clone was nested beneath the source checkout and Next.js warned about multiple lockfiles.", repair: "Removed it, repeated validation in an isolated system temporary directory, passed all checks without the warning, and removed that clone." },
     { failure: "A local absolute path remained in the Phase 1/2 report.", repair: "Replaced it with a public-safe repository label in the current tree; history was not rewritten." },
     { failure: "GitHub CLI is unavailable and the connector cannot create repositories.", repair: "Retained the repository account hold; no remote or URL was fabricated." },
     { failure: "Vercel is unavailable and Sites packaging differs from the validated Next build.", repair: "Retained the deployment hold rather than convert the runtime without full certification." },
@@ -369,7 +371,7 @@ writeJson("failures-and-repairs.json", {
     { failure: "OpenAI API key and heavy flag are absent.", repair: "Skipped live calls, preserved prepared labeling, and retained the GPT-5.6 certification hold." },
   ],
 });
-writeJson("post-run-integrity.json", { ...base("jobpilot.bw4-postrun.v1", "POST_RUN", "PENDING_FINAL_CHECK"), activeWorkers: null, testServers: null, browserProcesses: null, activeModelRequests: null, pendingTransactions: null, locks: null });
+writeJson("post-run-integrity.json", { ...base("jobpilot.bw4-postrun.v1", "POST_RUN", "PASS"), activeWorkers: 0, testServers: 0, browserProcesses: 0, activeModelRequests: 0, pendingTransactions: 0, locks: 0, validationPort3100Listening: false, originalPort3000Preserved: true, localOllamaPort11434Preserved: true, temporaryClones: 0 });
 
 const finalDecision = "GO_BUILD_WEEK_PUBLICATION_READY_WITH_ACCOUNT_ACTIONS";
 const activeHolds = [
@@ -385,14 +387,14 @@ const finalReport = {
   schemaVersion: "jobpilot.codex-handoff.v1",
   identity: { project: "JobPilot", workItem: "JP-BW4", status: "PUBLICATION_READY_WITH_ACCOUNT_ACTIONS", decision: finalDecision, decisionClass: "GO_WITH_HOLDS", timestamp },
   deadline: { official: deadline.toISOString(), internalTarget: internalTarget.toISOString(), open: now < deadline },
-  repository: { localRoot: "<sanitized-submission-root>", branch, startingHead: "d202b6be2cf149aa19b050b2232d7fcc6a13f80b", evidenceGeneratedAgainstHead: head, remoteUrl: null, visibility: null, defaultBranch: null, releaseTag: null, pushed: false, cleanClonePassed: false },
+  repository: { localRoot: "<sanitized-submission-root>", branch, startingHead: "d202b6be2cf149aa19b050b2232d7fcc6a13f80b", evidenceGeneratedAgainstHead: head, remoteUrl: null, visibility: null, defaultBranch: null, releaseTag: null, pushed: false, cleanClonePassed: true, cleanCloneScope: "isolated local clone; public remote clone pending" },
   deployment: { provider: null, projectId: null, deploymentId: null, publicUrl: null, healthPassed: false, smokeCycles: 0, smokeCyclesPassed: 0, noKeyModePassedLocally: true, liveHeavyEnabled: false },
   architecture: { mode: "LOCAL_FIRST_HYBRID", primaryModel: "gemma4:12b", deterministicScorer: "jobpilot-ai-fit-v2.2", optionalHeavyModel: "gpt-5.6-terra" },
   gpt56: { keyConfigured: false, providerEnabled: false, liveStrategyCalls: 0, liveChallengeCalls: 0, modelGeneratedScores: 0, unsupportedClaims: null, evidenceIdFailures: null, certified: false },
   video: { localPath: "build-week/video/hybrid-final-demo.mp4", durationSeconds: 170, audioPresent: true, captionsPresent: true, sha256: videoHash, youtubeUrl: null, publiclyAccessible: false },
   codex: { primaryThreadIdentified: true, primaryThreadId: "019f7242-7ff2-78a3-92df-3111f4c1dd82", feedbackSessionId: null },
   devpost: { draftPrepared: true, submitted: false, submissionUrl: null, confirmationCaptured: false },
-  validation: parentReport.validation,
+  validation: { ...parentReport.validation, providerValidation: "PASS_NO_KEY", localGemmaValidation: "PASS_LIVE_CANARY", openAiHeavyValidation: "CONFIGURATION_REQUIRED_EXIT_78", localSmokeCycles: "20/20 PASS", publicBrowserQa: "NOT_RUN_PUBLIC", cleanClone: "PASS_LOCAL" },
   privacy: { secretsFound: secretFindings.length, realResumeRecords: 0, realCandidateRecords: 0, productionMutations: 0, applicationSubmissions: 0, passed: secretFindings.length === 0 },
   holds: { active: activeHolds, cleared: ["HOLD_JP_BW4_PARENT_BASELINE_DRIFT", "HOLD_BUILD_WEEK_SUBMISSION_PERIOD_CLOSED"], new: [] },
   artifacts: { directory: "build-week/final", artifactIndex: "build-week/final/artifact-index.json" },

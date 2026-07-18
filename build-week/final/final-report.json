@@ -6,7 +6,7 @@
     "status": "PUBLICATION_READY_WITH_ACCOUNT_ACTIONS",
     "decision": "GO_BUILD_WEEK_PUBLICATION_READY_WITH_ACCOUNT_ACTIONS",
     "decisionClass": "GO_WITH_HOLDS",
-    "timestamp": "2026-07-18T01:11:59.350Z"
+    "timestamp": "2026-07-18T01:17:13.457Z"
   },
   "deadline": {
     "official": "2026-07-22T00:00:00.000Z",
@@ -17,13 +17,14 @@
     "localRoot": "<sanitized-submission-root>",
     "branch": "build-week/jobpilot-2026",
     "startingHead": "d202b6be2cf149aa19b050b2232d7fcc6a13f80b",
-    "evidenceGeneratedAgainstHead": "d202b6be2cf149aa19b050b2232d7fcc6a13f80b",
+    "evidenceGeneratedAgainstHead": "0fde907f18cafdab54518e8579f5a805d6fb664a",
     "remoteUrl": null,
     "visibility": null,
     "defaultBranch": null,
     "releaseTag": null,
     "pushed": false,
-    "cleanClonePassed": false
+    "cleanClonePassed": true,
+    "cleanCloneScope": "isolated local clone; public remote clone pending"
   },
   "deployment": {
     "provider": null,
@@ -83,7 +84,13 @@
     "lintErrors": 0,
     "lintWarnings": 0,
     "secretScan": "PASS",
-    "passed": true
+    "passed": true,
+    "providerValidation": "PASS_NO_KEY",
+    "localGemmaValidation": "PASS_LIVE_CANARY",
+    "openAiHeavyValidation": "CONFIGURATION_REQUIRED_EXIT_78",
+    "localSmokeCycles": "20/20 PASS",
+    "publicBrowserQa": "NOT_RUN_PUBLIC",
+    "cleanClone": "PASS_LOCAL"
   },
   "privacy": {
     "secretsFound": 0,

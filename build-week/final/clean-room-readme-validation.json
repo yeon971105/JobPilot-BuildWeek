@@ -1,13 +1,17 @@
 {
   "schemaVersion": "jobpilot.bw4-clean-room-readme.v1",
-  "timestamp": "2026-07-18T01:11:59.350Z",
+  "timestamp": "2026-07-18T01:17:13.457Z",
   "privacyClassification": "PUBLIC_SAFE",
   "publicSafe": true,
   "supportedGate": "END_TO_END",
-  "status": "PENDING_LOCAL_RUN",
+  "status": "PASS_LOCAL",
   "localClone": true,
-  "install": null,
-  "tests": null,
-  "build": null,
-  "start": null
+  "isolatedTempDirectory": true,
+  "install": "PASS_WITH_2_MODERATE_ADVISORIES",
+  "typecheck": "PASS",
+  "tests": "26/26 PASS",
+  "build": "PASS",
+  "start": "PASS",
+  "smokeCycles": "20/20 PASS",
+  "temporaryCloneRemoved": true
 }

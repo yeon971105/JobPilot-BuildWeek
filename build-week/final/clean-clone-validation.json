@@ -1,12 +1,20 @@
 {
   "schemaVersion": "jobpilot.bw4-clean-clone.v1",
-  "timestamp": "2026-07-18T01:11:59.350Z",
+  "timestamp": "2026-07-18T01:17:13.457Z",
   "privacyClassification": "PUBLIC_SAFE",
   "publicSafe": true,
   "supportedGate": "REPOSITORY_PUBLICATION",
-  "status": "PENDING_LOCAL_RUN",
-  "source": "local repository",
-  "clonePassed": false,
-  "testsPassed": false,
-  "buildPassed": false
+  "status": "PASS_LOCAL",
+  "source": "isolated local clone",
+  "commit": "0fde907f18cafdab54518e8579f5a805d6fb664a",
+  "clonePassed": true,
+  "installPassed": true,
+  "typecheckPassed": true,
+  "testFiles": 4,
+  "testsPassed": 26,
+  "buildPassed": true,
+  "productionSmokeCycles": 20,
+  "productionSmokeCyclesPassed": 20,
+  "temporaryCloneRemoved": true,
+  "publicRemoteCloneStillRequired": true
 }
