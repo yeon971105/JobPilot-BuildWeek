@@ -3,7 +3,7 @@ import path from "node:path";
 
 const workspace = process.cwd();
 const nextCli = path.join(workspace, "node_modules", "next", "dist", "bin", "next");
-const build = spawnSync(process.execPath, [nextCli, "build"], {
+const build = spawnSync(process.execPath, [nextCli, "build", "--webpack"], {
   cwd: workspace,
   env: { ...process.env, JOBPILOT_SITES_STANDALONE: "true" },
   stdio: "inherit",

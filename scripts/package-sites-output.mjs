@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync, renameSync, rmSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const workspace = process.cwd();
@@ -11,7 +11,15 @@ rmSync(output, { recursive: true, force: true });
 mkdirSync(path.join(output, "server"), { recursive: true });
 mkdirSync(path.join(output, ".openai"), { recursive: true });
 cpSync(source, path.join(output, "server"), { recursive: true });
-renameSync(path.join(output, "server", "worker.js"), path.join(output, "server", "index.js"));
+renameSync(path.join(output, "server", "worker.js"), path.join(output, "server", "worker.mjs"));
+writeFileSync(path.join(output, "server", "index.js"), `import { createRequire } from "node:module";
+globalThis.require ??= createRequire("file:///jobpilot-worker/index.js");
+const worker = await import("./worker.mjs");
+export default worker.default;
+export const DOQueueHandler = worker.DOQueueHandler;
+export const DOShardedTagCache = worker.DOShardedTagCache;
+export const BucketCachePurge = worker.BucketCachePurge;
+`, "utf8");
 cpSync(path.join(source, "assets"), path.join(output, "client"), { recursive: true });
 cpSync(path.join(workspace, ".openai", "hosting.json"), path.join(output, ".openai", "hosting.json"));
 
