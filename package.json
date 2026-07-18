@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && opennextjs-cloudflare build --skipNextBuild && node scripts/package-sites-output.mjs",
+    "build": "next build && node scripts/package-sites-output.mjs",
     "build:next": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit --incremental false",
@@ -28,7 +28,8 @@
     "study:validate": "tsx scripts/bw10-study-validate.ts",
     "study:combine": "tsx scripts/bw10-study-combine.ts",
     "study:analyze": "tsx scripts/bw10-study-analyze.ts",
-    "study:analyze:bw9": "tsx scripts/bw9-impact-results.ts"
+    "study:analyze:bw9": "tsx scripts/bw9-impact-results.ts",
+    "qa:public-smoke": "tsx scripts/bw10-public-smoke.ts"
   },
   "dependencies": {
     "fflate": "^0.8.3",
@@ -41,7 +42,6 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.20.1",
     "@tailwindcss/postcss": "^4.0.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@types/jsdom": "^28.0.3",
@@ -54,8 +54,7 @@
     "tailwindcss": "^4.0.0",
     "tsx": "^4.22.3",
     "typescript": "^5.0.0",
-    "vitest": "^4.1.6",
-    "wrangler": "^4.112.0"
+    "vitest": "^4.1.6"
   },
   "overrides": {
     "next": {
