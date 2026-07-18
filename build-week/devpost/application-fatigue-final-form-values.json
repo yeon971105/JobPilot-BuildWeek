@@ -1,11 +1,11 @@
 {
   "name": "JobPilot",
-  "tagline": "Find the roles worth your time.",
+  "tagline": "Discover, prioritize, understand, apply, and track—without the endless search.",
   "category": ["Apps for Your Life"],
   "builtWith": ["Codex", "GPT-5.6", "Gemma 4 12B", "Next.js 16.2.6", "React 19", "TypeScript", "Tailwind CSS 4", "Ollama", "Vitest"],
   "tryItOut": "OWNER_TO_ADD_APPROVED_URL",
   "video": "OWNER_TO_UPLOAD_build-week/video/jobpilot-winning-rc1-demo.mp4",
-  "repository": "OWNER_TO_CONFIRM_REPOSITORY_URL",
+  "repository": "https://github.com/yeon971105/JobPilot-BuildWeek",
   "openSourceLicense": "MIT",
   "submitted": false,
   "submissionBlocker": "Owner approval and account actions required"

@@ -1,33 +1,78 @@
 # JobPilot — Find the Roles Worth Your Time
 
+Status: owner-review draft. Not submitted.
+
 ## Inspiration
 
-Job search fatigue is repeated work: searching several sites, opening roles one by one, manually comparing a resume, and still not knowing which application deserves the next hour. JobPilot compresses that work into one controlled decision journey.
+Application fatigue is decision fatigue: repeat the same searches, open postings one by one, compare each role manually, hunt for an employer link, and maintain a separate tracker—without knowing which application deserves the next hour.
+
+JobPilot connects that fragmented journey:
+
+`DISCOVER → PRIORITIZE → UNDERSTAND → APPLY → TRACK`
 
 ## What it does
 
-JobPilot brings roles from a processed portfolio of official and rights-eligible employer sources into a profile-configured nearby view. It offers deterministic Best Match, Nearest, Most Recent, and Evidence Quality sorts; separates technical fit from practical constraints; maps every scored capability to evidence; compares up to three roles without a hidden aggregate score; independently verifies every Score Receipt; opens the employer destination; and tracks the user’s explicit next step without auto-applying.
+JobPilot brings nearby and Remote roles from a processed portfolio of official and rights-eligible employer sources into one profile-configured view. **Today's 3 Roles Worth Your Time** replaces an endless feed with three transparent next decisions selected by a published lexicographic policy: numeric eligibility, blocker state, Fit Score, Evidence Quality, distance or Remote, posting freshness, then stable job ID.
+
+Every shortlisted role explains why it was selected and shows its strongest match, biggest gap, distance or Remote label, freshness, Evidence Quality, Apply Priority, Save action, and employer destination. No hidden shortlist score exists. Distance, work mode, and freshness never alter technical Fit Score.
+
+Users can inspect required versus preferred qualifications, month-accurate relevant experience, exact evidence IDs, practical constraints, and an independently verifiable Score Receipt. JobPilot opens the fictional employer destination only after an explicit click and never fills or submits an application.
+
+## Production reality, safely proven
+
+The judge flow uses synthetic roles for privacy and reproducibility. A read-only aggregate snapshot from the larger production acquisition system recorded, as of `2026-07-18T08:27:26.810Z`:
+
+- 146,007 active catalog jobs;
+- 13,166 active jobs in verified California scope;
+- 6,434 Bay Area and 1,148 Greater Los Angeles market memberships;
+- 473 active source endpoints, including 446 with a latest complete snapshot;
+- 100% of active records with an original application link present;
+- 1.9% currently marked apply-ready.
+
+Recorded-link presence is not presented as destination validation. These numbers describe the processed catalog and source portfolio, not the complete market. The public snapshot contains no job descriptions, candidate records, credentials, source URLs, private payloads, or database files.
 
 ## How it works
 
-Gemma 4 12B is the primary semantic model for requirement and evidence interpretation. Deterministic AI Fit V2.2 owns the exact 100-point micro-point allocation, experience union, Evidence Quality, priority, and receipt. GPT-5.6 prepared reviews add bounded strategy, critique, ambiguity review, and pairwise comparison from frozen synthetic evidence. The submitted runtime made 0 OpenAI API requests and incurred $0 API cost.
+Gemma 4 12B is the primary semantic model for requirement extraction, capability grouping, candidate evidence matching, equivalence, summaries, and uncertainty. Deterministic AI Fit V2.2 owns the exact 100,000,000 micro-point allocation, experience union, Evidence Quality, practical priority, and receipt.
 
-The independent verifier reproduces canonical SHA-256 hashing, class caps, transfers, rounding, evidence IDs, and frozen inputs. The direct employer path uses a safe new-tab link; the public synthetic destination contains no form and intentionally disables submission.
+Four GPT-5.6 prepared reviews add bounded application strategy, challenge analysis, ambiguity review, and pairwise comparison. The product exposes each artifact's Codex generation surface, verifiable `gpt-5.6-sol` provenance, frozen input hash, output hash, file hash, valid evidence IDs, API request count `0`, and `model-generated final score: No`. Prepared reviews cannot silently change a score or receipt.
+
+The submitted runtime made **0 OpenAI API requests** and incurred **$0 API cost**.
+
+## Decision-utility study harness
+
+An isolated `/study/decision-utility` route provides randomized Raw Posting / JobPilot order, a task timer, required/preferred/work-mode/gap questions, Apply / Review / Skip, confidence, transparency, anonymous browser-local IDs, local-only storage, JSON/CSV export, and reset.
+
+Status is **READY_NOT_RUN**. Human participant count is **0**. Synthetic tooling validation is labeled and never represented as human results.
 
 ## Built with Codex
 
-Codex helped reproduce defects, prove earlier scoring failures mathematically, repair the Tailwind/PostCSS pipeline, compress the dense decision UX, implement discovery/comparison/verification/handoff flows, create regression tests, run responsive browser certification, validate a real loopback Gemma canary, and package the release. The public Build Week page preserves a ten-defect observed-to-validation timeline.
+Codex helped create five memorable proof moments:
+
+1. incorrect work-mode interpretation;
+2. scoring-budget defect;
+3. receipt and verifier construction;
+4. missing Tailwind production pipeline;
+5. dense Job Detail transformation.
+
+Each public timeline entry shows `Observed → Reproduced → Repaired → Regression tested`. Codex also packaged the public-safe production query, shortlist policy, local-only study harness, responsive browser evidence, privacy scans, and release certificate.
+
+## Neutral differentiation
+
+Traditional job search often separates discovery, prioritization, explanation, employer handoff, and tracking. JobPilot connects those steps while preserving user control. It does not claim every job in a market, predict employer outcomes, attack named competitors, auto-apply, or hide ranking adjustments.
 
 ## Validation
 
-The RC has 73 passing tests and two authorized skips, a clean Next.js 16.2.6 production build, two passing CSS pipeline tests, zero npm vulnerabilities, six fully reproduced receipts, 44 production route/viewport checks with zero overflow and zero browser console warnings/errors, and a fresh valid `gemma4:12b` loopback canary.
+The committed BW8 certificate covers typecheck, lint, all tests, production-coverage methodology, shortlist policy, distance/freshness score invariants, randomized study conditions, local-only storage, prepared provenance, production build, route matrix, responsive browser QA, accessibility, visual regression, dependency audit, secret scan, and private-data scan.
+
+Required zero values include API requests/cost, invented production metrics, private records copied, raw descriptions exposed, fabricated study results, distance/freshness technical-score changes, invalid GPT evidence IDs, model-generated scores, receipt mismatches, hidden adjustments, application submissions, secrets, production mutations, console errors, and horizontal overflow.
 
 ## Limitations
 
-Public candidate, jobs, employer destination, and media are synthetic. Nearby discovery covers the processed portfolio, not the whole market. Fit Score is not hiring probability; independent hiring-outcome calibration is unavailable. The usability protocol is ready but has not been run. JobPilot does not submit applications.
+Public candidate, roles, employer destination, captures, and media are synthetic. Production counts describe the processed source portfolio, not complete market coverage. Fit Score is not a hiring probability, and independent hiring-outcome calibration is unavailable. The decision-utility study has not run with humans. JobPilot never submits applications.
 
-## Demo
+## Demo and owner actions
 
-Use **Start the 90-Second Tour** or follow Landing → Best Matches → Compare → Northstar → Evidence/Experience → Score Proof → Verify Receipt → Employer Destination → Tracker → Trust Lab.
+Primary path: Landing → Today's Shortlist → Job Detail → Employer Destination → Tracker → Coverage Proof → Trust Lab → Build Week.
 
-The 175-second local video package is `build-week/video/jobpilot-winning-rc1-demo.mp4`. The owner must upload it and submit Devpost after approval.
+Current local video: `build-week/video/jobpilot-winning-rc1-demo.mp4` (175 seconds). The owner must review the port-3205 preview, publish the video, add approved public URLs, and submit Devpost. This development RC has not deployed or submitted itself.

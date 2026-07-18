@@ -1,13 +1,15 @@
-# Application-fatigue judging map
+# Application-Fatigue Impact RC Judging Map
 
 | Criterion | Judge action | Evidence |
 | --- | --- | --- |
-| Problem and usefulness | Read landing, run seven-step tour | Clear fatigue story and one controlled next action |
-| Functionality | Sort/filter jobs, compare Northstar/Alder, open employer destination, confirm Tracker | Real production UI; no external dependency |
-| Technical implementation | Inspect Evidence/Experience/Score Proof and run verifier | Deterministic 100-point contract, evidence IDs, month union, independent reproduction |
-| AI quality | Open prepared challenge/ambiguity/comparison and Trust Lab | Gemma primary, GPT-5.6 bounded, valid evidence, no model-generated score |
-| Codex contribution | Open `/about/build-week` | Ten defect-to-validation stories and release packaging |
-| Trust and safety | Tamper with receipt; inspect employer destination and privacy tab | Fail-closed verifier, zero forms, zero auto-apply, synthetic data, zero API cost |
-| Polish | Test 1440, 1024, 390, and 320 widths; watch 175-second video | 44 responsive checks, zero overflow/console errors, embedded English captions |
+| Potential impact | Open `/demo/shortlist`, then `/about/coverage` | Three transparent next decisions plus current public-safe aggregate production reach |
+| Quality of idea | Read the landing comparison and five-stage journey | Neutral differentiation centered on connecting discovery, priority, understanding, handoff, and tracking |
+| Functionality | Save a shortlist role, inspect evidence, open employer destination, confirm Tracker | Complete user-controlled flow with zero application submission |
+| Decision utility | Open `/study/decision-utility` directly | Randomized A/B harness, timer, required questions, local storage/export; `READY_NOT_RUN`, zero humans |
+| Technical implementation | Inspect Score Proof and tamper with a receipt | Deterministic 100-point contract and independent fail-closed reproduction |
+| AI quality | Open Trust Lab → What GPT-5.6 Contributed | Gemma primary; four prepared hash-bound GPT reviews; valid IDs; no model-generated score |
+| Codex contribution | Open `/about/build-week` | Five `Observed → Reproduced → Repaired → Regression tested` proof moments |
+| Trust and safety | Inspect coverage methodology/privacy audit and employer handoff | Read-only aggregates, no private rows, synthetic UI, no auto-apply, zero API cost |
+| Polish | Test required routes at 1440, 1024, 390, and 320 widths | Committed browser/accessibility/visual evidence with zero overflow and console errors |
 
-Claims are supported by `build-week/bw7/`. The owner must add approved public URLs and perform the Devpost submission.
+The production snapshot claims processed-portfolio coverage only. Human study results, deployment, public video publication, and Devpost submission remain owner actions.

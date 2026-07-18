@@ -1,7 +1,9 @@
 # JobPilot Decision Utility Study Protocol
 
-Status: **READY_NOT_RUN**  
-Human participant count: **0**  
+Status: **READY_NOT_RUN**
+
+Human participant count: **0**
+
 Study route: `/study/decision-utility`
 
 No participant sessions or impact claims are included in this release. The harness is isolated from primary judge navigation and uses synthetic roles only.

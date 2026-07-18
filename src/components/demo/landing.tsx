@@ -10,6 +10,13 @@ const value = [
   ["KNOW WHAT DESERVES AN APPLICATION", "Resume evidence, required and preferred qualifications, relevant experience, and practical constraints create a transparent priority."],
   ["GO STRAIGHT TO THE EMPLOYER", "Once a role is worth pursuing, JobPilot opens the original employer application page. It never auto-applies."],
 ] as const;
+const decisionJourney = [
+  ["DISCOVER", "See nearby and Remote roles from the processed source portfolio."],
+  ["PRIORITIZE", "Start with three roles selected by published deterministic factors."],
+  ["UNDERSTAND", "Inspect required, preferred, evidence, experience, and the biggest gap."],
+  ["APPLY", "Open the original employer destination only when you choose."],
+  ["TRACK", "Record your next step locally—never by automatic submission."],
+] as const;
 
 export function LandingPage() {
   return (
@@ -42,11 +49,12 @@ export function LandingPage() {
         <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-3">
           {value.map(([title, body], index) => <article key={title} className="paper-card"><span className="font-mono text-xs text-[#a1742d]">0{index + 1}</span><h2 className="mt-5 font-serif text-2xl">{title}</h2><p className="mt-3 leading-7 text-[#587064]">{body}</p></article>)}
         </div>
+        <ol aria-label="JobPilot decision journey" className="mx-auto mt-10 grid max-w-6xl overflow-hidden rounded-2xl border border-[#173d2d]/10 bg-[#e8efe6] sm:grid-cols-5">{decisionJourney.map(([stage, description], index) => <li key={stage} className="border-b border-[#173d2d]/10 p-5 last:border-0 sm:border-b-0 sm:border-r"><span className="text-xs font-bold text-[#a1742d]">{index + 1}</span><h2 className="mt-3 text-sm font-bold tracking-[.08em]">{stage}</h2><p className="mt-2 text-xs leading-5 text-[#587064]">{description}</p></li>)}</ol>
         <div className="mx-auto mt-10 grid max-w-6xl gap-5 lg:grid-cols-2">
-          <Comparison title="Traditional job search" items={["repeated category searches", "one posting at a time", "manual resume comparison", "opaque prioritization", "application-link hunting"]} />
-          <Comparison title="JobPilot" items={["nearby roles together", "resume-aware prioritization", "evidence-backed explanation", "direct employer destination", "simple tracking"]} highlighted />
+          <Comparison title="Traditional fragmented search" items={["discover across separate feeds and tabs", "prioritize by manually rereading postings", "understand fit without an evidence map", "hunt for the employer application link", "track decisions in another tool"]} />
+          <Comparison title="JobPilot’s connected loop" items={["discover nearby and Remote roles together", "prioritize with published visible factors", "understand matches, gaps, and exact proof", "open the employer destination deliberately", "track the next step in browser-local state"]} highlighted />
         </div>
-        <p className="mx-auto mt-8 max-w-6xl text-xs text-[#6c7e75]">Roles discovered from the processed portfolio of official and rights-eligible employer sources. Public demonstration roles are synthetic. {CALIBRATION_DISCLOSURE}</p>
+        <div className="mx-auto mt-8 flex max-w-6xl flex-wrap items-center justify-between gap-4 text-xs text-[#6c7e75]"><p className="max-w-4xl">Roles discovered from the processed portfolio of official and rights-eligible employer sources. Public demonstration roles are synthetic. {CALIBRATION_DISCLOSURE}</p><Link href="/about/coverage" className="font-bold underline underline-offset-4">Inspect production coverage proof</Link></div>
       </section>
     </main>
   );

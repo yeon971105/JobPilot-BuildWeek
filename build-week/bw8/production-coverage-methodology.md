@@ -1,7 +1,9 @@
 # JP-BW8 Production Coverage Methodology
 
-Generated: 2026-07-18T08:27:26.810Z  
-Privacy classification: `PUBLIC_SAFE_AGGREGATE`  
+Generated: 2026-07-18T08:27:26.810Z
+
+Privacy classification: `PUBLIC_SAFE_AGGREGATE`
+
 Result: `PASS_REPRODUCIBLE_AGGREGATES`
 
 ## Disclosure and claim boundary
