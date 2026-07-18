@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "jobpilot.bw8-route-matrix.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "baseUrl": "http://127.0.0.1:3205",
+  "productionBuild": true,
+  "note": "Server HTML may omit the client-rendered study heading; the real-browser matrix independently requires one visible H1 on every route.",
+  "status": "PASS",
+  "routes": [
+    {
+      "route": "/",
+      "url": "http://127.0.0.1:3205/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "hasHtml": true,
+      "hasH1": true,
+      "bytes": 46390
+    },
+    {
+      "route": "/demo/shortlist",
+      "url": "http://127.0.0.1:3205/demo/shortlist",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "hasHtml": true,
+      "hasH1": true,
+      "bytes": 55954
+    },
+    {
+      "route": "/demo/jobs",
+      "url": "http://127.0.0.1:3205/demo/jobs",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "hasHtml": true,
+      "hasH1": true,
+      "bytes": 65880
+    },
+    {
+      "route": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+      "url": "http://127.0.0.1:3205/demo/jobs/northstar-applied-ai-solutions-engineer",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "hasHtml": true,
+      "hasH1": true,
+      "bytes": 47866
+    },
+    {
+      "route": "/about/coverage",
+      "url": "http://127.0.0.1:3205/about/coverage",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "hasHtml": true,
+      "hasH1": true,
+      "bytes": 43712
+    },
+    {
+      "route": "/study/decision-utility",
+      "url": "http://127.0.0.1:3205/study/decision-utility",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "hasHtml": true,
+      "hasH1": false,
+      "bytes": 9947
+    },
+    {
+      "route": "/demo/trust",
+      "url": "http://127.0.0.1:3205/demo/trust",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "hasHtml": true,
+      "hasH1": true,
+      "bytes": 22010
+    },
+    {
+      "route": "/about/build-week",
+      "url": "http://127.0.0.1:3205/about/build-week",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "hasHtml": true,
+      "hasH1": true,
+      "bytes": 42044
+    }
+  ]
+}

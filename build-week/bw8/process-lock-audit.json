@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "jobpilot.bw8-process-lock-audit.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS",
+  "protectedPortsUntouched": true,
+  "approvalPort": 3205,
+  "portStates": [
+    {
+      "port": 3000,
+      "listening": true,
+      "role": "protected existing preview"
+    },
+    {
+      "port": 3203,
+      "listening": true,
+      "role": "protected existing preview"
+    },
+    {
+      "port": 3204,
+      "listening": true,
+      "role": "protected existing preview"
+    },
+    {
+      "port": 3205,
+      "listening": true,
+      "role": "JP-BW8 approval preview"
+    }
+  ]
+}

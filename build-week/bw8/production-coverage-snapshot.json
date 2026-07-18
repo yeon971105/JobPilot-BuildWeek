@@ -1,6 +1,6 @@
 {
   "schemaVersion": "jobpilot.bw8.production-coverage.v1",
-  "generatedAt": "2026-07-18T08:27:26.810Z",
+  "generatedAt": "2026-07-18T09:08:32.787Z",
   "status": "PASS_REPRODUCIBLE_AGGREGATES",
   "holds": [],
   "disclosure": "The public judge flow uses synthetic roles for privacy and reproducibility. This page reports reproducible aggregate evidence from the larger production acquisition system.",
@@ -8,52 +8,52 @@
   "privacyClassification": "PUBLIC_SAFE_AGGREGATE",
   "metrics": {
     "activeJobs": {
-      "value": 146007,
+      "value": 146011,
       "evidence": {
         "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
         "queryId": "catalogSummary",
-        "timestamp": "2026-07-18T08:27:26.810Z",
-        "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-        "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+        "timestamp": "2026-07-18T09:08:32.787Z",
+        "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+        "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
         "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
       }
     },
     "regionalCounts": {
       "californiaVerified": {
-        "value": 13166,
+        "value": 13170,
         "label": "JobPilot California",
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "verifiedRegionalCounts",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       },
       "bayArea": {
-        "value": 6434,
+        "value": 6433,
         "label": "San Francisco Bay Area",
         "marketType": "MULTI_COUNTY_REGION",
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "marketMemberships",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       },
       "losAngeles": {
-        "value": 1148,
+        "value": 1149,
         "label": "Greater Los Angeles",
         "marketType": "MULTI_COUNTY_REGION",
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "marketMemberships",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       }
@@ -64,63 +64,63 @@
       "evidence": {
         "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
         "queryId": "catalogSummary",
-        "timestamp": "2026-07-18T08:27:26.810Z",
-        "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-        "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+        "timestamp": "2026-07-18T09:08:32.787Z",
+        "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+        "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
         "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
       }
     },
     "completeSources": {
-      "value": 446,
+      "value": 447,
       "definition": "Active source endpoints whose latest recorded sync snapshot is COMPLETE.",
       "evidence": {
         "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
         "queryId": "catalogSummary",
-        "timestamp": "2026-07-18T08:27:26.810Z",
-        "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-        "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+        "timestamp": "2026-07-18T09:08:32.787Z",
+        "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+        "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
         "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
       }
     },
     "originalApplicationLinkCoverage": {
-      "count": 146007,
-      "total": 146007,
+      "count": 146011,
+      "total": 146011,
       "percent": 100,
       "definition": "Active catalog jobs with a non-empty original application link recorded; presence is not a claim that every destination is currently valid.",
       "evidence": {
         "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
         "queryId": "catalogSummary",
-        "timestamp": "2026-07-18T08:27:26.810Z",
-        "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-        "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+        "timestamp": "2026-07-18T09:08:32.787Z",
+        "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+        "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
         "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
       }
     },
     "validatedApplicationDestinations": {
-      "count": 2728,
-      "total": 146007,
+      "count": 2732,
+      "total": 146011,
       "percent": 1.9,
       "definition": "Active catalog jobs marked apply-ready by the acquisition system.",
       "evidence": {
         "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
         "queryId": "catalogSummary",
-        "timestamp": "2026-07-18T08:27:26.810Z",
-        "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-        "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+        "timestamp": "2026-07-18T09:08:32.787Z",
+        "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+        "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
         "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
       }
     },
     "freshnessDistribution": [
       {
         "bucket": "WITHIN_24_HOURS",
-        "count": 114917,
+        "count": 114921,
         "percent": 78.7,
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "freshnessDistribution",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       },
@@ -131,9 +131,9 @@
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "freshnessDistribution",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       },
@@ -144,9 +144,9 @@
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "freshnessDistribution",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       },
@@ -157,9 +157,9 @@
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "freshnessDistribution",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       },
@@ -170,9 +170,9 @@
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "freshnessDistribution",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       },
@@ -183,23 +183,23 @@
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "freshnessDistribution",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       }
     ],
     "lastSuccessfulRefresh": {
-      "value": "2026-07-18T03:04:57.215Z",
-      "scheduleSuccessAt": "2026-07-17T10:08:59.604Z",
-      "runFinishedAt": "2026-07-18T03:04:57.215Z",
+      "value": "2026-07-18T09:07:58.108Z",
+      "scheduleSuccessAt": "2026-07-18T09:07:50.290Z",
+      "runFinishedAt": "2026-07-18T09:07:58.108Z",
       "evidence": {
         "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
         "queryId": "catalogSummary",
-        "timestamp": "2026-07-18T08:27:26.810Z",
-        "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-        "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+        "timestamp": "2026-07-18T09:08:32.787Z",
+        "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+        "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
         "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
       }
     },
@@ -211,35 +211,35 @@
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "workModeDistribution",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       },
       {
         "workMode": "REMOTE",
-        "count": 8438,
+        "count": 8441,
         "percent": 5.8,
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "workModeDistribution",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       },
       {
         "workMode": "HYBRID",
-        "count": 6667,
+        "count": 6668,
         "percent": 4.6,
         "evidence": {
           "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
           "queryId": "workModeDistribution",
-          "timestamp": "2026-07-18T08:27:26.810Z",
-          "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-          "outputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
           "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
         }
       }
@@ -261,8 +261,8 @@
       "freshnessDistribution": "2e94bac255c48a8b0e2fe6e0df7d4c51003ae84b13a7bd58e05ee781df1a4820",
       "verifiedRegionalCounts": "70ffa7643ddcea081cd0e0041bccf4ff70c7bdb604f8cd02a5ac829ca69e963d"
     },
-    "inputHash": "3ef89ae03cd2d569a8787637dc14e34240b2e819c56fd3144787b5719e5af257",
-    "queryOutputHash": "39a4d0a20895bcf16427c9bab9a8b5b174682e7fced675ef6317ce2eb89b246a"
+    "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+    "queryOutputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd"
   },
   "zeroValues": {
     "inventedProductionMetrics": 0,
@@ -272,5 +272,5 @@
     "productionMutations": 0,
     "credentialsCopied": 0
   },
-  "snapshotOutputHash": "53bc122a40a4e92805ee52d32946303d7413e209d1b9076fe98710de5410aa09"
+  "snapshotOutputHash": "459e525d295fa286410952fe26a0aa73465ece92b4ed2dee8c15d363d0283d78"
 }

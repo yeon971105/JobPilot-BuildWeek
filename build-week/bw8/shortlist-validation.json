@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "jobpilot.bw8-shortlist-validation.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS",
+  "policyVersion": "jobpilot-transparent-shortlist.v1",
+  "factors": [
+    "numeric-score eligibility",
+    "blocker state",
+    "Fit Score descending",
+    "Evidence Quality descending",
+    "physical distance then Remote",
+    "posting freshness descending",
+    "stable job ID"
+  ],
+  "hiddenAggregateScore": false,
+  "browserSaveThenRestore": "PASS",
+  "zeroValues": {
+    "hiddenAdjustments": 0,
+    "technicalScoreChangesFromDistance": 0,
+    "technicalScoreChangesFromFreshness": 0,
+    "technicalScoreChangesFromWorkMode": 0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "jobpilot.bw8-zero-api-network-audit.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS",
+  "publicRuntime": "Prepared synthetic Gemma and GPT review artifacts",
+  "studyClientExternalRequestApis": 0,
+  "openAiApiRequests": 0,
+  "openAiApiCostUsd": 0,
+  "applicationSubmissions": 0,
+  "externalStudyRequests": 0
+}

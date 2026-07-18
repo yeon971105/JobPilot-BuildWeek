@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "jobpilot.bw8-study-validation.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS_READY_NOT_RUN",
+  "randomizedOrderPaths": 2,
+  "browserTwoConditionProgression": "PASS",
+  "browserReset": "PASS",
+  "localStorageKey": "jobpilot-decision-utility-study-v1",
+  "responseTemplateHumanRows": 0,
+  "humanParticipantCount": 0,
+  "fabricatedHumanResults": 0,
+  "externalRequests": 0,
+  "prohibitedNetworkApisInClient": 0,
+  "dataClassification": "SYNTHETIC_TOOLING_VALIDATION"
+}

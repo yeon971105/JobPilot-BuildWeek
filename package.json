@@ -18,6 +18,7 @@
     "validate:openai-heavy": "tsx scripts/validate-openai-heavy.ts",
     "verify:receipt": "tsx scripts/verify-receipt.ts",
     "generate:demo-receipt": "tsx scripts/generate-bw7-demo-receipt.ts",
+    "bw8:report": "tsx scripts/bw8-report.ts",
     "bw3:report": "tsx scripts/bw3-report.ts",
     "bw4:report": "tsx scripts/bw4-report.ts",
     "bw7:report": "tsx scripts/bw7-report.ts",

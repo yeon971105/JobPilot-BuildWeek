@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "jobpilot.bw8-final-report.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS",
+  "releaseCandidate": "build-week-2026-impact-rc1",
+  "branch": "build-week/jobpilot-2026",
+  "commitScope": "test: certify impact proof and shortlist integrity",
+  "preview": "http://127.0.0.1:3205",
+  "productStatus": "Development RC; not deployed, uploaded, or submitted",
+  "coverageProof": {
+    "asOf": "2026-07-18T09:08:32.787Z",
+    "activeJobs": 146011,
+    "californiaVerified": 13170,
+    "bayArea": 6433,
+    "losAngeles": 1149,
+    "activeSources": 473,
+    "completeSources": 447,
+    "originalApplicationLinksRecorded": {
+      "count": 146011,
+      "total": 146011,
+      "percent": 100,
+      "definition": "Active catalog jobs with a non-empty original application link recorded; presence is not a claim that every destination is currently valid.",
+      "evidence": {
+        "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
+        "queryId": "catalogSummary",
+        "timestamp": "2026-07-18T09:08:32.787Z",
+        "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+        "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "validatedApplicationDestinations": {
+      "count": 2732,
+      "total": 146011,
+      "percent": 1.9,
+      "definition": "Active catalog jobs marked apply-ready by the acquisition system.",
+      "evidence": {
+        "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
+        "queryId": "catalogSummary",
+        "timestamp": "2026-07-18T09:08:32.787Z",
+        "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+        "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "lastSuccessfulRefresh": "2026-07-18T09:07:58.108Z",
+    "workModes": [
+      {
+        "workMode": "ONSITE",
+        "count": 130902,
+        "percent": 89.7,
+        "evidence": {
+          "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
+          "queryId": "workModeDistribution",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
+          "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+        }
+      },
+      {
+        "workMode": "REMOTE",
+        "count": 8441,
+        "percent": 5.8,
+        "evidence": {
+          "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
+          "queryId": "workModeDistribution",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
+          "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+        }
+      },
+      {
+        "workMode": "HYBRID",
+        "count": 6668,
+        "percent": 4.6,
+        "evidence": {
+          "source": "READ_ONLY_LOCAL_PRODUCTION_POSTGRESQL_AGGREGATES",
+          "queryId": "workModeDistribution",
+          "timestamp": "2026-07-18T09:08:32.787Z",
+          "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+          "outputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd",
+          "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+        }
+      }
+    ],
+    "inputHash": "c6f0e2f435b14d73ce4cedcd87c002483a58e8655642f703f75a4ae3ebfb9d3d",
+    "queryOutputHash": "fd06e5096455b493b3c907bbb4630093ea2e7210682d5dbeccb0c8a67cba74fd"
+  },
+  "shortlist": {
+    "title": "Today's 3 Roles Worth Your Time",
+    "policyVersion": "jobpilot-transparent-shortlist.v1",
+    "hiddenAggregateScore": false,
+    "technicalScoreInvariant": true
+  },
+  "study": {
+    "status": "PASS_READY_NOT_RUN",
+    "humanParticipantCount": 0,
+    "humanRows": 0,
+    "fabricatedResults": 0,
+    "storage": "browser-local only"
+  },
+  "gptPreparedReview": {
+    "provenanceVerified": true,
+    "modelFamily": "gpt-5.6-sol",
+    "artifacts": 4,
+    "preparedNotLive": true,
+    "apiRequests": 0,
+    "modelGeneratedScores": 0,
+    "invalidEvidenceIds": 0
+  },
+  "judgingImpact": {
+    "potentialImpact": "Connects a reproducible production-scale acquisition system to a three-role decision queue without overstating coverage.",
+    "qualityOfIdea": "Differentiates JobPilot as a visible DISCOVER → PRIORITIZE → UNDERSTAND → APPLY → TRACK loop with independent proof and user control."
+  },
+  "proof": {
+    "testsPassed": 92,
+    "authorizedSkips": 2,
+    "browserChecks": 32,
+    "captures": 10,
+    "receiptReproductions": 6,
+    "npmVulnerabilities": 0,
+    "requiredZeroValues": {
+      "openAiApiRequests": 0,
+      "openAiApiCostUsd": 0,
+      "inventedProductionMetrics": 0,
+      "privateProductionRecordsCopied": 0,
+      "rawJobDescriptionsExposed": 0,
+      "fabricatedStudyResults": 0,
+      "technicalScoreChangesFromDistanceOrFreshness": 0,
+      "invalidGptEvidenceIds": 0,
+      "modelGeneratedScores": 0,
+      "receiptMismatches": 0,
+      "hiddenAdjustments": 0,
+      "applicationSubmissions": 0,
+      "secrets": 0,
+      "productionMutations": 0,
+      "consoleErrors": 0,
+      "horizontalOverflow": 0
+    }
+  },
+  "ownerReviewChecklist": [
+    "Review all eight required routes at http://127.0.0.1:3205/.",
+    "Inspect the coverage claim boundary, timestamp, and methodology.",
+    "Confirm Today's 3 ordering and Save / employer-destination controls.",
+    "Run the isolated study only with real participants; do not treat the tooling dry run as results.",
+    "Inspect the prepared GPT proof hashes and concrete strategy/challenge examples.",
+    "Approve or request changes before any deployment, video upload, Devpost submission, or final release tag."
+  ]
+}

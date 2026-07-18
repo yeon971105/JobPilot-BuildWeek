@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "jobpilot.bw8-validation.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS",
+  "tests": {
+    "total": 94,
+    "passed": 92,
+    "skippedAuthorized": 2,
+    "failed": 0
+  },
+  "typecheckErrors": 0,
+  "lintErrors": 0,
+  "buildErrors": 0,
+  "cssPipelineTests": {
+    "passed": 2,
+    "pending": 0,
+    "failed": 0
+  },
+  "dependencyVulnerabilities": 0,
+  "receiptReproductionFailures": 0,
+  "receiptReproductions": 6,
+  "browserChecks": 32,
+  "accessibility": "PASS",
+  "visualRegression": "PASS",
+  "routeMatrix": "PASS",
+  "localGemmaCanary": "PASS",
+  "requiredZeroValues": {
+    "openAiApiRequests": 0,
+    "openAiApiCostUsd": 0,
+    "inventedProductionMetrics": 0,
+    "privateProductionRecordsCopied": 0,
+    "rawJobDescriptionsExposed": 0,
+    "fabricatedStudyResults": 0,
+    "technicalScoreChangesFromDistanceOrFreshness": 0,
+    "invalidGptEvidenceIds": 0,
+    "modelGeneratedScores": 0,
+    "receiptMismatches": 0,
+    "hiddenAdjustments": 0,
+    "applicationSubmissions": 0,
+    "secrets": 0,
+    "productionMutations": 0,
+    "consoleErrors": 0,
+    "horizontalOverflow": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.bw8-provider-validation.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS",
+  "architecture": "LOCAL_FIRST_HYBRID",
+  "semantic": {
+    "provider": "LOCAL_GEMMA_PREPARED",
+    "model": "gemma4:12b",
+    "live": false
+  },
+  "heavy": {
+    "provider": "CODEX_GPT56_PREPARED",
+    "model": "gpt-5.6-sol",
+    "live": false
+  },
+  "openAiKeyConfigured": false
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "jobpilot.bw8-dependency-audit.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "command": "npm audit --audit-level=high --json",
+  "status": "PASS",
+  "vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "jobpilot.bw8-failures-and-repairs.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS_REPAIRED",
+  "items": [
+    {
+      "observed": "The expanded suite caught removal of legacy landing and zero-API trust copy.",
+      "repaired": "Restored visible secondary copy while retaining Today's 3 as the primary CTA.",
+      "regression": "All 94 tests green."
+    },
+    {
+      "observed": "BW7 CSS evidence correctly drifted after intentional landing and route additions.",
+      "repaired": "Created BW8 real-browser sentinels and rebound the production CSS test to the new primary CTA.",
+      "regression": "Two production CSS pipeline tests rerun in final certification."
+    },
+    {
+      "observed": "The coverage rerun initially left the privacy-audit hash stale.",
+      "repaired": "The audited generator now writes snapshot and matching privacy audit together on every run.",
+      "regression": "Snapshot file SHA-256 equals the audit source hash."
+    },
+    {
+      "observed": "The browser backend rejected networkidle and its evaluate sandbox omitted global parseFloat.",
+      "repaired": "Used supported load state and bounded Number conversion.",
+      "regression": "32 route/viewport checks passed."
+    },
+    {
+      "observed": "Full-page stitching duplicated or blanked long responsive captures.",
+      "repaired": "Retook exact viewport captures after live DOM visibility and overflow checks.",
+      "regression": "Ten inspected screenshots are hash-bound in the manifest."
+    },
+    {
+      "observed": "One PowerShell port-report expression ended with an invalid pipeline and a variable-resolved background launch was rejected.",
+      "repaired": "Collected the report before formatting and launched the explicit Node executable with hidden-window semantics.",
+      "regression": "Port 3205 health check passed while 3000, 3203, and 3204 remained listening."
+    }
+  ]
+}

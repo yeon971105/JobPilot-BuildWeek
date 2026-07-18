@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "jobpilot.bw8-private-data-scan.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS",
+  "scope": "Production coverage snapshot and audited generator contract",
+  "privacyClassification": "PUBLIC_SAFE_AGGREGATE",
+  "prohibitedOutputKeys": [
+    "email",
+    "resume",
+    "jobdescription",
+    "sourceurl",
+    "applicationurl",
+    "password",
+    "secret",
+    "credential"
+  ],
+  "exposedKeys": [],
+  "snapshotHashMatchesAudit": true,
+  "zeroValues": {
+    "privateProductionRecordsCopied": 0,
+    "rawJobDescriptionsExposed": 0,
+    "candidateRecordsRead": 0,
+    "credentialsCopied": 0,
+    "productionMutations": 0
+  }
+}

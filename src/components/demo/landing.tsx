@@ -34,8 +34,9 @@ export function LandingPage() {
             <p className="mt-4 max-w-xl text-base font-semibold leading-7 text-[#315c49]">Stop searching job by job. Discover, compare, and apply from one clear decision view.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/demo/shortlist" className="button-primary">See Today&apos;s 3 Roles <ArrowRight className="size-4" /></Link>
-              <Link href="/demo/jobs?sort=BEST_MATCH" className="button-secondary">Explore All Matches</Link>
+              <Link href="/demo/jobs?sort=BEST_MATCH" className="button-secondary">See My Best Matches</Link>
             </div>
+            <p className="mt-3 text-xs font-semibold text-[#667b71]">Try the Demo with synthetic roles—no account required.</p>
             <Link href="/profile/resume" className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-[#315c49] underline decoration-[#b08337] underline-offset-4">Use My Resume Privately</Link>
             <div><JudgeTour /></div>
           </div>

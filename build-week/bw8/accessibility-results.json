@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "jobpilot.bw8-accessibility.v1",
+  "certifiedAt": "2026-07-18T09:03:51.081Z",
+  "scope": "Eight required routes at four required viewports",
+  "method": "Real-browser semantic and DOM contract audit",
+  "status": "PASS",
+  "checks": 32,
+  "requirements": {
+    "oneH1PerRoute": true,
+    "mainLandmark": true,
+    "htmlLanguage": "en",
+    "controlsNamed": true,
+    "formControlsLabeled": true,
+    "imagesHaveAlt": true,
+    "uniqueIds": true,
+    "zeroConsoleErrorsAndWarnings": true
+  },
+  "zeroValues": {
+    "missingAlt": 0,
+    "duplicateIdPages": 0,
+    "unlabeledControlPages": 0,
+    "unnamedInteractivePages": 0,
+    "consoleErrorsOrWarnings": 0
+  }
+}

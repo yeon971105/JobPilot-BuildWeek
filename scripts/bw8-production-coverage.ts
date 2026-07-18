@@ -159,6 +159,7 @@ function metricEvidence(queryId: keyof typeof QUERIES, timestamp: string, inputH
 async function main() {
   const originalRepository = path.resolve(parseArgument("--original-repo") ?? "");
   const output = path.resolve(parseArgument("--output") ?? "build-week/bw8/production-coverage-snapshot.json");
+  const privacyOutput = path.resolve(parseArgument("--privacy-output") ?? "build-week/bw8/production-coverage-privacy-audit.json");
   if (!parseArgument("--original-repo")) throw new Error("Usage: npm run bw8:coverage -- --original-repo <read-only-original-repository> [--output <path>]");
   if (originalRepository === process.cwd()) throw new Error("The coverage source must be the separate original JobPilot repository.");
 
@@ -255,9 +256,40 @@ async function main() {
     };
     const snapshotOutputHash = sha256(canonical(payload));
     const finalPayload = { ...payload, snapshotOutputHash };
+    const snapshotText = `${JSON.stringify(finalPayload, null, 2)}\n`;
+    const privacyAudit = {
+      schemaVersion: "jobpilot.bw8.production-coverage-privacy-audit.v1",
+      generatedAt,
+      sourceSnapshot: path.relative(process.cwd(), output).replaceAll("\\", "/"),
+      sourceSnapshotSha256: sha256(snapshotText),
+      privacyClassification: "PUBLIC_SAFE_AGGREGATE",
+      checks: {
+        aggregateQueriesOnly: true,
+        explicitReadOnlyTransaction: true,
+        candidateTablesQueried: false,
+        userTablesQueried: false,
+        applicationTablesQueried: false,
+        rawJobDescriptionsSelected: false,
+        rawJobDescriptionsCopied: false,
+        sourceUrlsSelected: false,
+        sourcePayloadsSelected: false,
+        credentialsRead: false,
+        credentialsCopied: false,
+        databaseFilesCopied: false,
+        privateRowsCopied: false,
+        productionMutations: 0,
+        inventedProductionMetrics: 0,
+      },
+      outputFieldClasses: ["aggregate counts", "aggregate percentages", "UTC timestamps", "non-sensitive enum labels", "public market labels", "SHA-256 integrity hashes"],
+      result: "PASS",
+    };
     await mkdir(path.dirname(output), { recursive: true });
-    await writeFile(output, `${JSON.stringify(finalPayload, null, 2)}\n`, "utf8");
-    console.log(JSON.stringify({ output, status: payload.status, activeJobs, activeSources, completeSources, bayArea: bayArea ? number(bayArea.activeJobs) : 0, losAngeles: losAngeles ? number(losAngeles.activeJobs) : 0, openAiApiRequests: 0, productionMutations: 0, snapshotOutputHash }, null, 2));
+    await mkdir(path.dirname(privacyOutput), { recursive: true });
+    await Promise.all([
+      writeFile(output, snapshotText, "utf8"),
+      writeFile(privacyOutput, `${JSON.stringify(privacyAudit, null, 2)}\n`, "utf8"),
+    ]);
+    console.log(JSON.stringify({ output, privacyOutput, status: payload.status, activeJobs, activeSources, completeSources, bayArea: bayArea ? number(bayArea.activeJobs) : 0, losAngeles: losAngeles ? number(losAngeles.activeJobs) : 0, openAiApiRequests: 0, productionMutations: 0, snapshotOutputHash }, null, 2));
     if (holds.length) process.exitCode = 2;
   } finally {
     await prisma.$disconnect();

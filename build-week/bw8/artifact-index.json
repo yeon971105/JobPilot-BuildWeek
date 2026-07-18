@@ -1,0 +1,183 @@
+{
+  "schemaVersion": "jobpilot.bw8-artifact-index.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS",
+  "artifactCount": 35,
+  "artifacts": [
+    {
+      "path": "build-week/bw8/accessibility-results.json",
+      "sha256": "bbddc2d8c4b702a9cae7fe487426a751b2b293fd97c4aad3ab4bfd92f7dccc7d",
+      "bytes": 684
+    },
+    {
+      "path": "build-week/bw8/browser-qa.json",
+      "sha256": "65234f2f611250507e5202a9784cb1b9da9db990a1f7bd492d7796a3686cf9e3",
+      "bytes": 26942
+    },
+    {
+      "path": "build-week/bw8/captures/about-build-week-1440x900.png",
+      "sha256": "1d757497437afcfaeb881be474e9e325576409deb2ae08f32d7dc3c9ce8b8062",
+      "bytes": 81725
+    },
+    {
+      "path": "build-week/bw8/captures/about-coverage-1440x900.png",
+      "sha256": "a0a27baffdb524de681d7c964aeb1d009dcac28ff2cc139575ede0b8d73f8bae",
+      "bytes": 92171
+    },
+    {
+      "path": "build-week/bw8/captures/about-coverage-390x844.png",
+      "sha256": "5c83e50bfd6adb9718b52f35d011b5ccc5da48fcaf0323fe00acfee83a2d6c4c",
+      "bytes": 39017
+    },
+    {
+      "path": "build-week/bw8/captures/demo-shortlist-1440x900.png",
+      "sha256": "0dd926cd444a12e05a7ca8f0d7f970531527a4f2f4f6a91870d01368d6780fd1",
+      "bytes": 111929
+    },
+    {
+      "path": "build-week/bw8/captures/demo-shortlist-390x844.png",
+      "sha256": "d85fd528655fd85657a6301b9db96257ad42977395264e5773b04e82b9083ec6",
+      "bytes": 37846
+    },
+    {
+      "path": "build-week/bw8/captures/demo-trust-gpt-1440x900.png",
+      "sha256": "60d8e2b11de29cfe20595ee26286bea2973d80b312bad80915661b915a7c7dfb",
+      "bytes": 87326
+    },
+    {
+      "path": "build-week/bw8/captures/landing-1440x900.png",
+      "sha256": "4106adb09e8c4d372b7ee580d9b3feaa242369789062bed9fe88d39f29929a82",
+      "bytes": 100243
+    },
+    {
+      "path": "build-week/bw8/captures/landing-390x844.png",
+      "sha256": "589fc5fa8e92a567acb72aa9f012d73bb830aa99a7b83945d201fbce5a6f6675",
+      "bytes": 44838
+    },
+    {
+      "path": "build-week/bw8/captures/study-decision-utility-1440x900.png",
+      "sha256": "c073210697790706c6b5ac9390c3b473a7bb0d8cf628e50ede3fe6e40dde2578",
+      "bytes": 83762
+    },
+    {
+      "path": "build-week/bw8/captures/study-decision-utility-320x700.png",
+      "sha256": "1f1ad45832a9e532efcf303c3fc1ab1992b34c6f5b9f4a9e925b1e3dc69ebc3e",
+      "bytes": 27873
+    },
+    {
+      "path": "build-week/bw8/css-pipeline-results.json",
+      "sha256": "e51c0524b0a76a942f700d3a37e43045bb14d4c1376cbacf394fa57faea251ef",
+      "bytes": 986
+    },
+    {
+      "path": "build-week/bw8/dependency-security-audit.json",
+      "sha256": "222da82712b5409858fa628c6738156b6fed46397b03ea52f70b6615d153931f",
+      "bytes": 300
+    },
+    {
+      "path": "build-week/bw8/failures-and-repairs.json",
+      "sha256": "63582630229d0c2dd64665e7fbbc3150f78cf3e5af7532bb08e1c4c84d2a3ce5",
+      "bytes": 1939
+    },
+    {
+      "path": "build-week/bw8/final-report.json",
+      "sha256": "bf556707e7ac67c3c887ba9077ace46f6733909d566009def87b21edfb830b0f",
+      "bytes": 6041
+    },
+    {
+      "path": "build-week/bw8/final-report.md",
+      "sha256": "ae432c611eba3e92aa733237f3078cb4e9e2c3b098d414eec79eeb08e159d42f",
+      "bytes": 1127
+    },
+    {
+      "path": "build-week/bw8/gpt56-prepared-proof.json",
+      "sha256": "2fad35f410d604c53ff12d85eea7215f1ca4857e842a0a4118b378017ab71204",
+      "bytes": 2956
+    },
+    {
+      "path": "build-week/bw8/local-gemma-validation.json",
+      "sha256": "e4ac61a7dbabff241c90f83cc10b9fca68449c7cfc32db932039793a907aa20f",
+      "bytes": 338
+    },
+    {
+      "path": "build-week/bw8/prepared-provenance-validation.json",
+      "sha256": "f51bf17b7f4bf36077d81c08cf3dc756c414dad245e9351f694bce23f22bffc1",
+      "bytes": 2320
+    },
+    {
+      "path": "build-week/bw8/private-data-scan.json",
+      "sha256": "82958a4fec8274e0b531e2231c39651a60680150a94927c70ae73b71068d83f9",
+      "bytes": 663
+    },
+    {
+      "path": "build-week/bw8/process-lock-audit.json",
+      "sha256": "fd2c688187f1e679b60fe4d8acf83c55e202ec9568543b82f08e76fe94c76748",
+      "bytes": 607
+    },
+    {
+      "path": "build-week/bw8/production-coverage-methodology.md",
+      "sha256": "37cdedcdb9f5013a4bd8948f78bcfb4f0bdaab20de4c73c1c3ec64b19e93d4cf",
+      "bytes": 4343
+    },
+    {
+      "path": "build-week/bw8/production-coverage-privacy-audit.json",
+      "sha256": "dd888aa883c98976fa300ffd5082ad9e8bc3c14ea2a77c0fe5067cb91bb3a563",
+      "bytes": 1101
+    },
+    {
+      "path": "build-week/bw8/production-coverage-snapshot.json",
+      "sha256": "96212801b55b6696ce26effaf2be69befe90cd02f25896dc7d5d873edb9c1dbc",
+      "bytes": 12265
+    },
+    {
+      "path": "build-week/bw8/provider-validation.json",
+      "sha256": "2ef20502ebb56fced3ab45ba638e8c284e39c0822245d7f4ef2945f532c31398",
+      "bytes": 408
+    },
+    {
+      "path": "build-week/bw8/repository-secret-scan.json",
+      "sha256": "e7fa4e4db303309928990af21700820398d9bf07b29c3cdc892ac99706800a59",
+      "bytes": 291
+    },
+    {
+      "path": "build-week/bw8/route-matrix.json",
+      "sha256": "71636e76d2bc50d5682f02c9771b451cc83feb5ae181b72c1ac2c1d18ba82f6e",
+      "bytes": 2273
+    },
+    {
+      "path": "build-week/bw8/screenshot-manifest.json",
+      "sha256": "fb893c9a2814ed35911fcc749b02e3c99c481ed1afbd42c4cd72bd62dc75af2c",
+      "bytes": 2518
+    },
+    {
+      "path": "build-week/bw8/shortlist-validation.json",
+      "sha256": "9164aac6428065f87448c703308e55653ad81e20a856aa33b066150047e4ee48",
+      "bytes": 665
+    },
+    {
+      "path": "build-week/bw8/study-validation.json",
+      "sha256": "c474af3da4b4ad625a1a1dedc9d526c1817289bc4cec35d3b62e616a1f43f785",
+      "bytes": 509
+    },
+    {
+      "path": "build-week/bw8/validation.json",
+      "sha256": "38065672cfc963b8e1ccc2e29e892539f55c3e0cd003c2d47b446d7c5a3596e9",
+      "bytes": 1130
+    },
+    {
+      "path": "build-week/bw8/visual-regression-results.json",
+      "sha256": "3639e67a74501edcd8a1d6212bbdf061254df72e0ccd2b83582611f38a0fc0bd",
+      "bytes": 2958
+    },
+    {
+      "path": "build-week/bw8/vitest-results.json",
+      "sha256": "288986e41ab56f2afa5c5e38829ac34ab3b22a337926adf31a03397a2a24d80a",
+      "bytes": 34297
+    },
+    {
+      "path": "build-week/bw8/zero-api-network-audit.json",
+      "sha256": "036868830669366c0f5b31d48c1ac569a10000349585c230acb2b48a5a8df9e9",
+      "bytes": 352
+    }
+  ]
+}

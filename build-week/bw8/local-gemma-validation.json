@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "jobpilot.bw8-local-gemma-validation.v1",
+  "generatedAt": "2026-07-18T09:16:02.511Z",
+  "status": "PASS",
+  "model": "gemma4:12b",
+  "digest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",
+  "frozenRequirementCoverage": 0.875,
+  "unknownRequirementIds": 0,
+  "finalScoreInModelOutput": false
+}
