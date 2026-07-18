@@ -13,3 +13,9 @@ During production browser QA, Codex found the receipt verifier exceeded a 320-pi
 Validation included 73 passing tests, two authorized skips, TypeScript, ESLint, production build, CSS bundle certification, all six receipt reproductions, adversarial receipt parsing, zero-vulnerability npm audit, provider routing, a fresh real `gemma4:12b` loopback canary, public-safe scans, video probe, responsive screenshots, and post-run process/Git integrity.
 
 Codex did not deploy a final release, upload the video, submit Devpost, access a private resume, mutate production data, move historical tags, stop the user’s port-3000 process, or submit an application.
+
+## JP-BW10 representative task and feedback status
+
+The most representative Codex task is **Finalize JobPilot product UX**, thread `019f7382-0ef9-7d10-bf26-d6e5615924dd`. It contains the concentrated Build Week sequence for progressive UX, private resume isolation, nearby discovery, the Score Receipt Verifier, application-fatigue story, prepared GPT-5.6 integration, destination trust, coverage credibility, public review, and owner packaging. The four prepared `gpt-5.6-sol` artifacts already bind to this thread ID.
+
+The automated task interface does not expose the interactive `/feedback` command. The Session ID remains `null` rather than fabricated. Exact owner action: in the current Codex task titled **Finalize JobPilot product UX**, enter `/feedback` after JP-BW10 completes and record the returned primary Session ID without alteration.

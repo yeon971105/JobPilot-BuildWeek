@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "jobpilot.bw10.judging-evidence-matrix.v1",
+  "weights": {
+    "TECHNOLOGICAL_IMPLEMENTATION": 25,
+    "DESIGN": 25,
+    "POTENTIAL_IMPACT": 25,
+    "QUALITY_OF_THE_IDEA": 25
+  },
+  "judgeScore": null,
+  "dryRunCountedAsImpactEvidence": false,
+  "criteria": [
+    {
+      "criterion": "TECHNOLOGICAL_IMPLEMENTATION",
+      "evidence": [
+        {
+          "claim": "AI Fit V2.2 uses exact micro-point arithmetic with no hidden adjustments.",
+          "productRoute": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+          "test": "src/server/build-week/scorer.test.ts",
+          "screenshot": "build-week/bw10/captures/public-northstar-320x700.png",
+          "artifact": "build-week/bw7/approved-claims-contract.json",
+          "currentWeakness": "The score is prioritization evidence, not a hiring probability.",
+          "exactClearanceCondition": "Keep the hiring-outcome limitation adjacent to score proof and retain zero score mismatches."
+        },
+        {
+          "claim": "Score Receipts are independently reproducible through web, API, and CLI verification, including tamper failure.",
+          "productRoute": "/demo/verify-receipt",
+          "test": "src/server/build-week/receipt-verifier.test.ts; npm run verify:receipt",
+          "screenshot": "build-week/bw10/captures/public-verifier-1024x768.png",
+          "artifact": "build-week/bw7/receipts/northstar-demo-receipt.json",
+          "currentWeakness": "Receipt proof is technical and secondary to the main decision path.",
+          "exactClearanceCondition": "Verifier must return FULLY_REPRODUCED for the certified receipt and INVALID after tampering."
+        },
+        {
+          "claim": "gemma4:12b owns bounded semantic interpretation while gpt-5.6-sol contributes four prepared, provenance-bound reviews with zero live API calls.",
+          "productRoute": "/demo/trust",
+          "test": "src/server/build-week/providers.ts; src/server/build-week/prepared-provenance-bw8.test.ts",
+          "screenshot": "build-week/bw9/captures/trust-1440x900.jpg",
+          "artifact": "build-week/bw7/gpt56-prepared-provenance.json",
+          "currentWeakness": "The public environment cannot re-run local Gemma or live GPT-5.6.",
+          "exactClearanceCondition": "Keep cached Gemma and prepared GPT labels explicit; OpenAI requests and cost must remain zero."
+        },
+        {
+          "claim": "Private Resume Mode is isolated to the local edition and the public route rejects real resume transmission.",
+          "productRoute": "/profile/resume",
+          "test": "src/server/private-profile/resume-parser.test.ts; src/server/private-profile/local-analysis.test.ts",
+          "screenshot": "build-week/bw8/captures/about-build-week-1440x900.png",
+          "artifact": "build-week/bw10/deployment-privacy-audit.json",
+          "currentWeakness": "Judges cannot exercise live private parsing on the public review site.",
+          "exactClearanceCondition": "Public route must remain fail-closed and provide accurate local setup instructions without a file input."
+        },
+        {
+          "claim": "Coverage lineage, destination trust states, automated tests, and the Codex defect timeline are frozen and auditable.",
+          "productRoute": "/about/coverage",
+          "test": "src/server/build-week/production-coverage-bw8.test.ts; src/server/build-week/claim-integrity-bw9.test.ts",
+          "screenshot": "build-week/bw9/captures/coverage-1024x768.jpg",
+          "artifact": "build-week/bw10/parent-baseline.json; CODEX_BUILD_LOG.md",
+          "currentWeakness": "Coverage is a processed official-source portfolio, not the complete job market.",
+          "exactClearanceCondition": "Coverage and geography mismatches remain zero and every public scope statement preserves that limitation."
+        }
+      ]
+    },
+    {
+      "criterion": "DESIGN",
+      "evidence": [
+        {
+          "claim": "The Golden Path moves from application fatigue to Today's Shortlist and a useful decision within seconds.",
+          "productRoute": "/",
+          "test": "src/server/build-week/product-ux.test.ts; src/server/build-week/judge-tour.test.ts",
+          "screenshot": "build-week/bw10/captures/public-landing-390x844.png",
+          "artifact": "build-week/bw6/progressive-disclosure-audit.json",
+          "currentWeakness": "Value depends on the first shortlist action being immediately visible.",
+          "exactClearanceCondition": "Owner confirms the problem and primary action are clear within ten seconds."
+        },
+        {
+          "claim": "Concise Job Detail reveals profile context, matches, gaps, experience, and constraints progressively.",
+          "productRoute": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+          "test": "src/server/build-week/product-ux.test.ts",
+          "screenshot": "build-week/bw10/captures/public-northstar-320x700.png",
+          "artifact": "build-week/bw9/browser-qa.json",
+          "currentWeakness": "Technical proof can overwhelm the decision if opened too early.",
+          "exactClearanceCondition": "The main decision remains understandable before opening receipt or provenance details."
+        },
+        {
+          "claim": "Nearby discovery, deterministic sorting, filters, and up-to-three-role comparison support deliberate exploration.",
+          "productRoute": "/demo/jobs; /demo/compare",
+          "test": "src/server/build-week/discovery.test.ts; src/server/build-week/comparison-and-apply.test.ts",
+          "screenshot": "build-week/bw9/captures/jobs-1024x768.jpg",
+          "artifact": "build-week/bw8/browser-qa.json",
+          "currentWeakness": "Nearby and Remote labels must remain distinguishable on narrow screens.",
+          "exactClearanceCondition": "All four required viewports pass without clipping, overflow, or color-only status."
+        },
+        {
+          "claim": "Direct original destination, responsive behavior, visible focus, keyboard access, and accessible controls are part of the frozen UX.",
+          "productRoute": "/demo/employer-posting/northstar-applied-ai-solutions-engineer",
+          "test": "src/server/build-week/comparison-and-apply.test.ts; public browser QA",
+          "screenshot": "build-week/bw7/captures/employer-destination-1440x900.png",
+          "artifact": "build-week/bw10/public-browser-qa.json",
+          "currentWeakness": "Public employer destinations are synthetic and submission is intentionally disabled.",
+          "exactClearanceCondition": "Destination language stays honest, controls are at least 44px, and no automatic Applied transition occurs."
+        }
+      ]
+    },
+    {
+      "criterion": "POTENTIAL_IMPACT",
+      "evidence": [
+        {
+          "claim": "JobPilot addresses application fatigue by reducing fragmented discovery, comparison, explanation, and tracking work.",
+          "productRoute": "/",
+          "test": "src/server/build-week/impact-story-bw8.test.ts",
+          "screenshot": "build-week/bw10/captures/public-landing-390x844.png",
+          "artifact": "build-week/devpost/owner-review-draft.md",
+          "currentWeakness": "The problem framing is qualitative until authentic usability sessions exist.",
+          "exactClearanceCondition": "Owner confirms the application-fatigue problem is clear within ten seconds."
+        },
+        {
+          "claim": "Nearby roles, resume-aware local prioritization, and direct employer destinations shorten the path to a defensible next action.",
+          "productRoute": "/demo/shortlist",
+          "test": "src/server/build-week/shortlist-bw8.test.ts; src/server/build-week/comparison-and-apply.test.ts",
+          "screenshot": "build-week/bw10/captures/public-shortlist-1440x900.png",
+          "artifact": "build-week/bw10/final-feature-freeze.json",
+          "currentWeakness": "Public review uses a synthetic profile and synthetic roles.",
+          "exactClearanceCondition": "Public copy continues to distinguish synthetic demo behavior from local private behavior."
+        },
+        {
+          "claim": "Frozen production acquisition proof establishes real processed-portfolio scale without exposing production rows.",
+          "productRoute": "/about/coverage",
+          "test": "src/server/build-week/production-coverage-bw8.test.ts",
+          "screenshot": "build-week/bw9/captures/coverage-1024x768.jpg",
+          "artifact": "build-week/bw10/parent-baseline.json",
+          "currentWeakness": "Reachable and destination-verified URL counts are smaller than the frozen posting count.",
+          "exactClearanceCondition": "All counts retain their exact definitions and no complete-market claim appears."
+        },
+        {
+          "claim": "The Decision Utility harness can measure time, classification, agreement, confidence, and transparency using authentic paired sessions only.",
+          "productRoute": "/study/decision-utility",
+          "test": "src/server/build-week/study-collection-bw10.test.ts; src/server/build-week/impact-study-bw9.test.ts",
+          "screenshot": "build-week/bw9/captures/study-320x700.jpg",
+          "artifact": "build-week/study/internal-results.json",
+          "currentWeakness": "READY_NOT_RUN: 0 authentic participants, so no public impact metric is allowed.",
+          "exactClearanceCondition": "At least five complete, consenting, validated adult participants with no dry-run rows counted."
+        }
+      ]
+    },
+    {
+      "criterion": "QUALITY_OF_THE_IDEA",
+      "evidence": [
+        {
+          "claim": "Official-source discovery is paired with local resume privacy and an inspectable deterministic score.",
+          "productRoute": "/about/build-week",
+          "test": "src/server/build-week/release.test.ts; src/server/build-week/scorer.test.ts",
+          "screenshot": "build-week/bw8/captures/about-build-week-1440x900.png",
+          "artifact": "README.md",
+          "currentWeakness": "The public site demonstrates privacy boundaries but not live local analysis.",
+          "exactClearanceCondition": "README, product, and video describe the same local/public boundary."
+        },
+        {
+          "claim": "An independently verifiable receipt makes a ranking decision reproducible outside the UI.",
+          "productRoute": "/demo/verify-receipt",
+          "test": "src/server/build-week/receipt-verifier.test.ts",
+          "screenshot": "build-week/bw10/captures/public-verifier-1024x768.png",
+          "artifact": "build-week/bw7/receipts/northstar-demo-receipt.json",
+          "currentWeakness": "Verification proves arithmetic and evidence lineage, not employer judgment.",
+          "exactClearanceCondition": "Keep the verifier claim scoped to reproduction and integrity."
+        },
+        {
+          "claim": "Prepared GPT-5.6 critique challenges the product strategy without becoming an opaque runtime decision maker.",
+          "productRoute": "/demo/trust",
+          "test": "src/server/build-week/prepared-reviews.test.ts",
+          "screenshot": "build-week/bw9/captures/trust-1440x900.jpg",
+          "artifact": "build-week/bw7/gpt56-prepared-provenance.json",
+          "currentWeakness": "Prepared reviews are frozen artifacts rather than interactive inference.",
+          "exactClearanceCondition": "Every surface names gpt-5.6-sol exactly and labels the output prepared, never live."
+        },
+        {
+          "claim": "No auto-apply plus direct original employer destination preserves human agency and destination honesty.",
+          "productRoute": "/demo/employer-posting/northstar-applied-ai-solutions-engineer",
+          "test": "src/server/build-week/comparison-and-apply.test.ts; src/server/build-week/claim-integrity-bw9.test.ts",
+          "screenshot": "build-week/bw7/captures/employer-destination-1440x900.png",
+          "artifact": "build-week/bw9/destination-state-audit.json",
+          "currentWeakness": "The demo cannot complete an actual application by design.",
+          "exactClearanceCondition": "Application submissions and automatic Applied transitions remain zero."
+        }
+      ]
+    }
+  ]
+}

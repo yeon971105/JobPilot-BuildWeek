@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "jobpilot.bw10.codex-feedback-status.v1",
+  "checkedAt": "2026-07-18T12:24:00-07:00",
+  "selectedThreadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "selectedThreadTitle": "Finalize JobPilot product UX",
+  "feedbackCommandAvailableToAutomation": false,
+  "sessionId": null,
+  "formatValidated": false,
+  "fabricated": false,
+  "exactOwnerInstruction": "In the current Codex task titled ‘Finalize JobPilot product UX’, enter /feedback after JP-BW10 completes and record the returned primary Session ID without alteration.",
+  "hold": "HOLD_BUILD_WEEK_CODEX_FEEDBACK_ACTION",
+  "status": "EXACT_PRIMARY_THREAD_IDENTIFIED_MANUAL_COMMAND_REQUIRED"
+}

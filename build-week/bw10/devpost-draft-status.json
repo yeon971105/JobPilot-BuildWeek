@@ -1,13 +1,15 @@
 {
   "schemaVersion": "jobpilot.bw10.devpost-draft-status.v1",
-  "checkedAt": "2026-07-18T12:20:00-07:00",
+  "checkedAt": "2026-07-18T12:30:00-07:00",
   "draftUrl": null,
   "draftIdentifier": null,
   "lastSavedAt": null,
-  "populatedFieldCount": 27,
-  "missingFieldCount": 4,
+  "populatedFieldCount": 28,
+  "missingFieldCount": 3,
   "unresolvedAccountFields": ["authenticated Devpost team/profile label"],
+  "authenticatedAccess": false,
+  "accountCheckResult": "Official draft URL redirected to Devpost registration/login; no credentials were requested or entered.",
   "submitted": false,
-  "status": "LOCAL_DRAFT_COMPLETE_ACCOUNT_ACCESS_PENDING",
+  "status": "LOCAL_DRAFT_COMPLETE_DEVPOST_NOT_AUTHENTICATED",
   "hold": "HOLD_BUILD_WEEK_DEVPOST_ACCOUNT_ACTION"
 }

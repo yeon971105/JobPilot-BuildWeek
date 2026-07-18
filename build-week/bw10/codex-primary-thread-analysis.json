@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "jobpilot.bw10.codex-primary-thread-analysis.v1",
+  "analyzedAt": "2026-07-18T12:24:00-07:00",
+  "selectedThread": {
+    "threadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+    "title": "Finalize JobPilot product UX",
+    "cwd": "C:/Users/Jewon/Desktop/JobPilot",
+    "description": "JP-BW6: progressive evidence UX, private resume onboarding, local analysis, and final submission media"
+  },
+  "selectionRule": "Most representative Build Week product thread, not newest thread",
+  "evidenceReviewed": [
+    "Build Week commit timeline",
+    "JP-BW6 through JP-BW10 turns available in the active Codex task",
+    "CODEX_BUILD_LOG.md",
+    "build-week/bw9/gpt56-release-manifest.json",
+    "src/server/build-week/prepared-reviews.test.ts",
+    "available Codex task metadata"
+  ],
+  "featureMapping": [
+    { "feature": "Golden Path and application-fatigue story", "thread": "selected", "evidence": "JP-BW7 product extension and certified video package" },
+    { "feature": "AI Fit V2.2", "thread": "selected for Build Week repair and regression certification", "evidence": "Scoring invariants, receipt proof, and repeated release gates" },
+    { "feature": "progressive product UX", "thread": "selected", "evidence": "JP-BW6 task description and six scoped UX commits" },
+    { "feature": "private resume mode", "thread": "selected", "evidence": "JP-BW6 private onboarding, parser, privacy, and local Gemma work" },
+    { "feature": "nearby discovery", "thread": "selected", "evidence": "JP-BW7 discovery, sorting, comparison, and profile-aware flows" },
+    { "feature": "Score Receipt Verifier", "thread": "selected", "evidence": "JP-BW7 web/API/CLI verifier and tamper QA" },
+    { "feature": "prepared GPT review integration", "thread": "selected", "evidence": "Four gpt-5.6-sol prepared artifacts name this thread ID" },
+    { "feature": "destination trust and credibility freeze", "thread": "selected", "evidence": "JP-BW9 trust states, coverage freeze, and provenance cleanup" }
+  ],
+  "alternatives": [
+    {
+      "threadId": "019e4396-074f-7601-9491-aa929b983f4e",
+      "title": "JobPilot",
+      "reasonNotSelected": "Original broad MVP thread predates the concentrated Build Week product, proof, and prepared-review sequence."
+    },
+    {
+      "threadId": "019f4b16-e476-74b2-940a-60659b75c9f5",
+      "title": "clean and make it simple Jobpilot website UI UX.",
+      "reasonNotSelected": "Earlier UI simplification task does not cover the receipt verifier, private resume boundary, prepared GPT review, application-fatigue story, and final evidence sequence."
+    }
+  ],
+  "preparedArtifactThreadIdMatch": true,
+  "representativeCoverage": "HIGHEST_AVAILABLE",
+  "status": "SELECTED_EXACT_THREAD"
+}

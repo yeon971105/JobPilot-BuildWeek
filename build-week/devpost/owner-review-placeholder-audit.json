@@ -1,10 +1,9 @@
 {
   "schemaVersion": "jobpilot.bw10.devpost-placeholder-audit.v1",
-  "auditedAt": "2026-07-18T12:20:00-07:00",
-  "narrativeFields": 27,
-  "verifiedNarrativeFieldsPopulated": 27,
+  "auditedAt": "2026-07-18T13:55:00-07:00",
+  "narrativeFields": 31,
+  "verifiedNarrativeFieldsPopulated": 28,
   "unresolvedVerifiedOnlyFields": [
-    { "field": "publicReviewUrl", "value": null, "reason": "Deployment verification pending" },
     { "field": "unlistedVideoUrl", "value": null, "reason": "Authenticated upload and logged-out access test pending" },
     { "field": "codexFeedbackSessionId", "value": null, "reason": "Exact /feedback action pending" },
     { "field": "teamInformation", "value": "review required", "reason": "Authenticated account label must be confirmed" }

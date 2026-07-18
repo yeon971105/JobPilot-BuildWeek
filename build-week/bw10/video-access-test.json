@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "jobpilot.bw10.video-access-test.v1",
+  "checkedAt": null,
+  "url": null,
+  "loggedOutOrIncognitoPlayback": null,
+  "audio": null,
+  "captions": null,
+  "visibility": null,
+  "status": "NOT_RUN_NO_VERIFIED_UPLOAD_URL",
+  "hold": "HOLD_BUILD_WEEK_YOUTUBE_ACCOUNT_ACTION"
+}

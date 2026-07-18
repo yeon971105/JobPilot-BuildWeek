@@ -24,7 +24,7 @@
   "buildWeekExtension": "Added the no-login Golden Path, application-fatigue story, nearby discovery, transparent shortlist, private resume isolation, concise detail, comparison, safe handoff, tracker, verifier, GPT review surfaces, tour, Trust Lab, defect timeline, coverage proof, and study workflow.",
   "technologies": ["Codex", "GPT-5.6", "Gemma 4 12B", "Next.js 16.2.6", "React 19", "TypeScript", "Tailwind CSS 4", "Ollama", "Vitest", "SHA-256", "OpenAI Sites"],
   "repositoryUrl": "https://github.com/yeon971105/JobPilot-BuildWeek",
-  "publicReviewUrl": null,
+  "publicReviewUrl": "https://jobpilot-build-week-review.yeon971105.chatgpt.site",
   "unlistedVideoUrl": null,
   "codexFeedbackSessionId": null,
   "testingInstructions": "Landing → Today’s Shortlist → Northstar detail → receipt FULLY_REPRODUCED → tamper INVALID → synthetic employer destination → return and explicitly mark Preparing → Trust Lab → Coverage Proof.",

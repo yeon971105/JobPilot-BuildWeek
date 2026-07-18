@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.bw10.video-review-publication.v1",
+  "checkedAt": "2026-07-18T12:30:00-07:00",
+  "sourcePath": "build-week/video/jobpilot-winning-rc1-demo.mp4",
+  "metadataPath": "build-week/video/jobpilot-winning-rc1-youtube-metadata.md",
+  "requestedVisibility": "Unlisted",
+  "uploaded": false,
+  "youtubeVideoId": null,
+  "unlistedReviewUrl": null,
+  "madePublic": false,
+  "accountActionAttempted": false,
+  "authenticatedAccess": false,
+  "accountCheckResult": "YouTube Studio redirected to the official Google sign-in page; no credentials were requested or entered.",
+  "hold": "HOLD_BUILD_WEEK_YOUTUBE_ACCOUNT_ACTION",
+  "status": "YOUTUBE_NOT_AUTHENTICATED_UPLOAD_NOT_ATTEMPTED"
+}

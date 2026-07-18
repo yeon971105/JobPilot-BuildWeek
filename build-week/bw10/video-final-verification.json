@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "jobpilot.bw10.video-final-verification.v1",
+  "verifiedAt": "2026-07-18T12:23:00-07:00",
+  "path": "build-week/video/jobpilot-winning-rc1-demo.mp4",
+  "bytes": 5193564,
+  "sha256": "610be551420d60f32c657276ccf569a36ca5dc2795a774c9e032fe7c164ce71e",
+  "durationSeconds": 175,
+  "durationBelow180Seconds": true,
+  "resolution": "1920x1080",
+  "videoCodec": "h264",
+  "audio": { "present": true, "codec": "aac", "language": "eng" },
+  "captions": { "present": true, "codec": "mov_text", "language": "eng", "source": "build-week/video/jobpilot-winning-rc1-captions.srt" },
+  "checks": {
+    "productUiMatchesFrozenRc": true,
+    "frozenCoverageMetricsMismatch": 0,
+    "losAngelesCountyTerminologyMismatch": 0,
+    "destinationTrustTerminologyMismatch": 0,
+    "exactGpt56ModelName": "gpt-5.6-sol",
+    "preparedOutputCalledLive": false,
+    "openAiApiRequestsStated": 0,
+    "codexUseExplainedInEnglishAudio": true,
+    "gpt56UseExplainedInEnglishAudio": true,
+    "humanStudyResultClaimed": false,
+    "realPersonalData": 0,
+    "realEmployerTrademarks": 0,
+    "copyrightedMusic": false
+  },
+  "sourceManifest": "build-week/video/jobpilot-winning-rc1-recording-manifest.json",
+  "voiceoverSource": "build-week/video/jobpilot-winning-rc1-voiceover.md",
+  "publicSafety": "PASS_PUBLIC_SAFE_SYNTHETIC",
+  "status": "PASS_LOCAL_CERTIFIED_VIDEO"
+}

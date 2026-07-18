@@ -92,8 +92,12 @@ See [SCORE_RECEIPT_VERIFIER.md](SCORE_RECEIPT_VERIFIER.md).
 Status: **READY_NOT_RUN**. Actual participant count: **0**. Minimum target: **5**; preferred target: **8–12**. Synthetic tooling validation is never presented as human evidence. See [the protocol](build-week/study/protocol.md), [consent](build-week/study/consent.md), and [owner workflow](build-week/study/owner-collection-workflow.md).
 
 ```bash
-npm run study:analyze -- <combined-participant-csv>
+npm run study:validate -- build-week/study/inbox
+npm run study:combine -- build-week/study/inbox
+npm run study:analyze -- build-week/study/validated/combined.csv
 ```
+
+The participant inbox rejects incomplete pairs, duplicate conditions, consent mismatches, identifying columns, and dry-run/tooling rows before combination. Participant-level inbox and validated files are ignored by Git.
 
 ## Private Resume Mode
 
@@ -135,4 +139,10 @@ The current BW8 certificate, route matrix, responsive QA, accessibility checks, 
 
 ## Development-phase boundary
 
-This remains a development release candidate. JobPilot has not deployed itself, made the video public, submitted Devpost, obtained final owner approval, or created a final release tag. Code and original documentation are MIT licensed.
+This remains a development release candidate. A non-final public owner-review environment may be available, but JobPilot has not made the video Public, submitted Devpost, obtained final owner approval, or created a final release tag. Code and original documentation are MIT licensed.
+
+Public owner-review environment: <https://jobpilot-build-week-review.yeon971105.chatgpt.site>. It uses synthetic demo data, cached prepared analyses, no OpenAI key, no production database, no Ollama connection, and no public resume upload.
+
+## Codex `/feedback` status
+
+The representative Build Week task is `Finalize JobPilot product UX` (`019f7382-0ef9-7d10-bf26-d6e5615924dd`). It covers the concentrated JP-BW6–JP-BW10 product, proof, prepared-review, QA, and release sequence, and the four prepared GPT-5.6 artifacts bind to this thread ID. The required `/feedback` Session ID is intentionally `null` until the owner runs `/feedback` in that exact task; no ID is fabricated.

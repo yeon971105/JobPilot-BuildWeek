@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "jobpilot.codex-session.v1",
+  "primaryThreadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "primaryThreadTitle": "Finalize JobPilot product UX",
+  "feedbackSessionId": null,
+  "feedbackSessionIdValidated": false,
+  "fabricated": false,
+  "status": "OWNER_FEEDBACK_ACTION_REQUIRED",
+  "hold": "HOLD_BUILD_WEEK_CODEX_FEEDBACK_ACTION"
+}
