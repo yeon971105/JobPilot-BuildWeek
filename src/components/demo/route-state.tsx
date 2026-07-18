@@ -1,0 +1,5 @@
+import { DemoHeader } from "@/components/demo/demo-header";
+
+export function RouteSkeleton({ title = "Loading your decision view", cards = 3 }: { title?: string; cards?: number }) {
+  return <div className="min-h-screen bg-[#fbf7ed] text-[#173d2d]" aria-busy="true" aria-label={title}><DemoHeader /><main className="mx-auto max-w-7xl px-5 py-10"><p className="eyebrow">Preparing a clear view</p><div className="skeleton mt-4 h-14 max-w-2xl rounded-2xl">{title}</div><div className="skeleton mt-4 h-6 max-w-xl rounded-lg">Loading supporting context</div><div className="mt-9 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{Array.from({ length: cards }, (_, index) => <div key={index} className="rounded-3xl border border-[#173d2d]/10 bg-[#fffdf7] p-5"><div className="skeleton h-4 w-28 rounded" /><div className="skeleton mt-4 h-8 w-4/5 rounded-lg" /><div className="skeleton mt-7 h-24 rounded-2xl" /><div className="skeleton mt-5 h-11 rounded-xl" /></div>)}</div><span className="sr-only" role="status">{title}</span></main></div>;
+}

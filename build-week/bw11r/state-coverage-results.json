@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "jobpilot.bw11r.state-coverage-results.v1",
+  "status": "IMPLEMENTED_PENDING_FINAL_BROWSER_CERTIFICATION",
+  "loadingSkeletonRoutes": 6,
+  "demoErrorBoundary": true,
+  "trackerEmptyState": true,
+  "trackerPopulatedState": true,
+  "trackerUndoToast": true,
+  "jobsFilterEmptyState": true,
+  "reducedMotionCss": true,
+  "infiniteMotion": false,
+  "parallax": false
+}

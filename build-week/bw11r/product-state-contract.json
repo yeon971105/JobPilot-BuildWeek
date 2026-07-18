@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "jobpilot.bw11r.product-state-contract.v1",
+  "required": {
+    "loading": ["For You", "Jobs", "Job Detail", "Compare", "Trust Lab"],
+    "empty": ["Jobs filters", "Tracker", "Compare selection", "Study reset"],
+    "success": ["Save role", "Tracker movement", "Receipt verification", "Study completion"],
+    "error": ["Demo route boundary", "Private analysis", "Prepared strategy", "Receipt verification"]
+  },
+  "motionTimingMilliseconds": {
+    "hover": 140,
+    "card": 180,
+    "tab": 200,
+    "overlay": 220,
+    "pageEntry": 280,
+    "maximumCardStagger": 40
+  },
+  "reducedMotion": "Movement, counting, stagger, shimmer, and smooth scrolling are reduced to immediate state changes."
+}

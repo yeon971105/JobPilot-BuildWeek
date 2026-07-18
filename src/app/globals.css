@@ -55,7 +55,7 @@ pre { margin: 0; font-family: var(--font-geist-mono), monospace; white-space: pr
 .tab-panel-enter { animation: tab-panel-in var(--motion-tab) var(--ease-premium) both; }
 .modal-surface { animation: modal-in var(--motion-overlay) var(--ease-premium) both; }
 .skeleton { position: relative; overflow: hidden; background: #e6eadf; color: transparent; }
-.skeleton::after { position: absolute; inset: 0; content: ""; transform: translateX(-100%); background: linear-gradient(90deg,transparent,rgb(255 255 255 / .65),transparent); animation: skeleton-shimmer 1.25s ease-in-out infinite; }
+.skeleton::after { position: absolute; inset: 0; content: ""; transform: translateX(-100%); background: linear-gradient(90deg,transparent,rgb(255 255 255 / .65),transparent); animation: skeleton-shimmer 1.25s ease-in-out 2; }
 @keyframes page-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes card-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @keyframes menu-in { from { opacity: 0; transform: translateY(-5px) scale(.985); } to { opacity: 1; transform: none; } }
