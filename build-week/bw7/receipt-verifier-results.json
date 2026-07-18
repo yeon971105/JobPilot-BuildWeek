@@ -1,0 +1,18 @@
+{
+  "purpose": "Record independent verification across all frozen receipts and the CLI path.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Receipt reproduction",
+  "verifierVersion": "jobpilot-receipt-verifier.v1",
+  "fullyReproducedReceipts": 6,
+  "arithmeticErrors": 0,
+  "hashMismatches": 0,
+  "hiddenAdjustments": 0,
+  "cliReceiptPath": "build-week/bw7/receipts/northstar-demo-receipt.json",
+  "cliStatus": "FULLY_REPRODUCED",
+  "browserBundledStatus": "FULLY_REPRODUCED",
+  "browserTamperedStatus": "INVALID",
+  "result": "PASS"
+}

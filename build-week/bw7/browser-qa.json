@@ -1,0 +1,29 @@
+{
+  "purpose": "Record production browser journeys and four-viewport route certification.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Production browser QA",
+  "baseUrl": "http://127.0.0.1:3204",
+  "viewports": [
+    "1440x900",
+    "1024x768",
+    "390x844",
+    "320x700"
+  ],
+  "routesPerViewport": 11,
+  "responsiveChecks": 44,
+  "journeys": [
+    "discovery-sort-filter-compare",
+    "detail-evidence-experience-employer",
+    "receipt-tamper-trust",
+    "seven-step-judge-tour",
+    "explicit-tracker-state"
+  ],
+  "horizontalOverflows": 0,
+  "applicationErrorBoundaries": 0,
+  "consoleWarningsOrErrors": 0,
+  "failedJourneys": 0,
+  "result": "PASS"
+}

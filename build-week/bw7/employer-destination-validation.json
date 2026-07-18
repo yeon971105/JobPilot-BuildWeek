@@ -1,0 +1,15 @@
+{
+  "purpose": "Record the production-browser fictional employer journey.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Direct employer destination",
+  "jobId": "northstar-applied-ai-solutions-engineer",
+  "fictionalDisclosureVisible": true,
+  "noPersonalDataDisclosureVisible": true,
+  "disabledApplicationControlVisible": true,
+  "explicitPreparingConfirmedInTracker": true,
+  "appliedCountAfterReturn": 0,
+  "result": "PASS"
+}

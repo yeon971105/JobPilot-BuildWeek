@@ -1,0 +1,163 @@
+{
+  "purpose": "Index actual-product production browser captures.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Visual evidence",
+  "captures": [
+    {
+      "path": "build-week/bw7/captures/capability-evidence-1440x900.png",
+      "bytes": 91092,
+      "sha256": "de51fea11216ad5b6017634b0c0baff164a120c74302dcb364b96bb3cd8bcca0",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/compare-390x844.png",
+      "bytes": 33773,
+      "sha256": "f94463280d230fdfab0cf2e42ad8f73c4da44a418cb80dbebed8a1e7c5ae4786",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/comparison-1440x900.png",
+      "bytes": 80766,
+      "sha256": "8be1011bd3d18ab9fde49bcb57a06a00e0f07b42ce3c365a28d303d72a075f7c",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/comparison-prepared-review-1440x900.png",
+      "bytes": 85804,
+      "sha256": "7197a5deb03ddc105ada6c69716abcce132243f67abc980a34fa127db9f5f69b",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/detail-320x700.png",
+      "bytes": 22570,
+      "sha256": "1da31e843d9f3476ba47fd07908fa5cc6c70bca49fe5f7081d58f3f9663d6b68",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/detail-390x844.png",
+      "bytes": 31265,
+      "sha256": "3e4ed588e1618f9d7864825454dd9367f5a8e09934353cc71bb6a7c74437b1d4",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/detail-overview-1440x900.png",
+      "bytes": 86193,
+      "sha256": "e1cc42e4fc763d24ba6f6b8662185dc2a25a3d6c93f53d37acfa5df55d805665",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/employer-destination-1440x900.png",
+      "bytes": 78486,
+      "sha256": "1b22eb36f9ea19f05f67148a6f349e09d42c93e7cb93ad73b34c240bba56c501",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/experience-1440x900.png",
+      "bytes": 94882,
+      "sha256": "6b97d403a6fe33fddb13394f9d4a663d6b89c3f87a743626196ee4d8b35e0940",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/gpt56-prepared-challenge-1440x900.png",
+      "bytes": 103190,
+      "sha256": "ac38631af34d1c6d38dd1660f2b1e5c7670e452fa03e2711d925bd5d07e62827",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/jobs-1024x768.png",
+      "bytes": 64641,
+      "sha256": "cfac7bd48b967c3fc0e9e893b472f9820e99332003e5ea12ad0d00a71bada913",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/jobs-best-match-1440x900.png",
+      "bytes": 94468,
+      "sha256": "4cc9cd6e3ebd5939c601718c7efb04f270de0c25d8bf45ff5527ea95f891c622",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/jobs-nearest-1440x900.png",
+      "bytes": 92919,
+      "sha256": "60a3dc92e5baf30cdab0e4c9f78bd222e9bdf80d8921b027d27bd33c98b1c46d",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/judge-tour-complete-1440x900.png",
+      "bytes": 81876,
+      "sha256": "590665e29485e6422a7abfcecc52543787a42220535e55c85b9bdf2e2f3d10dc",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/judge-tour-step-1-1440x900.png",
+      "bytes": 81551,
+      "sha256": "b3b0913e848e03923449dde9163b47f4d7184e359fd6c454ee1edbe553e58689",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/landing-1440x900.png",
+      "bytes": 96617,
+      "sha256": "2eb063522091ea1a0c8ee902336c2fd0f2441957ff6506ba4ff308656f3a4fde",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/landing-320x700.png",
+      "bytes": 31452,
+      "sha256": "49484932aa7e546730a76db22b3e41dcaa925ace921deacf61f49854e58f502e",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/landing-390x844.png",
+      "bytes": 39125,
+      "sha256": "f2e1968d21fb03f9b6ac1388b1a9c2054e8725535ffddbb8fb5ea724a59efec6",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/receipt-verifier-tampered-1440x900.png",
+      "bytes": 72135,
+      "sha256": "da3f97c2730665858e4505595fa5682f72a94708d90c7ef4ddf36c2e86fa9d13",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/receipt-verifier-valid-1440x900.png",
+      "bytes": 80890,
+      "sha256": "451683f874232046f14c40617c9e31f3d41f262d127b375a44874e9407baa6b2",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/score-proof-1440x900.png",
+      "bytes": 96716,
+      "sha256": "3d3fbd49f2e230c205f4ea1377fdffc44485a2482d27a4bee7587ea142b0aa27",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/tracker-preparing-1440x900.png",
+      "bytes": 58870,
+      "sha256": "0de800d6d752933dfde25aeeef88f27ab2dbaf76d44794952cce14a87fc5ce6c",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/trust-gpt56-prepared-1440x900.png",
+      "bytes": 103085,
+      "sha256": "cb81094cbb0633412676c104e42c6cf1a419049e51e748a101cdceaff61b2526",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/trust-lab-1440x900.png",
+      "bytes": 92710,
+      "sha256": "906a2e07600d1decdf011d0fec5fa4d2a9a0930b0034524f19805671414b5a28",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    },
+    {
+      "path": "build-week/bw7/captures/verifier-320x700.png",
+      "bytes": 25835,
+      "sha256": "0c2265d52fbf6cb96a8596a421f430d870107e765dc2f679be52d0b2a5f4da96",
+      "privacyClassification": "PUBLIC_SAFE_SYNTHETIC"
+    }
+  ],
+  "captureCount": 25,
+  "personalDataFiles": 0,
+  "result": "PASS"
+}

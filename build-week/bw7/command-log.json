@@ -1,0 +1,59 @@
+{
+  "purpose": "Summarize release-critical commands and observed results.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Reproducibility",
+  "commands": [
+    {
+      "command": "npm test -- --run",
+      "exitCode": 0,
+      "result": "73 passed; 2 authorized skips"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "result": "32 static/dynamic routes generated"
+    },
+    {
+      "command": "npm run test:css-pipeline",
+      "exitCode": 0,
+      "result": "2 passed"
+    },
+    {
+      "command": "npm audit --audit-level=low --json",
+      "exitCode": 0,
+      "result": "0 vulnerabilities"
+    },
+    {
+      "command": "npm run validate:providers",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "npm run validate:local-gemma",
+      "exitCode": 0,
+      "result": "PASS; real gemma4:12b"
+    },
+    {
+      "command": "npm run verify:receipt -- build-week/bw7/receipts/northstar-demo-receipt.json",
+      "exitCode": 0,
+      "result": "FULLY_REPRODUCED"
+    },
+    {
+      "command": "scripts/render-bw7-winning-video.ps1",
+      "exitCode": 0,
+      "result": "175.000 seconds"
+    }
+  ],
+  "result": "PASS"
+}

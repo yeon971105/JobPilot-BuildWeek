@@ -1,0 +1,22 @@
+{
+  "purpose": "Prove employer handoff preserves user control and cannot submit.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "No auto-apply",
+  "target": "_blank",
+  "rel": "noopener noreferrer",
+  "forms": 0,
+  "hiddenRedirects": 0,
+  "employerNetworkPosts": 0,
+  "continueApplicationDisabled": true,
+  "automaticAppliedTransitions": 0,
+  "explicitActions": [
+    "Mark as Preparing",
+    "Save",
+    "Leave unchanged"
+  ],
+  "applicationSubmissions": 0,
+  "result": "PASS"
+}

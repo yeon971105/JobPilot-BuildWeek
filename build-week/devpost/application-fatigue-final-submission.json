@@ -1,0 +1,23 @@
+{
+  "projectName": "JobPilot",
+  "tagline": "Find the roles worth your time.",
+  "category": "Apps for Your Life",
+  "problem": "Application fatigue from repeated searching, manual comparison, and unclear priority.",
+  "solution": "Nearby profile-aware discovery, evidence-backed deterministic priority, independently verifiable receipts, direct employer destination, and explicit browser-local tracking.",
+  "primaryModel": "Gemma 4 12B",
+  "scoreOwner": "Deterministic AI Fit V2.2 code",
+  "gpt56Contribution": "Four prepared structured reviews from frozen synthetic evidence",
+  "gpt56Model": "gpt-5.6-sol",
+  "openAiApiRequests": 0,
+  "openAiApiCostUsd": 0,
+  "applicationSubmissions": 0,
+  "publicData": "synthetic",
+  "testsPassing": 73,
+  "authorizedSkips": 2,
+  "responsiveRouteChecks": 44,
+  "horizontalOverflows": 0,
+  "browserConsoleWarningsOrErrors": 0,
+  "videoPath": "build-week/video/jobpilot-winning-rc1-demo.mp4",
+  "videoDurationSeconds": 175,
+  "submissionStatus": "OWNER_APPROVAL_REQUIRED"
+}

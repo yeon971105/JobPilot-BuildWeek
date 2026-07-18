@@ -1,0 +1,37 @@
+{
+  "purpose": "Preserve observed release failures and their verified repairs.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Failure transparency",
+  "failures": [
+    {
+      "defect": "Legacy product UX/provider assertions failed after intentional story and provider changes.",
+      "repair": "Updated assertions to the new exact public contract and prepared-provider identity.",
+      "regression": "73-test suite"
+    },
+    {
+      "defect": "Legacy provider CLI expected FIXTURE_ONLY.",
+      "repair": "Validated CODEX_GPT56_PREPARED with gpt-5.6-sol and live=false.",
+      "regression": "npm run validate:providers"
+    },
+    {
+      "defect": "Receipt CLI was initially pointed at a summary, not a receipt.",
+      "repair": "Added deterministic synthetic receipt generation and verified the generated path.",
+      "regression": "32 passed verifier checks"
+    },
+    {
+      "defect": "Historical CSS evidence hash and old Try Demo selector no longer matched the product bundle.",
+      "repair": "Rebound the CSS certificate and primary CTA selector to JP-BW7.",
+      "regression": "2 production CSS tests"
+    },
+    {
+      "defect": "Receipt verifier exceeded a 320-pixel viewport by 69 pixels.",
+      "repair": "Added shrinkable grid, result, and textarea boundaries.",
+      "regression": "source regression plus 44-check browser recertification"
+    }
+  ],
+  "unresolvedReleaseDefects": 0,
+  "result": "PASS"
+}

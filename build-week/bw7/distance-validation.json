@@ -1,0 +1,21 @@
+{
+  "purpose": "Certify configured-location discovery math without technical-score leakage.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Nearby discovery",
+  "profile": {
+    "homeCity": "Oakland, California",
+    "latitude": 37.8044,
+    "longitude": -122.2712,
+    "preferredRadiusMiles": 35
+  },
+  "oaklandToSanFranciscoMiles": 8.344793760138897,
+  "remoteOnlyLabel": "Remote",
+  "multiLocationNearestUsesMinimum": true,
+  "browserGeolocationRequests": 0,
+  "mapOrGeocodingRequests": 0,
+  "technicalClassTotalChangesAfterCoordinateMutation": 0,
+  "result": "PASS"
+}

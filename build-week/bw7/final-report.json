@@ -1,0 +1,28 @@
+{
+  "title": "JobPilot JP-BW7 application-fatigue winning product RC",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "status": "PASS",
+  "userOutcome": "Find the roles worth your time, know why they fit, and remain in control of every application.",
+  "keyProof": {
+    "testsPassing": 73,
+    "authorizedSkips": 2,
+    "browserChecks": 44,
+    "receiptReproductions": 6,
+    "npmVulnerabilities": 0,
+    "openAiApiRequests": 0,
+    "openAiApiCostUsd": 0,
+    "applicationSubmissions": 0,
+    "videoDurationSeconds": 175
+  },
+  "studyStatus": "READY_NOT_RUN",
+  "preview": "http://127.0.0.1:3204",
+  "requiredOwnerActions": [
+    "Review the preview",
+    "Review the local video",
+    "Approve or request changes",
+    "Upload the video and submit Devpost only after approval"
+  ]
+}

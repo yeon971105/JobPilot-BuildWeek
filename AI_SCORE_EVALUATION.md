@@ -1,13 +1,21 @@
 # AI Score Evaluation
 
-The checked-in suite covers 160 property cases, 36 full-score fixtures, 60 experience cases, 30 work-mode cases, 30 required/preferred cases, 24 capability-grouping cases, and 24 eligibility cases.
+The checked-in suite covers 160 deterministic property cases, 36 full-score fixture variants, 60 month-level experience cases, 30 work-mode/travel separation cases, 30 required/preferred cap cases, 24 capability de-duplication cases, and 24 eligibility cases.
 
-Required zero results include arithmetic errors, incomplete allocations, class-cap violations, preferred-experience violations, duplicate capability points, hidden adjustments, work-mode leakage, travel leakage, and receipt instability.
+JP-BW7 adds:
 
-JP-BW3 adds anti-hardcoding source inspection and a deterministic sensitivity scenario: one synthetic evidence classification changes, the affected capability and receipt recompute, and unrelated points remain identical.
+- exact stable Best Match, Nearest, Most Recent, and Highest Evidence Quality orders;
+- known Haversine distance, multi-location nearest selection, Remote labeling, and filter behavior;
+- proof that changing coordinates leaves technical class totals and capability points unchanged;
+- comparison cap and visible-factor-only source contracts;
+- safe `_blank` employer destination, zero forms, disabled submit, and zero automatic Applied transition;
+- all six receipts `FULLY_REPRODUCED`;
+- adversarial hash, rounding, cap, transfer, evidence-ID, duplicate-ID, version, byte, depth, array, string, object-shape, and prototype-key cases;
+- `ARITHMETICALLY_VALID` behavior when original frozen source inputs are unavailable;
+- prepared GPT-5.6 file and output hashes, valid evidence IDs, zero API/cost/fabrication, and non-live labels;
+- the seven-stage optional judge-tour contract;
+- a 320-pixel verifier shrinkability regression found during production browser QA.
 
-Independent hiring-outcome calibration is not yet available; the score is policy-based.
+Release results: 73 passing tests, two authorized skips, zero arithmetic errors, zero hidden adjustments, zero receipt mismatches, and unchanged frozen receipt hashes. Browser QA adds 44 production route/viewport checks with zero overflow and zero console warnings/errors.
 
-## JP-BW6 recertification
-
-The proof suite now includes public receipt-hash preservation, private profile context, fail-closed local-model identifiers, zero raw-resume receipt content, PDF/DOCX/TXT parsing, malformed and active-content rejection, prompt-injection handling, protected-attribute exclusion, profile-mode cache isolation, progressive disclosure, and no-key release checks. Public work-mode mutations still leave technical class totals unchanged; hidden adjustments, arithmetic errors, and receipt mismatches remain zero.
+No hiring-outcome sample exists. The usability study kit is `READY_NOT_RUN`; it contains no participant results.

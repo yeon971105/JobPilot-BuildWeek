@@ -2,30 +2,27 @@
 
 ## Public Judge Mode
 
-- Every candidate, job, evidence excerpt, screenshot, test resume, and prepared analysis is synthetic.
-- `LOCAL_PRIVATE_MODE=false` rejects resume upload requests before reading multipart data.
-- No account, production database, employer integration, or application submission exists.
-- Prepared outputs are not labeled live or fresh.
+- Candidate, jobs, evidence, employer destination, resume fixture, captures, prepared analyses, and media are synthetic.
+- No account, production database, employer credential, geolocation permission, map API, geocoding API, resume upload, or application submission is required.
+- Public upload requests fail before parsing when Local Private Mode is disabled.
+- Nearby results describe the processed official/right-eligible source portfolio, not market-wide coverage.
 
 ## Local Private Mode
 
-- PDF, DOCX, and UTF-8 TXT files are limited to 10 MB and parsed in memory.
-- MIME type and extension must agree. Malformed, binary, executable, macro-enabled, embedded-object, and path-like input is rejected.
-- DOCX external relationships are stripped before Mammoth extracts text.
-- A PDF must contain selectable text. OCR is not performed.
-- Raw bytes and complete raw text are not persisted, logged, included in reports, or included in Score Receipts.
-- The byte buffer is overwritten on every successful or failed extraction path.
-- Only the user-confirmed structured profile is stored in browser-local storage; **Clear Local Profile** removes it from active state and replaces storage with an empty default state.
-- Protected-attribute lines and prompt-like instructions are excluded from matching evidence. JobPilot does not infer age, gender, ethnicity, disability, health, religion, family status, or photograph traits.
-- Confirmed structured evidence is sent only to the configured loopback Ollama URL. Runtime validation rejects non-loopback endpoints.
-- No resume content is sent to OpenAI or another cloud model.
+- PDF, DOCX, and UTF-8 TXT are limited to 10 MB and parsed in memory.
+- MIME type, extension, signature, archive safety, active content, external relationships, binary content, and extractability are validated.
+- Raw bytes and complete raw text are not persisted, logged, placed in reports or receipts, or sent to OpenAI.
+- Only user-confirmed structured profile evidence is stored browser-locally and sent to loopback Ollama.
+- Protected attributes and prompt-like commands are excluded from scoring evidence.
 
-## Optional GPT-5.6 heavy reasoning
+## Prepared GPT-5.6
 
-The optional heavy route may receive only validated requirements, selected minimal evidence excerpts and IDs, deterministic receipt data, and practical constraints. It may not receive the complete raw resume in Build Week mode and may never calculate or mutate the final score.
+Four prepared reviews use frozen synthetic requirements, selected evidence IDs, deterministic receipt context, and practical constraints. They contain no raw private resume or personal data. Provenance records 0 API requests, $0 API cost, no stored chain of thought, no model-generated score, no unsupported claims, and no fabricated experience, education, or skills.
 
 ## Local browser state
 
-Profile, preferences, analyses, and tracker records remain browser-local. Moving a role to Applied is planning state only. JobPilot never submits an application.
+Profile, preferences, comparison selection, analyses, tracker records, and bounded demo events remain browser-local. Demo events include only an event type, synthetic job ID, and timestamp. Applied is planning state only.
 
-Secret scans cover source, build output, reports, fixtures, screenshots, staged files, and media metadata. Server secrets have no `NEXT_PUBLIC_` prefix and public status responses never return secret values, file paths, or credentials.
+## External transmission audit
+
+The certified judge journeys generated zero external product requests, zero cloud resume transmissions, zero OpenAI API calls, zero employer form posts, and zero application submissions. JobPilot never submits an application.

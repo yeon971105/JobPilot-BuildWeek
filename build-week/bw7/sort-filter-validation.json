@@ -1,0 +1,56 @@
+{
+  "purpose": "Freeze every visible discovery order and filter contract.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Deterministic discovery",
+  "exactOrders": {
+    "BEST_MATCH": [
+      "harbor-product-data-analyst",
+      "northstar-applied-ai-solutions-engineer",
+      "alder-data-platform-engineer",
+      "juniper-customer-ai-enablement-lead",
+      "meridian-ml-infrastructure-engineer",
+      "mosaic-junior-software-engineer"
+    ],
+    "NEAREST": [
+      "alder-data-platform-engineer",
+      "mosaic-junior-software-engineer",
+      "northstar-applied-ai-solutions-engineer",
+      "juniper-customer-ai-enablement-lead",
+      "meridian-ml-infrastructure-engineer",
+      "harbor-product-data-analyst"
+    ],
+    "MOST_RECENT": [
+      "harbor-product-data-analyst",
+      "northstar-applied-ai-solutions-engineer",
+      "alder-data-platform-engineer",
+      "meridian-ml-infrastructure-engineer",
+      "juniper-customer-ai-enablement-lead",
+      "mosaic-junior-software-engineer"
+    ],
+    "HIGHEST_EVIDENCE": [
+      "harbor-product-data-analyst",
+      "northstar-applied-ai-solutions-engineer",
+      "juniper-customer-ai-enablement-lead",
+      "alder-data-platform-engineer",
+      "meridian-ml-infrastructure-engineer",
+      "mosaic-junior-software-engineer"
+    ]
+  },
+  "filtersTested": [
+    "query",
+    "workMode",
+    "seniority",
+    "minimumScore",
+    "evidenceSufficient",
+    "priority",
+    "blocker",
+    "withinPreferredArea",
+    "remoteCompatible"
+  ],
+  "stableTieBreak": "jobId",
+  "errors": 0,
+  "result": "PASS"
+}

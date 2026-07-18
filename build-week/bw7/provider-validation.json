@@ -1,0 +1,22 @@
+{
+  "purpose": "Record submitted provider routing and safe public status.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Hybrid provider boundary",
+  "architecture": "LOCAL_FIRST_HYBRID",
+  "semantic": {
+    "provider": "LOCAL_GEMMA_PREPARED",
+    "model": "gemma4:12b",
+    "live": false
+  },
+  "heavy": {
+    "provider": "CODEX_GPT56_PREPARED",
+    "model": "gpt-5.6-sol",
+    "live": false
+  },
+  "openAiKeyConfigured": false,
+  "secretsPrinted": false,
+  "result": "PASS"
+}

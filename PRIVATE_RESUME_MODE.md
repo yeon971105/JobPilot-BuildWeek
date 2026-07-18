@@ -1,68 +1,46 @@
 # Private Resume Mode
 
-Private Resume Mode is the local-only product path for profile-specific analysis. It is separate from the synthetic, no-login public judge experience.
+Private Resume Mode is the local-only path for profile-specific analysis. The public judge path uses synthetic data and rejects upload bodies before parsing.
 
 ## Setup
 
-1. Install Node.js 20+ and npm dependencies.
-2. Install Ollama and make `gemma4:12b` available locally.
-3. Set:
+```dotenv
+LOCAL_PRIVATE_MODE=true
+OLLAMA_ENABLED=true
+OLLAMA_BASE_URL=http://127.0.0.1:11434
+OLLAMA_MODEL=gemma4:12b
+```
 
-   ```dotenv
-   LOCAL_PRIVATE_MODE=true
-   OLLAMA_ENABLED=true
-   OLLAMA_BASE_URL=http://127.0.0.1:11434
-   OLLAMA_MODEL=gemma4:12b
-   ```
+Run the app and open `/profile/resume`. No OpenAI key is required.
 
-4. Run `npm run build && npm run start` or `npm run dev`.
-5. Open `/profile/resume`.
+## Supported files and bounds
 
-No OpenAI key is required.
+| Format | Rule |
+| --- | --- |
+| PDF | Valid PDF signature, selectable text, no OCR |
+| DOCX | Valid Open XML; macros, scripts, executables, ActiveX, embedded objects, and external relationships rejected or stripped |
+| TXT | Fatal-valid UTF-8; binary/null-byte input rejected |
 
-## Supported files
+Files are limited to 10 MB. Extension, MIME type, signature, safe basename, archive structure, and extractability must agree.
 
-| Format | MIME type | Behavior |
-| --- | --- | --- |
-| PDF | `application/pdf` | Requires a valid PDF signature and selectable text. OCR is unavailable. |
-| DOCX | Open XML Word MIME | Rejects macros, scripts, executables, ActiveX, and embedded objects; strips external relationships. |
-| TXT | `text/plain` | Requires fatal-valid UTF-8 and rejects null-byte binary content. |
+## Flow
 
-Every file must be 10 MB or smaller, have a safe basename, and have matching extension and MIME type. Parsing happens in memory. Raw bytes are overwritten when parsing exits.
+1. Select a file or the built-in synthetic test resume.
+2. Parse in memory.
+3. Review and edit roles, projects, skills, education, certifications, dates, evidence excerpts, and warnings.
+4. Confirm the structured profile.
+5. Configure home city and coordinates, preferred radius, remote preference, work modes, locations, travel, relocation, and optional authorization note.
+6. Open a role. One bounded loopback `gemma4:12b` request returns semantic matches; deterministic code produces the score and receipt.
 
-## Onboarding flow
-
-1. Select a local resume or the built-in synthetic test resume.
-2. Parse locally.
-3. Review roles, projects, skills, education, certifications, dates, evidence excerpts, and warnings.
-4. Edit, add, or remove incorrect items.
-5. Confirm the structured profile.
-6. Set work modes, locations, remote eligibility, travel tolerance, relocation, and the optional authorization note.
-7. Open a role. JobPilot runs local Gemma matching asynchronously and then deterministic AI Fit V2.2.
-
-Changing the profile or preferences clears prior private analyses. **Clear Local Profile** replaces browser storage with an empty demo state.
+Changing the profile or preferences invalidates private analyses. **Clear Local Profile** replaces local state with the empty demo state.
 
 ## Privacy boundary
 
-- Resume parsing makes zero network requests.
-- Local semantic matching is restricted to loopback HTTP on `127.0.0.1`, `localhost`, or `::1`.
-- The model receives confirmed structured evidence, not an unreviewed raw file.
-- Protected-attribute lines and prompt-like commands do not become scoring evidence.
-- Raw text is absent from logs, reports, and Score Receipts.
-- Public Judge Mode returns HTTP 403 before reading an upload body.
+- Parsing makes zero network requests.
+- Raw bytes and complete raw text are not persisted, logged, placed in reports, sent to prepared GPT-5.6 review, or included in receipts.
+- Confirmed structured evidence goes only to a validated loopback Ollama endpoint.
+- Protected-attribute text and prompt-like instructions do not become scoring evidence.
+- Browser geolocation is never requested; coordinates are user-configured and local.
 - JobPilot never submits an application.
 
-## Local Gemma contract
-
-The request uses `gemma4:12b`, temperature zero, a fixed seed, a strict output schema, and an explicit instruction that resume excerpts are untrusted inert data. Returned requirement IDs and evidence IDs must exist in the supplied contract. Unknown IDs, incomplete output, non-JSON output, a disabled local mode, or an unavailable model fails closed.
-
-Gemma handles semantic matching. Deterministic code calculates every point. Work preferences affect Apply Priority and blockers, not technical Fit Score.
-
-## Limitations
-
-- No OCR for image-only PDFs.
-- No legacy DOC or RTF support.
-- No cloud backup or multi-device sync.
-- No protected-attribute inference.
-- No hiring probability or outcome calibration.
-- No application submission.
+Limitations: no OCR, legacy DOC/RTF, cloud sync, protected-attribute inference, employer integration, hiring probability, or outcome calibration.

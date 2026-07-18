@@ -1,0 +1,33 @@
+{
+  "purpose": "Record the complete optional seven-stage judge journey.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Judge conversion",
+  "headings": [
+    "1 / 7 — DISCOVER",
+    "2 / 7 — PRIORITIZE",
+    "3 / 7 — UNDERSTAND",
+    "4 / 7 — INSPECT",
+    "5 / 7 — VERIFY",
+    "6 / 7 — APPLY",
+    "7 / 7 — TRACK"
+  ],
+  "completionProof": [
+    "Nearby discovery",
+    "Resume-aware prioritization",
+    "Required vs. preferred",
+    "Relevant experience",
+    "Exact score mathematics",
+    "Direct employer destination",
+    "No auto-apply"
+  ],
+  "optional": true,
+  "skippable": true,
+  "restartable": true,
+  "keyboardAccessible": true,
+  "screenReaderAnnounced": true,
+  "mobileSafe": true,
+  "result": "PASS"
+}

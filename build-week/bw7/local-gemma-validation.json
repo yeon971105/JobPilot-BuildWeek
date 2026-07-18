@@ -1,0 +1,21 @@
+{
+  "purpose": "Record fresh real loopback Gemma canary output.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Primary semantic model",
+  "startedAt": "2026-07-18T06:58:46.822Z",
+  "completedAt": "2026-07-18T06:59:11.273Z",
+  "jobId": "northstar-applied-ai-solutions-engineer",
+  "model": "gemma4:12b",
+  "digest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",
+  "liveCanaryAttempted": true,
+  "liveCanaryCompleted": true,
+  "structuredOutputValid": true,
+  "unknownRequirementIds": [],
+  "frozenRequirementCoverage": 0.875,
+  "finalScoreInModelOutput": false,
+  "evidenceIdsValidated": true,
+  "result": "PASS"
+}

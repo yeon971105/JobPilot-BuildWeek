@@ -1,33 +1,26 @@
 # Build Week Changelog
 
-## JP-BW3 — Local-first hybrid release candidate
+## JP-BW7 — Application-fatigue winning product RC
 
-- Made Gemma 4 12B the primary semantic-analysis model through a loopback-only Ollama adapter.
-- Added typed fail-closed environment validation and public-safe provider status.
-- Restricted GPT-5.6 Terra to four bounded, explicit heavy-reasoning actions.
-- Added mocked heavy-provider, flag-routing, local adapter, and no-key tests.
-- Added prepared Gemma analysis provenance and truthful provider badges.
-- Added deterministic “See a Score Change” receipt recomputation.
-- Rebuilt the Trust Lab around the hybrid responsibility boundary.
-- Added deployment, repository, video, Devpost, privacy, and release packages.
+- Reframed the product around nearby discovery, resume-aware priority, and direct employer control.
+- Added configured-location Haversine distance, Remote labeling, posting dates, source disclosure, four deterministic sorts, and practical filters without score leakage.
+- Added persisted comparison for up to three roles with visible factors and no aggregate score.
+- Added safe direct employer destinations, disabled submission, explicit Preparing/Save controls, and zero auto-apply.
+- Added independent web, API, and CLI Score Receipt verification with bounded adversarial parsing and full frozen-source reproduction.
+- Added four hash-bound GPT-5.6 prepared reviews from the verified Codex task with 0 API requests and $0 API cost.
+- Added a seven-stage optional judge tour and six-tab user-facing Trust Lab.
+- Published a public Codex defect-to-validation timeline.
+- Added a preregistered application-fatigue usability study kit; status remains `READY_NOT_RUN` with zero participants.
+- Expanded the suite to 73 passes and two authorized skips; added 44 production route/viewport checks and repaired the discovered 320-pixel verifier overflow.
+- Created a 175-second, 1920×1080 actual-product video with English narration and embedded English captions.
+- Did not deploy, upload video, submit Devpost, use an OpenAI API key, call an unofficial endpoint, move historical tags, or submit an application.
 
-## JP-BW2 — Judge Golden Path and AI Fit V2.2
+## JP-BW6 — Professional product UX and private resume RC
 
-- Added the no-login synthetic judge flow, six fictional jobs, evidence detail, tracker, and Trust Lab.
-- Completed integer micro-point scoring, caps, transfers, experience overlap prevention, eligibility, Evidence Quality, and score receipts.
+- Replaced the dense detail audit with Overview, Evidence, Experience, and Score Proof.
+- Added editable private resume extraction review, preferences, hardened PDF/DOCX/TXT parsing, and real loopback Gemma analysis.
+- Split provider provenance and moved advanced proof into keyboard-safe disclosure.
 
-## Pre-Build Week
+## Earlier Build Week
 
-JobPilot existed before Build Week. Catalog, production, and unrelated pre-existing work are not claimed as Build Week additions.
-
-## JP-BW6 — Product UX RC
-
-- Replaced the eleven-section A–K detail audit with Overview, Evidence, Experience, and Score Proof.
-- Reduced the Alder default detail from 1,932 to 268 visible words and from 13,477 to 1,689 pixels without deleting advanced evidence.
-- Added Profile navigation, editable private resume extraction review, work preferences, and clear/reset controls.
-- Added hardened in-memory PDF, DOCX, and TXT parsing plus real loopback `gemma4:12b` analysis.
-- Split provider provenance into analysis pipeline, delivery mode, and deterministic scoring engine.
-- Moved technical receipt JSON and application strategy into keyboard-safe modals.
-- Refined landing, job discovery, Tracker, and Trust Lab around user decisions.
-- Rebuilt responsive captures and the 170-second actual-product video.
-- Did not add auto-apply, production data, another market, or a final deployment.
+JP-BW3 introduced local-first hybrid provider routing; JP-BW2 introduced the synthetic judge flow and AI Fit V2.2. Pre-Build Week JobPilot work remains separately disclosed and is not claimed as this extension.

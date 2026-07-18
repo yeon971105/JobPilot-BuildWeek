@@ -1,0 +1,29 @@
+{
+  "purpose": "Certify the winning product video streams, story, and public-safe inputs.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Product video",
+  "video": "build-week/video/jobpilot-winning-rc1-demo.mp4",
+  "durationSeconds": 175,
+  "resolution": "1920x1080",
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "captionsCodec": "mov_text",
+  "audioLanguage": "eng",
+  "captionsLanguage": "eng",
+  "segments": 10,
+  "actualProductCaptures": true,
+  "copyrightedMusic": false,
+  "openAiApiRequests": 0,
+  "applicationSubmissions": 0,
+  "videoSha256": "610be551420d60f32c657276ccf569a36ca5dc2795a774c9e032fe7c164ce71e",
+  "thumbnailSha256": "26be1f65483b5748c91de405d79e819774f93a3c4bede80b4d90804b6b5a887a",
+  "inspectedFrames": [
+    "build-week/bw7/video-frame-005.png",
+    "build-week/bw7/video-frame-090.png",
+    "build-week/bw7/video-frame-169.png"
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,27 @@
+{
+  "purpose": "Bind the JP-BW7 production CSS bundle to fresh browser-computed product evidence.",
+  "timestamp": "2026-07-18T06:58:00.000Z",
+  "commit": "81f7976",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Production CSS pipeline and responsive product geometry",
+  "certifiedCssBundleSha256": "f980e18a1d06b1276aa23aa254e549db755cbd5614a4fa032400644cea641add",
+  "landing": {
+    "document": { "horizontalOverflow": 0, "h1Count": 1 },
+    "navigation": { "display": "flex", "minimumVisiblePrimaryLinks": 13 },
+    "hero": { "headingFontSizePx": 88 },
+    "ctas": { "primaryBackground": "rgb(23, 61, 45)" },
+    "scoreRing": {
+      "position": "absolute",
+      "widthPx": 176,
+      "heightPx": 176,
+      "backgroundColor": "rgb(23, 61, 45)"
+    }
+  },
+  "jobs": {
+    "document": { "horizontalOverflow": 0, "h1Count": 1 },
+    "card": { "paddingPx": 24, "borderRadiusPx": 24 },
+    "filterToolbar": { "gapPx": 12 }
+  },
+  "result": "PASS"
+}

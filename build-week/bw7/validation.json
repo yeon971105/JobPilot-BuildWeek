@@ -1,0 +1,31 @@
+{
+  "purpose": "Summarize every JP-BW7 release gate.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Release certification",
+  "tests": {
+    "passed": 73,
+    "skippedAuthorized": 2,
+    "failed": 0
+  },
+  "typecheckErrors": 0,
+  "lintErrors": 0,
+  "buildErrors": 0,
+  "cssPipelineTests": {
+    "passed": 2,
+    "failed": 0
+  },
+  "dependencyVulnerabilities": 0,
+  "receiptReproductionFailures": 0,
+  "browserChecks": 44,
+  "horizontalOverflows": 0,
+  "consoleWarningsOrErrors": 0,
+  "openAiApiRequests": 0,
+  "openAiApiCostUsd": 0,
+  "applicationSubmissions": 0,
+  "localGemmaCanary": "PASS",
+  "videoDurationSeconds": 175,
+  "result": "PASS"
+}

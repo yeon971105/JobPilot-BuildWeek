@@ -1,24 +1,36 @@
 # Judge Guide
 
-The public path needs no login, key, database, Ollama installation, or real resume.
+The judge path requires no login, key, database, Ollama installation, browser location permission, or real resume.
 
-1. Open `/` and confirm the job-seeker value statement appears before Build Week details.
-2. Select **Try the Demo**.
-3. Browse six synthetic roles. Verify profile context, search, work mode, seniority, score, evidence, Apply Priority, and blocker filters.
-4. Open Alder's Data Platform Engineer. The first viewport shows the role, summary, Fit Score, Evidence Quality, Apply Priority, strongest match, biggest gap, and **Build Application Strategy**.
-5. Open one match or gap to inspect exact evidence, aliases, verifier state, uncertainty, and points.
-6. Use **Experience** on Northstar's role to see Preferred, 3+ requested years, 3.45 relevant years, six overlap months removed, and 3.60 / 4.00 points.
-7. Use **Score Proof** to inspect budgets, download the Score Receipt, copy its hash, open technical JSON in a focus-trapped modal, and run **See a Score Change**.
-8. Build the strategy. No-key output is labeled **Prepared demonstration output from synthetic evidence.**
-9. Save the role, edit its local note and planning stage in Tracker, and verify the no-submission notice.
-10. Open Trust Lab and inspect the responsibility boundary, exact score proof, privacy, and limitations.
+## Fast path: approximately 90 seconds
 
-Profile navigation is part of the product RC. `/profile/resume` explains that public deployment cannot accept a real resume. In a local run with `LOCAL_PRIVATE_MODE=true`, the same route accepts PDF, DOCX, or TXT, offers a synthetic test resume, provides editable extraction review, saves work preferences, and performs real loopback `gemma4:12b` analysis.
+1. Open `/` and select **Start the 90-Second Tour**.
+2. Advance through `DISCOVER`, `PRIORITIZE`, `UNDERSTAND`, `INSPECT`, `VERIFY`, `APPLY`, and `TRACK`.
+3. Confirm the completion card lists Nearby discovery, Resume-aware prioritization, Required vs. preferred, Relevant experience, Exact score mathematics, Direct employer destination, and No auto-apply.
 
-Provider provenance is intentionally three-part:
+The tour is optional, skippable, restartable, keyboard accessible, screen-reader labeled, and mobile safe.
 
-- Analysis pipeline: **Gemma 4 12B analysis pipeline**
-- Delivery mode: **Prepared synthetic analysis**
-- Scoring engine: **Deterministic AI Fit V2.2**
+## Full product path: 4–6 minutes
 
-The score is not a hiring probability. The demo never submits an application.
+1. Select **See My Best Matches**. Confirm the context says Demo Candidate A near Oakland, California.
+2. Change **Sort roles** to Nearest, Most Recent, and Highest Evidence Quality. Try the radius and Remote compatible filters.
+3. Select Northstar and Alder with **Compare role**, then choose **Compare now**. No aggregate comparison score appears.
+4. Open Northstar. Inspect one top match and one gap. Exact job evidence, candidate evidence ID, aliases, verifier, uncertainty, and points appear in the modal.
+5. Open **Experience**. Confirm Preferred, 3+ requested years, 3.45 relevant years, six overlap months removed, and 3.60 / 4.00 points.
+6. Open **Evidence**, choose **Challenge This Analysis**, and confirm **GPT-5.6 — Prepared Review**, `OpenAI API requests: 0`, and `Direct score changes: 0`.
+7. Open **Score Proof**, then **Verify This Receipt**. Bundled status is `FULLY_REPRODUCED`. Change `displayedScore` in the JSON without changing the hash and verify that status becomes `INVALID`.
+8. Return to Northstar and select **Apply on Employer Site ↗**. Inspect `_blank` handoff behavior, the fictional-employer disclosure, zero forms, and the disabled Continue application button.
+9. Choose **Mark as Preparing**, return, and open Tracker. Preparing is 1; Applied is 0.
+10. Open Trust Lab. Inspect the six-step decision chain and the score, Gemma, prepared GPT-5.6, privacy, and limitations tabs.
+
+## Truthful claims
+
+- Public candidate, jobs, employer destination, resume fixture, captures, and media are synthetic.
+- Discovery covers the processed official-source portfolio, not the whole market.
+- Gemma 4 12B is the primary semantic model; deterministic code owns the score.
+- GPT-5.6 reviews were prepared in the verified Codex task from frozen synthetic evidence.
+- OpenAI API requests: 0. OpenAI API cost: $0.
+- The score is not a hiring probability; independent hiring-outcome calibration is unavailable.
+- JobPilot never submits an application.
+
+Preview for this release: `http://127.0.0.1:3204` while the owner keeps the local preview running.

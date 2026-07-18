@@ -1,0 +1,19 @@
+{
+  "purpose": "Certify keyboard, semantics, focus, labeling, and responsive controls.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Accessibility",
+  "h1CountPerRoute": 1,
+  "tourArrowKeys": true,
+  "tourEscape": true,
+  "tourLiveRegion": true,
+  "tabArrowKeys": true,
+  "dialogsModalAndLabeled": true,
+  "dialogEscapeAndFocusRestore": true,
+  "disabledApplicationControlLabeled": true,
+  "minimumInteractiveHeightPx": 44,
+  "automatedViolationsObserved": 0,
+  "result": "PASS"
+}

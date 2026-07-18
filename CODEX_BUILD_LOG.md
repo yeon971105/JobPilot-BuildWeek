@@ -1,11 +1,15 @@
 # Codex Build Log
 
-Codex reproduced the JP-BW2 parent before mutation, inspected the exact local model, read the installed Next.js documentation, implemented the hybrid router and UI, ran a bounded local Gemma canary, added deterministic proof tests, repaired compiler/lint/browser issues, generated public-safe release artifacts, and created task-scoped commits.
+## JP-BW7
 
-Codex did not receive or print an API key, deploy, push, upload video, submit Devpost, mutate production data, or submit an application. Detailed commands, failures, repairs, hashes, and post-run state are recorded under `build-week/bw3/`.
+Codex reproduced the exact JP-BW6 parent `2e4a5bb69290cd880e7dbe824322d891a4005114`, verified the clean worktree, preserved historical tags, read the installed Next.js 16.2.6 documentation, and implemented the application-fatigue product extension in seven intentionally named commits.
 
-## JP-BW6
+The verified Codex task used `gpt-5.6-sol` at `xhigh` reasoning effort. It produced final structured strategy, critique, ambiguity, and comparison artifacts from frozen synthetic evidence. No OpenAI API call, key, unofficial endpoint, ChatGPT browser automation, stored chain of thought, or API cost was involved.
 
-Codex reproduced the exact JP-BW5 parent and preserved its visual certificate. It measured the dense detail page, read the installed Next.js 16.2.6 documentation before implementation, inspected only public-safe owned resume-parser code in the original dirty repository, and rebuilt the product around progressive disclosure and two explicit modes.
+Codex added nearby discovery, deterministic sorts and filters, comparison, safe employer destinations, explicit tracker events, independent receipt verification, prepared-review provenance, the judge tour, Trust Lab, public defect timeline, study kit, documentation, Devpost drafts, screenshots, and the 175-second video.
 
-During browser certification Codex found and repaired a statically frozen local-mode page and a private-analysis cache leaking into Demo Profile presentation. It also removed mobile tab clipping, sub-11px labels, low-contrast small text, and a nested PostCSS advisory. Codex ran synthetic parser and network tests, a real loopback Gemma profile analysis, responsive interaction checks, performance benchmarks, media rendering, documentation audits, and Git release packaging. It did not submit Devpost, deploy a final production release, send a private resume to a cloud model, mutate production data, or submit an application.
+During production browser QA, Codex found the receipt verifier exceeded a 320-pixel viewport by 69 pixels. It diagnosed intrinsic grid width, added `min-w-0` boundaries, locked the repair with a regression test, rebuilt, and reran all 44 route/viewport checks. Final overflow, error-boundary, and console-warning/error counts are zero.
+
+Validation included 73 passing tests, two authorized skips, TypeScript, ESLint, production build, CSS bundle certification, all six receipt reproductions, adversarial receipt parsing, zero-vulnerability npm audit, provider routing, a fresh real `gemma4:12b` loopback canary, public-safe scans, video probe, responsive screenshots, and post-run process/Git integrity.
+
+Codex did not deploy a final release, upload the video, submit Devpost, access a private resume, mutate production data, move historical tags, stop the user’s port-3000 process, or submit an application.

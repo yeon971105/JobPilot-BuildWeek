@@ -1,0 +1,27 @@
+{
+  "purpose": "Certify persisted, visible-factor comparison for at most three roles.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Role comparison",
+  "maximumRoles": 3,
+  "persistedBrowserLocally": true,
+  "factors": [
+    "Fit Score",
+    "Evidence Quality",
+    "Apply Priority",
+    "blocker",
+    "posted date",
+    "work mode",
+    "distance",
+    "required experience",
+    "preferred experience",
+    "top matches",
+    "biggest gaps"
+  ],
+  "hiddenAggregateScores": 0,
+  "preparedPairReview": "Northstar versus Alder",
+  "newNumericScoresFromPreparedReview": 0,
+  "result": "PASS"
+}

@@ -1,0 +1,323 @@
+{
+  "receiptVersion": "jobpilot-score-receipt.v2.2",
+  "analysisId": "analysis-northstar-applied-ai-solutions-engineer-v22",
+  "analysisStatus": "COMPLETE",
+  "numericScoreEligibility": true,
+  "ineligibilityReasons": [],
+  "jobId": "northstar-applied-ai-solutions-engineer",
+  "jobContentHash": "b874e8c44a1e8cb610bd2138eff0aa95099d17c3a8938438ec309fe234d9d135",
+  "candidateProfileId": "synthetic-demo-profile-v22",
+  "candidateProfileHash": "1543ff77e3d16d83084d40ded95b9cc359d2040db15bf8df5ee719f44a5c3d1e",
+  "preferenceHash": "a26d2f74fbb6a096b89c32644b8ff214e7475430a50e5c512abb62d276f0bce1",
+  "provider": "FIXTURE_ONLY",
+  "modelTag": "deterministic-synthetic-contract",
+  "modelSnapshot": null,
+  "jobPromptVersion": "jobpilot-role-intelligence.v2.2",
+  "candidatePromptVersion": "jobpilot-candidate-evidence.v2.2",
+  "matchPromptVersion": "jobpilot-evidence-mapping.v2.2",
+  "scorerVersion": "jobpilot-ai-fit-v2.2",
+  "scoringContractHash": "c7400cd189a4862614c8bf05b1eeda3fe2a88cd6a4cd01bf2b32c10776ef3c8b",
+  "evidenceContractHash": "1e2df02d9bf416bb84a0bdadb58a536e3b534fd87a2cd2259953576b7326f9ba",
+  "totalMaximumMicroPoints": 100000000,
+  "totalEarnedLowMicroPoints": 93869736,
+  "totalEarnedMidMicroPoints": 96934868,
+  "totalEarnedHighMicroPoints": 98467434,
+  "displayedScore": 97,
+  "classTotals": {
+    "core": {
+      "maximumMicroPoints": 90000000,
+      "earnedLowMicroPoints": 84869736,
+      "earnedMidMicroPoints": 87434868,
+      "earnedHighMicroPoints": 88717434
+    },
+    "preferred": {
+      "maximumMicroPoints": 9000000,
+      "earnedLowMicroPoints": 8000000,
+      "earnedMidMicroPoints": 8500000,
+      "earnedHighMicroPoints": 8750000
+    },
+    "niceToHave": {
+      "maximumMicroPoints": 1000000,
+      "earnedLowMicroPoints": 1000000,
+      "earnedMidMicroPoints": 1000000,
+      "earnedHighMicroPoints": 1000000
+    },
+    "totalMaximumMicroPoints": 100000000,
+    "totalEarnedLowMicroPoints": 93869736,
+    "totalEarnedMidMicroPoints": 96934868,
+    "totalEarnedHighMicroPoints": 98467434
+  },
+  "budgetTransfers": {
+    "unusedPreferredToCoreMicroPoints": 3000000,
+    "unusedNiceToCoreMicroPoints": 2000000
+  },
+  "evidenceQuality": 98.1,
+  "evidenceQualityFactors": {
+    "jobExtractionCoverage": 0.98,
+    "candidateProfileCoverage": 0.96,
+    "evidenceQuoteValidity": 1,
+    "evidenceOffsetValidity": 1,
+    "requirementClassificationCoverage": 1,
+    "extractorVerifierAgreement": 0.96,
+    "modelContractStability": 0.95,
+    "coreAllocationCoverage": 1
+  },
+  "practicalConstraints": [
+    {
+      "id": "WORK_MODE",
+      "label": "Available: HYBRID, REMOTE",
+      "status": "MATCH",
+      "blocker": false,
+      "explanation": "At least one known job mode intersects the synthetic profile's explicit accepted modes."
+    },
+    {
+      "id": "LOCATION",
+      "label": "San Francisco, CA · United States",
+      "status": "MATCH",
+      "blocker": false,
+      "explanation": "Location is displayed separately and does not alter technical points."
+    },
+    {
+      "id": "TRAVEL",
+      "label": "15% travel",
+      "status": "MATCH",
+      "blocker": false,
+      "explanation": "Travel is within the synthetic profile's explicit preference."
+    }
+  ],
+  "blockers": [],
+  "capabilityGroups": [
+    {
+      "id": "r-ns-python",
+      "capabilityGroupId": "cg-ns-python",
+      "canonicalName": "Modern Python Engineering",
+      "scoringClass": "CORE",
+      "dimension": "CORE_TECHNICAL_SKILLS",
+      "necessity": "REQUIRED",
+      "importance": "CORE",
+      "centrality": "REPEATED_ACROSS_RESPONSIBILITIES",
+      "jobEvidence": "Required: build production-quality Python integrations with tests and clear operational behavior.",
+      "candidateEvidenceIds": [
+        "e-python"
+      ],
+      "matchClass": "MATCHED",
+      "aliases": [
+        "typed Python",
+        "FastAPI",
+        "pytest"
+      ],
+      "examples": [
+        "pydantic",
+        "mypy"
+      ],
+      "maximumMicroPoints": 32500000,
+      "earnedLowMicroPoints": 32500000,
+      "earnedMidMicroPoints": 32500000,
+      "earnedHighMicroPoints": 32500000,
+      "pointsLostMicroPoints": 0,
+      "verifierStatus": "VALIDATED",
+      "uncertainty": "No material match uncertainty in the frozen fixture."
+    },
+    {
+      "id": "r-ns-ai",
+      "capabilityGroupId": "cg-ns-ai",
+      "canonicalName": "Applied AI Workflow Delivery",
+      "scoringClass": "CORE",
+      "dimension": "ROLE_AND_DOMAIN",
+      "necessity": "MANDATORY",
+      "importance": "CORE",
+      "centrality": "TITLE_OR_ROLE_MISSION",
+      "jobEvidence": "Required: prototype grounded AI workflows and evaluate reliability before release.",
+      "candidateEvidenceIds": [
+        "e-ai",
+        "e-delivery"
+      ],
+      "matchClass": "STRONG_EQUIVALENT",
+      "aliases": [
+        "AI workflows"
+      ],
+      "examples": [
+        "RAG",
+        "evaluation datasets"
+      ],
+      "maximumMicroPoints": 25651321,
+      "earnedLowMicroPoints": 20521057,
+      "earnedMidMicroPoints": 23086189,
+      "earnedHighMicroPoints": 24368755,
+      "pointsLostMicroPoints": 2565132,
+      "verifierStatus": "VALIDATED",
+      "uncertainty": "Semantic equivalence creates the displayed score range."
+    },
+    {
+      "id": "r-ns-customer",
+      "capabilityGroupId": "cg-ns-customer",
+      "canonicalName": "Customer Technical Discovery",
+      "scoringClass": "CORE",
+      "dimension": "CUSTOMER_AND_STAKEHOLDER",
+      "necessity": "REQUIRED",
+      "importance": "CORE",
+      "centrality": "REPEATED_ACROSS_RESPONSIBILITIES",
+      "jobEvidence": "Required: lead technical discovery and communicate implementation tradeoffs with customer stakeholders.",
+      "candidateEvidenceIds": [
+        "e-customer"
+      ],
+      "matchClass": "MATCHED",
+      "aliases": [
+        "customer workshops"
+      ],
+      "examples": [],
+      "maximumMicroPoints": 11327623,
+      "earnedLowMicroPoints": 11327623,
+      "earnedMidMicroPoints": 11327623,
+      "earnedHighMicroPoints": 11327623,
+      "pointsLostMicroPoints": 0,
+      "verifierStatus": "VALIDATED",
+      "uncertainty": "No material match uncertainty in the frozen fixture."
+    },
+    {
+      "id": "r-ns-data",
+      "capabilityGroupId": "cg-ns-data",
+      "canonicalName": "Operational Data Integration",
+      "scoringClass": "CORE",
+      "dimension": "CORE_TECHNICAL_SKILLS",
+      "necessity": "RESPONSIBILITY_DERIVED",
+      "importance": "SUPPORTING",
+      "centrality": "SINGLE_EXPLICIT_REQUIREMENT",
+      "jobEvidence": "Responsibility: connect operational SQL and data systems to customer workflows.",
+      "candidateEvidenceIds": [
+        "e-data"
+      ],
+      "matchClass": "MATCHED",
+      "aliases": [
+        "data integration"
+      ],
+      "examples": [
+        "SQL"
+      ],
+      "maximumMicroPoints": 20521056,
+      "earnedLowMicroPoints": 20521056,
+      "earnedMidMicroPoints": 20521056,
+      "earnedHighMicroPoints": 20521056,
+      "pointsLostMicroPoints": 0,
+      "verifierStatus": "VALIDATED",
+      "uncertainty": "No material match uncertainty in the frozen fixture."
+    },
+    {
+      "id": "r-ns-years",
+      "capabilityGroupId": "cg-ns-years",
+      "canonicalName": "Relevant Technical Delivery Experience",
+      "scoringClass": "PREFERRED",
+      "preferredCategory": "EXPERIENCE",
+      "dimension": "EXPERIENCE_AND_SENIORITY",
+      "necessity": "PREFERRED",
+      "importance": "SUPPORTING",
+      "centrality": "SINGLE_EXPLICIT_REQUIREMENT",
+      "jobEvidence": "Preferred: three or more years delivering technical products.",
+      "candidateEvidenceIds": [
+        "e-delivery"
+      ],
+      "matchClass": "STRONG_EQUIVALENT",
+      "requestedYears": 3,
+      "experienceDomain": "APPLIED_AI",
+      "aliases": [],
+      "examples": [],
+      "maximumMicroPoints": 4000000,
+      "earnedLowMicroPoints": 3200000,
+      "earnedMidMicroPoints": 3600000,
+      "earnedHighMicroPoints": 3800000,
+      "pointsLostMicroPoints": 400000,
+      "verifierStatus": "VALIDATED",
+      "uncertainty": "Semantic equivalence creates the displayed score range."
+    },
+    {
+      "id": "r-ns-vector",
+      "capabilityGroupId": "cg-ns-vector",
+      "canonicalName": "Vector and Embedding Tooling",
+      "scoringClass": "PREFERRED",
+      "preferredCategory": "TECHNICAL",
+      "dimension": "CORE_TECHNICAL_SKILLS",
+      "necessity": "PREFERRED",
+      "importance": "SUPPORTING",
+      "centrality": "SUPPORTING_CONTEXT",
+      "jobEvidence": "Preferred: familiarity with vector retrieval systems such as embedding indexes or vector databases.",
+      "candidateEvidenceIds": [
+        "e-ai"
+      ],
+      "matchClass": "MATCHED",
+      "aliases": [
+        "vector databases",
+        "embedding indexes"
+      ],
+      "examples": [
+        "FAISS"
+      ],
+      "maximumMicroPoints": 4000000,
+      "earnedLowMicroPoints": 4000000,
+      "earnedMidMicroPoints": 4000000,
+      "earnedHighMicroPoints": 4000000,
+      "pointsLostMicroPoints": 0,
+      "verifierStatus": "VALIDATED",
+      "uncertainty": "No material match uncertainty in the frozen fixture."
+    },
+    {
+      "id": "r-ns-education",
+      "capabilityGroupId": "cg-ns-education",
+      "canonicalName": "Relevant Education or Equivalent Experience",
+      "scoringClass": "PREFERRED",
+      "preferredCategory": "EDUCATION_AND_CERTIFICATION",
+      "dimension": "EDUCATION_AND_CERTIFICATIONS",
+      "necessity": "PREFERRED",
+      "importance": "SUPPORTING",
+      "centrality": "SUPPORTING_CONTEXT",
+      "jobEvidence": "Preferred: relevant technical education or equivalent evidence from delivered projects.",
+      "candidateEvidenceIds": [
+        "e-education",
+        "e-delivery"
+      ],
+      "matchClass": "STRONG_EQUIVALENT",
+      "aliases": [
+        "equivalent project experience"
+      ],
+      "examples": [],
+      "maximumMicroPoints": 1000000,
+      "earnedLowMicroPoints": 800000,
+      "earnedMidMicroPoints": 900000,
+      "earnedHighMicroPoints": 950000,
+      "pointsLostMicroPoints": 100000,
+      "verifierStatus": "VALIDATED",
+      "uncertainty": "Semantic equivalence creates the displayed score range."
+    },
+    {
+      "id": "r-ns-eval",
+      "capabilityGroupId": "cg-ns-eval",
+      "canonicalName": "Model Evaluation",
+      "scoringClass": "NICE_TO_HAVE",
+      "dimension": "CORE_TECHNICAL_SKILLS",
+      "necessity": "NICE_TO_HAVE",
+      "importance": "SUPPORTING",
+      "centrality": "SUPPORTING_CONTEXT",
+      "jobEvidence": "Nice to have: formal model evaluation or MLOps experience.",
+      "candidateEvidenceIds": [
+        "e-ai",
+        "e-delivery"
+      ],
+      "matchClass": "MATCHED",
+      "aliases": [
+        "evaluation workflows"
+      ],
+      "examples": [
+        "benchmark construction"
+      ],
+      "maximumMicroPoints": 1000000,
+      "earnedLowMicroPoints": 1000000,
+      "earnedMidMicroPoints": 1000000,
+      "earnedHighMicroPoints": 1000000,
+      "pointsLostMicroPoints": 0,
+      "verifierStatus": "VALIDATED",
+      "uncertainty": "No material match uncertainty in the frozen fixture."
+    }
+  ],
+  "hiddenAdjustments": 0,
+  "generatedAt": "2026-07-17T20:00:00.000Z",
+  "receiptHash": "62fdbaaf07763a5d82a312ef00647f98f111c83aa9ed683395f92723996a6b7e"
+}

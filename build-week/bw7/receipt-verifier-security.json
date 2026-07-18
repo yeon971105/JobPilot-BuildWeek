@@ -1,0 +1,36 @@
+{
+  "purpose": "Certify bounded, fail-closed receipt parsing and adversarial checks.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Verifier input safety",
+  "maximumBytes": 1048576,
+  "maximumDepth": 14,
+  "maximumArrayLength": 600,
+  "maximumStringLength": 12000,
+  "maximumNodes": 25000,
+  "forbiddenKeys": [
+    "__proto__",
+    "prototype",
+    "constructor"
+  ],
+  "tamperClassesRejected": [
+    "hash",
+    "rounding",
+    "class cap",
+    "budget transfer",
+    "unknown evidence ID",
+    "duplicate requirement ID",
+    "unsupported version",
+    "oversized bytes",
+    "depth",
+    "array",
+    "string",
+    "non-object",
+    "prototype key"
+  ],
+  "externalRequests": 0,
+  "privateResumeRequired": false,
+  "result": "PASS"
+}

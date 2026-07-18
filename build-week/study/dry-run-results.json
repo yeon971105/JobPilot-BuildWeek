@@ -1,0 +1,15 @@
+{
+  "purpose": "Prove the no-PII study tooling accepts the frozen header-only template without fabricating participant rows.",
+  "timestamp": "2026-07-18T06:59:00.000Z",
+  "status": "READY_NOT_RUN",
+  "participantRows": 0,
+  "taskCompletionRate": null,
+  "medianTimeToPrioritySeconds": null,
+  "medianTimeToEmployerSeconds": null,
+  "comprehensionRate": null,
+  "totalFacilitatorAssists": null,
+  "privateOrIdentifyingColumns": 0,
+  "externalRequests": 0,
+  "fabricatedParticipants": 0,
+  "result": "PASS_TOOLING_ONLY"
+}

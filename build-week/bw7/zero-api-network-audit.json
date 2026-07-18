@@ -1,0 +1,22 @@
+{
+  "purpose": "Certify prepared GPT-5.6 provenance and zero submitted-runtime API use.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Zero-API GPT-5.6",
+  "generationSurface": "Codex Desktop task",
+  "modelFamily": "gpt-5.6-sol",
+  "reasoningEffort": "xhigh",
+  "codexThreadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "preparedArtifacts": 4,
+  "openAiApiRequests": 0,
+  "openAiApiCostUsd": 0,
+  "openAiKeyUsed": false,
+  "unofficialEndpointsUsed": false,
+  "chatGptBrowserAutomationUsed": false,
+  "rawPrivateResumeTransmissions": 0,
+  "externalVerifierRequests": 0,
+  "applicationSubmissions": 0,
+  "result": "PASS"
+}

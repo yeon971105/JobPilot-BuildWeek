@@ -1,0 +1,87 @@
+{
+    "purpose":  "Record the JP-BW7 application-fatigue product story from certified actual-product captures",
+    "timestamp":  "2026-07-18T07:02:27.2286850+00:00",
+    "commit":  "f82e5833ec642adc2a0613a055111ff515d23646",
+    "privacyClassification":  "PUBLIC_SAFE_SYNTHETIC",
+    "publicSafeStatus":  "PUBLIC_SAFE",
+    "supportedGate":  "Winning product story video",
+    "output":  "build-week/video/jobpilot-winning-rc1-demo.mp4",
+    "durationSeconds":  175,
+    "resolution":  "1920x1080",
+    "videoCodec":  "h264",
+    "audioCodec":  "aac",
+    "captionsCodec":  "mov_text",
+    "captionsLanguage":  "eng",
+    "narrationLanguage":  "English",
+    "copyrightedMusic":  false,
+    "actualCertifiedProductCaptures":  true,
+    "syntheticPublicDataOnly":  true,
+    "openAiApiRequests":  0,
+    "openAiApiCostUsd":  0,
+    "applicationSubmissions":  0,
+    "videoSha256":  "610be551420d60f32c657276ccf569a36ca5dc2795a774c9e032fe7c164ce71e",
+    "thumbnailSha256":  "26be1f65483b5748c91de405d79e819774f93a3c4bede80b4d90804b6b5a887a",
+    "segments":  [
+                     {
+                         "file":  "landing-1440x900.png",
+                         "durationSeconds":  15,
+                         "story":  "Application fatigue and product promise",
+                         "sha256":  "2eb063522091ea1a0c8ee902336c2fd0f2441957ff6506ba4ff308656f3a4fde"
+                     },
+                     {
+                         "file":  "jobs-best-match-1440x900.png",
+                         "durationSeconds":  20,
+                         "story":  "Nearby profile-aware discovery",
+                         "sha256":  "4cc9cd6e3ebd5939c601718c7efb04f270de0c25d8bf45ff5527ea95f891c622"
+                     },
+                     {
+                         "file":  "jobs-nearest-1440x900.png",
+                         "durationSeconds":  21,
+                         "story":  "Visible deterministic sorting",
+                         "sha256":  "60a3dc92e5baf30cdab0e4c9f78bd222e9bdf80d8921b027d27bd33c98b1c46d"
+                     },
+                     {
+                         "file":  "capability-evidence-1440x900.png",
+                         "durationSeconds":  26,
+                         "story":  "Evidence, gaps, and experience",
+                         "sha256":  "de51fea11216ad5b6017634b0c0baff164a120c74302dcb364b96bb3cd8bcca0"
+                     },
+                     {
+                         "file":  "receipt-verifier-valid-1440x900.png",
+                         "durationSeconds":  16,
+                         "story":  "Independent receipt reproduction",
+                         "sha256":  "451683f874232046f14c40617c9e31f3d41f262d127b375a44874e9407baa6b2"
+                     },
+                     {
+                         "file":  "comparison-prepared-review-1440x900.png",
+                         "durationSeconds":  14,
+                         "story":  "Visible role comparison",
+                         "sha256":  "7197a5deb03ddc105ada6c69716abcce132243f67abc980a34fa127db9f5f69b"
+                     },
+                     {
+                         "file":  "employer-destination-1440x900.png",
+                         "durationSeconds":  14,
+                         "story":  "Safe employer destination",
+                         "sha256":  "1b22eb36f9ea19f05f67148a6f349e09d42c93e7cb93ad73b34c240bba56c501"
+                     },
+                     {
+                         "file":  "tracker-preparing-1440x900.png",
+                         "durationSeconds":  14,
+                         "story":  "Explicit tracker control",
+                         "sha256":  "0de800d6d752933dfde25aeeef88f27ab2dbaf76d44794952cce14a87fc5ce6c"
+                     },
+                     {
+                         "file":  "gpt56-prepared-challenge-1440x900.png",
+                         "durationSeconds":  20,
+                         "story":  "Prepared GPT-5.6 and hybrid trust",
+                         "sha256":  "ac38631af34d1c6d38dd1660f2b1e5c7670e452fa03e2711d925bd5d07e62827"
+                     },
+                     {
+                         "file":  "judge-tour-complete-1440x900.png",
+                         "durationSeconds":  15,
+                         "story":  "Judge tour and closing",
+                         "sha256":  "590665e29485e6422a7abfcecc52543787a42220535e55c85b9bdf2e2f3d10dc"
+                     }
+                 ],
+    "result":  "PASS"
+}

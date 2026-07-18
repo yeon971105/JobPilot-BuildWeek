@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:15,000
+Job search fatigue is repeated searching, manual comparison, and uncertainty about which application deserves the next hour.
+
+2
+00:00:15,000 --> 00:00:35,000
+JobPilot brings synthetic roles from the processed official-source portfolio into one profile-configured nearby view without device location or a map service.
+
+3
+00:00:35,000 --> 00:00:56,000
+Best Match, Nearest, Most Recent, and Evidence Quality are deterministic visible sorts. Distance never changes technical Fit Score.
+
+4
+00:00:56,000 --> 00:01:22,000
+The role view separates matches, gaps, required and preferred evidence, and month-level relevant experience. Every point traces to frozen evidence IDs.
+
+5
+00:01:22,000 --> 00:01:38,000
+The independent verifier reproduces hashing and exact score mathematics. Tampering fails safely with zero external requests.
+
+6
+00:01:38,000 --> 00:01:52,000
+Compare up to three roles with visible factors and no hidden aggregate score. Prepared GPT-5.6 review adds advice, not points.
+
+7
+00:01:52,000 --> 00:02:06,000
+The safe employer destination opens in a new tab, contains no form, and intentionally disables application submission.
+
+8
+00:02:06,000 --> 00:02:20,000
+Only an explicit user action moves a role to Preparing. Returning never marks it Applied.
+
+9
+00:02:20,000 --> 00:02:40,000
+Prepared GPT-5.6 strategy and critique use frozen synthetic evidence with zero OpenAI API calls and zero API cost. Gemma remains primary.
+
+10
+00:02:40,000 --> 00:02:55,000
+The optional seven-step tour proves discovery, evidence, verification, employer control, and tracking—so candidates find the roles worth their time.

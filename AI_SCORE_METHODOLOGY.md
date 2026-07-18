@@ -1,21 +1,24 @@
 # AI Fit Score V2.2 Methodology
 
-AI Fit V2.2 is deterministic policy code. Models can structure and classify evidence but cannot calculate the final score.
+AI Fit V2.2 is deterministic policy code. Models can structure evidence, but cannot calculate the final score.
 
 - One point equals 1,000,000 integer micro-points.
 - CORE begins at 85.
-- PREFERRED is capped at 12; its experience category is capped at 4.
+- PREFERRED is capped at 12; Preferred Experience is capped at 4.
 - NICE_TO_HAVE is capped at 3 and at 1 per independent capability.
 - Unused PREFERRED and NICE_TO_HAVE capacity transfers visibly to CORE.
 - Stable largest-remainder allocation uses capability-group IDs for tie-breaking.
-- Experience uses one maximum relevance coefficient per calendar month, preventing overlap.
-- Match intervals generate low/mid/high ranges; UNKNOWN remains unknown.
-- Practical constraints remain outside technical points.
-- Evidence Quality is a versioned weighted geometric mean, not hiring confidence.
-- Every eligible maximum reconciles to 100; hidden adjustment is zero.
+- Experience takes the maximum relevance coefficient per calendar month, so overlapping roles count once.
+- Match intervals generate low/mid/high ranges; `UNKNOWN` stays unknown.
+- Eligible analyses reconcile to exactly 100,000,000 visible micro-points.
+- Hidden adjustments are always zero.
 
-Fit Score is an evidence-based ranking score, not a hiring probability.
+## Practical separation
 
-## JP-BW6 profile context
+Configured location, Haversine distance, remote compatibility, work mode, travel, posting recency, and blockers help prioritize action. They never change technical capability points. Best Match applies an explicit stable order over eligibility, blocker state, Fit Score, Evidence Quality, distance when applicable, posting date, and job ID.
 
-AI Fit V2.2 mathematics did not change. Public fixture receipts remain byte-stable. Local private analysis supplies a versioned context containing a structured profile hash, preference hash, evidence IDs, accepted work modes, locations, travel tolerance, local provider mode, model tag, and generation time. Gemma proposes evidence-backed match classes; deterministic code still allocates every micro-point and creates the receipt. Practical preferences affect Apply Priority and blocker state, never technical points. Raw resume text never enters the receipt.
+## Receipt
+
+Every analysis includes versioned input hashes, prompt and scorer versions, class totals, transfers, capability groups, evidence IDs, practical constraints, Evidence Quality, displayed-score rounding, hidden adjustments, and a canonical SHA-256 receipt hash. The independent verifier can fully reproduce all six frozen receipts.
+
+Fit Score is an evidence-based ranking score, not a hiring or interview probability. Independent hiring-outcome calibration is not yet available.

@@ -1,0 +1,19 @@
+{
+  "purpose": "Record the release state prepared for the final documentation commit.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Post-run integrity",
+  "expectedParent": "2e4a5bb69290cd880e7dbe824322d891a4005114",
+  "branch": "build-week/jobpilot-2026",
+  "requiredCommitCountAfterParent": 7,
+  "historicalTagsMoved": 0,
+  "port3000StoppedOrRestarted": false,
+  "previewUrl": "http://127.0.0.1:3204",
+  "previewHealthStatus": 200,
+  "temporaryTestServerPort3215Listening": false,
+  "finalCommitMessage": "docs: finalize the application-fatigue submission story",
+  "finalCommitPendingAtArtifactGeneration": true,
+  "result": "PASS_PRECOMMIT"
+}

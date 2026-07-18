@@ -1,0 +1,20 @@
+{
+  "purpose": "Record npm dependency audit for the release tree.",
+  "timestamp": "2026-07-18T07:11:50.476Z",
+  "commit": "f82e5833ec642adc2a0613a055111ff515d23646",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Supply-chain security",
+  "productionDependencies": 46,
+  "developmentDependencies": 507,
+  "totalResolvedDependencies": 600,
+  "vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "result": "PASS"
+}
