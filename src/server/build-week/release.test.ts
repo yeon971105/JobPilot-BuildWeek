@@ -52,10 +52,13 @@ describe("no-key judge release contract", () => {
 
   it("keeps required hybrid trust disclosures and prepared labels in the UI", () => {
     const trust = readFileSync("src/components/demo/trust-lab.tsx", "utf8");
-    for (const phrase of ["How AI is divided", "Why Gemma is primary", "When GPT-5.6 is used", "How the score is proved", "Current limitations"]) expect(trust).toContain(phrase);
+    for (const phrase of ["How JobPilot Works", "Why Gemma Is Primary", "How the Score Is Calculated", "What GPT-5.6 Does", "Privacy and Limitations"]) expect(trust).toContain(phrase);
     const detail = readFileSync("src/components/demo/job-detail.tsx", "utf8");
-    expect(detail).toContain("Prepared with the local Gemma analysis pipeline from frozen synthetic inputs.");
+    expect(detail).toContain("Gemma 4 12B analysis pipeline");
+    expect(detail).toContain("Prepared synthetic analysis");
+    expect(detail).toContain("Deterministic AI Fit V2.2");
     expect(detail).toContain("See a Score Change");
-    expect(detail).toContain("Prepared Demonstration Output");
+    expect(detail).toContain("Prepared demonstration output from synthetic evidence.");
+    expect(detail).not.toContain("DetailSection letter=");
   });
 });
