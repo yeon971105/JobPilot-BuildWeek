@@ -151,5 +151,5 @@ export async function compareLiveStrategies(jobId: string, strategyA: Applicatio
 }
 
 export function providerBadge(mode: DemoProviderMode) {
-  return ({ LOCAL_GEMMA_LIVE: "Local Gemma — Live", LOCAL_GEMMA_PREPARED: "Local Gemma — Prepared Analysis", OPENAI_GPT56_HEAVY: "GPT-5.6 — Live Heavy Reasoning", FIXTURE_ONLY: "Prepared Demonstration Output" } as const)[mode];
+  return ({ LOCAL_GEMMA_LIVE: "Local Gemma — Live", LOCAL_GEMMA_PREPARED: "Local Gemma — Prepared Analysis", OPENAI_GPT56_HEAVY: "GPT-5.6 — Live Heavy Reasoning", CODEX_GPT56_PREPARED: "GPT-5.6 — Prepared Review", FIXTURE_ONLY: "Codex — Prepared Review" } as const)[mode];
 }

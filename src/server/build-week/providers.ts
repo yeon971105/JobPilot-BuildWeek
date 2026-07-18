@@ -1,6 +1,6 @@
 import { parseRuntimeEnvironment, type RuntimeEnvironment } from "@/server/build-week/env";
 
-export type DemoProviderMode = "LOCAL_GEMMA_LIVE" | "LOCAL_GEMMA_PREPARED" | "OPENAI_GPT56_HEAVY" | "FIXTURE_ONLY";
+export type DemoProviderMode = "LOCAL_GEMMA_LIVE" | "LOCAL_GEMMA_PREPARED" | "OPENAI_GPT56_HEAVY" | "CODEX_GPT56_PREPARED" | "FIXTURE_ONLY";
 export type HybridTask = "DETERMINISTIC_EXTRACTION" | "JOB_SEMANTIC_ANALYSIS" | "RESUME_SEMANTIC_PROFILE" | "BATCHED_REQUIREMENT_MATCH" | "APPLICATION_STRATEGY" | "CHALLENGE_ANALYSIS" | "RESOLVE_AMBIGUITY" | "COMPARE_STRATEGIES";
 
 export function openAiHeavyEnabled(config: RuntimeEnvironment) {
@@ -13,7 +13,7 @@ export function routeHybridTask(task: HybridTask, config = parseRuntimeEnvironme
   if (["APPLICATION_STRATEGY", "CHALLENGE_ANALYSIS", "RESOLVE_AMBIGUITY", "COMPARE_STRATEGIES"].includes(task)) {
     return openAiHeavyEnabled(config)
       ? { provider: "OPENAI_GPT56_HEAVY" as const, model: config.OPENAI_HEAVY_MODEL, live: true }
-      : { provider: "FIXTURE_ONLY" as const, model: "prepared-demonstration-output", live: false };
+      : { provider: "CODEX_GPT56_PREPARED" as const, model: "gpt-5.6-sol", live: false };
   }
   if (config.OLLAMA_ENABLED && config.BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS) return { provider: "LOCAL_GEMMA_LIVE" as const, model: config.OLLAMA_MODEL, live: true };
   if (config.BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES) return { provider: "LOCAL_GEMMA_PREPARED" as const, model: config.OLLAMA_MODEL, live: false };

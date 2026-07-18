@@ -1,0 +1,91 @@
+{
+  "artifactVersion": "1.0.0",
+  "generationSurface": "Codex Desktop task",
+  "modelFamily": "gpt-5.6-sol",
+  "codexThreadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "promptVersion": "jobpilot-prepared-strategy-comparison.v1",
+  "schemaVersion": "jobpilot.gpt56-prepared.v1",
+  "inputHash": "280abcf973c8a1a461fdaee2c149671b819d70fd7f0eba78bb357dc3b6d15b79",
+  "outputHash": "8763232df0465d49355630aa7d48e4995d28a3a4e6d4bfff1029e1cac2577777",
+  "generatedAt": "2026-07-18T06:35:00.000Z",
+  "jobEvidenceIds": [
+    "r-ns-python",
+    "r-ns-ai",
+    "r-ns-customer",
+    "r-ns-data",
+    "r-ns-years",
+    "r-ns-vector",
+    "r-ns-education",
+    "r-ns-eval",
+    "r-as-sql",
+    "r-as-python",
+    "r-as-quality",
+    "r-as-partner",
+    "r-as-years",
+    "r-as-orchestration"
+  ],
+  "candidateEvidenceIds": [
+    "e-python",
+    "e-ai",
+    "e-customer",
+    "e-data",
+    "e-product",
+    "e-delivery"
+  ],
+  "apiRequestCount": 0,
+  "modelGeneratedFinalScore": false,
+  "chainOfThoughtStored": false,
+  "unsupportedCandidateClaims": 0,
+  "unsupportedJobClaims": 0,
+  "invalidEvidenceIds": 0,
+  "fabricatedExperience": 0,
+  "fabricatedEducation": 0,
+  "fabricatedSkills": 0,
+  "applicationSubmissions": 0,
+  "output": {
+    "roles": [
+      {
+        "jobId": "northstar-applied-ai-solutions-engineer",
+        "advantages": [
+          "Direct evidence for Python integration, applied AI evaluation, and customer discovery.",
+          "No confirmed practical blocker in the frozen demo profile."
+        ],
+        "gaps": [
+          "Relevant delivery years remain a preferred strong equivalent rather than a fully literal match."
+        ],
+        "practicalConstraints": [
+          "Hybrid San Francisco and remote options align with the configured demo modes."
+        ]
+      },
+      {
+        "jobId": "alder-data-platform-engineer",
+        "advantages": [
+          "Strong SQL, analytics partnership, and data-platform evidence."
+        ],
+        "gaps": [
+          "Python data services and data observability are partial; workflow orchestration is not evidenced.",
+          "The preferred data-platform duration is not fully established."
+        ],
+        "practicalConstraints": [
+          "Hybrid Oakland is inside the configured nearby radius."
+        ]
+      }
+    ],
+    "attentionFirst": "northstar-applied-ai-solutions-engineer",
+    "rationale": "Northstar deserves attention first because its central requirements have broader direct or strong-equivalent evidence and no confirmed blocker. Alder remains a credible second option, but its largest technical gaps require more clarification.",
+    "evidenceIds": [
+      "e-python",
+      "e-ai",
+      "e-customer",
+      "e-data",
+      "e-product",
+      "e-delivery"
+    ],
+    "newNumericScore": null,
+    "hiddenRankingFormula": false,
+    "limitations": [
+      "This prepared comparison uses only two frozen synthetic roles.",
+      "The recommendation does not modify either deterministic score or receipt."
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "artifactVersion": "1.0.0",
+  "generationSurface": "Codex Desktop task",
+  "modelFamily": "gpt-5.6-sol",
+  "codexThreadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "promptVersion": "jobpilot-prepared-ambiguity-review.v1",
+  "schemaVersion": "jobpilot.gpt56-prepared.v1",
+  "inputHash": "1fbbd9c4c51759d69da59d8c5bdc8a887177641dc6728319eddb95d9f24a1587",
+  "outputHash": "c94226a70e7e5d14a92d5636bb28a9ca9bae93cdaf01f7ff3ab77818c61fe72e",
+  "generatedAt": "2026-07-18T06:35:00.000Z",
+  "jobEvidenceIds": [
+    "r-ns-education"
+  ],
+  "candidateEvidenceIds": [
+    "e-education",
+    "e-delivery"
+  ],
+  "apiRequestCount": 0,
+  "modelGeneratedFinalScore": false,
+  "chainOfThoughtStored": false,
+  "unsupportedCandidateClaims": 0,
+  "unsupportedJobClaims": 0,
+  "invalidEvidenceIds": 0,
+  "fabricatedExperience": 0,
+  "fabricatedEducation": 0,
+  "fabricatedSkills": 0,
+  "applicationSubmissions": 0,
+  "output": {
+    "requirementId": "r-ns-education",
+    "ambiguousSourceStatement": "Preferred: relevant technical education or equivalent evidence from delivered projects.",
+    "possibleInterpretations": [
+      "A formal technical degree is preferred.",
+      "Equivalent delivered-project evidence may satisfy the preference without a degree.",
+      "The team may weigh formal education and project evidence differently."
+    ],
+    "supportedInterpretation": "The wording explicitly permits equivalent delivered-project evidence, and e-education plus e-delivery support that interpretation without claiming a degree or certification.",
+    "unresolvedUncertainty": "The posting does not state how the employer compares formal education with project evidence during review.",
+    "evidenceIds": [
+      "e-education",
+      "e-delivery"
+    ],
+    "deterministicReanalysisRequired": false,
+    "directScoreChange": false,
+    "limitations": [
+      "Prepared review cannot infer the employer’s unstated preference strength."
+    ]
+  }
+}

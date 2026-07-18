@@ -1,0 +1,93 @@
+{
+  "artifactVersion": "1.0.0",
+  "generationSurface": "Codex Desktop task",
+  "modelFamily": "gpt-5.6-sol",
+  "codexThreadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "promptVersion": "jobpilot-prepared-analysis-challenge.v1",
+  "schemaVersion": "jobpilot.gpt56-prepared.v1",
+  "inputHash": "1fbbd9c4c51759d69da59d8c5bdc8a887177641dc6728319eddb95d9f24a1587",
+  "outputHash": "15edff3a0b6e0ae1648707207b13956ca9135be463a8dcac3d0f659f67b41e5b",
+  "generatedAt": "2026-07-18T06:35:00.000Z",
+  "jobEvidenceIds": [
+    "r-ns-python",
+    "r-ns-customer",
+    "r-ns-data",
+    "r-ns-ai",
+    "r-ns-years",
+    "r-ns-vector"
+  ],
+  "candidateEvidenceIds": [
+    "e-python",
+    "e-customer",
+    "e-data",
+    "e-ai",
+    "e-delivery"
+  ],
+  "apiRequestCount": 0,
+  "modelGeneratedFinalScore": false,
+  "chainOfThoughtStored": false,
+  "unsupportedCandidateClaims": 0,
+  "unsupportedJobClaims": 0,
+  "invalidEvidenceIds": 0,
+  "fabricatedExperience": 0,
+  "fabricatedEducation": 0,
+  "fabricatedSkills": 0,
+  "applicationSubmissions": 0,
+  "output": {
+    "supportedFindings": [
+      {
+        "requirementId": "r-ns-python",
+        "evidenceIds": [
+          "e-python"
+        ],
+        "assessment": "The explicit Python integration and testing evidence supports the MATCHED classification."
+      },
+      {
+        "requirementId": "r-ns-customer",
+        "evidenceIds": [
+          "e-customer"
+        ],
+        "assessment": "The workshop and implementation-planning evidence supports customer technical discovery."
+      },
+      {
+        "requirementId": "r-ns-data",
+        "evidenceIds": [
+          "e-data"
+        ],
+        "assessment": "SQL transformations and monitored pipelines support operational data integration."
+      }
+    ],
+    "questionableMatches": [
+      {
+        "requirementId": "r-ns-ai",
+        "evidenceIds": [
+          "e-ai",
+          "e-delivery"
+        ],
+        "assessment": "STRONG_EQUIVALENT is defensible, but the frozen evidence does not establish the employer’s exact deployment scale or tooling."
+      },
+      {
+        "requirementId": "r-ns-years",
+        "evidenceIds": [
+          "e-delivery"
+        ],
+        "assessment": "The preferred years calculation depends on dated, relevance-weighted intervals and should not be restated as an unqualified year count."
+      }
+    ],
+    "missingConsiderations": [
+      {
+        "requirementId": "r-ns-vector",
+        "consideration": "The evidence supports embedding indexes but does not establish operations at a specific scale or named vector database."
+      }
+    ],
+    "classificationDisagreements": [],
+    "uncertainty": [
+      "Production scale remains unspecified in the frozen candidate evidence.",
+      "The role’s exact balance of prototyping and production ownership is not stated."
+    ],
+    "limitations": [
+      "Prepared from frozen synthetic evidence with zero OpenAI API requests.",
+      "This critique recommends review only and makes no direct score change."
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "artifactVersion": "1.0.0",
+  "generationSurface": "Codex Desktop task",
+  "modelFamily": "gpt-5.6-sol",
+  "codexThreadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "promptVersion": "jobpilot-prepared-application-strategy.v1",
+  "schemaVersion": "jobpilot.gpt56-prepared.v1",
+  "inputHash": "1fbbd9c4c51759d69da59d8c5bdc8a887177641dc6728319eddb95d9f24a1587",
+  "outputHash": "a809b965b36c76efef0563291c3357489b34e2c22472a169c94a63a68aad5641",
+  "generatedAt": "2026-07-18T06:35:00.000Z",
+  "jobEvidenceIds": [
+    "r-ns-python",
+    "r-ns-ai",
+    "r-ns-customer",
+    "r-ns-data",
+    "r-ns-years",
+    "r-ns-vector",
+    "r-ns-education",
+    "r-ns-eval"
+  ],
+  "candidateEvidenceIds": [
+    "e-python",
+    "e-ai",
+    "e-customer",
+    "e-data",
+    "e-delivery"
+  ],
+  "apiRequestCount": 0,
+  "modelGeneratedFinalScore": false,
+  "chainOfThoughtStored": false,
+  "unsupportedCandidateClaims": 0,
+  "unsupportedJobClaims": 0,
+  "invalidEvidenceIds": 0,
+  "fabricatedExperience": 0,
+  "fabricatedEducation": 0,
+  "fabricatedSkills": 0,
+  "applicationSubmissions": 0,
+  "output": {
+    "recommendation": "APPLY",
+    "rationale": "The deterministic receipt shows high evidence coverage, no confirmed practical blocker, and direct support for the role’s central Python, applied-AI, customer-discovery, and data-integration requirements. Apply only with the cited synthetic evidence; do not imply production scope beyond it.",
+    "strongestFitEvidence": [
+      {
+        "requirementId": "r-ns-python",
+        "evidenceId": "e-python",
+        "explanation": "Typed Python services, REST integrations, automated tests, and rollback documentation directly support production-quality integration work."
+      },
+      {
+        "requirementId": "r-ns-ai",
+        "evidenceId": "e-ai",
+        "explanation": "The retrieval-assisted workflow, evaluation datasets, human review, and documented limitations support grounded AI workflow delivery."
+      },
+      {
+        "requirementId": "r-ns-customer",
+        "evidenceId": "e-customer",
+        "explanation": "Technical workshops and implementation plans support customer-facing discovery and tradeoff communication."
+      }
+    ],
+    "truthfulGaps": [
+      {
+        "requirementId": "r-ns-years",
+        "explanation": "The experience requirement is preferred, and the relevant midpoint is below a fully literal match; describe the documented scope rather than rounding it up."
+      },
+      {
+        "requirementId": "r-ns-ai",
+        "explanation": "The match is a strong equivalent rather than an identical employment claim; be ready to explain evaluation depth and production boundaries."
+      }
+    ],
+    "resumeEmphasis": [
+      {
+        "evidenceId": "e-python",
+        "recommendation": "Lead with tested integrations and operational safeguards, using only the stated fictional scope."
+      },
+      {
+        "evidenceId": "e-ai",
+        "recommendation": "Show the evaluation workflow, human review, and documented limitations as one coherent delivery example."
+      },
+      {
+        "evidenceId": "e-customer",
+        "recommendation": "Connect workshop discovery to implementation plans and adoption checkpoints."
+      }
+    ],
+    "interviewTopics": [
+      {
+        "requirementId": "r-ns-ai",
+        "topic": "Walk through an evaluation failure, the evidence used to diagnose it, and the release safeguard that followed."
+      },
+      {
+        "requirementId": "r-ns-python",
+        "topic": "Explain test design, API failure handling, and rollback behavior for a Python integration."
+      },
+      {
+        "requirementId": "r-ns-customer",
+        "topic": "Prepare an example of translating an ambiguous stakeholder need into a bounded technical plan."
+      }
+    ],
+    "researchQuestions": [
+      {
+        "requirementId": "r-ns-ai",
+        "question": "Which evaluation criteria determine whether an AI workflow advances from prototype to customer deployment?"
+      },
+      {
+        "requirementId": "r-ns-customer",
+        "question": "How are discovery, implementation ownership, and post-launch enablement divided across the team?"
+      }
+    ],
+    "practicalConstraintsToClarify": [],
+    "limitations": [
+      "Prepared from frozen synthetic evidence; this is not a live API response.",
+      "The review does not change capability classes, Evidence Quality, Fit Score, or the Score Receipt.",
+      "The public demo does not submit an application."
+    ]
+  }
+}
