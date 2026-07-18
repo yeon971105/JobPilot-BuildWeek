@@ -32,7 +32,7 @@ function participantFile(index: number, changes: { synthetic?: boolean; conditio
     String(changes.synthetic ?? false),
     ...(changes.extraHeader ? ["forbidden"] : []),
   ]);
-  return { name: `participant-${index}.csv`, contents: formatStudyCsv([headers, ...rows]) };
+  return { name: `participant-${index}.csv`, csvText: formatStudyCsv([headers, ...rows]) };
 }
 
 describe("JP-BW10 authentic Decision Utility collection boundary", () => {

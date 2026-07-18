@@ -6,7 +6,7 @@ import {
 } from "@/lib/decision-study";
 import { analyzeImpactStudyCsv, formatStudyCsv, parseStudyCsv } from "@/lib/impact-study";
 
-export type StudyInboxFile = { name: string; contents: string };
+export type StudyInboxFile = { name: string; csvText: string };
 
 export type StudyInboxValidation = {
   schemaVersion: "jobpilot.bw10.study-inbox-validation.v1";
@@ -37,7 +37,7 @@ export function validateStudyInbox(files: StudyInboxFile[]): StudyInboxValidatio
 
   for (const file of [...files].sort((left, right) => left.name.localeCompare(right.name))) {
     try {
-      const parsed = parseStudyCsv(file.contents);
+      const parsed = parseStudyCsv(file.csvText);
       const headers = parsed[0] ?? [];
       if (headers.some((header) => PROHIBITED_HEADER.test(header))) throw new Error("contains a prohibited identifying column");
       if (JSON.stringify(headers) !== JSON.stringify([...DECISION_STUDY_CSV_HEADERS])) throw new Error("headers do not match the frozen no-PII schema");
@@ -56,7 +56,7 @@ export function validateStudyInbox(files: StudyInboxFile[]): StudyInboxValidatio
       if (new Set(values("condition_order")).size !== 1) throw new Error("contains mismatched condition order values");
       if (values("consent_version").some((value) => value !== DECISION_STUDY_CONSENT_VERSION)) throw new Error("contains a missing or mismatched consent version");
 
-      const fileAnalysis = analyzeImpactStudyCsv(file.contents, { bootstrapIterations: 100 });
+      const fileAnalysis = analyzeImpactStudyCsv(file.csvText, { bootstrapIterations: 100 });
       if (fileAnalysis.humanParticipantCount !== 1 || fileAnalysis.humanRows !== 2 || fileAnalysis.syntheticToolingValidationRows !== 0) throw new Error("does not represent one complete authentic collection record");
 
       seenParticipants.add(participantId);

@@ -20,7 +20,7 @@ async function main() {
     humanRowCount: result.humanRowCount,
     fabricatedParticipantRows: 0,
     dryRunRowsCountedAsHumans: 0,
-    sources: files.map((file) => ({ name: file.name, sha256: sha256(file.contents) })),
+    sources: files.map((file) => ({ name: file.name, sha256: sha256(file.csvText) })),
     outputSha256: sha256(result.combinedCsv),
   };
   await mkdir(outputDirectory, { recursive: true });

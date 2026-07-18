@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync, renameSync, rmSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const workspace = process.cwd();
@@ -11,7 +11,11 @@ rmSync(output, { recursive: true, force: true });
 mkdirSync(path.join(output, "server"), { recursive: true });
 mkdirSync(path.join(output, ".openai"), { recursive: true });
 cpSync(source, path.join(output, "server"), { recursive: true });
-renameSync(path.join(output, "server", "server.js"), path.join(output, "server", "index.js"));
+const serverPackagePath = path.join(output, "server", "package.json");
+const serverPackage = JSON.parse(readFileSync(serverPackagePath, "utf8"));
+writeFileSync(serverPackagePath, `${JSON.stringify({ ...serverPackage, type: "module" }, null, 2)}\n`, "utf8");
+renameSync(path.join(output, "server", "server.js"), path.join(output, "server", "server.cjs"));
+writeFileSync(path.join(output, "server", "index.js"), "import \"./server.cjs\";\n", "utf8");
 cpSync(path.join(workspace, ".next", "static"), path.join(output, "server", ".next", "static"), { recursive: true });
 if (existsSync(path.join(workspace, "public"))) {
   cpSync(path.join(workspace, "public"), path.join(output, "server", "public"), { recursive: true });

@@ -12,7 +12,7 @@ export async function readStudyInbox(directory: string) {
     .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".csv"))
     .map((entry) => entry.name)
     .sort();
-  const files: StudyInboxFile[] = await Promise.all(names.map(async (name) => ({ name, contents: await readFile(path.join(root, name), "utf8") })));
+  const files: StudyInboxFile[] = await Promise.all(names.map(async (name) => ({ name, csvText: await readFile(path.join(root, name), "utf8") })));
   return { root, files };
 }
 

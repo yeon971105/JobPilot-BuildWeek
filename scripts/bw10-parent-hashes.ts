@@ -19,8 +19,8 @@ function git(...args: string[]) {
 async function main() {
   const files = git("ls-tree", "-r", "--name-only", parent, "--", ...scopes).split(/\r?\n/).filter(Boolean);
   const entries = files.map((file) => {
-    const contents = execFileSync("git", ["cat-file", "blob", `${parent}:${file}`], { maxBuffer: 32 * 1024 * 1024 });
-    return { path: file, bytes: contents.length, sha256: createHash("sha256").update(contents).digest("hex") };
+    const blobBytes = execFileSync("git", ["cat-file", "blob", `${parent}:${file}`], { maxBuffer: 32 * 1024 * 1024 });
+    return { path: file, bytes: blobBytes.length, sha256: createHash("sha256").update(blobBytes).digest("hex") };
   });
   const output = {
     schemaVersion: "jobpilot.bw10.parent-artifact-hashes.v1",
