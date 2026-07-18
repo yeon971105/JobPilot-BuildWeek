@@ -1,14 +1,13 @@
-# Participant instructions
+# Decision Utility Study Participant Instructions
 
-You will use a fictional candidate and fictional job postings. Please do not enter your name, contact information, real resume, employer credentials, or other personal data.
+This study uses a fictional candidate and fictional job posting. It evaluates the interface, not you.
 
-Imagine you are Demo Candidate A, a job seeker near Oakland who is tired of repeating the same searches and comparing every posting manually. Use JobPilot to decide which role deserves attention, understand the evidence, verify the score, and move toward an employer destination without submitting anything.
+1. Do not enter your name, contact details, resume, employer credentials, demographic information, employment status, health information, or any other personal data.
+2. Complete both conditions in the order shown. The order was randomized for this anonymous browser session.
+3. In each condition, identify one required qualification, one preferred qualification, the work mode, and the biggest gap for the fictional candidate.
+4. Choose Apply, Review, or Skip, then rate confidence and information transparency from 1–7.
+5. Use only the synthetic information on screen. Think aloud if a facilitator is present.
+6. Responses autosave only in this browser. Export JSON or CSV only if you intend to provide the file to the study owner.
+7. Select Reset to remove the local session and begin again with a new anonymous ID.
 
-Think aloud. The facilitator may remind you of a task but should not explain the interface unless you are blocked. When you finish, describe:
-
-1. what changed your decision;
-2. whether you trust the score and why;
-3. what JobPilot did—and did not do—when you opened the employer destination;
-4. the most confusing or slow part.
-
-This is a usability study of the product, not an assessment of you.
+JobPilot does not send these responses anywhere, submit an application, or evaluate your real employability.

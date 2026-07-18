@@ -1,44 +1,56 @@
-# JobPilot application-fatigue usability study protocol
+# JobPilot Decision Utility Study Protocol
 
-Status: **READY_NOT_RUN**. No participant sessions or outcome claims are included in this release.
+Status: **READY_NOT_RUN**  
+Human participant count: **0**  
+Study route: `/study/decision-utility`
 
-## Question
+No participant sessions or impact claims are included in this release. The harness is isolated from primary judge navigation and uses synthetic roles only.
 
-Can a job seeker move from a scattered-search problem to one evidence-backed next application in 90 seconds, while understanding why a role is prioritized and retaining control of the employer handoff?
+## Research question
 
-## Planned sample
+Does the JobPilot condition help a person make a faster, more confident, and more transparent Apply / Review / Skip decision than a raw-posting condition while preserving understanding of required qualifications, preferred qualifications, work mode, and the biggest candidate gap?
 
-- Six to eight adults who have searched for work in the last 12 months.
-- Use pseudonymous participant IDs only; do not collect names, resumes, employer accounts, protected attributes, or contact details.
-- Use the frozen synthetic Demo Candidate A and six synthetic roles.
+## Design
 
-## Tasks
+- Within-participant, two-condition crossover: `RAW_POSTING` and `JOBPILOT`.
+- Condition order is randomized once per anonymous browser-local session.
+- The same frozen synthetic role and candidate are used in both conditions.
+- The task timer starts when each condition becomes visible and stops when all required answers are saved.
+- Condition order, not a hidden participant trait, is the planned order-effect covariate.
+- This small study is decision-utility evidence, not hiring-outcome calibration.
 
-1. Start at the landing page and describe what problem JobPilot solves.
-2. Find nearby roles and change the order to Nearest and Most Recent.
-3. Choose two roles and decide which deserves attention first.
-4. Open Northstar, identify one strong match and one truthful gap, then explain the experience calculation.
-5. Verify the bundled Score Receipt and explain `FULLY_REPRODUCED`.
-6. Open the fictional employer destination and return without marking the role Applied.
-7. Move the role to Preparing in the browser-local tracker.
+## Collected fields
 
-## Measures
+- Anonymous generated participant ID.
+- Randomized condition order and condition label.
+- Task time in seconds.
+- One required-qualification answer.
+- One preferred-qualification answer.
+- Work-mode answer.
+- Biggest-gap answer.
+- Apply / Review / Skip decision.
+- Confidence rating from 1–7.
+- Transparency rating from 1–7.
 
-- Task completion (`0`/`1`) for each task.
-- Time to first prioritized role and time to controlled employer destination, in seconds.
-- Number of facilitator assists.
-- Comprehension checks: score is not hiring probability; distance is not a technical point adjustment; prepared GPT-5.6 is not a live API response; JobPilot never submits.
-- Single ease question from 1–7 and one open-ended friction note.
+## Prohibited fields
 
-## Success thresholds
+Do not collect names, email addresses, phone numbers, resumes, demographics, employment status, health information, employer credentials, or free-form personal histories. The question fields are capped and must be answered only from the synthetic role.
 
-- At least 80% task completion across completed sessions.
-- Median time to the controlled employer destination at or below 90 seconds.
-- At least 80% correct on all four trust-comprehension checks.
-- Zero participants who believe the demo submitted an application.
+## Storage and export
 
-These are preregistered targets, not achieved results. Report observed values and missing data without imputation.
+The route stores one versioned session under `jobpilot-decision-utility-study-v1` in browser `localStorage`. It has no form action, API route, analytics call, fetch call, or automatic upload. JSON and CSV exports are initiated locally by the participant. Reset removes the stored session and creates a new anonymous ID and randomized order.
 
-## Safety and analysis
+## Planned analysis
 
-The facilitator must stop if a participant tries to upload a real resume or open a real employer account. The analysis script accepts only the documented pseudonymous columns, performs no network requests, and reports aggregates only when rows exist. Small-sample findings are directional usability evidence, not hiring-outcome calibration.
+For real consented imports only:
+
+1. Verify the frozen no-PII header and two rows per anonymous participant.
+2. Exclude rows explicitly labeled `synthetic_tooling_validation=true` from human results.
+3. Compare within-participant task time, confidence, and transparency by condition.
+4. Report medians and paired differences; retain condition-order counts.
+5. Report response completeness and decision changes descriptively.
+6. Do not impute missing values or generalize beyond the small sample.
+
+## Readiness gate
+
+The study may be described as `READY_NOT_RUN` only when both condition orders, local persistence, export, reset, required fields, timer behavior, and zero-network behavior pass automated and browser validation. Human findings remain `NOT_RUN` until genuine participant rows are imported.

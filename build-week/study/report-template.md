@@ -1,32 +1,35 @@
-# JobPilot usability study report
+# JobPilot Decision Utility Study Report
 
 Status: **READY_NOT_RUN**
 
 ## Executive answer
 
-Participant sessions have not been run. Replace this sentence only after real, consented sessions are analyzed with the frozen protocol.
+Human participant sessions have not been run. Replace this paragraph only after real, consented exports are imported and analyzed with the frozen protocol. Do not present synthetic tooling validation as user evidence.
 
 ## Sample and method
 
-- Sessions completed:
+- Human participants:
+- Human condition rows:
+- Study dates:
 - Recruiting criteria:
-- Dates:
-- Deviations from protocol:
+- Condition-order counts:
+- Protocol deviations:
 - Missing data:
 
-## Results
+## Decision-utility results
 
-| Measure | Observed | Preregistered target | Status |
-| --- | ---: | ---: | --- |
-| Task completion | — | ≥80% | NOT_RUN |
-| Median time to employer destination | — | ≤90 seconds | NOT_RUN |
-| Trust comprehension | — | ≥80% | NOT_RUN |
-| Believed an application was submitted | — | 0 | NOT_RUN |
+| Measure | Raw Posting | JobPilot | Paired difference | Status |
+| --- | ---: | ---: | ---: | --- |
+| Median task time | — | — | — | NOT_RUN |
+| Mean confidence (1–7) | — | — | — | NOT_RUN |
+| Mean transparency (1–7) | — | — | — | NOT_RUN |
+| Response completeness | — | — | — | NOT_RUN |
+| Apply / Review / Skip changes | — | — | — | NOT_RUN |
 
-## Observed friction
+## Qualitative observations
 
-Report participant language as short paraphrases; do not include names, contact details, employer identifiers, or resume content.
+Paraphrase interface-related friction only. Do not include names, contact details, employer identifiers, resumes, protected attributes, employment status, health information, or personal histories.
 
 ## Decision and limitations
 
-State the product decision supported by the observations. Do not generalize a small usability sample into hiring outcomes, market coverage, or employer behavior.
+State the product decision supported by the observed sessions. Report a small study as directional usability evidence only. Do not claim hiring outcomes, complete market coverage, employer behavior, or population-level impact.

@@ -1,15 +1,26 @@
 {
-  "purpose": "Prove the no-PII study tooling accepts the frozen header-only template without fabricating participant rows.",
-  "timestamp": "2026-07-18T06:59:00.000Z",
+  "schemaVersion": "jobpilot.decision-utility-study-dry-run.v1",
+  "purpose": "Validate both randomized order paths and the header-only no-PII analysis path without inventing human results.",
+  "generatedAt": "2026-07-18T08:34:00.000Z",
+  "dataClassification": "SYNTHETIC_TOOLING_VALIDATION",
   "status": "READY_NOT_RUN",
-  "participantRows": 0,
-  "taskCompletionRate": null,
-  "medianTimeToPrioritySeconds": null,
-  "medianTimeToEmployerSeconds": null,
-  "comprehensionRate": null,
-  "totalFacilitatorAssists": null,
+  "humanParticipantCount": 0,
+  "humanRows": 0,
+  "syntheticToolingValidationRecords": [
+    {
+      "randomValue": 0.25,
+      "expectedOrder": ["RAW_POSTING", "JOBPILOT"],
+      "label": "SYNTHETIC_TOOLING_VALIDATION"
+    },
+    {
+      "randomValue": 0.75,
+      "expectedOrder": ["JOBPILOT", "RAW_POSTING"],
+      "label": "SYNTHETIC_TOOLING_VALIDATION"
+    }
+  ],
+  "analysisTemplateRows": 0,
   "privateOrIdentifyingColumns": 0,
   "externalRequests": 0,
-  "fabricatedParticipants": 0,
+  "fabricatedHumanResults": 0,
   "result": "PASS_TOOLING_ONLY"
 }
