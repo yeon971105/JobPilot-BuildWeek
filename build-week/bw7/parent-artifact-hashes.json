@@ -1,0 +1,20 @@
+{
+  "purpose": "Bind JP-BW7 to the certified JP-BW6 evidence and media bytes.",
+  "timestamp": "2026-07-18T06:12:00.000Z",
+  "commit": "2e4a5bb69290cd880e7dbe824322d891a4005114",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "JP-BW6 evidence integrity",
+  "artifacts": [
+    {"path":"build-week/bw6/artifact-index.json","byteSize":37874,"sha256":"7197c065f327020270f73e488ae667e22d461502bfb4ec2277a42e23436c00ba"},
+    {"path":"build-week/bw6/screenshot-manifest.json","byteSize":9447,"sha256":"0e8aebb432bb90e38e119ef6919c2cfb7615bb39ac079fdb1031046fd0f79258"},
+    {"path":"build-week/bw6/score-invariants.json","byteSize":627,"sha256":"933bf2c577480ab5813853b0f74bbf5eadb6b5a9c6c6650ee8712456821ef280"},
+    {"path":"build-week/bw6/private-mode-network-audit.json","byteSize":649,"sha256":"acd46ddfd972f09ccfb8a331d57cf97bd13a0ba7473c9249db6086f1d7bf5a79"},
+    {"path":"build-week/bw6/accessibility-results.json","byteSize":864,"sha256":"927ad0120070138d82c9bc3f2004b6a08de0d1049d1dfe2080979e0fbf929362"},
+    {"path":"build-week/bw6/visual-regression-results.json","byteSize":549,"sha256":"ebd40d88d401f3969f6a7698f33e73fe5a222e45877c60125f816c4834a0ee72"},
+    {"path":"build-week/bw6/css-pipeline-results.json","byteSize":1035,"sha256":"0f541c3a094c5e67bd4e5b7e3195be83f931675a440e7bc18ab3ff1aa7e51ff9"},
+    {"path":"build-week/video/hybrid-product-ux-rc1-demo.mp4","byteSize":5211890,"sha256":"70bcf7c81f897a53c29d3dd6adeb356178bb9c96a45233f708fcbb26939c0abb"}
+  ],
+  "mismatches": 0,
+  "result": "PASS"
+}

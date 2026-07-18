@@ -1,0 +1,15 @@
+{
+  "purpose": "Freeze the user problem, promise, journey, tagline, and description for JP-BW7.",
+  "timestamp": "2026-07-18T06:15:00.000Z",
+  "commit": "2e4a5bb69290cd880e7dbe824322d891a4005114",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Application-fatigue product story",
+  "problem": "Job seekers are overwhelmed by scattered listings, repetitive searches, long job descriptions, and uncertainty about which roles deserve their limited application time.",
+  "promise": "JobPilot brings fresh nearby roles together, compares them with your resume, explains which opportunities deserve your time, and takes you directly to the employer’s application page.",
+  "journey": ["DISCOVER", "PRIORITIZE", "UNDERSTAND", "APPLY", "TRACK"],
+  "tagline": "Know why a job fits before you apply.",
+  "description": "JobPilot helps application-fatigued job seekers move from scattered listings to confident applications by bringing nearby roles together, comparing them with a resume, explaining the fit, and linking directly to the employer’s application page.",
+  "scoreRole": "ENABLING_MECHANISM_NOT_PRIMARY_STORY",
+  "result": "PASS"
+}

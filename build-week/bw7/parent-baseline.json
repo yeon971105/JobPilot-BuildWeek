@@ -1,0 +1,73 @@
+{
+  "purpose": "Freeze the exact JP-BW6 parent before any JP-BW7 mutation.",
+  "timestamp": "2026-07-18T06:12:00.000Z",
+  "commit": "2e4a5bb69290cd880e7dbe824322d891a4005114",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "JP-BW7 parent reproduction",
+  "repository": {
+    "root": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+    "branch": "build-week/jobpilot-2026",
+    "localHead": "2e4a5bb69290cd880e7dbe824322d891a4005114",
+    "remoteHead": "2e4a5bb69290cd880e7dbe824322d891a4005114",
+    "parentTag": "build-week-2026-product-rc1",
+    "parentTagTarget": "2e4a5bb69290cd880e7dbe824322d891a4005114",
+    "worktreeClean": true
+  },
+  "codexTask": {
+    "status": "active",
+    "threadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+    "modelMetadata": "gpt-5.6-sol",
+    "reasoningEffort": "xhigh"
+  },
+  "tests": {
+    "testFilesPassed": 7,
+    "testFilesSkipped": 1,
+    "testsPassed": 53,
+    "testsSkipped": 2,
+    "skipReason": "Optional configured live-provider integration only"
+  },
+  "score": {
+    "version": "jobpilot-ai-fit-v2.2",
+    "arithmeticErrors": 0,
+    "receiptMismatches": 0,
+    "hiddenAdjustments": 0,
+    "hardcodedScores": 0,
+    "preferredCapViolations": 0,
+    "workModeLeakage": 0
+  },
+  "privateMode": {
+    "externalResumeRequests": 0,
+    "rawResumeLogs": 0,
+    "cloudModelCalls": 0,
+    "rawResumeTransmission": 0,
+    "localGemma": "PASS_REAL_LOOPBACK"
+  },
+  "browser": {
+    "viewports": ["1440x900", "1024x768", "390x844", "320x700"],
+    "horizontalOverflow": 0,
+    "screenshots": 24,
+    "accessibilityFailures": 0,
+    "approvalPreview": "http://127.0.0.1:3203/",
+    "approvalPreviewStatus": 200,
+    "landingHeadline": "Know why a job fits."
+  },
+  "production": {
+    "next": "16.2.6",
+    "tailwindPostcss": "^4.0.0",
+    "postcssOverride": "8.5.10",
+    "certifiedCssBundleSha256": "b80ee320a733a5964acccf53bd7c3105a8c822bad0183e152e35ad9e76e19a26",
+    "productionMutations": 0,
+    "applicationSubmissions": 0
+  },
+  "video": {
+    "path": "build-week/video/hybrid-product-ux-rc1-demo.mp4",
+    "durationSeconds": 175,
+    "sha256": "70bcf7c81f897a53c29d3dd6adeb356178bb9c96a45233f708fcbb26939c0abb",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "captionsCodec": "mov_text"
+  },
+  "dependencyVulnerabilities": 0,
+  "result": "PASS"
+}

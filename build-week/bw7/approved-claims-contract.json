@@ -1,0 +1,12 @@
+{
+  "purpose": "Constrain discovery, nearby, outcome, and application claims to verified product behavior.",
+  "timestamp": "2026-07-18T06:15:00.000Z",
+  "commit": "2e4a5bb69290cd880e7dbe824322d891a4005114",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Truthful product claims",
+  "approved": ["Roles discovered from the processed portfolio of official and rights-eligible employer sources.", "Nearby roles in the processed official-source portfolio.", "Public demonstration roles are synthetic.", "JobPilot opens an employer destination and never auto-applies."],
+  "prohibited": ["all jobs near you", "every local job", "complete market coverage", "entire California job market", "hiring probability", "interview probability", "guaranteed match", "guaranteed application success", "automatic application", "employer prediction"],
+  "prohibitedMatchesInPrimaryUi": 0,
+  "result": "PASS"
+}

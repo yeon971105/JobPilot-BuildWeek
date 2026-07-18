@@ -1,0 +1,19 @@
+{
+  "purpose": "Freeze active listeners and Git lock state before JP-BW7 mutation.",
+  "timestamp": "2026-07-18T06:12:00.000Z",
+  "commit": "2e4a5bb69290cd880e7dbe824322d891a4005114",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Safe isolated execution",
+  "listeners": {
+    "3000": {"pid": 43624, "state": "PRESERVE_UNTOUCHED"},
+    "3202": null,
+    "3203": {"pid": 65456, "state": "JP_BW6_APPROVAL_PREVIEW"},
+    "3204": null,
+    "3215": null,
+    "11434": {"pid": 24940, "state": "LOCAL_OLLAMA"}
+  },
+  "gitLocks": 0,
+  "temporaryTestServers": 0,
+  "result": "PASS"
+}
