@@ -47,4 +47,12 @@ describe("JP-BW11R final product decision presentation", () => {
     expect(source).not.toContain("toFixed(1)");
     expect(source).not.toContain("stable ID explanation");
   });
+
+  it("keeps visual decisions before the collapsed technical ledger", () => {
+    const source = read("src/components/demo/job-detail.tsx");
+    for (const text of ["Your Fit at a Glance", "Relevant experience", "Practical fit", "Strong Evidence", "Attention Areas", "A. 100-POINT ALLOCATION", "B. SCORE CONTRIBUTION", "C. EVIDENCE QUALITY", "D. RECEIPT", "E. Technical Ledger"]) expect(source).toContain(text);
+    expect(source).toContain("<details className=\"paper-card\"><summary className=\"min-h-11 font-serif text-3xl\">E. Technical Ledger</summary>");
+    expect(source).toContain("defaultSummaryGroups(currentAnalysis)");
+    expect(source).toContain("Practical constraints affect Apply Priority, not technical Fit Score.");
+  });
 });

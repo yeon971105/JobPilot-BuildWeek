@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "jobpilot.bw11r.summary-group-contract.v1",
+  "strongEvidence": {
+    "matchClasses": ["MATCHED", "STRONG_EQUIVALENT"],
+    "maximumItems": 3,
+    "order": [
+      "Core Matched",
+      "Core Strong Equivalent",
+      "Preferred Matched",
+      "Preferred Strong Equivalent",
+      "maximum influence descending",
+      "stable capability ID"
+    ]
+  },
+  "attentionAreas": {
+    "matchClasses": ["PARTIAL", "WEAK", "NOT_EVIDENCED", "UNKNOWN"],
+    "maximumItems": 3,
+    "order": [
+      "Core Not Evidenced",
+      "Core Weak",
+      "Core Partial",
+      "Preferred Not Evidenced",
+      "Preferred Weak",
+      "Preferred Partial",
+      "stable capability ID"
+    ]
+  },
+  "duplicateCapabilityAppearancesAllowed": 0,
+  "scoringMathematicsChanged": false
+}

@@ -34,7 +34,7 @@ describe("JP-BW7 product UX contract", () => {
   it("progressively discloses evidence, strategy, and the technical receipt", () => {
     const detail = read("src/components/demo/job-detail.tsx");
     expect(detail).toContain('const tabs: TabName[] = ["Overview", "Evidence", "Experience", "Score Proof"]');
-    expect(detail.match(/\.slice\(0, 3\)/g)).toHaveLength(2);
+    expect(detail).toContain("defaultSummaryGroups(currentAnalysis)");
     expect(detail).toContain("receiptOpen && <FocusModal");
     expect(detail).toContain("strategyOpen && <FocusModal");
     expect(detail).toContain('role="dialog" aria-modal="true"');

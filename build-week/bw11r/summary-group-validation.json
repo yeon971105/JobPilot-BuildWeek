@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "jobpilot.bw11r.summary-group-validation.v1",
+  "status": "PASS",
+  "jobsValidated": 6,
+  "maximumStrongItems": 3,
+  "maximumAttentionItems": 3,
+  "partialCapabilitiesInStrongEvidence": 0,
+  "duplicateCapabilityAppearances": 0,
+  "dimensionCount": 5,
+  "dimensionFormula": "earned midpoint / active maximum",
+  "defaultPointDecimals": 0,
+  "defaultNegativePointValues": 0,
+  "technicalLedgerCollapsedByDefault": true,
+  "scoringReceiptChanges": 0
+}
