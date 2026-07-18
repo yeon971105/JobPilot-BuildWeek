@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "jobpilot.bw11r.parent-artifact-hashes.v1",
+  "capturedAt": "2026-07-18T22:36:57.2553600Z",
+  "sourceCommit": "230d6ecba9b33c9a5e2a83b8f353354b2b0bb09f",
+  "artifacts": [
+    {
+      "path": "build-week/bw10/artifact-index.json",
+      "bytes": 11792,
+      "sha256": "22122c71f3331e60846da748088c559321ad75173f6e4933a690f030457ec57d"
+    },
+    {
+      "path": "build-week/bw10/public-screenshot-manifest.json",
+      "bytes": 1738,
+      "sha256": "03ae49bdc84b992fe9141b02a6f7a61073f5c50caefb1b5ded8d84b565ee7d79"
+    },
+    {
+      "path": "build-week/study/validated/combined.csv",
+      "bytes": 278,
+      "sha256": "2f8ece279976d27b1b98810370d20b10ec05f0cb021d771707e8c2df4a950a1c"
+    },
+    {
+      "path": "build-week/study/response-template.csv",
+      "bytes": 250,
+      "sha256": "6eb378ea6d964271be09df18565644aa0657c05c826cb0c2466848b6e023ce97"
+    },
+    {
+      "path": "build-week/video/jobpilot-winning-rc1-demo.mp4",
+      "bytes": 5193564,
+      "sha256": "610be551420d60f32c657276ccf569a36ca5dc2795a774c9e032fe7c164ce71e"
+    }
+  ],
+  "frozenProductionCss": {
+    "path": ".next/static/chunks/0r1sa5i1.b1_8.css",
+    "bytes": 47736,
+    "sha256": "ade68b4a3f38060de01f9c401e2f3b6b07ec870875b56b81363bf9ed26e88d04"
+  },
+  "coverageSnapshotSha256": "96212801bb796af31c13aff9f71bba6f55b5af718d88f8da6f374f41ac4c1dbc"
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "jobpilot.bw11r.current-study-validity-audit.v1",
+  "capturedAt": "2026-07-18T22:36:57.2553600Z",
+  "sourceCommit": "230d6ecba9b33c9a5e2a83b8f353354b2b0bb09f",
+  "currentState": "READY_NOT_RUN",
+  "actualParticipants": 0,
+  "fabricatedParticipants": 0,
+  "validatedCombinedRows": 0,
+  "protocolAssessment": {
+    "currentHarnessLabel": "pre-V2 pilot harness",
+    "validForFinalEvidence": false,
+    "reasons": [
+      "The two conditions can expose the same role, creating carryover.",
+      "The existing instructions do not include the required V2 primer and comprehension gate.",
+      "The existing consent/protocol version is not jobpilot-decision-utility.v2.",
+      "Historical dry-run or pilot output must remain excluded from participant evidence."
+    ]
+  },
+  "requiredDisposition": "PILOT_EXCLUDED",
+  "privacy": {
+    "trackedParticipantCsvFiles": 0,
+    "personallyIdentifyingFieldsObserved": 0,
+    "participantLevelDataPublished": false
+  },
+  "decision": "REPLACE_HARNESS_WITH_VALID_V2_PROTOCOL_BEFORE_COLLECTION"
+}

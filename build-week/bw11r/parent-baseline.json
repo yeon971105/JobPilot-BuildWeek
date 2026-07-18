@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "jobpilot.bw11r.parent-baseline.v1",
+  "capturedAt": "2026-07-18T22:36:57.2553600Z",
+  "verifiedBeforeFirstWrite": true,
+  "repositoryRoot": "C:/Users/Jewon/Desktop/JobPilot-BuildWeek-Submission",
+  "branch": "build-week/jobpilot-2026",
+  "localHead": "230d6ecba9b33c9a5e2a83b8f353354b2b0bb09f",
+  "remoteHead": "230d6ecba9b33c9a5e2a83b8f353354b2b0bb09f",
+  "worktreeStatus": "CLEAN",
+  "parentTag": "build-week-2026-owner-review-rc1",
+  "parentTagPeeledTarget": "230d6ecba9b33c9a5e2a83b8f353354b2b0bb09f",
+  "parentDecision": "GO_BUILD_WEEK_OWNER_REVIEW_PACKAGE_READY",
+  "publicRepository": "https://github.com/yeon971105/JobPilot-BuildWeek",
+  "publicReviewUrl": "https://jobpilot-build-week-review.yeon971105.chatgpt.site",
+  "currentProductionBuildId": "Xoc4rHL3rU9OoUVwke12Y",
+  "validation": {
+    "generalTestsPassed": 109,
+    "authorizedSkips": 2,
+    "productionCssTestsPassed": 2,
+    "receiptStatus": "FULLY_REPRODUCED",
+    "receiptChecksPassed": 32,
+    "providerBoundary": "PASS",
+    "openAiApiRequests": 0,
+    "openAiApiCostUsd": 0
+  },
+  "study": {
+    "status": "READY_NOT_RUN",
+    "actualParticipants": 0,
+    "fabricatedParticipants": 0,
+    "validatedCombinedRows": 0
+  },
+  "reproduction": "PASS_EXACT"
+}

@@ -27,20 +27,20 @@ export function LandingPage() {
           <SiteNavigation />
         </header>
         <div className="mt-14 grid items-center gap-14 lg:grid-cols-[1.02fr_.98fr] lg:gap-20">
-          <div>
+          <div className="landing-copy">
             <p className="eyebrow"><SearchCheck className="size-4" /> NEARBY JOBS, PRIORITIZED FOR YOU</p>
             <h1 className="mt-6 max-w-3xl font-serif text-6xl leading-[.94] tracking-[-.045em] text-[#123426] sm:text-7xl lg:text-[5.5rem]">Find the roles worth your time.</h1>
-            <p className="mt-6 max-w-2xl text-xl leading-8 text-[#4b6559]">JobPilot brings together fresh jobs near you from processed official employer sources, compares each role with your resume, and explains which opportunities deserve your time—then takes you directly to the employer’s application page.</p>
-            <p className="mt-4 max-w-xl text-base font-semibold leading-7 text-[#315c49]">Stop searching job by job. Discover, compare, and apply from one clear decision view.</p>
+            <p className="mt-6 max-w-2xl text-xl leading-8 text-[#4b6559]">JobPilot brings nearby roles into one clear view, compares each role with your resume, and explains which opportunities deserve your attention—then takes you directly to the employer’s application page.</p>
+            <p className="mt-4 max-w-xl text-base font-semibold leading-7 text-[#315c49]">Spend less time searching job by job and more time applying to roles that fit.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/demo/shortlist" className="button-primary">See Today&apos;s 3 Roles <ArrowRight className="size-4" /></Link>
-              <Link href="/demo/jobs?sort=BEST_MATCH" className="button-secondary">See My Best Matches</Link>
+              <Link href="/demo/shortlist" className="button-primary">See My Best Matches <ArrowRight className="size-4" /></Link>
+              <Link href="/demo/jobs" className="button-secondary">Browse All Demo Jobs</Link>
             </div>
-            <p className="mt-3 text-xs font-semibold text-[#667b71]">Try the Demo with synthetic roles—no account required.</p>
+            <p className="mt-3 text-xs font-semibold text-[#667b71]">Try the demo with synthetic roles—no account required.</p>
             <Link href="/profile/resume" className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-[#315c49] underline decoration-[#b08337] underline-offset-4">Use My Resume Privately</Link>
             <div><JudgeTour /></div>
           </div>
-          <HeroArtwork />
+          <div className="landing-artwork"><HeroArtwork /></div>
         </div>
         <div className="mt-14 grid overflow-hidden rounded-2xl border border-[#173d2d]/10 bg-white/55 sm:grid-cols-2 lg:grid-cols-4">
           {trust.map((item) => <div key={item} className="flex items-center gap-2 border-b border-[#173d2d]/10 px-5 py-4 text-sm font-semibold last:border-0 sm:border-r lg:border-b-0"><Check className="size-4 text-[#b08337]" />{item}</div>)}
@@ -70,19 +70,12 @@ function HeroArtwork() {
     <div data-testid="hero-illustration" aria-label="Illustrative JobPilot workspace showing nearby prioritized roles and a direct employer destination" role="img" className="relative min-h-[570px] overflow-hidden rounded-[2.25rem] border border-white/80 bg-[#e9efe5] p-5 shadow-[0_35px_80px_rgba(37,67,52,.18)] sm:min-h-[620px] sm:p-8">
       <div className="absolute -right-12 -top-12 size-48 rounded-full bg-[#d4c28e]/30 blur-3xl" />
       <div className="paper-card relative max-w-[78%] rotate-[-2deg] sm:max-w-[72%]">
-        <p className="text-xs font-bold uppercase tracking-[.16em] text-[#779080]">Prioritized near Oakland</p>
-        <p className="mt-2 font-serif text-2xl">Demo Candidate A</p>
-        <p className="mt-1 text-sm text-[#61776c]">Remote or hybrid · 35-mile preference</p>
+        <p className="text-xs font-bold uppercase tracking-[.16em] text-[#779080]">Prioritized near Oakland</p><p className="mt-2 font-serif text-2xl">Demo Candidate A</p><p className="mt-1 text-sm text-[#61776c]">Remote or hybrid · 35-mile preference</p>
         <div className="mt-5 space-y-3"><RoleSignal label="Resume evidence" value="Strong" /><RoleSignal label="Location fit" value="Nearby" /><RoleSignal label="Application control" value="You decide" /></div>
       </div>
-      <div data-testid="hero-score-ring" className="absolute right-3 top-40 grid size-36 place-items-center rounded-full border-[12px] border-[#b89a56] bg-[#173d2d] text-center text-[#fffaf0] shadow-xl sm:right-9 sm:top-36 sm:size-44 sm:border-[14px]">
-        <div><span className="block text-[11px] font-bold uppercase tracking-[.16em] text-[#d9c992]">Example Fit</span><strong className="font-sans text-5xl">78</strong><span className="block text-xs">of 100</span></div>
-      </div>
+      <div data-testid="hero-score-ring" className="absolute right-3 top-40 grid size-36 place-items-center rounded-full border-[12px] border-[#b89a56] bg-[#173d2d] text-center text-[#fffaf0] shadow-xl sm:right-9 sm:top-36 sm:size-44 sm:border-[14px]"><div><span className="block text-[11px] font-bold uppercase tracking-[.16em] text-[#d9c992]">Example Fit</span><strong className="font-sans text-5xl">78</strong><span className="block text-xs">of 100</span></div></div>
       <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-[#173d2d]/10 bg-[#fffaf0]/95 p-4 shadow-lg sm:bottom-7 sm:left-14 sm:right-8 sm:p-5">
-        <div className="flex items-start justify-between gap-4">
-          <div><p className="text-[11px] font-bold uppercase tracking-[.14em] text-[#a1742d]">Synthetic nearby role</p><p className="mt-1 font-serif text-lg leading-tight">Applied AI Solutions Engineer</p><p className="mt-2 flex items-center gap-1 text-xs text-[#667b71]"><MapPin className="size-3" /> San Francisco · 8 miles · Hybrid</p></div>
-          <FileCheck2 className="size-5 shrink-0 text-[#4e7a63]" aria-hidden="true" />
-        </div>
+        <div className="flex items-start justify-between gap-4"><div><p className="text-[11px] font-bold uppercase tracking-[.14em] text-[#a1742d]">Synthetic nearby role</p><p className="mt-1 font-serif text-lg leading-tight">Applied AI Solutions Engineer</p><p className="mt-2 flex items-center gap-1 text-xs text-[#667b71]"><MapPin className="size-3" /> San Francisco · 8 miles · Hybrid</p></div><FileCheck2 className="size-5 shrink-0 text-[#4e7a63]" aria-hidden="true" /></div>
         <div className="mt-3 grid grid-cols-3 gap-3 border-t border-[#173d2d]/10 pt-3 text-xs"><div><span className="block text-[#73867c]">Evidence</span><b>High</b></div><div><span className="block text-[#73867c]">Priority</span><b>Review</b></div><div><span className="block text-[#73867c]">Next</span><b>Employer site</b></div></div>
         <p className="mt-3 text-[11px] leading-4 text-[#667b71]">Nearby roles in the processed official-source portfolio. Public demo data is synthetic.</p>
       </div>

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "jobpilot.bw11r.process-lock-audit.v1",
+  "capturedAt": "2026-07-18T22:36:57.2553600Z",
+  "activeCodexTask": "JP-BW11R",
+  "activeGitOperations": [],
+  "gitLocks": [],
+  "pendingTransactions": [],
+  "activeModelRequests": [],
+  "taskScopedPreviewServers": [],
+  "preservedPreexistingListeners": [
+    {
+      "port": 3000,
+      "pid": 43624,
+      "ownership": "preexisting; not modified or stopped"
+    }
+  ],
+  "approvalPreviewPort": 3209,
+  "approvalPreviewStatusAtBaseline": "NOT_STARTED",
+  "status": "PASS_CLEAR_FOR_TASK_WRITES"
+}

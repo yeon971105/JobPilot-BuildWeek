@@ -6,12 +6,11 @@ import { usePathname } from "next/navigation";
 import { ProfileMenu } from "@/components/profile/profile-menu";
 
 const links = [
-  { href: "/demo/shortlist", label: "Shortlist" },
+  { href: "/demo/shortlist", label: "For You" },
   { href: "/demo/jobs", label: "Jobs" },
   { href: "/demo/tracker", label: "Tracker" },
   { href: "/demo/trust", label: "Trust Lab" },
   { href: "/about/build-week", label: "Build Week" },
-  { href: "/profile", label: "Profile" },
 ];
 
 export function SiteNavigation({ ariaLabel = "Primary navigation" }: { ariaLabel?: string }) {
@@ -27,12 +26,12 @@ export function SiteNavigation({ ariaLabel = "Primary navigation" }: { ariaLabel
           </Link>
         ))}
       </div>
-      <details className="relative sm:hidden">
+      <details className="nav-menu relative sm:hidden">
         <summary className="grid size-11 list-none place-items-center rounded-xl border border-[#173d2d]/15 bg-[#fffdf7] text-[#173d2d] [&::-webkit-details-marker]:hidden">
           <Menu className="size-5" aria-hidden="true" />
           <span className="sr-only">Open navigation</span>
         </summary>
-        <div className="absolute right-0 z-50 mt-2 grid min-w-48 gap-1 rounded-2xl border border-[#173d2d]/10 bg-[#fffdf7] p-2 shadow-[0_18px_45px_rgba(39,61,49,.18)]">
+        <div className="nav-menu-panel absolute right-0 z-50 mt-2 grid min-w-48 gap-1 rounded-2xl border border-[#173d2d]/10 bg-[#fffdf7] p-2 shadow-[0_18px_45px_rgba(39,61,49,.18)]">
           {links.map((link) => (
             <Link key={link.href} href={link.href} aria-current={active(link.href) ? "page" : undefined} className={`min-h-11 rounded-xl px-4 py-3 text-sm font-semibold ${active(link.href) ? "bg-[#e7dcc1] text-[#173d2d]" : "text-[#315c49]"}`}>
               {link.label}

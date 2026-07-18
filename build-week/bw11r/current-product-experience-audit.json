@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "jobpilot.bw11r.current-product-experience-audit.v1",
+  "capturedAt": "2026-07-18T22:36:57.2553600Z",
+  "sourceCommit": "230d6ecba9b33c9a5e2a83b8f353354b2b0bb09f",
+  "strengths": [
+    "The root route already functions as a product landing page.",
+    "Today’s three-role shortlist, job detail, comparison, tracker, Trust Lab, and private-resume guidance are available.",
+    "Destination language, prepared-model provenance, deterministic scoring, and receipt verification are explicit.",
+    "Responsive and accessibility baselines passed the JP-BW10 certification."
+  ],
+  "gapsAgainstJpBw11r": [
+    "The landing narrative and calls to action do not use the final product-first hierarchy.",
+    "The app navigation uses Shortlist instead of For You and exposes a redundant standalone Profile link.",
+    "Shortlist rationale and card content remain denser and more technical than the final decision-first contract.",
+    "Job Detail foregrounds point-oriented evidence instead of the requested visual decision hierarchy.",
+    "Loading, empty, success, and error states are not complete across the required surfaces.",
+    "The study experience does not yet implement the valid two-role counterbalanced V2 protocol."
+  ],
+  "decision": "REDESIGN_REQUIRED_WITHIN_FROZEN_FEATURE_SET"
+}

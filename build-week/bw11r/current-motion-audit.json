@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "jobpilot.bw11r.current-motion-audit.v1",
+  "capturedAt": "2026-07-18T22:36:57.2553600Z",
+  "sourceCommit": "230d6ecba9b33c9a5e2a83b8f353354b2b0bb09f",
+  "existing": [
+    "Basic button and surface transitions",
+    "Global reduced-motion override"
+  ],
+  "missingOrIncomplete": [
+    "Landing entrance choreography",
+    "Shortlist stagger and restrained card lift",
+    "One-time score counting and evidence-bar reveals",
+    "Tab indicator and content transitions",
+    "Navigation, profile selector, modal, and drawer motion",
+    "Tracker transition feedback with Undo",
+    "Consistent aria-live toast system",
+    "Route skeleton states"
+  ],
+  "safetyBaseline": {
+    "infiniteLoopsDetected": 0,
+    "parallaxDetected": 0,
+    "reducedMotionRulePresent": true
+  },
+  "decision": "MOTION_SYSTEM_COMPLETION_REQUIRED"
+}
