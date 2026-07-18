@@ -1,13 +1,14 @@
-# Decision Utility Study Participant Instructions
+# Decision Utility Study participant instructions
 
 This study uses a fictional candidate and fictional job posting. It evaluates the interface, not you.
 
-1. Do not enter your name, contact details, resume, employer credentials, demographic information, employment status, health information, or any other personal data.
-2. Complete both conditions in the order shown. The order was randomized for this anonymous browser session.
-3. In each condition, identify one required qualification, one preferred qualification, the work mode, and the biggest gap for the fictional candidate.
-4. Choose Apply, Review, or Skip, then rate confidence and information transparency from 1–7.
-5. Use only the synthetic information on screen. Think aloud if a facilitator is present.
-6. Responses autosave only in this browser. Export JSON or CSV only if you intend to provide the file to the study owner.
-7. Select Reset to remove the local session and begin again with a new anonymous ID.
+1. Read the consent notice. Choose **I consent and begin** only if you voluntarily agree.
+2. Do not enter or share your name, contact details, resume, demographic data, employment status, health data, employer credentials, or personal history.
+3. Complete both conditions in the order shown. The order is randomized once for your anonymous browser-local session.
+4. For each condition, answer the required-experience, preferred-experience, work-mode, and biggest-gap questions.
+5. Choose Apply, Review, or Skip, then rate confidence and information transparency from 1–7.
+6. Use only the frozen fictional information on screen. Think aloud if a facilitator is present, but the facilitator must not record personal details.
+7. At completion, export the CSV and give it to the study owner. Export stays on your device until you choose where to place it.
+8. Choose **Delete and reset** after the owner confirms receipt, especially on a shared device.
 
-JobPilot does not send these responses anywhere, submit an application, or evaluate your real employability.
+JobPilot does not transmit these responses, submit an application, or evaluate your real employability.

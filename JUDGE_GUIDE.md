@@ -35,13 +35,14 @@ No hidden shortlist score exists. The exact policy appears below the cards. Dist
 
 The study route is intentionally not in primary product navigation. Open `/study/decision-utility` directly.
 
-1. Confirm the anonymous participant ID, task timer, and randomized Raw Posting / JobPilot order.
-2. Complete required, preferred, work-mode, biggest-gap, decision, confidence, and transparency fields.
-3. Continue to the second condition and export local JSON/CSV.
-4. Reset and confirm a new anonymous session is created.
-5. Confirm no name, email, resume, demographics, employment status, or health data is requested.
+1. Read the consent screen; confirm no session ID or timer begins until **I consent and begin** is chosen.
+2. Confirm the anonymous participant ID, task timer, and counterbalanced Raw Posting / JobPilot order.
+3. Complete required-experience, preferred-experience, work-mode, biggest-gap, decision, confidence, and transparency fields.
+4. Continue to the second condition and export local CSV/JSON.
+5. Delete and reset; confirm local storage clears and consent is required again.
+6. Confirm no name, email, resume, demographics, employment status, or health data is requested.
 
-Human participant count is `0`; the harness is `READY_NOT_RUN`.
+Actual participant count is `0`; the harness is `READY_NOT_RUN`. Minimum target: `5`; preferred target: `8–12`.
 
 ## Truthful claims
 
@@ -56,6 +57,6 @@ Human participant count is `0`; the harness is `READY_NOT_RUN`.
 
 ## Owner-review preview
 
-Expected local preview: `http://127.0.0.1:3205/`.
+Expected local preview: `http://127.0.0.1:3206/`.
 
 This is a development RC. Do not deploy, publish the video, submit Devpost, or create a final release tag without explicit owner approval.

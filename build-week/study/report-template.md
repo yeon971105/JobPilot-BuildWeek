@@ -1,35 +1,18 @@
-# JobPilot Decision Utility Study Report
+# JobPilot Decision Utility Study report template
 
 Status: **READY_NOT_RUN**
 
-## Executive answer
+Human participant sessions have not run. Replace no values manually; use `npm run study:analyze -- <combined.csv>` so calculations and privacy validation remain reproducible.
 
-Human participant sessions have not been run. Replace this paragraph only after real, consented exports are imported and analyzed with the frozen protocol. Do not present synthetic tooling validation as user evidence.
+## Required report fields
 
-## Sample and method
+- actual participant count and condition-order counts;
+- median decision time for Raw Posting and JobPilot;
+- median paired JobPilot-minus-Raw time difference;
+- required-experience, preferred-experience, work-mode, and biggest-gap accuracy by condition;
+- Apply / Review / Skip agreement;
+- confidence and transparency differences;
+- bootstrap confidence intervals when at least five complete sessions permit them;
+- explicit no-significance and directional-evidence limitations.
 
-- Human participants:
-- Human condition rows:
-- Study dates:
-- Recruiting criteria:
-- Condition-order counts:
-- Protocol deviations:
-- Missing data:
-
-## Decision-utility results
-
-| Measure | Raw Posting | JobPilot | Paired difference | Status |
-| --- | ---: | ---: | ---: | --- |
-| Median task time | — | — | — | NOT_RUN |
-| Mean confidence (1–7) | — | — | — | NOT_RUN |
-| Mean transparency (1–7) | — | — | — | NOT_RUN |
-| Response completeness | — | — | — | NOT_RUN |
-| Apply / Review / Skip changes | — | — | — | NOT_RUN |
-
-## Qualitative observations
-
-Paraphrase interface-related friction only. Do not include names, contact details, employer identifiers, resumes, protected attributes, employment status, health information, or personal histories.
-
-## Decision and limitations
-
-State the product decision supported by the observed sessions. Report a small study as directional usability evidence only. Do not claim hiring outcomes, complete market coverage, employer behavior, or population-level impact.
+Do not include names, contact details, resumes, demographics, employment status, health data, personal histories, hiring outcomes, employer behavior, or population-level claims.

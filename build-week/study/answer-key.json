@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "jobpilot.decision-utility-answer-key.v1",
+  "roleId": "northstar-applied-ai-solutions-engineer",
+  "requiredExperienceAnswer": "NO_NUMERIC_REQUIRED_EXPERIENCE",
+  "preferredExperienceAnswer": "THREE_YEARS_RELEVANT_DELIVERY",
+  "workModeAnswer": "HYBRID_AND_REMOTE",
+  "biggestGapAnswer": "APPLIED_AI_WORKFLOW_DELIVERY",
+  "scoring": "Exact frozen choice value; UNCLEAR and distractors score incorrect without invalidating a complete response.",
+  "humanJudgmentRequired": false
+}

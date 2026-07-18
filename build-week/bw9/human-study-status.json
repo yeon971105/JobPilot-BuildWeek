@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "jobpilot.bw9.human-study-status.v1",
+  "status": "READY_NOT_RUN",
+  "actualParticipantCount": 0,
+  "minimumParticipantTarget": 5,
+  "preferredParticipantTarget": "8–12",
+  "consentVersion": "jobpilot-study-consent-v1",
+  "route": "/study/decision-utility",
+  "storage": "BROWSER_LOCAL_ONLY",
+  "networkRequests": 0,
+  "fabricatedParticipants": 0,
+  "humanResultsPublished": false,
+  "analysisCommand": "npm run study:analyze -- <combined-participant-csv>",
+  "result": "PASS_OWNER_WORKFLOW_READY"
+}

@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-07-18T18:05:26.023Z",
+  "source": {
+    "path": "build-week/study/response-template.csv",
+    "sha256": "6eb378ea6d964271be09df18565644aa0657c05c826cb0c2466848b6e023ce97"
+  },
+  "schemaVersion": "jobpilot.bw9.impact-analysis.v1",
+  "status": "READY_NOT_RUN",
+  "humanParticipantCount": 0,
+  "humanRows": 0,
+  "syntheticToolingValidationRows": 0,
+  "minimumParticipantTarget": 5,
+  "preferredParticipantTarget": "8–12",
+  "conditionOrderCounts": {
+    "RAW_POSTING_THEN_JOBPILOT": 0,
+    "JOBPILOT_THEN_RAW_POSTING": 0
+  },
+  "conditions": {
+    "RAW_POSTING": {
+      "participantCount": 0,
+      "medianDecisionTimeSeconds": null,
+      "requiredExperienceAccuracyPercent": null,
+      "preferredExperienceAccuracyPercent": null,
+      "workModeAccuracyPercent": null,
+      "biggestGapAccuracyPercent": null,
+      "meanConfidence": null,
+      "meanTransparency": null,
+      "decisions": {
+        "APPLY": 0,
+        "REVIEW": 0,
+        "SKIP": 0
+      }
+    },
+    "JOBPILOT": {
+      "participantCount": 0,
+      "medianDecisionTimeSeconds": null,
+      "requiredExperienceAccuracyPercent": null,
+      "preferredExperienceAccuracyPercent": null,
+      "workModeAccuracyPercent": null,
+      "biggestGapAccuracyPercent": null,
+      "meanConfidence": null,
+      "meanTransparency": null,
+      "decisions": {
+        "APPLY": 0,
+        "REVIEW": 0,
+        "SKIP": 0
+      }
+    }
+  },
+  "paired": {
+    "medianTimeDifferenceSecondsJobPilotMinusRaw": null,
+    "requiredExperienceAccuracyDifferencePoints": null,
+    "preferredExperienceAccuracyDifferencePoints": null,
+    "workModeAccuracyDifferencePoints": null,
+    "biggestGapAccuracyDifferencePoints": null,
+    "decisionAgreementPercent": null,
+    "meanConfidenceDifferenceJobPilotMinusRaw": null,
+    "meanTransparencyDifferenceJobPilotMinusRaw": null
+  },
+  "bootstrapConfidenceIntervals": null,
+  "bootstrapStatus": "NOT_AVAILABLE_NO_PARTICIPANTS",
+  "statisticalSignificanceClaim": false,
+  "inferenceBoundary": "Human results are withheld below the minimum target. No significance or population-level claim is permitted.",
+  "validation": {
+    "duplicateParticipantConditions": 0,
+    "incompleteParticipantSessions": 0,
+    "malformedRows": 0,
+    "prohibitedColumns": 0,
+    "fabricatedParticipants": 0
+  }
+}

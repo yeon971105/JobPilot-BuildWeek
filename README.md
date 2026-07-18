@@ -87,9 +87,13 @@ See [SCORE_RECEIPT_VERIFIER.md](SCORE_RECEIPT_VERIFIER.md).
 
 ## Decision Utility Study
 
-`/study/decision-utility` is intentionally absent from primary product navigation. It is a synthetic, randomized two-condition harness comparing Raw Posting and JobPilot. It supports task timing, required/preferred/work-mode/gap questions, Apply / Review / Skip, confidence, transparency, anonymous IDs, browser-local autosave, JSON/CSV export, and reset.
+`/study/decision-utility` is intentionally absent from primary product navigation. After explicit consent, it creates an anonymous random ID and counterbalances one Raw Posting task and one JobPilot task. Each condition asks required-experience, preferred-experience, work-mode, biggest-gap, Apply / Review / Skip, confidence, and transparency questions while timing completion. Responses autosave browser-locally and export to CSV or JSON; there is no network submission path.
 
-Status: **READY_NOT_RUN**. Human participant count: **0**. Synthetic tooling validation is never presented as human evidence. See [the protocol](build-week/study/protocol.md).
+Status: **READY_NOT_RUN**. Actual participant count: **0**. Minimum target: **5**; preferred target: **8–12**. Synthetic tooling validation is never presented as human evidence. See [the protocol](build-week/study/protocol.md), [consent](build-week/study/consent.md), and [owner workflow](build-week/study/owner-collection-workflow.md).
+
+```bash
+npm run study:analyze -- <combined-participant-csv>
+```
 
 ## Private Resume Mode
 

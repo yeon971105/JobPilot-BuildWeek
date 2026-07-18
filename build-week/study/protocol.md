@@ -1,58 +1,49 @@
-# JobPilot Decision Utility Study Protocol
+# JobPilot Decision Utility Study protocol
 
 Status: **READY_NOT_RUN**
 
-Human participant count: **0**
+Actual participant count: **0**
+
+Minimum target: **5**
+
+Preferred target: **8–12**
 
 Study route: `/study/decision-utility`
 
-No participant sessions or impact claims are included in this release. The harness is isolated from primary judge navigation and uses synthetic roles only.
+No participant sessions or impact claims are included in this release. Synthetic tooling checks are never presented as human evidence.
 
-## Research question
+## Research question and design
 
-Does the JobPilot condition help a person make a faster, more confident, and more transparent Apply / Review / Skip decision than a raw-posting condition while preserving understanding of required qualifications, preferred qualifications, work mode, and the biggest candidate gap?
-
-## Design
+Does the JobPilot condition help a person make a faster, more confident, and more transparent Apply / Review / Skip decision than the Raw Posting condition while preserving accurate understanding of required experience, preferred experience, work mode, and the biggest candidate gap?
 
 - Within-participant, two-condition crossover: `RAW_POSTING` and `JOBPILOT`.
-- Condition order is randomized once per anonymous browser-local session.
-- The same frozen synthetic role and candidate are used in both conditions.
-- The task timer starts when each condition becomes visible and stops when all required answers are saved.
-- Condition order, not a hidden participant trait, is the planned order-effect covariate.
-- This small study is decision-utility evidence, not hiring-outcome calibration.
+- Counterbalanced order, randomized once after consent for each anonymous browser-local session.
+- One frozen fictional role and candidate in both conditions.
+- The timer begins after consent when a condition is displayed and stops when all required answers are saved.
+- This is early decision-utility evidence, not hiring-outcome calibration.
 
-## Collected fields
+## Collection and privacy
 
-- Anonymous generated participant ID.
-- Randomized condition order and condition label.
-- Task time in seconds.
-- One required-qualification answer.
-- One preferred-qualification answer.
-- Work-mode answer.
-- Biggest-gap answer.
-- Apply / Review / Skip decision.
-- Confidence rating from 1–7.
-- Transparency rating from 1–7.
+Collected fields are the anonymous random ID, order, condition, four accuracy answers, decision time, Apply / Review / Skip decision, confidence, transparency, consent version, and completion timestamp.
 
-## Prohibited fields
+Names, emails, phone numbers, resumes, demographics, employment status, health data, employer credentials, and personal histories are prohibited. The route has no form action, API route, analytics call, fetch call, automatic upload, or real job/candidate input.
 
-Do not collect names, email addresses, phone numbers, resumes, demographics, employment status, health information, employer credentials, or free-form personal histories. The question fields are capped and must be answered only from the synthetic role.
+## State machine
 
-## Storage and export
+- `READY_NOT_RUN`: zero imported actual participants.
+- `IN_PROGRESS`: one to four complete actual participants.
+- `COMPLETE`: at least five complete actual participants.
 
-The route stores one versioned session under `jobpilot-decision-utility-study-v1` in browser `localStorage`. It has no form action, API route, analytics call, fetch call, or automatic upload. JSON and CSV exports are initiated locally by the participant. Reset removes the stored session and creates a new anonymous ID and randomized order.
+The preferred 8–12 target remains visible after minimum completion. A session contributes only when both condition rows validate.
 
-## Planned analysis
+## Owner analysis
 
-For real consented imports only:
+Combine exported participant CSV files without editing their values. Repeated header rows are accepted. Run:
 
-1. Verify the frozen no-PII header and two rows per anonymous participant.
-2. Exclude rows explicitly labeled `synthetic_tooling_validation=true` from human results.
-3. Compare within-participant task time, confidence, and transparency by condition.
-4. Report medians and paired differences; retain condition-order counts.
-5. Report response completeness and decision changes descriptively.
-6. Do not impute missing values or generalize beyond the small sample.
+```bash
+npm run study:analyze -- <combined-participant-csv>
+```
 
-## Readiness gate
+The importer rejects duplicate participant-condition rows, incomplete pairs, order mismatches, malformed ratings/times, missing consent, non-anonymous IDs, prohibited columns, invalid choices, and identifying schema changes.
 
-The study may be described as `READY_NOT_RUN` only when both condition orders, local persistence, export, reset, required fields, timer behavior, and zero-network behavior pass automated and browser validation. Human findings remain `NOT_RUN` until genuine participant rows are imported.
+It calculates participant count, median time by condition, median paired time difference, four accuracy measures, decision agreement, confidence/transparency differences, and deterministic bootstrap 95% intervals at five or more participants. It generates an internal full report and public concise summary. No statistical-significance claim is made from this small study.

@@ -42,9 +42,9 @@ The submitted runtime made **0 OpenAI API requests** and incurred **$0 API cost*
 
 ## Decision-utility study harness
 
-An isolated `/study/decision-utility` route provides randomized Raw Posting / JobPilot order, a task timer, required/preferred/work-mode/gap questions, Apply / Review / Skip, confidence, transparency, anonymous browser-local IDs, local-only storage, JSON/CSV export, and reset.
+An isolated `/study/decision-utility` route requires explicit consent, generates an anonymous random ID, counterbalances Raw Posting / JobPilot order, and collects required-experience, preferred-experience, work-mode, biggest-gap, Apply / Review / Skip, completion time, confidence, and transparency responses. Storage and CSV/JSON export remain local-only.
 
-Status is **READY_NOT_RUN**. Human participant count is **0**. Synthetic tooling validation is labeled and never represented as human results.
+Status is **READY_NOT_RUN**. Actual participant count is **0**; minimum target is **5** and preferred target is **8–12**. The importer validates complete paired sessions and calculates the predeclared metrics and bootstrap intervals when sample size permits. Synthetic tooling validation is labeled and never represented as human results.
 
 ## Built with Codex
 

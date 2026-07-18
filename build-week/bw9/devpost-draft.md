@@ -29,4 +29,4 @@ The public flow exports no production rows, descriptions, URLs, candidate record
 
 Four `gpt-5.6-sol` reviews were prepared through Codex from frozen synthetic evidence. They are prepared, not live; all evidence IDs are valid; and the model generated no numeric score.
 
-Human-study results remain absent until actual consented participants complete the owner-operated local study.
+Human-study status is `READY_NOT_RUN`: 0 actual participants, minimum target 5, preferred target 8–12. The owner-operated route requires consent, uses anonymous local-only sessions, and produces CSV files for `npm run study:analyze -- <combined.csv>`. Human results remain absent until actual participants complete the study.

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "jobpilot.decision-utility-study-dry-run.v1",
+  "schemaVersion": "jobpilot.decision-utility-study-dry-run.v2",
   "purpose": "Validate both randomized order paths and the header-only no-PII analysis path without inventing human results.",
   "generatedAt": "2026-07-18T08:34:00.000Z",
   "dataClassification": "SYNTHETIC_TOOLING_VALIDATION",
@@ -19,6 +19,9 @@
     }
   ],
   "analysisTemplateRows": 0,
+  "consentVersion": "jobpilot-study-consent-v1",
+  "minimumParticipantTarget": 5,
+  "preferredParticipantTarget": "8–12",
   "privateOrIdentifyingColumns": 0,
   "externalRequests": 0,
   "fabricatedHumanResults": 0,

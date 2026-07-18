@@ -23,7 +23,8 @@
     "bw4:report": "tsx scripts/bw4-report.ts",
     "bw7:report": "tsx scripts/bw7-report.ts",
     "bw8:coverage": "tsx scripts/bw8-production-coverage.ts",
-    "bw9:freeze": "tsx scripts/bw9-freeze-coverage.ts"
+    "bw9:freeze": "tsx scripts/bw9-freeze-coverage.ts",
+    "study:analyze": "tsx scripts/bw9-impact-results.ts"
   },
   "dependencies": {
     "fflate": "^0.8.3",

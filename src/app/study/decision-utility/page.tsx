@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DecisionUtilityStudy, type DecisionStudyRole } from "@/components/study/decision-utility-study";
-import { DEMO_JOBS, primaryLocation, workModesFor } from "@/lib/demo-contract";
+import { DEMO_CANDIDATE, DEMO_JOBS, primaryLocation, workModesFor } from "@/lib/demo-contract";
 import { scoreJob } from "@/server/build-week/scorer";
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export default function Page() {
     preferredQualifications: job.preferredQualifications,
     workModes: workModesFor(job),
     location: primaryLocation(job),
+    candidateEvidence: DEMO_CANDIDATE.evidence.map((item) => item.text),
     jobPilot: { fitScore: analysis.displayedScore, evidenceQuality: analysis.evidenceQuality, applyPriority: analysis.applyPriority, strongestMatch: strongest?.canonicalName ?? "Supported evidence only", biggestGap: gap?.canonicalName ?? "No confirmed point loss", blockerCount: analysis.confirmedBlockerCount },
   };
   return <DecisionUtilityStudy role={role} />;
