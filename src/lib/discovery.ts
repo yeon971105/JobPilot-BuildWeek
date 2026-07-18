@@ -28,6 +28,17 @@ export type DiscoveryRow<T extends DiscoveryAnalysis = DiscoveryAnalysis> = {
 };
 
 export type DiscoverySort = "BEST_MATCH" | "NEAREST" | "MOST_RECENT" | "HIGHEST_EVIDENCE";
+export type DiscoveryFilters = {
+  query: string;
+  workMode: string;
+  seniority: string;
+  minimumScore: number;
+  evidenceSufficientOnly: boolean;
+  priority: string;
+  blocker: "ALL" | "CLEAR" | "BLOCKED";
+  withinPreferredArea: boolean;
+  remoteCompatible: boolean;
+};
 
 export const DEMO_DISCOVERY_PROFILE: DiscoveryProfile = {
   label: DEMO_CANDIDATE.displayName,
@@ -82,6 +93,27 @@ export function sortDiscoveryRows<T extends DiscoveryAnalysis>(rows: DiscoveryRo
       || distanceOrder(left) - distanceOrder(right)
       || descending(postingTime(left), postingTime(right))
       || left.job.id.localeCompare(right.job.id);
+  });
+}
+
+export function filterDiscoveryRows<T extends DiscoveryAnalysis>(rows: DiscoveryRow<T>[], filters: DiscoveryFilters) {
+  const query = filters.query.toLowerCase().trim();
+  return rows.filter((row) => {
+    const haystack = `${row.job.title} ${row.job.company}`.toLowerCase();
+    const modeMatch = filters.workMode === "ALL" || row.job.locations.some((location) => location.workModes.includes(filters.workMode));
+    const seniorityMatch = filters.seniority === "ALL" || row.job.seniority === filters.seniority;
+    const minimumMatch = row.analysis.score === null ? filters.minimumScore === 0 : row.analysis.score >= filters.minimumScore;
+    const priorityMatch = filters.priority === "ALL" || row.analysis.priority === filters.priority;
+    const blockerMatch = filters.blocker === "ALL" || (filters.blocker === "BLOCKED" ? row.analysis.confirmedBlockerCount > 0 : row.analysis.confirmedBlockerCount === 0);
+    return haystack.includes(query)
+      && modeMatch
+      && seniorityMatch
+      && minimumMatch
+      && (!filters.evidenceSufficientOnly || row.analysis.evidenceSufficient)
+      && priorityMatch
+      && blockerMatch
+      && (!filters.withinPreferredArea || row.withinPreferredArea)
+      && (!filters.remoteCompatible || row.remoteCompatible);
   });
 }
 

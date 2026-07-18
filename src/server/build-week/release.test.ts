@@ -33,10 +33,10 @@ describe("no-key judge release contract", () => {
   it("serves prepared strategy and critique without an OpenAI key", async () => {
     const strategy = await strategyPost(new Request("http://local/api/demo/strategy", { method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": "release-strategy-test" }, body: JSON.stringify({ jobId: northstarId, mode: "fixture" }) }));
     expect(strategy.status).toBe(200);
-    expect((await strategy.json()).provider).toMatchObject({ mode: "FIXTURE_ONLY", live: false });
+    expect((await strategy.json()).provider).toMatchObject({ mode: "CODEX_GPT56_PREPARED", model: "gpt-5.6-sol", live: false });
     const challenge = await heavyPost(new Request("http://local/api/demo/heavy", { method: "POST", headers: { "content-type": "application/json", "x-forwarded-for": "release-challenge-test" }, body: JSON.stringify({ jobId: northstarId, action: "CHALLENGE_ANALYSIS", mode: "fixture" }) }));
     expect(challenge.status).toBe(200);
-    expect((await challenge.json()).provider).toMatchObject({ mode: "FIXTURE_ONLY", live: false });
+    expect((await challenge.json()).provider).toMatchObject({ mode: "CODEX_GPT56_PREPARED", model: "gpt-5.6-sol", live: false });
   });
 
   it("enforces heavy-route input and daily quota bounds", async () => {
@@ -52,13 +52,16 @@ describe("no-key judge release contract", () => {
 
   it("keeps required hybrid trust disclosures and prepared labels in the UI", () => {
     const trust = readFileSync("src/components/demo/trust-lab.tsx", "utf8");
-    for (const phrase of ["How JobPilot Works", "Why Gemma Is Primary", "How the Score Is Calculated", "What GPT-5.6 Does", "Privacy and Limitations"]) expect(trust).toContain(phrase);
+    for (const phrase of ["How JobPilot Saves Time", "How Roles Are Prioritized", "How the Score Is Verified", "Why Gemma Is Primary", "What GPT-5.6 Contributed", "Privacy and Limitations"]) expect(trust).toContain(phrase);
+    expect(trust).toContain("OpenAI API requests: 0");
+    expect(trust).toContain("never auto-applies");
     const detail = readFileSync("src/components/demo/job-detail.tsx", "utf8");
     expect(detail).toContain("Gemma 4 12B analysis pipeline");
     expect(detail).toContain("Prepared synthetic analysis");
     expect(detail).toContain("Deterministic AI Fit V2.2");
     expect(detail).toContain("See a Score Change");
-    expect(detail).toContain("Prepared demonstration output from synthetic evidence.");
+    expect(detail).toContain("GPT-5.6 — Prepared Review");
+    expect(detail).toContain("not a live API response");
     expect(detail).not.toContain("DetailSection letter=");
   });
 });

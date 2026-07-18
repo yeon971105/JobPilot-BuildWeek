@@ -10,14 +10,14 @@ afterEach(() => vi.unstubAllEnvs());
 const baseEnv = { AI_RUNTIME_MODE: "LOCAL_FIRST", OLLAMA_BASE_URL: "http://127.0.0.1:11434", OLLAMA_MODEL: "gemma4:12b", OLLAMA_ENABLED: "true", OPENAI_HEAVY_FEATURES_ENABLED: "false", OPENAI_HEAVY_MODEL: "gpt-5.6-terra", BUILD_WEEK_DEMO_MODE: "true", BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES: "true", BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS: "false", BUILD_WEEK_ALLOW_LIVE_GPT56: "false", OPENAI_API_KEY: "" };
 
 describe("local-first hybrid provider contract", () => {
-  it("routes semantic work to prepared Gemma and heavy work to prepared fixtures without a key", () => {
+  it("routes semantic work to prepared Gemma and heavy work to prepared Codex output without a key", () => {
     const config = parseRuntimeEnvironment(baseEnv);
     expect(routeHybridTask("JOB_SEMANTIC_ANALYSIS", config)).toMatchObject({ provider: "LOCAL_GEMMA_PREPARED", live: false, model: "gemma4:12b" });
-    expect(routeHybridTask("APPLICATION_STRATEGY", config)).toMatchObject({ provider: "FIXTURE_ONLY", live: false });
+    expect(routeHybridTask("APPLICATION_STRATEGY", config)).toMatchObject({ provider: "CODEX_GPT56_PREPARED", model: "gpt-5.6-sol", live: false });
   });
 
   it("does not enable OpenAI when a key exists but the heavy flag is false", () => {
-    expect(getDemoProviderConfig({ ...baseEnv, OPENAI_API_KEY: "test-only-not-real" })).toMatchObject({ mode: "FIXTURE_ONLY", live: false });
+    expect(getDemoProviderConfig({ ...baseEnv, OPENAI_API_KEY: "test-only-not-real" })).toMatchObject({ mode: "CODEX_GPT56_PREPARED", model: "gpt-5.6-sol", live: false });
   });
 
   it("enables heavy reasoning with a key and one feature flag", () => {

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { PREPARED_ANALYSIS_CHALLENGE, PREPARED_REVIEW_BADGE, PREPARED_REVIEW_DISCLOSURE } from "@/lib/prepared-reviews";
 import { challengeLiveAnalysis, fixtureChallenge, getDemoProviderConfig } from "@/server/build-week/strategy";
 
 const dailyBudget = new Map<string, { day: string; count: number }>();
@@ -14,6 +15,7 @@ export async function POST(request: Request) {
   if (!consume(clientId(request))) return NextResponse.json({ error: "The heavy-reasoning demo quota is reached for today." }, { status: 429 });
   const provider = getDemoProviderConfig();
   try {
+    if (body.jobId === "northstar-applied-ai-solutions-engineer" && (body.mode === "fixture" || provider.mode !== "OPENAI_GPT56_HEAVY")) return NextResponse.json({ challenge: PREPARED_ANALYSIS_CHALLENGE.output, provider: { mode: "CODEX_GPT56_PREPARED", model: "gpt-5.6-sol", live: false, label: PREPARED_REVIEW_BADGE, disclosure: PREPARED_REVIEW_DISCLOSURE, apiRequestCount: 0 } });
     if (body.mode === "fixture" || provider.mode !== "OPENAI_GPT56_HEAVY") return NextResponse.json({ challenge: fixtureChallenge(body.jobId), provider: { mode: "FIXTURE_ONLY", model: "prepared-demonstration-output", live: false } });
     return NextResponse.json({ challenge: await challengeLiveAnalysis(body.jobId), provider });
   } catch { return NextResponse.json({ error: "AI analysis is temporarily unavailable. No result was generated.", provider }, { status: 503 }); }

@@ -8,5 +8,5 @@ const noKey = parseRuntimeEnvironment({
 });
 const semantic = routeHybridTask("JOB_SEMANTIC_ANALYSIS", noKey);
 const heavy = routeHybridTask("APPLICATION_STRATEGY", noKey);
-if (semantic.provider !== "LOCAL_GEMMA_PREPARED" || heavy.provider !== "FIXTURE_ONLY") throw new Error("No-key provider routing failed closed incorrectly.");
+if (semantic.provider !== "LOCAL_GEMMA_PREPARED" || heavy.provider !== "CODEX_GPT56_PREPARED" || heavy.model !== "gpt-5.6-sol" || heavy.live) throw new Error("No-key provider routing failed closed incorrectly.");
 console.log(JSON.stringify({ validation: "PASS", architecture: "LOCAL_FIRST_HYBRID", deterministic: "jobpilot-ai-fit-v2.2", semantic, heavy, publicStatus: getPublicProviderStatus(), openAiKeyConfigured: Boolean(process.env.OPENAI_API_KEY?.trim()), secretsPrinted: false }, null, 2));

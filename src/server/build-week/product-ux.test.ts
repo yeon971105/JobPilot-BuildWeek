@@ -6,19 +6,20 @@ const read = (path: string) => readFileSync(path, "utf8");
 
 afterEach(() => vi.unstubAllEnvs());
 
-describe("JP-BW6 product UX contract", () => {
+describe("JP-BW7 product UX contract", () => {
   it("keeps the landing decision user-centered and exact", () => {
     const source = read("src/components/demo/landing.tsx");
     for (const copy of [
-      "Know why a job fits.",
-      "JobPilot turns job descriptions and candidate evidence into a transparent career decision—without asking you to trust a black-box score.",
+      "NEARBY JOBS, PRIORITIZED FOR YOU",
+      "Find the roles worth your time.",
+      "Stop searching job by job. Discover, compare, and apply from one clear decision view.",
+      "See My Best Matches",
       "Try the Demo",
       "Use My Resume Privately",
-      "See How the Score Works",
-      "Required vs. preferred",
-      "Relevant experience",
-      "Evidence behind every point",
-      "Private local analysis",
+      "Official-source discovery",
+      "Private resume analysis",
+      "Transparent Fit Score",
+      "No auto-apply",
     ]) expect(source).toContain(copy);
   });
 
@@ -46,7 +47,8 @@ describe("JP-BW6 product UX contract", () => {
   it("keeps practical preferences separate from technical fit", () => {
     const preferences = read("src/components/profile/preferences.tsx");
     for (const label of ["Accepted work modes", "Preferred locations", "Remote eligibility", "Maximum travel percentage", "Open to relocation", "Optional authorization note"]) expect(preferences).toContain(label);
-    expect(preferences).toContain("They never silently change technical Fit Score.");
+    expect(preferences).toContain("practical priority—not technical Fit Score");
+    expect(preferences).toContain("never requests device location or calls a geocoding service");
   });
 
   it("exposes full profile review and explicit local clearing", () => {

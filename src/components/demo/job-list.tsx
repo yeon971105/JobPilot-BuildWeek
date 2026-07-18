@@ -7,7 +7,7 @@ import { DemoHeader } from "@/components/demo/demo-header";
 import { useDemoTracker } from "@/components/demo/demo-store";
 import { usePrivateProfile } from "@/components/profile/profile-store";
 import type { DemoJob } from "@/lib/demo-contract";
-import { buildDiscoveryRow, DEMO_DISCOVERY_PROFILE, formatPostedDate, sortDiscoveryRows, type DiscoveryProfile, type DiscoveryRow, type DiscoverySort } from "@/lib/discovery";
+import { buildDiscoveryRow, DEMO_DISCOVERY_PROFILE, filterDiscoveryRows, formatPostedDate, sortDiscoveryRows, type DiscoveryProfile, type DiscoveryRow, type DiscoverySort } from "@/lib/discovery";
 
 export type JobCardAnalysis = {
   jobId: string;
@@ -52,14 +52,16 @@ export function JobList({ jobs, analyses, initialSort = "BEST_MATCH", showTour }
     const gap = [...local.capabilityGroups].filter((group) => group.pointsLostMicroPoints > 0).sort((a, b) => b.pointsLostMicroPoints - a.pointsLostMicroPoints)[0];
     return [analysis.jobId, { jobId: analysis.jobId, score: local.displayedScore, evidenceQuality: local.evidenceQuality, evidenceSufficient: local.numericScoreEligibility, strongestCapability: strongest?.canonicalName ?? "No confirmed match", largestGap: gap?.canonicalName ?? "No confirmed point loss", priority: local.applyPriority, confirmedBlockerCount: local.confirmedBlockerCount }] as const;
   })), [analyses, privateActive, profile.analyses]);
-  const rows = useMemo(() => sortDiscoveryRows(jobs.map((job) => buildDiscoveryRow(job, analysisById.get(job.id)!, discoveryProfile)).filter((row) => {
-    const haystack = `${row.job.title} ${row.job.company}`.toLowerCase();
-    const modeMatch = workMode === "ALL" || row.job.locations.some((location) => location.workModes.includes(workMode));
-    const seniorityMatch = seniority === "ALL" || row.job.seniority === seniority;
-    const minimumMatch = row.analysis.score === null ? minimum === 0 : row.analysis.score >= minimum;
-    const priorityMatch = priority === "ALL" || row.analysis.priority === priority;
-    const blockerMatch = blocker === "ALL" || (blocker === "BLOCKED" ? row.analysis.confirmedBlockerCount > 0 : row.analysis.confirmedBlockerCount === 0);
-    return haystack.includes(query.toLowerCase().trim()) && modeMatch && seniorityMatch && minimumMatch && (!sufficientOnly || row.analysis.evidenceSufficient) && priorityMatch && blockerMatch && (!withinArea || row.withinPreferredArea) && (!remoteCompatible || row.remoteCompatible);
+  const rows = useMemo(() => sortDiscoveryRows(filterDiscoveryRows(jobs.map((job) => buildDiscoveryRow(job, analysisById.get(job.id)!, discoveryProfile)), {
+    query,
+    workMode,
+    seniority,
+    minimumScore: minimum,
+    evidenceSufficientOnly: sufficientOnly,
+    priority,
+    blocker: blocker as "ALL" | "CLEAR" | "BLOCKED",
+    withinPreferredArea: withinArea,
+    remoteCompatible,
   }), sort), [analysisById, blocker, discoveryProfile, jobs, minimum, priority, query, remoteCompatible, seniority, sort, sufficientOnly, withinArea, workMode]);
 
   const resetFilters = () => { setQuery(""); setWorkMode("ALL"); setSeniority("ALL"); setMinimum(0); setSufficientOnly(false); setPriority("ALL"); setBlocker("ALL"); setWithinArea(false); setRemoteCompatible(false); };
