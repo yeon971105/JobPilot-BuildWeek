@@ -85,6 +85,19 @@ export type ScoreAnalysis = {
 type ClassTotal = { maximumMicroPoints: number; earnedLowMicroPoints: number; earnedMidMicroPoints: number; earnedHighMicroPoints: number };
 export type ScoreReceipt = Record<string, unknown> & { receiptHash: string };
 
+export type ScoreContext = {
+  candidateProfileId: string;
+  candidateProfileHash: string;
+  preferenceHash: string;
+  candidateEvidenceIds: string[];
+  acceptedWorkModes: string[];
+  preferredLocations: string[];
+  maximumTravelPercent: number | null;
+  provider: "FIXTURE_ONLY" | "LOCAL_GEMMA_LIVE";
+  modelTag: string;
+  generatedAt: string;
+};
+
 function stableValue(value: unknown): unknown {
   if (Array.isArray(value)) return value.map(stableValue);
   if (value && typeof value === "object") return Object.fromEntries(Object.entries(value as Record<string, unknown>).sort(([a], [b]) => a.localeCompare(b)).map(([key, item]) => [key, stableValue(item)]));
@@ -176,15 +189,41 @@ function classTotal(groups: CapabilityScore[], scoringClass: DemoRequirement["sc
   };
 }
 
-export function evaluatePracticalConstraints(job: DemoJob): PracticalConstraint[] {
-  const acceptedModes = new Set(DEMO_CANDIDATE.preferences.acceptedWorkModes);
+function defaultScoreContext(job: DemoJob): ScoreContext {
+  return {
+    candidateProfileId: DEMO_CANDIDATE.id,
+    candidateProfileHash: sha256(DEMO_CANDIDATE),
+    preferenceHash: sha256(DEMO_CANDIDATE.preferences),
+    candidateEvidenceIds: DEMO_CANDIDATE.evidence.map((item) => item.id),
+    acceptedWorkModes: DEMO_CANDIDATE.preferences.acceptedWorkModes,
+    preferredLocations: DEMO_CANDIDATE.preferences.acceptedLocations,
+    maximumTravelPercent: DEMO_CANDIDATE.preferences.maximumTravelPercent,
+    provider: "FIXTURE_ONLY",
+    modelTag: "deterministic-synthetic-contract",
+    generatedAt: job.analysisTimestamp,
+  };
+}
+
+export function evaluatePracticalConstraints(job: DemoJob, context: ScoreContext = defaultScoreContext(job)): PracticalConstraint[] {
+  const acceptedModes = new Set(context.acceptedWorkModes);
   const modes = workModesFor(job);
-  const modeMatch = modes.some((mode) => acceptedModes.has(mode as "REMOTE" | "HYBRID"));
-  const travelConflict = job.travelPercent > DEMO_CANDIDATE.preferences.maximumTravelPercent;
+  if (context.provider === "FIXTURE_ONLY") {
+    const modeMatch = modes.some((mode) => acceptedModes.has(mode));
+    const travelConflict = job.travelPercent > (context.maximumTravelPercent ?? 100);
+    return [
+      { id: "WORK_MODE", label: `Available: ${modes.join(", ")}`, status: modeMatch ? "MATCH" : "CONFLICT", blocker: !modeMatch, explanation: modeMatch ? "At least one known job mode intersects the synthetic profile's explicit accepted modes." : "Known job modes do not intersect the synthetic profile's explicit accepted modes." },
+      { id: "LOCATION", label: job.locations.map((location) => location.label).join(" · "), status: "MATCH", blocker: false, explanation: "Location is displayed separately and does not alter technical points." },
+      { id: "TRAVEL", label: `${job.travelPercent}% travel`, status: travelConflict ? "CONFLICT" : "MATCH", blocker: travelConflict, explanation: travelConflict ? `The role exceeds the synthetic profile's explicit ${context.maximumTravelPercent}% travel maximum.` : "Travel is within the synthetic profile's explicit preference." },
+    ];
+  }
+  const modeMatch = acceptedModes.size ? modes.some((mode) => acceptedModes.has(mode)) : null;
+  const normalizedLocations = context.preferredLocations.map((item) => item.toLowerCase());
+  const locationMatch = normalizedLocations.length ? job.locations.some((location) => normalizedLocations.some((preferred) => location.label.toLowerCase().includes(preferred) || preferred.includes(location.label.toLowerCase()))) : null;
+  const travelConflict = context.maximumTravelPercent === null ? null : job.travelPercent > context.maximumTravelPercent;
   return [
-    { id: "WORK_MODE", label: `Available: ${modes.join(", ")}`, status: modeMatch ? "MATCH" : "CONFLICT", blocker: !modeMatch, explanation: modeMatch ? "At least one known job mode intersects the synthetic profile's explicit accepted modes." : "Known job modes do not intersect the synthetic profile's explicit accepted modes." },
-    { id: "LOCATION", label: job.locations.map((location) => location.label).join(" · "), status: "MATCH", blocker: false, explanation: "Location is displayed separately and does not alter technical points." },
-    { id: "TRAVEL", label: `${job.travelPercent}% travel`, status: travelConflict ? "CONFLICT" : "MATCH", blocker: travelConflict, explanation: travelConflict ? `The role exceeds the synthetic profile's explicit ${DEMO_CANDIDATE.preferences.maximumTravelPercent}% travel maximum.` : "Travel is within the synthetic profile's explicit preference." },
+    { id: "WORK_MODE", label: `Available: ${modes.join(", ")}`, status: modeMatch === null ? "NO_EXPLICIT_PREFERENCE" : modeMatch ? "MATCH" : "CONFLICT", blocker: modeMatch === false, explanation: modeMatch === null ? "No work-mode preference is set." : modeMatch ? "At least one known job mode works for the current profile's preferences." : "Known job modes conflict with the current profile's preferences." },
+    { id: "LOCATION", label: job.locations.map((location) => location.label).join(" · "), status: locationMatch === null ? "NO_EXPLICIT_PREFERENCE" : locationMatch ? "MATCH" : "UNKNOWN", blocker: false, explanation: locationMatch === null ? "No location preference is set." : locationMatch ? "The role location aligns with the current profile's preference." : "The location may need clarification. It does not alter technical points." },
+    { id: "TRAVEL", label: `${job.travelPercent}% travel`, status: travelConflict === null ? "NO_EXPLICIT_PREFERENCE" : travelConflict ? "CONFLICT" : "MATCH", blocker: travelConflict === true, explanation: travelConflict === null ? "No travel preference is set." : travelConflict ? `The role exceeds the current profile's explicit ${context.maximumTravelPercent}% travel maximum.` : "Travel is within the current profile's explicit preference." },
   ];
 }
 
@@ -229,7 +268,7 @@ function toPoints(microPoints: number) {
   return Math.round((microPoints / MICRO_POINTS_PER_POINT) * 100) / 100;
 }
 
-function receiptFor(job: DemoJob, analysis: Omit<ScoreAnalysis, "receipt">): ScoreReceipt {
+function receiptFor(job: DemoJob, analysis: Omit<ScoreAnalysis, "receipt">, context: ScoreContext): ScoreReceipt {
   const body = {
     receiptVersion: RECEIPT_VERSION,
     analysisId: analysis.analysisId,
@@ -238,18 +277,18 @@ function receiptFor(job: DemoJob, analysis: Omit<ScoreAnalysis, "receipt">): Sco
     ineligibilityReasons: analysis.ineligibilityReasons,
     jobId: job.id,
     jobContentHash: job.contentHash,
-    candidateProfileId: DEMO_CANDIDATE.id,
-    candidateProfileHash: sha256(DEMO_CANDIDATE),
-    preferenceHash: sha256(DEMO_CANDIDATE.preferences),
-    provider: "FIXTURE_ONLY",
-    modelTag: "deterministic-synthetic-contract",
+    candidateProfileId: context.candidateProfileId,
+    candidateProfileHash: context.candidateProfileHash,
+    preferenceHash: context.preferenceHash,
+    provider: context.provider,
+    modelTag: context.modelTag,
     modelSnapshot: null,
     jobPromptVersion: "jobpilot-role-intelligence.v2.2",
     candidatePromptVersion: "jobpilot-candidate-evidence.v2.2",
     matchPromptVersion: "jobpilot-evidence-mapping.v2.2",
     scorerVersion: SCORER_VERSION,
     scoringContractHash: sha256({ coreBase: 85, preferredCaps, niceMaximum: 3, matchIntervals: MATCH_INTERVALS }),
-    evidenceContractHash: sha256({ candidateEvidenceIds: DEMO_CANDIDATE.evidence.map((item) => item.id), requirementIds: job.requirements.map((item) => item.id) }),
+    evidenceContractHash: sha256({ candidateEvidenceIds: context.candidateEvidenceIds, requirementIds: job.requirements.map((item) => item.id) }),
     totalMaximumMicroPoints: analysis.classTotals.totalMaximumMicroPoints,
     totalEarnedLowMicroPoints: analysis.classTotals.totalEarnedLowMicroPoints,
     totalEarnedMidMicroPoints: analysis.classTotals.totalEarnedMidMicroPoints,
@@ -263,12 +302,12 @@ function receiptFor(job: DemoJob, analysis: Omit<ScoreAnalysis, "receipt">): Sco
     blockers: analysis.practicalConstraints.filter((constraint) => constraint.blocker),
     capabilityGroups: analysis.capabilityGroups,
     hiddenAdjustments: 0,
-    generatedAt: job.analysisTimestamp,
+    generatedAt: context.generatedAt,
   };
   return { ...body, receiptHash: sha256(body) };
 }
 
-export function scoreJob(job: DemoJob): ScoreAnalysis {
+export function scoreJobWithContext(job: DemoJob, context: ScoreContext): ScoreAnalysis {
   const core = job.requirements.filter((requirement) => requirement.scoringClass === "CORE");
   const preferred = job.requirements.filter((requirement) => requirement.scoringClass === "PREFERRED");
   const nice = job.requirements.filter((requirement) => requirement.scoringClass === "NICE_TO_HAVE");
@@ -327,7 +366,7 @@ export function scoreJob(job: DemoJob): ScoreAnalysis {
     totalEarnedMidMicroPoints: coreTotal.earnedMidMicroPoints + preferredTotal.earnedMidMicroPoints + niceTotal.earnedMidMicroPoints,
     totalEarnedHighMicroPoints: coreTotal.earnedHighMicroPoints + preferredTotal.earnedHighMicroPoints + niceTotal.earnedHighMicroPoints,
   };
-  const practicalConstraints = evaluatePracticalConstraints(job);
+  const practicalConstraints = evaluatePracticalConstraints(job, context);
   const confirmedBlockerCount = practicalConstraints.filter((constraint) => constraint.blocker).length;
   const quality = evidenceQuality(job, numericScoreEligibility);
   const displayedScore = numericScoreEligibility ? Math.round(classTotals.totalEarnedMidMicroPoints / MICRO_POINTS_PER_POINT) : null;
@@ -340,7 +379,7 @@ export function scoreJob(job: DemoJob): ScoreAnalysis {
   else if ((displayedScore ?? 0) >= 55) { applyPriority = "MEDIUM"; applyPriorityRule = "Fit Score is 55–74, Evidence Quality is at least 70, and no confirmed blocker exists."; }
   else { applyPriority = "LOW"; applyPriorityRule = "Fit Score is below 55, Evidence Quality is at least 70, and no confirmed blocker exists."; }
   const withoutReceipt: Omit<ScoreAnalysis, "receipt"> = {
-    analysisId: `analysis-${job.id}-v22`,
+    analysisId: context.provider === "FIXTURE_ONLY" ? `analysis-${job.id}-v22` : `analysis-${job.id}-${context.candidateProfileId.slice(0, 16)}-v22`,
     analysisStatus: numericScoreEligibility ? "COMPLETE" : "INSUFFICIENT_EVIDENCE",
     numericScoreEligibility,
     ineligibilityReasons,
@@ -357,5 +396,9 @@ export function scoreJob(job: DemoJob): ScoreAnalysis {
     practicalConstraints,
     hiddenAdjustments: 0,
   };
-  return { ...withoutReceipt, receipt: receiptFor(job, withoutReceipt) };
+  return { ...withoutReceipt, receipt: receiptFor(job, withoutReceipt, context) };
+}
+
+export function scoreJob(job: DemoJob): ScoreAnalysis {
+  return scoreJobWithContext(job, defaultScoreContext(job));
 }
