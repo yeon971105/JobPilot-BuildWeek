@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { ProfileMenu } from "@/components/profile/profile-menu";
 
 const links = [
   { href: "/demo/jobs", label: "Jobs" },
   { href: "/demo/tracker", label: "Tracker" },
   { href: "/demo/trust", label: "Trust Lab" },
   { href: "/about/build-week", label: "Build Week" },
+  { href: "/profile", label: "Profile" },
 ];
 
 export function SiteNavigation({ ariaLabel = "Primary navigation" }: { ariaLabel?: string }) {
@@ -37,6 +39,7 @@ export function SiteNavigation({ ariaLabel = "Primary navigation" }: { ariaLabel
           ))}
         </div>
       </details>
+      <ProfileMenu />
     </nav>
   );
 }
