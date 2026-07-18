@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "jobpilot.bw9.destination-trust.v1",
+  "states": {
+    "ORIGINAL_POSTING_RECORDED": {
+      "meaning": "An original posting location is recorded; no reachability or application-validation claim is made.",
+      "action": "Open Original Posting ↗",
+      "interactive": true
+    },
+    "URL_REACHABLE": {
+      "meaning": "Positive reachability evidence exists; the application handoff is not verified.",
+      "action": "Open Original Posting ↗",
+      "interactive": true
+    },
+    "APPLY_DESTINATION_VERIFIED": {
+      "meaning": "The application destination is reachable, job-specific, and validated for handoff.",
+      "action": "Apply on Employer Site ↗",
+      "interactive": true
+    },
+    "VALIDATION_PENDING": {
+      "meaning": "Destination evidence has not completed validation and no link is exposed.",
+      "action": "Destination verification pending",
+      "interactive": false
+    },
+    "UNAVAILABLE": {
+      "meaning": "No destination can be safely exposed from the frozen evidence.",
+      "action": "Original posting unavailable",
+      "interactive": false
+    }
+  },
+  "precedence": [
+    "APPLY_DESTINATION_VERIFIED",
+    "URL_REACHABLE",
+    "ORIGINAL_POSTING_RECORDED",
+    "VALIDATION_PENDING",
+    "UNAVAILABLE"
+  ],
+  "invariant": "Apply on Employer Site ↗ is exclusive to APPLY_DESTINATION_VERIFIED.",
+  "automaticApplicationSubmission": false
+}

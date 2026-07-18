@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { allFrozenDestinationRecords, destinationActionFor } from "@/lib/destination-trust";
 
 const read = (path: string) => readFileSync(path, "utf8");
 
@@ -25,9 +26,22 @@ describe("comparison and direct-employer safety contract", () => {
   it("opens a safe synthetic employer destination in a new tab", () => {
     for (const path of ["src/components/demo/job-list.tsx", "src/components/demo/job-detail.tsx", "src/components/demo/comparison.tsx"]) {
       const source = read(path);
-      expect(source).toContain("target=\"_blank\"");
-      expect(source).toContain("rel=\"noopener noreferrer\"");
-      expect(source).toContain("/demo/employer-posting/");
+      expect(source).toContain("<DestinationAction");
+    }
+    const action = read("src/components/demo/destination-action.tsx");
+    expect(action).toContain("target=\"_blank\"");
+    expect(action).toContain("rel=\"noopener noreferrer\"");
+    expect(read("src/lib/destination-trust.ts")).toContain("/demo/employer-posting/");
+  });
+
+  it("reserves the Apply CTA for verified destinations", () => {
+    const records = allFrozenDestinationRecords();
+    expect(new Set(records.map((record) => record.state))).toEqual(new Set(["ORIGINAL_POSTING_RECORDED", "URL_REACHABLE", "APPLY_DESTINATION_VERIFIED", "VALIDATION_PENDING", "UNAVAILABLE"]));
+    for (const record of records) {
+      const action = destinationActionFor(record.jobId);
+      if (record.state === "APPLY_DESTINATION_VERIFIED") expect(action.label).toBe("Apply on Employer Site ↗");
+      else expect(action.label).not.toContain("Apply on Employer Site");
+      if (record.state === "VALIDATION_PENDING" || record.state === "UNAVAILABLE") expect(action.href).toBeNull();
     }
   });
 

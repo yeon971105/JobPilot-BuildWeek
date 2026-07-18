@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "jobpilot.bw9.direct-action-validation.v1",
+  "generatedAt": "2026-07-18T17:41:08.379Z",
+  "surfaces": [
+    "Today's Shortlist",
+    "job results",
+    "job detail decision panel",
+    "role comparison"
+  ],
+  "checks": {
+    "sharedRendererUsed": true,
+    "verifiedApplyLabelExact": true,
+    "recordedOpenLabelExact": true,
+    "reachableOpenLabelExact": true,
+    "pendingHasNoHref": true,
+    "unavailableHasNoHref": true,
+    "newTabUsesNoopenerNoreferrer": true,
+    "applicationFormPresent": false,
+    "automaticAppliedTransition": false,
+    "unverifiedApplyCta": 0
+  },
+  "result": "PASS"
+}

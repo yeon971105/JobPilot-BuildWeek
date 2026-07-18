@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "jobpilot.bw9.destination-state-audit.v1",
+  "generatedAt": "2026-07-18T17:41:08.379Z",
+  "portfolio": "FROZEN_SYNTHETIC_BUILD_WEEK_ROLES",
+  "records": [
+    { "jobId": "northstar-applied-ai-solutions-engineer", "state": "APPLY_DESTINATION_VERIFIED", "renderedAction": "Apply on Employer Site ↗" },
+    { "jobId": "alder-data-platform-engineer", "state": "URL_REACHABLE", "renderedAction": "Open Original Posting ↗" },
+    { "jobId": "harbor-product-data-analyst", "state": "ORIGINAL_POSTING_RECORDED", "renderedAction": "Open Original Posting ↗" },
+    { "jobId": "meridian-ml-infrastructure-engineer", "state": "VALIDATION_PENDING", "renderedAction": "Destination verification pending" },
+    { "jobId": "juniper-customer-ai-enablement-lead", "state": "UNAVAILABLE", "renderedAction": "Original posting unavailable" },
+    { "jobId": "mosaic-junior-software-engineer", "state": "APPLY_DESTINATION_VERIFIED", "renderedAction": "Apply on Employer Site ↗" }
+  ],
+  "stateCounts": {
+    "ORIGINAL_POSTING_RECORDED": 1,
+    "URL_REACHABLE": 1,
+    "APPLY_DESTINATION_VERIFIED": 2,
+    "VALIDATION_PENDING": 1,
+    "UNAVAILABLE": 1
+  },
+  "allStatesExercised": true,
+  "unverifiedApplyCta": 0,
+  "result": "PASS"
+}

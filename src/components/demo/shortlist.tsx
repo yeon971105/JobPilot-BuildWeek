@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Bookmark, CalendarDays, CheckCircle2, Info, MapPin, ShieldCheck, Sparkles } from "lucide-react";
+import { Bookmark, CalendarDays, CheckCircle2, Info, MapPin, ShieldCheck, Sparkles } from "lucide-react";
 import { DemoHeader } from "@/components/demo/demo-header";
+import { DestinationAction } from "@/components/demo/destination-action";
 import { useDemoTracker } from "@/components/demo/demo-store";
 import { DEMO_DISCOVERY_PROFILE } from "@/lib/discovery";
 import type { DemoJob } from "@/lib/demo-contract";
@@ -28,7 +29,7 @@ export function TodayShortlist({ jobs, analyses }: { jobs: DemoJob[]; analyses: 
               <div className="mt-5 flex flex-wrap gap-2 text-xs"><span className="pill"><MapPin className="size-3" /> {row.distanceLabel}</span><span className="pill"><CalendarDays className="size-3" /> {freshnessLabel(row.job.postedAt)}</span><span className="pill">Evidence {row.analysis.evidenceQuality.toFixed(1)}</span></div>
               <div className={`mt-4 rounded-xl px-3 py-2 text-xs font-bold ${row.analysis.confirmedBlockerCount ? "bg-[#f8e6df] text-[#7b4037]" : "bg-[#edf4ea] text-[#315c49]"}`}>Apply Priority: {row.analysis.priority.replaceAll("_", " ")} · {row.analysis.confirmedBlockerCount ? `${row.analysis.confirmedBlockerCount} blocker` : "No confirmed blocker"}</div>
               <dl className="mt-5 space-y-4 border-t border-[#173d2d]/10 pt-5 text-sm"><div><dt className="metric-label">Strongest match</dt><dd className="mt-1 font-semibold text-[#315c49]">{row.analysis.strongestCapability}</dd></div><div><dt className="metric-label">Biggest gap</dt><dd className="mt-1 font-semibold text-[#805d31]">{row.analysis.largestGap}</dd></div><div><dt className="metric-label">Why selected</dt><dd className="mt-1 leading-6 text-[#587064]">{row.selectionReason}</dd></div></dl>
-              <div className="mt-auto grid grid-cols-2 gap-2 pt-6"><button type="button" className="button-secondary justify-center" onClick={() => tracker.toggleSaved(row.job.id)} aria-label={`${saved ? "Unsave" : "Save"} ${row.job.title}`}><Bookmark className="size-4" fill={saved ? "currentColor" : "none"} /> {saved ? "Saved" : "Save"}</button><Link href={`/demo/jobs/${row.job.id}`} className="button-secondary justify-center">Review evidence</Link><a href={`/demo/employer-posting/${row.job.id}`} target="_blank" rel="noopener noreferrer" onClick={() => tracker.recordEvent("EMPLOYER_DESTINATION_OPENED", row.job.id)} className="button-primary col-span-2 justify-center">Apply on Employer Site <ArrowUpRight className="size-4" /></a></div>
+              <div className="mt-auto grid grid-cols-2 gap-2 pt-6"><button type="button" className="button-secondary justify-center" onClick={() => tracker.toggleSaved(row.job.id)} aria-label={`${saved ? "Unsave" : "Save"} ${row.job.title}`}><Bookmark className="size-4" fill={saved ? "currentColor" : "none"} /> {saved ? "Saved" : "Save"}</button><Link href={`/demo/jobs/${row.job.id}`} className="button-secondary justify-center">Review evidence</Link><DestinationAction jobId={row.job.id} onOpen={() => tracker.recordEvent("EMPLOYER_DESTINATION_OPENED", row.job.id)} className="button-primary col-span-2 justify-center" statusClassName="col-span-2 rounded-xl bg-[#fff4d8] px-4 py-3 text-center text-sm font-bold text-[#6c5731]" /></div>
             </article>;
           })}
         </section>

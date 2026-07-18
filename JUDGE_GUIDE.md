@@ -8,7 +8,7 @@ The primary path requires no login, key, database, Ollama installation, browser 
 2. Choose **See Today's 3 Roles**.
 3. Confirm exactly three cards explain why they were selected and expose Fit Score, Evidence Quality, blocker state, distance or Remote, freshness, strongest match, biggest gap, and Apply Priority.
 4. Open the first role's evidence, then return.
-5. Choose **Apply on Employer Site** and confirm the fictional destination opens in a safe new tab with no application form.
+5. Choose **Apply on Employer Site ↗** and confirm the verified fictional destination opens in a safe new tab with no application form.
 6. Save the role, open Tracker, and confirm the role is Saved—not Applied.
 
 No hidden shortlist score exists. The exact policy appears below the cards. Distance, work mode, and freshness do not change technical Fit Score.
@@ -17,9 +17,10 @@ No hidden shortlist score exists. The exact policy appears below the cards. Dist
 
 1. Open `/about/coverage`.
 2. Confirm the required disclosure distinguishes synthetic judge roles from aggregate evidence in the larger acquisition system.
-3. Inspect active jobs, verified California scope, Bay Area and Los Angeles memberships, active/complete sources, recorded-link coverage, apply-ready validation, freshness, work modes, timestamp, and hashes.
-4. Confirm the page says the snapshot covers the processed catalog—not every role in a market.
-5. Open `/about/build-week` and inspect the five `Observed → Reproduced → Repaired → Regression tested` proof moments.
+3. Inspect active jobs, California jobs, Bay Area and Los Angeles County memberships, active/complete sources, and the separately labeled recorded, reachable, and verified destination evidence.
+4. Confirm that only `APPLY_DESTINATION_VERIFIED` says `Apply on Employer Site ↗`; recorded or reachable destinations say `Open Original Posting ↗`, and pending/unavailable states expose no link.
+5. Confirm the page says the snapshot covers the processed catalog—not every role in a market.
+6. Open `/about/build-week` and inspect the five `Observed → Reproduced → Repaired → Regression tested` proof moments.
 
 ## Trust and technical path: 4–6 minutes
 
