@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "jobpilot.bw4-prepublication-integrity.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "PRE_PUBLICATION",
+  "status": "PASS",
+  "activePriorTaskWorkers": 0,
+  "activeGitWrites": 0,
+  "activeTestServers": 0,
+  "activeModelRequests": 0,
+  "pendingTransactions": 0,
+  "relevantLocks": 0,
+  "trackedSecretFindings": 0
+}

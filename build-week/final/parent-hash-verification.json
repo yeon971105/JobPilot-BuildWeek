@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "jobpilot.bw4-parent-hashes.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "JP_BW3_PARENT",
+  "status": "PASS",
+  "artifactIndex": {
+    "expected": "a56d976fb8cefd623bf897cf99801f8ffc002ffb733248317145c427bfe131a6",
+    "actual": "a56d976fb8cefd623bf897cf99801f8ffc002ffb733248317145c427bfe131a6",
+    "matches": true
+  },
+  "video": {
+    "expected": "95cdb9693c73030e3b71caa7368d3841db91f0aca8500fa8ed2b6804fef22fef",
+    "actual": "95cdb9693c73030e3b71caa7368d3841db91f0aca8500fa8ed2b6804fef22fef",
+    "matches": true
+  }
+}

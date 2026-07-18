@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "jobpilot.bw4-public-smoke.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "PUBLIC_DEPLOYMENT",
+  "status": "NOT_RUN_PUBLIC",
+  "cyclesRequired": 20,
+  "cyclesPassed": 0,
+  "publicUrl": null,
+  "localProductionFallback": {
+    "cycles": 20,
+    "cyclesPassed": 20,
+    "routesPerCycle": 13,
+    "requests": 260,
+    "uncaughtErrors": 0,
+    "failedRequests": 0
+  }
+}

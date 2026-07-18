@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "jobpilot.bw4-live-gpt56.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "LIVE_GPT56",
+  "status": "HOLD",
+  "keyConfigured": false,
+  "featureFlagEnabled": false,
+  "model": "gpt-5.6-terra",
+  "strategyCalls": 0,
+  "challengeCalls": 0,
+  "modelGeneratedFinalScores": 0,
+  "unsupportedJobClaims": null,
+  "unsupportedCandidateClaims": null,
+  "invalidEvidenceIds": null,
+  "secretsExposed": 0,
+  "realPrivateDataTransmissions": 0,
+  "certified": false
+}

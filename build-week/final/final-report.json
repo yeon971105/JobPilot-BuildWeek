@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "jobpilot.codex-handoff.v1",
+  "identity": {
+    "project": "JobPilot",
+    "workItem": "JP-BW4",
+    "status": "PUBLICATION_READY_WITH_ACCOUNT_ACTIONS",
+    "decision": "GO_BUILD_WEEK_PUBLICATION_READY_WITH_ACCOUNT_ACTIONS",
+    "decisionClass": "GO_WITH_HOLDS",
+    "timestamp": "2026-07-18T01:11:59.350Z"
+  },
+  "deadline": {
+    "official": "2026-07-22T00:00:00.000Z",
+    "internalTarget": "2026-07-21T19:00:00.000Z",
+    "open": true
+  },
+  "repository": {
+    "localRoot": "<sanitized-submission-root>",
+    "branch": "build-week/jobpilot-2026",
+    "startingHead": "d202b6be2cf149aa19b050b2232d7fcc6a13f80b",
+    "evidenceGeneratedAgainstHead": "d202b6be2cf149aa19b050b2232d7fcc6a13f80b",
+    "remoteUrl": null,
+    "visibility": null,
+    "defaultBranch": null,
+    "releaseTag": null,
+    "pushed": false,
+    "cleanClonePassed": false
+  },
+  "deployment": {
+    "provider": null,
+    "projectId": null,
+    "deploymentId": null,
+    "publicUrl": null,
+    "healthPassed": false,
+    "smokeCycles": 0,
+    "smokeCyclesPassed": 0,
+    "noKeyModePassedLocally": true,
+    "liveHeavyEnabled": false
+  },
+  "architecture": {
+    "mode": "LOCAL_FIRST_HYBRID",
+    "primaryModel": "gemma4:12b",
+    "deterministicScorer": "jobpilot-ai-fit-v2.2",
+    "optionalHeavyModel": "gpt-5.6-terra"
+  },
+  "gpt56": {
+    "keyConfigured": false,
+    "providerEnabled": false,
+    "liveStrategyCalls": 0,
+    "liveChallengeCalls": 0,
+    "modelGeneratedScores": 0,
+    "unsupportedClaims": null,
+    "evidenceIdFailures": null,
+    "certified": false
+  },
+  "video": {
+    "localPath": "build-week/video/hybrid-final-demo.mp4",
+    "durationSeconds": 170,
+    "audioPresent": true,
+    "captionsPresent": true,
+    "sha256": "95cdb9693c73030e3b71caa7368d3841db91f0aca8500fa8ed2b6804fef22fef",
+    "youtubeUrl": null,
+    "publiclyAccessible": false
+  },
+  "codex": {
+    "primaryThreadIdentified": true,
+    "primaryThreadId": "019f7242-7ff2-78a3-92df-3111f4c1dd82",
+    "feedbackSessionId": null
+  },
+  "devpost": {
+    "draftPrepared": true,
+    "submitted": false,
+    "submissionUrl": null,
+    "confirmationCaptured": false
+  },
+  "validation": {
+    "tests": {
+      "files": 4,
+      "tests": 26,
+      "status": "PASS"
+    },
+    "typecheck": "PASS",
+    "build": "PASS",
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "secretScan": "PASS",
+    "passed": true
+  },
+  "privacy": {
+    "secretsFound": 0,
+    "realResumeRecords": 0,
+    "realCandidateRecords": 0,
+    "productionMutations": 0,
+    "applicationSubmissions": 0,
+    "passed": true
+  },
+  "holds": {
+    "active": [
+      "HOLD_BUILD_WEEK_LIVE_GPT56_CONFIGURATION",
+      "HOLD_BUILD_WEEK_REPOSITORY_ACCOUNT_ACTION",
+      "HOLD_BUILD_WEEK_DEPLOYMENT_ACCOUNT_ACTION",
+      "HOLD_BUILD_WEEK_YOUTUBE_ACCOUNT_ACTION",
+      "HOLD_BUILD_WEEK_CODEX_FEEDBACK_ACTION",
+      "HOLD_BUILD_WEEK_DEVPOST_ACCOUNT_ACTION",
+      "HOLD_AI_FIT_HUMAN_CALIBRATION"
+    ],
+    "cleared": [
+      "HOLD_JP_BW4_PARENT_BASELINE_DRIFT",
+      "HOLD_BUILD_WEEK_SUBMISSION_PERIOD_CLOSED"
+    ],
+    "new": []
+  },
+  "artifacts": {
+    "directory": "build-week/final",
+    "artifactIndex": "build-week/final/artifact-index.json"
+  },
+  "accountActionsRemaining": [
+    "GitHub publication",
+    "no-key deployment",
+    "live GPT-5.6 certification",
+    "YouTube publication",
+    "Codex /feedback",
+    "Devpost final submission"
+  ]
+}

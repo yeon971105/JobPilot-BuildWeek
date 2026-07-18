@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "jobpilot.bw4-deployment-health.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "PUBLIC_DEPLOYMENT",
+  "status": "NOT_RUN",
+  "publicUrl": null,
+  "healthPassed": false
+}

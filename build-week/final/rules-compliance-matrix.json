@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "jobpilot.bw4-rules-compliance.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "OFFICIAL_RULES",
+  "status": "PARTIAL",
+  "rows": [
+    {
+      "requirement": "Working project",
+      "status": "PASS",
+      "evidence": "26 tests, build, no-key route matrix, and JP-BW3 browser QA"
+    },
+    {
+      "requirement": "Meaningful Build Week extension",
+      "status": "PASS",
+      "evidence": "Dated commits and Build Week changelog distinguish foundation from extension"
+    },
+    {
+      "requirement": "Public or judge-shared repository",
+      "status": "HOLD",
+      "evidence": "GitHub app authenticated, but gh CLI and repository-creation connector are unavailable"
+    },
+    {
+      "requirement": "README and setup",
+      "status": "PASS",
+      "evidence": "README Quick Start validated"
+    },
+    {
+      "requirement": "Public YouTube video",
+      "status": "HOLD",
+      "evidence": "Validated local video exists; YouTube session is logged out"
+    },
+    {
+      "requirement": "Video under three minutes with audio",
+      "status": "PASS",
+      "evidence": "170-second H.264/AAC video with English narration and captions"
+    },
+    {
+      "requirement": "Codex explanation",
+      "status": "PASS",
+      "evidence": "README, video narration, and submission copy"
+    },
+    {
+      "requirement": "Meaningful GPT-5.6 use",
+      "status": "HOLD",
+      "evidence": "Bounded provider and mocked validation pass; no live key or live call is available"
+    },
+    {
+      "requirement": "/feedback Session ID",
+      "status": "HOLD",
+      "evidence": "Primary task identified; callable feedback action unavailable"
+    },
+    {
+      "requirement": "Working demo/test build",
+      "status": "PASS_LOCAL_HOLD_PUBLIC",
+      "evidence": "No-key local production build passes; no public deployment target is configured"
+    },
+    {
+      "requirement": "English and media rights",
+      "status": "PASS",
+      "evidence": "English materials; original UI, narration, and generated branded slides; no music or employer logos"
+    }
+  ]
+}

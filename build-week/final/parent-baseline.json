@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "jobpilot.bw4-parent-baseline.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "JP_BW3_PARENT",
+  "status": "PASS",
+  "repositoryRoot": "<sanitized-submission-root>",
+  "branch": "build-week/jobpilot-2026",
+  "head": "d202b6be2cf149aa19b050b2232d7fcc6a13f80b",
+  "expectedHead": "d202b6be2cf149aa19b050b2232d7fcc6a13f80b",
+  "worktreeCleanBeforeReport": false,
+  "parentDecision": "GO_BUILD_WEEK_HYBRID_RELEASE_READY_WITH_ACCOUNT_ACTIONS",
+  "validation": {
+    "tests": {
+      "files": 4,
+      "tests": 26,
+      "status": "PASS"
+    },
+    "typecheck": "PASS",
+    "build": "PASS",
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "secretScan": "PASS",
+    "passed": true
+  },
+  "browser": {
+    "desktop": "PASS",
+    "tablet": "PASS",
+    "mobile": "PASS",
+    "consoleErrors": 0,
+    "failedInternalRequests": 0,
+    "horizontalOverflow": 0,
+    "passed": true
+  },
+  "privacy": {
+    "realResumeRecords": 0,
+    "secretsFound": 0,
+    "apiKeysExposed": 0,
+    "protectedAttributesScored": 0,
+    "chainOfThoughtStored": 0,
+    "applicationSubmissions": 0,
+    "productionMutations": 0,
+    "passed": true
+  }
+}

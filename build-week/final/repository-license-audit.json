@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "jobpilot.bw4-license-audit.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "REPOSITORY_PUBLICATION",
+  "status": "PASS",
+  "licensePath": "LICENSE",
+  "license": "MIT",
+  "thirdPartyDependenciesCoveredByTheirOwnLicenses": true,
+  "originalSubmissionMedia": true
+}

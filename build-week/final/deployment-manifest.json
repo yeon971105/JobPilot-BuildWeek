@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "jobpilot.bw4-deployment.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "PUBLIC_DEPLOYMENT",
+  "status": "HOLD",
+  "provider": null,
+  "projectId": null,
+  "deploymentId": null,
+  "publicUrl": null,
+  "reason": "Vercel is unavailable and the authenticated Sites target requires an incompatible package format for this certified build."
+}

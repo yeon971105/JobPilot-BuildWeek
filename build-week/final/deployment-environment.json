@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "jobpilot.bw4-deployment-env.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "PUBLIC_DEPLOYMENT",
+  "status": "READY",
+  "values": {
+    "BUILD_WEEK_DEMO_MODE": "true",
+    "AI_RUNTIME_MODE": "LOCAL_FIRST",
+    "BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES": "true",
+    "BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS": "false",
+    "OPENAI_HEAVY_FEATURES_ENABLED": "false",
+    "BUILD_WEEK_ALLOW_LIVE_GPT56": "false",
+    "OLLAMA_ENABLED": "false"
+  },
+  "secrets": []
+}

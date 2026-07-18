@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "jobpilot.bw4-failures.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "AUDIT_TRAIL",
+  "status": "CURRENT",
+  "events": [
+    {
+      "failure": "The first JP-BW4 lint run rejected an explicit any in the report generator.",
+      "repair": "Added a typed ParentReport contract and reran the full suite."
+    },
+    {
+      "failure": "The first inline 20-cycle smoke command was blocked before execution by shell policy.",
+      "repair": "Moved the bounded process lifecycle and route loop into a reviewable PowerShell helper; 20/20 cycles then passed."
+    },
+    {
+      "failure": "A local absolute path remained in the Phase 1/2 report.",
+      "repair": "Replaced it with a public-safe repository label in the current tree; history was not rewritten."
+    },
+    {
+      "failure": "GitHub CLI is unavailable and the connector cannot create repositories.",
+      "repair": "Retained the repository account hold; no remote or URL was fabricated."
+    },
+    {
+      "failure": "Vercel is unavailable and Sites packaging differs from the validated Next build.",
+      "repair": "Retained the deployment hold rather than convert the runtime without full certification."
+    },
+    {
+      "failure": "Devpost and YouTube browser sessions are logged out.",
+      "repair": "Prepared local packages and retained account holds without initiating credential entry."
+    },
+    {
+      "failure": "OpenAI API key and heavy flag are absent.",
+      "repair": "Skipped live calls, preserved prepared labeling, and retained the GPT-5.6 certification hold."
+    }
+  ]
+}

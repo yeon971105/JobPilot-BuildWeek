@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "jobpilot.bw4-codex-thread.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "CODEX_FEEDBACK",
+  "status": "PASS_IDENTIFIED",
+  "primaryThreadId": "019f7242-7ff2-78a3-92df-3111f4c1dd82",
+  "rationale": "This continuing JobPilot task contains JP-BW3 hybrid runtime, score proof, release UX, video repair, validation, and JP-BW4 publication preparation.",
+  "olderJobPilotThreadsReviewed": [
+    "019f4b16-e476-74b2-940a-60659b75c9f5",
+    "019e4396-074f-7601-9491-aa929b983f4e"
+  ]
+}

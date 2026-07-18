@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "jobpilot.bw4-e2e.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "END_TO_END",
+  "status": "NOT_RUN_PUBLIC",
+  "publicRehearsalPassed": false,
+  "localJpBw3GoldenPathPassed": true,
+  "reason": "Primary public links do not yet exist."
+}

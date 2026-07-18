@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "jobpilot.bw4-command-log.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "AUDIT_TRAIL",
+  "status": "IN_PROGRESS",
+  "commands": [
+    "git baseline, hash, process, lock, and secret verification",
+    "official Rules, FAQ, hackathon page, and update freeze",
+    "GitHub app, gh, Vercel, Sites, Devpost, YouTube, Codex, and OpenAI capability audit",
+    "repository size, license, PII, local-path, and secret audit",
+    "npm run typecheck; npm run lint; npm test; npm run build",
+    "npm run validate:providers; npm run validate:local-gemma",
+    "npm run validate:openai-heavy (expected configuration-required exit 78)",
+    "scripts/run-bw4-smoke.ps1 (20/20 local production cycles; 260 requests)",
+    "npm run bw4:report"
+  ]
+}

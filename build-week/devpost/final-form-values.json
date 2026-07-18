@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "jobpilot.devpost-final.v1",
+  "projectName": "JobPilot — Evidence-First AI Job Search",
+  "tagline": "Know why a job fits before you apply.",
+  "category": "Apps for Your Life",
+  "repositoryUrl": null,
+  "demoUrl": null,
+  "youtubeUrl": null,
+  "codexFeedbackSessionId": null,
+  "testingInstructions": "Open the no-login demo, browse the six synthetic jobs, inspect evidence and the Score Receipt, run See a Score Change, open prepared strategy and critique, save the job, move it through the tracker, refresh to verify persistence, and read Trust Lab.",
+  "teamInformation": "Single-entrant submission; verify the authenticated Devpost profile before final submission."
+}

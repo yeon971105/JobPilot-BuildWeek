@@ -1,7 +1,7 @@
 # JobPilot JP-BW2 — Phase 1/2 final report
 
 **Decision:** GO_BUILD_WEEK_PHASE_1_2_COMPLETE_WITH_LIVE_GPT56_HOLD
-**Mirror:** C:\Users\Jewon\Desktop\JobPilot-BuildWeek-Submission
+**Mirror:** sanitized submission repository
 **Branch:** build-week/jobpilot-2026
 **Starting HEAD:** 0266dc38a27ebf7d1f8e18c69ae3c826e3beb668
 **Implementation HEAD at report generation:** 05027f2343b96d23592bc7497e72dd37dfece0fb

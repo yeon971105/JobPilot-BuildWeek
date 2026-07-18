@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.bw4-link-matrix.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "END_TO_END",
+  "status": "HOLD",
+  "links": {
+    "repository": null,
+    "deployment": null,
+    "youtube": null,
+    "devpost": null
+  },
+  "passingLinks": 0,
+  "requiredLinks": 4
+}

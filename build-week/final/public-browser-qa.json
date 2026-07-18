@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "jobpilot.bw4-public-browser.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "PUBLIC_BROWSER_QA",
+  "status": "NOT_RUN",
+  "publicUrl": null,
+  "desktop": "NOT_RUN",
+  "tablet": "NOT_RUN",
+  "mobile": "NOT_RUN",
+  "reason": "No public deployment URL exists."
+}

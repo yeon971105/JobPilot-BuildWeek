@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "jobpilot.devpost-final.v1",
+  "projectName": "JobPilot — Evidence-First AI Job Search",
+  "tagline": "Know why a job fits before you apply.",
+  "category": "Apps for Your Life",
+  "repositoryUrl": null,
+  "demoUrl": null,
+  "youtubeUrl": null,
+  "codexFeedbackSessionId": null,
+  "testingInstructions": "Open the no-login demo, browse the six synthetic jobs, inspect evidence and the Score Receipt, run See a Score Change, open prepared strategy and critique, save the job, move it through the tracker, refresh to verify persistence, and read Trust Lab.",
+  "teamInformation": "Single-entrant submission; verify the authenticated Devpost profile before final submission.",
+  "shortDescription": "A local-first career decision system that explains job fit with evidence, deterministic score mathematics, and bounded optional GPT-5.6 strategy and critique.",
+  "foundation": [
+    "Official-source job catalog",
+    "Prior market acquisition",
+    "Earlier application structure"
+  ],
+  "buildWeekExtension": [
+    "Evidence-backed AI Fit redesign",
+    "Required/preferred distinction",
+    "Deterministic AI Fit V2.2",
+    "Score Receipts",
+    "No-login synthetic demo",
+    "Hybrid Gemma/GPT architecture",
+    "Score Change",
+    "Trust Lab",
+    "Responsive release UX",
+    "Publication package"
+  ],
+  "limitations": [
+    "Policy-based score, not a hiring probability",
+    "No human outcome calibration",
+    "Live GPT-5.6 certification pending secure key configuration",
+    "Public judge deployment and publication links pending account actions"
+  ]
+}

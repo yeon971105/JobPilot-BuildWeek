@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "jobpilot.bw4-rules-freeze.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "OFFICIAL_RULES",
+  "status": "PASS",
+  "authoritativeSources": [
+    "https://openai.devpost.com/rules",
+    "https://openai.devpost.com/details/faqs",
+    "https://openai.devpost.com/",
+    "https://openai.devpost.com/updates/45362-openai-build-week-halfway-there-where-are-you"
+  ],
+  "submissionPeriod": {
+    "opens": "2026-07-13T09:00:00-07:00",
+    "closes": "2026-07-21T17:00:00-07:00",
+    "openAtFreeze": true
+  },
+  "judgingPeriod": {
+    "opens": "2026-07-22T10:00:00-07:00",
+    "closes": "2026-08-05T17:00:00-07:00"
+  },
+  "category": "Apps for Your Life",
+  "requirements": {
+    "workingProject": true,
+    "existingProjectMustBeMeaningfullyExtendedDuringSubmissionPeriod": true,
+    "repositoryUrl": true,
+    "readmeSetupSampleDataAndTesting": true,
+    "publicYouTubeVideo": true,
+    "videoUnderThreeMinutes": true,
+    "videoAudioExplainsProjectCodexAndGpt56": true,
+    "feedbackSessionIdFromPrimaryThread": true,
+    "workingDemoWebsiteOrTestBuild": true,
+    "EnglishMaterials": true,
+    "noUnlicensedTrademarksOrCopyrightedMedia": true
+  },
+  "judgingCriteriaEqualWeight": [
+    "Technological Implementation",
+    "Design",
+    "Potential Impact",
+    "Quality of the Idea"
+  ]
+}

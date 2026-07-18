@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "jobpilot.bw4-account-capabilities.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "ACCOUNT_AUDIT",
+  "status": "COMPLETE",
+  "capabilities": {
+    "githubApp": {
+      "classification": "AUTHENTICATED_READY",
+      "identity": "yeon971105",
+      "repositoryCreationSupported": false
+    },
+    "githubCli": {
+      "classification": "NOT_INSTALLED"
+    },
+    "vercelCli": {
+      "classification": "NOT_INSTALLED"
+    },
+    "vercelProject": {
+      "classification": "NOT_INSTALLED"
+    },
+    "sitesConnector": {
+      "classification": "AUTHENTICATED_READY",
+      "existingProjects": 0,
+      "currentBuildPackagingCompatible": false
+    },
+    "youtubeBrowserSession": {
+      "classification": "INSTALLED_NOT_AUTHENTICATED"
+    },
+    "devpostBrowserSession": {
+      "classification": "INSTALLED_NOT_AUTHENTICATED"
+    },
+    "codexFeedback": {
+      "classification": "UNSUPPORTED",
+      "primaryThreadIdentified": true
+    },
+    "openAiApiKey": {
+      "classification": "INSTALLED_NOT_AUTHENTICATED",
+      "present": false
+    },
+    "dns": {
+      "classification": "UNKNOWN"
+    }
+  }
+}

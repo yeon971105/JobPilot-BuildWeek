@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "jobpilot.bw4-repository-size.v1",
+  "timestamp": "2026-07-18T01:11:59.350Z",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafe": true,
+  "supportedGate": "REPOSITORY_PUBLICATION",
+  "status": "PASS",
+  "trackedFiles": 178,
+  "trackedBytes": 11937858,
+  "largestFiles": [
+    {
+      "path": "build-week/video/hybrid-final-demo.mp4",
+      "bytes": 4196790
+    },
+    {
+      "path": "build-week/video/thumbnail.png",
+      "bytes": 1779316
+    },
+    {
+      "path": "build-week/bw3/browser-desktop-detail.png",
+      "bytes": 1153755
+    },
+    {
+      "path": "build-week/bw3/browser-mobile-detail-390x844.png",
+      "bytes": 964075
+    },
+    {
+      "path": "build-week/bw3/video-frame-50.png",
+      "bytes": 402939
+    },
+    {
+      "path": "build-week/bw3/video-frame-165.png",
+      "bytes": 384789
+    },
+    {
+      "path": "build-week/bw3/video-frame-145.png",
+      "bytes": 383079
+    },
+    {
+      "path": "build-week/bw3/video-frame-100.png",
+      "bytes": 354598
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 296775
+    },
+    {
+      "path": "build-week/bw3/video-frame-5.png",
+      "bytes": 293579
+    },
+    {
+      "path": "build-week/video/slides/04-evidence.png",
+      "bytes": 181300
+    },
+    {
+      "path": "build-week/bw3/browser-desktop-1440x900.png",
+      "bytes": 123444
+    },
+    {
+      "path": "build-week/bw3/browser-tablet-1024x768.png",
+      "bytes": 105801
+    },
+    {
+      "path": "build-week/phase12-browser-tablet.png",
+      "bytes": 105801
+    },
+    {
+      "path": "build-week/bw3/browser-mobile-390x844.png",
+      "bytes": 96218
+    },
+    {
+      "path": "build-week/phase12-browser-mobile.png",
+      "bytes": 96218
+    },
+    {
+      "path": "build-week/video/slides/07-closing.png",
+      "bytes": 77521
+    },
+    {
+      "path": "build-week/video/slides/03-catalog.png",
+      "bytes": 73818
+    },
+    {
+      "path": "build-week/video/slides/02-architecture.png",
+      "bytes": 73307
+    },
+    {
+      "path": "build-week/video/slides/06-heavy-reasoning.png",
+      "bytes": 72406
+    }
+  ],
+  "videoTracked": true,
+  "videoBytes": 4196790,
+  "disposition": "The 4.2 MB validated MP4 is retained; the complete repository remains approximately 12 MB and below normal GitHub file limits."
+}
