@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { ProfileMenu } from "@/components/profile/profile-menu";
 
 const links = [
+  { href: "/demo/shortlist", label: "Shortlist" },
   { href: "/demo/jobs", label: "Jobs" },
   { href: "/demo/tracker", label: "Tracker" },
   { href: "/demo/trust", label: "Trust Lab" },

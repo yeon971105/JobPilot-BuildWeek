@@ -26,8 +26,8 @@ export function LandingPage() {
             <p className="mt-6 max-w-2xl text-xl leading-8 text-[#4b6559]">JobPilot brings together fresh jobs near you from processed official employer sources, compares each role with your resume, and explains which opportunities deserve your time—then takes you directly to the employer’s application page.</p>
             <p className="mt-4 max-w-xl text-base font-semibold leading-7 text-[#315c49]">Stop searching job by job. Discover, compare, and apply from one clear decision view.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/demo/jobs?sort=BEST_MATCH" className="button-primary">See My Best Matches <ArrowRight className="size-4" /></Link>
-              <Link href="/demo" className="button-secondary">Try the Demo</Link>
+              <Link href="/demo/shortlist" className="button-primary">See Today&apos;s 3 Roles <ArrowRight className="size-4" /></Link>
+              <Link href="/demo/jobs?sort=BEST_MATCH" className="button-secondary">Explore All Matches</Link>
             </div>
             <Link href="/profile/resume" className="mt-4 inline-flex min-h-11 items-center text-sm font-bold text-[#315c49] underline decoration-[#b08337] underline-offset-4">Use My Resume Privately</Link>
             <div><JudgeTour /></div>
