@@ -1,4 +1,6 @@
-import { cpSync, existsSync, mkdirSync, renameSync, rmSync, writeFileSync } from "node:fs";
+import { spawnSync } from "node:child_process";
+import { cpSync, existsSync, mkdirSync, mkdtempSync, renameSync, rmSync, writeFileSync } from "node:fs";
+import os from "node:os";
 import path from "node:path";
 
 const workspace = process.cwd();
@@ -22,5 +24,31 @@ export const BucketCachePurge = worker.BucketCachePurge;
 `, "utf8");
 cpSync(path.join(source, "assets"), path.join(output, "client"), { recursive: true });
 cpSync(path.join(workspace, ".openai", "hosting.json"), path.join(output, ".openai", "hosting.json"));
+
+const bundleDirectory = mkdtempSync(path.join(os.tmpdir(), "jobpilot-sites-worker-"));
+try {
+  const wranglerCommand = process.platform === "win32" ? "wrangler.cmd" : "wrangler";
+  const workerBundle = spawnSync(wranglerCommand, [
+    "deploy",
+    path.join(output, "server", "index.js"),
+    "--assets",
+    path.join(output, "client"),
+    "--dry-run",
+    "--outdir",
+    bundleDirectory,
+    "--compatibility-date",
+    "2026-07-18",
+    "--compatibility-flag",
+    "nodejs_compat",
+  ], {
+    cwd: workspace,
+    shell: process.platform === "win32",
+    stdio: "inherit",
+  });
+  if (workerBundle.status !== 0) process.exit(workerBundle.status ?? 1);
+  cpSync(path.join(bundleDirectory, "index.js"), path.join(output, "server", "index.js"));
+} finally {
+  rmSync(bundleDirectory, { recursive: true, force: true });
+}
 
 console.log(JSON.stringify({ status: "PASS", entrypoint: "dist/server/index.js", hosting: "dist/.openai/hosting.json" }));
