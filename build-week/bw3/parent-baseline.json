@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "jobpilot.bw3-parent-baseline.v1",
+  "timestamp": "2026-07-17T23:55:28.9375509Z",
+  "mirror": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+  "branch": "build-week/jobpilot-2026",
+  "expectedHead": "5d80ad8ae8f5b4b1eac7ed38dce09ae547bd48dc",
+  "observedHead": "5d80ad8ae8f5b4b1eac7ed38dce09ae547bd48dc",
+  "worktreeCleanBeforeBw3Mutation": true,
+  "parentDecision": "GO_BUILD_WEEK_PHASE_1_2_COMPLETE_WITH_LIVE_GPT56_HOLD",
+  "parentCommits": [
+    "05027f2343b96d23592bc7497e72dd37dfece0fb",
+    "5d80ad8ae8f5b4b1eac7ed38dce09ae547bd48dc"
+  ],
+  "goldenPathPassed": true,
+  "scorerVersion": "jobpilot-ai-fit-v2.2",
+  "scoreProof": {
+    "propertyCases": 160,
+    "fullScoreFixtures": 36,
+    "experienceCases": 60,
+    "workModeCases": 30,
+    "requiredPreferredCases": 30,
+    "umbrellaExampleCases": 24,
+    "eligibilityCases": 24,
+    "arithmeticErrors": 0,
+    "allocationErrors": 0,
+    "hiddenAdjustments": 0,
+    "receiptInstability": 0
+  },
+  "browserQaPassed": true,
+  "privacyAuditPassed": true,
+  "secretScanPassed": true,
+  "postRunIntegrityPassed": true,
+  "baselineReproduced": true
+}

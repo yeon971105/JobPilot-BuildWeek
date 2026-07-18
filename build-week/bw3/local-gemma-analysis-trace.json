@@ -1,0 +1,131 @@
+{
+  "model": "gemma4:12b",
+  "digest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",
+  "parameterSize": "11.9B",
+  "quantization": "Q4_K_M",
+  "family": "gemma4",
+  "endpoint": "http://127.0.0.1:11434",
+  "remoteEndpointUsed": false,
+  "promptVersion": "jobpilot-local-gemma.v1",
+  "schemaVersion": "jobpilot.bw3-local-gemma-trace.v1",
+  "startedAt": "2026-07-18T00:08:11.440Z",
+  "completedAt": "2026-07-18T00:08:31.321Z",
+  "doneReason": "stop",
+  "totalDurationNs": 19868928300,
+  "loadDurationNs": 8620935200,
+  "promptTokens": 1314,
+  "outputTokens": 816,
+  "thinkingStored": false,
+  "modelPulled": false,
+  "modelSubstituted": false,
+  "logicalCalls": [
+    "JOB_SEMANTIC_ANALYSIS",
+    "RESUME_SEMANTIC_PROFILE",
+    "BATCHED_REQUIREMENT_MATCH"
+  ],
+  "fullResumeResentPerRequirement": false,
+  "oneCallPerRequirement": false,
+  "modelOutput": {
+    "roleSummary": "An Applied AI Solutions Engineer who designs evaluation-aware AI workflows, builds Python integrations with customer data systems, and leads technical discovery sessions to turn operational data into reliable products.",
+    "requiredRequirementIds": [
+      "r-ns-python",
+      "r-ns-ai",
+      "r-ns-customer"
+    ],
+    "preferredRequirementIds": [
+      "r-ns-years",
+      "r-ns-vector",
+      "r-ns-education"
+    ],
+    "capabilityGroups": [
+      {
+        "requirementId": "r-ns-python",
+        "canonicalName": "Modern Python Engineering",
+        "importance": "CORE",
+        "centrality": "REPEATED_ACROSS_RESPONSIBILITIES"
+      },
+      {
+        "requirementId": "r-ns-ai",
+        "canonicalName": "Applied AI Workflow Delivery",
+        "importance": "CORE",
+        "centrality": "TITLE_OR_ROLE_MISSION"
+      },
+      {
+        "requirementId": "r-ns-customer",
+        "canonicalName": "Customer Technical Discovery",
+        "importance": "CORE",
+        "centrality": "REPEATED_ACROSS_RESPONSIBILITIES"
+      },
+      {
+        "requirementId": "r-ns-data",
+        "canonicalName": "Operational Data Integration",
+        "importance": "SUPPORTING",
+        "centrality": "SINGLE_EXPLICIT_REQUIREMENT"
+      },
+      {
+        "requirementId": "r-ns-vector",
+        "canonicalName": "Vector and Embedding Tooling",
+        "importance": "SUPPORTING",
+        "centrality": "SUPPORTING_CONTEXT"
+      }
+    ],
+    "evidenceMatches": [
+      {
+        "requirementId": "r-ns-python",
+        "matchedEvidenceIds": [
+          "e-python"
+        ],
+        "matchClass": "MATCHED",
+        "uncertainty": "none"
+      },
+      {
+        "requirementId": "r-ns-ai",
+        "matchedEvidenceIds": [
+          "e-ai",
+          "e-delivery"
+        ],
+        "matchClass": "MATCHED",
+        "uncertainty": "none"
+      },
+      {
+        "requirementId": "r-ns-customer",
+        "matchedEvidenceIds": [
+          "e-customer",
+          "e-product"
+        ],
+        "matchClass": "MATCHED",
+        "uncertainty": "none"
+      },
+      {
+        "requirementId": "r-ns-data",
+        "matchedEvidenceIds": [
+          "e-data"
+        ],
+        "matchClass": "MATCHED",
+        "uncertainty": "none"
+      },
+      {
+        "requirementId": "r-ns-vector",
+        "matchedEvidenceIds": [
+          "e-ai"
+        ],
+        "matchClass": "MATCHED",
+        "uncertainty": "none"
+      },
+      {
+        "requirementId": "r-ns-education",
+        "matchedEvidenceIds": [
+          "e-education"
+        ],
+        "matchClass": "STRONG_EQUIVALENT",
+        "uncertainty": "none"
+      }
+    ],
+    "limitations": [
+      "Candidate's experience is noted as fictional/simulated in the profile.",
+      "No specific number of years of experience can be verified from the provided evidence."
+    ]
+  },
+  "scoreCalculatedByModel": false,
+  "chainOfThoughtStored": false
+}

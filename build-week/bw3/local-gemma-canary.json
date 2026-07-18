@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.bw3-local-gemma-canary.v1",
+  "startedAt": "2026-07-18T00:08:11.413Z",
+  "completedAt": "2026-07-18T00:08:31.321Z",
+  "jobId": "northstar-applied-ai-solutions-engineer",
+  "model": "gemma4:12b",
+  "digest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",
+  "liveCanaryAttempted": true,
+  "liveCanaryCompleted": true,
+  "structuredOutputValid": true,
+  "unknownRequirementIds": [],
+  "frozenRequirementCoverage": 0.875,
+  "finalScoreInModelOutput": false,
+  "evidenceIdsValidated": true,
+  "pass": true
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.bw3-parent-artifact-hashes.v1",
+  "timestamp": "2026-07-17T23:55:28.9375509Z",
+  "expectedArtifactIndexSha256": "fa4ecb86135b0ba3c1deb52503a92760633cc43c2cbc3c962aed0b4188c1a66e",
+  "observedArtifactIndexSha256": "fa4ecb86135b0ba3c1deb52503a92760633cc43c2cbc3c962aed0b4188c1a66e",
+  "artifactIndexRecordCount": 36,
+  "verified": true,
+  "artifacts": [
+    { "path": "build-week/phase12-final-report.json", "byteSize": 44736, "sha256": "f900b1d3c01ab1a1712d9ffc63f23cb5869635e1892523cf4683c29fda6aee34" },
+    { "path": "build-week/phase12-validation.json", "byteSize": 1053, "sha256": "75e1e0be4d678c8543db9156931e29f2119af60fa4cc972d71cd16f6314eca49" },
+    { "path": "build-week/score-proof/final-proof-summary.json", "byteSize": 632, "sha256": "71d924b1b56a0f88a46910bb7c462d3e6bd56bc2efada4b21739ad3b311244ff" },
+    { "path": "build-week/phase12-browser-qa.json", "byteSize": 1669, "sha256": "8b37c0feef0b20fe569e74e60d4ca15cd4b47de4f1f6619623b6c2aa4a160447" },
+    { "path": "build-week/phase12-privacy-audit.json", "byteSize": 560, "sha256": "51b6a7761fccce7386997b1f73519e298435de0c8d1ac0a9b00e33f5c233c8ba" },
+    { "path": "build-week/phase12-secret-scan.json", "byteSize": 356, "sha256": "0aecc40db85997fb9b1c24c7afd4bea61d217807008ac66b84290f994b278810" },
+    { "path": "build-week/phase12-post-run-integrity.json", "byteSize": 392, "sha256": "5179e90e64e04255ba913b94e7c3cf57cca9ec2e54af628d6c0b2552650d846d" }
+  ]
+}

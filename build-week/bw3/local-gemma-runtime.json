@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "jobpilot.bw3-local-gemma-runtime.v1",
+  "endpoint": "http://127.0.0.1:11434",
+  "endpointHealthy": true,
+  "remoteEndpointUsed": false,
+  "model": "gemma4:12b",
+  "liveCanary": "PASS",
+  "metadata": {
+    "model": "gemma4:12b",
+    "digest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",
+    "parameterSize": "11.9B",
+    "quantization": "Q4_K_M",
+    "family": "gemma4",
+    "endpoint": "http://127.0.0.1:11434",
+    "remoteEndpointUsed": false,
+    "promptVersion": "jobpilot-local-gemma.v1",
+    "schemaVersion": "jobpilot.local-gemma-analysis.v1",
+    "startedAt": "2026-07-18T00:08:11.440Z",
+    "completedAt": "2026-07-18T00:08:31.321Z",
+    "doneReason": "stop",
+    "totalDurationNs": 19868928300,
+    "loadDurationNs": 8620935200,
+    "promptTokens": 1314,
+    "outputTokens": 816,
+    "thinkingStored": false,
+    "modelPulled": false,
+    "modelSubstituted": false
+  }
+}

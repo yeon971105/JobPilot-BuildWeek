@@ -1,4 +1,5 @@
 import candidateProfile from "../../build-week/demo-data/candidate-profile.json";
+import cachedGemmaAnalyses from "../../build-week/demo-data/cached-gemma-analyses.json";
 import jobs from "../../build-week/demo-data/jobs.json";
 
 export type ScoringClass = "CORE" | "PREFERRED" | "NICE_TO_HAVE";
@@ -46,9 +47,14 @@ export type DemoCandidate = typeof candidateProfile & { evidence: DemoEvidence[]
 
 export const DEMO_CANDIDATE = candidateProfile as DemoCandidate;
 export const DEMO_JOBS = jobs as DemoJob[];
+export const CACHED_GEMMA_ANALYSES = cachedGemmaAnalyses;
 
 export function getDemoJob(id: string) {
   return DEMO_JOBS.find((job) => job.id === id) ?? null;
+}
+
+export function getCachedGemmaAnalysis(id: string) {
+  return CACHED_GEMMA_ANALYSES.analyses.find((analysis) => analysis.jobId === id) ?? null;
 }
 
 export function workModesFor(job: DemoJob) {

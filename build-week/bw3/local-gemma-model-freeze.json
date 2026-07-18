@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "jobpilot.bw3-local-gemma-model-freeze.v1",
+  "model": "gemma4:12b",
+  "digest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",
+  "parameterSize": "11.9B",
+  "quantization": "Q4_K_M",
+  "family": "gemma4",
+  "ollamaVersion": "0.30.7",
+  "modelPulled": false,
+  "modelSubstituted": false
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "jobpilot.bw3-process-and-lock-audit.v1",
+  "timestamp": "2026-07-17T23:55:28.9375509Z",
+  "submissionMirrorWorkers": 0,
+  "submissionMirrorServers": 0,
+  "activeModelRequests": 0,
+  "relevantLocks": 0,
+  "gitOperations": 0,
+  "pendingTransactions": 0,
+  "configuredRemotes": 0,
+  "deploymentConfigurationFiles": 0,
+  "openAiKeyConfigured": false,
+  "nodeVersion": "v25.2.1",
+  "npmVersion": "11.6.2",
+  "ollama": {
+    "version": "0.30.7",
+    "endpoint": "http://127.0.0.1:11434",
+    "endpointHealthy": true,
+    "requestedModel": "gemma4:12b",
+    "modelAvailable": true,
+    "digest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",
+    "parameterSize": "11.9B",
+    "quantization": "Q4_K_M",
+    "modelPulled": false,
+    "modelSubstituted": false
+  },
+  "preservedUnrelatedOriginalWorktreeServer": {
+    "port": 3000,
+    "action": "not modified"
+  },
+  "safeToProceed": true
+}
