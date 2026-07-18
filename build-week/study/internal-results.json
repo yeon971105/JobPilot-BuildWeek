@@ -7,8 +7,7 @@
   "minimumParticipantTarget": 5,
   "preferredParticipantTarget": "8–12",
   "conditionOrderCounts": {
-    "RAW_POSTING_THEN_JOBPILOT": 0,
-    "JOBPILOT_THEN_RAW_POSTING": 0
+    "RAW_POSTING_THEN_JOBPILOT": 0
   },
   "conditions": {
     "RAW_POSTING": {
@@ -22,7 +21,7 @@
       "meanTransparency": null,
       "decisions": {
         "APPLY": 0,
-        "REVIEW": 0,
+        "REVIEW_FURTHER": 0,
         "SKIP": 0
       }
     },
@@ -37,7 +36,7 @@
       "meanTransparency": null,
       "decisions": {
         "APPLY": 0,
-        "REVIEW": 0,
+        "REVIEW_FURTHER": 0,
         "SKIP": 0
       }
     }
@@ -64,9 +63,9 @@
     "prohibitedColumns": 0,
     "fabricatedParticipants": 0
   },
-  "generatedAt": "2026-07-18T20:59:01.883Z",
+  "generatedAt": "2026-07-18T23:04:24.546Z",
   "source": {
     "path": "build-week/study/validated/combined.csv",
-    "sha256": "2f8ece279976d27b1b98810370d20b10ec05f0cb021d771707e8c2df4a950a1c"
+    "sha256": "a3c51bf3f6c43669e6c0c0a507f714837d08d6490b0f5ea9af17f3167cc35129"
   }
 }

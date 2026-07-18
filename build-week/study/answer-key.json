@@ -1,10 +1,22 @@
 {
-  "schemaVersion": "jobpilot.decision-utility-answer-key.v1",
-  "roleId": "northstar-applied-ai-solutions-engineer",
-  "requiredExperienceAnswer": "NO_NUMERIC_REQUIRED_EXPERIENCE",
-  "preferredExperienceAnswer": "THREE_YEARS_RELEVANT_DELIVERY",
-  "workModeAnswer": "HYBRID_AND_REMOTE",
-  "biggestGapAnswer": "APPLIED_AI_WORKFLOW_DELIVERY",
-  "scoring": "Exact frozen choice value; UNCLEAR and distractors score incorrect without invalidating a complete response.",
-  "humanJudgmentRequired": false
+  "schemaVersion": "jobpilot.decision-utility-answer-key.v2",
+  "protocolVersion": "jobpilot-decision-utility.v2",
+  "roles": {
+    "role-a-analytics-operations-engineer": {
+      "requiredExperienceAnswer": "THREE_YEARS_ANALYTICS_OPERATIONS",
+      "preferredExperienceAnswer": "WORKFLOW_ORCHESTRATION",
+      "workModeAnswer": "HYBRID_TWO_DAYS",
+      "biggestGapAnswer": "WORKFLOW_ORCHESTRATION",
+      "decision": "REVIEW_FURTHER"
+    },
+    "role-b-data-enablement-engineer": {
+      "requiredExperienceAnswer": "FOUR_YEARS_DATA_PRODUCTS",
+      "preferredExperienceAnswer": "TRAINING_PROGRAM_DESIGN",
+      "workModeAnswer": "REMOTE",
+      "biggestGapAnswer": "TRAINING_PROGRAM_DESIGN",
+      "decision": "APPLY"
+    }
+  },
+  "humanJudgmentRequired": false,
+  "participantAnswersRevealedBetweenConditions": false
 }

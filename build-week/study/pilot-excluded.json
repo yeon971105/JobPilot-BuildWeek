@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.decision-utility.pilot-exclusion.v1",
+  "status": "PILOT_EXCLUDED",
+  "source": "Owner-supplied JP-BW11R protocol clarification",
+  "participantRecordPublished": false,
+  "participantCountClaimed": 0,
+  "personallyIdentifyingInformation": false,
+  "exclusionReasons": [
+    "same-role carryover",
+    "learning advantage",
+    "unclear instructions",
+    "old protocol"
+  ],
+  "countsAsFinalEvidence": false,
+  "countsAsHumanImpact": false,
+  "deletionPolicy": "Preserved as exclusion metadata; never silently deleted or promoted."
+}

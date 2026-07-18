@@ -1,55 +1,96 @@
 export const DECISION_STUDY_STORAGE_KEY = "jobpilot-decision-utility-study-v2";
 export const DECISION_STUDY_SCHEMA_VERSION = "jobpilot.decision-utility-study.v2";
-export const DECISION_STUDY_CONSENT_VERSION = "jobpilot-study-consent-v1";
+export const DECISION_STUDY_PROTOCOL_VERSION = "jobpilot-decision-utility.v2";
+export const DECISION_STUDY_CONSENT_VERSION = "jobpilot-study-consent-v2";
 export const DECISION_STUDY_MINIMUM_PARTICIPANTS = 5;
 export const DECISION_STUDY_PREFERRED_PARTICIPANTS = "8–12";
 
+export type StudyMode = "PREVIEW" | "PILOT" | "FINAL";
 export type StudyCondition = "RAW_POSTING" | "JOBPILOT";
-export type StudyDecision = "APPLY" | "REVIEW" | "SKIP" | "";
+export type StudyDecision = "APPLY" | "REVIEW_FURTHER" | "SKIP" | "";
+export type StudyAssignment = "GROUP_1" | "GROUP_2";
 export type StudyCollectionState = "READY_NOT_RUN" | "IN_PROGRESS" | "COMPLETE_MINIMUM" | "COMPLETE_PREFERRED";
+export type StudyQuestionKey = "requiredExperienceAnswer" | "preferredExperienceAnswer" | "workModeAnswer" | "weakestQualificationAnswer" | "decision";
+
+export type DecisionStudyRole = {
+  id: "role-a-analytics-operations-engineer" | "role-b-data-enablement-engineer";
+  title: string;
+  company: string;
+  location: string;
+  workArrangement: string;
+  summary: string;
+  requiredExperience: string;
+  preferredExperience: string;
+  responsibilities: string[];
+  candidateEvidence: string[];
+  weakestQualification: string;
+  recommendation: "APPLY" | "REVIEW_FURTHER" | "SKIP";
+  strongestEvidence: string;
+  answerKey: Record<StudyQuestionKey, string>;
+};
+
+export const DECISION_STUDY_ROLES: Record<DecisionStudyRole["id"], DecisionStudyRole> = {
+  "role-a-analytics-operations-engineer": {
+    id: "role-a-analytics-operations-engineer",
+    title: "Analytics Operations Engineer",
+    company: "Cedar Metrics",
+    location: "Oakland, California",
+    workArrangement: "Hybrid: two office days each week",
+    summary: "Improve the reliability of shared analytics workflows and help product teams trust the data they use for decisions.",
+    requiredExperience: "Three years operating analytics or data workflows",
+    preferredExperience: "Experience with workflow orchestration tools",
+    responsibilities: ["Maintain tested SQL and Python data workflows.", "Investigate data-quality incidents with product partners.", "Document reliable operating procedures."],
+    candidateEvidence: ["Three and a half years maintaining SQL and Python services.", "Led data-quality incident reviews with product teams.", "No verified workflow-orchestration tool ownership is shown."],
+    weakestQualification: "Workflow orchestration tools",
+    recommendation: "REVIEW_FURTHER",
+    strongestEvidence: "Direct SQL, Python, and incident-review evidence",
+    answerKey: { requiredExperienceAnswer: "THREE_YEARS_ANALYTICS_OPERATIONS", preferredExperienceAnswer: "WORKFLOW_ORCHESTRATION", workModeAnswer: "HYBRID_TWO_DAYS", weakestQualificationAnswer: "WORKFLOW_ORCHESTRATION", decision: "REVIEW_FURTHER" },
+  },
+  "role-b-data-enablement-engineer": {
+    id: "role-b-data-enablement-engineer",
+    title: "Data Enablement Engineer",
+    company: "Lumen Works",
+    location: "Remote within California",
+    workArrangement: "Remote",
+    summary: "Build reusable data tools and help internal teams adopt reliable self-service reporting practices.",
+    requiredExperience: "Four years delivering data products or internal platforms",
+    preferredExperience: "Experience designing technical training programs",
+    responsibilities: ["Build reusable Python and SQL enablement tools.", "Partner with analysts on trustworthy metric definitions.", "Create practical adoption guidance."],
+    candidateEvidence: ["Four years delivering internal data products.", "Strong Python, SQL, and analyst-partnership evidence.", "Created documentation, but no verified training-program ownership is shown."],
+    weakestQualification: "Technical training program design",
+    recommendation: "APPLY",
+    strongestEvidence: "Direct data-product, Python, SQL, and partnership evidence",
+    answerKey: { requiredExperienceAnswer: "FOUR_YEARS_DATA_PRODUCTS", preferredExperienceAnswer: "TRAINING_PROGRAM_DESIGN", workModeAnswer: "REMOTE", weakestQualificationAnswer: "TRAINING_PROGRAM_DESIGN", decision: "APPLY" },
+  },
+};
 
 export const REQUIRED_EXPERIENCE_CHOICES = [
-  ["", "Choose one"],
-  ["NO_NUMERIC_REQUIRED_EXPERIENCE", "No numeric required experience is stated"],
-  ["THREE_YEARS_RELEVANT_DELIVERY", "Three years of relevant delivery experience"],
-  ["FIVE_YEARS_APPLIED_AI", "Five years of applied AI experience"],
-  ["UNCLEAR", "Unclear"],
+  ["THREE_YEARS_ANALYTICS_OPERATIONS", "Three years operating analytics or data workflows"],
+  ["FOUR_YEARS_DATA_PRODUCTS", "Four years delivering data products or internal platforms"],
+  ["TWO_YEARS_SOFTWARE", "Two years of general software development"],
+  ["NO_REQUIRED_EXPERIENCE", "No experience requirement is stated"],
 ] as const;
-
 export const PREFERRED_EXPERIENCE_CHOICES = [
-  ["", "Choose one"],
-  ["THREE_YEARS_RELEVANT_DELIVERY", "Three years of relevant delivery experience"],
-  ["NO_NUMERIC_PREFERRED_EXPERIENCE", "No numeric preferred experience is stated"],
-  ["FIVE_YEARS_APPLIED_AI", "Five years of applied AI experience"],
-  ["UNCLEAR", "Unclear"],
+  ["WORKFLOW_ORCHESTRATION", "Experience with workflow orchestration tools"],
+  ["TRAINING_PROGRAM_DESIGN", "Experience designing technical training programs"],
+  ["CLOUD_CERTIFICATION", "A cloud certification"],
+  ["NO_PREFERRED_EXPERIENCE", "No preferred experience is stated"],
 ] as const;
+export const WORK_MODE_CHOICES = [["HYBRID_TWO_DAYS", "Hybrid: two office days each week"], ["REMOTE", "Remote"], ["ONSITE", "Onsite"], ["UNCLEAR", "Not stated clearly"]] as const;
+export const BIGGEST_GAP_CHOICES = [["WORKFLOW_ORCHESTRATION", "Workflow orchestration tools"], ["TRAINING_PROGRAM_DESIGN", "Technical training program design"], ["PYTHON_SQL", "Python and SQL"], ["PRODUCT_PARTNERSHIP", "Product and analyst partnership"]] as const;
+export const DECISION_CHOICES = [["APPLY", "Apply"], ["REVIEW_FURTHER", "Review Further"], ["SKIP", "Skip"]] as const;
 
-export const WORK_MODE_CHOICES = [
-  ["", "Choose one"],
-  ["HYBRID_AND_REMOTE", "Hybrid and Remote"],
-  ["REMOTE_ONLY", "Remote only"],
-  ["HYBRID_ONLY", "Hybrid only"],
-  ["ONSITE_ONLY", "Onsite only"],
-  ["UNCLEAR", "Unclear"],
-] as const;
-
-export const BIGGEST_GAP_CHOICES = [
-  ["", "Choose one"],
-  ["APPLIED_AI_WORKFLOW_DELIVERY", "Applied AI workflow delivery"],
-  ["MODERN_PYTHON_ENGINEERING", "Modern Python engineering"],
-  ["CUSTOMER_TECHNICAL_DISCOVERY", "Customer technical discovery"],
-  ["VECTOR_AND_EMBEDDING_TOOLING", "Vector and embedding tooling"],
-  ["UNCLEAR", "Unclear"],
-] as const;
-
-export type DecisionStudyAnswer = {
+export type DecisionStudyResponse = {
+  roleId: DecisionStudyRole["id"];
+  condition: StudyCondition;
   requiredExperienceAnswer: string;
   preferredExperienceAnswer: string;
   workModeAnswer: string;
-  biggestGapAnswer: string;
+  weakestQualificationAnswer: string;
   decision: StudyDecision;
+  correctness: Record<StudyQuestionKey, boolean | null>;
   confidence: number;
-  transparency: number;
+  clarity: number;
   taskSeconds: number | null;
   completed: boolean;
   completedAt: string | null;
@@ -57,14 +98,23 @@ export type DecisionStudyAnswer = {
 
 export type DecisionStudySession = {
   schemaVersion: typeof DECISION_STUDY_SCHEMA_VERSION;
+  protocolVersion: typeof DECISION_STUDY_PROTOCOL_VERSION;
   participantId: string;
-  conditionOrder: [StudyCondition, StudyCondition];
-  currentIndex: number;
+  phase: StudyMode;
+  assignmentGroup: StudyAssignment;
+  screen: number;
+  currentConditionIndex: number;
   sessionStartedAt: string;
   conditionStartedAt: string;
-  consent: { version: typeof DECISION_STUDY_CONSENT_VERSION; acceptedAt: string };
-  answers: Record<StudyCondition, DecisionStudyAnswer>;
+  consent: { version: typeof DECISION_STUDY_CONSENT_VERSION; acceptedAt: string; authenticHumanConfirmation: boolean };
+  comprehensionPassed: boolean;
+  responses: [DecisionStudyResponse, DecisionStudyResponse];
   storageMode: "BROWSER_LOCAL_ONLY";
+};
+
+export const DECISION_STUDY_ASSIGNMENTS: Record<StudyAssignment, readonly [{ roleId: DecisionStudyRole["id"]; condition: StudyCondition }, { roleId: DecisionStudyRole["id"]; condition: StudyCondition }]> = {
+  GROUP_1: [{ roleId: "role-a-analytics-operations-engineer", condition: "RAW_POSTING" }, { roleId: "role-b-data-enablement-engineer", condition: "JOBPILOT" }],
+  GROUP_2: [{ roleId: "role-b-data-enablement-engineer", condition: "RAW_POSTING" }, { roleId: "role-a-analytics-operations-engineer", condition: "JOBPILOT" }],
 };
 
 export function studyCollectionState(participantCount: number): StudyCollectionState {
@@ -75,9 +125,14 @@ export function studyCollectionState(participantCount: number): StudyCollectionS
   return "COMPLETE_PREFERRED";
 }
 
+export function randomizedAssignment(randomValue = Math.random()): StudyAssignment {
+  if (!Number.isFinite(randomValue) || randomValue < 0 || randomValue >= 1) throw new Error("Randomization value must be in [0, 1).");
+  return randomValue < 0.5 ? "GROUP_1" : "GROUP_2";
+}
+
 export function randomizedConditionOrder(randomValue = Math.random()): [StudyCondition, StudyCondition] {
-  if (!Number.isFinite(randomValue) || randomValue < 0 || randomValue >= 1) throw new Error("Randomization value must be in [0, 1)." );
-  return randomValue < 0.5 ? ["RAW_POSTING", "JOBPILOT"] : ["JOBPILOT", "RAW_POSTING"];
+  randomizedAssignment(randomValue);
+  return ["RAW_POSTING", "JOBPILOT"];
 }
 
 export function anonymousParticipantId(entropy?: Uint32Array) {
@@ -86,87 +141,45 @@ export function anonymousParticipantId(entropy?: Uint32Array) {
   return `anon-${[...values.slice(0, 3)].map((value) => value.toString(36).padStart(7, "0")).join("-")}`;
 }
 
-export function emptyStudyAnswer(): DecisionStudyAnswer {
-  return { requiredExperienceAnswer: "", preferredExperienceAnswer: "", workModeAnswer: "", biggestGapAnswer: "", decision: "", confidence: 4, transparency: 4, taskSeconds: null, completed: false, completedAt: null };
+function emptyResponse(roleId: DecisionStudyRole["id"], condition: StudyCondition): DecisionStudyResponse {
+  return { roleId, condition, requiredExperienceAnswer: "", preferredExperienceAnswer: "", workModeAnswer: "", weakestQualificationAnswer: "", decision: "", correctness: { requiredExperienceAnswer: null, preferredExperienceAnswer: null, workModeAnswer: null, weakestQualificationAnswer: null, decision: null }, confidence: 0, clarity: 0, taskSeconds: null, completed: false, completedAt: null };
 }
 
-export function createDecisionStudySession(options: { randomValue?: number; participantEntropy?: Uint32Array; now?: Date } = {}): DecisionStudySession {
+export function createDecisionStudySession(options: { randomValue?: number; participantEntropy?: Uint32Array; now?: Date; phase?: StudyMode; authenticHumanConfirmation?: boolean } = {}): DecisionStudySession {
   const now = (options.now ?? new Date()).toISOString();
-  return {
-    schemaVersion: DECISION_STUDY_SCHEMA_VERSION,
-    participantId: anonymousParticipantId(options.participantEntropy),
-    conditionOrder: randomizedConditionOrder(options.randomValue ?? Math.random()),
-    currentIndex: 0,
-    sessionStartedAt: now,
-    conditionStartedAt: now,
-    consent: { version: DECISION_STUDY_CONSENT_VERSION, acceptedAt: now },
-    answers: { RAW_POSTING: emptyStudyAnswer(), JOBPILOT: emptyStudyAnswer() },
-    storageMode: "BROWSER_LOCAL_ONLY",
-  };
+  const assignmentGroup = randomizedAssignment(options.randomValue ?? Math.random());
+  const assignment = DECISION_STUDY_ASSIGNMENTS[assignmentGroup];
+  return { schemaVersion: DECISION_STUDY_SCHEMA_VERSION, protocolVersion: DECISION_STUDY_PROTOCOL_VERSION, participantId: anonymousParticipantId(options.participantEntropy), phase: options.phase ?? "FINAL", assignmentGroup, screen: 2, currentConditionIndex: 0, sessionStartedAt: now, conditionStartedAt: now, consent: { version: DECISION_STUDY_CONSENT_VERSION, acceptedAt: now, authenticHumanConfirmation: options.authenticHumanConfirmation ?? false }, comprehensionPassed: false, responses: [emptyResponse(assignment[0].roleId, assignment[0].condition), emptyResponse(assignment[1].roleId, assignment[1].condition)], storageMode: "BROWSER_LOCAL_ONLY" };
 }
 
-function isIsoTimestamp(value: unknown) {
-  return typeof value === "string" && Number.isFinite(Date.parse(value));
+export function scoreStudyResponse(response: DecisionStudyResponse) {
+  const key = DECISION_STUDY_ROLES[response.roleId].answerKey;
+  return { requiredExperienceAnswer: response.requiredExperienceAnswer === key.requiredExperienceAnswer, preferredExperienceAnswer: response.preferredExperienceAnswer === key.preferredExperienceAnswer, workModeAnswer: response.workModeAnswer === key.workModeAnswer, weakestQualificationAnswer: response.weakestQualificationAnswer === key.weakestQualificationAnswer, decision: response.decision === key.decision };
 }
 
-function validAnswer(value: DecisionStudyAnswer | undefined) {
-  return Boolean(value)
-    && typeof value?.requiredExperienceAnswer === "string"
-    && typeof value?.preferredExperienceAnswer === "string"
-    && typeof value?.workModeAnswer === "string"
-    && typeof value?.biggestGapAnswer === "string"
-    && ["", "APPLY", "REVIEW", "SKIP"].includes(value?.decision ?? "")
-    && Number.isInteger(value?.confidence) && value!.confidence >= 1 && value!.confidence <= 7
-    && Number.isInteger(value?.transparency) && value!.transparency >= 1 && value!.transparency <= 7
-    && (value?.taskSeconds === null || (Number.isInteger(value?.taskSeconds) && value!.taskSeconds! >= 0))
-    && typeof value?.completed === "boolean"
-    && (value?.completedAt === null || isIsoTimestamp(value?.completedAt));
-}
-
+function isIso(value: unknown) { return typeof value === "string" && Number.isFinite(Date.parse(value)); }
 export function parseDecisionStudySession(raw: string | null): DecisionStudySession | null {
   if (!raw) return null;
   try {
     const value = JSON.parse(raw) as DecisionStudySession;
-    const order = value.conditionOrder;
-    if (value.schemaVersion !== DECISION_STUDY_SCHEMA_VERSION || !/^anon-[a-z0-9-]+$/.test(value.participantId)) return null;
-    if (!Array.isArray(order) || order.length !== 2 || new Set(order).size !== 2 || !order.includes("RAW_POSTING") || !order.includes("JOBPILOT")) return null;
-    if (!Number.isInteger(value.currentIndex) || value.currentIndex < 0 || value.currentIndex > 2) return null;
-    if (!isIsoTimestamp(value.sessionStartedAt) || !isIsoTimestamp(value.conditionStartedAt)) return null;
-    if (value.consent?.version !== DECISION_STUDY_CONSENT_VERSION || !isIsoTimestamp(value.consent.acceptedAt)) return null;
-    if (!validAnswer(value.answers?.RAW_POSTING) || !validAnswer(value.answers?.JOBPILOT) || value.storageMode !== "BROWSER_LOCAL_ONLY") return null;
-    if (value.currentIndex === 2 && (!value.answers.RAW_POSTING.completed || !value.answers.JOBPILOT.completed)) return null;
+    if (value.schemaVersion !== DECISION_STUDY_SCHEMA_VERSION || value.protocolVersion !== DECISION_STUDY_PROTOCOL_VERSION || !/^anon-[a-z0-9-]+$/.test(value.participantId)) return null;
+    if (!(["PREVIEW", "PILOT", "FINAL"] as string[]).includes(value.phase) || !DECISION_STUDY_ASSIGNMENTS[value.assignmentGroup]) return null;
+    const assignment = DECISION_STUDY_ASSIGNMENTS[value.assignmentGroup];
+    if (!Array.isArray(value.responses) || value.responses.length !== 2 || new Set(value.responses.map((item) => item.roleId)).size !== 2) return null;
+    if (value.responses.some((item, index) => item.roleId !== assignment[index].roleId || item.condition !== assignment[index].condition)) return null;
+    if (value.consent?.version !== DECISION_STUDY_CONSENT_VERSION || !isIso(value.consent.acceptedAt) || value.storageMode !== "BROWSER_LOCAL_ONLY") return null;
+    if (!Number.isInteger(value.screen) || value.screen < 2 || value.screen > 19 || !Number.isInteger(value.currentConditionIndex) || value.currentConditionIndex < 0 || value.currentConditionIndex > 2) return null;
     return value;
-  } catch {
-    return null;
-  }
+  } catch { return null; }
 }
 
-function csvCell(value: string | number | boolean | null) {
-  const text = value === null ? "" : String(value);
-  return `"${text.replaceAll('"', '""')}"`;
-}
-
-export const DECISION_STUDY_CSV_HEADERS = [
-  "participant_id",
-  "condition_order",
-  "condition",
-  "task_seconds",
-  "required_experience_answer",
-  "preferred_experience_answer",
-  "work_mode_answer",
-  "biggest_gap_answer",
-  "decision",
-  "confidence_1_to_7",
-  "transparency_1_to_7",
-  "consent_version",
-  "completed_at",
-  "synthetic_tooling_validation",
-] as const;
+function csvCell(value: string | number | boolean | null) { const text = value === null ? "" : String(value); return `"${text.replaceAll('"', '""')}"`; }
+export const DECISION_STUDY_CSV_HEADERS = ["participant_id", "protocol_version", "consent_version", "phase", "assignment_group", "condition_order", "role_id", "condition", "task_seconds", "required_experience_answer", "preferred_experience_answer", "work_mode_answer", "biggest_gap_answer", "decision", "required_correct", "preferred_correct", "work_mode_correct", "biggest_gap_correct", "decision_correct", "confidence_1_to_7", "clarity_1_to_7", "completed_at", "authentic_human_confirmation", "synthetic_tooling_validation"] as const;
 
 export function studySessionToCsv(session: DecisionStudySession) {
-  const rows = session.conditionOrder.map((condition) => {
-    const answer = session.answers[condition];
-    return [session.participantId, session.conditionOrder.join("_THEN_"), condition, answer.taskSeconds, answer.requiredExperienceAnswer, answer.preferredExperienceAnswer, answer.workModeAnswer, answer.biggestGapAnswer, answer.decision, answer.confidence, answer.transparency, session.consent.version, answer.completedAt, false].map(csvCell).join(",");
+  const rows = session.responses.map((response) => {
+    const correctness = scoreStudyResponse(response);
+    return [session.participantId, session.protocolVersion, session.consent.version, session.phase, session.assignmentGroup, "RAW_POSTING_THEN_JOBPILOT", response.roleId, response.condition, response.taskSeconds, response.requiredExperienceAnswer, response.preferredExperienceAnswer, response.workModeAnswer, response.weakestQualificationAnswer, response.decision, correctness.requiredExperienceAnswer, correctness.preferredExperienceAnswer, correctness.workModeAnswer, correctness.weakestQualificationAnswer, correctness.decision, response.confidence, response.clarity, response.completedAt, session.consent.authenticHumanConfirmation, false].map(csvCell).join(",");
   });
   return [DECISION_STUDY_CSV_HEADERS.map(csvCell).join(","), ...rows].join("\n");
 }

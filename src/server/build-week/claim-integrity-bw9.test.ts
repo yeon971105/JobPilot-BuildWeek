@@ -68,7 +68,8 @@ describe("JP-BW9 claim integrity release gate", () => {
 
   it("keeps the shortlist rationale to four visible labels with the complete policy disclosed separately", () => {
     const shortlist = readFileSync(resolve("src/components/demo/shortlist.tsx"), "utf8");
-    expect(shortlist).toContain("How this shortlist works");
+    expect(shortlist).toContain("Why these three?");
+    expect(shortlist).toContain("See the full ranking method");
     expect(shortlist).toContain("SHORTLIST_POLICY.map");
     expect(SHORTLIST_POLICY).toHaveLength(7);
     expect(readFileSync(resolve("src/lib/shortlist.ts"), "utf8")).toContain('{ label: "Fit"');
@@ -76,7 +77,7 @@ describe("JP-BW9 claim integrity release gate", () => {
     expect(readFileSync(resolve("src/lib/shortlist.ts"), "utf8")).toContain('{ label: "Freshness"');
     expect(readFileSync(resolve("src/lib/shortlist.ts"), "utf8")).toContain('{ label: "Blocker"');
     expect(shortlist).toContain("No hidden shortlist score");
-    expect(shortlist).toContain("No weights are combined, and no hidden total is calculated.");
+    expect(shortlist).toContain("No hidden total is calculated.");
   });
 
   it("uses one exact prepared GPT-5.6 model identity with reproducible artifacts and zero live usage", () => {

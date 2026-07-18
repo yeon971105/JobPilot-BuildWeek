@@ -1,6 +1,7 @@
 import {
   DECISION_STUDY_CONSENT_VERSION,
   DECISION_STUDY_CSV_HEADERS,
+  DECISION_STUDY_PROTOCOL_VERSION,
   studyCollectionState,
   type StudyCollectionState,
 } from "@/lib/decision-study";
@@ -9,7 +10,7 @@ import { analyzeImpactStudyCsv, formatStudyCsv, parseStudyCsv } from "@/lib/impa
 export type StudyInboxFile = { name: string; csvText: string };
 
 export type StudyInboxValidation = {
-  schemaVersion: "jobpilot.bw10.study-inbox-validation.v1";
+  schemaVersion: "jobpilot.bw11r.study-inbox-validation.v2";
   valid: boolean;
   status: StudyCollectionState;
   fileCount: number;
@@ -53,8 +54,12 @@ export function validateStudyInbox(files: StudyInboxFile[]): StudyInboxValidatio
       const participantId = [...participantIds][0]!;
       if (seenParticipants.has(participantId)) throw new Error(`duplicates participant ${participantId} across inbox files`);
       if (new Set(values("condition")).size !== 2 || !values("condition").includes("RAW_POSTING") || !values("condition").includes("JOBPILOT")) throw new Error("must contain one Raw Posting row and one JobPilot row");
+      if (new Set(values("role_id")).size !== 2) throw new Error("must use two different roles; same-role carryover is rejected");
       if (new Set(values("condition_order")).size !== 1) throw new Error("contains mismatched condition order values");
       if (values("consent_version").some((value) => value !== DECISION_STUDY_CONSENT_VERSION)) throw new Error("contains a missing or mismatched consent version");
+      if (values("protocol_version").some((value) => value !== DECISION_STUDY_PROTOCOL_VERSION)) throw new Error("contains a missing or mismatched protocol version");
+      if (values("phase").some((value) => value !== "FINAL")) throw new Error("contains PREVIEW, PILOT, or excluded rows; only FINAL is accepted");
+      if (values("authentic_human_confirmation").some((value) => value !== "true")) throw new Error("is missing authentic-human confirmation");
 
       const fileAnalysis = analyzeImpactStudyCsv(file.csvText, { bootstrapIterations: 100 });
       if (fileAnalysis.humanParticipantCount !== 1 || fileAnalysis.humanRows !== 2 || fileAnalysis.syntheticToolingValidationRows !== 0) throw new Error("does not represent one complete authentic collection record");
@@ -73,7 +78,7 @@ export function validateStudyInbox(files: StudyInboxFile[]): StudyInboxValidatio
     .sort((left, right) => left.participantId.localeCompare(right.participantId))
     .flatMap(({ rows }) => rows);
   return {
-    schemaVersion: "jobpilot.bw10.study-inbox-validation.v1",
+    schemaVersion: "jobpilot.bw11r.study-inbox-validation.v2",
     valid,
     status: studyCollectionState(completeParticipantCount),
     fileCount: files.length,

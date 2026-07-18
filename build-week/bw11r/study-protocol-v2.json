@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "jobpilot.bw11r.study-protocol-v2.v1",
+  "protocol": "jobpilot-decision-utility.v2",
+  "consentVersion": "jobpilot-study-consent-v2",
+  "title": "Can JobPilot make a job decision easier?",
+  "roles": ["Analytics Operations Engineer", "Data Enablement Engineer"],
+  "assignmentGroups": {
+    "GROUP_1": ["Role A Raw Posting", "Role B JobPilot"],
+    "GROUP_2": ["Role B Raw Posting", "Role A JobPilot"]
+  },
+  "randomizedAssignment": true,
+  "sameRoleCarryoverPossible": false,
+  "questionsPerCondition": 5,
+  "oneQuestionPerScreen": true,
+  "timerVisible": false,
+  "comprehensionChecks": 2,
+  "comprehensionRequiredToContinue": true,
+  "modes": ["PREVIEW", "PILOT", "FINAL"],
+  "onlyFinalAccepted": true
+}

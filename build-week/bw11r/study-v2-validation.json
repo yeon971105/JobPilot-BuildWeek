@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "jobpilot.bw11r.study-v2-validation.v1",
+  "status": "PASS_READY_NOT_RUN",
+  "actualParticipants": 0,
+  "fabricatedParticipants": 0,
+  "dryRunRowsCountedAsHumans": 0,
+  "sameRoleCarryover": 0,
+  "previewRowsAccepted": 0,
+  "pilotRowsAccepted": 0,
+  "excludedPilotRowsAccepted": 0,
+  "prohibitedFields": 0,
+  "externalStudyRequests": 0,
+  "publicImpactMetrics": false,
+  "activeHold": "HOLD_BUILD_WEEK_HUMAN_IMPACT_SAMPLE"
+}

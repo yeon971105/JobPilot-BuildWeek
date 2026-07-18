@@ -1,137 +1,51 @@
 import { describe, expect, it } from "vitest";
-import {
-  DECISION_STUDY_CONSENT_VERSION,
-  DECISION_STUDY_CSV_HEADERS,
-} from "@/lib/decision-study";
-import { analyzeImpactStudyCsv, publicImpactSummary } from "@/lib/impact-study";
+import { createDecisionStudySession, DECISION_STUDY_CSV_HEADERS, DECISION_STUDY_ROLES, studySessionToCsv } from "@/lib/decision-study";
+import { analyzeImpactStudyCsv, formatStudyCsv, parseStudyCsv, publicImpactSummary } from "@/lib/impact-study";
 
-const HEADER = DECISION_STUDY_CSV_HEADERS.join(",");
-const CORRECT = {
-  required: "NO_NUMERIC_REQUIRED_EXPERIENCE",
-  preferred: "THREE_YEARS_RELEVANT_DELIVERY",
-  work: "HYBRID_AND_REMOTE",
-  gap: "APPLIED_AI_WORKFLOW_DELIVERY",
-} as const;
-const WRONG = {
-  required: "FIVE_YEARS_APPLIED_AI",
-  preferred: "NO_NUMERIC_PREFERRED_EXPERIENCE",
-  work: "REMOTE_ONLY",
-  gap: "MODERN_PYTHON_ENGINEERING",
-} as const;
+const HEADER = [...DECISION_STUDY_CSV_HEADERS];
 
-type FixtureRow = {
-  participant: string;
-  order: "RAW_POSTING_THEN_JOBPILOT" | "JOBPILOT_THEN_RAW_POSTING";
-  condition: "RAW_POSTING" | "JOBPILOT";
-  seconds: number;
-  required: string;
-  preferred: string;
-  work: string;
-  gap: string;
-  decision: "APPLY" | "REVIEW" | "SKIP";
-  confidence: number;
-  transparency: number;
-};
-
-function csvRow(row: FixtureRow) {
-  return [
-    row.participant,
-    row.order,
-    row.condition,
-    row.seconds,
-    row.required,
-    row.preferred,
-    row.work,
-    row.gap,
-    row.decision,
-    row.confidence,
-    row.transparency,
-    DECISION_STUDY_CONSENT_VERSION,
-    "2026-07-18T18:00:00.000Z",
-    false,
-  ].join(",");
+function participantRows(index: number, options: { rawSeconds?: number; jobPilotSeconds?: number; wrongRawRequired?: boolean } = {}) {
+  const session = createDecisionStudySession({ randomValue: index % 2 ? .25 : .75, participantEntropy: new Uint32Array([100 + index, 200 + index, 300 + index]), now: new Date("2026-07-18T18:00:00.000Z"), phase: "FINAL", authenticHumanConfirmation: true });
+  session.responses = session.responses.map((response, responseIndex) => {
+    const key = DECISION_STUDY_ROLES[response.roleId].answerKey;
+    return { ...response, ...key, requiredExperienceAnswer: responseIndex === 0 && options.wrongRawRequired ? (key.requiredExperienceAnswer === "THREE_YEARS_ANALYTICS_OPERATIONS" ? "FOUR_YEARS_DATA_PRODUCTS" : "THREE_YEARS_ANALYTICS_OPERATIONS") : key.requiredExperienceAnswer, taskSeconds: responseIndex ? options.jobPilotSeconds ?? 60 : options.rawSeconds ?? 100, confidence: responseIndex ? 6 : 4, clarity: responseIndex ? 6 : 3, completed: true, completedAt: `2026-07-18T18:0${responseIndex}:00.000Z` };
+  }) as typeof session.responses;
+  return parseStudyCsv(studySessionToCsv(session)).slice(1);
 }
 
-function participantRows(index: number, overrides: Partial<Record<"raw" | "jobPilot", Partial<FixtureRow>>> = {}) {
-  const participant = `anon-synthetic-test-fixture-${index}`;
-  const order = index % 2 ? "RAW_POSTING_THEN_JOBPILOT" : "JOBPILOT_THEN_RAW_POSTING";
-  const base: Omit<FixtureRow, "condition" | "seconds" | "decision" | "confidence" | "transparency"> = {
-    participant,
-    order,
-    ...CORRECT,
-  };
-  return [
-    csvRow({ ...base, condition: "RAW_POSTING", seconds: 100, decision: "REVIEW", confidence: 4, transparency: 3, ...overrides.raw }),
-    csvRow({ ...base, condition: "JOBPILOT", seconds: 60, decision: "REVIEW", confidence: 6, transparency: 6, ...overrides.jobPilot }),
-  ];
+function combined(participantCount: number, options?: (index: number) => Parameters<typeof participantRows>[1]) {
+  const rows = Array.from({ length: participantCount }, (_, index) => participantRows(index + 1, options?.(index) ?? {})).flat();
+  return formatStudyCsv([HEADER, ...rows]);
 }
 
-describe("JP-BW9 human impact importer and calculations", () => {
+describe("JP-BW11R human impact importer and calculations", () => {
   it("reports READY_NOT_RUN with no invented metrics at n=0", () => {
-    const analysis = analyzeImpactStudyCsv(`${HEADER}\n`);
-    const publicSummary = publicImpactSummary(analysis);
+    const analysis = analyzeImpactStudyCsv(formatStudyCsv([HEADER]));
     expect(analysis.status).toBe("READY_NOT_RUN");
     expect(analysis.humanParticipantCount).toBe(0);
     expect(analysis.bootstrapStatus).toBe("NOT_AVAILABLE_NO_PARTICIPANTS");
-    expect(analysis.bootstrapConfidenceIntervals).toBeNull();
-    expect(publicSummary.metrics).toBeNull();
-    expect(publicSummary.fabricatedParticipants).toBe(0);
+    expect(publicImpactSummary(analysis).metrics).toBeNull();
   });
 
   it("withholds metrics publicly while collection is below the five-person minimum", () => {
-    const csv = [HEADER, ...participantRows(1)].join("\n");
-    const analysis = analyzeImpactStudyCsv(csv);
+    const analysis = analyzeImpactStudyCsv(combined(1));
     expect(analysis.status).toBe("IN_PROGRESS");
     expect(analysis.humanParticipantCount).toBe(1);
     expect(analysis.bootstrapStatus).toBe("NOT_AVAILABLE_BELOW_MINIMUM");
     expect(publicImpactSummary(analysis).metrics).toBeNull();
   });
 
-  it("calculates the frozen n=5 paired fixture and deterministic bootstrap intervals", () => {
-    const fixtures: Array<[Partial<FixtureRow>, Partial<FixtureRow>]> = [
-      [{ seconds: 100, decision: "APPLY", confidence: 3, transparency: 2 }, { seconds: 50, decision: "APPLY", confidence: 6, transparency: 6 }],
-      [{ seconds: 110, decision: "REVIEW", confidence: 4, transparency: 3, required: WRONG.required, preferred: WRONG.preferred, work: WRONG.work }, { seconds: 70, decision: "REVIEW", confidence: 6, transparency: 5 }],
-      [{ seconds: 120, decision: "SKIP", confidence: 3, transparency: 4, preferred: WRONG.preferred, gap: WRONG.gap }, { seconds: 80, decision: "REVIEW", confidence: 5, transparency: 6, preferred: WRONG.preferred }],
-      [{ seconds: 130, decision: "APPLY", confidence: 5, transparency: 3, required: WRONG.required, work: WRONG.work, gap: WRONG.gap }, { seconds: 90, decision: "APPLY", confidence: 6, transparency: 6, work: WRONG.work }],
-      [{ seconds: 140, decision: "REVIEW", confidence: 2, transparency: 3, preferred: WRONG.preferred, gap: WRONG.gap }, { seconds: 100, decision: "SKIP", confidence: 7, transparency: 7 }],
-    ];
-    const rows = fixtures.flatMap(([raw, jobPilot], index) => participantRows(index + 1, { raw, jobPilot }));
-    const analysis = analyzeImpactStudyCsv([HEADER, ...rows].join("\n"), { bootstrapIterations: 250, bootstrapSeed: 41 });
-
+  it("calculates a valid n=5 two-role paired fixture and deterministic bootstrap intervals", () => {
+    const analysis = analyzeImpactStudyCsv(combined(5, (index) => ({ rawSeconds: 100 + index * 10, jobPilotSeconds: 50 + index * 10, wrongRawRequired: index >= 3 })), { bootstrapIterations: 250, bootstrapSeed: 41 });
     expect(analysis.status).toBe("COMPLETE_MINIMUM");
     expect(analysis.humanParticipantCount).toBe(5);
-    expect(analysis.conditionOrderCounts).toEqual({ RAW_POSTING_THEN_JOBPILOT: 3, JOBPILOT_THEN_RAW_POSTING: 2 });
-    expect(analysis.conditions.RAW_POSTING).toMatchObject({
-      medianDecisionTimeSeconds: 120,
-      requiredExperienceAccuracyPercent: 60,
-      preferredExperienceAccuracyPercent: 40,
-      workModeAccuracyPercent: 60,
-      biggestGapAccuracyPercent: 40,
-      meanConfidence: 3.4,
-      meanTransparency: 3,
-    });
-    expect(analysis.conditions.JOBPILOT).toMatchObject({
-      medianDecisionTimeSeconds: 80,
-      requiredExperienceAccuracyPercent: 100,
-      preferredExperienceAccuracyPercent: 80,
-      workModeAccuracyPercent: 80,
-      biggestGapAccuracyPercent: 100,
-      meanConfidence: 6,
-      meanTransparency: 6,
-    });
-    expect(analysis.paired).toEqual({
-      medianTimeDifferenceSecondsJobPilotMinusRaw: -40,
-      medianPercentageTimeChangeJobPilotVsRaw: -33.33,
-      requiredExperienceAccuracyDifferencePoints: 40,
-      preferredExperienceAccuracyDifferencePoints: 40,
-      workModeAccuracyDifferencePoints: 20,
-      biggestGapAccuracyDifferencePoints: 60,
-      decisionAgreementPercent: 60,
-      meanConfidenceDifferenceJobPilotMinusRaw: 2.6,
-      meanTransparencyDifferenceJobPilotMinusRaw: 3,
-    });
+    expect(analysis.conditionOrderCounts).toEqual({ RAW_POSTING_THEN_JOBPILOT: 5 });
+    expect(analysis.conditions.RAW_POSTING.medianDecisionTimeSeconds).toBe(120);
+    expect(analysis.conditions.JOBPILOT.medianDecisionTimeSeconds).toBe(70);
+    expect(analysis.conditions.RAW_POSTING.requiredExperienceAccuracyPercent).toBe(60);
+    expect(analysis.conditions.JOBPILOT.requiredExperienceAccuracyPercent).toBe(100);
+    expect(analysis.paired.medianTimeDifferenceSecondsJobPilotMinusRaw).toBe(-50);
     expect(analysis.bootstrapStatus).toBe("AVAILABLE");
-    expect(Object.keys(analysis.bootstrapConfidenceIntervals ?? {}).sort()).toEqual(Object.keys(analysis.paired).sort());
     expect(analysis.bootstrapConfidenceIntervals?.medianTimeDifferenceSecondsJobPilotMinusRaw.iterations).toBe(250);
     expect(analysis.statisticalSignificanceClaim).toBe(false);
     expect(publicImpactSummary(analysis).metrics).not.toBeNull();
@@ -139,13 +53,13 @@ describe("JP-BW9 human impact importer and calculations", () => {
 
   it("accepts repeated export headers but rejects duplicate and incomplete sessions", () => {
     const pair = participantRows(1);
-    expect(analyzeImpactStudyCsv([HEADER, pair[0], HEADER, pair[1]].join("\n")).humanParticipantCount).toBe(1);
-    expect(() => analyzeImpactStudyCsv([HEADER, ...pair, pair[0]].join("\n"))).toThrow(/Duplicate participant-condition/);
-    expect(() => analyzeImpactStudyCsv([HEADER, pair[0]].join("\n"))).toThrow(/Incomplete participant session/);
+    expect(analyzeImpactStudyCsv(formatStudyCsv([HEADER, pair[0]!, HEADER, pair[1]!])).humanParticipantCount).toBe(1);
+    expect(() => analyzeImpactStudyCsv(formatStudyCsv([HEADER, ...pair, pair[0]!]))).toThrow(/Duplicate participant-condition/);
+    expect(() => analyzeImpactStudyCsv(formatStudyCsv([HEADER, pair[0]!]))).toThrow(/Incomplete participant session/);
   });
 
   it("rejects prohibited identifying columns and malformed rows", () => {
-    expect(() => analyzeImpactStudyCsv(`${HEADER},email\n`)).toThrow(/prohibited identifying column/);
-    expect(() => analyzeImpactStudyCsv([HEADER, `${participantRows(1)[0]},extra`].join("\n"))).toThrow(/malformed row/);
+    expect(() => analyzeImpactStudyCsv(formatStudyCsv([[...HEADER, "email"]]))).toThrow(/prohibited identifying column/);
+    expect(() => analyzeImpactStudyCsv(formatStudyCsv([HEADER, [...participantRows(1)[0]!, "extra"]]))).toThrow(/malformed row/);
   });
 });

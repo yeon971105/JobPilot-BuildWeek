@@ -1,11 +1,11 @@
 {
   "schemaVersion": "jobpilot.bw10.analysis-provenance.v1",
-  "generatedAt": "2026-07-18T20:59:01.883Z",
+  "generatedAt": "2026-07-18T23:04:24.546Z",
   "analyzer": "src/lib/impact-study.ts",
   "command": "npm run study:analyze -- build-week/study/validated/combined.csv",
   "source": {
     "path": "build-week/study/validated/combined.csv",
-    "sha256": "2f8ece279976d27b1b98810370d20b10ec05f0cb021d771707e8c2df4a950a1c"
+    "sha256": "a3c51bf3f6c43669e6c0c0a507f714837d08d6490b0f5ea9af17f3167cc35129"
   },
   "actualParticipantCount": 0,
   "completePairedSessions": 0,

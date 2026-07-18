@@ -1,14 +1,14 @@
 # Decision Utility Study participant instructions
 
-This study uses a fictional candidate and fictional job posting. It evaluates the interface, not you.
+This study evaluates the interface, not you. It uses two different fictional roles and one fictional candidate profile.
 
-1. Read the consent notice. Choose **I consent and begin** only if you voluntarily agree.
-2. Do not enter or share your name, contact details, resume, demographic data, employment status, health data, employer credentials, or personal history.
-3. Complete both conditions in the order shown. The order is randomized once for your anonymous browser-local session.
-4. For each condition, answer the required-experience, preferred-experience, work-mode, and biggest-gap questions.
-5. Choose Apply, Review, or Skip, then rate confidence and information transparency from 1–7.
-6. Use only the frozen fictional information on screen. Think aloud if a facilitator is present, but the facilitator must not record personal details.
-7. At completion, export the CSV and give it to the study owner. Export stays on your device until you choose where to place it.
-8. Choose **Delete and reset** after the owner confirms receipt, especially on a shared device.
+1. Read the introduction and consent notice. Continue only if you voluntarily agree and confirm that you are an adult completing the session yourself.
+2. Read the primer and answer both comprehension checks. Attempts are not counted as performance.
+3. Review the first fictional role in the presentation shown.
+4. Answer one question per screen: required experience, preferred experience, work arrangement, weakest-supported qualification, and Apply / Review Further / Skip.
+5. Rate confidence and clarity from 1–7.
+6. After the neutral transition, repeat the task with a different role and presentation.
+7. Use only the information on screen. Do not provide personal or employment information.
+8. In FINAL mode, export the CSV at completion and give it to the study owner. Reset the browser-local session afterward, especially on a shared device.
 
-JobPilot does not transmit these responses, submit an application, or evaluate your real employability.
+Do not enter or share your name, email, phone number, resume, demographic data, employment status, health data, home address, or any credentials. JobPilot does not transmit these responses or submit an application.

@@ -1,47 +1,48 @@
-# JobPilot Decision Utility Study protocol
+# JobPilot Decision Utility Study protocol V2
 
 Status: **READY_NOT_RUN**
 
 Actual participant count: **0**
 
-Minimum target: **5**
+Protocol: `jobpilot-decision-utility.v2`
 
-Preferred target: **8–12**
+Minimum target: **5**; preferred target: **8–12**
 
 Study route: `/study/decision-utility`
 
-No participant sessions or impact claims are included in this release. Synthetic tooling checks are never presented as human evidence.
+## Research question and valid design
 
-## Research question and design
+Can JobPilot make a job decision easier while preserving accurate understanding of required experience, preferred experience, work arrangement, the weakest-supported qualification, and the participant’s Apply / Review Further / Skip decision?
 
-Does the JobPilot condition help a person make a faster, more confident, and more transparent Apply / Review / Skip decision than the Raw Posting condition while preserving accurate understanding of required experience, preferred experience, work mode, and the biggest candidate gap?
+Each participant reviews two different fictional roles:
 
-- Within-participant, two-condition crossover: `RAW_POSTING` and `JOBPILOT`.
-- Counterbalanced order, randomized once after consent for each anonymous browser-local session.
-- One frozen fictional role and candidate in both conditions.
-- The timer begins after consent when a condition is displayed and stops when all required answers are saved.
-- This is early decision-utility evidence, not hiring-outcome calibration.
+- Role A: Analytics Operations Engineer
+- Role B: Data Enablement Engineer
 
-## Collection and privacy
+Assignment is randomized once after consent:
 
-Collected fields are the anonymous random ID, order, condition, four accuracy answers, decision time, Apply / Review / Skip decision, confidence, transparency, consent version, and completion timestamp.
+- Group 1: Role A Raw Posting, then Role B JobPilot
+- Group 2: Role B Raw Posting, then Role A JobPilot
 
-Names, emails, phone numbers, resumes, demographics, employment status, health data, employer credentials, and personal histories are prohibited. The route has no form action, API route, analytics call, fetch call, automatic upload, or real job/candidate input.
+The same role can never appear twice in one valid session. A hidden timer starts with each condition and stops after its confidence and clarity ratings. Comprehension attempts are not performance data.
 
-Home addresses and IP addresses are also prohibited in exported study data.
+## Modes and exclusion
 
-## State machine
+- `PREVIEW`: owner instruction and interaction review; never valid participant evidence.
+- `PILOT`: one or two real people may validate clarity; never valid final evidence.
+- `FINAL`: the only phase accepted by the participant validator.
 
-- `READY_NOT_RUN`: zero imported actual participants.
-- `IN_PROGRESS`: one to four complete actual participants.
-- `COMPLETE_MINIMUM`: five to seven complete actual participants.
-- `COMPLETE_PREFERRED`: eight or more complete actual participants.
+The documented pre-V2 record is retained as `PILOT_EXCLUDED` because it allowed same-role carryover, a learning advantage, unclear instructions, and an old protocol. It contains no published participant record and contributes zero participants.
 
-The preferred 8–12 target remains visible after minimum completion. A session contributes only when both condition rows validate.
+## Privacy and validation
+
+The V2 export contains only an anonymous ID, protocol and consent versions, phase, assignment, two different role IDs, condition, hidden completion time, five answers and their correctness, confidence, clarity, completion timestamp, and authentic-human confirmation.
+
+Names, emails, phone numbers, IP addresses, resumes, demographics, health information, employment status, and home addresses are prohibited. The study route uses browser-local storage and makes no network request.
+
+A FINAL participant contributes only when both rows are complete, use the current protocol and consent, match one valid assignment, use different roles and distinct conditions, reproduce answer-key correctness, and confirm authentic human completion. PREVIEW, PILOT, dry-run, excluded, malformed, duplicate, incomplete, same-role, and identifying rows are rejected.
 
 ## Owner analysis
-
-Place exported participant CSV files in `build-week/study/inbox/` without editing their values. Run:
 
 ```bash
 npm run study:validate -- build-week/study/inbox
@@ -49,6 +50,4 @@ npm run study:combine -- build-week/study/inbox
 npm run study:analyze -- build-week/study/validated/combined.csv
 ```
 
-The inbox validator requires exactly two valid condition rows per participant, and rejects duplicates across files, incomplete pairs, dry-run rows, tooling rows, order mismatches, malformed ratings/times, missing or mismatched consent, non-anonymous IDs, prohibited columns, invalid choices, and identifying schema changes.
-
-It calculates participant count, median time by condition, median paired time difference, median paired percentage time change, four accuracy measures, decision agreement, confidence/transparency differences, and deterministic bootstrap 95% intervals at five or more participants. It generates an internal full report and public concise summary. No statistical-significance claim is made from this small study.
+Do not edit records around the validator. No public metric is allowed below five authentic complete FINAL sessions. Any published result is directional usability evidence, not hiring-outcome calibration or proof of employment success.

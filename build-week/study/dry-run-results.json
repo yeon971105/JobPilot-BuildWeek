@@ -1,25 +1,18 @@
 {
-  "schemaVersion": "jobpilot.decision-utility-study-dry-run.v2",
-  "purpose": "Validate both randomized order paths and the header-only no-PII analysis path without inventing human results.",
-  "generatedAt": "2026-07-18T08:34:00.000Z",
+  "schemaVersion": "jobpilot.decision-utility-study-dry-run.v3",
+  "protocolVersion": "jobpilot-decision-utility.v2",
+  "purpose": "Validate both two-role assignment paths and the header-only no-PII analysis path without inventing human results.",
+  "generatedAt": "2026-07-18T23:02:00.000Z",
   "dataClassification": "SYNTHETIC_TOOLING_VALIDATION",
   "status": "READY_NOT_RUN",
   "humanParticipantCount": 0,
   "humanRows": 0,
   "syntheticToolingValidationRecords": [
-    {
-      "randomValue": 0.25,
-      "expectedOrder": ["RAW_POSTING", "JOBPILOT"],
-      "label": "SYNTHETIC_TOOLING_VALIDATION"
-    },
-    {
-      "randomValue": 0.75,
-      "expectedOrder": ["JOBPILOT", "RAW_POSTING"],
-      "label": "SYNTHETIC_TOOLING_VALIDATION"
-    }
+    { "randomValue": 0.25, "expectedAssignment": "GROUP_1", "roleIdsDifferent": true, "label": "SYNTHETIC_TOOLING_VALIDATION" },
+    { "randomValue": 0.75, "expectedAssignment": "GROUP_2", "roleIdsDifferent": true, "label": "SYNTHETIC_TOOLING_VALIDATION" }
   ],
   "analysisTemplateRows": 0,
-  "consentVersion": "jobpilot-study-consent-v1",
+  "consentVersion": "jobpilot-study-consent-v2",
   "minimumParticipantTarget": 5,
   "preferredParticipantTarget": "8–12",
   "privateOrIdentifyingColumns": 0,

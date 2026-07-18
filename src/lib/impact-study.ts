@@ -1,8 +1,11 @@
 import {
   BIGGEST_GAP_CHOICES,
+  DECISION_STUDY_ASSIGNMENTS,
   DECISION_STUDY_CONSENT_VERSION,
   DECISION_STUDY_CSV_HEADERS,
+  DECISION_STUDY_PROTOCOL_VERSION,
   DECISION_STUDY_PREFERRED_PARTICIPANTS,
+  DECISION_STUDY_ROLES,
   PREFERRED_EXPERIENCE_CHOICES,
   REQUIRED_EXPERIENCE_CHOICES,
   studyCollectionState,
@@ -12,25 +15,27 @@ import {
   type StudyDecision,
 } from "@/lib/decision-study";
 
-export const IMPACT_STUDY_ANSWER_KEY = {
-  requiredExperienceAnswer: "NO_NUMERIC_REQUIRED_EXPERIENCE",
-  preferredExperienceAnswer: "THREE_YEARS_RELEVANT_DELIVERY",
-  workModeAnswer: "HYBRID_AND_REMOTE",
-  biggestGapAnswer: "APPLIED_AI_WORKFLOW_DELIVERY",
-} as const;
+export const IMPACT_STUDY_ANSWER_KEY = Object.fromEntries(Object.values(DECISION_STUDY_ROLES).map((role) => [role.id, role.answerKey]));
 
 const ALLOWED_ANSWERS = [REQUIRED_EXPERIENCE_CHOICES, PREFERRED_EXPERIENCE_CHOICES, WORK_MODE_CHOICES, BIGGEST_GAP_CHOICES]
   .map((choices) => new Set<string>(choices.map(([value]) => value).filter(Boolean)));
 
 type ImpactRow = {
   participantId: string;
-  conditionOrder: "RAW_POSTING_THEN_JOBPILOT" | "JOBPILOT_THEN_RAW_POSTING";
+  assignmentGroup: "GROUP_1" | "GROUP_2";
+  roleId: keyof typeof DECISION_STUDY_ROLES;
+  conditionOrder: "RAW_POSTING_THEN_JOBPILOT";
   condition: StudyCondition;
   taskSeconds: number;
   requiredExperienceAnswer: string;
   preferredExperienceAnswer: string;
   workModeAnswer: string;
   biggestGapAnswer: string;
+  requiredCorrect: boolean;
+  preferredCorrect: boolean;
+  workCorrect: boolean;
+  gapCorrect: boolean;
+  decisionCorrect: boolean;
   decision: Exclude<StudyDecision, "">;
   confidence: number;
   transparency: number;
@@ -156,14 +161,14 @@ function percentile(values: number[], fraction: number) {
 function pairedMetrics(pairs: Pair[]) {
   const raw = pairs.map((pair) => pair.RAW_POSTING);
   const jobPilot = pairs.map((pair) => pair.JOBPILOT);
-  const requiredRaw = raw.map((row) => row.requiredExperienceAnswer === IMPACT_STUDY_ANSWER_KEY.requiredExperienceAnswer);
-  const requiredJobPilot = jobPilot.map((row) => row.requiredExperienceAnswer === IMPACT_STUDY_ANSWER_KEY.requiredExperienceAnswer);
-  const preferredRaw = raw.map((row) => row.preferredExperienceAnswer === IMPACT_STUDY_ANSWER_KEY.preferredExperienceAnswer);
-  const preferredJobPilot = jobPilot.map((row) => row.preferredExperienceAnswer === IMPACT_STUDY_ANSWER_KEY.preferredExperienceAnswer);
-  const workRaw = raw.map((row) => row.workModeAnswer === IMPACT_STUDY_ANSWER_KEY.workModeAnswer);
-  const workJobPilot = jobPilot.map((row) => row.workModeAnswer === IMPACT_STUDY_ANSWER_KEY.workModeAnswer);
-  const gapRaw = raw.map((row) => row.biggestGapAnswer === IMPACT_STUDY_ANSWER_KEY.biggestGapAnswer);
-  const gapJobPilot = jobPilot.map((row) => row.biggestGapAnswer === IMPACT_STUDY_ANSWER_KEY.biggestGapAnswer);
+  const requiredRaw = raw.map((row) => row.requiredCorrect);
+  const requiredJobPilot = jobPilot.map((row) => row.requiredCorrect);
+  const preferredRaw = raw.map((row) => row.preferredCorrect);
+  const preferredJobPilot = jobPilot.map((row) => row.preferredCorrect);
+  const workRaw = raw.map((row) => row.workCorrect);
+  const workJobPilot = jobPilot.map((row) => row.workCorrect);
+  const gapRaw = raw.map((row) => row.gapCorrect);
+  const gapJobPilot = jobPilot.map((row) => row.gapCorrect);
   return {
     medianTimeDifferenceSecondsJobPilotMinusRaw: median(pairs.map((pair) => pair.JOBPILOT.taskSeconds - pair.RAW_POSTING.taskSeconds)),
     medianPercentageTimeChangeJobPilotVsRaw: median(pairs.map((pair) => round((pair.JOBPILOT.taskSeconds - pair.RAW_POSTING.taskSeconds) / pair.RAW_POSTING.taskSeconds * 100, 2))),
@@ -195,15 +200,15 @@ function summarizeCondition(rows: ImpactRow[]) {
   return {
     participantCount: rows.length,
     medianDecisionTimeSeconds: median(rows.map((row) => row.taskSeconds)),
-    requiredExperienceAccuracyPercent: percentage(rows.map((row) => row.requiredExperienceAnswer === IMPACT_STUDY_ANSWER_KEY.requiredExperienceAnswer)),
-    preferredExperienceAccuracyPercent: percentage(rows.map((row) => row.preferredExperienceAnswer === IMPACT_STUDY_ANSWER_KEY.preferredExperienceAnswer)),
-    workModeAccuracyPercent: percentage(rows.map((row) => row.workModeAnswer === IMPACT_STUDY_ANSWER_KEY.workModeAnswer)),
-    biggestGapAccuracyPercent: percentage(rows.map((row) => row.biggestGapAnswer === IMPACT_STUDY_ANSWER_KEY.biggestGapAnswer)),
+    requiredExperienceAccuracyPercent: percentage(rows.map((row) => row.requiredCorrect)),
+    preferredExperienceAccuracyPercent: percentage(rows.map((row) => row.preferredCorrect)),
+    workModeAccuracyPercent: percentage(rows.map((row) => row.workCorrect)),
+    biggestGapAccuracyPercent: percentage(rows.map((row) => row.gapCorrect)),
     meanConfidence: mean(rows.map((row) => row.confidence)) === null ? null : round(mean(rows.map((row) => row.confidence))!, 2),
     meanTransparency: mean(rows.map((row) => row.transparency)) === null ? null : round(mean(rows.map((row) => row.transparency))!, 2),
     decisions: {
       APPLY: rows.filter((row) => row.decision === "APPLY").length,
-      REVIEW: rows.filter((row) => row.decision === "REVIEW").length,
+      REVIEW_FURTHER: rows.filter((row) => row.decision === "REVIEW_FURTHER").length,
       SKIP: rows.filter((row) => row.decision === "SKIP").length,
     },
   };
@@ -227,10 +232,16 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
     if (synthetic === "true") { syntheticToolingValidationRows += 1; continue; }
     if (synthetic !== "false") throw new Error("Study row must label synthetic_tooling_validation as true or false.");
     const participantId = field("participant_id");
+    const assignmentGroup = field("assignment_group");
+    const roleId = field("role_id");
     const conditionOrder = field("condition_order");
     const condition = field("condition");
     if (!/^anon-[a-z0-9-]+$/.test(participantId)) throw new Error("Study participant ID is not an anonymous generated ID.");
-    if (!(["RAW_POSTING_THEN_JOBPILOT", "JOBPILOT_THEN_RAW_POSTING"] as string[]).includes(conditionOrder)) throw new Error("Study condition order is invalid.");
+    if (field("protocol_version") !== DECISION_STUDY_PROTOCOL_VERSION) throw new Error("Study protocol version is invalid.");
+    if (field("phase") !== "FINAL") throw new Error("Only FINAL study rows are accepted for impact analysis.");
+    if (!(assignmentGroup === "GROUP_1" || assignmentGroup === "GROUP_2")) throw new Error("Study assignment is invalid.");
+    if (!(roleId in DECISION_STUDY_ROLES)) throw new Error("Study role ID is invalid.");
+    if (conditionOrder !== "RAW_POSTING_THEN_JOBPILOT") throw new Error("Study condition order is invalid.");
     if (!(["RAW_POSTING", "JOBPILOT"] as string[]).includes(condition)) throw new Error("Study condition is invalid.");
     const duplicateKey = `${participantId}:${condition}`;
     if (seen.has(duplicateKey)) throw new Error(`Duplicate participant-condition row: ${duplicateKey}`);
@@ -238,13 +249,23 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
     const completedAt = field("completed_at");
     if (!validIso(completedAt)) throw new Error("Study completed_at must be a valid timestamp.");
     const decision = field("decision");
-    if (!(["APPLY", "REVIEW", "SKIP"] as string[]).includes(decision)) throw new Error("Study decision is invalid.");
+    if (!(["APPLY", "REVIEW_FURTHER", "SKIP"] as string[]).includes(decision)) throw new Error("Study decision is invalid.");
     if (field("consent_version") !== DECISION_STUDY_CONSENT_VERSION) throw new Error("Study consent version is missing or invalid.");
     const answers = [field("required_experience_answer"), field("preferred_experience_answer"), field("work_mode_answer"), field("biggest_gap_answer")];
     if (answers.some((answer) => !answer)) throw new Error("Study accuracy answers must be complete.");
     if (answers.some((answer, answerIndex) => !ALLOWED_ANSWERS[answerIndex]!.has(answer))) throw new Error("Study answer is outside the frozen choice contract.");
+    if (field("authentic_human_confirmation") !== "true") throw new Error("Study row lacks authentic-human confirmation.");
+    const expected = DECISION_STUDY_ROLES[roleId as keyof typeof DECISION_STUDY_ROLES].answerKey;
+    const correctness = [field("required_correct"), field("preferred_correct"), field("work_mode_correct"), field("biggest_gap_correct"), field("decision_correct")];
+    if (correctness.some((value) => value !== "true" && value !== "false")) throw new Error("Study correctness fields must be true or false.");
+    const recomputed = [answers[0] === expected.requiredExperienceAnswer, answers[1] === expected.preferredExperienceAnswer, answers[2] === expected.workModeAnswer, answers[3] === expected.weakestQualificationAnswer, decision === expected.decision];
+    if (correctness.some((value, index) => (value === "true") !== recomputed[index])) throw new Error("Study answer-key correctness mismatch.");
+    const assigned = DECISION_STUDY_ASSIGNMENTS[assignmentGroup as "GROUP_1" | "GROUP_2"].find((item) => item.condition === condition);
+    if (!assigned || assigned.roleId !== roleId) throw new Error("Study role and condition do not match the assignment group.");
     humanRows.push({
       participantId,
+      assignmentGroup: assignmentGroup as ImpactRow["assignmentGroup"],
+      roleId: roleId as ImpactRow["roleId"],
       conditionOrder: conditionOrder as ImpactRow["conditionOrder"],
       condition: condition as StudyCondition,
       taskSeconds: numberInRange(field("task_seconds"), "task_seconds", 1, 7_200),
@@ -252,9 +273,14 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
       preferredExperienceAnswer: answers[1]!,
       workModeAnswer: answers[2]!,
       biggestGapAnswer: answers[3]!,
+      requiredCorrect: recomputed[0]!,
+      preferredCorrect: recomputed[1]!,
+      workCorrect: recomputed[2]!,
+      gapCorrect: recomputed[3]!,
+      decisionCorrect: recomputed[4]!,
       decision: decision as Exclude<StudyDecision, "">,
       confidence: numberInRange(field("confidence_1_to_7"), "confidence_1_to_7", 1, 7),
-      transparency: numberInRange(field("transparency_1_to_7"), "transparency_1_to_7", 1, 7),
+      transparency: numberInRange(field("clarity_1_to_7"), "clarity_1_to_7", 1, 7),
       consentVersion: field("consent_version"),
       completedAt,
     });
@@ -266,6 +292,8 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
   for (const [participantId, rows] of grouped) {
     if (rows.length !== 2 || new Set(rows.map((row) => row.condition)).size !== 2) throw new Error(`Incomplete participant session: ${participantId}`);
     if (new Set(rows.map((row) => row.conditionOrder)).size !== 1) throw new Error(`Condition-order mismatch within participant session: ${participantId}`);
+    if (new Set(rows.map((row) => row.roleId)).size !== 2) throw new Error(`Same-role carryover within participant session: ${participantId}`);
+    if (new Set(rows.map((row) => row.assignmentGroup)).size !== 1) throw new Error(`Assignment mismatch within participant session: ${participantId}`);
     const raw = rows.find((row) => row.condition === "RAW_POSTING")!;
     const jobPilot = rows.find((row) => row.condition === "JOBPILOT")!;
     pairs.push({ participantId, RAW_POSTING: raw, JOBPILOT: jobPilot });
@@ -286,7 +314,7 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
     syntheticToolingValidationRows,
     minimumParticipantTarget: 5,
     preferredParticipantTarget: DECISION_STUDY_PREFERRED_PARTICIPANTS,
-    conditionOrderCounts: Object.fromEntries(["RAW_POSTING_THEN_JOBPILOT", "JOBPILOT_THEN_RAW_POSTING"].map((order) => [order, pairs.filter((pair) => pair.RAW_POSTING.conditionOrder === order).length])),
+    conditionOrderCounts: { RAW_POSTING_THEN_JOBPILOT: pairs.length },
     conditions: { RAW_POSTING: summarizeCondition(raw), JOBPILOT: summarizeCondition(jobPilot) },
     paired,
     bootstrapConfidenceIntervals: bootstrapAvailable ? bootstrapIntervals(pairs, iterations, options.bootstrapSeed ?? 2_026_071_8) : null,

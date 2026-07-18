@@ -1,19 +1,11 @@
 # JobPilot Decision Utility Study consent
 
-Consent version: `jobpilot-study-consent-v1`
+Consent version: `jobpilot-study-consent-v2`
 
-This voluntary usability study evaluates the JobPilot interface, not the participant. It uses one fictional job and one fictional candidate. Each participant completes a Raw Posting task and a JobPilot task in a randomized order.
+This voluntary usability study evaluates an interface, not the participant. Each session uses two different fictional roles: one traditional posting and candidate profile, and one JobPilot presentation.
 
-The study records only:
+The study records only an anonymous participant ID, protocol and consent versions, study phase, assignment group, fictional role IDs and conditions, five answers and correctness values, completion times, confidence and clarity ratings, completion timestamps, and an authentic-human confirmation.
 
-- an anonymous random participant ID;
-- condition order and condition;
-- required-experience, preferred-experience, work-mode, and biggest-gap answers;
-- Apply / Review / Skip decision;
-- completion time;
-- confidence and transparency ratings;
-- consent version and completion timestamp.
+Do not provide a name, email, phone number, IP address, resume, demographic data, employment status, health data, home address, credentials, or personal history. Responses remain in browser-local storage until explicitly exported or reset. The route makes no network request. Participation is optional and may end at any time.
 
-Do not provide a name, email, phone number, resume, demographic data, employment status, health data, employer credential, or personal history. Responses remain in browser-local storage until the participant explicitly exports them. The route makes no network request. Participation is optional; a participant may exit or delete and reset at any time.
-
-The on-screen action `I consent and begin` records only this consent version and an acceptance timestamp before creating an anonymous study session.
+The on-screen consent action records this consent version, an acceptance timestamp, and the participant’s confirmation that they are an adult completing the session themselves.
