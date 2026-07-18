@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "jobpilot.bw10.public-screenshot-manifest.v1",
+  "capturedAt": "2026-07-18T13:49:00-07:00",
+  "target": "https://jobpilot-build-week-review.yeon971105.chatgpt.site",
+  "screenshots": [
+    {
+      "path": "build-week/bw10/captures/public-shortlist-1440x900.png",
+      "route": "/demo/shortlist",
+      "viewport": "1440x900",
+      "bytes": 94431,
+      "sha256": "da025496ad152f0fa4b2a88adf4288ddda51289f05ca59070aecc96f9a36ff45",
+      "visualInspection": "PASS"
+    },
+    {
+      "path": "build-week/bw10/captures/public-verifier-1024x768.png",
+      "route": "/demo/verify-receipt",
+      "viewport": "1024x768",
+      "bytes": 64638,
+      "sha256": "ff0abaad487a9a42c91785c45d18e6950bf73249ecf1104f87ed645f9e701227",
+      "visualInspection": "PASS"
+    },
+    {
+      "path": "build-week/bw10/captures/public-landing-390x844.png",
+      "route": "/",
+      "viewport": "390x844",
+      "bytes": 39642,
+      "sha256": "235349e9fa5cf34bcb29671022d1691771e0a103abd3625fc35d0591b71155c9",
+      "visualInspection": "PASS"
+    },
+    {
+      "path": "build-week/bw10/captures/public-northstar-320x700.png",
+      "route": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+      "viewport": "320x700",
+      "bytes": 22582,
+      "sha256": "8a37e63494cd97377a0678a97c775aa1998d0fda93b9b543afff1416880f8466",
+      "visualInspection": "PASS"
+    },
+    {
+      "path": "build-week/bw10/captures/public-landing-320x700.png",
+      "route": "/",
+      "viewport": "320x700",
+      "bytes": 31435,
+      "sha256": "676394630ed3648e55e81c3a26a0ce64bba171c3fd99aee69cf2cab4aa71d0f5",
+      "visualInspection": "PASS"
+    }
+  ],
+  "participantRecordsVisible": 0,
+  "realPersonalDataVisible": 0,
+  "result": "PASS"
+}

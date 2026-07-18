@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "jobpilot.bw10.public-browser-qa.v1",
+  "checkedAt": "2026-07-18T13:50:00-07:00",
+  "target": "https://jobpilot-build-week-review.yeon971105.chatgpt.site",
+  "sourceCommit": "64dfc84eed10d258b47aebe4ba91293730e25ff6",
+  "viewports": ["1440x900", "1024x768", "390x844", "320x700"],
+  "representativeRoutes": [
+    "/",
+    "/demo/shortlist",
+    "/demo/jobs",
+    "/demo/jobs/northstar-applied-ai-solutions-engineer",
+    "/demo/trust",
+    "/about/coverage",
+    "/profile/resume",
+    "/study/decision-utility"
+  ],
+  "matrix": {
+    "checksAttempted": 32,
+    "checksPassed": 32,
+    "checksFailed": 0,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "horizontalOverflow": 0,
+    "navigationOverlaps": 0,
+    "clippedScores": 0,
+    "hiddenModalContent": 0,
+    "rawReceiptJsonVisibleByDefault": 0,
+    "liveGptLabels": 0,
+    "completeMarketClaims": 0,
+    "unverifiedApplyCtas": 0,
+    "oneH1Failures": 0,
+    "sub44PixelInteractiveTargets": 0
+  },
+  "journeys": {
+    "shortlist": {
+      "status": "PASS",
+      "rolesInspected": ["Product Data Analyst", "Applied AI Solutions Engineer", "Data Platform Engineer"],
+      "rationaleVisible": true
+    },
+    "discovery": {
+      "status": "PASS",
+      "sortFirstRoles": {
+        "Best Match": "Product Data Analyst",
+        "Nearest": "Data Platform Engineer",
+        "Most Recent": "Product Data Analyst"
+      },
+      "filtersPassed": true,
+      "comparedRoles": 3
+    },
+    "decision": {
+      "status": "PASS",
+      "summary": true,
+      "score": true,
+      "matches": true,
+      "gaps": true,
+      "experience": true,
+      "constraints": true
+    },
+    "verify": {
+      "status": "PASS",
+      "bundledReceipt": "FULLY_REPRODUCED",
+      "tamperedReceipt": "INVALID"
+    },
+    "applySafely": {
+      "status": "PASS",
+      "simulatedApplicationDisabled": true,
+      "manualPreparingState": true,
+      "automaticAppliedTransition": false
+    },
+    "trust": {
+      "status": "PASS",
+      "preparedGpt": true,
+      "gemmaRole": true,
+      "deterministicScoreRole": true,
+      "zeroApiStatement": true,
+      "coverageMethodology": true,
+      "limitations": true
+    },
+    "study": {
+      "status": "PASS",
+      "isolatedFromJudgeNavigation": true,
+      "dryRunExcludedFromHumanAnalysis": true
+    }
+  },
+  "accessibility": {
+    "semanticKeyboardControls": true,
+    "visibleFocus": true,
+    "focusOutline": "3px solid",
+    "minimumControlTargetPixels": 44,
+    "colorOnlyStatus": false
+  },
+  "externalRequestsAttributedToOpenAi": 0,
+  "productionMutations": 0,
+  "applicationSubmissions": 0,
+  "result": "PASS_PUBLIC_BROWSER_QA"
+}

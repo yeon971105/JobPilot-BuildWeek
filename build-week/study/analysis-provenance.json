@@ -1,6 +1,6 @@
 {
   "schemaVersion": "jobpilot.bw10.analysis-provenance.v1",
-  "generatedAt": "2026-07-18T19:04:45.528Z",
+  "generatedAt": "2026-07-18T20:59:01.883Z",
   "analyzer": "src/lib/impact-study.ts",
   "command": "npm run study:analyze -- build-week/study/validated/combined.csv",
   "source": {

@@ -27,6 +27,7 @@ const ROUTES = [
   "/profile",
   "/profile/resume",
   "/profile/preferences",
+  "/study/decision-utility",
   "/api/health",
   "/api/provider-status",
 ] as const;
@@ -37,7 +38,7 @@ async function request(baseUrl: string, route: string, cycle: number) {
     const response = await fetch(`${baseUrl}${route}`, { headers: { "user-agent": "JobPilot-JP-BW10-public-smoke/1.0" }, redirect: "follow", signal: AbortSignal.timeout(30_000) });
     const body = await response.text();
     const durationMs = Number((performance.now() - started).toFixed(2));
-    const applicationError = /Application error|Internal Server Error|This page could not be found/i.test(body);
+    const applicationError = /id=["']__next_error__["']|<title>Application error|<h1[^>]*>Internal Server Error/i.test(body);
     return { cycle, route, status: response.status, ok: response.status === 200 && !applicationError, durationMs, bytes: Buffer.byteLength(body), applicationError };
   } catch (error) {
     return { cycle, route, status: 0, ok: false, durationMs: Number((performance.now() - started).toFixed(2)), bytes: 0, applicationError: false, error: error instanceof Error ? error.message : String(error) };

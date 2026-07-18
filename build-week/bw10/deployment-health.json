@@ -1,12 +1,18 @@
 {
   "schemaVersion": "jobpilot.bw10.deployment-health.v1",
-  "checkedAt": null,
-  "url": null,
+  "checkedAt": "2026-07-18T13:55:00-07:00",
+  "url": "https://jobpilot-build-week-review.yeon971105.chatgpt.site",
   "healthRoute": "/api/health",
   "providerStatusRoute": "/api/provider-status",
-  "httpStatus": null,
-  "providerStatus": null,
+  "httpStatus": 200,
+  "providerStatus": {
+    "applicationStatus": "ok",
+    "demoDataStatus": "synthetic-ready",
+    "cachedGemmaStatus": "ready",
+    "deterministicScorerStatus": "jobpilot-ai-fit-v2.2-ready",
+    "openAiHeavyFeatures": "disabled"
+  },
   "openAiApiRequests": 0,
   "productionMutations": 0,
-  "status": "PENDING_DEPLOYMENT"
+  "status": "PASS_HEALTHY_PUBLIC_REVIEW"
 }
