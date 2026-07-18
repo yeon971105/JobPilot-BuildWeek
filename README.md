@@ -68,7 +68,7 @@ The immutable snapshot semantic hash is `68f2195f1e4a6d4dce155eb2dfcd9e209643d41
 
 1. **Gemma 4 12B** is the primary semantic model for ambiguous role extraction, capability grouping, candidate profiling, evidence matching, equivalence, summaries, and uncertainty. Private resume analysis stays on loopback Ollama.
 2. **Deterministic code** owns every micro-point, class cap, transfer, month-level experience union, practical constraint, Evidence Quality value, priority, and Score Receipt.
-3. **GPT-5.6 prepared reviews** add bounded application strategy, challenge analysis, ambiguity review, and pairwise comparison from frozen synthetic evidence.
+3. **`gpt-5.6-sol` prepared reviews through Codex** add bounded application strategy, challenge analysis, ambiguity review, and pairwise comparison from frozen synthetic evidence.
 
 All four prepared artifacts expose their Codex generation surface, verifiable `gpt-5.6-sol` provenance, frozen input hash, output hash, file hash, valid evidence IDs, zero API requests, and `model-generated final score: No`. Only final structured outputs are stored; hidden reasoning is not published.
 

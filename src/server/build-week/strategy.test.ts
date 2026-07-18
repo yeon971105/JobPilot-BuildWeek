@@ -7,7 +7,7 @@ import { buildLiveApplicationStrategy, challengeLiveAnalysis, extractResponseTex
 
 afterEach(() => vi.unstubAllEnvs());
 
-const baseEnv = { AI_RUNTIME_MODE: "LOCAL_FIRST", OLLAMA_BASE_URL: "http://127.0.0.1:11434", OLLAMA_MODEL: "gemma4:12b", OLLAMA_ENABLED: "true", OPENAI_HEAVY_FEATURES_ENABLED: "false", OPENAI_HEAVY_MODEL: "gpt-5.6-terra", BUILD_WEEK_DEMO_MODE: "true", BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES: "true", BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS: "false", BUILD_WEEK_ALLOW_LIVE_GPT56: "false", OPENAI_API_KEY: "" };
+const baseEnv = { AI_RUNTIME_MODE: "LOCAL_FIRST", OLLAMA_BASE_URL: "http://127.0.0.1:11434", OLLAMA_MODEL: "gemma4:12b", OLLAMA_ENABLED: "true", OPENAI_HEAVY_FEATURES_ENABLED: "false", OPENAI_HEAVY_MODEL: "gpt-5.6-sol", BUILD_WEEK_DEMO_MODE: "true", BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES: "true", BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS: "false", BUILD_WEEK_ALLOW_LIVE_GPT56: "false", OPENAI_API_KEY: "" };
 
 describe("local-first hybrid provider contract", () => {
   it("routes semantic work to prepared Gemma and heavy work to prepared Codex output without a key", () => {
@@ -21,7 +21,7 @@ describe("local-first hybrid provider contract", () => {
   });
 
   it("enables heavy reasoning with a key and one feature flag", () => {
-    expect(getDemoProviderConfig({ ...baseEnv, OPENAI_API_KEY: "test-only-not-real", OPENAI_HEAVY_FEATURES_ENABLED: "true" })).toMatchObject({ mode: "OPENAI_GPT56_HEAVY", model: "gpt-5.6-terra", live: true, responsesApi: true, structuredOutputs: true });
+    expect(getDemoProviderConfig({ ...baseEnv, OPENAI_API_KEY: "test-only-not-real", OPENAI_HEAVY_FEATURES_ENABLED: "true" })).toMatchObject({ mode: "OPENAI_GPT56_HEAVY", model: "gpt-5.6-sol", live: true, responsesApi: true, structuredOutputs: true });
   });
 
   it("rejects a non-loopback Ollama endpoint and model substitution", () => {
@@ -54,14 +54,14 @@ describe("bounded OpenAI heavy transport", () => {
   });
 
   it("validates a mocked application strategy without a live key", async () => {
-    vi.stubEnv("OPENAI_API_KEY", "test-only-not-real"); vi.stubEnv("OPENAI_HEAVY_FEATURES_ENABLED", "true"); vi.stubEnv("OPENAI_HEAVY_MODEL", "gpt-5.6-terra");
+    vi.stubEnv("OPENAI_API_KEY", "test-only-not-real"); vi.stubEnv("OPENAI_HEAVY_FEATURES_ENABLED", "true"); vi.stubEnv("OPENAI_HEAVY_MODEL", "gpt-5.6-sol");
     const prepared = fixtureStrategy(DEMO_JOBS[0]!.id);
     let requestBody: Record<string, unknown> | null = null;
     const fetcher = vi.fn(async (_url: string | URL | Request, init?: RequestInit) => { requestBody = JSON.parse(String(init?.body)); return new Response(JSON.stringify({ status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: JSON.stringify(prepared) }] }] }), { status: 200 }); }) as unknown as typeof fetch;
     const result = await buildLiveApplicationStrategy(DEMO_JOBS[0]!.id, fetcher);
     expect(result.recommendation).toBe(prepared.recommendation);
     expect(fetcher).toHaveBeenCalledOnce();
-    expect(requestBody).toMatchObject({ model: "gpt-5.6-terra", store: false, max_output_tokens: 1500 });
+    expect(requestBody).toMatchObject({ model: "gpt-5.6-sol", store: false, max_output_tokens: 1500 });
     expect(JSON.stringify(requestBody)).not.toContain("OPENAI_API_KEY");
   });
 

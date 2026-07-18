@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "jobpilot.bw9.gpt56-release-manifest.v1",
+  "exactModelFamily": "gpt-5.6-sol",
+  "generationSurface": "Codex Desktop task",
+  "preparedNotLive": true,
+  "apiRequestCount": 0,
+  "openAiApiCostUsd": 0,
+  "modelGeneratedFinalScores": 0,
+  "invalidEvidenceIds": 0,
+  "artifacts": [
+    { "path": "build-week/gpt56-prepared/application-strategy.json", "sha256": "4e4345f1a99a0fd91739494241fcd5d93d777bf2cfd982401fb660445b3a8c2d", "hashMatch": true },
+    { "path": "build-week/gpt56-prepared/analysis-challenge.json", "sha256": "0d6fc734fd3d33aed6dce8d4e041b1a8edcba1d1cb1fabf1f437355b985f6a90", "hashMatch": true },
+    { "path": "build-week/gpt56-prepared/ambiguity-review.json", "sha256": "9bfc2b4e7a401d0c65817a0451b0c7b1accc0f029c76200d84df42149bd68527", "hashMatch": true },
+    { "path": "build-week/gpt56-prepared/strategy-comparison.json", "sha256": "209d40c69b82d28043a4a2011f4c384e5cb94a0c03446e6fba5b803195949791", "hashMatch": true }
+  ],
+  "releaseSurfaces": [
+    "build-week/gpt56-prepared/manifest.json",
+    "src/components/demo/trust-lab.tsx",
+    "README.md",
+    "src/app/about/build-week/page.tsx",
+    "build-week/bw9/video-script.md",
+    "build-week/bw9/devpost-draft.md"
+  ],
+  "historicalBoundary": "Prior-stage artifacts that accurately record an older planned Terra adapter are retained as historical evidence and are not presented as the prepared Codex artifact identity.",
+  "releaseSurfaceModelNameInconsistency": 0,
+  "result": "PASS"
+}

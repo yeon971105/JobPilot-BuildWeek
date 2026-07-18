@@ -15,3 +15,7 @@ Show the lineage disclosure:
 On-screen source: `build-week/bw9/frozen-coverage-snapshot.json`, frozen `2026-07-18T17:41:08.379Z`, semantic hash `68f2195f1e4a6d4dce155eb2dfcd9e209643d412e30d949ca65bd2bee6ae8414`.
 
 Do not substitute live counts during recording.
+
+When the Trust Lab opens, use this exact provenance line:
+
+> Four `gpt-5.6-sol` reviews were prepared through Codex from frozen synthetic evidence. They are not live responses. OpenAI API requests are zero, API cost is zero dollars, valid evidence-ID checks pass, and the model generated no numeric score.

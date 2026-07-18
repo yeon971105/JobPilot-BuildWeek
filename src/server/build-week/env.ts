@@ -12,7 +12,7 @@ const runtimeEnvironmentSchema = z.object({
   OLLAMA_ENABLED: booleanString("true"),
   LOCAL_PRIVATE_MODE: booleanString("false"),
   OPENAI_HEAVY_FEATURES_ENABLED: booleanString("false"),
-  OPENAI_HEAVY_MODEL: z.literal("gpt-5.6-terra").default("gpt-5.6-terra"),
+  OPENAI_HEAVY_MODEL: z.literal("gpt-5.6-sol").default("gpt-5.6-sol"),
   BUILD_WEEK_DEMO_MODE: booleanString("true"),
   BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES: booleanString("true"),
   BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS: booleanString("false"),

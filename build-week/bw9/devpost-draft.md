@@ -27,4 +27,6 @@ Snapshot semantic hash: `68f2195f1e4a6d4dce155eb2dfcd9e209643d412e30d949ca65bd2b
 
 The public flow exports no production rows, descriptions, URLs, candidate records, credentials, or source payloads. All release surfaces use the frozen snapshot rather than live database counts. The runtime makes zero OpenAI API requests and incurs $0 API cost.
 
+Four `gpt-5.6-sol` reviews were prepared through Codex from frozen synthetic evidence. They are prepared, not live; all evidence IDs are valid; and the model generated no numeric score.
+
 Human-study results remain absent until actual consented participants complete the owner-operated local study.
