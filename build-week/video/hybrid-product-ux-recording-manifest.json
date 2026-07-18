@@ -1,0 +1,113 @@
+{
+    "purpose":  "Record certified actual-product captures for the JP-BW6 approval RC",
+    "timestamp":  "2026-07-18T05:43:20.2418919+00:00",
+    "commit":  "2332c01c77001c3f4875a81820d944f5b519b016",
+    "privacyClassification":  "PUBLIC_SAFE_SYNTHETIC",
+    "publicSafeStatus":  "PUBLIC_SAFE",
+    "supportedGate":  "JP-BW6 video recertification",
+    "output":  "build-week/video/hybrid-product-ux-rc1-demo.mp4",
+    "durationSeconds":  175,
+    "resolution":  "1920x1080",
+    "videoCodec":  "h264",
+    "audioCodec":  "aac",
+    "captionsCodec":  "mov_text",
+    "captionsLanguage":  "eng",
+    "narrationLanguage":  "English",
+    "copyrightedMusic":  false,
+    "actualCertifiedProductCaptures":  true,
+    "videoSha256":  "70bcf7c81f897a53c29d3dd6adeb356178bb9c96a45233f708fcbb26939c0abb",
+    "thumbnailSha256":  "9d60e7589859e37f60010c15a2187601370e610af4547bceb6e89e7d552813c3",
+    "segments":  [
+                     {
+                         "file":  "landing-1440x900.png",
+                         "durationSeconds":  12,
+                         "story":  "Problem",
+                         "sha256":  "764295e8b4a9c92dbad5c8f2494ce9954b9e29962b22cbe464f79cd826517ba0"
+                     },
+                     {
+                         "file":  "landing-1440x900.png",
+                         "durationSeconds":  18,
+                         "story":  "No-login demo",
+                         "sha256":  "764295e8b4a9c92dbad5c8f2494ce9954b9e29962b22cbe464f79cd826517ba0"
+                     },
+                     {
+                         "file":  "jobs-1440x900.png",
+                         "durationSeconds":  22,
+                         "story":  "Discovery and profile context",
+                         "sha256":  "9587b76021a4f7eb5f4dc5b4758bead74556505750c678c7a65ebc30331f1922"
+                     },
+                     {
+                         "file":  "detail-overview-1440x900.png",
+                         "durationSeconds":  18,
+                         "story":  "Decision overview",
+                         "sha256":  "3cbca4665b52f466df5f8028043e185ba94e95b6e515adae587f5bd7f9dde48e"
+                     },
+                     {
+                         "file":  "capability-detail-1440x900.png",
+                         "durationSeconds":  15,
+                         "story":  "Evidence and point detail",
+                         "sha256":  "ff2fe5b400d4db6b781145d4de1acf87d258475e0a8a19de2a9fc016452baffa"
+                     },
+                     {
+                         "file":  "evidence-tab-1440x900.png",
+                         "durationSeconds":  9,
+                         "story":  "Evidence tab",
+                         "sha256":  "54569e57e5d44a53da5b0783c37521326f652a0f0292bd48b0cf235ce24bbec1"
+                     },
+                     {
+                         "file":  "experience-tab-1440x900.png",
+                         "durationSeconds":  9,
+                         "story":  "Experience tab",
+                         "sha256":  "d4d771fe9ffcb848cc9a01b1bd16999070ef602c1d34748c1ce6ec6bdeba8dde"
+                     },
+                     {
+                         "file":  "score-proof-tab-1440x900.png",
+                         "durationSeconds":  8,
+                         "story":  "Score Proof",
+                         "sha256":  "34d562dad357579cda908bd3f30ad8434ed22122ce74c8ea9e3adaadc5670ca3"
+                     },
+                     {
+                         "file":  "receipt-modal-1440x900.png",
+                         "durationSeconds":  7,
+                         "story":  "Technical receipt",
+                         "sha256":  "7c1ce3031e3d1c6533bf380c95f0e491857ca1b773a8511f2218ed6832c8a170"
+                     },
+                     {
+                         "file":  "score-change-1440x900.png",
+                         "durationSeconds":  16,
+                         "story":  "Score sensitivity",
+                         "sha256":  "da20fd8a8d9e65bddbd35839be1cf480955711970f58e3b7a6ffc028da056a5c"
+                     },
+                     {
+                         "file":  "resume-onboarding-1440x900.png",
+                         "durationSeconds":  8,
+                         "story":  "Private onboarding",
+                         "sha256":  "b7cfe4ea0ae544bd224e4dbe757ef78cd3266a5baf56a63fa1ac2947158c1b69"
+                     },
+                     {
+                         "file":  "resume-review-1440x900.png",
+                         "durationSeconds":  7,
+                         "story":  "Extraction review",
+                         "sha256":  "09a3c75536699e86197980ebb7b1fa22f6b68fa6db6eade1545816ddadd8ed62"
+                     },
+                     {
+                         "file":  "strategy-drawer-1440x900.png",
+                         "durationSeconds":  15,
+                         "story":  "Application strategy",
+                         "sha256":  "5a22c5943a2e133ccf33351b2689d22416b79f5dc26958ec8fb879a8e5e1710c"
+                     },
+                     {
+                         "file":  "trust-lab-1440x900.png",
+                         "durationSeconds":  6,
+                         "story":  "Trust Lab",
+                         "sha256":  "f51ede70df5eb8892005c78f8beaf2bce9dc933e4d8082f5ccf2fd87e9782d5a"
+                     },
+                     {
+                         "file":  "landing-1440x900.png",
+                         "durationSeconds":  5,
+                         "story":  "Closing",
+                         "sha256":  "764295e8b4a9c92dbad5c8f2494ce9954b9e29962b22cbe464f79cd826517ba0"
+                     }
+                 ],
+    "result":  "PASS"
+}

@@ -29,7 +29,7 @@ button, summary, select { cursor: pointer; }
 .button-secondary:hover { background: #fffdf7; transform: translateY(-1px); }
 .button-danger { display: inline-flex; min-height: 2.75rem; align-items: center; gap: .5rem; border: 1px solid rgb(139 73 62 / .25); border-radius: .75rem; background: #fff7f2; padding: .7rem 1rem; color: #7b4037; font-size: .875rem; font-weight: 750; }
 .pill { display: inline-flex; align-items: center; border-radius: 999px; background: #e7ece4; padding: .3rem .65rem; font-size: .6875rem; line-height: 1rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: #315c49; }
-.metric-label { font-size: .7rem; line-height: 1rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #708178; }
+.metric-label { font-size: .7rem; line-height: 1rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #425d50; }
 .form-control { display: block; width: 100%; min-height: 2.75rem; margin-top: .5rem; border: 1px solid var(--border); border-radius: var(--control-radius); background: white; padding: .75rem; color: var(--foreground); font-weight: 500; }
 .choice-control { display: inline-flex; min-height: 2.75rem; align-items: center; gap: .6rem; border: 1px solid var(--border); border-radius: .75rem; background: white; padding: .65rem .9rem; font-size: .875rem; font-weight: 700; }
 .review-row { border: 1px solid var(--border); border-radius: 1rem; background: #fffdf7; padding: 1rem; }
@@ -38,5 +38,8 @@ button, summary, select { cursor: pointer; }
 .paper-card .grid, .paper-card .grid > * { min-width: 0; }
 .paper-card code { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
 pre { margin: 0; font-family: var(--font-geist-mono), monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+.text-\[\#a1742d\] { color: #805d31; }
+.text-\[\#779080\], .text-\[\#73867c\], .text-\[\#74867c\], .text-\[\#667b71\], .text-\[\#6c7e75\] { color: #4b6157; }
+.text-\[\#708178\] { color: #425d50; }
 @media (max-width: 420px) { .paper-card { padding: 1.15rem; border-radius: 1.2rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }

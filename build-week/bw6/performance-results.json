@@ -1,0 +1,62 @@
+{
+  "purpose": "Certify cached page and in-memory synthetic resume performance for JP-BW6.",
+  "timestamp": "2026-07-18T05:33:29.647Z",
+  "commit": "2332c01c77001c3f4875a81820d944f5b519b016",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "JP-BW6 performance targets",
+  "routes": {
+    "landing": {
+      "p95Ms": 48.68,
+      "maximumMs": 48.68,
+      "runs": 15
+    },
+    "jobs": {
+      "p95Ms": 11.91,
+      "maximumMs": 11.91,
+      "runs": 15
+    },
+    "preparedDetail": {
+      "p95Ms": 2.7,
+      "maximumMs": 2.7,
+      "runs": 15
+    }
+  },
+  "interactions": {
+    "tabSwitchMs": 12,
+    "receiptModalOpenMs": 8,
+    "trackerActionMs": 16,
+    "measurement": "Browser DOM transition observation"
+  },
+  "resumeParsing": {
+    "txt": {
+      "p95Ms": 0.24,
+      "maximumMs": 0.24,
+      "runs": 12
+    },
+    "docx": {
+      "p95Ms": 2.51,
+      "maximumMs": 2.51,
+      "runs": 12
+    },
+    "textPdf": {
+      "p95Ms": 2.49,
+      "maximumMs": 2.49,
+      "runs": 12
+    }
+  },
+  "repeatedParseMemory": {
+    "runs": 5,
+    "heapSamplesBytes": [
+      213464064,
+      213498152,
+      213543208,
+      213572744,
+      213610096
+    ],
+    "growthBytes": 146032,
+    "leakDetected": false
+  },
+  "localGemmaExcludedFromPageRenderLatency": true,
+  "result": "PASS"
+}

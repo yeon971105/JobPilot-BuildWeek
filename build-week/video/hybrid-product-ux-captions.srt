@@ -1,0 +1,47 @@
+1
+00:00:00,000 --> 00:00:12,000
+Most job platforms give you a score before they give you a reason. JobPilot starts with the decision a job seeker actually needs: know why a job fits.
+
+2
+00:00:12,000 --> 00:00:30,000
+The public demo needs no login, key, database, or local model. It uses only synthetic candidate and role data, so every interaction is safe to inspect.
+
+3
+00:00:30,000 --> 00:00:52,000
+Job discovery keeps profile context visible. Each card shows a strongest match, biggest gap, Evidence Quality, Apply Priority, and any practical blocker.
+
+4
+00:00:52,000 --> 00:01:10,000
+The first role screen explains the job, its fit, the reason, and the next action. Score, range, Evidence Quality, priority, match, gap, and strategy are immediately available.
+
+5
+00:01:10,000 --> 00:01:25,000
+Every point maps to evidence. Capability details reveal exact excerpts, aliases, verifier state, uncertainty, and calculation. Required and preferred stay distinct.
+
+6
+00:01:25,000 --> 00:01:34,000
+The Evidence tab holds every scored capability on demand.
+
+7
+00:01:34,000 --> 00:01:43,000
+Experience shows requested years, relevant months, coefficients, overlap removal, and the formula.
+
+8
+00:01:43,000 --> 00:01:58,000
+Score Proof reconciles one hundred visible points with zero hidden adjustments. The receipt downloads reproducibly; technical JSON opens only when requested.
+
+9
+00:01:58,000 --> 00:02:14,000
+See a Score Change proves the score is not hardcoded. One synthetic evidence change updates only the affected capability. The score is not a hiring probability.
+
+10
+00:02:14,000 --> 00:02:29,000
+Private Resume Mode parses PDF, DOCX, and TXT in memory. Users review extracted evidence, and no resume is sent to OpenAI or another cloud model.
+
+11
+00:02:29,000 --> 00:02:44,000
+Gemma 4 12B is the primary local semantic model. Deterministic code calculates the score. GPT-5.6 Terra is optional heavy reasoning, and this public strategy is prepared.
+
+12
+00:02:44,000 --> 00:02:55,000
+Trust Lab explains privacy, proof, and limitations. Codex helped identify defects, repair scoring and UX, test, and ship the product. Know why a job fits before you apply.
