@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "jobpilot.bw8.gpt56-prepared-proof.v1",
+  "generatedAt": "2026-07-18T08:38:00.000Z",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "status": "PASS",
+  "provenance": {
+    "verified": true,
+    "verificationSource": "build-week/bw7/gpt56-prepared-provenance.json",
+    "generationSurface": "Codex Desktop task",
+    "modelFamily": "gpt-5.6-sol",
+    "codexThreadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+    "preparedNotLive": true
+  },
+  "artifacts": [
+    {
+      "type": "APPLICATION_STRATEGY",
+      "path": "build-week/gpt56-prepared/application-strategy.json",
+      "fileSha256": "4e4345f1a99a0fd91739494241fcd5d93d777bf2cfd982401fb660445b3a8c2d",
+      "frozenInputHash": "1fbbd9c4c51759d69da59d8c5bdc8a887177641dc6728319eddb95d9f24a1587",
+      "outputHash": "a809b965b36c76efef0563291c3357489b34e2c22472a169c94a63a68aad5641",
+      "validEvidenceIdCount": 13,
+      "invalidEvidenceIds": 0
+    },
+    {
+      "type": "ANALYSIS_CHALLENGE",
+      "path": "build-week/gpt56-prepared/analysis-challenge.json",
+      "fileSha256": "0d6fc734fd3d33aed6dce8d4e041b1a8edcba1d1cb1fabf1f437355b985f6a90",
+      "frozenInputHash": "1fbbd9c4c51759d69da59d8c5bdc8a887177641dc6728319eddb95d9f24a1587",
+      "outputHash": "15edff3a0b6e0ae1648707207b13956ca9135be463a8dcac3d0f659f67b41e5b",
+      "validEvidenceIdCount": 11,
+      "invalidEvidenceIds": 0
+    },
+    {
+      "type": "AMBIGUITY_REVIEW",
+      "path": "build-week/gpt56-prepared/ambiguity-review.json",
+      "fileSha256": "9bfc2b4e7a401d0c65817a0451b0c7b1accc0f029c76200d84df42149bd68527",
+      "frozenInputHash": "1fbbd9c4c51759d69da59d8c5bdc8a887177641dc6728319eddb95d9f24a1587",
+      "outputHash": "c94226a70e7e5d14a92d5636bb28a9ca9bae93cdaf01f7ff3ab77818c61fe72e",
+      "validEvidenceIdCount": 3,
+      "invalidEvidenceIds": 0
+    },
+    {
+      "type": "STRATEGY_COMPARISON",
+      "path": "build-week/gpt56-prepared/strategy-comparison.json",
+      "fileSha256": "209d40c69b82d28043a4a2011f4c384e5cb94a0c03446e6fba5b803195949791",
+      "frozenInputHash": "280abcf973c8a1a461fdaee2c149671b819d70fd7f0eba78bb357dc3b6d15b79",
+      "outputHash": "8763232df0465d49355630aa7d48e4995d28a3a4e6d4bfff1029e1cac2577777",
+      "validEvidenceIdCount": 20,
+      "invalidEvidenceIds": 0
+    }
+  ],
+  "productExamples": {
+    "strategy": {
+      "evidenceId": "e-python",
+      "recommendation": "Lead with tested integrations and operational safeguards, using only the stated fictional scope."
+    },
+    "challenge": {
+      "requirementId": "r-ns-ai",
+      "evidenceIds": ["e-ai", "e-delivery"],
+      "assessment": "STRONG_EQUIVALENT is defensible, but the frozen evidence does not establish the employer's exact deployment scale or tooling."
+    }
+  },
+  "zeroValues": {
+    "openAiApiRequests": 0,
+    "openAiApiCostUsd": 0,
+    "modelGeneratedFinalScores": 0,
+    "invalidEvidenceIds": 0,
+    "chainOfThoughtArtifacts": 0,
+    "applicationSubmissions": 0
+  }
+}
