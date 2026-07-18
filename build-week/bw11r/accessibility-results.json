@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "jobpilot.bw11r.accessibility-results.v1",
+  "generatedAt": "2026-07-18T23:29:27.3751311Z",
+  "browserMatrix": {
+    "pagesChecked": 40,
+    "oneH1Failures": 0,
+    "primaryTouchTargetsBelow44Px": 0,
+    "horizontalOverflowFailures": 0
+  },
+  "semanticChecks": {
+    "visibleFocusRule": ":focus-visible uses a 3px ochre outline with offset",
+    "keyboardTabs": true,
+    "modalFocusTrap": true,
+    "escapeClose": true,
+    "focusRestoration": true,
+    "trackerToastAriaLive": true,
+    "progressHasText": true,
+    "colorOnlyStatus": false,
+    "singleH1PerPage": true
+  },
+  "motionSafety": {
+    "prefersReducedMotion": true,
+    "reducedMotionIterationCap": 1,
+    "loopingDecorativeAnimation": false,
+    "motionRequiredForMeaning": false
+  },
+  "consoleErrors": 0,
+  "result": "PASS"
+}

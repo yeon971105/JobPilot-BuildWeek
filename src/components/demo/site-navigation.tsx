@@ -21,7 +21,7 @@ export function SiteNavigation({ ariaLabel = "Primary navigation" }: { ariaLabel
     <nav aria-label={ariaLabel} className="flex shrink-0 items-center gap-1">
       <div className="hidden items-center gap-1 text-sm font-semibold text-[#315c49] sm:flex">
         {links.map((link) => (
-          <Link key={link.href} href={link.href} aria-current={active(link.href) ? "page" : undefined} className={`rounded-full px-3 py-2 transition-colors hover:bg-[#e7ece4] ${active(link.href) ? "bg-[#e7dcc1] text-[#173d2d]" : ""}`}>
+          <Link key={link.href} href={link.href} aria-current={active(link.href) ? "page" : undefined} className={`inline-flex min-h-11 items-center rounded-full px-3 py-2 transition-colors hover:bg-[#e7ece4] ${active(link.href) ? "bg-[#e7dcc1] text-[#173d2d]" : ""}`}>
             {link.label}
           </Link>
         ))}

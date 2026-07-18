@@ -12,7 +12,7 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif; text-rendering: optimizeLegibility; }
+body { margin: 0; overflow-x: clip; background: var(--background); color: var(--foreground); font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif; text-rendering: optimizeLegibility; }
 .font-serif { font-family: var(--font-editorial-serif), Georgia, serif; }
 .font-mono { font-family: var(--font-geist-mono), monospace; }
 a { text-decoration: none; }
@@ -64,4 +64,4 @@ pre { margin: 0; font-family: var(--font-geist-mono), monospace; white-space: pr
 @keyframes modal-in { from { opacity: 0; transform: translateY(8px) scale(.985); } to { opacity: 1; transform: none; } }
 @keyframes skeleton-shimmer { to { transform: translateX(100%); } }
 @media (max-width: 420px) { .paper-card { padding: 1.15rem; border-radius: 1.2rem; } }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-delay: 0ms !important; transition-duration: .01ms !important; } .shortlist-card:hover, .shortlist-card:hover .score-ring { transform: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-delay: 0ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .shortlist-card:hover, .shortlist-card:hover .score-ring { transform: none; } }

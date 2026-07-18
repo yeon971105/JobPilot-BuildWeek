@@ -54,5 +54,37 @@ describe("JP-BW11R final product decision presentation", () => {
     expect(source).toContain("<details className=\"paper-card\"><summary className=\"min-h-11 font-serif text-3xl\">E. Technical Ledger</summary>");
     expect(source).toContain("defaultSummaryGroups(currentAnalysis)");
     expect(source).toContain("Practical constraints affect Apply Priority, not technical Fit Score.");
+    expect(source).toContain("About {Math.round(row.relevantYears)} years");
+    for (const column of ["Capability", "Maximum", "Earned", "Lost", "Low / mid / high", "Micro-points"]) expect(source).toContain(column);
+    expect(source).toContain("const displayPercent = Number(value) <= 1 ? Number(value) * 100 : Number(value)");
+  });
+
+  it("honors reduced motion and bounds all attention animations", () => {
+    const css = read("src/app/globals.css");
+    const detail = read("src/components/demo/job-detail.tsx");
+    expect(css).toContain("@media (prefers-reduced-motion: reduce)");
+    expect(css).toContain("animation-iteration-count: 1 !important");
+    expect(css).toContain(".skeleton::after");
+    expect(detail).toContain('window.matchMedia("(prefers-reduced-motion: reduce)").matches');
+    expect(detail).toContain("/ 650");
+    expect(`${css}\n${detail}`).not.toMatch(/animation:\s*[^;]*infinite/);
+  });
+
+  it("covers honest empty and edge states with accessible controls", () => {
+    const tracker = read("src/components/demo/tracker.tsx");
+    const navigation = read("src/components/demo/site-navigation.tsx");
+    const shortlist = read("src/components/demo/shortlist.tsx");
+    expect(tracker).toContain("Nothing saved yet");
+    expect(tracker).toContain("Planning state only. No application was submitted.");
+    expect(tracker).toContain('aria-live="polite"');
+    expect(navigation).toContain("inline-flex min-h-11 items-center");
+    expect(shortlist).toContain("Math.round(row.distanceMiles)");
+    expect(shortlist).not.toContain("row.distanceLabel}</span>");
+  });
+
+  it("renders the exact six-stage Trust Lab decision chain", () => {
+    const trust = read("src/components/demo/trust-lab.tsx");
+    for (const stage of ["OFFICIAL SOURCE", "RESUME PRIORITY", "VISUAL DECISION", "VERIFIABLE PROOF", "EMPLOYER DESTINATION", "TRACKER"]) expect(trust).toContain(stage);
+    expect(trust).toContain("xl:grid-cols-6");
   });
 });

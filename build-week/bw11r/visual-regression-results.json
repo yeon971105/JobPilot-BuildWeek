@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "jobpilot.bw11r.visual-regression-results.v1",
+  "generatedAt": "2026-07-18T23:29:27.3751311Z",
+  "target": "http://localhost:3211",
+  "buildId": "F_QutMzt9BbAYaCkzWV60",
+  "browser": "Codex in-app Chromium",
+  "routeViewportMatrix": {
+    "routes": 10,
+    "viewports": 4,
+    "checks": 40,
+    "passed": 40,
+    "failed": 0
+  },
+  "interactiveStates": {
+    "shortlistCards": 3,
+    "shortlistVisiblePointDecimals": 0,
+    "evidenceGroups": 4,
+    "expandedEvidenceFieldsPresent": true,
+    "technicalLedgerRows": 8,
+    "technicalLedgerHeadersPresent": true,
+    "trackerUndoAriaLive": true,
+    "receiptValidStatus": "FULLY_REPRODUCED",
+    "receiptInvalidStatus": "INVALID",
+    "studyDifferentRoles": true,
+    "studyPreviewExcluded": true,
+    "studyCompletionSummaryPresent": true
+  },
+  "zeroValues": {
+    "horizontalOverflow": 0,
+    "clippedContent": 0,
+    "duplicatedSummaryCapability": 0,
+    "defaultViewPointDecimals": 0,
+    "unstyledBrowserControls": 0,
+    "missingCss": 0,
+    "brokenFocus": 0,
+    "inaccessibleAnimation": 0,
+    "consoleErrors": 0,
+    "failedInternalRequests": 0
+  },
+  "mobileTechnicalLedger": {
+    "pageClientWidth": 305,
+    "pageScrollWidth": 305,
+    "tableViewportWidth": 224,
+    "tableScrollWidth": 860,
+    "behavior": "Ledger scrolls inside its disclosure without widening the page."
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "jobpilot.bw11r.edge-case-results.v1",
+  "generatedAt": "2026-07-18T23:29:27.3751311Z",
+  "cases": [
+    { "case": "malformed receipt", "status": "PASS", "recovery": "Use bundled demo receipt", "browserCertified": true },
+    { "case": "invalid destination", "status": "PASS", "recovery": "Return to role", "browserCertified": false },
+    { "case": "prepared strategy unavailable", "status": "PASS", "recovery": "Review deterministic evidence", "browserCertified": false },
+    { "case": "local Gemma unavailable", "status": "PASS", "recovery": "Start the documented local runtime", "browserCertified": false },
+    { "case": "local resume parse failure", "status": "PASS", "recovery": "Choose a supported local file", "browserCertified": false },
+    { "case": "no jobs after filters", "status": "PASS", "recovery": "Clear filters", "browserCertified": true },
+    { "case": "empty tracker", "status": "PASS", "recovery": "View Today's Roles", "browserCertified": true },
+    { "case": "empty comparison", "status": "PASS", "recovery": "Browse roles", "browserCertified": true },
+    { "case": "stale profile", "status": "PASS", "recovery": "Reset demo session", "browserCertified": false },
+    { "case": "missing prepared analysis", "status": "PASS", "recovery": "Use deterministic evidence", "browserCertified": false },
+    { "case": "offline-like cached route", "status": "PASS", "recovery": "Use bundled cached analysis", "browserCertified": false },
+    { "case": "JavaScript error boundary", "status": "PASS", "recovery": "Try the demo again", "browserCertified": false },
+    { "case": "unsupported browser storage", "status": "PASS", "recovery": "Continue without persistent tracker state", "browserCertified": false }
+  ],
+  "stackTracesExposed": 0,
+  "privateDataExposed": 0,
+  "brokenLayouts": 0,
+  "result": "PASS"
+}

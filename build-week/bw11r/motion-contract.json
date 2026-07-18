@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.bw11r.motion-contract.v1",
+  "durationsMilliseconds": {
+    "fast": 140,
+    "card": 180,
+    "tab": 200,
+    "overlay": 220,
+    "page": 280,
+    "score": 650,
+    "evidenceBar": 520
+  },
+  "maximumCardStaggerMilliseconds": 40,
+  "maximumHoverLiftPixels": 3,
+  "skeletonIterations": 2,
+  "reducedMotion": "All animation and transition durations collapse to 0.01 ms and iteration count is capped at one.",
+  "prohibited": ["infinite animation", "motion-only meaning", "input delay", "layout-shifting score animation"]
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "jobpilot.bw11r.visual-regression-contract.v1",
+  "viewports": [
+    { "width": 1440, "height": 900 },
+    { "width": 1024, "height": 768 },
+    { "width": 390, "height": 844 },
+    { "width": 320, "height": 700 }
+  ],
+  "requiredStates": [
+    "Landing", "For You", "Shortlist explanation", "Jobs", "Compare",
+    "Detail Overview", "Dimension Map", "Evidence groups", "Expanded Evidence",
+    "Experience", "Practical Fit", "Score Proof", "Technical Ledger collapsed",
+    "Technical Ledger expanded", "Tracker empty", "Tracker populated", "Trust Lab",
+    "Profile selector", "Preferences", "Receipt Verifier valid", "Receipt Verifier invalid",
+    "Study Introduction", "Study Primer", "Study Question", "Study Transition",
+    "Study Completion", "Error state", "Empty result state"
+  ],
+  "requiredZeroValues": [
+    "horizontalOverflow", "clippedContent", "duplicatedSummaryCapability",
+    "defaultViewPointDecimals", "unstyledBrowserControls", "missingCss", "brokenFocus",
+    "inaccessibleAnimation", "consoleErrors", "failedInternalRequests"
+  ],
+  "evidencePolicy": "Every state requires browser evidence or a directly targeted automated contract assertion; key owner-review states also require a saved screenshot."
+}

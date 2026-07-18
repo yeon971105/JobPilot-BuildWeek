@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "jobpilot.bw11r-css-pipeline.v1",
+  "generatedAt": "2026-07-18T23:29:27.3751311Z",
+  "certifiedCssBundleSha256": "d407e8c54905b97470e4ce731472612adfea87812c192aba4026d6d202ebb362",
+  "cssBytes": 53329,
+  "measurementViewport": "1440x900",
+  "landing": {
+    "document": { "horizontalOverflow": 0, "h1Count": 1 },
+    "navigation": { "display": "flex", "minimumVisiblePrimaryLinks": 5 },
+    "hero": { "headingFontSizePx": 88 },
+    "ctas": { "primaryBackground": "rgb(23, 61, 45)" },
+    "scoreRing": {
+      "position": "absolute",
+      "widthPx": 176,
+      "heightPx": 176,
+      "backgroundColor": "rgb(23, 61, 45)"
+    }
+  },
+  "jobs": {
+    "document": { "horizontalOverflow": 0, "h1Count": 1 },
+    "card": { "paddingPx": 24, "borderRadiusPx": 24 },
+    "filterToolbar": { "gapPx": 12 }
+  },
+  "result": "PASS"
+}

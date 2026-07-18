@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "jobpilot.bw11r.motion-accessibility-results.v1",
+  "generatedAt": "2026-07-18T23:29:27.3751311Z",
+  "sourceTests": 8,
+  "sourceTestsPassed": 8,
+  "scoreAnimationRunsOnce": true,
+  "scoreAnimationMilliseconds": 650,
+  "skeletonIterations": 2,
+  "infiniteAnimations": 0,
+  "animationsOverOneSecond": 0,
+  "reducedMotionMediaQuery": true,
+  "reducedMotionIterationCap": 1,
+  "result": "PASS"
+}
