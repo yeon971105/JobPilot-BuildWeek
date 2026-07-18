@@ -1,8 +1,8 @@
 {
   "schemaVersion": "jobpilot.bw3.v1",
-  "timestamp": "2026-07-18T00:40:42.609Z",
+  "timestamp": "2026-07-18T00:41:28.201Z",
   "branch": "build-week/jobpilot-2026",
-  "evidenceGeneratedAgainstHead": "bad3726ebcc5aa96d4f0a8de1748216a7c28a4b0",
+  "evidenceGeneratedAgainstHead": "9ae2f8fa40b474ca8e965306729c8a84cd8a2183",
   "requiredFiles": [
     {
       "path": "README.md",

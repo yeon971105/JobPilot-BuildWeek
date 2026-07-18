@@ -1,6 +1,6 @@
 {
   "schemaVersion": "jobpilot.bw3.v1",
-  "timestamp": "2026-07-18T00:40:42.609Z",
+  "timestamp": "2026-07-18T00:41:28.201Z",
   "localGemmaCanaryPassed": true,
   "model": "gemma4:12b",
   "modelDigest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",

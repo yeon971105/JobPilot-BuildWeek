@@ -1,6 +1,6 @@
 {
   "schemaVersion": "jobpilot.bw3.v1",
-  "timestamp": "2026-07-18T00:40:42.609Z",
+  "timestamp": "2026-07-18T00:41:28.201Z",
   "scenarioId": "score-change-verified-ai-evidence-v1",
   "disclaimer": "This scenario demonstrates score sensitivity. It does not recommend adding experience you do not have.",
   "changedEvidence": "The same frozen applied-AI evidence is independently verified as an exact match; no new experience is added.",

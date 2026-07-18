@@ -1,12 +1,12 @@
 {
   "schemaVersion": "jobpilot.bw3-artifact-index.v1",
-  "timestamp": "2026-07-18T00:40:42.609Z",
+  "timestamp": "2026-07-18T00:41:28.201Z",
   "selfExclusion": "The index excludes itself to avoid recursive hashing.",
   "artifacts": [
     {
       "path": "build-week/bw3/anti-hardcoding-audit.json",
       "byteSize": 604,
-      "sha256": "2bdcc53808daae0da1aa7b97caf63f438a7a058ecb2011fb1e3dafd93b127ed3",
+      "sha256": "111b5cc6e2774e9e114f5f9f0b2203b8f60ae6cd998768d348524cbc05137e72",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
@@ -69,21 +69,21 @@
     {
       "path": "build-week/bw3/deployment-contract.json",
       "byteSize": 793,
-      "sha256": "d4313aa48cd641e6f09081c9c70d83f66b1791ca87a96c937f426746d7e4fb21",
+      "sha256": "d0bc3300936d41ae39fa3d5d4101564724cba48a20afb9227fe0b65740fd1721",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/deployment-readiness.json",
       "byteSize": 499,
-      "sha256": "9330033172a00cbe3a0db7b31fdbda58eebbf95279d0ccaf4cd04880823aabd2",
+      "sha256": "916fd2c047978015859a99aecd04388175f1ca29195f0d6020fffdfe532b6d95",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/environment-contract.json",
       "byteSize": 820,
-      "sha256": "b1ad9fff850fad07d2e21e9f3c75fc6f470acf8ccc0dac80ac1dabbaccf37460",
+      "sha256": "1ee973ba5ba8a21cff493a9c739a83a0d43a18490185059fd495139e2b4365ef",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
@@ -96,8 +96,8 @@
     },
     {
       "path": "build-week/bw3/final-report.json",
-      "byteSize": 8725,
-      "sha256": "2953d91cc171e84ef2936effa7d715b6f8eccb24fc72125261ef1fad221b1228",
+      "byteSize": 8870,
+      "sha256": "e99a0a6972024607f2b5d61ffde1e65c3f146665ed736edcb92a484c8dd719fb",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
@@ -111,14 +111,14 @@
     {
       "path": "build-week/bw3/health-check.json",
       "byteSize": 458,
-      "sha256": "409c8a9b974be6c761b80e66ff7cfb3c639f686e7f7cac9b8651ac5ef2b5e29c",
+      "sha256": "c11f190b150ab793db3dd312833b7a80a37bc594d3754d798446c7c52b68ef70",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/hybrid-ai-contract.json",
       "byteSize": 751,
-      "sha256": "c227fc8b4c42fd108f1a5f3270a5ab0031914f15853338e21b8ae5898dc8dcf2",
+      "sha256": "5db09a6eae31e69ae64460ac2a082eb7d64aa9e4f2251774175bfbb2edbab8a1",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
@@ -167,28 +167,28 @@
     {
       "path": "build-week/bw3/openai-heavy-provider-contract.json",
       "byteSize": 751,
-      "sha256": "099d9eddfc832babc02c794a3d81cee94b4339d4efcae05d50b90f80fe62c6b2",
+      "sha256": "dbe3571c00421241f933c0411b664abc03e78989369f41f25d55c45fca274f92",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/openai-heavy-schema-validation.json",
       "byteSize": 555,
-      "sha256": "bccbe94e4302da07584521d1d70c3eb717b0e77fa44ea51e17bec60248d1a204",
+      "sha256": "3740062339d45bd5a7bd785175a740197fc32146c026c83009fe9975790383f4",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/openai-key-readiness.json",
       "byteSize": 482,
-      "sha256": "1c01f14fa36c68a6d0758745278a8600f201ae5981e7531d0956110af549bb3a",
+      "sha256": "2a89128286a19697ee397c211d72e89e760ff16c2d1ca8c825846155c779ec97",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/package-status.json",
       "byteSize": 529,
-      "sha256": "24bea4a273c382d14f49771d68c110f4c400bac3a3fca4fde6a32b86e17250df",
+      "sha256": "938bb039b7e458472668a70c0ed4245077c3886a1dafb2236691cf9237105c06",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
@@ -209,7 +209,7 @@
     {
       "path": "build-week/bw3/privacy-audit.json",
       "byteSize": 415,
-      "sha256": "34d5a7f00c75574b3d1a973792d19908c18f29c1767b24674a4ae65102b0cae9",
+      "sha256": "29cb0328b597a227c1d7edfaa2cfcd6bff890f001cd926fbd4cfcbe89767ac23",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
@@ -223,56 +223,56 @@
     {
       "path": "build-week/bw3/provider-routing-contract.json",
       "byteSize": 2297,
-      "sha256": "f855fd75006859a9dccb94950df5207faa8af5276c00c634de4e9061a7fa36e2",
+      "sha256": "f93cc1ea5c9b1455b11616cbbdfc1063b3450403f0eb3578acfcf6cd3bf530c3",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/provider-status-contract.json",
       "byteSize": 681,
-      "sha256": "e8e0bb8489e48c0e7f3ca1c5baa954f62bf1c5e4d0f6a98a9a65a3bfe550551c",
+      "sha256": "6353dc028a317d38323de18c15b51783268f7bc357471e92b34e68e4d8954465",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/receipt-recomputation.json",
       "byteSize": 2953,
-      "sha256": "efec07f9e29476f178ebf877e89e00ec70b8a441e44e2b867343a69332d24594",
+      "sha256": "ef4252451a443c61a7fa88f5b20f1e90f53879d59432ca535340f9f41c4070ad",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/release-commit-log.md",
-      "byteSize": 560,
-      "sha256": "7da1531564343e25474b72b215771e9a453587283d995b9f37f385bef6cd0921",
+      "byteSize": 657,
+      "sha256": "1528a662925fa381a0854a9388e0a66c7a110326d5a846e9552fde68c557407b",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/repository-manifest.json",
       "byteSize": 1295,
-      "sha256": "46ca871c6802e9d2e37c1c63b16a187665040fe08268aec567e3997765ab0446",
+      "sha256": "7d16d48542889dc62bca3ba87bf58ab81bc061afeedb5edd246c3276cdb1d92a",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/repository-publication-readiness.json",
       "byteSize": 400,
-      "sha256": "22c4cdcd450637fa7a92de518b57cd86859dc863f7143ca99384591ca3ac4143",
+      "sha256": "c21ce78e0672ecac2cbb31487df1d754e46e0065a9d43197105f3b05d7423dcc",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/repository-secret-scan.json",
       "byteSize": 237,
-      "sha256": "ccc5dff45920663fbe857d8d657e112ce26c9f69a823d2bd9a74d6f2c6c02a2f",
+      "sha256": "523067767c94576c30409e6297075347f0d8cde679ec1fea687b30753166c913",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
     {
       "path": "build-week/bw3/score-change-scenario.json",
       "byteSize": 1008,
-      "sha256": "2f4b986fb59f9aa6ffdfef486262f2ba8e7ed8f9f5a1b1c3e7cad05fc86f6a31",
+      "sha256": "de599856ec75d2042522f86f46ded10cf95a9298dee92cda38d8f114e79eb06e",
       "privacyClassification": "PUBLIC_SYNTHETIC",
       "publicSafe": true
     },
