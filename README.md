@@ -30,7 +30,7 @@ Traditional job search often fragments discovery, resume comparison, employer ha
 
 ## Today's 3 Roles Worth Your Time
 
-`/demo/shortlist` applies one lexicographic policy:
+`/demo/shortlist` defaults to four short rationale items on each card: fit, compatibility, freshness, and blocker state. Exact ordering remains available under **How this shortlist works** and applies one lexicographic policy:
 
 1. numeric-score eligibility;
 2. blocker state;
@@ -40,7 +40,7 @@ Traditional job search often fragments discovery, resume comparison, employer ha
 6. posting freshness;
 7. stable job ID.
 
-No weights are combined and no hidden shortlist score exists. Each selected role shows why it was selected, strongest match, biggest gap, distance or Remote, freshness, Apply Priority, safe employer destination, and Save. Distance, work mode, and freshness never modify technical Fit Score.
+No weights are combined and no hidden shortlist score exists. Strongest matches, biggest gaps, and exact evidence remain on Job Detail instead of crowding the default shortlist. Distance, work mode, and freshness never modify technical Fit Score.
 
 ## Public-safe production coverage
 

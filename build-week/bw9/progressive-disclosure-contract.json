@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.bw9.progressive-disclosure.v1",
+  "shortlist": {
+    "defaultRationaleItems": ["Fit", "Compatibility", "Freshness", "Blocker"],
+    "maximumDefaultItems": 4,
+    "policyDisclosureLabel": "How this shortlist works",
+    "policyFactors": 7,
+    "hiddenScore": false
+  },
+  "coverage": {
+    "defaultFacts": ["Active catalog jobs", "California jobs", "Active official-source endpoints", "Last successful refresh"],
+    "secondaryDisclosures": ["Regional membership detail", "Recorded, reachable, and verified destinations", "Counting methodology, lineage, and limitations"],
+    "liveDatabaseCountsRendered": false,
+    "frozenSnapshot": "build-week/bw9/frozen-coverage-snapshot.json"
+  },
+  "result": "PASS"
+}

@@ -49,14 +49,15 @@ describe("JP-BW8 transparent shortlist policy", () => {
     expect(compareShortlistRows(row({ id: "a" }), row({ id: "b" }))).toBeLessThan(0);
   });
 
-  it("selects exactly three deterministic roles and explains each selection", () => {
+  it("selects exactly three deterministic roles with four concise rationale items", () => {
     const analyses = DEMO_JOBS.map(analysis);
     const first = buildTodayShortlist(DEMO_JOBS, analyses, DEMO_DISCOVERY_PROFILE);
     const second = buildTodayShortlist(DEMO_JOBS, analyses, DEMO_DISCOVERY_PROFILE);
     expect(first).toHaveLength(3);
     expect(first.map((item) => item.job.id)).toEqual(second.map((item) => item.job.id));
     expect(first.map((item) => item.rank)).toEqual([1, 2, 3]);
-    expect(first.every((item) => item.selectionReason.includes("published order"))).toBe(true);
+    expect(first.every((item) => item.rationale.length === 4)).toBe(true);
+    expect(first.every((item) => item.rationale.map((reason) => reason.label).join("|") === "Fit|Compatibility|Freshness|Blocker")).toBe(true);
   });
 
   it("keeps work mode, distance, and freshness outside technical Fit Score", () => {

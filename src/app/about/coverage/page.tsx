@@ -2,20 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock3, Database, FileKey2, MapPinned, ShieldCheck } from "lucide-react";
 import { DemoHeader } from "@/components/demo/demo-header";
-import snapshot from "../../../../build-week/bw8/production-coverage-snapshot.json";
+import snapshot from "../../../../build-week/bw9/frozen-coverage-snapshot.json";
 
 export const metadata: Metadata = {
-  title: "Production Coverage Proof | JobPilot",
-  description: "A reproducible, public-safe aggregate snapshot of JobPilot's larger production acquisition system.",
-};
-
-const freshnessLabels: Record<string, string> = {
-  WITHIN_24_HOURS: "Seen within 24 hours",
-  ONE_TO_THREE_DAYS: "Seen 1–3 days ago",
-  FOUR_TO_SEVEN_DAYS: "Seen 4–7 days ago",
-  EIGHT_TO_FOURTEEN_DAYS: "Seen 8–14 days ago",
-  FIFTEEN_TO_THIRTY_DAYS: "Seen 15–30 days ago",
-  OVER_THIRTY_DAYS: "Seen over 30 days ago",
+  title: "Frozen Production Coverage | JobPilot",
+  description: "One immutable, public-safe aggregate snapshot of JobPilot's processed acquisition portfolio.",
 };
 
 const formatNumber = (value: number) => new Intl.NumberFormat("en-US").format(value);
@@ -29,58 +20,56 @@ export default function Page() {
       <main className="mx-auto max-w-7xl px-5 py-12">
         <section className="grid gap-8 lg:grid-cols-[1.12fr_.88fr] lg:items-end">
           <div>
-            <p className="eyebrow"><Database className="size-4" /> Production reality, without private records</p>
-            <h1 className="mt-4 max-w-4xl font-serif text-5xl leading-[1.02] tracking-tight sm:text-6xl">A larger acquisition system stands behind the synthetic judge flow.</h1>
+            <p className="eyebrow"><Database className="size-4" /> Frozen production reality, without private records</p>
+            <h1 className="mt-4 max-w-4xl font-serif text-5xl leading-[1.02] tracking-tight sm:text-6xl">One snapshot. Four facts. No live-count drift.</h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-[#587064]">{snapshot.disclosure}</p>
           </div>
           <aside className="rounded-3xl border border-[#315c49]/15 bg-[#e8efe6] p-6">
-            <p className="metric-label">Claim boundary</p>
-            <p className="mt-3 text-sm leading-7 text-[#486458]">{snapshot.claimBoundary}</p>
-            <div className="mt-5 flex items-center gap-2 text-sm font-bold"><CheckCircle2 className="size-5 text-[#a1742d]" /> Reproduced in a read-only transaction</div>
+            <p className="metric-label">Frozen claim boundary</p>
+            <p className="mt-3 text-sm leading-7 text-[#486458]">{snapshot.countingPopulation}</p>
+            <div className="mt-5 flex items-center gap-2 text-sm font-bold"><CheckCircle2 className="size-5 text-[#a1742d]" /> {snapshot.status.replaceAll("_", " ")}</div>
           </aside>
         </section>
 
         <section aria-labelledby="coverage-scale-title" className="mt-10">
-          <div className="flex flex-wrap items-end justify-between gap-4"><div><p className="eyebrow">Current aggregate snapshot</p><h2 id="coverage-scale-title" className="mt-2 font-serif text-4xl">Processed catalog coverage</h2></div><p className="text-sm text-[#667b71]">As of {formatTimestamp(snapshot.generatedAt)} UTC</p></div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            <Metric label="Active catalog jobs" value={metrics.activeJobs.value} detail="Current ingestion status: ACTIVE" />
-            <Metric label="Verified California scope" value={metrics.regionalCounts.californiaVerified.value} detail={metrics.regionalCounts.californiaVerified.label} />
-            <Metric label="Bay Area memberships" value={metrics.regionalCounts.bayArea.value} detail={metrics.regionalCounts.bayArea.label} />
-            <Metric label="Los Angeles memberships" value={metrics.regionalCounts.losAngeles.value} detail={metrics.regionalCounts.losAngeles.label} />
-            <Metric label="Active source endpoints" value={metrics.activeSources.value} detail={`${formatNumber(metrics.completeSources.value)} latest complete snapshots`} />
+          <div className="flex flex-wrap items-end justify-between gap-4"><div><p className="eyebrow">Approval snapshot</p><h2 id="coverage-scale-title" className="mt-2 font-serif text-4xl">Processed catalog at a glance</h2></div><p className="text-sm text-[#667b71]">Frozen {formatTimestamp(snapshot.generatedAt)} UTC</p></div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Metric label="Active catalog jobs" value={metrics.activeCanonicalJobs.value} detail="Unique active Job IDs" />
+            <Metric label="California jobs" value={metrics.californiaUniqueJobs.value} detail="Unique affirmative-scope jobs" />
+            <Metric label="Active official-source endpoints" value={metrics.activeOfficialSourceEndpoints.value} detail={`${formatNumber(metrics.latestCompleteSnapshots.value)} latest complete snapshots`} />
+            <Metric label="Last successful refresh" value={formatTimestamp(metrics.lastSuccessfulRefresh.value)} detail="UTC · frozen, not live" icon={<Clock3 className="size-4" />} />
           </div>
         </section>
 
-        <section className="mt-8 grid gap-5 lg:grid-cols-2">
-          <article className="paper-card">
-            <div className="flex items-start justify-between gap-4"><div><p className="eyebrow"><FileKey2 className="size-4" /> Original application links</p><h2 className="mt-3 font-serif text-3xl">{metrics.originalApplicationLinkCoverage.percent}% recorded</h2></div><span className="pill">{formatNumber(metrics.originalApplicationLinkCoverage.count)} / {formatNumber(metrics.originalApplicationLinkCoverage.total)}</span></div>
-            <p className="mt-4 text-sm leading-7 text-[#587064]">{metrics.originalApplicationLinkCoverage.definition}</p>
-          </article>
-          <article className="paper-card">
-            <div className="flex items-start justify-between gap-4"><div><p className="eyebrow"><ShieldCheck className="size-4" /> Validated destinations</p><h2 className="mt-3 font-serif text-3xl">{metrics.validatedApplicationDestinations.percent}% apply-ready</h2></div><span className="pill">{formatNumber(metrics.validatedApplicationDestinations.count)} verified</span></div>
-            <p className="mt-4 text-sm leading-7 text-[#587064]">{metrics.validatedApplicationDestinations.definition} Recorded and validated are deliberately reported as different claims.</p>
-          </article>
-        </section>
+        <section aria-label="Coverage evidence disclosures" className="mt-8 grid gap-4">
+          <details className="paper-card">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 font-serif text-2xl"><MapPinned className="size-5 text-[#a1742d]" /> Regional membership detail</summary>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#587064]">These are distinct active-job memberships in exact market contracts. A job may belong to more than one market, so memberships are not added into the unique catalog total.</p>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2"><Metric label="San Francisco Bay Area" value={metrics.bayAreaMemberships.value} detail={metrics.bayAreaMemberships.marketKey} /><Metric label="Los Angeles County" value={metrics.losAngelesCountyMemberships.value} detail={metrics.losAngelesCountyMemberships.marketKey} /></div>
+          </details>
 
-        <section className="mt-8 grid gap-5 lg:grid-cols-[1.15fr_.85fr]">
-          <article className="paper-card">
-            <div className="flex items-center justify-between gap-4"><div><p className="eyebrow"><Clock3 className="size-4" /> Catalog freshness</p><h2 className="mt-3 font-serif text-3xl">Last-seen distribution</h2></div><span className="text-right text-xs leading-5 text-[#667b71]">Last successful refresh<br /><b>{formatTimestamp(metrics.lastSuccessfulRefresh.value)}</b></span></div>
-            <div className="mt-6 space-y-4">{metrics.freshnessDistribution.map((item) => <DistributionRow key={item.bucket} label={freshnessLabels[item.bucket] ?? item.bucket} count={item.count} percent={item.percent} />)}</div>
-          </article>
-          <article className="paper-card">
-            <p className="eyebrow"><MapPinned className="size-4" /> Work mode</p>
-            <h2 className="mt-3 font-serif text-3xl">Visible catalog mix</h2>
-            <div className="mt-6 space-y-4">{metrics.workModeDistribution.map((item) => <DistributionRow key={item.workMode} label={item.workMode} count={item.count} percent={item.percent} />)}</div>
-            <p className="mt-6 rounded-xl bg-[#fff4d8] p-4 text-sm leading-6">Work mode is a practical decision factor. It never changes the technical Fit Score.</p>
-          </article>
-        </section>
+          <details className="paper-card">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 font-serif text-2xl"><ShieldCheck className="size-5 text-[#a1742d]" /> Recorded, reachable, and verified destinations</summary>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#587064]">These are progressive evidence claims, not interchangeable labels. A recorded posting is not automatically reachable, and a reachable URL is not automatically a verified application destination.</p>
+            <div className="mt-5 grid gap-3">
+              <EvidenceRow label="Original posting recorded" count={metrics.originalPostingRecorded.count} total={metrics.originalPostingRecorded.total} percent={metrics.originalPostingRecorded.percent} state={metrics.originalPostingRecorded.state} />
+              <EvidenceRow label="URL reachable" count={metrics.urlReachable.count} total={metrics.urlReachable.total} percent={metrics.urlReachable.percent} state={metrics.urlReachable.state} />
+              <EvidenceRow label="Apply destination verified" count={metrics.applyDestinationVerified.count} total={metrics.applyDestinationVerified.total} percent={metrics.applyDestinationVerified.percent} state={metrics.applyDestinationVerified.state} />
+            </div>
+            <p className="mt-5 rounded-xl bg-[#fff4d8] p-4 text-sm leading-6 text-[#6f6248]">The smaller verified share reflects a stricter evidence gate across a much larger later catalog. It is not presented as a market-coverage percentage or as a failure of recorded links.</p>
+          </details>
 
-        <section className="mt-8 rounded-3xl bg-[#173d2d] p-6 text-[#fffaf0] sm:p-8">
-          <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
-            <div><p className="text-xs font-bold uppercase tracking-[.15em] text-[#d7c68d]">Reproduce the proof</p><h2 className="mt-3 font-serif text-3xl">Every displayed number is query-bound.</h2><p className="mt-4 text-sm leading-7 text-[#dce8df]">The source schema, migration manifest, aggregate queries, query output, and final snapshot are SHA-256 bound. The command opens an explicit read-only database transaction and exports no rows.</p></div>
-            <dl className="min-w-0 space-y-3 text-xs"><Hash label="Snapshot" value={snapshot.snapshotOutputHash} /><Hash label="Input" value={snapshot.reproduction.inputHash} /><Hash label="Query output" value={snapshot.reproduction.queryOutputHash} /></dl>
-          </div>
-          <code className="mt-7 block overflow-x-auto rounded-xl bg-black/20 p-4 text-xs text-[#eff5ef]">{snapshot.reproduction.command}</code>
+          <details className="paper-card">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 font-serif text-2xl"><FileKey2 className="size-5 text-[#a1742d]" /> Counting methodology, lineage, and limitations</summary>
+            <div className="mt-4 grid gap-5 text-sm leading-7 text-[#587064] lg:grid-cols-2">
+              <div><h3 className="font-bold text-[#173d2d]">Different counting populations</h3><p className="mt-2">JP-41 certified a bounded 2,808-record private-shadow generation. This snapshot counts the later active Job catalog after subsequent acquisition and refresh generations. They are not the same population.</p></div>
+              <div><h3 className="font-bold text-[#173d2d]">No double counting</h3><p className="mt-2">The active query returned {formatNumber(snapshot.integrity.activeCatalogRows)} rows and {formatNumber(snapshot.integrity.distinctActiveJobIds)} distinct IDs. Duplicate counting: {snapshot.integrity.duplicateCounting}.</p></div>
+              <div><h3 className="font-bold text-[#173d2d]">Privacy</h3><p className="mt-2">Only aggregates, timestamps, contract metadata, and hashes leave the read-only transaction. No job descriptions, URLs, candidate records, credentials, or source payloads are exported.</p></div>
+              <div><h3 className="font-bold text-[#173d2d]">Limitations</h3><p className="mt-2">The snapshot describes a processed source portfolio at one read version. It does not claim complete market coverage, hiring outcomes, or current live availability after the frozen timestamp.</p></div>
+            </div>
+            <dl className="mt-6 min-w-0 rounded-2xl bg-[#173d2d] p-5 text-xs text-[#fffaf0]"><Hash label="Snapshot" value={snapshot.snapshotOutputHash} /><Hash label="Database" value={snapshot.reproduction.databaseFingerprint} /><Hash label="Query output" value={snapshot.reproduction.queryOutputHash} /></dl>
+            <code className="mt-4 block overflow-x-auto rounded-xl bg-[#edf1e8] p-4 text-xs">{snapshot.reproduction.command}</code>
+          </details>
         </section>
 
         <section className="mt-8 flex flex-wrap items-center justify-between gap-5 rounded-3xl border border-[#173d2d]/10 bg-white/55 p-6"><div><p className="font-serif text-2xl">What should judges inspect next?</p><p className="mt-2 text-sm text-[#587064]">See how JobPilot turns visible evidence into three roles worth reviewing today.</p></div><div className="flex flex-wrap gap-3"><Link href="/demo/shortlist" className="button-primary">See Today&apos;s Shortlist <ArrowRight className="size-4" /></Link><Link href="/demo/trust" className="button-secondary">Open Trust Lab</Link></div></section>
@@ -89,14 +78,14 @@ export default function Page() {
   );
 }
 
-function Metric({ label, value, detail }: { label: string; value: number; detail: string }) {
-  return <article className="rounded-2xl border border-[#173d2d]/10 bg-[#fffdf7] p-5"><p className="metric-label">{label}</p><p className="mt-3 font-serif text-4xl tracking-tight">{formatNumber(value)}</p><p className="mt-2 text-xs leading-5 text-[#667b71]">{detail}</p></article>;
+function Metric({ label, value, detail, icon }: { label: string; value: number | string; detail: string; icon?: React.ReactNode }) {
+  return <article className="rounded-2xl border border-[#173d2d]/10 bg-[#fffdf7] p-5"><p className="metric-label flex items-center gap-2">{icon}{label}</p><p className={`mt-3 font-serif tracking-tight ${typeof value === "number" ? "text-4xl" : "text-2xl leading-8"}`}>{typeof value === "number" ? formatNumber(value) : value}</p><p className="mt-2 text-xs leading-5 text-[#667b71]">{detail}</p></article>;
 }
 
-function DistributionRow({ label, count, percent }: { label: string; count: number; percent: number }) {
-  return <div><div className="flex items-end justify-between gap-3 text-sm"><span className="font-semibold">{label}</span><span className="text-xs text-[#667b71]">{formatNumber(count)} · {percent}%</span></div><div className="mt-2 h-2 overflow-hidden rounded-full bg-[#e6e0d3]"><div className="h-full rounded-full bg-[#4e7a63]" style={{ width: `${Math.max(percent, count ? 0.4 : 0)}%` }} /></div></div>;
+function EvidenceRow({ label, count, total, percent, state }: { label: string; count: number; total: number; percent: number; state: string }) {
+  return <div className="grid gap-2 rounded-2xl bg-[#edf1e8] p-4 sm:grid-cols-[1fr_auto] sm:items-center"><div><p className="font-bold">{label}</p><p className="mt-1 break-words font-mono text-[11px] text-[#667b71]">{state}</p></div><p className="font-serif text-2xl">{formatNumber(count)} <span className="font-sans text-xs text-[#667b71]">/ {formatNumber(total)} · {percent}%</span></p></div>;
 }
 
 function Hash({ label, value }: { label: string; value: string }) {
-  return <div className="grid min-w-0 gap-1 sm:grid-cols-[90px_1fr]"><dt className="font-bold text-[#d7c68d]">{label}</dt><dd className="min-w-0 break-all font-mono text-[#e6efe8]">{value}</dd></div>;
+  return <div className="grid min-w-0 gap-1 py-1 sm:grid-cols-[90px_1fr]"><dt className="font-bold text-[#d7c68d]">{label}</dt><dd className="min-w-0 break-all font-mono text-[#e6efe8]">{value}</dd></div>;
 }

@@ -25,7 +25,12 @@ export type ShortlistAnalysis = {
 
 export type ShortlistRow = DiscoveryRow<ShortlistAnalysis> & {
   rank: number;
-  selectionReason: string;
+  rationale: [
+    { label: "Fit"; value: string },
+    { label: "Compatibility"; value: string },
+    { label: "Freshness"; value: string },
+    { label: "Blocker"; value: string },
+  ];
 };
 
 const descending = (left: number, right: number) => right - left;
@@ -42,11 +47,13 @@ export function compareShortlistRows(left: DiscoveryRow<ShortlistAnalysis>, righ
     || left.job.id.localeCompare(right.job.id);
 }
 
-function reasonFor(row: DiscoveryRow<ShortlistAnalysis>, rank: number) {
-  const score = row.analysis.score === null ? "insufficient evidence for a numeric Fit Score" : `${row.analysis.score} Fit Score`;
-  const blocker = row.analysis.confirmedBlockerCount === 0 ? "no confirmed blocker" : `${row.analysis.confirmedBlockerCount} confirmed blocker`;
-  const evidence = `${row.analysis.evidenceQuality.toFixed(1)} Evidence Quality`;
-  return `#${rank} after applying the published order: ${score}, ${blocker}, ${evidence}, ${row.distanceLabel}, then posting date and stable job ID.`;
+function rationaleFor(row: DiscoveryRow<ShortlistAnalysis>): ShortlistRow["rationale"] {
+  return [
+    { label: "Fit", value: row.analysis.score === null ? "No numeric score" : `${row.analysis.score} / 100 · evidence ${row.analysis.evidenceQuality.toFixed(1)}` },
+    { label: "Compatibility", value: `${row.distanceLabel} · ${row.analysis.priority.replaceAll("_", " ").toLowerCase()} priority` },
+    { label: "Freshness", value: freshnessLabel(row.job.postedAt) },
+    { label: "Blocker", value: row.analysis.confirmedBlockerCount === 0 ? "None confirmed" : `${row.analysis.confirmedBlockerCount} confirmed` },
+  ];
 }
 
 export function buildTodayShortlist(jobs: DemoJob[], analyses: ShortlistAnalysis[], profile: DiscoveryProfile, limit = 3): ShortlistRow[] {
@@ -59,10 +66,10 @@ export function buildTodayShortlist(jobs: DemoJob[], analyses: ShortlistAnalysis
     })
     .sort(compareShortlistRows)
     .slice(0, Math.max(0, limit))
-    .map((row, index) => ({ ...row, rank: index + 1, selectionReason: reasonFor(row, index + 1) }));
+    .map((row, index) => ({ ...row, rank: index + 1, rationale: rationaleFor(row) }));
 }
 
-export function freshnessLabel(postedAt: string, asOf = new Date()) {
+export function freshnessLabel(postedAt: string, asOf = new Date("2026-07-18T17:41:08.379Z")) {
   const days = Math.max(0, Math.floor((asOf.getTime() - Date.parse(postedAt)) / 86_400_000));
   if (days === 0) return "Posted today";
   if (days === 1) return "Posted yesterday";
