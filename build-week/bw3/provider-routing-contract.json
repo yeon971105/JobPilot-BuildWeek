@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "routes": [
+    {
+      "task": "DETERMINISTIC_EXTRACTION",
+      "owner": "DETERMINISTIC_CODE",
+      "reason": "Explicit parsing and all scoring are deterministic."
+    },
+    {
+      "task": "JOB_SEMANTIC_ANALYSIS",
+      "owner": "LOCAL_GEMMA",
+      "reason": "Primary private semantic role analysis."
+    },
+    {
+      "task": "RESUME_SEMANTIC_PROFILE",
+      "owner": "LOCAL_GEMMA",
+      "reason": "Independently cached private semantic profile."
+    },
+    {
+      "task": "BATCHED_REQUIREMENT_MATCH",
+      "owner": "LOCAL_GEMMA",
+      "reason": "One batched evidence-matching call, not one call per requirement."
+    },
+    {
+      "task": "APPLICATION_STRATEGY",
+      "owner": "OPENAI_GPT56_HEAVY",
+      "reason": "Explicit bounded strategy request only."
+    },
+    {
+      "task": "CHALLENGE_ANALYSIS",
+      "owner": "OPENAI_GPT56_HEAVY",
+      "reason": "Independent critique that cannot mutate the score."
+    },
+    {
+      "task": "RESOLVE_AMBIGUITY",
+      "owner": "OPENAI_GPT56_HEAVY",
+      "reason": "User-requested deeper analysis after local uncertainty."
+    },
+    {
+      "task": "COMPARE_STRATEGIES",
+      "owner": "OPENAI_GPT56_HEAVY",
+      "reason": "Explicit bounded comparison only."
+    }
+  ],
+  "noKeyRoutes": [
+    {
+      "task": "DETERMINISTIC_EXTRACTION",
+      "runtime": "DETERMINISTIC_CODE"
+    },
+    {
+      "task": "JOB_SEMANTIC_ANALYSIS",
+      "runtime": "LOCAL_GEMMA_PREPARED"
+    },
+    {
+      "task": "RESUME_SEMANTIC_PROFILE",
+      "runtime": "LOCAL_GEMMA_PREPARED"
+    },
+    {
+      "task": "BATCHED_REQUIREMENT_MATCH",
+      "runtime": "LOCAL_GEMMA_PREPARED"
+    },
+    {
+      "task": "APPLICATION_STRATEGY",
+      "runtime": "FIXTURE_ONLY"
+    },
+    {
+      "task": "CHALLENGE_ANALYSIS",
+      "runtime": "FIXTURE_ONLY"
+    },
+    {
+      "task": "RESOLVE_AMBIGUITY",
+      "runtime": "FIXTURE_ONLY"
+    },
+    {
+      "task": "COMPARE_STRATEGIES",
+      "runtime": "FIXTURE_ONLY"
+    }
+  ],
+  "forbiddenGptUses": [
+    "routine job parsing",
+    "routine resume parsing",
+    "job-card rendering",
+    "final numeric score",
+    "hidden point adjustment",
+    "work-mode parsing",
+    "explicit year parsing",
+    "application submission"
+  ]
+}

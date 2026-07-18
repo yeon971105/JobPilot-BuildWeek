@@ -11,7 +11,11 @@
     "test": "vitest run",
     "demo:setup": "tsx scripts/build-week-demo-setup.ts",
     "demo:validate": "vitest run src/server/build-week",
-    "phase12:report": "tsx scripts/phase12-report.ts"
+    "phase12:report": "tsx scripts/phase12-report.ts",
+    "validate:providers": "tsx scripts/validate-providers.ts",
+    "validate:local-gemma": "tsx scripts/validate-local-gemma.ts",
+    "validate:openai-heavy": "tsx scripts/validate-openai-heavy.ts",
+    "bw3:report": "tsx scripts/bw3-report.ts"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "mockedTransport": true,
+  "actionsValidated": [
+    "APPLICATION_STRATEGY",
+    "CHALLENGE_ANALYSIS"
+  ],
+  "schemasImplemented": [
+    "APPLICATION_STRATEGY",
+    "CHALLENGE_ANALYSIS",
+    "RESOLVE_AMBIGUITY",
+    "COMPARE_STRATEGIES"
+  ],
+  "refusalFixturePassed": true,
+  "incompleteFixturePassed": true,
+  "evidenceIdsValidated": true,
+  "rawResumeSent": false,
+  "finalScoreProduced": false,
+  "tests": "src/server/build-week/strategy.test.ts",
+  "passed": true
+}

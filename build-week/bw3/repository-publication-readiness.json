@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "remoteConfigured": false,
+  "remoteUrl": null,
+  "pushed": false,
+  "releaseTag": "build-week-2026-hybrid-rc1",
+  "tagCreated": false,
+  "requiredFilesPresent": true,
+  "secretScanPassed": true,
+  "authenticatedPublicationAvailable": false,
+  "hold": "HOLD_BUILD_WEEK_REPOSITORY_ACCOUNT_ACTION",
+  "ready": true
+}

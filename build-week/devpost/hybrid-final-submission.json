@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.devpost-submission.v1",
+  "projectName": "JobPilot — Evidence-First AI Job Search",
+  "tagline": "Know why a job fits before you apply.",
+  "category": "Apps for Your Life",
+  "primaryModel": "gemma4:12b",
+  "primaryRuntime": "Ollama",
+  "deterministicScorer": "jobpilot-ai-fit-v2.2",
+  "optionalHeavyModel": "gpt-5.6-terra",
+  "repositoryUrl": null,
+  "demoUrl": null,
+  "videoUrl": null,
+  "codexFeedbackSessionId": null,
+  "submitted": false,
+  "syntheticDataOnly": true,
+  "hiringProbabilityClaim": false
+}

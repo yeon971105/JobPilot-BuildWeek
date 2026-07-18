@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "jobpilot.bw3-browser-qa.v1",
+  "timestamp": "2026-07-18T00:25:33.3991222Z",
+  "productionBuild": true,
+  "noKeyMode": true,
+  "viewports": {
+    "desktop": { "requested": "1440x900", "clientWidth": 1425, "horizontalOverflow": 0, "blankCards": 0, "screenshot": "build-week/bw3/browser-desktop-1440x900.png", "detailScreenshot": "build-week/bw3/browser-desktop-detail.png", "status": "PASS" },
+    "tablet": { "requested": "1024x768", "clientWidth": 1009, "horizontalOverflow": 0, "jobCards": 6, "blankCards": 0, "screenshot": "build-week/bw3/browser-tablet-1024x768.png", "status": "PASS" },
+    "mobile": { "requested": "390x844", "clientWidth": 375, "listHorizontalOverflow": 0, "detailHorizontalOverflow": 0, "jobCards": 6, "blankCards": 0, "screenshot": "build-week/bw3/browser-mobile-390x844.png", "detailScreenshot": "build-week/bw3/browser-mobile-detail-390x844.png", "status": "PASS" }
+  },
+  "goldenPath": {
+    "landing": true,
+    "tryDemo": true,
+    "browseSixJobs": true,
+    "search": true,
+    "filter": true,
+    "openJob": true,
+    "inspectEvidence": true,
+    "inspectExperience": true,
+    "viewReceipt": true,
+    "seeScoreChange": true,
+    "preparedStrategy": true,
+    "preparedChallenge": true,
+    "save": true,
+    "trackerStage": true,
+    "trackerNotePersistence": true,
+    "trackerRestore": true,
+    "trustLabAllFiveTabs": true
+  },
+  "providerLabels": { "preparedGemmaVisible": true, "preparedStrategyVisible": true, "preparedCritiqueVisible": true, "fakeLiveBadge": false },
+  "requiredZeros": { "consoleErrors": 0, "consoleWarnings": 0, "failedInternalRequests": 0, "routeHttpErrors": 0, "horizontalOverflow": 0, "brokenControls": 0, "blankCompletedCards": 0, "genericSkillGaps": 0, "unsupportedWorkModeMismatch": 0, "incompleteScoreAllocation": 0, "hiddenScoreAdjustments": 0, "hardcodedScores": 0, "hardcodedReceipts": 0, "providerMislabels": 0, "fixturesPresentedAsLive": 0, "apiKeyExposure": 0, "realResumeExposure": 0, "protectedAttributeScoring": 0, "applicationSubmissions": 0, "productionMutations": 0 },
+  "routeMatrix": { "getRoutes": 9, "fixturePostRoutes": 2, "http200": 11 },
+  "passed": true
+}

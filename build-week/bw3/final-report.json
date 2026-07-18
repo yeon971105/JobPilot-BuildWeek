@@ -1,0 +1,241 @@
+{
+  "schemaVersion": "jobpilot.codex-handoff.v1",
+  "identity": {
+    "project": "JobPilot",
+    "workItem": "JP-BW3",
+    "status": "LOCALLY_COMPLETE_WITH_ACCOUNT_ACTIONS",
+    "decision": "GO_BUILD_WEEK_HYBRID_RELEASE_READY_WITH_ACCOUNT_ACTIONS",
+    "decisionClass": "GO_WITH_HOLDS",
+    "timestamp": "2026-07-18T00:40:42.609Z"
+  },
+  "repository": {
+    "mirror": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+    "branch": "build-week/jobpilot-2026",
+    "startingHead": "5d80ad8ae8f5b4b1eac7ed38dce09ae547bd48dc",
+    "evidenceGeneratedAgainstHead": "bad3726ebcc5aa96d4f0a8de1748216a7c28a4b0",
+    "worktreeCleanAtReportGeneration": false,
+    "commitsCreated": [
+      {
+        "hash": "4bcc62b2eff70230e0eebf6b6e8353f639e91264",
+        "message": "feat: make Gemma the primary local AI runtime"
+      },
+      {
+        "hash": "76e6a3492e3540f815b214614498b53193c55eb3",
+        "message": "feat: add optional GPT-5.6 heavy reasoning"
+      },
+      {
+        "hash": "bad3726ebcc5aa96d4f0a8de1748216a7c28a4b0",
+        "message": "feat: add hybrid trust and score-change experience"
+      }
+    ],
+    "remoteConfigured": false,
+    "pushed": false
+  },
+  "parent": {
+    "reproduced": true,
+    "decision": "GO_BUILD_WEEK_PHASE_1_2_COMPLETE_WITH_LIVE_GPT56_HOLD",
+    "artifactIndexSha256": "fa4ecb86135b0ba3c1deb52503a92760633cc43c2cbc3c962aed0b4188c1a66e",
+    "scoreProofCountsReproduced": true,
+    "privacyAuditPassed": true,
+    "secretScanPassed": true,
+    "postRunPassed": true
+  },
+  "architecture": {
+    "mode": "LOCAL_FIRST_HYBRID",
+    "primaryModel": "gemma4:12b",
+    "primaryModelRuntime": "Ollama",
+    "deterministicScorer": "jobpilot-ai-fit-v2.2",
+    "heavyModel": "gpt-5.6-terra",
+    "heavyModelOptional": true,
+    "applicationWorksWithoutOpenAiKey": true
+  },
+  "gemma": {
+    "responsibilities": [
+      "ambiguous job-requirement extraction",
+      "capability grouping",
+      "importance and centrality",
+      "resume semantic profile",
+      "batched requirement-to-evidence matching",
+      "equivalence and partial-match analysis",
+      "grounded role summary",
+      "uncertainty"
+    ],
+    "modelAvailable": true,
+    "modelDigest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",
+    "localEndpoint": "http://127.0.0.1:11434",
+    "liveCanaryAttempted": true,
+    "liveCanaryCompleted": true,
+    "cachedJudgeAnalyses": 6,
+    "cachedAnalysesCorrectlyLabeled": true,
+    "hold": null
+  },
+  "gpt56": {
+    "responsibilities": [
+      "Build My Application Strategy",
+      "Challenge This Analysis",
+      "Resolve Ambiguous Requirement",
+      "Compare Two Application Strategies"
+    ],
+    "providerImplemented": true,
+    "responsesApi": true,
+    "structuredOutputs": true,
+    "heavyFeatureFlag": false,
+    "keyConfigured": false,
+    "sourceCodeChangeRequiredAfterKey": false,
+    "mockValidationPassed": true,
+    "liveCallsCompleted": 0,
+    "fixtureCorrectlyLabeled": true,
+    "hold": "HOLD_BUILD_WEEK_LIVE_GPT56_CONFIGURATION"
+  },
+  "scoreTrust": {
+    "scorerVersion": "jobpilot-ai-fit-v2.2",
+    "hardcodedScoresFound": 0,
+    "hardcodedReceiptsFound": 0,
+    "receiptRecomputationMismatches": 0,
+    "inputMutationChangedExpectedCapability": true,
+    "workModeScoreLeakage": 0,
+    "hiddenAdjustments": 0,
+    "scoreChangeFeaturePassed": true
+  },
+  "judgeMode": {
+    "noKeyModePassed": true,
+    "noLogin": true,
+    "syntheticJobs": 6,
+    "preparedGemmaBadge": true,
+    "preparedStrategyBadge": true,
+    "goldenPathPassed": true
+  },
+  "browser": {
+    "desktop": "PASS",
+    "tablet": "PASS",
+    "mobile": "PASS",
+    "consoleErrors": 0,
+    "failedInternalRequests": 0,
+    "horizontalOverflow": 0,
+    "passed": true
+  },
+  "validation": {
+    "tests": {
+      "files": 4,
+      "tests": 26,
+      "status": "PASS"
+    },
+    "typecheck": "PASS",
+    "build": "PASS",
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "secretScan": "PASS",
+    "passed": true
+  },
+  "release": {
+    "deploymentReady": true,
+    "deploymentUrl": null,
+    "repositoryReady": true,
+    "repositoryUrl": null,
+    "videoPackageReady": true,
+    "videoFile": "build-week/video/hybrid-final-demo.mp4",
+    "youtubeUrl": null,
+    "devpostPackageReady": true,
+    "devpostSubmitted": false,
+    "codexFeedbackSessionId": null
+  },
+  "privacy": {
+    "realResumeRecords": 0,
+    "secretsFound": 0,
+    "apiKeysExposed": 0,
+    "protectedAttributesScored": 0,
+    "chainOfThoughtStored": 0,
+    "applicationSubmissions": 0,
+    "productionMutations": 0,
+    "passed": true
+  },
+  "postRunState": {
+    "activeWorkers": 0,
+    "testServers": 0,
+    "browserProcesses": 0,
+    "activeModelRequests": 0,
+    "pendingTransactions": 0,
+    "locks": 0
+  },
+  "holds": {
+    "active": [
+      {
+        "code": "HOLD_BUILD_WEEK_LIVE_GPT56_CONFIGURATION",
+        "evidence": "OPENAI_API_KEY is absent; the provider and mocked transport pass and live calls are 0.",
+        "impact": "Optional live heavy reasoning is not certified.",
+        "clearanceCommand": "Set-Item -Path Env:OPENAI_API_KEY -Value '<server-secret>'; Set-Item -Path Env:OPENAI_HEAVY_FEATURES_ENABLED -Value 'true'; npm run validate:openai-heavy"
+      },
+      {
+        "code": "HOLD_BUILD_WEEK_DEPLOYMENT_ACCOUNT_ACTION",
+        "evidence": "No authenticated deployment CLI/target is available.",
+        "impact": "No public demo URL exists.",
+        "clearanceCommand": "Configure the documented no-key environment in an authenticated target, then run vercel deploy --prod (or the target equivalent) and smoke-test the returned URL."
+      },
+      {
+        "code": "HOLD_BUILD_WEEK_REPOSITORY_ACCOUNT_ACTION",
+        "evidence": "No Git remote is configured.",
+        "impact": "No public repository URL or release tag exists.",
+        "clearanceCommand": "git remote add origin <authorized-url>; git push -u origin build-week/jobpilot-2026; git tag build-week-2026-hybrid-rc1; git push origin build-week-2026-hybrid-rc1"
+      },
+      {
+        "code": "HOLD_BUILD_WEEK_YOUTUBE_ACCOUNT_ACTION",
+        "evidence": "The validated MP4 and metadata are local; no upload authentication is available.",
+        "impact": "No public video URL exists.",
+        "clearanceCommand": "Upload build-week/video/hybrid-final-demo.mp4 with build-week/video/hybrid-youtube-metadata.md in the authorized YouTube account, then verify captions and visibility."
+      },
+      {
+        "code": "HOLD_BUILD_WEEK_DEVPOST_ACCOUNT_ACTION",
+        "evidence": "The form-ready package is complete but no authenticated submission was authorized.",
+        "impact": "Devpost is not submitted.",
+        "clearanceCommand": "Use build-week/devpost/hybrid-final-form-values.json in the authorized Devpost account, add the verified repository/demo/video URLs and Codex Session ID, then submit and capture confirmation."
+      },
+      {
+        "code": "HOLD_BUILD_WEEK_CODEX_FEEDBACK_ACTION",
+        "evidence": "No /feedback Session ID was provided to this task.",
+        "impact": "The Devpost Session ID placeholder remains empty.",
+        "clearanceCommand": "Run /feedback in Codex, copy the resulting Session ID into the Devpost package, and revalidate the form values."
+      },
+      {
+        "code": "HOLD_AI_FIT_HUMAN_CALIBRATION",
+        "evidence": "No independent hiring-outcome calibration dataset exists.",
+        "impact": "The score remains policy-based and is not a hiring probability.",
+        "clearanceCommand": "Complete the documented independent human/outcome calibration protocol in AI_SCORE_EVALUATION.md and publish its limitations."
+      }
+    ],
+    "cleared": [
+      "HOLD_BUILD_WEEK_PARENT_RUN_ACTIVE",
+      "HOLD_BUILD_WEEK_LOCAL_GEMMA_LIVE_CERTIFICATION",
+      "HOLD_BUILD_WEEK_NO_KEY_GOLDEN_PATH",
+      "HOLD_AI_FIT_V22_SCORING_CONTRACT"
+    ],
+    "new": []
+  },
+  "artifacts": [
+    {
+      "path": "build-week/bw3/artifact-index.json",
+      "purpose": "Hash-indexed public-safe release evidence"
+    }
+  ],
+  "nextStep": {
+    "workItem": "JP-BW4",
+    "objective": "Complete account-authenticated publication and final submission actions.",
+    "accountActions": [
+      "Publish the repository and tag",
+      "Deploy no-key judge mode",
+      "Upload the validated video",
+      "Capture the Codex /feedback Session ID",
+      "Submit Devpost"
+    ],
+    "firstCommand": null,
+    "prohibitedActions": [
+      "replace Gemma as the primary model",
+      "unbounded catalog backfill",
+      "another market",
+      "auto-apply",
+      "fake live provider evidence",
+      "public production data exposure"
+    ],
+    "successDecision": "GO_BUILD_WEEK_SUBMITTED",
+    "failureDecision": "HOLD_BUILD_WEEK_FINAL_ACCOUNT_ACTIONS"
+  }
+}

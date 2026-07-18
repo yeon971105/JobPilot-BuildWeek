@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "branch": "build-week/jobpilot-2026",
+  "evidenceGeneratedAgainstHead": "bad3726ebcc5aa96d4f0a8de1748216a7c28a4b0",
+  "requiredFiles": [
+    {
+      "path": "README.md",
+      "present": true
+    },
+    {
+      "path": "LICENSE",
+      "present": true
+    },
+    {
+      "path": "BUILD_WEEK_CHANGELOG.md",
+      "present": true
+    },
+    {
+      "path": "CODEX_BUILD_LOG.md",
+      "present": true
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "present": true
+    },
+    {
+      "path": "AI_SCORE_METHODOLOGY.md",
+      "present": true
+    },
+    {
+      "path": "AI_SCORE_EVALUATION.md",
+      "present": true
+    },
+    {
+      "path": "HYBRID_AI_RUNTIME.md",
+      "present": true
+    },
+    {
+      "path": "PRIVACY.md",
+      "present": true
+    },
+    {
+      "path": "JUDGE_GUIDE.md",
+      "present": true
+    },
+    {
+      "path": ".env.example",
+      "present": true
+    }
+  ],
+  "syntheticJobs": 6,
+  "cachedGemmaAnalyses": 6,
+  "testCommands": [
+    "npm run typecheck",
+    "npm run lint",
+    "npm test",
+    "npm run build",
+    "npm run validate:providers",
+    "npm run validate:local-gemma",
+    "npm run validate:openai-heavy"
+  ],
+  "fileCountExcludingDependenciesAndBuild": 180
+}

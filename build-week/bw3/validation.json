@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.bw3-validation.v1",
+  "timestamp": "2026-07-18T00:25:33.3991222Z",
+  "quickStart": { "npmInstall": "PASS", "npmRunBuild": "PASS", "npmRunStart": "PASS", "productionPort": 3100 },
+  "typecheck": "PASS",
+  "lint": { "status": "PASS", "errors": 0, "warnings": 0 },
+  "tests": { "status": "PASS", "files": 4, "tests": 26 },
+  "productionBuild": { "status": "PASS", "nextVersion": "16.2.6", "pagesAndRoutes": 18 },
+  "providerValidation": "PASS",
+  "localGemmaValidation": { "status": "PASS", "liveCanary": true, "modelPulled": false, "modelSubstituted": false },
+  "openAiHeavyValidation": { "status": "CONFIGURATION_REQUIRED", "expectedExitCode": 78, "actualExitCode": 78, "secretPrinted": false },
+  "browser": "PASS",
+  "privacy": "PASS",
+  "secretScan": "PASS",
+  "dependencyAudit": { "moderateAdvisories": 2, "forcedBreakingFixApplied": false },
+  "passed": true
+}

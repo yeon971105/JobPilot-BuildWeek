@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "mode": "LOCAL_FIRST_HYBRID",
+  "primarySemanticModel": {
+    "provider": "LOCAL_GEMMA",
+    "runtime": "Ollama",
+    "model": "gemma4:12b",
+    "endpoint": "loopback only"
+  },
+  "scorer": {
+    "provider": "DETERMINISTIC_CODE",
+    "version": "jobpilot-ai-fit-v2.2",
+    "ownsEveryPoint": true,
+    "modelGeneratedFinalScore": false,
+    "hiddenAdjustments": 0
+  },
+  "optionalHeavyModel": {
+    "provider": "OPENAI_GPT56_HEAVY",
+    "model": "gpt-5.6-terra",
+    "optional": true,
+    "bounded": true
+  },
+  "fixtureOnlyUses": [
+    "deterministic tests",
+    "browser QA",
+    "video contingency",
+    "no-key public demo"
+  ],
+  "worksWithoutOpenAiKey": true
+}

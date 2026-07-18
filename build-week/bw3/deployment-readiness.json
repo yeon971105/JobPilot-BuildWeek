@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "productionBuildPresent": true,
+  "noKeyBrowserPassed": true,
+  "deploymentCliAvailable": false,
+  "authenticatedTargetAvailable": false,
+  "deployed": false,
+  "deploymentUrl": null,
+  "exactCommand": "Set the documented no-key environment variables in an authenticated target, then run vercel deploy --prod (or the target's equivalent).",
+  "hold": "HOLD_BUILD_WEEK_DEPLOYMENT_ACCOUNT_ACTION",
+  "ready": true
+}

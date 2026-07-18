@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "scorerVersion": "jobpilot-ai-fit-v2.2",
+  "receiptVersion": "jobpilot-score-receipt.v2.2",
+  "candidateProfileHash": "1543ff77e3d16d83084d40ded95b9cc359d2040db15bf8df5ee719f44a5c3d1e",
+  "jobs": [
+    {
+      "jobId": "northstar-applied-ai-solutions-engineer",
+      "jobHash": "b874e8c44a1e8cb610bd2138eff0aa95099d17c3a8938438ec309fe234d9d135",
+      "displayedScore": 97,
+      "numericEligible": true,
+      "computedReceiptHash": "62fdbaaf07763a5d82a312ef00647f98f111c83aa9ed683395f92723996a6b7e",
+      "cachedReceiptHash": "62fdbaaf07763a5d82a312ef00647f98f111c83aa9ed683395f92723996a6b7e",
+      "match": true
+    },
+    {
+      "jobId": "alder-data-platform-engineer",
+      "jobHash": "996dc1344ae8aada52948019ac4f835f43171f99d6d687b58a18629e8f8dda63",
+      "displayedScore": 70,
+      "numericEligible": true,
+      "computedReceiptHash": "9258d1e87146183a639ecec54a79c13bc58024ce730502265110c065535f4b1e",
+      "cachedReceiptHash": "9258d1e87146183a639ecec54a79c13bc58024ce730502265110c065535f4b1e",
+      "match": true
+    },
+    {
+      "jobId": "harbor-product-data-analyst",
+      "jobHash": "7900c52640648484e7ddf5ec9eb69d61f51d170baff664715465b4949e7fea88",
+      "displayedScore": 99,
+      "numericEligible": true,
+      "computedReceiptHash": "bcf412638bdb12870f80a97baa37b94ff386aa306ac2a75e37d0d238c4162487",
+      "cachedReceiptHash": "bcf412638bdb12870f80a97baa37b94ff386aa306ac2a75e37d0d238c4162487",
+      "match": true
+    },
+    {
+      "jobId": "meridian-ml-infrastructure-engineer",
+      "jobHash": "f6eeb9b6e6cc118b68f40881848ab773e11522b8cfb58af704c2f44624065b58",
+      "displayedScore": 52,
+      "numericEligible": true,
+      "computedReceiptHash": "094083cee01be779ca26be0abc28d7b2029800f422b170ee1922e20c934f91f5",
+      "cachedReceiptHash": "094083cee01be779ca26be0abc28d7b2029800f422b170ee1922e20c934f91f5",
+      "match": true
+    },
+    {
+      "jobId": "juniper-customer-ai-enablement-lead",
+      "jobHash": "a714292e76260973f2f2ef3affb8a5743a6738301b7a2ea41ee1bb9107de6334",
+      "displayedScore": 92,
+      "numericEligible": true,
+      "computedReceiptHash": "b9c6ed8a868d2b29d4ae9391006baadf279137fcfba4a80cf7210ec51262b11f",
+      "cachedReceiptHash": "b9c6ed8a868d2b29d4ae9391006baadf279137fcfba4a80cf7210ec51262b11f",
+      "match": true
+    },
+    {
+      "jobId": "mosaic-junior-software-engineer",
+      "jobHash": "068c48806f36eef021128f0010cff5e21df9e53740a6ced9f33b67afd403468d",
+      "displayedScore": null,
+      "numericEligible": false,
+      "computedReceiptHash": "6b9f91dbcb0462df4b3081bd2e103246041073f166527be1e8101874752d008b",
+      "cachedReceiptHash": "6b9f91dbcb0462df4b3081bd2e103246041073f166527be1e8101874752d008b",
+      "match": true
+    }
+  ],
+  "exactHundredPointNumericAnalyses": 5,
+  "numericAnalyses": 5,
+  "insufficientEvidenceAnalyses": 1,
+  "mismatches": 0,
+  "passed": true
+}

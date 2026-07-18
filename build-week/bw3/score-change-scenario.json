@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "scenarioId": "score-change-verified-ai-evidence-v1",
+  "disclaimer": "This scenario demonstrates score sensitivity. It does not recommend adding experience you do not have.",
+  "changedEvidence": "The same frozen applied-AI evidence is independently verified as an exact match; no new experience is added.",
+  "affectedCapability": "Applied AI Workflow Delivery",
+  "requirementId": "r-ns-ai",
+  "evidenceIds": [
+    "e-ai",
+    "e-delivery"
+  ],
+  "originalClassification": "STRONG_EQUIVALENT",
+  "changedClassification": "MATCHED",
+  "originalScore": 97,
+  "newScore": 100,
+  "originalCapabilityPoints": 23.086189,
+  "newCapabilityPoints": 25.651321,
+  "changedPoints": 2.565132,
+  "unchangedUnrelatedPoints": true,
+  "originalReceiptHash": "62fdbaaf07763a5d82a312ef00647f98f111c83aa9ed683395f92723996a6b7e",
+  "newReceiptHash": "efd4e83b6534fd32f15030b1a81b3df9889f0252f55330585fba73cb88cc9d2c",
+  "recomputed": true
+}

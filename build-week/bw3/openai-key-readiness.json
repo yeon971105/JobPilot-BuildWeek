@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "keyPresenceInspectedWithoutReadingValue": true,
+  "keyConfigured": false,
+  "liveCallsCompleted": 0,
+  "configurationRequiredExitCode": 78,
+  "sourceCodeChangeRequired": false,
+  "enablement": [
+    "Set OPENAI_API_KEY in the server environment.",
+    "Set OPENAI_HEAVY_FEATURES_ENABLED=true.",
+    "Run npm run validate:openai-heavy."
+  ],
+  "hold": "HOLD_BUILD_WEEK_LIVE_GPT56_CONFIGURATION"
+}

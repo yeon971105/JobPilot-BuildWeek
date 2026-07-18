@@ -2,120 +2,123 @@
 
 > Know why a job fits before you apply.
 
-Job seekers often get opaque match scores after reading long job descriptions. JobPilot makes the decision inspectable: it separates required and preferred qualifications, connects each displayed match to evidence, shows practical constraints, and calculates the Fit Score with deterministic versioned code. Fit Score is an evidence-based ranking score, not a hiring probability.
+JobPilot turns job descriptions into inspectable career decisions. It separates required and preferred qualifications, maps each match to evidence, shows practical constraints, and reconciles every eligible Fit Score to exactly 100 visible points. A Fit Score is an evidence-based ranking score, not a hiring probability.
 
-## Build Week demo
+## Local-first hybrid architecture
 
-Category: **Apps for Your Life**. The no-login Build Week demo uses original synthetic candidate and job data. It is available locally at `/`, `/demo`, `/demo/jobs`, `/demo/jobs/[id]`, and `/demo/tracker`.
+1. **Deterministic Code** parses explicit facts, unions experience months, normalizes aliases, allocates points, separates constraints, and creates the Score Receipt.
+2. **Gemma 4 12B** is the primary semantic model for ambiguous requirements, capability grouping, evidence matching, equivalence, summaries, and uncertainty.
+3. **GPT-5.6 Terra** is optional and restricted to explicit heavy reasoning: application strategy, independent critique, difficult ambiguity, and strategy comparison.
+4. **Prepared output** keeps the synthetic judge flow reliable without Ollama or an OpenAI key and is never labeled live or fresh.
 
-- Browse six fictional roles spanning remote, hybrid, and onsite work.
-- Inspect responsibilities, requirements, evidence IDs, practical constraints, score components, and limitations.
-- Save and remove roles from a session-local tracker.
-- Use **Build My Application Strategy**. When `BUILD_WEEK_GPT56` is enabled, the server calls GPT-5.6 through the Responses API with Structured Outputs. The strategy must cite known requirement and evidence IDs; the model cannot calculate a score, invent candidate experience, or submit an application.
-- Without a configured hosted key, a separate **Fixture preview** is available and visibly labelled `FIXTURE_ONLY`. It is never presented as a GPT-5.6 result.
+The deterministic scorer—not a model—calculates every score.
 
-## Screenshot / preview
+## Quick Start
 
-Run the demo locally and record `/demo/jobs/northstar-applied-ai-solutions-engineer` for the intended evidence-first product view. The checked-in demo uses only original text and visual styling; it includes no employer logo, real resume, or copied job description.
-
-## How Codex and GPT-5.6 were used
-
-Codex was used to build the Build Week extension: synthetic demo mode, provider abstraction, deterministic evidence UI, grounded strategy validation, rate limiting, tests, release documentation, and submission packaging. GPT-5.6 is reserved for a bounded server-side application-strategy request in Build Week mode. The request consumes only synthetic job and candidate data, deterministic score components, and internal IDs. GPT-5.6 does not return the final Fit Score.
-
-## Architecture
-
-```text
-Synthetic demo catalog + candidate evidence
-                │
-                ├── deterministic evidence and score display (100 visible points)
-                │
-                └── Build My Application Strategy
-                      ├── BUILD_WEEK_GPT56 → Responses API + JSON Schema
-                      ├── PRIVATE_LOCAL → Ollama gemma4:12b (Beta, private mode)
-                      └── FIXTURE_ONLY → labelled offline preview
-```
-
-## Scoring boundaries
-
-The latest valid scorer keeps Core, Preferred, and Nice-to-Have budgets visible. Preferred contributes at most 12 maximum points, Preferred Experience at most 4, Nice-to-Have at most 3, and hidden adjustment is always zero. A completed numeric result must reconcile to 100 visible maximum points. Unknown evidence is not silently treated as a confirmed gap, and work mode/travel are displayed as practical constraints rather than hidden technical-fit deductions.
-
-Policy-based evidence score. Independent hiring-outcome calibration is not yet available.
-
-## Private Local Mode and Build Week Demo Mode
-
-| Mode | Provider | Data | Status |
-| --- | --- | --- | --- |
-| `PRIVATE_LOCAL` | Ollama `gemma4:12b` | private local analysis | Beta; current performance holds remain |
-| `BUILD_WEEK_GPT56` | OpenAI Responses API, `gpt-5.6-terra` | synthetic public-demo content only | enabled only with explicit server environment configuration |
-| `FIXTURE_ONLY` | deterministic fixture | tests and video fallback | visibly labelled; never live GPT-5.6 |
-
-## Quick start
-
-Prerequisites: Node.js 20+, npm, and PostgreSQL only if you want non-demo product routes. The synthetic Build Week demo itself does not require a database, user account, or Ollama model.
+Prerequisites: Node.js 20+ and npm. The public synthetic demo does not require PostgreSQL, Ollama, an account, or an OpenAI key.
 
 ```bash
 npm install
-npm run demo:setup
-npm run dev
-```
-
-Open `http://localhost:3000/demo`.
-
-Validate the demo contract:
-
-```bash
-npm run demo:validate
-npm run typecheck
 npm run build
+npm run start
 ```
 
-## Environment variables
+Open `http://localhost:3000`, select **Try the Demo**, and follow the no-login Golden Path.
 
-Copy `.env.example` to `.env`. Never commit it.
+Validation:
 
 ```bash
-BUILD_WEEK_DEMO_MODE="true"
-BUILD_WEEK_ALLOW_LIVE_GPT56="false"
-OPENAI_BUILD_WEEK_MODEL="gpt-5.6-terra"
-OPENAI_API_KEY="" # server-side only
-AI_PROVIDER="FIXTURE_ONLY"
-OLLAMA_BASE_URL="http://127.0.0.1:11434"
-OLLAMA_MODEL="gemma4:12b"
+npm test
+npm run typecheck
+npm run lint
+npm run validate:providers
 ```
 
-For a hosted GPT-5.6 demo, configure `OPENAI_API_KEY` and set `BUILD_WEEK_ALLOW_LIVE_GPT56=true` only in server-side deployment settings. The route has a timeout, an in-memory per-IP daily request limit, and a safe quota/error response. Do not send real private resumes to this hosted demo path.
+Optional exact local Gemma validation—this never pulls or substitutes a model:
 
-## Synthetic demo data
+```bash
+npm run validate:local-gemma
+```
 
-The original fictional dataset is in [`build-week/demo-data`](build-week/demo-data). It includes no real person, email address, telephone number, address, employer logo, copied job posting, or private source payload.
+Optional GPT-heavy validation requires a server-side key and one enablement flag:
 
-## Testing and health
+```bash
+OPENAI_API_KEY=... OPENAI_HEAVY_FEATURES_ENABLED=true npm run validate:openai-heavy
+```
 
-- `npm run demo:validate` — synthetic data, score reconciliation, fixture grounding, and provider-mode tests.
-- `npm test` — existing project suite.
-- `npm run typecheck` — TypeScript validation.
-- `npm run build` — production build.
-- `GET /api/health` — non-sensitive Build Week demo health/status endpoint.
+When the key is absent, `validate:openai-heavy` exits with documented configuration-required code 78 and never prints a key.
 
-## Supported platforms
+## No-key judge mode
 
-The demo is designed for modern desktop and mobile browsers. Required QA viewports are 1440×900, 1024×768, and 390×844. Keyboard focus styles and semantic buttons/headings are provided in the demo experience.
+The checked-in `.env.example` defaults to:
 
-## Privacy and safety
+```dotenv
+AI_RUNTIME_MODE="LOCAL_FIRST"
+OLLAMA_MODEL="gemma4:12b"
+BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES="true"
+BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS="false"
+OPENAI_HEAVY_FEATURES_ENABLED="false"
+BUILD_WEEK_ALLOW_LIVE_GPT56="false"
+```
 
-The Build Week demo is synthetic and session-local. It has no account creation, resume upload, auto-apply, or application submission. It does not expose server-side API keys. The public demo does not depend on local Ollama or a production database. The product avoids hiring-probability claims and retains the human-calibration hold.
+In this mode, all primary routes use a synthetic candidate, six fictional jobs, prepared Gemma analysis artifacts, AI Fit V2.2, prepared strategy/critique output, and browser-local tracker state. No production database or credentials are loaded.
 
-## Known limitations
+## Judge flow
 
-- The bundled demo data is intentionally compact and fictional; it does not claim market coverage.
-- GPT-5.6 live strategy requires a server-side API key and explicit release configuration.
-- Private Local mode remains Beta while its broader performance evaluation hold is open.
-- Independent hiring-outcome calibration is not available.
+`Landing → Try Demo → Browse/Search/Filter → Open Role → Inspect Evidence and Experience → View Receipt → See a Score Change → Build Strategy → Save → Tracker → Trust Lab`
 
-## Build Week extension disclosure
+Required routes:
 
-JobPilot existed before Build Week. The Build Week extension is separately documented in [`BUILD_WEEK_CHANGELOG.md`](BUILD_WEEK_CHANGELOG.md) and `build-week/build-week-extension-evidence.json`; it does not claim pre-existing catalog or product work as new.
+- `/`
+- `/demo`
+- `/demo/jobs`
+- `/demo/jobs/[id]`
+- `/demo/tracker`
+- `/demo/trust`
+- `/about/build-week`
+- `/api/health`
+- `/api/provider-status`
 
-## License and attribution
+## Score contract
 
-License selection and public-repository publication remain an owner decision. The synthetic demo data has its own [`demo-data license`](build-week/demo-data/LICENSE.md). Project attribution: JobPilot contributors.
+- CORE begins at 85 points.
+- PREFERRED contributes at most 12; preferred experience at most 4.
+- NICE_TO_HAVE contributes at most 3 and at most 1 per capability.
+- Unused class capacity transfers visibly to CORE.
+- Integer micro-point arithmetic and stable largest-remainder allocation reconcile eligible analyses to 100.
+- Work mode, location, and travel never change technical-fit points.
+- UNKNOWN is not a confirmed gap.
+- Insufficient evidence never displays a numeric Fit Score.
+- Hidden adjustments are always zero.
+
+See [AI_SCORE_METHODOLOGY.md](AI_SCORE_METHODOLOGY.md) and [AI_SCORE_EVALUATION.md](AI_SCORE_EVALUATION.md).
+
+## Provider labels
+
+- `Local Gemma — Live`
+- `Local Gemma — Prepared Analysis`
+- `GPT-5.6 — Live Heavy Reasoning`
+- `Prepared Demonstration Output`
+
+A badge is rendered only when its state is true. Prepared output is never represented as live inference.
+
+## Privacy
+
+The repository contains only original synthetic candidate and job data. There is no resume upload, real candidate, production database, employer logo, protected-attribute scoring, auto-apply, or application submission. Actual private-user analysis is designed to remain on the local Ollama runtime. Build Week GPT-heavy requests use bounded synthetic/public-safe facts and IDs, never a full raw resume.
+
+## Repository map
+
+- `src/server/build-week/` — environment validation, provider routing, Gemma adapter, deterministic scorer, heavy schemas, and tests
+- `src/components/demo/` — no-login judge interface
+- `build-week/demo-data/` — frozen synthetic inputs and prepared analysis artifacts
+- `build-week/bw3/` — hybrid contracts, validation, deployment, and release evidence
+- `build-week/video/` — final recording package
+- `build-week/devpost/` — account-ready submission package
+
+## Limitations
+
+Policy-based evidence score. Independent hiring-outcome calibration is not yet available. The public demo is intentionally synthetic and compact. Optional GPT-heavy features require server-side configuration. JobPilot does not predict employer decisions or submit applications.
+
+## License
+
+Code and original documentation are available under the [MIT License](LICENSE). Synthetic fixtures contain no third-party job text, resume, logo, or personal data.

@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:15,000
+Most AI job tools give you a score and ask you to trust it. JobPilot makes every career decision inspectable.
+
+2
+00:00:15,000 --> 00:00:35,000
+JobPilot is local-first and evidence-first. Gemma 4 12B is the primary semantic model, while deterministic code calculates every score.
+
+3
+00:00:35,000 --> 00:01:05,000
+This public demo uses only synthetic data. Browse six fictional roles, search by title or company, and filter by work mode or evidence sufficiency.
+
+4
+00:01:05,000 --> 00:01:25,000
+Every required and preferred capability stays tied to the source requirement, candidate evidence, match class, uncertainty, and exact point allocation.
+
+5
+00:01:25,000 --> 00:01:40,000
+Experience is calculated month by month. Work mode and travel remain visible constraints and never silently change technical points.
+
+6
+00:01:40,000 --> 00:01:58,000
+The Score Receipt reconciles one hundred visible points. See a Score Change recomputes the affected capability and creates a new receipt hash.
+
+7
+00:01:58,000 --> 00:02:20,000
+GPT-5.6 Terra is reserved for complex strategy and critique. This no-key result is clearly prepared, and GPT-5.6 never generates the score.
+
+8
+00:02:20,000 --> 00:02:40,000
+The Trust Lab shows Gemma primary, deterministic scoring, fixture reliability, optional GPT, privacy, proof, and Codex's Build Week contribution.
+
+9
+00:02:40,000 --> 00:02:50,000
+JobPilot: know why a job fits before you apply.

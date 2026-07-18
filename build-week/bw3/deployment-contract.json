@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "mode": "HOSTED_NO_KEY_JUDGE",
+  "requires": {
+    "Ollama": false,
+    "OpenAIKey": false,
+    "productionDatabase": false,
+    "userAccount": false
+  },
+  "environment": {
+    "AI_RUNTIME_MODE": "LOCAL_FIRST",
+    "OPENAI_HEAVY_FEATURES_ENABLED": "false",
+    "OPENAI_HEAVY_MODEL": "gpt-5.6-terra",
+    "BUILD_WEEK_DEMO_MODE": "true",
+    "BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES": "true",
+    "BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS": "false",
+    "BUILD_WEEK_ALLOW_LIVE_GPT56": "false"
+  },
+  "data": "six synthetic jobs and one synthetic candidate",
+  "storage": "browser-local tracker",
+  "healthEndpoint": "/api/health",
+  "commands": [
+    "npm install",
+    "npm run build",
+    "npm run start"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "sourceScope": [
+    "src/components",
+    "src/server/build-week/scorer.ts",
+    "src/server/build-week/score-change.ts"
+  ],
+  "fixedFinalScoreLiteralsFound": 0,
+  "fixedReceiptHashLiteralsFound": 0,
+  "cachedProvenanceHashesExcludedFromProductLiteralFinding": true,
+  "jobsRecomputed": 6,
+  "receiptMismatches": 0,
+  "deterministicSecondPassMismatches": 0,
+  "inputMutationChangedExpectedCapability": true,
+  "unrelatedCapabilityChanges": 0,
+  "workModeScoreLeakage": 0,
+  "hiddenAdjustments": 0,
+  "passed": true
+}

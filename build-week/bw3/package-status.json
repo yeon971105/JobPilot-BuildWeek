@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "localGemmaCanaryPassed": true,
+  "model": "gemma4:12b",
+  "modelDigest": "4eb23ef187e2c5462566d6a1d3bbbc2f1346d0b4327cbb66d58fffbcc9b2b05c",
+  "cachedAnalyses": 6,
+  "openAiLiveCalls": 0,
+  "buildPresent": true,
+  "browserPassed": true,
+  "deploymentAccountActionRequired": true,
+  "repositoryAccountActionRequired": true,
+  "youtubeAccountActionRequired": true,
+  "devpostAccountActionRequired": true,
+  "codexFeedbackActionRequired": true
+}

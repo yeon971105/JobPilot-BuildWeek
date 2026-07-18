@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "route": "/api/health",
+  "expectedStatus": 200,
+  "expectedBody": {
+    "applicationStatus": "ok",
+    "demoDataStatus": "synthetic-ready",
+    "cachedGemmaStatus": "ready",
+    "deterministicScorerStatus": "jobpilot-ai-fit-v2.2-ready",
+    "openAiHeavyFeatures": "disabled"
+  },
+  "fieldCount": 5,
+  "secretsExposed": 0,
+  "filesystemPathsExposed": 0,
+  "passed": true
+}

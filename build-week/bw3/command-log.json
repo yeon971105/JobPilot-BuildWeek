@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.bw3-command-log.v1",
+  "timestamp": "2026-07-18T00:25:33.3991222Z",
+  "commands": [
+    { "command": "npm install", "result": "PASS; dependency tree installed, 2 moderate advisories retained without forced breaking update." },
+    { "command": "npm run typecheck", "result": "PASS" },
+    { "command": "npm run lint", "result": "PASS; 0 errors, 0 warnings" },
+    { "command": "npm test", "result": "PASS; 4 files, 26 tests" },
+    { "command": "npm run build", "result": "PASS; Next.js 16.2.6, 18 pages/routes" },
+    { "command": "npm run validate:providers", "result": "PASS in no-key mode" },
+    { "command": "npm run validate:local-gemma -- --record", "result": "PASS; exact gemma4:12b canary, no pull or substitution" },
+    { "command": "npm run validate:openai-heavy", "result": "CONFIGURATION_REQUIRED; expected exit 78, no secret printed" },
+    { "command": "production route matrix on http://127.0.0.1:3100", "result": "PASS; 11 of 11 routes/actions returned HTTP 200" },
+    { "command": "in-app browser Golden Path", "result": "PASS at 1440x900, 1024x768, and 390x844" }
+  ]
+}

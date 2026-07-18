@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "endpoint": "/api/provider-status",
+  "healthEndpoint": "/api/health",
+  "allowedFields": [
+    "applicationStatus",
+    "demoDataStatus",
+    "cachedGemmaStatus",
+    "deterministicScorerStatus",
+    "openAiHeavyFeatures"
+  ],
+  "sample": {
+    "applicationStatus": "ok",
+    "demoDataStatus": "synthetic-ready",
+    "cachedGemmaStatus": "ready",
+    "deterministicScorerStatus": "jobpilot-ai-fit-v2.2-ready",
+    "openAiHeavyFeatures": "disabled"
+  },
+  "forbiddenFields": [
+    "secret values",
+    "local filesystem",
+    "model paths",
+    "credentials"
+  ],
+  "exactAllowedFieldCount": 5
+}

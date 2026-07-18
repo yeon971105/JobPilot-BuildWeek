@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.bw3.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "realResumeRecords": 0,
+  "realCandidateRecords": 0,
+  "apiKeysExposed": 0,
+  "protectedAttributesScored": 0,
+  "chainOfThoughtStored": 0,
+  "applicationSubmissions": 0,
+  "productionMutations": 0,
+  "externalPrivateResumeTransmission": 0,
+  "syntheticJobs": 6,
+  "syntheticCandidates": 1,
+  "secretsFound": 0,
+  "passed": true
+}

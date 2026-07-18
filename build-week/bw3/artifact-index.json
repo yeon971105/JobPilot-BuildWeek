@@ -1,0 +1,819 @@
+{
+  "schemaVersion": "jobpilot.bw3-artifact-index.v1",
+  "timestamp": "2026-07-18T00:40:42.609Z",
+  "selfExclusion": "The index excludes itself to avoid recursive hashing.",
+  "artifacts": [
+    {
+      "path": "build-week/bw3/anti-hardcoding-audit.json",
+      "byteSize": 604,
+      "sha256": "2bdcc53808daae0da1aa7b97caf63f438a7a058ecb2011fb1e3dafd93b127ed3",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/browser-desktop-1440x900.png",
+      "byteSize": 123444,
+      "sha256": "6d18e110429f15f68f8c31e2a8c6e399af5e59754042ba3ed82c3030f1aad873",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/browser-desktop-detail.png",
+      "byteSize": 1153755,
+      "sha256": "6ad75eefd9896a98ce9610f1533891e6c9be4f3daf1096b324f2e8933c2dddb6",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/browser-mobile-390x844.png",
+      "byteSize": 96218,
+      "sha256": "edf499cfb3a155c80f80a1aa4eeb87c07b70ea02b3b021c01fcd002b45103043",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/browser-mobile-detail-390x844.png",
+      "byteSize": 964075,
+      "sha256": "a9944b5df3613e0a3c1e32d5a030dc36cc0e7dc837dea669ba9a39fe50df3a31",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/browser-qa.json",
+      "byteSize": 2165,
+      "sha256": "65ae1ee6c29c0c72dd1df4b7aad56a907baf4cabc219833c10802046ae9d155e",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/browser-tablet-1024x768.png",
+      "byteSize": 105801,
+      "sha256": "26af9f2ebad26d58010d330200f56c6ff2886d5362cc22af05b3c3080a472089",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/browser-trust-lab.png",
+      "byteSize": 28547,
+      "sha256": "389bb80afa3e439246edb192da2846cd1f32f3002377d230726fc5a7ff31fdf9",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/command-log.json",
+      "byteSize": 1123,
+      "sha256": "36941fc1a2215bab81a3f3adec9822b6bb4cac194d4a3470e2c74dd3e3b516e1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/deployment-contract.json",
+      "byteSize": 793,
+      "sha256": "d4313aa48cd641e6f09081c9c70d83f66b1791ca87a96c937f426746d7e4fb21",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/deployment-readiness.json",
+      "byteSize": 499,
+      "sha256": "9330033172a00cbe3a0db7b31fdbda58eebbf95279d0ccaf4cd04880823aabd2",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/environment-contract.json",
+      "byteSize": 820,
+      "sha256": "b1ad9fff850fad07d2e21e9f3c75fc6f470acf8ccc0dac80ac1dabbaccf37460",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/failures-and-repairs.json",
+      "byteSize": 4011,
+      "sha256": "be53a291d4e35574599a96e2b202ef218683635e14eaed86e059a61bdf7802ba",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/final-report.json",
+      "byteSize": 8725,
+      "sha256": "2953d91cc171e84ef2936effa7d715b6f8eccb24fc72125261ef1fad221b1228",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/final-report.md",
+      "byteSize": 1470,
+      "sha256": "c1eae5c3ca2a56e2a4a27a2dd22f83d4e0da76d8be1d6886a1a2b170151a2d54",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/health-check.json",
+      "byteSize": 458,
+      "sha256": "409c8a9b974be6c761b80e66ff7cfb3c639f686e7f7cac9b8651ac5ef2b5e29c",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/hybrid-ai-contract.json",
+      "byteSize": 751,
+      "sha256": "c227fc8b4c42fd108f1a5f3270a5ab0031914f15853338e21b8ae5898dc8dcf2",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/judge-deployment-instructions.md",
+      "byteSize": 449,
+      "sha256": "596cc391fa7507f400ab97e7abde51b20756b742160a0501e8ac0564de64ebaa",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/local-gemma-analysis-trace.json",
+      "byteSize": 3793,
+      "sha256": "25a74bf00c11dd3ca4751b35b6c8b0566feeac6b3fe7f32e7a62547910523706",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/local-gemma-canary.json",
+      "byteSize": 555,
+      "sha256": "1c6b6b37b2209d0c2516081db9f17acfdb214263d081ed70d60ca886799235ee",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/local-gemma-model-freeze.json",
+      "byteSize": 331,
+      "sha256": "d539e93d8c367a99834e479e46a56194698e90ea959f1679d4b2fa14a4a72c79",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/local-gemma-runtime.json",
+      "byteSize": 926,
+      "sha256": "312a36957892d3a26a1da6bf9b2d848beaa3e4359a18d39a615df69af1532dbd",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/model-responsibility-matrix.md",
+      "byteSize": 852,
+      "sha256": "8b88453eb52e0ff1715c5facb3d113c2eca52882ef7370414c97d4ba8481e08a",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/openai-heavy-provider-contract.json",
+      "byteSize": 751,
+      "sha256": "099d9eddfc832babc02c794a3d81cee94b4339d4efcae05d50b90f80fe62c6b2",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/openai-heavy-schema-validation.json",
+      "byteSize": 555,
+      "sha256": "bccbe94e4302da07584521d1d70c3eb717b0e77fa44ea51e17bec60248d1a204",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/openai-key-readiness.json",
+      "byteSize": 482,
+      "sha256": "1c01f14fa36c68a6d0758745278a8600f201ae5981e7531d0956110af549bb3a",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/package-status.json",
+      "byteSize": 529,
+      "sha256": "24bea4a273c382d14f49771d68c110f4c400bac3a3fca4fde6a32b86e17250df",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/parent-artifact-hashes.json",
+      "byteSize": 1462,
+      "sha256": "5fe6c4240ae3438e759633e0730eeadd388d7abfcaa92e2ac600faa068b1fe5c",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/parent-baseline.json",
+      "byteSize": 1134,
+      "sha256": "b84e55cfc520892291da3bf206ec28a9506d7e6225d36a784e1d08f771523c5a",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/privacy-audit.json",
+      "byteSize": 415,
+      "sha256": "34d5a7f00c75574b3d1a973792d19908c18f29c1767b24674a4ae65102b0cae9",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/process-and-lock-audit.json",
+      "byteSize": 926,
+      "sha256": "8ea0e3f947d01799cb7c8192e32003f21fe696f7253500c3741f4bbd1ba427fb",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/provider-routing-contract.json",
+      "byteSize": 2297,
+      "sha256": "f855fd75006859a9dccb94950df5207faa8af5276c00c634de4e9061a7fa36e2",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/provider-status-contract.json",
+      "byteSize": 681,
+      "sha256": "e8e0bb8489e48c0e7f3ca1c5baa954f62bf1c5e4d0f6a98a9a65a3bfe550551c",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/receipt-recomputation.json",
+      "byteSize": 2953,
+      "sha256": "efec07f9e29476f178ebf877e89e00ec70b8a441e44e2b867343a69332d24594",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/release-commit-log.md",
+      "byteSize": 560,
+      "sha256": "7da1531564343e25474b72b215771e9a453587283d995b9f37f385bef6cd0921",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/repository-manifest.json",
+      "byteSize": 1295,
+      "sha256": "46ca871c6802e9d2e37c1c63b16a187665040fe08268aec567e3997765ab0446",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/repository-publication-readiness.json",
+      "byteSize": 400,
+      "sha256": "22c4cdcd450637fa7a92de518b57cd86859dc863f7143ca99384591ca3ac4143",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/repository-secret-scan.json",
+      "byteSize": 237,
+      "sha256": "ccc5dff45920663fbe857d8d657e112ce26c9f69a823d2bd9a74d6f2c6c02a2f",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/score-change-scenario.json",
+      "byteSize": 1008,
+      "sha256": "2f4b986fb59f9aa6ffdfef486262f2ba8e7ed8f9f5a1b1c3e7cad05fc86f6a31",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/validation.json",
+      "byteSize": 897,
+      "sha256": "2fd1b518aa01b3d82cf96a5698bf1f137950b0fa737afe5dc536e3b860d4858b",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/video-frame-100.png",
+      "byteSize": 354598,
+      "sha256": "3a00747b630b3fa6bd3ae7412e35e81af126cd4a3b51d1d30ed1135bf2063ff7",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/video-frame-145.png",
+      "byteSize": 383079,
+      "sha256": "bb03f3673ef4b5f12731dca31f7f6ee0fff88810b2d1b449657a45f578d8ad78",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/video-frame-165.png",
+      "byteSize": 384789,
+      "sha256": "3834d5360d378d1ace6ce2cd5bd688a3b08b4a581446a450a6dac66014462f54",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/video-frame-5.png",
+      "byteSize": 293579,
+      "sha256": "af9df483b84b7b5da177615b494822ada6c859c664a4151214675d388ae07a21",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/bw3/video-frame-50.png",
+      "byteSize": 402939,
+      "sha256": "fc89f53468ee1821f0e60d9e83c10346e286c2f42c2d083f9713937a7bf6051e",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/codex-collaboration.md",
+      "byteSize": 1097,
+      "sha256": "5a43329aedc4959ba903ebdd1e33ae864ff964ed428703359acf0f381f832143",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/demo-data/cached-gemma-analyses.json",
+      "byteSize": 14349,
+      "sha256": "ec08978e877344fa11159effd708d800a90e670433f823f61a38bdac9624d619",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/demo-data/candidate-profile.json",
+      "byteSize": 3184,
+      "sha256": "45d7d28fbb1ca9fc2a135e48979fd048e96baa477d21ed68023356b4535ad6ab",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/demo-data/expected-analysis.json",
+      "byteSize": 1599,
+      "sha256": "547ff635c523a0b5b60c396a797a1447e203e29ecae794433c45577dce124196",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/demo-data/fixture-contract.json",
+      "byteSize": 1181,
+      "sha256": "1b015ef2d5c6eae92ca2e129c274d6550c194ec123578ecf6f7cc2395d5ed734",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/demo-data/jobs.json",
+      "byteSize": 23518,
+      "sha256": "9eeada2022ec3fdedc04028a08fdd8a7e6feec1c75c46efb2673afb2b013e960",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/demo-data/LICENSE.md",
+      "byteSize": 346,
+      "sha256": "827830801b74827a4168ecd26cf5838cc3a2c13f6702c161f2f344f91e815dfc",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/demo-data/README.md",
+      "byteSize": 267,
+      "sha256": "397d7c2030e96b97afec2f4908be6399943652bfece68c486b898d7bfc9e6bd6",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/devpost/hybrid-final-form-values.json",
+      "byteSize": 491,
+      "sha256": "23c84e619615e10d53455bbc8d36d7f1ea88347665b1e058c720e2ab4c16395c",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/devpost/hybrid-final-submission.json",
+      "byteSize": 544,
+      "sha256": "3c82a1eca6eb71a80c4dcbb380b8470fa88b6ce56a0a3017e66ba7fdf14a3b1c",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/devpost/hybrid-final-submission.md",
+      "byteSize": 2803,
+      "sha256": "abce5f7b738e1caa18a58e623325a9284fe4cecd31242bcd98b84c28e2912114",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/devpost/hybrid-judging-map.md",
+      "byteSize": 926,
+      "sha256": "7fbcae0de3e4695563130be731e34aca1a9b714cd6c831a7d511b86a53215745",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/devpost/judging-criteria-mapping.md",
+      "byteSize": 866,
+      "sha256": "60d3fc940ccb154d5c8019f9c81300b95574bd7755a30a8595f47c8662386183",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/devpost/short-description.txt",
+      "byteSize": 211,
+      "sha256": "15d51b6da34380b537159f65cd75d8a6d732b746807ba1ea89617acd8110ba7c",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/devpost/submission.md",
+      "byteSize": 3092,
+      "sha256": "aa07d095f7011848903b7b2caf48ed3e7e8b78a5987fc7d0e5062f16bb2f60d3",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/judge-testing-instructions.md",
+      "byteSize": 1364,
+      "sha256": "147dafa009fd2dcfaacd81da672c1faad2ce8014ead80cf93b3b2eae0facbf51",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-browser-desktop.png",
+      "byteSize": 50155,
+      "sha256": "482f691483d44cda9134bc27f3e7a76ed15daf4c6f5f6cb840298fc47aaed687",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-browser-mobile-detail.png",
+      "byteSize": 36281,
+      "sha256": "79d6e548db880c2efb5f1611824c36f2e0b05c58544ab2eff25cbf9bccef3594",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-browser-mobile.png",
+      "byteSize": 96218,
+      "sha256": "edf499cfb3a155c80f80a1aa4eeb87c07b70ea02b3b021c01fcd002b45103043",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-browser-qa.json",
+      "byteSize": 1669,
+      "sha256": "8b37c0feef0b20fe569e74e60d4ca15cd4b47de4f1f6619623b6c2aa4a160447",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-browser-qa.md",
+      "byteSize": 509,
+      "sha256": "0ecc75c368606a8de43fad2b21064f837162e04611169e21798159fd1e7fd8d0",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-browser-tablet.png",
+      "byteSize": 105801,
+      "sha256": "26af9f2ebad26d58010d330200f56c6ff2886d5362cc22af05b3c3080a472089",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-capability-contract.json",
+      "byteSize": 374,
+      "sha256": "736e6794803af6e8aaf87395b9cdb7d93de20b3614540cf0f7ce371af5a66812",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-command-log.json",
+      "byteSize": 2309,
+      "sha256": "64c48577a696a10d760f2ba5f45179050eb295162d5c2afeee4c6c60bdc5f020",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-demo-data-validation.json",
+      "byteSize": 613,
+      "sha256": "42da6fc194fc3330dc58fa7eefc2ff06dfad1985807f49cbe9974221ec2eacae",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-evidence-quality-contract.json",
+      "byteSize": 484,
+      "sha256": "3a8f5c0cd6b45dd1207d9afddd2a7eafad2d15221799fdc08471b5aac771fc87",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-experience-contract.json",
+      "byteSize": 365,
+      "sha256": "1020c04a8aa5fdfc5c0df23c5f62c38d3639fb87d4e68dee344a0d15f78831c9",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-failures-and-repairs.json",
+      "byteSize": 3168,
+      "sha256": "46b51cdca417d0a7ff186f325557062a66dfa61ba83cae632cc5a12c3e4b8666",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-final-report.json",
+      "byteSize": 44736,
+      "sha256": "f900b1d3c01ab1a1712d9ffc63f23cb5869635e1892523cf4683c29fda6aee34",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-final-report.md",
+      "byteSize": 4323,
+      "sha256": "e863f28f6d7d46ac5f581dbd07e9475bf0f23585151c28c0c622a53abff9c3be",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-golden-path-contract.json",
+      "byteSize": 479,
+      "sha256": "26dc8335f205edd64a0d93f14eb6f942d95fd3f81eb8024e7e2974cfbe2c7b02",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-gpt56-provider-validation.json",
+      "byteSize": 667,
+      "sha256": "d3c96cd7f661b8681dded4ac930ddc320b3be8b99f42df0ed6a9248af6ecf8dd",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-parent-baseline.json",
+      "byteSize": 466,
+      "sha256": "572d9b8b1f6ce12bce3591be98de7fe3e291d1ed60ff087909c40e9ee8741fb3",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-parent-process-audit.json",
+      "byteSize": 515,
+      "sha256": "834906afcb8cd9813a30ff1c37f86de5bd52224e29386feaeb1092641eaca3e1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-post-run-integrity.json",
+      "byteSize": 392,
+      "sha256": "5179e90e64e04255ba913b94e7c3cf57cca9ec2e54af628d6c0b2552650d846d",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-privacy-audit.json",
+      "byteSize": 560,
+      "sha256": "51b6a7761fccce7386997b1f73519e298435de0c8d1ac0a9b00e33f5c233c8ba",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-product-contract.json",
+      "byteSize": 418,
+      "sha256": "bbbe4ef6673ed81791eddb68999cc33ea2ed6592a8b6a9d0455d3fb3dac79ed0",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-score-receipt-contract.json",
+      "byteSize": 506,
+      "sha256": "fcc8aed7498b8ffac7367146d37854926f961c2a6ab5e9448720a73abcd08bb7",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-scoring-contract.json",
+      "byteSize": 551,
+      "sha256": "152254ebc7154c9e044760e532289c59d10f89899e5c509b8eaee27351182b0a",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-secret-scan.json",
+      "byteSize": 356,
+      "sha256": "0aecc40db85997fb9b1c24c7afd4bea61d217807008ac66b84290f994b278810",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-submission-mirror-audit.json",
+      "byteSize": 782,
+      "sha256": "735878f88dfc895f0417ddb269d9bfb8cd43c5545c63ab8d1b79596248a9232d",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-validation.json",
+      "byteSize": 1053,
+      "sha256": "75e1e0be4d678c8543db9156931e29f2119af60fa4cc972d71cd16f6314eca49",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/phase12-visual-contract.json",
+      "byteSize": 392,
+      "sha256": "4a079f7575fcd506f8cd21712963d7b4766a69596a4a875e225e2df495f06d40",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/score-proof/capability-results.json",
+      "byteSize": 247,
+      "sha256": "cee1d8660807f81ee4e917b3bcd3b5eadcaf45b94b6d08673e1b3855d68d3f99",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/score-proof/demo-job-results.json",
+      "byteSize": 5069,
+      "sha256": "d24845bcc4082e4e6d7ddfcca8b89fdb2d6954c3b5c424b3ca556b6c2bf8cac5",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/score-proof/experience-results.json",
+      "byteSize": 184,
+      "sha256": "a496b7bd3a461b36185494ffebdbc9369f33e0f65cc2d627f81ae7e1290ff3fc",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/score-proof/final-proof-summary.json",
+      "byteSize": 632,
+      "sha256": "71d924b1b56a0f88a46910bb7c462d3e6bd56bc2efada4b21739ad3b311244ff",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/score-proof/property-results.json",
+      "byteSize": 235,
+      "sha256": "2b46e98466c96b10bf53fd65f82c8135a766586e4ea3ac635f6d05447bbd0932",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/score-proof/scoring-contract.json",
+      "byteSize": 669,
+      "sha256": "36da060096c6f95f99b31461018541a6b0780af4ec8d8ac2bc1df245cd5dc7ab",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/score-proof/work-mode-results.json",
+      "byteSize": 208,
+      "sha256": "95bdd2ff3e3d11494e720c4064a34d30c7bab9594e67db18060a5fbeadab3857",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/submission-readiness-checklist.md",
+      "byteSize": 1443,
+      "sha256": "9da5b41a3f7d1f9c2c8756cf28c9cd0907c6d1f0b32acbc73cc4565cd2fb2c89",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/captions.srt",
+      "byteSize": 962,
+      "sha256": "573dd2112b06eb61fbedffd67180d6423ea82575952ee803565d6420e75139bf",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/demo-script.md",
+      "byteSize": 1282,
+      "sha256": "432200480d1466732d580493c2c6b35e8b1850ccbe630fea6cb8213c0e31363d",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/hybrid-final-captions.srt",
+      "byteSize": 1452,
+      "sha256": "558cd4af5b8399d135b3cb2f3c114002dca0607bfe2e44555ee07910fc8a2ac0",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/hybrid-final-demo-script.md",
+      "byteSize": 1621,
+      "sha256": "4a1bc0750052014487765c24dcfd24c3354b16652703fc3c59045cc70e03807f",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/hybrid-final-demo.mp4",
+      "byteSize": 4196790,
+      "sha256": "95cdb9693c73030e3b71caa7368d3841db91f0aca8500fa8ed2b6804fef22fef",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/hybrid-final-shot-list.md",
+      "byteSize": 906,
+      "sha256": "d5da2db020337bd1e4149cf677549f1935092fd5b91a9997b01fc06320104ab6",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/hybrid-final-voiceover.md",
+      "byteSize": 2038,
+      "sha256": "099f1346ce37c2a1c10ffd6f5f33f5629910d8c397db3155954d469ce9e00dfc",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/hybrid-recording-manifest.json",
+      "byteSize": 1035,
+      "sha256": "f247a98b3d436d6cf7add79082a525650f7bc985ee3734541a84ed8a345aaec1",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/hybrid-youtube-metadata.md",
+      "byteSize": 868,
+      "sha256": "4c93cbc0eb0399bcaccb8d2bff59794e9a773f3e57b5d5dc3d5de17e50b8654c",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/shot-list.md",
+      "byteSize": 584,
+      "sha256": "3dc65217ea9b10dbebd63579d2f440fb2efb9b84331719d87548d3bfe541d7d9",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/slides/01-trust-problem.png",
+      "byteSize": 57918,
+      "sha256": "f7c25de24e531959554dc7286185c39e33d2dff26a7591876f53fd34350306d5",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/slides/02-architecture.png",
+      "byteSize": 73307,
+      "sha256": "f413e6674b8a161c778371a0c84a9c908a8e67732b7b90a4a12d51e2bb9a3862",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/slides/03-catalog.png",
+      "byteSize": 73818,
+      "sha256": "2593e6f633b3d133ddea1bd67f22ef992517ca53d1d29499e2b9ae567f14bda7",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/slides/04-evidence.png",
+      "byteSize": 181300,
+      "sha256": "fe38b6c481acdd20706bf046ef2d92623e292362091bb4d80e27a72a3a268759",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/slides/05-score-change.png",
+      "byteSize": 67969,
+      "sha256": "2fc65ac618315aa0bd8f4e0435cbe3269a66828fd4f4d9a14de6377df8f47b74",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/slides/06-heavy-reasoning.png",
+      "byteSize": 72406,
+      "sha256": "7d39bfac4925a4744acc3016809ec7b9055f1658a0a50ce39d6d07c9625d1bd0",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/slides/07-closing.png",
+      "byteSize": 77521,
+      "sha256": "b4287ed5f969b32d4eab6bf9e202ee7b5243711bc37fe1958d46a8e5d71f9c0e",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/thumbnail.png",
+      "byteSize": 1779316,
+      "sha256": "e864e9cbd4bb4cdf8000899fc922a376caa340e629d24e47142c440774c2d031",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/voiceover-script.md",
+      "byteSize": 1367,
+      "sha256": "679d618f50a12f0ebe0e09b7bd085bd29b4dae7d927973051119442d7865927e",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    },
+    {
+      "path": "build-week/video/youtube-title-description.md",
+      "byteSize": 771,
+      "sha256": "0871c9d82312d2ce55ffa962d98397b9e1b199a6646525a93b2634e098685382",
+      "privacyClassification": "PUBLIC_SYNTHETIC",
+      "publicSafe": true
+    }
+  ]
+}
