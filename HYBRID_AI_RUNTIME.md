@@ -17,3 +17,9 @@ Set a server-side `OPENAI_API_KEY` and enable `OPENAI_HEAVY_FEATURES_ENABLED=tru
 ## Prepared mode
 
 The judge build uses frozen Gemma pipeline artifacts and prepared GPT-heavy demonstration output. Labels never claim live or fresh inference.
+
+## Local Private Mode
+
+Set `LOCAL_PRIVATE_MODE=true`, `OLLAMA_ENABLED=true`, `OLLAMA_BASE_URL=http://127.0.0.1:11434`, and `OLLAMA_MODEL=gemma4:12b`. The resume parser makes no network request. After the user confirms the structured profile, the private analysis route makes one loopback `/api/generate` request with temperature zero, a fixed seed, a strict JSON schema, and instructions that treat resume excerpts as untrusted inert data. Unknown identifiers and malformed model output fail closed.
+
+The local provider label is `Gemma 4 12B — Live Local` / `Private local analysis` / `Deterministic AI Fit V2.2`. Optional GPT-5.6 heavy reasoning is a separate, user-invoked path and never owns the score.

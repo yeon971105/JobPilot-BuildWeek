@@ -1,31 +1,12 @@
 # JobPilot — Evidence-First AI Job Search
 
-> Know why a job fits before you apply.
+> Know why a job fits.
 
-JobPilot turns job descriptions into inspectable career decisions. It separates required and preferred qualifications, maps each match to evidence, shows practical constraints, and reconciles every eligible Fit Score to exactly 100 visible points. A Fit Score is an evidence-based ranking score, not a hiring probability.
+JobPilot turns job descriptions and candidate evidence into a transparent career decision—without asking you to trust a black-box score. It separates required and preferred qualifications, maps every scored capability to evidence, keeps practical constraints separate, and reconciles each eligible Fit Score to exactly 100 visible points. A Fit Score is an evidence-based ranking score, not a hiring probability.
 
-## Local-first hybrid architecture
+## Try the Demo
 
-1. **Deterministic Code** parses explicit facts, unions experience months, normalizes aliases, allocates points, separates constraints, and creates the Score Receipt.
-2. **Gemma 4 12B** is the primary semantic model for ambiguous requirements, capability grouping, evidence matching, equivalence, summaries, and uncertainty.
-3. **GPT-5.6 Terra** is optional and restricted to explicit heavy reasoning: application strategy, independent critique, difficult ambiguity, and strategy comparison.
-4. **Prepared output** keeps the synthetic judge flow reliable without Ollama or an OpenAI key and is never labeled live or fresh.
-
-The deterministic scorer—not a model—calculates every score.
-
-## Visual release candidate
-
-The repaired production UI is certified at desktop, tablet, mobile, and 320px narrow-mobile widths. These captures come from the optimized Next.js build with the Tailwind v4 PostCSS pipeline active.
-
-![JobPilot landing page visual RC](build-week/bw5/screenshots/post-landing-1440x900.jpg)
-
-![JobPilot job discovery visual RC](build-week/bw5/screenshots/post-jobs-1440x900.jpg)
-
-The visual-regression contract, computed-style evidence, responsive captures, accessibility results, and repaired-product video are indexed in [`build-week/bw5/`](build-week/bw5/).
-
-## Quick Start
-
-Prerequisites: Node.js 20+ and npm. The public synthetic demo does not require PostgreSQL, Ollama, an account, or an OpenAI key.
+The public judge path needs no login, account, database, Ollama installation, or OpenAI key:
 
 ```bash
 npm install
@@ -33,61 +14,51 @@ npm run build
 npm run start
 ```
 
-Open `http://localhost:3000`, select **Try the Demo**, and follow the no-login Golden Path.
+Open `http://localhost:3000`, choose **Try the Demo**, and use the six fictional roles with Demo Candidate A. Prepared Gemma analyses and prepared strategy output keep this path reliable. Nothing is submitted to an employer.
 
-Validation:
+The decision flow is:
 
-```bash
-npm test
-npm run typecheck
-npm run lint
-npm run validate:providers
-```
+`Landing → Jobs → Role Overview → Evidence or Experience → Score Proof → Receipt → Strategy → Tracker → Trust Lab`
 
-Optional exact local Gemma validation—this never pulls or substitutes a model:
+## Use My Resume Privately
 
-```bash
-npm run validate:local-gemma
-```
-
-Optional GPT-heavy validation requires a server-side key and one enablement flag:
-
-```bash
-OPENAI_API_KEY=... OPENAI_HEAVY_FEATURES_ENABLED=true npm run validate:openai-heavy
-```
-
-When the key is absent, `validate:openai-heavy` exits with documented configuration-required code 78 and never prints a key.
-
-## No-key judge mode
-
-The checked-in `.env.example` defaults to:
+The local edition accepts PDF, DOCX, and UTF-8 TXT resumes up to 10 MB. It parses the selected file in memory, presents an editable extraction review, saves only the confirmed structured profile in browser-local storage, and sends that confirmed evidence only to loopback Ollama. Raw bytes and complete raw text are not persisted, logged, included in reports, or included in Score Receipts.
 
 ```dotenv
-AI_RUNTIME_MODE="LOCAL_FIRST"
+LOCAL_PRIVATE_MODE="true"
+OLLAMA_ENABLED="true"
+OLLAMA_BASE_URL="http://127.0.0.1:11434"
 OLLAMA_MODEL="gemma4:12b"
-BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES="true"
-BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS="false"
-OPENAI_HEAVY_FEATURES_ENABLED="false"
-BUILD_WEEK_ALLOW_LIVE_GPT56="false"
 ```
 
-In this mode, all primary routes use a synthetic candidate, six fictional jobs, prepared Gemma analysis artifacts, AI Fit V2.2, prepared strategy/critique output, and browser-local tracker state. No production database or credentials are loaded.
+Install Ollama, make `gemma4:12b` available locally, start JobPilot, and open `/profile/resume`. A built-in synthetic test resume exercises the real parser safely. PDF files require selectable text; OCR is intentionally unavailable. Public Judge Mode leaves `LOCAL_PRIVATE_MODE=false`, rejects upload bodies before parsing, and points users to the local setup guide.
 
-## Judge flow
+## Product modes
 
-`Landing → Try Demo → Browse/Search/Filter → Open Role → Inspect Evidence and Experience → View Receipt → See a Score Change → Build Strategy → Save → Tracker → Trust Lab`
+- **Public Judge Mode:** synthetic candidate, six synthetic roles, prepared Gemma analyses, deterministic scoring, prepared no-key strategy, and a browser-local tracker.
+- **Local Private Mode:** in-memory PDF/DOCX/TXT parsing, editable profile review, work preferences, loopback `gemma4:12b` matching, deterministic scoring, and a local Score Receipt.
+- **Optional GPT-5.6 heavy mode:** explicit application strategy, critique, difficult ambiguity, and strategy comparison. It receives only validated requirements, selected minimal evidence, IDs, constraints, and the deterministic receipt. It never calculates or changes the score.
 
-Required routes:
+## Hybrid AI responsibility boundary
 
-- `/`
-- `/demo`
-- `/demo/jobs`
-- `/demo/jobs/[id]`
-- `/demo/tracker`
-- `/demo/trust`
-- `/about/build-week`
-- `/api/health`
-- `/api/provider-status`
+1. **Gemma 4 12B** is the primary semantic model for ambiguous requirements, capability grouping, evidence matching, equivalence, summaries, and uncertainty.
+2. **Deterministic code** owns cleaning, date unioning, point allocation, class caps, practical constraints, Evidence Quality, Apply Priority, and the Score Receipt.
+3. **GPT-5.6 Terra** is optional heavy reasoning. It is never used for routine scoring and never receives a complete raw resume in Build Week mode.
+4. **Prepared output** keeps public judging reproducible and is never labeled live or fresh.
+
+Provider provenance is displayed as three separate fields:
+
+- Public: `Gemma 4 12B analysis pipeline` / `Prepared synthetic analysis` / `Deterministic AI Fit V2.2`
+- Local: `Gemma 4 12B — Live Local` / `Private local analysis` / `Deterministic AI Fit V2.2`
+- Optional heavy: `GPT-5.6 Terra — Live` only after a real configured call is certified
+
+## Professional decision UX
+
+The JP-BW6 product RC replaces the dense serial audit with four progressive tabs: Overview, Evidence, Experience, and Score Proof. The first desktop viewport shows the role, concise summary, Fit Score, Evidence Quality, Apply Priority, strongest match, biggest gap, and primary action. Exact quotes, formulas, and technical receipt JSON remain one click away.
+
+![JobPilot landing product RC](build-week/bw6/captures/landing-1440x900.png)
+
+![JobPilot concise decision overview](build-week/bw6/captures/detail-overview-1440x900.png)
 
 ## Score contract
 
@@ -96,39 +67,49 @@ Required routes:
 - NICE_TO_HAVE contributes at most 3 and at most 1 per capability.
 - Unused class capacity transfers visibly to CORE.
 - Integer micro-point arithmetic and stable largest-remainder allocation reconcile eligible analyses to 100.
-- Work mode, location, and travel never change technical-fit points.
+- Work mode, location, and travel affect Apply Priority, never technical points.
 - UNKNOWN is not a confirmed gap.
 - Insufficient evidence never displays a numeric Fit Score.
 - Hidden adjustments are always zero.
 
 See [AI_SCORE_METHODOLOGY.md](AI_SCORE_METHODOLOGY.md) and [AI_SCORE_EVALUATION.md](AI_SCORE_EVALUATION.md).
 
-## Provider labels
+## Validation
 
-- `Local Gemma — Live`
-- `Local Gemma — Prepared Analysis`
-- `GPT-5.6 — Live Heavy Reasoning`
-- `Prepared Demonstration Output`
+```bash
+npm test
+npm run typecheck
+npm run lint
+npm run build
+npm run validate:providers
+npm run validate:local-gemma
+```
 
-A badge is rendered only when its state is true. Prepared output is never represented as live inference.
+`validate:local-gemma` never pulls or substitutes a model. Optional GPT-heavy validation requires a server-side key and enablement flag; without them it exits configuration-required and never prints a key.
 
-## Privacy
+## Routes
 
-The repository contains only original synthetic candidate and job data. There is no resume upload, real candidate, production database, employer logo, protected-attribute scoring, auto-apply, or application submission. Actual private-user analysis is designed to remain on the local Ollama runtime. Build Week GPT-heavy requests use bounded synthetic/public-safe facts and IDs, never a full raw resume.
+- `/`, `/demo`, `/demo/jobs`, `/demo/jobs/[id]`, `/demo/tracker`, `/demo/trust`
+- `/profile`, `/profile/resume`, `/profile/preferences`, `/profile/private-mode`
+- `/about/build-week`, `/api/health`, `/api/provider-status`
+
+## Privacy and limitations
+
+The repository contains only original synthetic candidate, job, and resume fixtures. The parser rejects malformed, oversized, mismatched, active-content, binary, and path-like input; removes DOCX external relationships; excludes protected-attribute text; and treats prompt-like resume text as inert data. No production database, employer logo, auto-apply, or application submission is present.
+
+Independent hiring-outcome calibration is not yet available. The public demonstration data is synthetic. Private resume analysis runs only in the local edition. GPT-5.6 features require optional server configuration. JobPilot does not predict employer decisions.
 
 ## Repository map
 
-- `src/server/build-week/` — environment validation, provider routing, Gemma adapter, deterministic scorer, heavy schemas, and tests
-- `src/components/demo/` — no-login judge interface
-- `build-week/demo-data/` — frozen synthetic inputs and prepared analysis artifacts
-- `build-week/bw3/` — hybrid contracts, validation, deployment, and release evidence
-- `build-week/video/` — final recording package
-- `build-week/devpost/` — account-ready submission package
-
-## Limitations
-
-Policy-based evidence score. Independent hiring-outcome calibration is not yet available. The public demo is intentionally synthetic and compact. Optional GPT-heavy features require server-side configuration. JobPilot does not predict employer decisions or submit applications.
+- `src/server/build-week/` — environment validation, providers, deterministic scorer, schemas, and proof tests
+- `src/server/private-profile/` — hardened parser and loopback Gemma analysis
+- `src/components/demo/` — no-login decision interface
+- `src/components/profile/` — browser-local profile review and work preferences
+- `build-week/demo-data/` — frozen synthetic product inputs
+- `build-week/bw6/` — product UX, privacy, visual, usability, performance, and release evidence
+- `build-week/video/` — current and historical recording packages
+- `build-week/devpost/` — account-ready submission materials
 
 ## License
 
-Code and original documentation are available under the [MIT License](LICENSE). Synthetic fixtures contain no third-party job text, resume, logo, or personal data.
+Code and original documentation are available under the [MIT License](LICENSE). Synthetic fixtures contain no third-party job text, resume, logo, or personal data. New parser dependencies are MIT-licensed and recorded in the JP-BW6 security and license audit.

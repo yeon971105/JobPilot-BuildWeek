@@ -1,0 +1,16 @@
+{
+  "project": "JobPilot",
+  "tagline": "Know why a job fits.",
+  "status": "product RC awaiting user approval",
+  "summary": "Evidence-first career decisions with progressive transparency and private local resume analysis.",
+  "ai": {
+    "primarySemanticModel": "gemma4:12b",
+    "scoringEngine": "jobpilot-ai-fit-v2.2 deterministic code",
+    "optionalHeavyModel": "gpt-5.6-terra",
+    "publicDelivery": "prepared synthetic analysis",
+    "liveGptCertified": false
+  },
+  "modes": ["Public Judge Mode", "Local Private Mode", "Optional GPT-5.6 Heavy Mode"],
+  "privacy": ["synthetic public data", "in-memory resume parsing", "loopback local model", "no raw resume reports", "no application submission"],
+  "limitations": ["not a hiring probability", "no independent hiring-outcome calibration", "public demo is synthetic", "private resume analysis requires local setup"]
+}

@@ -19,3 +19,15 @@
 ## Pre-Build Week
 
 JobPilot existed before Build Week. Catalog, production, and unrelated pre-existing work are not claimed as Build Week additions.
+
+## JP-BW6 — Product UX RC
+
+- Replaced the eleven-section A–K detail audit with Overview, Evidence, Experience, and Score Proof.
+- Reduced the Alder default detail from 1,932 to 268 visible words and from 13,477 to 1,689 pixels without deleting advanced evidence.
+- Added Profile navigation, editable private resume extraction review, work preferences, and clear/reset controls.
+- Added hardened in-memory PDF, DOCX, and TXT parsing plus real loopback `gemma4:12b` analysis.
+- Split provider provenance into analysis pipeline, delivery mode, and deterministic scoring engine.
+- Moved technical receipt JSON and application strategy into keyboard-safe modals.
+- Refined landing, job discovery, Tracker, and Trust Lab around user decisions.
+- Rebuilt responsive captures and the 170-second actual-product video.
+- Did not add auto-apply, production data, another market, or a final deployment.

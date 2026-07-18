@@ -1,0 +1,10 @@
+{
+  "projectName": "JobPilot",
+  "tagline": "Know why a job fits.",
+  "shortDescription": "Transparent job-fit decisions with evidence behind every point and private local resume analysis.",
+  "repository": "https://github.com/yeon971105/JobPilot-BuildWeek",
+  "videoPath": "build-week/video/hybrid-product-ux-rc1-demo.mp4",
+  "submissionStatus": "NOT_SUBMITTED_AWAITING_USER_APPROVAL",
+  "primaryTechnologies": ["Next.js 16", "TypeScript", "Gemma 4 12B", "Ollama", "deterministic scoring", "optional GPT-5.6 Terra"],
+  "claimsExcluded": ["hiring probability", "complete market coverage", "hiring-outcome calibration", "live GPT-5.6 in no-key demo", "automatic application submission"]
+}
