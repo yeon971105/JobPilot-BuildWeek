@@ -1,0 +1,73 @@
+{
+  "purpose": "Preserve encountered failures, their causes, repairs, and successful revalidation.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 3924,
+  "sha256": "79794eb4a05ae3bf9fee02f622103aff6c3f35110bd3f0492cea9275aef5f391",
+  "supportedGate": "Transparent failure accounting",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "failures": [
+    {
+      "failure": "A combined background-server command was rejected by local command policy.",
+      "repair": "Split process launch, readiness, and ownership checks into separate commands.",
+      "revalidation": "Exact isolated listener PIDs were verified before each stop."
+    },
+    {
+      "failure": "The pre-repair static/css path assumption found no directory.",
+      "repair": "Inspected the actual Turbopack static/chunks CSS asset referenced by rendered HTML.",
+      "revalidation": "The 10,675-byte partial custom bundle was hashed and shown to lack utility sentinels."
+    },
+    {
+      "failure": "networkidle was unsupported by the in-app browser.",
+      "repair": "Used domcontentloaded plus visible H1 readiness.",
+      "revalidation": "All production routes rendered and stabilized."
+    },
+    {
+      "failure": "The first generated CSS URL omitted /static and returned 404.",
+      "repair": "Used the exact stylesheet href emitted by production HTML.",
+      "revalidation": "The repaired CSS asset returned 200 with exact disk/response size."
+    },
+    {
+      "failure": "The first Windows regression harness could not spawn npm.cmd.",
+      "repair": "Invoked Next and Vitest directly through the current Node executable.",
+      "revalidation": "npm run test:css-pipeline passes."
+    },
+    {
+      "failure": "JSDOM ignored Tailwind @layer utilities and initially computed nav as block.",
+      "repair": "Extracted exact emitted sentinel rules into a second cascade sheet and bound all spatial assertions to the real Chromium certificate.",
+      "revalidation": "Both CSS regression tests pass and the served CSS hash matches browser evidence."
+    },
+    {
+      "failure": "The computed-style test compared 1.5rem as 1.5px.",
+      "repair": "Normalized rem lengths to pixels before minimum-card checks.",
+      "revalidation": "Card padding and radius gates pass."
+    },
+    {
+      "failure": "The browser wrapper did not expose locator screenshots or scrollIntoViewIfNeeded.",
+      "repair": "Used grounded locator clicks to auto-scroll target headings before viewport capture.",
+      "revalidation": "Focused Score Receipt and Score Change screenshots were frozen."
+    },
+    {
+      "failure": "Three guessed demo slugs returned expected 404s.",
+      "repair": "Derived the route list directly from frozen jobs.json IDs.",
+      "revalidation": "All six real job-detail routes return 200."
+    },
+    {
+      "failure": "The first touch-target audit found 36–42px native selects.",
+      "repair": "Set the shared select minimum height to 44px and repaired detail heading order.",
+      "revalidation": "Visible native selects and mobile menu links measure 44px; detail begins with its H1."
+    },
+    {
+      "failure": "The first recursive cleanup command was rejected by local command policy.",
+      "repair": "Resolved and verified the exact temporary directory inside build-week/bw5, then removed that explicit path with the native filesystem API.",
+      "revalidation": "The seven extracted review frames and their temporary directory are absent."
+    },
+    {
+      "failure": "The first final CSS test rejected the intermediate bundle hash after evidence files entered Tailwind automatic source discovery.",
+      "repair": "Rebuilt against the complete final source set, preserved the initial browser-capture hash, and rebound generated-CSS evidence to the final emitted asset.",
+      "revalidation": "The final build-bound served-CSS and computed-cascade tests pass on the stable bundle."
+    }
+  ],
+  "unresolvedFailures": 0,
+  "result": "PASS"
+}

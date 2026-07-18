@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit --incremental false",
     "lint": "eslint .",
     "test": "vitest run",
+    "test:css-pipeline": "node scripts/bw5-css-pipeline-test.mjs",
     "demo:setup": "tsx scripts/build-week-demo-setup.ts",
     "demo:validate": "vitest run src/server/build-week",
     "phase12:report": "tsx scripts/phase12-report.ts",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",
     "@testing-library/jest-dom": "^6.9.1",
+    "@types/jsdom": "^28.0.3",
     "@types/node": "^20.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

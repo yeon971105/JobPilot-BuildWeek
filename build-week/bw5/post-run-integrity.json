@@ -1,0 +1,23 @@
+{
+  "purpose": "Define and certify the intended clean handoff state after the final evidence commit and publication.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 912,
+  "sha256": "50529dccfe5ef1577ba6d775e42be899aa920d2252cf8fee7e611a45038f68dd",
+  "supportedGate": "Post-run integrity",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "expectedBranch": "build-week/jobpilot-2026",
+  "expectedPublicBranchHead": "final evidence commit",
+  "expectedTag": "build-week-2026-visual-rc1",
+  "historicalTagPreserved": "build-week-2026-final",
+  "testServersAfterHandoff": 0,
+  "approvalPreviewServersAfterHandoff": 1,
+  "approvalPreviewUrl": "http://127.0.0.1:3202/",
+  "temporaryVideoFramesRemoved": true,
+  "sourceRepositoryMutated": false,
+  "originalDirtyRepositoryMutated": false,
+  "productionDataMutations": 0,
+  "applicationSubmissions": 0,
+  "expectedGitStatusAfterCommit": "clean",
+  "result": "PASS_PENDING_FINAL_COMMIT_AND_PUSH_VERIFICATION"
+}

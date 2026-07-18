@@ -1,0 +1,80 @@
+{
+  "purpose": "Freeze representative computed styles from the broken production build.",
+  "timestamp": "2026-07-18T02:00:42.0121954Z",
+  "commit": "cbf3a09f14ca136c067c813e470047b419f16dd9",
+  "size": 1813,
+  "sha256": "5db98028dd4675def4abfbb20efc84c8333e7a8a7c22391f35ef92b8ab04cd0c",
+  "supportedGate": "Before/after computed-style comparison",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "landing": {
+    "route": "/",
+    "stylesheetLinks": [
+      "/_next/static/chunks/05.iqi31~.m9l.css"
+    ],
+    "navigation": {
+      "display": "block",
+      "justifyContent": "normal",
+      "gap": "normal"
+    },
+    "heading": {
+      "fontSize": "32px",
+      "lineHeight": "normal",
+      "maxWidth": "none",
+      "marginTop": "21.44px"
+    },
+    "heroIllustration": {
+      "display": "block",
+      "minHeight": "0px",
+      "borderRadius": "0px",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "padding": "0px"
+    },
+    "scoreRing": {
+      "position": "static",
+      "width": "1425px",
+      "height": "0px",
+      "borderWidth": "0px",
+      "borderRadius": "0px"
+    }
+  },
+  "jobs": {
+    "route": "/demo/jobs",
+    "main": {
+      "maxWidth": "none",
+      "padding": "0px"
+    },
+    "heading": {
+      "fontSize": "32px"
+    },
+    "firstCard": {
+      "display": "block",
+      "borderRadius": "24px",
+      "padding": "24px",
+      "backgroundColor": "rgba(255, 253, 247, 0.88)"
+    }
+  },
+  "detail": {
+    "route": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+    "main": {
+      "maxWidth": "none",
+      "padding": "0px"
+    },
+    "heading": {
+      "fontSize": "32px",
+      "lineHeight": "normal"
+    },
+    "firstSection": {
+      "borderRadius": "24px",
+      "padding": "24px",
+      "backgroundColor": "rgba(255, 253, 247, 0.88)"
+    },
+    "metadata": {
+      "display": "grid",
+      "gap": "16px"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "purpose": "Summarize material JP-BW5 commands and outcomes without embedding machine-private logs.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 1511,
+  "sha256": "67aa590591645251ad75ee60f98271e6f9f6b43016f68ef25af2e22f78cde6b8",
+  "supportedGate": "Reproducible command history",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "commands": [
+    {
+      "command": "npm install",
+      "outcome": "PASS; 2 moderate advisories retained without force rewrite"
+    },
+    {
+      "command": "npm run typecheck",
+      "outcome": "PASS"
+    },
+    {
+      "command": "npm run lint",
+      "outcome": "PASS"
+    },
+    {
+      "command": "npm test",
+      "outcome": "PASS; 26 tests"
+    },
+    {
+      "command": "npm run demo:validate",
+      "outcome": "PASS; 26 score/provider tests"
+    },
+    {
+      "command": "npm run test:css-pipeline",
+      "outcome": "PASS; fresh build, production server, 2 CSS/browser-bound tests"
+    },
+    {
+      "command": "npm run build",
+      "outcome": "PASS; 18 Next routes generated"
+    },
+    {
+      "command": "next start -p 3200/3201/3202/3215",
+      "outcome": "Isolated pre, pipeline, visual, and regression servers; exact ownership controlled"
+    },
+    {
+      "command": "ffmpeg via scripts/render-bw5-visual-rc1.ps1",
+      "outcome": "PASS; 170-second repaired-product H.264/AAC/captioned video"
+    },
+    {
+      "command": "secret, contact, and scorer hardcoding scans",
+      "outcome": "PASS; zero secrets, real contacts, or job-specific scorer branches"
+    }
+  ],
+  "result": "PASS"
+}

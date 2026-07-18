@@ -1,0 +1,87 @@
+{
+  "purpose": "Freeze actual browser-computed production layout after the pipeline and visual repair.",
+  "timestamp": "2026-07-18T02:14:48.7175282Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 2422,
+  "sha256": "6621a3a6cc95eac906e406f1f7f3a094c6028df6d4c49620ec756c792a121a9c",
+  "supportedGate": "Production computed-style and geometry certification",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+  "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+  "finalSourceDiscoveryNote": "The final evidence files added unused discovered utilities without changing application source or the captured route geometry; the build-bound test recertifies the final served cascade and binds this certificate to its final CSS hash.",
+  "landing": {
+    "route": "/",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "document": {
+      "horizontalOverflow": 0,
+      "h1Count": 1
+    },
+    "navigation": {
+      "display": "flex",
+      "gapPx": 4,
+      "visibleLinkCount": 4,
+      "separationPx": 173.296875,
+      "linksOverlap": false,
+      "lastLinkColor": "rgb(49, 92, 73)"
+    },
+    "hero": {
+      "display": "grid",
+      "columns": "591.594px 568.406px",
+      "gapPx": 80,
+      "headingFontSizePx": 88,
+      "headingRightPx": 684.09375,
+      "illustrationLeftPx": 764.09375,
+      "illustrationWidthPx": 568.40625,
+      "illustrationMinHeightPx": 620
+    },
+    "ctas": {
+      "primaryBackground": "rgb(23, 61, 45)",
+      "separationPx": 12
+    },
+    "scoreRing": {
+      "position": "absolute",
+      "widthPx": 176,
+      "heightPx": 176,
+      "borderWidthPx": 14,
+      "circular": true,
+      "backgroundColor": "rgb(23, 61, 45)",
+      "display": "grid",
+      "placeItems": "center",
+      "contained": true
+    }
+  },
+  "jobs": {
+    "route": "/demo/jobs",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "document": {
+      "horizontalOverflow": 0,
+      "h1Count": 1
+    },
+    "card": {
+      "widthPx": 471,
+      "heightPx": 543.96875,
+      "paddingPx": 24,
+      "borderRadiusPx": 24,
+      "cardsPerFirstRow": 2
+    },
+    "filterToolbar": {
+      "display": "flex",
+      "gapPx": 12,
+      "heightPx": 50
+    },
+    "score": {
+      "renderedText": "97\nFIT",
+      "widthPx": 80,
+      "heightPx": 80,
+      "labelSeparationPx": 4,
+      "concatenated": false
+    }
+  },
+  "result": "PASS"
+}

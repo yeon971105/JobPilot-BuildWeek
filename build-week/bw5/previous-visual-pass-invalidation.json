@@ -1,0 +1,14 @@
+{
+  "purpose": "Invalidate the earlier route-level browser PASS as visual certification evidence.",
+  "timestamp": "2026-07-18T02:00:42.0121954Z",
+  "commit": "cbf3a09f14ca136c067c813e470047b419f16dd9",
+  "size": 747,
+  "sha256": "6d5bee6c423c9b04a394e2dbaef39d6c96c3d74dfa70eb93e23d0213ea52bd4f",
+  "supportedGate": "Previous visual pass superseded before mutation",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "status": "SUPERSEDED_INVALID_VISUAL_CERTIFICATION",
+  "preservedEvidence": true,
+  "reason": "The earlier QA proved routes and interactions but did not assert production computed layout or Tailwind utility behavior. The production CSS asset contained only partial custom CSS, so route success concealed a collapsed utility layer.",
+  "invalidHistoricalTag": "build-week-2026-final",
+  "tagAction": "PRESERVE_WITHOUT_MOVE_OR_DELETE"
+}

@@ -1,0 +1,51 @@
+{
+  "purpose": "Index immutable pre-repair screenshots of the broken production build.",
+  "timestamp": "2026-07-18T02:00:42.0121954Z",
+  "commit": "cbf3a09f14ca136c067c813e470047b419f16dd9",
+  "size": 1557,
+  "sha256": "33cf7988794f08f6036a903ec1f51e18568df884efc01bbfa9d66559f3c5631a",
+  "supportedGate": "Pre-mutation visual reproduction",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "cssBundleSha256": "f48f708c826381a06cd9d7fae9dd2a9206731eb45b8399d2c4fc103256ff2cae",
+  "screenshots": [
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "build-week/bw5/screenshots/pre-landing-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "imageWidth": 1425,
+      "imageHeight": 1547,
+      "bytes": 123444,
+      "sha256": "6d18e110429f15f68f8c31e2a8c6e399af5e59754042ba3ed82c3030f1aad873"
+    },
+    {
+      "route": "/demo/jobs",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "build-week/bw5/screenshots/pre-jobs-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "imageWidth": 1425,
+      "imageHeight": 3536,
+      "bytes": 252643,
+      "sha256": "c346343153b906e2471249279071e1708eafa36d6b5d7bf26c80e2ededaddb9a"
+    },
+    {
+      "route": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "build-week/bw5/screenshots/pre-detail-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "imageWidth": 1425,
+      "imageHeight": 17532,
+      "bytes": 1051047,
+      "sha256": "881ebc5881b1652b3a47ca15bc306d906423fd32bd5d06ffb58bcbfb526c8237"
+    }
+  ]
+}

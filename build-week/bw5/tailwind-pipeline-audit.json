@@ -1,0 +1,39 @@
+{
+  "purpose": "Audit the installed-version Tailwind v4 and Next.js production CSS pipeline repair.",
+  "timestamp": "2026-07-18T02:14:48.7175282Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 1222,
+  "sha256": "56203458fcaaf0bedd276c988a6ec172fcee35f868b961f7ad87fdb412b47312",
+  "supportedGate": "Tailwind production pipeline repaired",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "installedVersions": {
+    "next": "16.2.6",
+    "tailwindcss": "4.3.3",
+    "tailwindPostcss": "4.3.3"
+  },
+  "installedGuideRead": [
+    "node_modules/next/dist/docs/01-app/01-getting-started/11-css.md",
+    "node_modules/next/dist/docs/02-pages/02-guides/post-css.md"
+  ],
+  "rootCause": "The project imported Tailwind v4 and used its utilities, but no root PostCSS configuration registered @tailwindcss/postcss.",
+  "repair": {
+    "file": "postcss.config.mjs",
+    "plugin": "@tailwindcss/postcss",
+    "legacyTailwindConfigAdded": false,
+    "explicitSourceDirectivesRequired": false,
+    "automaticDiscoveryCovered": [
+      "src/app",
+      "src/components",
+      "src/lib",
+      "src/server"
+    ]
+  },
+  "commands": {
+    "npmInstall": "PASS_WITH_2_MODERATE_EXISTING_ADVISORIES",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "nextBuild": "PASS",
+    "productionStart": "PASS"
+  },
+  "result": "PASS"
+}

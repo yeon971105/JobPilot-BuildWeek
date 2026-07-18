@@ -1,0 +1,27 @@
+{
+  "purpose": "Record the build-bound CSS regression test that verifies served assets, computed styles, and browser geometry.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 1005,
+  "sha256": "49c12f11118cf2073b9c1f6a21e60d00c94bcb1dde970919d423cb1014ea5506",
+  "supportedGate": "CSS pipeline regression test",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "command": "npm run test:css-pipeline",
+  "productionBuild": "PASS",
+  "productionServer": "PASS",
+  "testFiles": 1,
+  "testsPassed": 2,
+  "testsFailed": 0,
+  "cssAsset": {
+    "path": "/_next/static/chunks/0wgl8jd.e.rug.css",
+    "httpStatus": 200,
+    "bytes": 40578,
+    "sha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4"
+  },
+  "computedEngines": [
+    "JSDOM served-CSS cascade",
+    "in-app Chromium browser spatial certificate"
+  ],
+  "evidenceBinding": "The spec hashes the final HTTP-served CSS and requires an exact match to certifiedFinalCssBundleSha256 while preserving the initial browser-capture bundle identity separately.",
+  "result": "PASS"
+}

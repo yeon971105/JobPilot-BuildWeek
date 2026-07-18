@@ -13,6 +13,16 @@ JobPilot turns job descriptions into inspectable career decisions. It separates 
 
 The deterministic scorer—not a model—calculates every score.
 
+## Visual release candidate
+
+The repaired production UI is certified at desktop, tablet, mobile, and 320px narrow-mobile widths. These captures come from the optimized Next.js build with the Tailwind v4 PostCSS pipeline active.
+
+![JobPilot landing page visual RC](build-week/bw5/screenshots/post-landing-1440x900.jpg)
+
+![JobPilot job discovery visual RC](build-week/bw5/screenshots/post-jobs-1440x900.jpg)
+
+The visual-regression contract, computed-style evidence, responsive captures, accessibility results, and repaired-product video are indexed in [`build-week/bw5/`](build-week/bw5/).
+
 ## Quick Start
 
 Prerequisites: Node.js 20+ and npm. The public synthetic demo does not require PostgreSQL, Ollama, an account, or an OpenAI key.

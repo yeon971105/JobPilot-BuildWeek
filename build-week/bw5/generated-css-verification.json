@@ -1,0 +1,34 @@
+{
+  "purpose": "Verify the repaired production bundle contains and serves the required Tailwind utility behavior.",
+  "timestamp": "2026-07-18T02:14:48.7175282Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 1022,
+  "sha256": "be99458455bdac89fb8f532dc0906f25e0932ae7989c7119d0842604ed01c599",
+  "supportedGate": "Generated CSS sentinel verification",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "asset": {
+    "path": "/_next/static/chunks/0wgl8jd.e.rug.css",
+    "status": 200,
+    "responseBytes": 40578,
+    "sha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4"
+  },
+  "preRepairBytes": 10675,
+  "postRepairBytes": 40578,
+  "finalSourceDiscoverySetIncluded": true,
+  "sentinels": {
+    "flex": true,
+    "grid": true,
+    "maxWidth7xl": true,
+    "responsiveLgGrid": true,
+    "arbitraryColor": true,
+    "arbitraryShadow": true,
+    "arbitraryTracking": true,
+    "absolutePositioning": true,
+    "sizeUtilities": true,
+    "responsiveVariants": true,
+    "opacityVariants": true
+  },
+  "unresolvedTailwindImports": 0,
+  "missingGeneratedUtilities": 0,
+  "result": "PASS"
+}

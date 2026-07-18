@@ -1,0 +1,44 @@
+{
+  "purpose": "Record responsive semantic, keyboard, focus, control-size, label, and overflow checks.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 1225,
+  "sha256": "c96a693c0d45402751eccd31cc70d66ae5bfb468f174f81ac59415b82699095a",
+  "supportedGate": "Accessibility and responsive gate",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "routes": [
+    "/",
+    "/demo/jobs",
+    "/demo/jobs/northstar-applied-ai-solutions-engineer",
+    "/demo/tracker",
+    "/demo/trust",
+    "/about/build-week"
+  ],
+  "viewports": [
+    "1440x900",
+    "1024x768",
+    "390x844",
+    "320x700"
+  ],
+  "routeViewportCases": 24,
+  "checks": {
+    "pageHorizontalOverflow": 0,
+    "clippedH1": 0,
+    "h1CountViolations": 0,
+    "defaultBlueLinks": 0,
+    "textConcatenation": 0,
+    "failedResources": 0,
+    "minimumTouchTargetsAfterRepair": true,
+    "nativeSelectMinimumHeightPx": 44,
+    "mobileMenuTargetsPx": 44,
+    "mobileMenuLinksOverlap": false,
+    "mobileMenuWithinViewport": true,
+    "focusVisibleOutlinePx": 3,
+    "keyboardReachableControls": true,
+    "meaningfulArtworkAriaLabel": true,
+    "statusTextNotColorOnly": true,
+    "detailFirstSemanticHeading": "H1 Applied AI Solutions Engineer",
+    "trackerMobileScrollContained": true
+  },
+  "result": "PASS"
+}

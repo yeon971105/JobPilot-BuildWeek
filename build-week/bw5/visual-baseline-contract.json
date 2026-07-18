@@ -1,0 +1,33 @@
+{
+  "purpose": "Define the strict visual and geometry regression contract for the repaired production build.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 1503,
+  "sha256": "06905ea4eb6a7fa4de9e60b8cacd37785125452745523af26bc4e981dcc7ec69",
+  "supportedGate": "Future visual regressions reject layout collapse",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "version": "jobpilot-bw5-visual-contract.v1",
+  "baselineCommit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "cssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+  "screenshotCount": 15,
+  "thresholds": {
+    "maximumChangedPixelRatio": 0.01,
+    "geometryTolerancePx": 2,
+    "headingFontTolerancePx": 1,
+    "layoutCollapseAlwaysFails": true
+  },
+  "assertions": [
+    "navigation display is flex with nonzero gap and no overlap",
+    "navigation links are never browser-default blue",
+    "desktop heading is at least 64px",
+    "desktop hero is two columns and illustration is right of copy",
+    "score ring is circular, absolute, opaque, centered, and contained",
+    "job cards have at least 18px padding and 18px radius",
+    "desktop jobs render two balanced cards per row",
+    "score and FIT have positive visual separation",
+    "filter toolbar has at least 12px gap",
+    "all certified pages have one H1 and zero page overflow"
+  ],
+  "catastrophicDiffProtection": "A complete utility-layer collapse changes geometry and pixels far beyond the threshold and independently fails every computed-style assertion.",
+  "result": "PASS"
+}

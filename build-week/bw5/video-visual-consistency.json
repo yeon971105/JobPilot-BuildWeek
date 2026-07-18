@@ -1,0 +1,48 @@
+{
+  "purpose": "Compare the historical slide-led video with the repaired production interface.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 1429,
+  "sha256": "22146647089cbcd2bab547f921a76300925a3c5021ab4427deec8c8972d5cda1",
+  "supportedGate": "Previous video visual consistency decision",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "historicalVideo": {
+    "path": "build-week/video/hybrid-final-demo.mp4",
+    "sha256": "95cdb9693c73030e3b71caa7368d3841db91f0aca8500fa8ed2b6804fef22fef",
+    "preserved": true,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "r_frame_rate": "0/0"
+        },
+        {
+          "index": 2,
+          "codec_name": "mov_text",
+          "codec_type": "subtitle",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "170.000000",
+        "size": "4196790"
+      }
+    }
+  },
+  "finding": "The historical video is slide-led and materially differs from the repaired working product, so its prior final certification is superseded.",
+  "invalidatedAsFinal": true,
+  "sourceInteractionMismatchesAllowed": 0,
+  "result": "INVALID_HISTORICAL_EVIDENCE_PRESERVED"
+}

@@ -1,0 +1,55 @@
+{
+  "purpose": "Reproduce and characterize the production Tailwind failure before mutation.",
+  "timestamp": "2026-07-18T02:00:42.0121954Z",
+  "commit": "cbf3a09f14ca136c067c813e470047b419f16dd9",
+  "size": 2019,
+  "sha256": "dd51ba9c4ba1069b00aa9b3a46d66bc05298879f5354daffa636f1433c458301",
+  "supportedGate": "Pre-repair CSS failure reproduced",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "repository": "JobPilot-BuildWeek-Submission",
+  "branch": "build-week/jobpilot-2026",
+  "expectedParentHeadMatched": true,
+  "publicBranchHeadMatched": true,
+  "remote": "https://github.com/yeon971105/JobPilot-BuildWeek.git",
+  "historicalTag": {
+    "name": "build-week-2026-final",
+    "tagObject": "d05f7cf",
+    "dereferencedCommit": "cbf3a09f14ca136c067c813e470047b419f16dd9",
+    "status": "INVALID_HISTORICAL_VISUAL_RELEASE_PRESERVED"
+  },
+  "runtime": {
+    "node": "v25.2.1",
+    "npm": "11.6.2",
+    "next": "16.2.6",
+    "tailwindcss": "4.3.3",
+    "tailwindPostcss": "4.3.3"
+  },
+  "configuration": {
+    "globalImport": "@import \"tailwindcss\";",
+    "rootLayoutImportsGlobalCss": true,
+    "postcssConfigurationFound": false,
+    "installedNextGuideRequirement": "A root postcss.config.mjs registering @tailwindcss/postcss"
+  },
+  "production": {
+    "isolatedPort": 3200,
+    "serverStoppedAfterCapture": true,
+    "cssAssets": [
+      {
+        "requestPath": "/_next/static/chunks/05.iqi31~.m9l.css",
+        "status": 200,
+        "responseBytes": 10675,
+        "sha256": "f48f708c826381a06cd9d7fae9dd2a9206731eb45b8399d2c4fc103256ff2cae",
+        "containsFlexSentinel": false,
+        "containsGridSentinel": false,
+        "containsText6xlSentinel": false,
+        "containsUnresolvedTailwindImport": false
+      }
+    ]
+  },
+  "diagnosis": {
+    "missingFromGeneratedCss": true,
+    "missingFromComputedStyles": true,
+    "classification": "BOTH_GENERATED_CSS_AND_COMPUTED_STYLE",
+    "exactCause": "Tailwind v4 was imported in globals.css, but no PostCSS configuration registered @tailwindcss/postcss. Next emitted the project's ordinary custom rules while omitting the Tailwind utility layer."
+  }
+}

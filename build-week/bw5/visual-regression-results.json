@@ -1,0 +1,57 @@
+{
+  "purpose": "Certify that the repaired layout satisfies the frozen browser geometry and visual baseline contract.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 1373,
+  "sha256": "c11c8e79da41460c293afec3fe3658d2723c513ebdb2c41f937b54c4604f5fdc",
+  "supportedGate": "Real visual regression certification",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "baselineCommit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "cssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+  "screenshotsValidated": 15,
+  "viewports": [
+    "1440x900",
+    "1024x768",
+    "390x844",
+    "320x700"
+  ],
+  "beforeAfter": {
+    "navigationDisplay": {
+      "before": "block",
+      "after": "flex"
+    },
+    "desktopHeadingPx": {
+      "before": 32,
+      "after": 88
+    },
+    "heroIllustrationWidthPx": {
+      "before": 1425,
+      "after": 568.40625
+    },
+    "scoreRing": {
+      "before": {
+        "position": "static",
+        "heightPx": 0,
+        "borderPx": 0
+      },
+      "after": {
+        "position": "absolute",
+        "widthPx": 176,
+        "heightPx": 176,
+        "borderPx": 14
+      }
+    },
+    "jobsFirstRowCards": {
+      "before": 1,
+      "after": 2
+    }
+  },
+  "failures": 0,
+  "visualLayoutCollapse": 0,
+  "defaultBlueNavigation": 0,
+  "overlappingNavigation": 0,
+  "textConcatenation": 0,
+  "horizontalOverflow": 0,
+  "clippedControls": 0,
+  "result": "PASS"
+}

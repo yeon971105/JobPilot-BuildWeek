@@ -1,0 +1,265 @@
+{
+  "purpose": "Index all JP-BW5 reports, screenshots, and review evidence with actual file identities.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 9742,
+  "sha256": "b65edff72a751705067298fba8b26646ac835b85f6fbbb1c83e89acad72fbdbb",
+  "supportedGate": "Complete artifact inventory",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "artifactCount": 42,
+  "artifacts": [
+    {
+      "path": "build-week/bw5/accessibility-results.json",
+      "bytes": 1321,
+      "sha256": "fcc57615fbbe84f8c871aaad67eedf71eaf43ec4dc6dcdaa2e5d212ea9bf2efd",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/command-log.json",
+      "bytes": 1607,
+      "sha256": "9ee3a9622aee5e571828249d74a3401a972ef1aac772e20cfd34b37594700aab",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/css-failure-reproduction.json",
+      "bytes": 2115,
+      "sha256": "09fa7acb6f0a0484d5a71a57f40c4dbbd3a7cd312efdb05fc6850b94e678b69b",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/css-pipeline-test-results.json",
+      "bytes": 1101,
+      "sha256": "5d971ca5582d6ba44d3535aaa0def666a346e0152d85f9b22a938557efcd9177",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/failures-and-repairs.json",
+      "bytes": 4020,
+      "sha256": "7872e351eb02c5753a5a9de768c66075526753b1473646d8ec21dad3fd121699",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/final-report.json",
+      "bytes": 2293,
+      "sha256": "d6a03626694985ed9b7e4a19b8709e9a5f7f710ea4ccb1e5e33d31f17333c6ed",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/final-report.md",
+      "bytes": 4282,
+      "sha256": "4f5fa72d45d19538a9cab63bb4a130648c3163073e5586413551ab11ddb30dbe",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/generated-css-verification.json",
+      "bytes": 1118,
+      "sha256": "c2cb3efbd9fe25bf00d49e8499226b7baadf28c653962a3e15dcf0dd08f52d6e",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/observed-visual-defects.md",
+      "bytes": 1544,
+      "sha256": "e78ac9b6ff18e347f9bafdf3c6f8979809ff330d3f6045a0ae5b36cc15fdf6bb",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/post-repair-computed-styles.json",
+      "bytes": 2518,
+      "sha256": "bff45dab5f01092b32bf808643d57ded461954bff9513bee8717a176095d00f2",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/post-repair-screenshot-manifest.json",
+      "bytes": 11200,
+      "sha256": "eba9e983be04b52df0169aad09942eea97171f7d9c4f4e30df6c158fc1ed9b7b",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/post-run-integrity.json",
+      "bytes": 1007,
+      "sha256": "a6f7acee533d2955ada88520df1bf0b96ec04ef012616e5e83985bdd188900f4",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/pre-repair-computed-styles.json",
+      "bytes": 1909,
+      "sha256": "9f87f19f1efc5e0653ec5e9b590ef28c4b600dc9d57b9d3949a5e31554abee47",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/pre-repair-screenshot-manifest.json",
+      "bytes": 1653,
+      "sha256": "c8e085c1402a8fa41949a71326e0273487150b8f4929538e08bb6f543a515e95",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/previous-visual-pass-invalidation.json",
+      "bytes": 842,
+      "sha256": "7e577f7ba2ff53e65226d28e9d3b7c4e93a1f42076a8fbdd26598d24b5e25082",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-detail-1440x900.jpg",
+      "bytes": 69433,
+      "sha256": "16cdceac605764d03ba30d20b46de4e6e99572465763b5382ccdd35ec0d4b169",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-detail-390x844.jpg",
+      "bytes": 33200,
+      "sha256": "11ffbcf6ace2646f58ff6da2cb655ad8376ae59ed1d54053fc247b46a8db7790",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-jobs-1024x768.jpg",
+      "bytes": 57093,
+      "sha256": "954601fab9548eb0f9c40d8b784b076da17743cc43593f5778e0867a7c92543e",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-jobs-1440x900.jpg",
+      "bytes": 89454,
+      "sha256": "af7fbe0c77cb4c63d2c260f397545a3c9568043bf4fc3c02178fa0f2886ec910",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-jobs-390x844.jpg",
+      "bytes": 36680,
+      "sha256": "f7178a1197a0bd25558ed52cbd3716370f38fe982253b849b1dbcc6e18113391",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-landing-1024x768.jpg",
+      "bytes": 77359,
+      "sha256": "9dc13eab1c1b1a94bd96347c6c0ed409c4618ae63d8b4f6c03e95698a7d5ff95",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-landing-1440x900.jpg",
+      "bytes": 100528,
+      "sha256": "1407a68ff21147cea657ecc5a85adbeff50065909e8075aeb7ef31812cde022a",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-landing-320x700.jpg",
+      "bytes": 30351,
+      "sha256": "96ec94d00d2b4e3164d7afce3b1341544b667ca8ff81352bf47a792c3fb0dc9c",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-landing-390x844.jpg",
+      "bytes": 42306,
+      "sha256": "eebd21ed5becd9699e6ee6f2209254919321e32a3f35940259a671bc8a19213d",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-score-change-1440x900.jpg",
+      "bytes": 79894,
+      "sha256": "8301ced4a0c12f0b1b971a36300bf6a73aea50a92935f582b9902b17bf72d8ac",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-score-receipt-1440x900.jpg",
+      "bytes": 111733,
+      "sha256": "4ea0fbad5f6b899ccaf1796c3e00ce61562349a6615735d7158a02bd4a8b0055",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-tracker-1440x900.jpg",
+      "bytes": 57095,
+      "sha256": "c6882ec9b4ed2b402296829ed24302a93129cc32b1e48227483d1d6c90d9d6e0",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-tracker-390x844.jpg",
+      "bytes": 32115,
+      "sha256": "57d2a2de3a9dc7008eb5c692e2e6030ccd673b9a415d3cf2bd8e03886a995c58",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-trust-1440x900.jpg",
+      "bytes": 81427,
+      "sha256": "033438866c4486ef340101eb752cad91a85aaaa7bc20439572b741fee83cbab1",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-trust-390x844.jpg",
+      "bytes": 34021,
+      "sha256": "4c23d11ec23c8a9183c6a529838aebfd7452063bfc8e3211c31ab4f13bfb312c",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/pre-detail-1440x900.jpg",
+      "bytes": 1051047,
+      "sha256": "881ebc5881b1652b3a47ca15bc306d906423fd32bd5d06ffb58bcbfb526c8237",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/pre-jobs-1440x900.jpg",
+      "bytes": 252643,
+      "sha256": "c346343153b906e2471249279071e1708eafa36d6b5d7bf26c80e2ededaddb9a",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/pre-landing-1440x900.jpg",
+      "bytes": 123444,
+      "sha256": "6d18e110429f15f68f8c31e2a8c6e399af5e59754042ba3ed82c3030f1aad873",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/video-constraints-1440x900.jpg",
+      "bytes": 71924,
+      "sha256": "f3a718286021017ab2e78c3a8eb0e04a719b579b167edd68bd97fdbbd94f5a28",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/video-evidence-1440x900.jpg",
+      "bytes": 82964,
+      "sha256": "c99a39fe957642daad3165ec1dd84d55a3fd5f7d6900e2f192ad133a9bb9e064",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/screenshots/video-strategy-1440x900.jpg",
+      "bytes": 79150,
+      "sha256": "ebc4da2d78a3862e6a134cbbe7ea8cf25e81dbfa0b04d7184ea8b69634a6c5a2",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/tailwind-pipeline-audit.json",
+      "bytes": 1318,
+      "sha256": "442383e48ac76a668c89aec79391ae804fa737bb3c508729ba2867196d598b0f",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/validation.json",
+      "bytes": 5107,
+      "sha256": "39eaf51b7af47270184f10294e8fa9b919be9c8d44519c906f99c6773ed98b6b",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/video-recertification.json",
+      "bytes": 3290,
+      "sha256": "af01ea628053d2d1b3ef345771dd5764b6568e1700af1b198117d91cd80a1d72",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/video-visual-consistency.json",
+      "bytes": 1525,
+      "sha256": "9e891fcaf0be3e5c995abbb662a3f313d92b3e873bbd85b2818121410108073a",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/visual-baseline-contract.json",
+      "bytes": 1599,
+      "sha256": "96aa4d99fafe2613501b2b416d7a2e63f7ac67ba6ab16951f476b575ca9b6040",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    },
+    {
+      "path": "build-week/bw5/visual-regression-results.json",
+      "bytes": 1469,
+      "sha256": "1757a262f1c4ea8fc3df183b3755875a9111d55195036e12ea8a3c417649d21c",
+      "publicSafeStatus": "PUBLIC_SAFE"
+    }
+  ],
+  "result": "PASS"
+}

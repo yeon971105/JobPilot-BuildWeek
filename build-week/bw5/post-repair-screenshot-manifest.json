@@ -1,0 +1,279 @@
+{
+  "purpose": "Index the frozen repaired-production screenshots with viewport, CSS, and image identity.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 11103,
+  "sha256": "ca3214605647cef32e4417a9b4827f8f1721e050cd36802f66ad032178cc04e1",
+  "supportedGate": "Responsive visual evidence frozen",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "browserCaptureCssAsset": {
+    "path": "/_next/static/chunks/1709ob4~xdsm-.css",
+    "bytes": 40289,
+    "sha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba"
+  },
+  "certifiedFinalCssAsset": {
+    "path": "/_next/static/chunks/0wgl8jd.e.rug.css",
+    "bytes": 40578,
+    "sha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4"
+  },
+  "sourceDiscoveryDeltaOnly": true,
+  "screenshotCount": 15,
+  "screenshots": [
+    {
+      "route": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "timestamp": "2026-07-18T02:20:09.908Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-detail-1440x900.jpg",
+      "imageSha256": "16cdceac605764d03ba30d20b46de4e6e99572465763b5382ccdd35ec0d4b169",
+      "width": 1425,
+      "height": 891,
+      "bytes": 69433
+    },
+    {
+      "route": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "timestamp": "2026-07-18T02:20:10.028Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-detail-390x844.jpg",
+      "imageSha256": "11ffbcf6ace2646f58ff6da2cb655ad8376ae59ed1d54053fc247b46a8db7790",
+      "width": 375,
+      "height": 812,
+      "bytes": 33200
+    },
+    {
+      "route": "/demo/jobs",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "timestamp": "2026-07-18T02:27:46.030Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-jobs-1024x768.jpg",
+      "imageSha256": "954601fab9548eb0f9c40d8b784b076da17743cc43593f5778e0867a7c92543e",
+      "width": 1009,
+      "height": 757,
+      "bytes": 57093
+    },
+    {
+      "route": "/demo/jobs",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "timestamp": "2026-07-18T02:27:45.896Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-jobs-1440x900.jpg",
+      "imageSha256": "af7fbe0c77cb4c63d2c260f397545a3c9568043bf4fc3c02178fa0f2886ec910",
+      "width": 1425,
+      "height": 891,
+      "bytes": 89454
+    },
+    {
+      "route": "/demo/jobs",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "timestamp": "2026-07-18T02:27:46.159Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-jobs-390x844.jpg",
+      "imageSha256": "f7178a1197a0bd25558ed52cbd3716370f38fe982253b849b1dbcc6e18113391",
+      "width": 375,
+      "height": 812,
+      "bytes": 36680
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "timestamp": "2026-07-18T02:20:09.146Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-landing-1024x768.jpg",
+      "imageSha256": "9dc13eab1c1b1a94bd96347c6c0ed409c4618ae63d8b4f6c03e95698a7d5ff95",
+      "width": 1009,
+      "height": 757,
+      "bytes": 77359
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "timestamp": "2026-07-18T02:20:09.014Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-landing-1440x900.jpg",
+      "imageSha256": "1407a68ff21147cea657ecc5a85adbeff50065909e8075aeb7ef31812cde022a",
+      "width": 1425,
+      "height": 891,
+      "bytes": 100528
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "timestamp": "2026-07-18T02:20:09.360Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-landing-320x700.jpg",
+      "imageSha256": "96ec94d00d2b4e3164d7afce3b1341544b667ca8ff81352bf47a792c3fb0dc9c",
+      "width": 305,
+      "height": 667,
+      "bytes": 30351
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "timestamp": "2026-07-18T02:20:09.262Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-landing-390x844.jpg",
+      "imageSha256": "eebd21ed5becd9699e6ee6f2209254919321e32a3f35940259a671bc8a19213d",
+      "width": 375,
+      "height": 812,
+      "bytes": 42306
+    },
+    {
+      "route": "/demo/jobs/northstar-applied-ai-solutions-engineer#score-change-view",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "timestamp": "2026-07-18T02:22:09.569Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-score-change-1440x900.jpg",
+      "imageSha256": "8301ced4a0c12f0b1b971a36300bf6a73aea50a92935f582b9902b17bf72d8ac",
+      "width": 1425,
+      "height": 891,
+      "bytes": 79894
+    },
+    {
+      "route": "/demo/jobs/northstar-applied-ai-solutions-engineer#score-receipt-view",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "timestamp": "2026-07-18T02:22:08.967Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-score-receipt-1440x900.jpg",
+      "imageSha256": "4ea0fbad5f6b899ccaf1796c3e00ce61562349a6615735d7158a02bd4a8b0055",
+      "width": 1425,
+      "height": 891,
+      "bytes": 111733
+    },
+    {
+      "route": "/demo/tracker",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "timestamp": "2026-07-18T02:27:46.310Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-tracker-1440x900.jpg",
+      "imageSha256": "c6882ec9b4ed2b402296829ed24302a93129cc32b1e48227483d1d6c90d9d6e0",
+      "width": 1440,
+      "height": 900,
+      "bytes": 57095
+    },
+    {
+      "route": "/demo/tracker",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "timestamp": "2026-07-18T02:27:46.446Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-tracker-390x844.jpg",
+      "imageSha256": "57d2a2de3a9dc7008eb5c692e2e6030ccd673b9a415d3cf2bd8e03886a995c58",
+      "width": 375,
+      "height": 812,
+      "bytes": 32115
+    },
+    {
+      "route": "/demo/trust",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "timestamp": "2026-07-18T02:20:10.368Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-trust-1440x900.jpg",
+      "imageSha256": "033438866c4486ef340101eb752cad91a85aaaa7bc20439572b741fee83cbab1",
+      "width": 1425,
+      "height": 891,
+      "bytes": 81427
+    },
+    {
+      "route": "/demo/trust",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "timestamp": "2026-07-18T02:20:10.461Z",
+      "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+      "cssBundleSha256": "2f6b90960dd286c10e1408aa60c86b5868582a8eca7e5e73e4a7f7ac257766ba",
+      "certifiedFinalCssBundleSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+      "mediaType": "image/jpeg",
+      "path": "build-week/bw5/screenshots/post-trust-390x844.jpg",
+      "imageSha256": "4c23d11ec23c8a9183c6a529838aebfd7452063bfc8e3211c31ab4f13bfb312c",
+      "width": 375,
+      "height": 812,
+      "bytes": 34021
+    }
+  ],
+  "result": "PASS"
+}

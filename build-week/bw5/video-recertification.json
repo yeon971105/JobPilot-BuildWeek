@@ -1,0 +1,107 @@
+{
+  "purpose": "Certify a new sub-three-minute video built entirely from actual repaired-product captures.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 3194,
+  "sha256": "847e57e5c8a3e4e09d010e1086716de985be76aa6d55fb16586fac5a5609d141",
+  "supportedGate": "Repaired video recertification",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "video": {
+    "path": "build-week/video/hybrid-visual-rc1-demo.mp4",
+    "sha256": "8a7f69e7fd751307156e20d2fe505d439a9c1a24461f65272aba86a5e9b46538",
+    "bytes": 5071399,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "r_frame_rate": "0/0"
+        },
+        {
+          "index": 2,
+          "codec_name": "mov_text",
+          "codec_type": "subtitle",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "170.000000",
+        "size": "5071399"
+      }
+    }
+  },
+  "visualSources": [
+    {
+      "path": "build-week/bw5/screenshots/post-landing-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "1407a68ff21147cea657ecc5a85adbeff50065909e8075aeb7ef31812cde022a"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-jobs-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "af7fbe0c77cb4c63d2c260f397545a3c9568043bf4fc3c02178fa0f2886ec910"
+    },
+    {
+      "path": "build-week/bw5/screenshots/video-evidence-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "c99a39fe957642daad3165ec1dd84d55a3fd5f7d6900e2f192ad133a9bb9e064"
+    },
+    {
+      "path": "build-week/bw5/screenshots/video-constraints-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "f3a718286021017ab2e78c3a8eb0e04a719b579b167edd68bd97fdbbd94f5a28"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-score-receipt-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "4ea0fbad5f6b899ccaf1796c3e00ce61562349a6615735d7158a02bd4a8b0055"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-score-change-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "8301ced4a0c12f0b1b971a36300bf6a73aea50a92935f582b9902b17bf72d8ac"
+    },
+    {
+      "path": "build-week/bw5/screenshots/video-strategy-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "ebc4da2d78a3862e6a134cbbe7ea8cf25e81dbfa0b04d7184ea8b69634a6c5a2"
+    },
+    {
+      "path": "build-week/bw5/screenshots/post-trust-1440x900.jpg",
+      "mediaType": "image/jpeg",
+      "sha256": "033438866c4486ef340101eb752cad91a85aaaa7bc20439572b741fee83cbab1"
+    }
+  ],
+  "durationSeconds": 170,
+  "under180Seconds": true,
+  "videoCodec": "h264",
+  "resolution": "1920x1080",
+  "framesPerSecond": 30,
+  "englishNarration": true,
+  "embeddedEnglishCaptions": true,
+  "music": false,
+  "providerLabelsMatch": true,
+  "scoreDisplayMatches": true,
+  "navigationMatches": true,
+  "spotFramesReviewedAtSeconds": [
+    5,
+    40,
+    75,
+    110,
+    130,
+    150,
+    165
+  ],
+  "result": "PASS"
+}

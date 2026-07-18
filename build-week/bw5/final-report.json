@@ -1,0 +1,65 @@
+{
+  "purpose": "Provide the canonical JP-BW5 decision and 21-part user-approval handoff.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 2197,
+  "sha256": "1dc51c7e9f5f0c5da228cac298ae3e9cfb3a564a3ae78ae8be06b8d7433c6aff",
+  "supportedGate": "Final visual release decision",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "finalDecision": "GO_BUILD_WEEK_VISUAL_RELEASE_READY_FOR_USER_APPROVAL",
+  "rootCause": "Tailwind v4 was imported but @tailwindcss/postcss was not registered because postcss.config.mjs was absent.",
+  "priorQaFalsePass": "Earlier QA asserted route/interaction success but not production CSS assets, computed styles, or layout geometry.",
+  "cssBundle": {
+    "path": "/_next/static/chunks/0wgl8jd.e.rug.css",
+    "bytes": 40578,
+    "sha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4",
+    "unresolvedTailwindImports": 0
+  },
+  "computedBeforeAfter": {
+    "navigation": "block → flex",
+    "heading": "32px → 88px",
+    "scoreRing": "static/0px → absolute/176px",
+    "jobColumns": "1 → 2"
+  },
+  "surfaces": {
+    "landing": "PASS",
+    "jobs": "PASS",
+    "detail": "PASS",
+    "tracker": "PASS",
+    "trustLab": "PASS"
+  },
+  "responsive": {
+    "desktop": "PASS",
+    "tablet": "PASS",
+    "mobile": "PASS",
+    "narrowMobile": "PASS"
+  },
+  "accessibility": "PASS",
+  "video": {
+    "historical": "INVALIDATED_AND_PRESERVED",
+    "repaired": "build-week/video/hybrid-visual-rc1-demo.mp4",
+    "sha256": "8a7f69e7fd751307156e20d2fe505d439a9c1a24461f65272aba86a5e9b46538",
+    "result": "PASS"
+  },
+  "tests": {
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "unitTests": 26,
+    "cssPipelineTests": 2,
+    "build": "PASS"
+  },
+  "publication": {
+    "repository": "https://github.com/yeon971105/JobPilot-BuildWeek",
+    "branch": "build-week/jobpilot-2026",
+    "tag": "build-week-2026-visual-rc1",
+    "status": "READY_TO_PUSH_AND_VERIFY"
+  },
+  "screenshotManifest": "build-week/bw5/post-repair-screenshot-manifest.json",
+  "remainingUserApproval": [
+    "Open the repaired product",
+    "Inspect landing, jobs, Northstar detail, tracker, and Trust Lab",
+    "Approve or request visual changes",
+    "Do not rename the RC tag final until approved"
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,188 @@
+{
+  "purpose": "Aggregate all final source, production, scorer, privacy, route, visual, and video validation gates.",
+  "timestamp": "2026-07-18T02:51:34.453Z",
+  "commit": "494ef86afe5f4f2cfd842363c945e457c79b37e0",
+  "size": 5011,
+  "sha256": "4c4bf1ca0cb77b12434da7427f4fc8ec74e031686f5b72b41779f9df8f419f49",
+  "supportedGate": "Full JP-BW5 validation",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "commands": {
+    "npmInstall": {
+      "status": "PASS",
+      "advisories": {
+        "moderate": 2
+      },
+      "forcedRewrite": false
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "npmTest": {
+      "status": "PASS",
+      "testFilesPassed": 4,
+      "testsPassed": 26,
+      "cssTestsSkippedByDesign": 2
+    },
+    "cssPipelineTest": {
+      "status": "PASS",
+      "testFilesPassed": 1,
+      "testsPassed": 2
+    },
+    "productionBuild": "PASS",
+    "demoValidate": {
+      "status": "PASS",
+      "testFilesPassed": 4,
+      "testsPassed": 26
+    }
+  },
+  "routeMatrix": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/demo",
+      "status": 200
+    },
+    {
+      "route": "/demo/jobs",
+      "status": 200
+    },
+    {
+      "route": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+      "status": 200
+    },
+    {
+      "route": "/demo/jobs/alder-data-platform-engineer",
+      "status": 200
+    },
+    {
+      "route": "/demo/jobs/harbor-product-data-analyst",
+      "status": 200
+    },
+    {
+      "route": "/demo/jobs/meridian-ml-infrastructure-engineer",
+      "status": 200
+    },
+    {
+      "route": "/demo/jobs/juniper-customer-ai-enablement-lead",
+      "status": 200
+    },
+    {
+      "route": "/demo/jobs/mosaic-junior-software-engineer",
+      "status": 200
+    },
+    {
+      "route": "/demo/tracker",
+      "status": 200
+    },
+    {
+      "route": "/demo/trust",
+      "status": 200
+    },
+    {
+      "route": "/about/build-week",
+      "status": 200
+    },
+    {
+      "route": "/api/health",
+      "status": 200
+    },
+    {
+      "route": "/api/provider-status",
+      "status": 200
+    }
+  ],
+  "scoreProof": {
+    "propertyCases": 160,
+    "fullScoreFixtures": 36,
+    "experienceCases": 60,
+    "workModeCases": 30,
+    "requiredPreferredCases": 30,
+    "umbrellaExampleCases": 24,
+    "eligibilityCases": 24,
+    "receipts": [
+      {
+        "jobId": "northstar-applied-ai-solutions-engineer",
+        "numericScoreEligibility": true,
+        "displayedScore": 97,
+        "maximumMicroPoints": 100000000,
+        "hiddenAdjustments": 0,
+        "receiptHash": "62fdbaaf07763a5d82a312ef00647f98f111c83aa9ed683395f92723996a6b7e",
+        "recomputationStable": true
+      },
+      {
+        "jobId": "alder-data-platform-engineer",
+        "numericScoreEligibility": true,
+        "displayedScore": 70,
+        "maximumMicroPoints": 100000000,
+        "hiddenAdjustments": 0,
+        "receiptHash": "9258d1e87146183a639ecec54a79c13bc58024ce730502265110c065535f4b1e",
+        "recomputationStable": true
+      },
+      {
+        "jobId": "harbor-product-data-analyst",
+        "numericScoreEligibility": true,
+        "displayedScore": 99,
+        "maximumMicroPoints": 100000000,
+        "hiddenAdjustments": 0,
+        "receiptHash": "bcf412638bdb12870f80a97baa37b94ff386aa306ac2a75e37d0d238c4162487",
+        "recomputationStable": true
+      },
+      {
+        "jobId": "meridian-ml-infrastructure-engineer",
+        "numericScoreEligibility": true,
+        "displayedScore": 52,
+        "maximumMicroPoints": 100000000,
+        "hiddenAdjustments": 0,
+        "receiptHash": "094083cee01be779ca26be0abc28d7b2029800f422b170ee1922e20c934f91f5",
+        "recomputationStable": true
+      },
+      {
+        "jobId": "juniper-customer-ai-enablement-lead",
+        "numericScoreEligibility": true,
+        "displayedScore": 92,
+        "maximumMicroPoints": 100000000,
+        "hiddenAdjustments": 0,
+        "receiptHash": "b9c6ed8a868d2b29d4ae9391006baadf279137fcfba4a80cf7210ec51262b11f",
+        "recomputationStable": true
+      },
+      {
+        "jobId": "mosaic-junior-software-engineer",
+        "numericScoreEligibility": false,
+        "displayedScore": null,
+        "maximumMicroPoints": 0,
+        "hiddenAdjustments": 0,
+        "receiptHash": "6b9f91dbcb0462df4b3081bd2e103246041073f166527be1e8101874752d008b",
+        "recomputationStable": true
+      }
+    ]
+  },
+  "antiHardcoding": {
+    "scorerJobIdBranches": 0,
+    "reviewedNamedFixtureExceptions": [
+      "See a Score Change fixture",
+      "release test selector"
+    ]
+  },
+  "requiredZeros": {
+    "unresolvedTailwindImport": 0,
+    "missingGeneratedUtility": 0,
+    "visualLayoutCollapse": 0,
+    "defaultBluePrimaryNavigation": 0,
+    "overlappingNavLinks": 0,
+    "textConcatenation": 0,
+    "horizontalOverflow": 0,
+    "clippedControls": 0,
+    "consoleErrors": 0,
+    "failedInternalRequests": 0,
+    "brokenFrozenRoutes": 0,
+    "scoreArithmeticErrors": 0,
+    "receiptMismatches": 0,
+    "hiddenAdjustments": 0,
+    "secrets": 0,
+    "realResumes": 0,
+    "productionMutations": 0,
+    "applicationSubmissions": 0
+  },
+  "result": "PASS"
+}
