@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "jobpilot.bw10.deployment-environment.v1",
+  "purpose": "PUBLIC_OWNER_REVIEW_NON_FINAL",
+  "variables": {
+    "BUILD_WEEK_DEMO_MODE": "true",
+    "LOCAL_PRIVATE_MODE": "false",
+    "AI_RUNTIME_MODE": "LOCAL_FIRST",
+    "BUILD_WEEK_USE_CACHED_GEMMA_ANALYSES": "true",
+    "BUILD_WEEK_ALLOW_LOCAL_GEMMA_REANALYSIS": "false",
+    "OLLAMA_ENABLED": "false",
+    "OPENAI_HEAVY_FEATURES_ENABLED": "false",
+    "BUILD_WEEK_ALLOW_LIVE_GPT56": "false"
+  },
+  "absentVariables": ["OPENAI_API_KEY"],
+  "connections": {
+    "productionDatabase": false,
+    "ollama": false,
+    "openAiApi": false,
+    "realResumeStorage": false,
+    "authenticationProvider": false
+  },
+  "configurationSource": "build-week/deployment/public-review.env.example",
+  "status": "FROZEN"
+}

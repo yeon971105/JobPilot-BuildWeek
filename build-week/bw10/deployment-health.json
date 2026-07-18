@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "jobpilot.bw10.deployment-health.v1",
+  "checkedAt": null,
+  "url": null,
+  "healthRoute": "/api/health",
+  "providerStatusRoute": "/api/provider-status",
+  "httpStatus": null,
+  "providerStatus": null,
+  "openAiApiRequests": 0,
+  "productionMutations": 0,
+  "status": "PENDING_DEPLOYMENT"
+}

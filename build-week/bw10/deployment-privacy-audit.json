@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.bw10.deployment-privacy-audit.v1",
+  "checkedAt": "2026-07-18T12:12:00-07:00",
+  "publicResumeRoute": {
+    "acceptsRealResume": false,
+    "transmitsSelectedFile": false,
+    "behavior": "Explains that Private Resume Mode runs in the local edition and provides local setup instructions",
+    "apiFailClosedStatus": 403
+  },
+  "realResumeFilesInPublicPackage": 0,
+  "privateProductionRowsInPublicPackage": 0,
+  "participantRecordsInPublicPackage": 0,
+  "openAiKeyConfigured": false,
+  "productionDatabaseConnected": false,
+  "analyticsOrIpCollectionAdded": false,
+  "status": "PASS"
+}
