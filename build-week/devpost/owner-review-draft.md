@@ -1,0 +1,104 @@
+# JobPilot — Devpost owner-review draft
+
+Status: **Draft only. Not submitted.**
+
+## Tagline
+
+Find the roles worth your time—and see exactly why before you apply.
+
+## Category
+
+Apps for Your Life
+
+## Short description
+
+JobPilot turns application fatigue into a transparent decision loop: discover nearby and Remote roles, prioritize three next decisions, understand the evidence, open the original employer destination, and track progress locally—without auto-apply or hidden score adjustments.
+
+## Inspiration and problem
+
+Application fatigue is decision fatigue. A job seeker repeats searches, opens postings one by one, manually compares each role with their experience, hunts for the real employer destination, and maintains a separate tracker—yet still does not know which application deserves the next hour.
+
+JobPilot connects that fragmented journey:
+
+`DISCOVER → PRIORITIZE → UNDERSTAND → APPLY → TRACK`
+
+## What it does
+
+The no-login public review uses six synthetic roles and one synthetic candidate. **Today’s 3 Roles Worth Your Time** replaces an endless feed with three transparent next decisions. The shortlist follows a published lexicographic order—numeric eligibility, blocker state, Fit Score, Evidence Quality, distance or Remote, freshness, then stable job ID—and exposes its rationale without a hidden shortlist score.
+
+Nearby discovery starts from profile-configured location and work-mode preferences. Job Detail separates required from preferred qualifications, calculates non-overlapping relevant experience by month, shows strongest matches and biggest gaps, and keeps practical constraints outside technical Fit Score. Comparison supports up to three roles.
+
+When a user chooses to continue, JobPilot opens the original employer destination under an explicit trust state. The public synthetic destination disables submission. Returning never marks a role Applied; tracker changes require a deliberate browser-local action.
+
+## How it works
+
+Gemma 4 12B is the primary semantic model for role extraction, capability grouping, candidate evidence matching, equivalence, summaries, and uncertainty. Private Resume Mode runs only in the local edition: PDF, DOCX, or TXT is parsed in memory, confirmed structured evidence stays browser-local, and only that evidence can reach loopback Ollama.
+
+Deterministic AI Fit V2.2 owns the exact 100,000,000 micro-point allocation, class caps, transfer rules, non-overlapping experience union, Evidence Quality, practical priority, and Score Receipt. The web/API/CLI verifier independently reproduces canonicalization, arithmetic, evidence IDs, source hashes, and the final receipt hash. A tampered receipt fails closed.
+
+Four `gpt-5.6-sol` outputs were prepared through Codex from frozen synthetic evidence: application strategy, independent challenge, ambiguity review, and pairwise comparison. Every artifact records the generation surface, frozen input hash, output hash, file hash, and valid evidence IDs. Prepared output is never labeled live and never generates or modifies a numeric score.
+
+The public runtime makes **0 OpenAI API requests** and incurs **$0 OpenAI API cost**.
+
+## How Codex was used
+
+Codex built and regression-tested the product across the Build Week sequence, including the Golden Path, deterministic scorer, nearby discovery, private resume boundary, Score Receipt Verifier, progressive proof disclosure, destination trust states, public-safe coverage freeze, Decision Utility harness, and release evidence.
+
+The public defect timeline shows five concrete `Observed → Reproduced → Repaired → Regression tested` moments: work-mode interpretation, scoring-budget allocation, receipt verification, the Tailwind production pipeline, and dense Job Detail UX. The representative Codex task is identified in the owner package; the required `/feedback` Session ID is not fabricated and remains an exact owner action until the command is available.
+
+## Production reality
+
+The public UI remains synthetic, but a read-only immutable snapshot of the processed official-source portfolio recorded 145,978 unique active jobs, 13,164 California jobs, 6,426 Bay Area memberships, 1,108 Los Angeles County memberships, 473 active official-source endpoints, 446 latest complete snapshots, 145,978 original posting records, 2,727 reachable URLs, and 2,727 verified apply destinations.
+
+These are processed-portfolio counts, not complete-market coverage. Unique-job totals and regional memberships are different counting populations and are never added. Recorded, reachable, and verified destination claims remain separate.
+
+## Challenges
+
+- Making a sophisticated evidence model understandable without forcing judges to read technical proof first.
+- Keeping deterministic scoring, semantic interpretation, prepared GPT review, and practical constraints visibly separate.
+- Proving production reach without exposing job rows, private URLs, candidate records, credentials, or the acquisition database.
+- Preserving user control at the employer handoff and preventing any automatic Applied transition.
+- Creating authentic usability evidence without inventing participants or letting dry-run rows enter the human dataset.
+
+## Accomplishments
+
+- One concise decision path from shortlist through employer destination and local tracking.
+- Exact micro-point scoring with an independently verifiable receipt.
+- Gemma-first private local architecture with a fully usable cached public review mode.
+- Four provenance-bound prepared GPT-5.6 reviews with zero API runtime.
+- Frozen aggregate production-coverage evidence and honest destination trust states.
+- 109 passing tests plus two authorized browser-only skips before final certification.
+- A no-PII, counterbalanced Decision Utility study harness with validator, combiner, and analysis pipeline.
+
+## Lessons learned
+
+Trust improves when proof is progressive: the user first gets a decision, then an explanation, then exact evidence and reproducible arithmetic. AI adds the most value when semantic interpretation has a strict contract and deterministic code retains ownership of consequential calculations. Product impact must remain separate from hiring outcomes; usability can be measured without pretending to predict employment success.
+
+## Privacy and safety
+
+The public review requires no account, production database, OpenAI key, Ollama, real resume, or browser location permission. It contains only synthetic candidate/job data and aggregate coverage evidence. The hosted resume route rejects uploads before parsing and explains local setup. JobPilot collects no application form and never submits an application.
+
+## Limitations
+
+Public candidate, roles, employer destinations, captures, and video are synthetic. Coverage describes the processed portfolio, not the complete market. Fit Score is not a hiring probability. Independent hiring-outcome calibration is unavailable. The Decision Utility study is `READY_NOT_RUN` with 0 actual participants, so no public human-impact metric is claimed.
+
+## Build Week extension
+
+During Build Week, JobPilot extended the existing acquisition and scoring foundation with the no-login Golden Path, application-fatigue story, nearby discovery, transparent three-role shortlist, private resume isolation, concise Job Detail, comparison, safe employer handoff, local tracker, Score Receipt verification, prepared GPT-5.6 review surfaces, judge tour, Trust Lab, Codex defect timeline, frozen coverage proof, and authentic Decision Utility workflow.
+
+## Technologies
+
+Codex, GPT-5.6 (`gpt-5.6-sol`, prepared), Gemma 4 12B (`gemma4:12b`), deterministic TypeScript scoring, Next.js 16.2.6, React 19, TypeScript, Tailwind CSS 4, Ollama for the local edition, Vitest, Playwright-compatible browser QA, SHA-256, CSV, JSON, and OpenAI Sites for the owner-review environment.
+
+## Links and testing
+
+- Repository: https://github.com/yeon971105/JobPilot-BuildWeek
+- Public owner-review URL: pending deployment verification
+- Unlisted YouTube URL: pending authenticated upload and logged-out verification
+- Codex `/feedback` Session ID: pending exact action on the selected representative task
+
+Testing path: open the landing page, choose Today’s Shortlist, inspect Northstar’s summary/matches/gaps/experience/constraints, verify its receipt, tamper with the receipt, open the synthetic employer destination, return and explicitly mark Preparing, compare roles, then open Trust Lab and Coverage Proof. The study route is isolated at `/study/decision-utility` and dry runs are excluded from human analysis.
+
+## Team information
+
+Single-entrant project. The authenticated Devpost profile and final owner-visible team label must be confirmed in the draft before submission.

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "jobpilot.bw10.devpost-draft-status.v1",
+  "checkedAt": "2026-07-18T12:20:00-07:00",
+  "draftUrl": null,
+  "draftIdentifier": null,
+  "lastSavedAt": null,
+  "populatedFieldCount": 27,
+  "missingFieldCount": 4,
+  "unresolvedAccountFields": ["authenticated Devpost team/profile label"],
+  "submitted": false,
+  "status": "LOCAL_DRAFT_COMPLETE_ACCOUNT_ACCESS_PENDING",
+  "hold": "HOLD_BUILD_WEEK_DEVPOST_ACCOUNT_ACTION"
+}

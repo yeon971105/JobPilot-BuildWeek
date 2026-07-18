@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "jobpilot.bw10.devpost-placeholder-audit.v1",
+  "auditedAt": "2026-07-18T12:20:00-07:00",
+  "narrativeFields": 27,
+  "verifiedNarrativeFieldsPopulated": 27,
+  "unresolvedVerifiedOnlyFields": [
+    { "field": "publicReviewUrl", "value": null, "reason": "Deployment verification pending" },
+    { "field": "unlistedVideoUrl", "value": null, "reason": "Authenticated upload and logged-out access test pending" },
+    { "field": "codexFeedbackSessionId", "value": null, "reason": "Exact /feedback action pending" },
+    { "field": "teamInformation", "value": "review required", "reason": "Authenticated account label must be confirmed" }
+  ],
+  "fabricatedSessionIds": 0,
+  "fabricatedDeploymentUrls": 0,
+  "fabricatedVideoUrls": 0,
+  "prematureStudyMetrics": 0,
+  "hiringProbabilityClaims": 0,
+  "completeMarketClaims": 0,
+  "liveGptClaims": 0,
+  "apiRuntimeClaims": 0,
+  "finalLookingFabricatedPlaceholders": 0,
+  "status": "PASS_EXPLICIT_NULLS_ONLY"
+}
