@@ -16,7 +16,7 @@ const listeners = new Set<() => void>();
 function readState(): ProfileState {
   try {
     const value = JSON.parse(window.localStorage.getItem(PRIVATE_PROFILE_STORAGE_KEY) || "null") as ProfileState | null;
-    return value?.preferences && value.analyses ? value : { ...SERVER_STATE, preferences: { ...DEFAULT_WORK_PREFERENCES } };
+    return value?.preferences && value.analyses ? { ...value, preferences: { ...DEFAULT_WORK_PREFERENCES, ...value.preferences } } : { ...SERVER_STATE, preferences: { ...DEFAULT_WORK_PREFERENCES } };
   } catch { return { ...SERVER_STATE, preferences: { ...DEFAULT_WORK_PREFERENCES } }; }
 }
 function snapshot() { if (!browserState) browserState = readState(); return browserState; }

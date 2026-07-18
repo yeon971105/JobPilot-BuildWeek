@@ -190,9 +190,11 @@ function classTotal(groups: CapabilityScore[], scoringClass: DemoRequirement["sc
 }
 
 function defaultScoreContext(job: DemoJob): ScoreContext {
+  const { discoveryLocation, ...candidateScoringContract } = DEMO_CANDIDATE;
+  void discoveryLocation;
   return {
     candidateProfileId: DEMO_CANDIDATE.id,
-    candidateProfileHash: sha256(DEMO_CANDIDATE),
+    candidateProfileHash: sha256(candidateScoringContract),
     preferenceHash: sha256(DEMO_CANDIDATE.preferences),
     candidateEvidenceIds: DEMO_CANDIDATE.evidence.map((item) => item.id),
     acceptedWorkModes: DEMO_CANDIDATE.preferences.acceptedWorkModes,

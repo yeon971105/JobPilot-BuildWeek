@@ -1,0 +1,16 @@
+{
+  "purpose": "Freeze the transparent three-role comparison behavior and visible factors.",
+  "timestamp": "2026-07-18T06:24:00.000Z",
+  "commit": "024f3d6",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Role comparison",
+  "route": "/demo/compare",
+  "maximumRoles": 3,
+  "persistentBrowserLocalTray": true,
+  "visibleFactors": ["role", "company", "Fit Score or Insufficient Evidence", "Evidence Quality", "Apply Priority", "blocker", "distance or Remote", "posted date", "work mode", "required experience", "preferred experience", "top three matches", "top three gaps", "direct employer destination"],
+  "opaqueComparisonScore": false,
+  "mobileLayout": "CARDS",
+  "keyboardAccessibleControls": true,
+  "result": "PASS_CONTRACT"
+}

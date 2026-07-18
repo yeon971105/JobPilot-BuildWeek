@@ -10,7 +10,7 @@ const profileSchema = z.object({
   skills: z.array(z.string().max(120)).max(80), education: z.array(z.string().max(200)).max(20), certifications: z.array(z.string().max(200)).max(20),
   evidence: z.array(z.object({ id: z.string(), label: z.string().max(160), text: z.string().max(320), capabilities: z.array(z.string().max(120)).max(12) }).strict()).max(30),
 }).strict();
-const preferencesSchema = z.object({ acceptedWorkModes: z.array(z.enum(["REMOTE", "HYBRID", "ONSITE"])).max(3), preferredLocations: z.array(z.string().max(100)).max(12), remoteEligibility: z.enum(["YES", "NO", "NEEDS_CLARIFICATION"]), maximumTravelPercent: z.number().min(0).max(100).nullable(), willingToRelocate: z.boolean(), authorizationNote: z.string().max(240) }).strict();
+const preferencesSchema = z.object({ acceptedWorkModes: z.array(z.enum(["REMOTE", "HYBRID", "ONSITE"])).max(3), preferredLocations: z.array(z.string().max(100)).max(12), remoteEligibility: z.enum(["YES", "NO", "NEEDS_CLARIFICATION"]), maximumTravelPercent: z.number().min(0).max(100).nullable(), willingToRelocate: z.boolean(), authorizationNote: z.string().max(240), homeCity: z.string().max(80).default("Oakland, California"), homeLatitude: z.number().min(-90).max(90).default(37.8044), homeLongitude: z.number().min(-180).max(180).default(-122.2712), preferredRadiusMiles: z.number().min(1).max(250).default(35), remotePreference: z.enum(["WELCOME", "NEUTRAL", "AVOID"]).default("WELCOME") }).strict();
 const requestSchema = z.object({ jobId: z.string().max(120), profile: profileSchema, preferences: preferencesSchema }).strict();
 
 export async function POST(request: Request) {

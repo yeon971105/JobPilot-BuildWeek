@@ -35,6 +35,11 @@ export type WorkPreferences = {
   maximumTravelPercent: number | null;
   willingToRelocate: boolean;
   authorizationNote: string;
+  homeCity: string;
+  homeLatitude: number;
+  homeLongitude: number;
+  preferredRadiusMiles: number;
+  remotePreference: "WELCOME" | "NEUTRAL" | "AVOID";
 };
 
 export const DEFAULT_WORK_PREFERENCES: WorkPreferences = {
@@ -44,4 +49,9 @@ export const DEFAULT_WORK_PREFERENCES: WorkPreferences = {
   maximumTravelPercent: 20,
   willingToRelocate: false,
   authorizationNote: "",
+  homeCity: "Oakland, California",
+  homeLatitude: 37.8044,
+  homeLongitude: -122.2712,
+  preferredRadiusMiles: 35,
+  remotePreference: "WELCOME",
 };

@@ -1,0 +1,21 @@
+{
+  "purpose": "Freeze the user-controlled employer-destination contract and zero-submission boundary.",
+  "timestamp": "2026-07-18T06:24:00.000Z",
+  "commit": "024f3d6",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Direct employer flow",
+  "route": "/demo/employer-posting/[id]",
+  "primaryAction": "Apply on Employer Site ↗",
+  "newTab": true,
+  "rel": ["noopener", "noreferrer"],
+  "publicDestination": "INTERNAL_FICTIONAL_EMPLOYER_DEMO",
+  "applicationSubmissions": 0,
+  "formSubmissions": 0,
+  "automaticAppliedTransitions": 0,
+  "resumeTransmissions": 0,
+  "hiddenRedirects": 0,
+  "popupsWithoutUserAction": 0,
+  "personalDataRecorded": false,
+  "result": "PASS_CONTRACT"
+}

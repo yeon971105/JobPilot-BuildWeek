@@ -33,7 +33,9 @@ export type DemoJob = {
   title: string;
   seniority: string;
   analysisTimestamp: string;
-  locations: { label: string; workModes: string[] }[];
+  postedAt: string;
+  sourcePortfolioLabel: string;
+  locations: { label: string; latitude?: number | null; longitude?: number | null; workModes: string[] }[];
   travelPercent: number;
   summary: string;
   responsibilities: string[];

@@ -5,6 +5,14 @@
   "label": "Synthetic demo profile",
   "headline": "Data and applied AI solutions engineer",
   "summary": "A fictional profile created only for the JobPilot judging flow. It contains no real person's identity, contact details, resume, education record, or employment history.",
+  "discoveryLocation": {
+    "homeCity": "Oakland, California",
+    "homeLatitude": 37.8044,
+    "homeLongitude": -122.2712,
+    "preferredRadiusMiles": 35,
+    "acceptedWorkModes": ["REMOTE", "HYBRID"],
+    "remotePreference": "WELCOME"
+  },
   "roles": [
     {
       "id": "role-synthetic-1",

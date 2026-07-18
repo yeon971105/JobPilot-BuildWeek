@@ -1,0 +1,19 @@
+{
+  "purpose": "Freeze deterministic, profile-configured nearby discovery without geolocation or score leakage.",
+  "timestamp": "2026-07-18T06:24:00.000Z",
+  "commit": "024f3d6",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Nearby discovery",
+  "profileLocation": {"city":"Oakland, California","latitude":37.8044,"longitude":-122.2712,"preferredRadiusMiles":35},
+  "distanceAlgorithm": "DETERMINISTIC_HAVERSINE",
+  "sorts": ["Best Match", "Nearest", "Most Recent", "Highest Evidence Quality"],
+  "bestMatchTieBreak": ["numeric eligible first", "no blocker first", "Fit Score descending", "Evidence Quality descending", "distance ascending when applicable", "posting date descending", "stable job ID"],
+  "filters": ["Within preferred area", "Remote compatible", "No confirmed blocker", "Apply Priority", "Work mode", "Seniority", "Minimum Fit Score", "Evidence sufficient"],
+  "browserGeolocation": false,
+  "externalGeocoding": false,
+  "mapApi": false,
+  "technicalScoreAffectedByDistance": false,
+  "remoteDisplayedAsZeroMiles": false,
+  "result": "PASS_CONTRACT"
+}
