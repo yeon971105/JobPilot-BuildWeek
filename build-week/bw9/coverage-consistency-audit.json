@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "jobpilot.bw9.coverage-consistency-audit.v1",
+  "generatedAt": "2026-07-18T17:41:08.379Z",
+  "frozenSnapshot": "build-week/bw9/frozen-coverage-snapshot.json",
+  "snapshotOutputHash": "68f2195f1e4a6d4dce155eb2dfcd9e209643d412e30d949ca65bd2bee6ae8414",
+  "requiredSourceRule": "All Build Week release claims import or transcribe this frozen snapshot; no release surface queries the live database.",
+  "expectedClaims": {
+    "activeCanonicalJobs": 145978,
+    "californiaUniqueJobs": 13164,
+    "bayAreaMemberships": 6426,
+    "losAngelesCountyMemberships": 1108,
+    "activeOfficialSourceEndpoints": 473,
+    "latestCompleteSnapshots": 446,
+    "originalPostingRecorded": 145978,
+    "urlReachable": 2727,
+    "applyDestinationVerified": 2727,
+    "lastSuccessfulRefresh": "2026-07-18T10:09:52.791Z"
+  },
+  "surfaces": [
+    {
+      "surface": "coverage page",
+      "path": "src/app/about/coverage/page.tsx",
+      "binding": "JSON import"
+    },
+    {
+      "surface": "README",
+      "path": "README.md",
+      "binding": "snapshot values + hash"
+    },
+    {
+      "surface": "video",
+      "path": "build-week/bw9/video-script.md",
+      "binding": "snapshot values + timestamp"
+    },
+    {
+      "surface": "Devpost",
+      "path": "build-week/bw9/devpost-draft.md",
+      "binding": "snapshot values + timestamp"
+    },
+    {
+      "surface": "report",
+      "path": "build-week/bw9/coverage-report.md",
+      "binding": "snapshot values + hash"
+    }
+  ],
+  "checks": {
+    "oneFrozenSnapshot": true,
+    "fuzzyGeographyLookup": false,
+    "liveReleaseCountQuery": false,
+    "uniqueJobAndMembershipSemanticsSeparated": true,
+    "jp41PopulationConflated": false,
+    "mismatchCount": 0
+  },
+  "result": "PASS_ZERO_MISMATCHES",
+  "holds": []
+}

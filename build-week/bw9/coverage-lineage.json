@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "jobpilot.bw9.coverage-lineage.v1",
+  "generatedAt": "2026-07-18T17:41:08.379Z",
+  "result": "PASS_DISTINCT_COUNTING_POPULATIONS_RECONCILED",
+  "publicTimeline": [
+    {
+      "at": "2026-07-16T06:22:51.669Z",
+      "label": "JP-41 certified private-shadow slice",
+      "population": "2,808 source postings, canonical jobs, and private-index records in JP-41 generation cmrn2qtbx00005cvvdx45wbs8",
+      "scope": "A bounded acquisition/readiness slice, including California and Los Angeles County evaluation. It was not the later active Job catalog."
+    },
+    {
+      "at": "2026-07-18T17:41:08.379Z",
+      "label": "Frozen Build Week active catalog",
+      "population": "145,978 unique active Job.id rows supplied by 473 active official-source endpoints",
+      "scope": "The later processed active catalog after subsequent acquisition and refresh generations. Counts are frozen at one database read version."
+    }
+  ],
+  "priorCertifiedCatalog": {
+    "workItem": "JP-41",
+    "definition": "The generation-scoped private index reconciled one SourcePosting, CanonicalJob, and private-index record per certified row.",
+    "generationId": "cmrn2qtbx00005cvvdx45wbs8",
+    "sourcePostings": 2808,
+    "canonicalJobs": 2808,
+    "privateIndex": 2808,
+    "californiaJobs": 2808,
+    "duplicateCanonicalJobs": 0,
+    "duplicateMarketAssociations": 0,
+    "evidence": {
+      "finalReportSha256": "dbbba149dd129c601b347300cbdbdc09f85c7ab98fc0c248acead7de7bcd0bc7",
+      "reconciliationSha256": "f56f9291abee12f07debeab0dec9d410003733741f8af78e9caf507f91931548",
+      "gate": "PASS_SOURCE_INDEX_FULL_RECONCILIATION"
+    }
+  },
+  "laterAcquisitionGenerations": {
+    "definition": "Acquisition and refresh work after the bounded JP-41 generation populated the broader Job table from the active source portfolio. The frozen snapshot measures this later table state, not a historical roll-up of JP-41.",
+    "evidenceBoundary": "Only aggregate state at the frozen read version is exported; no private rows or generation payloads are copied."
+  },
+  "currentActiveCatalog": {
+    "definition": "One unique Job.id where Job.ingestionStatus = ACTIVE. The primary-key identity is counted once, regardless of source or market associations.",
+    "uniqueJobs": 145978,
+    "activeSourceEndpoints": 473,
+    "frozenAt": "2026-07-18T17:41:08.379Z",
+    "readVersion": "9153132:9153132:"
+  },
+  "semantics": {
+    "uniqueJobs": "Distinct Job.id values. Used for active catalog and California totals.",
+    "marketMemberships": "Distinct active Job.id values associated to one exact LocalMarket key. Bay Area and Los Angeles County may overlap other markets and must not be summed into catalog totals.",
+    "whyCountsDiffer": "JP-41 was a single bounded private-shadow generation. The Build Week snapshot is a later, broader active Job catalog populated by subsequent acquisition and refresh work.",
+    "noDoubleCountingProof": {
+      "activeRows": 145978,
+      "distinctActiveIds": 145978,
+      "mismatch": 0,
+      "queryUsesDistinctForRegionalAndMarketCounts": true
+    },
+    "snapshotScope": "Active Job catalog rows at one read-only transaction snapshot; one Job.id equals one unique catalog job."
+  },
+  "prohibitedClaim": "The prior 2,808 catalog and the current active catalog are not the same counting population.",
+  "zeroValues": {
+    "lineageAmbiguity": 0,
+    "duplicateCounting": 0,
+    "populationConflation": 0
+  }
+}

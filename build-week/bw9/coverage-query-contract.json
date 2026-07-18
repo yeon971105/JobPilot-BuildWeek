@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "jobpilot.bw9.coverage-query-contract.v1",
+  "queryVersion": "jobpilot.bw9.coverage-query.v1",
+  "transaction": {
+    "mode": "READ ONLY",
+    "isolation": "database default",
+    "rawRowsExported": 0
+  },
+  "canonicalActiveJobDefinition": "One unique Job.id where Job.ingestionStatus = ACTIVE. The primary-key identity is counted once, regardless of source or market associations.",
+  "californiaDefinition": "Distinct active Job.id values whose latest decision per job and product scope has one of six affirmative California scope states.",
+  "marketDefinitions": {
+    "bayArea": {
+      "marketKey": "BAY_AREA_OPERATIONAL_REGION",
+      "semantics": "distinct active Job.id memberships"
+    },
+    "losAngelesCounty": {
+      "marketKey": "LOS_ANGELES_COUNTY",
+      "publicLabel": "Los Angeles County",
+      "semantics": "distinct active Job.id memberships; county-only JP-41 geography contract"
+    }
+  },
+  "destinationDefinitions": {
+    "originalPostingRecorded": "Active Job rows with a non-empty sourceUrl. This is a recorded-location claim, not reachability or application validation.",
+    "urlReachable": "Active jobs whose linked ApplyDestination has status VALID. This is positive reachability evidence, not an apply-readiness claim.",
+    "applyDestinationVerified": "Active jobs whose linked ActionDestination is apply-ready, has validationState VALID, and has a non-empty destinationUrl."
+  },
+  "queries": {
+    "environment": {
+      "sha256": "0db80e2e861c8c61822ca313fe6640e0d499819451c7e00f62acb421c3dc5e96",
+      "sql": "SELECT\n  CURRENT_TIMESTAMP AS \"asOf\",\n  current_setting('server_version') AS \"serverVersion\",\n  current_setting('transaction_isolation') AS \"transactionIsolation\",\n  current_setting('transaction_read_only') AS \"transactionReadOnly\",\n  txid_current_snapshot()::text AS \"transactionSnapshot\",\n  current_database() AS \"databaseName\""
+    },
+    "activeCatalog": {
+      "sha256": "b63bc005b4f19893ea3e98bb657ec3a46a7ef6ed6e42c70cd27781ce2dc3fcf7",
+      "sql": "WITH active_jobs AS (\n  SELECT \"id\", \"sourceEndpointId\", \"sourceUrl\", \"applyUrl\", \"applyReady\", \"lastSeenAt\", \"updatedAt\"\n  FROM \"Job\"\n  WHERE \"ingestionStatus\" = 'ACTIVE'\n), active_source_ids AS (\n  SELECT DISTINCT \"sourceEndpointId\" AS id\n  FROM active_jobs\n  WHERE \"sourceEndpointId\" IS NOT NULL\n), latest_snapshots AS (\n  SELECT DISTINCT ON (\"endpointId\") \"endpointId\", \"completeness\", \"startedAt\", \"finishedAt\"\n  FROM \"SyncSnapshot\"\n  ORDER BY \"endpointId\", \"startedAt\" DESC\n)\nSELECT\n  (SELECT COUNT(*) FROM active_jobs) AS \"activeCatalogRows\",\n  (SELECT COUNT(DISTINCT \"id\") FROM active_jobs) AS \"activeCanonicalJobs\",\n  (SELECT COUNT(*) - COUNT(DISTINCT \"id\") FROM active_jobs) AS \"duplicateCanonicalRows\",\n  (SELECT COUNT(DISTINCT id) FROM active_source_ids) AS \"activeSourceEndpoints\",\n  (SELECT COUNT(*) FROM latest_snapshots snapshot JOIN active_source_ids source ON source.id = snapshot.\"endpointId\" WHERE snapshot.\"completeness\" = 'COMPLETE') AS \"latestCompleteSnapshots\",\n  (SELECT COUNT(*) FROM active_jobs WHERE \"sourceUrl\" IS NOT NULL AND BTRIM(\"sourceUrl\") <> '') AS \"originalPostingRecorded\",\n  (SELECT COUNT(*) FROM active_jobs WHERE \"applyUrl\" IS NOT NULL AND BTRIM(\"applyUrl\") <> '') AS \"applicationUrlRecorded\",\n  (SELECT COUNT(*) FROM active_jobs WHERE \"applyReady\" = true) AS \"legacyApplyReady\",\n  (SELECT MAX(\"lastSuccessAt\") FROM \"SourceRefreshSchedule\") AS \"lastSuccessfulRefreshSchedule\",\n  (SELECT MAX(\"finishedAt\") FROM \"SourceRefreshRun\" WHERE \"succeededSources\" > 0) AS \"lastSuccessfulRefreshRun\",\n  (SELECT MAX(\"updatedAt\") FROM active_jobs) AS \"latestActiveJobUpdate\",\n  (SELECT MAX(\"lastSeenAt\") FROM active_jobs) AS \"latestActiveJobSeen\""
+    },
+    "californiaUniqueJobs": {
+      "sha256": "9d0cbddd6f9bcdfab3308a5a1f5ac85c5ebc5db064718ef35f1118e699374f5a",
+      "sql": "WITH latest_scope AS (\n  SELECT DISTINCT ON (decision.\"jobId\", decision.\"productScopeId\")\n    decision.\"jobId\", decision.\"productScopeId\", decision.\"scopeState\"\n  FROM \"JobScopeDecision\" decision\n  ORDER BY decision.\"jobId\", decision.\"productScopeId\", decision.\"evaluatedAt\" DESC\n), affirmative_jobs AS (\n  SELECT DISTINCT latest_scope.\"jobId\"\n  FROM latest_scope\n  JOIN \"ProductScope\" scope ON scope.\"id\" = latest_scope.\"productScopeId\"\n  JOIN \"Job\" job ON job.\"id\" = latest_scope.\"jobId\" AND job.\"ingestionStatus\" = 'ACTIVE'\n  WHERE latest_scope.\"scopeState\" IN (\n    'CALIFORNIA_ONSITE',\n    'CALIFORNIA_HYBRID',\n    'CALIFORNIA_MULTI_LOCATION',\n    'CALIFORNIA_REMOTE_ELIGIBLE',\n    'CALIFORNIA_STATEWIDE',\n    'CALIFORNIA_TRAVEL_BASED'\n  )\n)\nSELECT\n  COUNT(*) AS \"qualifyingRows\",\n  COUNT(DISTINCT \"jobId\") AS \"uniqueJobs\",\n  COUNT(*) - COUNT(DISTINCT \"jobId\") AS \"duplicateCounting\"\nFROM affirmative_jobs"
+    },
+    "exactMarketMemberships": {
+      "sha256": "866ef5d46dd451ba0a8aa0b34b60bf6bce703879c2dc76b59c8deb31464a12b2",
+      "sql": "SELECT\n  market.\"marketKey\",\n  market.\"name\",\n  market.\"marketType\",\n  market.\"datasetVersion\",\n  market.\"sourceArtifactHash\",\n  COUNT(membership.\"id\") FILTER (WHERE job.\"id\" IS NOT NULL) AS \"membershipRows\",\n  COUNT(DISTINCT job.\"id\") AS \"uniqueActiveJobs\"\nFROM \"LocalMarket\" market\nLEFT JOIN \"MarketMembership\" membership\n  ON membership.\"marketId\" = market.\"id\" AND membership.\"entityType\" = 'JOB'\nLEFT JOIN \"Job\" job\n  ON job.\"id\" = membership.\"entityId\" AND job.\"ingestionStatus\" = 'ACTIVE'\nWHERE market.\"marketKey\" IN ('BAY_AREA_OPERATIONAL_REGION', 'LOS_ANGELES_COUNTY')\nGROUP BY market.\"id\", market.\"marketKey\", market.\"name\", market.\"marketType\", market.\"datasetVersion\", market.\"sourceArtifactHash\"\nORDER BY market.\"marketKey\""
+    },
+    "progressiveDestinationEvidence": {
+      "sha256": "c0bcbee2d89f8a0733f7296580197e30ab49106eab4ae3b69117719e9f594bf7",
+      "sql": "WITH active_jobs AS (\n  SELECT \"id\", \"sourceUrl\", \"applyUrl\"\n  FROM \"Job\"\n  WHERE \"ingestionStatus\" = 'ACTIVE'\n), destination_evidence AS (\n  SELECT\n    job.\"id\" AS \"jobId\",\n    BOOL_OR(destination.\"status\" = 'VALID') AS \"reachable\",\n    BOOL_OR(\n      action.\"applyReady\" = true\n      AND action.\"validationState\" = 'VALID'\n      AND action.\"destinationUrl\" IS NOT NULL\n      AND BTRIM(action.\"destinationUrl\") <> ''\n    ) AS \"verifiedApply\"\n  FROM active_jobs job\n  LEFT JOIN \"SourcePosting\" posting ON posting.\"jobId\" = job.\"id\"\n  LEFT JOIN \"ApplyDestination\" destination ON destination.\"postingId\" = posting.\"id\"\n  LEFT JOIN \"ActionDestination\" action ON action.\"postingId\" = posting.\"id\"\n  GROUP BY job.\"id\"\n)\nSELECT\n  COUNT(*) FILTER (WHERE job.\"sourceUrl\" IS NOT NULL AND BTRIM(job.\"sourceUrl\") <> '') AS \"originalPostingRecorded\",\n  COUNT(*) FILTER (WHERE COALESCE(evidence.\"reachable\", false)) AS \"urlReachable\",\n  COUNT(*) FILTER (WHERE COALESCE(evidence.\"verifiedApply\", false)) AS \"applyDestinationVerified\",\n  COUNT(*) FILTER (WHERE NOT COALESCE(evidence.\"reachable\", false) AND NOT COALESCE(evidence.\"verifiedApply\", false)) AS \"withoutPositiveValidationEvidence\"\nFROM active_jobs job\nLEFT JOIN destination_evidence evidence ON evidence.\"jobId\" = job.\"id\""
+    }
+  },
+  "prohibitedInterpretations": [
+    "complete market coverage",
+    "JP-41 and the current active catalog are the same counting population",
+    "market membership counts can be summed into a unique-job total",
+    "recorded URLs are automatically reachable or apply-verified",
+    "Greater Los Angeles"
+  ]
+}

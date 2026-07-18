@@ -20,16 +20,17 @@ Users can inspect required versus preferred qualifications, month-accurate relev
 
 ## Production reality, safely proven
 
-The judge flow uses synthetic roles for privacy and reproducibility. A read-only aggregate snapshot from the larger production acquisition system recorded, as of `2026-07-18T08:27:26.810Z`:
+The judge flow uses synthetic roles for privacy and reproducibility. One immutable read-only aggregate snapshot from the larger production acquisition system recorded, as of `2026-07-18T17:41:08.379Z`:
 
-- 146,007 active catalog jobs;
-- 13,166 active jobs in verified California scope;
-- 6,434 Bay Area and 1,148 Greater Los Angeles market memberships;
+- 145,978 unique active catalog jobs;
+- 13,164 unique California jobs;
+- 6,426 San Francisco Bay Area and 1,108 Los Angeles County memberships;
 - 473 active source endpoints, including 446 with a latest complete snapshot;
-- 100% of active records with an original application link present;
-- 1.9% currently marked apply-ready.
+- 145,978 original posting records;
+- 2,727 URLs with positive reachability evidence;
+- 2,727 verified apply destinations.
 
-Recorded-link presence is not presented as destination validation. These numbers describe the processed catalog and source portfolio, not the complete market. The public snapshot contains no job descriptions, candidate records, credentials, source URLs, private payloads, or database files.
+Recorded, reachable, and verified are separate destination claims. These numbers describe the processed catalog and source portfolio, not the complete market. JP-41's earlier 2,808-row private-shadow generation and this later active catalog are different counting populations. Unique-job totals and market memberships are not added together. The public snapshot contains no job descriptions, candidate records, credentials, source URLs, private payloads, or database files.
 
 ## How it works
 

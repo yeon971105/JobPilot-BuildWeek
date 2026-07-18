@@ -44,23 +44,25 @@ No weights are combined and no hidden shortlist score exists. Each selected role
 
 ## Public-safe production coverage
 
-The public demo remains synthetic, but `/about/coverage` reports a reproducible aggregate snapshot from the larger original JobPilot acquisition system. At `2026-07-18T08:27:26.810Z` the read-only snapshot recorded:
+The public demo remains synthetic, but `/about/coverage` renders one immutable aggregate snapshot from the larger original JobPilot acquisition system. At `2026-07-18T17:41:08.379Z` the read-only snapshot recorded:
 
-- 146,007 active catalog jobs;
-- 13,166 active jobs in verified California scope;
-- 6,434 Bay Area market memberships;
-- 1,148 Greater Los Angeles market memberships;
-- 473 active source endpoints, 446 with a latest complete snapshot;
-- 146,007 active jobs with an original application link recorded;
-- 2,728 active jobs marked apply-ready.
+- 145,978 unique active catalog jobs;
+- 13,164 unique California jobs;
+- 6,426 San Francisco Bay Area memberships;
+- 1,108 Los Angeles County memberships under the exact `LOS_ANGELES_COUNTY` contract;
+- 473 active official-source endpoints, 446 with a latest complete snapshot;
+- 145,978 original posting records;
+- 2,727 URLs with positive reachability evidence;
+- 2,727 verified apply destinations;
+- last successful refresh at `2026-07-18T10:09:52.791Z`.
 
-Recorded-link presence and apply-ready validation are deliberately different claims. Counts describe the processed catalog and source portfolio, not complete market coverage. The generator selects no descriptions, candidate records, source URLs, credentials, or private payloads and runs in an explicit read-only transaction.
+Recorded, reachable, and verified are deliberately different destination claims. Counts describe the processed catalog and source portfolio, not complete market coverage. The earlier JP-41 certificate counted a bounded 2,808-record private-shadow generation; the frozen Build Week snapshot counts the later active `Job` catalog after subsequent acquisition and refresh generations. They are different counting populations. Catalog and California totals count unique `Job.id` values; regional memberships can overlap and are never summed into that total. Duplicate counting is zero.
 
 ```bash
-npm run bw8:coverage -- --original-repo <path-to-read-only-original-JobPilot-repository>
+npm run bw9:freeze -- --original-repo <path-to-read-only-original-JobPilot-repository>
 ```
 
-See [the methodology](build-week/bw8/production-coverage-methodology.md) and [privacy audit](build-week/bw8/production-coverage-privacy-audit.json).
+The immutable snapshot semantic hash is `68f2195f1e4a6d4dce155eb2dfcd9e209643d412e30d949ca65bd2bee6ae8414`. See [the public timeline](build-week/bw9/coverage-public-timeline.md), [full methodology](build-week/bw9/coverage-methodology.md), and [query contract](build-week/bw9/coverage-query-contract.json).
 
 ## Hybrid AI with an exact score boundary
 

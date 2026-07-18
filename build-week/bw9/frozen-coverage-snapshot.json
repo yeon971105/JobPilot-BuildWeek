@@ -1,0 +1,192 @@
+{
+  "schemaVersion": "jobpilot.bw9.frozen-coverage.v1",
+  "immutable": true,
+  "generatedAt": "2026-07-18T17:41:08.379Z",
+  "status": "PASS_FROZEN_COVERAGE",
+  "holds": [],
+  "disclosure": "The judge flow remains synthetic. These frozen, public-safe aggregates describe one processed JobPilot catalog snapshot and do not claim complete market coverage.",
+  "countingPopulation": "Active Job catalog rows at one read-only transaction snapshot; one Job.id equals one unique catalog job.",
+  "metrics": {
+    "activeCanonicalJobs": {
+      "value": 145978,
+      "unit": "unique Job.id",
+      "evidence": {
+        "queryId": "activeCatalog",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "b63bc005b4f19893ea3e98bb657ec3a46a7ef6ed6e42c70cd27781ce2dc3fcf7",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "californiaUniqueJobs": {
+      "value": 13164,
+      "unit": "unique Job.id",
+      "evidence": {
+        "queryId": "californiaUniqueJobs",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "9d0cbddd6f9bcdfab3308a5a1f5ac85c5ebc5db064718ef35f1118e699374f5a",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "bayAreaMemberships": {
+      "value": 6426,
+      "unit": "unique active Job.id membership",
+      "label": "San Francisco Bay Area",
+      "marketKey": "BAY_AREA_OPERATIONAL_REGION",
+      "membershipRows": 6426,
+      "evidence": {
+        "queryId": "exactMarketMemberships",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "866ef5d46dd451ba0a8aa0b34b60bf6bce703879c2dc76b59c8deb31464a12b2",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "losAngelesCountyMemberships": {
+      "value": 1108,
+      "unit": "unique active Job.id membership",
+      "label": "Los Angeles County",
+      "marketKey": "LOS_ANGELES_COUNTY",
+      "membershipRows": 1108,
+      "evidence": {
+        "queryId": "exactMarketMemberships",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "866ef5d46dd451ba0a8aa0b34b60bf6bce703879c2dc76b59c8deb31464a12b2",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "activeOfficialSourceEndpoints": {
+      "value": 473,
+      "definition": "Distinct source endpoints supplying at least one active catalog job.",
+      "evidence": {
+        "queryId": "activeCatalog",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "b63bc005b4f19893ea3e98bb657ec3a46a7ef6ed6e42c70cd27781ce2dc3fcf7",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "latestCompleteSnapshots": {
+      "value": 446,
+      "definition": "Active source endpoints whose latest recorded SyncSnapshot is COMPLETE.",
+      "evidence": {
+        "queryId": "activeCatalog",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "b63bc005b4f19893ea3e98bb657ec3a46a7ef6ed6e42c70cd27781ce2dc3fcf7",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "originalPostingRecorded": {
+      "count": 145978,
+      "total": 145978,
+      "percent": 100,
+      "state": "ORIGINAL_POSTING_RECORDED",
+      "definition": "Active Job rows with a non-empty sourceUrl. This is a recorded-location claim, not reachability or application validation.",
+      "evidence": {
+        "queryId": "progressiveDestinationEvidence",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "c0bcbee2d89f8a0733f7296580197e30ab49106eab4ae3b69117719e9f594bf7",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "urlReachable": {
+      "count": 2727,
+      "total": 145978,
+      "percent": 1.9,
+      "state": "URL_REACHABLE",
+      "definition": "Active jobs whose linked ApplyDestination has status VALID. This is positive reachability evidence, not an apply-readiness claim.",
+      "evidence": {
+        "queryId": "progressiveDestinationEvidence",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "c0bcbee2d89f8a0733f7296580197e30ab49106eab4ae3b69117719e9f594bf7",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "applyDestinationVerified": {
+      "count": 2727,
+      "total": 145978,
+      "percent": 1.9,
+      "state": "APPLY_DESTINATION_VERIFIED",
+      "definition": "Active jobs whose linked ActionDestination is apply-ready, has validationState VALID, and has a non-empty destinationUrl.",
+      "evidence": {
+        "queryId": "progressiveDestinationEvidence",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "c0bcbee2d89f8a0733f7296580197e30ab49106eab4ae3b69117719e9f594bf7",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    },
+    "lastSuccessfulRefresh": {
+      "value": "2026-07-18T10:09:52.791Z",
+      "scheduleSuccessAt": "2026-07-18T10:08:51.792Z",
+      "runFinishedAt": "2026-07-18T10:09:52.791Z",
+      "evidence": {
+        "queryId": "activeCatalog",
+        "queryVersion": "jobpilot.bw9.coverage-query.v1",
+        "timestamp": "2026-07-18T17:41:08.379Z",
+        "querySha256": "b63bc005b4f19893ea3e98bb657ec3a46a7ef6ed6e42c70cd27781ce2dc3fcf7",
+        "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+        "privacyClassification": "PUBLIC_SAFE_AGGREGATE"
+      }
+    }
+  },
+  "integrity": {
+    "activeCatalogRows": 145978,
+    "distinctActiveJobIds": 145978,
+    "duplicateCounting": 0,
+    "geographyMismatch": 0,
+    "publicRawRowsExported": 0,
+    "productionMutations": 0
+  },
+  "reproduction": {
+    "command": "npm run bw9:freeze -- --original-repo <path-to-read-only-original-JobPilot-repository>",
+    "queryVersion": "jobpilot.bw9.coverage-query.v1",
+    "coverageQueryContractSha256": "2ffb0fa8f6cce224c5575c0d556bdafc9403f4ff00d57a245dc1ba19b3e90b90",
+    "transaction": {
+      "mode": "READ ONLY",
+      "isolation": "read committed",
+      "readVersion": "9153132:9153132:",
+      "serverVersion": "16.14"
+    },
+    "databaseFingerprint": "3baa21cf0c8856742010649f820cd04f17fee24cb3320ea2fadd48c9edc5ed13",
+    "inputArtifactHashes": {
+      "schema": "db797595c747a99fd67213ae1f9bffc2e817d8869e28beedafa63d695ea9b4d1",
+      "jp41FinalReport": "dbbba149dd129c601b347300cbdbdc09f85c7ab98fc0c248acead7de7bcd0bc7",
+      "jp41Reconciliation": "f56f9291abee12f07debeab0dec9d410003733741f8af78e9caf507f91931548",
+      "jp41GeographyContract": "6ae46ae83e39ef2c019df8c1d1061453f93442c1cf7d7e3fc1febd24a672798f",
+      "jp41GeographyImplementation": "ce6eb1188c8e0940788a8b82441a4073a8acbad5aa2ae648f95cabef42d1954d",
+      "migrationManifest": "c961a1b4087406b3dee1593a38a390df181bb3a9d6dc85dc9ae5414cd095e84e"
+    },
+    "queryOutputHash": "8caa0062f9737bb05a6d6ba8605302fbed36aaaa946e3f9f310fca7713698a2b",
+    "schemaSha256": "db797595c747a99fd67213ae1f9bffc2e817d8869e28beedafa63d695ea9b4d1",
+    "migrationManifest": {
+      "count": 56,
+      "sha256": "c961a1b4087406b3dee1593a38a390df181bb3a9d6dc85dc9ae5414cd095e84e"
+    }
+  },
+  "zeroValues": {
+    "coverageMismatch": 0,
+    "geographyMismatch": 0,
+    "duplicateCounting": 0,
+    "privateRowsCopied": 0,
+    "candidateRecordsRead": 0,
+    "productionMutations": 0,
+    "OpenAIApiRequests": 0,
+    "OpenAIApiCostUsd": 0
+  },
+  "snapshotOutputHash": "68f2195f1e4a6d4dce155eb2dfcd9e209643d412e30d949ca65bd2bee6ae8414"
+}
