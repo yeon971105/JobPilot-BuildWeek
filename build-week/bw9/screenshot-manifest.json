@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.bw9-screenshot-manifest.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "captures": [
+    { "path": "build-week/bw9/captures/coverage-1024x768.jpg", "viewport": "1024x768", "route": "/about/coverage", "bytes": 67987, "sha256": "b2932218603cc9b2b488192bfc11d70080984cf059dab7f05a2db6ef300c9d10" },
+    { "path": "build-week/bw9/captures/job-detail-320x700.jpg", "viewport": "320x700", "route": "/demo/jobs/northstar-applied-ai-solutions-engineer", "bytes": 22570, "sha256": "1da31e843d9f3476ba47fd07908fa5cc6c70bca49fe5f7081d58f3f9663d6b68" },
+    { "path": "build-week/bw9/captures/jobs-1024x768.jpg", "viewport": "1024x768", "route": "/demo/jobs", "bytes": 62674, "sha256": "39c5584a72f59f98a994ebb7932844a453b1a9fa1daedb44f808d77d03e989b4" },
+    { "path": "build-week/bw9/captures/landing-1440x900.jpg", "viewport": "1440x900", "route": "/", "bytes": 100270, "sha256": "a4d5ad0c88baae67ad81ad60369141d88c1306ff8dff64e9282c68b6f4e20328" },
+    { "path": "build-week/bw9/captures/landing-390x844.jpg", "viewport": "390x844", "route": "/", "bytes": 39642, "sha256": "235349e9fa5cf34bcb29671022d1691771e0a103abd3625fc35d0591b71155c9" },
+    { "path": "build-week/bw9/captures/shortlist-390x844.jpg", "viewport": "390x844", "route": "/demo/shortlist", "bytes": 36677, "sha256": "1461000df8ad350d3b1ec8a7f338e1683b65b4e535a29a658e519510199ee183" },
+    { "path": "build-week/bw9/captures/study-320x700.jpg", "viewport": "320x700", "route": "/study/decision-utility", "bytes": 27286, "sha256": "685e27fff569aae5feadfdf2fdaf4d394ae7514410c3ab73d3e8baaa23739341" },
+    { "path": "build-week/bw9/captures/trust-1440x900.jpg", "viewport": "1440x900", "route": "/demo/trust", "bytes": 91293, "sha256": "7cedd7639a32f95a877b8b50a39b18e3b229e61138a4816ef9b478c0bdc72b1a" }
+  ],
+  "hashMismatches": 0,
+  "result": "PASS"
+}

@@ -202,8 +202,8 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
   const parsed = parseCsv(csv);
   const expectedHeaders = [...DECISION_STUDY_CSV_HEADERS];
   const headers = parsed[0] ?? [];
-  if (JSON.stringify(headers) !== JSON.stringify(expectedHeaders)) throw new Error("Study CSV headers do not match the frozen no-PII schema.");
   if (headers.some((header) => /(^|_)(name|email|phone|resume|demographic|employment_status|health)(_|$)/i.test(header))) throw new Error("Study CSV contains a prohibited identifying column.");
+  if (JSON.stringify(headers) !== JSON.stringify(expectedHeaders)) throw new Error("Study CSV headers do not match the frozen no-PII schema.");
   const indexes = Object.fromEntries(headers.map((header, index) => [header, index]));
   const rawRows = parsed.slice(1).filter((row) => JSON.stringify(row) !== JSON.stringify(headers));
   if (rawRows.some((row) => row.length !== headers.length)) throw new Error("Study CSV contains a malformed row.");

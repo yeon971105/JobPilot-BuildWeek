@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "jobpilot.bw9-receipt-validation.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "verifierVersion": "jobpilot-receipt-verifier.v1",
+  "receiptVersion": "jobpilot-score-receipt.v2.2",
+  "frozenReceiptsReproducedBySuite": 6,
+  "cliReceipt": "build-week/bw7/receipts/northstar-demo-receipt.json",
+  "cliStatus": "FULLY_REPRODUCED",
+  "failedChecks": 0,
+  "receiptMismatches": 0,
+  "hiddenAdjustments": 0,
+  "externalRequests": 0,
+  "result": "PASS"
+}

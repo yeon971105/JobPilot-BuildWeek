@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "jobpilot.bw9-browser-qa.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "target": "http://127.0.0.1:3206",
+  "browser": "Codex in-app browser",
+  "session": "fresh approval QA; no authentication prompt encountered",
+  "viewports": ["1440x900", "1024x768", "390x844", "320x700"],
+  "routes": [
+    "/",
+    "/demo/shortlist",
+    "/demo/jobs",
+    "/demo/jobs/northstar-applied-ai-solutions-engineer",
+    "/about/coverage",
+    "/demo/trust",
+    "/study/decision-utility",
+    "/about/build-week"
+  ],
+  "checks": 32,
+  "exactViewportChecks": 32,
+  "zeroHorizontalOverflowChecks": 32,
+  "singleH1Checks": 32,
+  "zeroUnnamedVisibleInteractiveChecks": 32,
+  "zeroAuthenticationPromptChecks": 32,
+  "interactionChecks": {
+    "mobileNavigationOpened": true,
+    "mobileNavigationLinksVisible": 6,
+    "shortlistDisclosureOpened": true,
+    "shortlistPolicyItemsVisible": 7,
+    "allDestinationStatesRendered": true,
+    "unverifiedApplyCta": 0
+  },
+  "renderedDestinationStates": {
+    "ORIGINAL_POSTING_RECORDED": "Open Original Posting â†—",
+    "URL_REACHABLE": "Open Original Posting â†—",
+    "APPLY_DESTINATION_VERIFIED": "Apply on Employer Site â†—",
+    "VALIDATION_PENDING": "Destination verification pending",
+    "UNAVAILABLE": "Original posting unavailable"
+  },
+  "consoleWarnings": 0,
+  "consoleErrors": 0,
+  "captures": 8,
+  "result": "PASS"
+}

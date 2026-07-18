@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "jobpilot.bw9-judging-evidence-matrix.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "criteriaWeighting": "Four official criteria are treated as equal weight; no official judge score is invented.",
+  "criteria": [
+    {
+      "criterion": "Technological Implementation",
+      "claims": [
+        {
+          "claim": "Release-scale coverage claims are reproducible, immutable, and reconciled to one read-only snapshot.",
+          "supportingProductFeature": "Frozen coverage page with progressive destination metrics and lineage disclosure.",
+          "supportingTest": "claim-integrity-bw9.test.ts â€” canonical hash, exact geography, distinct population and zero-mismatch gates.",
+          "supportingScreenshot": "build-week/bw9/captures/coverage-1024x768.jpg",
+          "supportingArtifact": "build-week/bw9/frozen-coverage-snapshot.json; coverage-query-contract.json; coverage-lineage.json",
+          "currentWeakness": "The snapshot proves one processed catalog state, not complete labor-market coverage or future freshness.",
+          "clearanceCondition": "Keep all public release surfaces bound to snapshot hash 68f2195fâ€¦ and regenerate a versioned snapshot only through the read-only freezer."
+        },
+        {
+          "claim": "Scoring, prepared model review, destination actions, and receipts have explicit trust boundaries.",
+          "supportingProductFeature": "Trust Lab, five destination states, deterministic scorer, and independent receipt verifier.",
+          "supportingTest": "claim-integrity-bw9.test.ts; receipt-verifier.test.ts; release.test.ts; scorer.test.ts.",
+          "supportingScreenshot": "build-week/bw9/captures/trust-1440x900.jpg",
+          "supportingArtifact": "build-week/bw9/gpt56-release-manifest.json; destination-state-audit.json; receipt-validation.json",
+          "currentWeakness": "GPT-5.6 and Gemma outputs are prepared evidence, not live model execution in the public judge flow.",
+          "clearanceCondition": "Preserve prepared-not-live labels, exact gpt-5.6-sol identity, API/cost zero, and valid evidence IDs."
+        }
+      ]
+    },
+    {
+      "criterion": "Design",
+      "claims": [
+        {
+          "claim": "A tired job seeker sees a small explainable shortlist before the full ordering policy.",
+          "supportingProductFeature": "Three-card Todayâ€™s Shortlist with Fit, Compatibility, Freshness, and Blocker rationale plus a seven-step disclosure.",
+          "supportingTest": "claim-integrity-bw9.test.ts; shortlist-bw8.test.ts.",
+          "supportingScreenshot": "build-week/bw9/captures/shortlist-390x844.jpg",
+          "supportingArtifact": "build-week/bw9/browser-qa.json; build-week/bw9/direct-action-validation.json",
+          "currentWeakness": "The frozen demo has six synthetic roles, so real-world information density is not yet evaluated.",
+          "clearanceCondition": "Use the actual-participant workflow to evaluate decision time, accuracy, confidence, and transparency without expanding default card density."
+        },
+        {
+          "claim": "Owner-review routes preserve hierarchy and control from desktop through 320-pixel mobile.",
+          "supportingProductFeature": "Responsive navigation, stacked decision panels, progressive disclosures, and consent-first study UI.",
+          "supportingTest": "32 browser route/viewport checks plus the two-test production CSS pipeline.",
+          "supportingScreenshot": "build-week/bw9/captures/landing-1440x900.jpg; landing-390x844.jpg; study-320x700.jpg",
+          "supportingArtifact": "build-week/bw9/accessibility-results.json; visual-regression-results.json; css-pipeline-results.json",
+          "currentWeakness": "Automated accessible-name and structure checks do not replace a full assistive-technology review.",
+          "clearanceCondition": "Complete keyboard and screen-reader owner QA before any final submission."
+        }
+      ]
+    },
+    {
+      "criterion": "Potential Impact",
+      "claims": [
+        {
+          "claim": "JobPilot is designed to reduce decision effort while preserving user control and evidence inspection.",
+          "supportingProductFeature": "Discover â†’ Prioritize â†’ Understand â†’ Apply â†’ Track loop and explicit non-auto-apply destination actions.",
+          "supportingTest": "impact-story-bw8.test.ts; comparison-and-apply.test.ts; claim-integrity-bw9.test.ts.",
+          "supportingScreenshot": "build-week/bw9/captures/landing-1440x900.jpg; job-detail-320x700.jpg",
+          "supportingArtifact": "build-week/bw9/judging-evidence-matrix.md; build-week/bw9/destination-trust-contract.json",
+          "currentWeakness": "No hiring outcome, application conversion, or population-level impact claim is supported.",
+          "clearanceCondition": "Keep claims at decision utility and early usability until separately consented longitudinal evidence exists."
+        },
+        {
+          "claim": "The release contains a reproducible path to actual early-usability evidence without fabricated participants.",
+          "supportingProductFeature": "Consent-first counterbalanced two-condition study with anonymous local export and deterministic importer.",
+          "supportingTest": "impact-study-bw9.test.ts â€” n=0, n=1, exact n=5 metrics, bootstrap, duplicate, incomplete, malformed and PII-schema gates.",
+          "supportingScreenshot": "build-week/bw9/captures/study-320x700.jpg",
+          "supportingArtifact": "build-week/bw9/impact-results-internal.json; impact-results-public.json; human-study-status.json",
+          "currentWeakness": "Status is READY_NOT_RUN with zero actual participants and no human result.",
+          "clearanceCondition": "Recruit at least five actual consenting participants, preferred 8â€“12, import only complete paired exports, and publish directional results without significance language."
+        }
+      ]
+    },
+    {
+      "criterion": "Quality of the Idea",
+      "claims": [
+        {
+          "claim": "JobPilot connects fragmented job discovery and application decisions through a single evidence-led loop.",
+          "supportingProductFeature": "Nearby discovery, deterministic priority, evidence mapping, deliberate employer handoff, and browser-local tracking.",
+          "supportingTest": "discovery.test.ts; strategy.test.ts; product-ux.test.ts; judge-tour.test.ts.",
+          "supportingScreenshot": "build-week/bw9/captures/jobs-1024x768.jpg",
+          "supportingArtifact": "build-week/bw9/video-script.md; build-week/bw9/devpost-draft.md; README.md",
+          "currentWeakness": "The judge experience uses synthetic roles and prepared semantic outputs.",
+          "clearanceCondition": "Retain the synthetic disclosure and validate the decision workflow with actual participants before broadening product claims."
+        },
+        {
+          "claim": "The differentiation is credibility by construction: visible evidence, deterministic scoring, progressive destination trust, and reproducible proof.",
+          "supportingProductFeature": "Trust Lab and frozen evidence artifacts attached to each major release claim.",
+          "supportingTest": "104 passing tests, two authorized CSS-context skips in the general suite, and two passing CSS production tests.",
+          "supportingScreenshot": "build-week/bw9/captures/trust-1440x900.jpg; coverage-1024x768.jpg",
+          "supportingArtifact": "build-week/bw9/validation.json; gpt56-release-manifest.json; coverage-consistency-audit.json",
+          "currentWeakness": "A public preview still requires owner account authentication and deployment.",
+          "clearanceCondition": "Deploy this exact RC on a free preview provider and repeat the logged-out 20-cycle and four-viewport gates before sharing a public URL."
+        }
+      ]
+    }
+  ],
+  "officialJudgeScore": null,
+  "result": "PASS_EVIDENCE_MATRIX_NO_OFFICIAL_SCORE"
+}

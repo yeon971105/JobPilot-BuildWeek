@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "jobpilot.bw9-zero-api-network-audit.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "openAiApiRequests": 0,
+  "openAiApiCostUsd": 0,
+  "preparedGptArtifacts": 4,
+  "preparedNotLive": true,
+  "modelGeneratedScores": 0,
+  "invalidEvidenceIds": 0,
+  "productionMutation": 0,
+  "result": "PASS"
+}

@@ -1,6 +1,6 @@
 # JobPilot early usability summary
 
-Status: **READY_NOT_RUN**  
+Status: **READY_NOT_RUN**
 Actual participants: **0**
 
 Human sessions have not started. No usability result is claimed.

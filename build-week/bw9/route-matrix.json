@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "jobpilot.bw9-route-matrix.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "target": "LOCAL_APPROVAL_PREVIEW",
+  "viewports": ["1440x900", "1024x768", "390x844", "320x700"],
+  "routes": [
+    { "path": "/", "checks": 4, "result": "PASS" },
+    { "path": "/demo/shortlist", "checks": 4, "result": "PASS" },
+    { "path": "/demo/jobs", "checks": 4, "result": "PASS" },
+    { "path": "/demo/jobs/northstar-applied-ai-solutions-engineer", "checks": 4, "result": "PASS" },
+    { "path": "/about/coverage", "checks": 4, "result": "PASS" },
+    { "path": "/demo/trust", "checks": 4, "result": "PASS" },
+    { "path": "/study/decision-utility", "checks": 4, "result": "PASS" },
+    { "path": "/about/build-week", "checks": 4, "result": "PASS" }
+  ],
+  "totalChecks": 32,
+  "failedChecks": 0,
+  "result": "PASS"
+}

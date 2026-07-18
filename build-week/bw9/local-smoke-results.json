@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "jobpilot.bw9-local-smoke.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "target": "http://127.0.0.1:3206",
+  "productionBuild": true,
+  "cycles": 20,
+  "routesPerCycle": 8,
+  "requests": 160,
+  "http200": 160,
+  "failures": 0,
+  "maximumResponseMilliseconds": 200,
+  "minimumResponseBytes": 10912,
+  "result": "PASS"
+}

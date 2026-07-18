@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "jobpilot.bw9-dependency-security.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "command": "npm audit --audit-level=high",
+  "vulnerabilities": 0,
+  "result": "PASS"
+}

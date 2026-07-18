@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "jobpilot.bw9-visual-regression.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "comparisonBoundary": "Manual inspection of the current RC captures against the established JobPilot visual system and BW8 layout contracts.",
+  "inspectedCaptures": 8,
+  "checks": {
+    "brandAndTypographyContinuity": "PASS",
+    "desktopHierarchy": "PASS",
+    "tabletLayout": "PASS",
+    "mobileStacking": "PASS",
+    "destinationStateLegibility": "PASS",
+    "studyConsentLegibilityAt320": "PASS",
+    "horizontalOverflow": 0,
+    "cssBundleHashBound": true
+  },
+  "unapprovedRegressions": 0,
+  "result": "PASS"
+}

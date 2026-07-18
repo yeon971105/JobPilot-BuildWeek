@@ -53,7 +53,7 @@ ${analysis.inferenceBoundary}
 `;
   const publicMarkdown = `# JobPilot early usability summary
 
-Status: **${publicSummary.status}**  
+Status: **${publicSummary.status}**
 Actual participants: **${publicSummary.humanParticipantCount}**
 
 ${publicSummary.summary}

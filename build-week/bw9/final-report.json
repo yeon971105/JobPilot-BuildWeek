@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "jobpilot.bw9-final-report.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "workItem": "JP-BW9",
+  "title": "Final Credibility and Impact Development Sprint",
+  "branch": "build-week/jobpilot-2026",
+  "parentHead": "40fab7c81302342c6a4fd8afd8b2b7bb8e6f33dc",
+  "parentTag": "build-week-2026-impact-rc1",
+  "frozenCoverage": {
+    "snapshotSha256": "68f2195f1e4a6d4dce155eb2dfcd9e209643d412e30d949ca65bd2bee6ae8414",
+    "generatedAt": "2026-07-18T17:41:08.379Z",
+    "readVersion": "9153132:9153132:",
+    "databaseFingerprint": "3baa21cf0c8856742010649f820cd04f17fee24cb3320ea2fadd48c9edc5ed13",
+    "activeCanonicalJobs": 145978,
+    "californiaUniqueJobs": 13164,
+    "bayAreaMemberships": 6426,
+    "losAngelesCountyMemberships": 1108,
+    "activeOfficialSourceEndpoints": 473,
+    "latestCompleteSnapshots": 446,
+    "originalPostingRecorded": 145978,
+    "urlReachable": 2727,
+    "applyDestinationVerified": 2727,
+    "lastSuccessfulRefresh": "2026-07-18T10:09:52.791Z",
+    "mismatches": 0
+  },
+  "lineage": "PASS_DISTINCT_COUNTING_POPULATIONS_RECONCILED",
+  "destinationStates": "PASS_ALL_FIVE_STATES_UNVERIFIED_APPLY_ZERO",
+  "gptProvenance": {
+    "model": "gpt-5.6-sol",
+    "preparedNotLive": true,
+    "artifacts": 4,
+    "apiRequests": 0,
+    "costUsd": 0,
+    "modelGeneratedScores": 0,
+    "invalidEvidenceIds": 0,
+    "modelNameInconsistency": 0
+  },
+  "study": {
+    "status": "READY_NOT_RUN",
+    "actualParticipants": 0,
+    "minimumTarget": 5,
+    "preferredTarget": "8â€“12",
+    "fabricatedParticipants": 0,
+    "metricsPublished": false
+  },
+  "tests": { "passed": 104, "authorizedSkips": 2, "failed": 0, "productionCssPassed": 2 },
+  "preview": {
+    "localUrl": "http://127.0.0.1:3206",
+    "localStatus": "RUNNING",
+    "localSmokeCycles": 20,
+    "responsiveChecks": 32,
+    "publicStatus": "ACCOUNT_ACTION_REQUIRED_PREVIEW_DEPLOYMENT"
+  },
+  "commits": [
+    { "hash": "ec72f55", "subject": "fix: freeze and reconcile production coverage claims" },
+    { "hash": "4a4e00f", "subject": "feat: add explicit employer destination trust states" },
+    { "hash": "c11eab9", "subject": "refactor: simplify shortlist and coverage explanations" },
+    { "hash": "4ea43ce", "subject": "fix: unify prepared GPT-5.6 provenance" },
+    { "hash": "c0f5099", "subject": "feat: complete the human impact study workflow" },
+    { "hash": "SELF", "subject": "test: certify claim integrity and impact calculations" }
+  ],
+  "releaseCandidateTag": "build-week-2026-credibility-rc1",
+  "ownerApproval": false,
+  "devpostSubmitted": false,
+  "publicYouTubeUploaded": false,
+  "finalTagCreated": false,
+  "finalDecision": "GO_BUILD_WEEK_CREDIBILITY_RC_READY_FOR_OWNER_REVIEW"
+}

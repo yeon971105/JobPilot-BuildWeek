@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "jobpilot.bw9-css-pipeline.v1",
+  "generatedAt": "2026-07-18T18:22:42.271Z",
+  "certifiedCssBundleSha256": "ade68b4bb4459a3c617671e3065e69480d40aae8a6636174e8baf0f9e8d88d04",
+  "stylesheetUrls": [
+    "http://127.0.0.1:3206/_next/static/chunks/0r1sa5i1.b1_8.css"
+  ],
+  "cssBytes": 47736,
+  "measurementViewport": "1440x900",
+  "landing": {
+    "document": { "horizontalOverflow": 0, "h1Count": 1 },
+    "navigation": { "display": "flex", "minimumVisiblePrimaryLinks": 9 },
+    "hero": { "headingFontSizePx": 88 },
+    "ctas": { "primaryBackground": "rgb(23, 61, 45)" },
+    "scoreRing": {
+      "position": "absolute",
+      "widthPx": 176,
+      "heightPx": 176,
+      "backgroundColor": "rgb(23, 61, 45)"
+    }
+  },
+  "jobs": {
+    "document": { "horizontalOverflow": 0, "h1Count": 1 },
+    "card": { "paddingPx": 24, "borderRadiusPx": 24 },
+    "filterToolbar": { "gapPx": 12 }
+  },
+  "result": "PASS"
+}
