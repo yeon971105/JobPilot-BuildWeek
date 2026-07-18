@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "jobpilot.bw10.analysis-provenance.v1",
+  "generatedAt": "2026-07-18T19:04:45.528Z",
+  "analyzer": "src/lib/impact-study.ts",
+  "command": "npm run study:analyze -- build-week/study/validated/combined.csv",
+  "source": {
+    "path": "build-week/study/validated/combined.csv",
+    "sha256": "2f8ece279976d27b1b98810370d20b10ec05f0cb021d771707e8c2df4a950a1c"
+  },
+  "actualParticipantCount": 0,
+  "completePairedSessions": 0,
+  "syntheticToolingRowsAccepted": 0,
+  "fabricatedParticipantRows": 0,
+  "bootstrap": {
+    "status": "NOT_AVAILABLE_NO_PARTICIPANTS",
+    "iterations": 0,
+    "deterministicSeed": null
+  },
+  "claimBoundary": "Human results are withheld below the minimum target. No significance or population-level claim is permitted."
+}

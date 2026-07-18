@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "jobpilot.bw10.rules-clarification-freeze.v1",
+  "frozenAt": "2026-07-18T11:55:00-07:00",
+  "officialSources": [
+    "https://openai.devpost.com/rules",
+    "https://openai.devpost.com/details/faqs",
+    "https://openai.devpost.com/"
+  ],
+  "deadline": "2026-07-21T17:00:00-07:00",
+  "submissionPeriod": {
+    "opens": "2026-07-13T09:00:00-07:00",
+    "closes": "2026-07-21T17:00:00-07:00",
+    "draftsMayBeSavedBeforeClose": true,
+    "postDeadlineEditsPermitted": false
+  },
+  "interpretations": {
+    "freeTiersSufficient": true,
+    "paidPlanRequired": false,
+    "gpt56MustPowerWholeProduct": false,
+    "anotherPrimaryModelAllowed": true,
+    "gpt56MustBeMeaningfulForPartOfProject": true,
+    "codexAndGpt56ShownIn": ["README", "repository", "demo video"],
+    "primaryCodexFeedbackSessionIdRequired": true,
+    "repositoryAccess": "Public, or private with required judge access",
+    "video": {
+      "maximumSecondsExclusive": 180,
+      "audioRequired": true,
+      "mustExplainCodex": true,
+      "mustExplainGpt56": true,
+      "submittedYouTubeLinkMustBeAccessible": true
+    },
+    "openAiApiCallRequired": false,
+    "preparedGpt56OutputIsLiveApiResponse": false
+  },
+  "ownerSuppliedOrganizerEmailClarification": {
+    "statement": "Unlisted YouTube visibility is acceptable when the submitted link works in a logged-out or incognito browser.",
+    "sourceClassification": "Organizer email clarification supplied by the owner in JP-BW10",
+    "verificationRequired": "Logged-out or incognito playback, audio, and captions",
+    "doesNotAuthorizePublicVisibility": true
+  },
+  "status": "FROZEN"
+}

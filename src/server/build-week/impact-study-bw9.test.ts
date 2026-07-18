@@ -98,7 +98,7 @@ describe("JP-BW9 human impact importer and calculations", () => {
     const rows = fixtures.flatMap(([raw, jobPilot], index) => participantRows(index + 1, { raw, jobPilot }));
     const analysis = analyzeImpactStudyCsv([HEADER, ...rows].join("\n"), { bootstrapIterations: 250, bootstrapSeed: 41 });
 
-    expect(analysis.status).toBe("COMPLETE");
+    expect(analysis.status).toBe("COMPLETE_MINIMUM");
     expect(analysis.humanParticipantCount).toBe(5);
     expect(analysis.conditionOrderCounts).toEqual({ RAW_POSTING_THEN_JOBPILOT: 3, JOBPILOT_THEN_RAW_POSTING: 2 });
     expect(analysis.conditions.RAW_POSTING).toMatchObject({
@@ -121,6 +121,7 @@ describe("JP-BW9 human impact importer and calculations", () => {
     });
     expect(analysis.paired).toEqual({
       medianTimeDifferenceSecondsJobPilotMinusRaw: -40,
+      medianPercentageTimeChangeJobPilotVsRaw: -33.33,
       requiredExperienceAccuracyDifferencePoints: 40,
       preferredExperienceAccuracyDifferencePoints: 40,
       workModeAccuracyDifferencePoints: 20,

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "jobpilot.bw10.remote-parity-audit.v1",
+  "capturedAt": "2026-07-18T12:05:48.8924035-07:00",
+  "remote": "origin",
+  "url": "https://github.com/yeon971105/JobPilot-BuildWeek.git",
+  "branch": "build-week/jobpilot-2026",
+  "localHead": "029e2e8a31863ec185784c5699cf77a319099aea",
+  "remoteHead": "029e2e8a31863ec185784c5699cf77a319099aea",
+  "headParity": true,
+  "tag": "build-week-2026-credibility-rc1",
+  "localTagObject": "8abd47254e1317f34ebd9dd3a93669d2d55ab795",
+  "remoteTagObject": "8abd47254e1317f34ebd9dd3a93669d2d55ab795",
+  "localPeeledTarget": "029e2e8a31863ec185784c5699cf77a319099aea",
+  "remotePeeledTarget": "029e2e8a31863ec185784c5699cf77a319099aea",
+  "tagParity": true,
+  "historicalTagMoved": false,
+  "status": "PASS"
+}

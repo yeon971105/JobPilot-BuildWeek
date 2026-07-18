@@ -6,7 +6,7 @@ export const DECISION_STUDY_PREFERRED_PARTICIPANTS = "8–12";
 
 export type StudyCondition = "RAW_POSTING" | "JOBPILOT";
 export type StudyDecision = "APPLY" | "REVIEW" | "SKIP" | "";
-export type StudyCollectionState = "READY_NOT_RUN" | "IN_PROGRESS" | "COMPLETE";
+export type StudyCollectionState = "READY_NOT_RUN" | "IN_PROGRESS" | "COMPLETE_MINIMUM" | "COMPLETE_PREFERRED";
 
 export const REQUIRED_EXPERIENCE_CHOICES = [
   ["", "Choose one"],
@@ -71,7 +71,8 @@ export function studyCollectionState(participantCount: number): StudyCollectionS
   if (!Number.isSafeInteger(participantCount) || participantCount < 0) throw new Error("Participant count must be a non-negative integer.");
   if (participantCount === 0) return "READY_NOT_RUN";
   if (participantCount < DECISION_STUDY_MINIMUM_PARTICIPANTS) return "IN_PROGRESS";
-  return "COMPLETE";
+  if (participantCount < 8) return "COMPLETE_MINIMUM";
+  return "COMPLETE_PREFERRED";
 }
 
 export function randomizedConditionOrder(randomValue = Math.random()): [StudyCondition, StudyCondition] {

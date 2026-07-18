@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "jobpilot.bw10.public-impact-summary.v1",
+  "status": "READY_NOT_RUN",
+  "humanParticipantCount": 0,
+  "minimumParticipantTarget": 5,
+  "preferredParticipantTarget": "8–12",
+  "summary": "Human sessions have not started. No usability result is claimed.",
+  "metrics": null,
+  "statisticalSignificanceClaim": false,
+  "fabricatedParticipants": 0,
+  "generatedAt": "2026-07-18T19:04:45.528Z",
+  "sourceSha256": "2f8ece279976d27b1b98810370d20b10ec05f0cb021d771707e8c2df4a950a1c"
+}

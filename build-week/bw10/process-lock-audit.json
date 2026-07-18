@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "jobpilot.bw10.process-lock-audit.v1",
+  "capturedAt": "2026-07-18T12:06:00-07:00",
+  "activeCodexTasks": [
+    {
+      "threadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+      "title": "Finalize JobPilot product UX",
+      "relationship": "current JobPilot Build Week task"
+    },
+    {
+      "title": "Aegis-Core task",
+      "relationship": "unrelated workspace; preserved"
+    }
+  ],
+  "activeGitOperations": [],
+  "gitLockFiles": [],
+  "pendingGitTransactions": [],
+  "activeModelRequests": [],
+  "ollamaLoadedModels": 0,
+  "activePreviewServers": [
+    { "port": 3205, "pid": 27536, "repository": "JobPilot-BuildWeek-Submission", "disposition": "temporary submission preview; stop at handoff" },
+    { "port": 3206, "pid": 33184, "repository": "JobPilot-BuildWeek-Submission", "disposition": "temporary BW9 preview; stop at handoff" },
+    { "port": 3000, "pid": 43624, "repository": "C:/Users/Jewon/Desktop/JobPilot", "disposition": "unrelated original-worktree preview; preserve" }
+  ],
+  "baselineWriteSafety": "PASS",
+  "status": "PASS_NO_CONFLICTING_TRANSACTION"
+}

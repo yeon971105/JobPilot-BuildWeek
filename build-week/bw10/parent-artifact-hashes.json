@@ -1,0 +1,300 @@
+{
+  "schemaVersion": "jobpilot.bw10.parent-artifact-hashes.v1",
+  "generatedAt": "2026-07-18T19:06:11.246Z",
+  "parentCommit": "029e2e8a31863ec185784c5699cf77a319099aea",
+  "algorithm": "SHA-256",
+  "source": "immutable Git blobs from the reproduced parent commit",
+  "artifactCount": 58,
+  "entries": [
+    {
+      "path": "CODEX_BUILD_LOG.md",
+      "bytes": 1866,
+      "sha256": "f4b851b5ded858c43e9edf0750824c19cc1a1e096cf696e8dc9a90561c21bf04"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8698,
+      "sha256": "6e8f8e742cac772388d7a33493f167832db61affb9d3d634f2c55f96ed8f2d68"
+    },
+    {
+      "path": "build-week/bw9/accessibility-results.json",
+      "bytes": 548,
+      "sha256": "7e9db44f6aed6fb62d25acef9e859fee94ea6dfd9fc6fc9602c71cb445249d13"
+    },
+    {
+      "path": "build-week/bw9/browser-qa.json",
+      "bytes": 1398,
+      "sha256": "685f866018d06bbe2898198d1d8c9912ac35f01a61053172f806e69acef21f5e"
+    },
+    {
+      "path": "build-week/bw9/captures/coverage-1024x768.jpg",
+      "bytes": 67987,
+      "sha256": "b2932218603cc9b2b488192bfc11d70080984cf059dab7f05a2db6ef300c9d10"
+    },
+    {
+      "path": "build-week/bw9/captures/job-detail-320x700.jpg",
+      "bytes": 22570,
+      "sha256": "1da31e843d9f3476ba47fd07908fa5cc6c70bca49fe5f7081d58f3f9663d6b68"
+    },
+    {
+      "path": "build-week/bw9/captures/jobs-1024x768.jpg",
+      "bytes": 62674,
+      "sha256": "39c5584a72f59f98a994ebb7932844a453b1a9fa1daedb44f808d77d03e989b4"
+    },
+    {
+      "path": "build-week/bw9/captures/landing-1440x900.jpg",
+      "bytes": 100270,
+      "sha256": "a4d5ad0c88baae67ad81ad60369141d88c1306ff8dff64e9282c68b6f4e20328"
+    },
+    {
+      "path": "build-week/bw9/captures/landing-390x844.jpg",
+      "bytes": 39642,
+      "sha256": "235349e9fa5cf34bcb29671022d1691771e0a103abd3625fc35d0591b71155c9"
+    },
+    {
+      "path": "build-week/bw9/captures/shortlist-390x844.jpg",
+      "bytes": 36677,
+      "sha256": "1461000df8ad350d3b1ec8a7f338e1683b65b4e535a29a658e519510199ee183"
+    },
+    {
+      "path": "build-week/bw9/captures/study-320x700.jpg",
+      "bytes": 27286,
+      "sha256": "685e27fff569aae5feadfdf2fdaf4d394ae7514410c3ab73d3e8baaa23739341"
+    },
+    {
+      "path": "build-week/bw9/captures/trust-1440x900.jpg",
+      "bytes": 91293,
+      "sha256": "7cedd7639a32f95a877b8b50a39b18e3b229e61138a4816ef9b478c0bdc72b1a"
+    },
+    {
+      "path": "build-week/bw9/coverage-consistency-audit.json",
+      "bytes": 1773,
+      "sha256": "9d21194d0a45729bb750114ffe7b9d458c73e0f5ad6ba159f4c62be99cd905df"
+    },
+    {
+      "path": "build-week/bw9/coverage-lineage.json",
+      "bytes": 3452,
+      "sha256": "11a5ac39fa14a8eb24456358b4ab3b6b26db419b773b3c95d94b5e91bd5d19b1"
+    },
+    {
+      "path": "build-week/bw9/coverage-methodology.md",
+      "bytes": 3689,
+      "sha256": "f00d7f48364fc0c326fc55979d6004b322fedee528b631a344b1664f66aae0fe"
+    },
+    {
+      "path": "build-week/bw9/coverage-public-timeline.md",
+      "bytes": 1405,
+      "sha256": "95b0a510f13bd989a8f8d2577594d2a0406574bb6a3c01efa50d623228d09b50"
+    },
+    {
+      "path": "build-week/bw9/coverage-query-contract.json",
+      "bytes": 7737,
+      "sha256": "08f78fe7c3067b9671bbba66d3664b4e210136c572349c184e9d61699d370f14"
+    },
+    {
+      "path": "build-week/bw9/coverage-report.md",
+      "bytes": 1098,
+      "sha256": "4231947c4251a1a439133abda40f86a2229515d81cefa8dbda7dc6476ad04e2c"
+    },
+    {
+      "path": "build-week/bw9/css-pipeline-results.json",
+      "bytes": 929,
+      "sha256": "c992e5c37ad8967e4799a459e3828a1395aa6b8da8b591af27a9dacea65ea1b0"
+    },
+    {
+      "path": "build-week/bw9/dependency-security-audit.json",
+      "bytes": 195,
+      "sha256": "1b3ce351e873a5980c66ccf74d298e84e84603dd7ced9eb28b8ddc59baa4e793"
+    },
+    {
+      "path": "build-week/bw9/destination-state-audit.json",
+      "bytes": 1241,
+      "sha256": "044309dcf62d55f3cb03b36b127aafdf339b3c7a04958d07fa7e7e38c4b5423c"
+    },
+    {
+      "path": "build-week/bw9/destination-trust-contract.json",
+      "bytes": 1409,
+      "sha256": "bd056ef44ebfc2376c484ec5f972ae3638d3d349a225a6d408af4a6a1f6720b7"
+    },
+    {
+      "path": "build-week/bw9/devpost-draft.md",
+      "bytes": 2356,
+      "sha256": "c61c8f0738272b8abeca10a1e30df4a5bfeb1e22cb6fef6058b25eaa7bdb6bf9"
+    },
+    {
+      "path": "build-week/bw9/direct-action-validation.json",
+      "bytes": 624,
+      "sha256": "47b538e7c4db3794a532504b50d7bd8271fe60953910f61e01b2139d2d903cd5"
+    },
+    {
+      "path": "build-week/bw9/final-report.json",
+      "bytes": 2715,
+      "sha256": "1e3c97e127d056eeb66195ce534b776b896b2cd1425a1a32bc8d63f824d10bef"
+    },
+    {
+      "path": "build-week/bw9/final-report.md",
+      "bytes": 4152,
+      "sha256": "908a7f38ae3788b690346e6db4d52ed7fbdd8582d9abfa59df90463bdda7a31a"
+    },
+    {
+      "path": "build-week/bw9/frozen-coverage-snapshot.json",
+      "bytes": 8742,
+      "sha256": "8af42d7d2019ef5ec85892f38c04908eb0736e735c9645c27579279734042bfa"
+    },
+    {
+      "path": "build-week/bw9/gpt56-release-manifest.json",
+      "bytes": 1486,
+      "sha256": "935cfa596791b24c31b8a9d0448b26dab334bdebe81149448479aafcc93adacb"
+    },
+    {
+      "path": "build-week/bw9/human-study-status.json",
+      "bytes": 523,
+      "sha256": "dd9c638e024a7a1b4e5a6105a3c14f33da3b4a0af4ae4bcee25ab35539fa8324"
+    },
+    {
+      "path": "build-week/bw9/impact-results-internal.json",
+      "bytes": 2312,
+      "sha256": "0b09748b8c32e86ed6d05913ccff47cb6f5d7ae97cb881b757d7806d2e6ec9a7"
+    },
+    {
+      "path": "build-week/bw9/impact-results-internal.md",
+      "bytes": 907,
+      "sha256": "c217abfa061c360cd48fd5f02961078d2d7303c0001b2160b2364e8b697e16e4"
+    },
+    {
+      "path": "build-week/bw9/impact-results-public.json",
+      "bytes": 500,
+      "sha256": "c3fdf9c6cd420c239e7ddf6a1c591048862e8ccf99a5dc95b6c7fe08262573d2"
+    },
+    {
+      "path": "build-week/bw9/impact-results-public.md",
+      "bytes": 307,
+      "sha256": "28b5f4af4c5834bf5df20f853e45f396b5f7820626eff1183e9e3cd5a68bb627"
+    },
+    {
+      "path": "build-week/bw9/judging-evidence-matrix.json",
+      "bytes": 7966,
+      "sha256": "6917b717e8d0893758ed5d77f7cc69b38b74ff91a01aabdb99cb8cd09f365b6b"
+    },
+    {
+      "path": "build-week/bw9/judging-evidence-matrix.md",
+      "bytes": 3803,
+      "sha256": "e26743c891ceeb3d9e44c203365ecb23f0c0079b9b2313ea2e94b342c8c94b50"
+    },
+    {
+      "path": "build-week/bw9/local-smoke-results.json",
+      "bytes": 346,
+      "sha256": "dc31ee24ecefb02f1c31828e8b39c048b09bdf171cbcacbc4a74f8c647cddad8"
+    },
+    {
+      "path": "build-week/bw9/progressive-disclosure-contract.json",
+      "bytes": 739,
+      "sha256": "abeb15349438d35acb6a53c936febdb8044d862859604c7c91c76d31b6dae0a4"
+    },
+    {
+      "path": "build-week/bw9/provider-validation.json",
+      "bytes": 511,
+      "sha256": "288c79d42bfc6caf7e0a420caef2b0931abdc3b614d5e0be9f9e32c094d4da6e"
+    },
+    {
+      "path": "build-week/bw9/public-preview-status.json",
+      "bytes": 1403,
+      "sha256": "cdd8f83bbe0d1e58f018b1453d51136e9bf82149acc87c3a881733ee4d941cb2"
+    },
+    {
+      "path": "build-week/bw9/receipt-validation.json",
+      "bytes": 473,
+      "sha256": "646591fcd5baf5e72b4017dbd868abcfc31ee99a9b0c9e7f401e2cfcea0756b0"
+    },
+    {
+      "path": "build-week/bw9/repository-secret-scan.json",
+      "bytes": 352,
+      "sha256": "eb5b86719f90cb600fb904cbcbe7b4d923d10a27e7299aa50ee0682b89c8d3b7"
+    },
+    {
+      "path": "build-week/bw9/route-matrix.json",
+      "bytes": 830,
+      "sha256": "ff923c8a9756d1a0935945f5beacfff0a666e5377d7cd8b8ed7e49be5a6ce820"
+    },
+    {
+      "path": "build-week/bw9/screenshot-manifest.json",
+      "bytes": 1847,
+      "sha256": "2da6dcdcd376e22b5586c082fa7808649f5d86e2460316ececf7c5dadfae01cf"
+    },
+    {
+      "path": "build-week/bw9/validation.json",
+      "bytes": 1342,
+      "sha256": "f4c8fb7e9c669a8a99e9ab165611923b73b2d7d67ef8475b63d818793ad2126f"
+    },
+    {
+      "path": "build-week/bw9/video-script.md",
+      "bytes": 1665,
+      "sha256": "b41ebd86e289ad6c3bdcb4d0458f6f5ef6473fea4f33aa92edbf6cdc9b902311"
+    },
+    {
+      "path": "build-week/bw9/visual-regression-results.json",
+      "bytes": 623,
+      "sha256": "5dcb4811a5d45557351756ed5aebd3a83d6f992c6f26aba880ee27d0b85f3243"
+    },
+    {
+      "path": "build-week/bw9/vitest-results.json",
+      "bytes": 39148,
+      "sha256": "44d78cad21f98016bef0a66441d7fb8478aaa98437de3df7530eb49ed6c47961"
+    },
+    {
+      "path": "build-week/bw9/zero-api-network-audit.json",
+      "bytes": 319,
+      "sha256": "c7419674eacfe96944f119b57619aaefd30fe999e0b647952400b690b895f02e"
+    },
+    {
+      "path": "build-week/study/analysis-script.ts",
+      "bytes": 89,
+      "sha256": "583b31605f09afed22b26d78a4ddc3f7bfe20815fa11639562309fbea4882561"
+    },
+    {
+      "path": "build-week/study/answer-key.json",
+      "bytes": 502,
+      "sha256": "0aed520aa885f1afd207f56283e36c9c036be2dd68e20547d23c49f747c313f2"
+    },
+    {
+      "path": "build-week/study/consent.md",
+      "bytes": 1136,
+      "sha256": "bcd74d6d64909f1e31721595b0e75ed66cb7954b2467185dff0e54d93d30aa5b"
+    },
+    {
+      "path": "build-week/study/dry-run-results.json",
+      "bytes": 972,
+      "sha256": "6ce99d98d4d1159d4790f81889811d39a924fad3a31ffd503ce9424b084930ab"
+    },
+    {
+      "path": "build-week/study/owner-collection-workflow.md",
+      "bytes": 1343,
+      "sha256": "bbfa9564b120b54d9f582f9d263fc3c4f9dd64c31cd87c62662da5fd22d7d63f"
+    },
+    {
+      "path": "build-week/study/participant-instructions.md",
+      "bytes": 1209,
+      "sha256": "94f74e33c6dd753dda56232ba0cf920a02df6e218c6c38f588a453e40aeb0072"
+    },
+    {
+      "path": "build-week/study/protocol.md",
+      "bytes": 2683,
+      "sha256": "cffe94c2b4440e9ce3616058c42a6c0ceddaf44752dd77611d9f5b4da9e45dde"
+    },
+    {
+      "path": "build-week/study/report-template.md",
+      "bytes": 941,
+      "sha256": "d81aac4a91b0c1ab890e6ad5ea1c526b7c3b7e00f24c2619ab03d0a403c8d27c"
+    },
+    {
+      "path": "build-week/study/response-template.csv",
+      "bytes": 250,
+      "sha256": "6eb378ea6d964271be09df18565644aa0657c05c826cb0c2466848b6e023ce97"
+    },
+    {
+      "path": "build-week/video/jobpilot-winning-rc1-demo.mp4",
+      "bytes": 5193564,
+      "sha256": "610be551420d60f32c657276ccf569a36ca5dc2795a774c9e032fe7c164ce71e"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.bw10.eligibility-compliance-matrix.v1",
+  "asOf": "2026-07-18",
+  "entries": [
+    { "requirement": "Deadline", "frozenInterpretation": "Tuesday, July 21, 2026 at 5:00 PM PT", "evidence": "Official rules and FAQ", "status": "PASS" },
+    { "requirement": "Free-tier eligibility", "frozenInterpretation": "A paid plan is not required", "evidence": "Official FAQ", "status": "PASS" },
+    { "requirement": "GPT-5.6 role", "frozenInterpretation": "Meaningful prepared strategy and critique use; primary runtime may use Gemma 4 12B", "evidence": "Repository prepared artifacts and provenance tests", "status": "PASS" },
+    { "requirement": "Codex use", "frozenInterpretation": "Codex use must appear in README, repository, and video; primary /feedback Session ID required", "evidence": "CODEX_BUILD_LOG.md and video", "status": "HOLD_EXACT_SESSION_ID" },
+    { "requirement": "Repository", "frozenInterpretation": "Public or judge-accessible private repository", "evidence": "https://github.com/yeon971105/JobPilot-BuildWeek", "status": "PASS_PUBLIC" },
+    { "requirement": "Video", "frozenInterpretation": "YouTube, under three minutes, audio, Codex and GPT-5.6 explanations", "evidence": "Certified 175-second local video", "status": "PASS_LOCAL_HOLD_UPLOAD" },
+    { "requirement": "Unlisted visibility", "frozenInterpretation": "Acceptable under owner-supplied organizer clarification when logged-out/incognito playback succeeds", "evidence": "Owner-supplied organizer email clarification", "status": "PENDING_UPLOAD_AND_ACCESS_TEST" },
+    { "requirement": "Draft timing", "frozenInterpretation": "May be saved and edited during the open Submission Period; no post-deadline edits", "evidence": "Official rules", "status": "PENDING_DRAFT_ACCOUNT_ACCESS" },
+    { "requirement": "API spending", "frozenInterpretation": "No OpenAI API request is required", "evidence": "Rules/FAQ and zero-API runtime audit", "status": "PASS_ZERO_REQUESTS" }
+  ],
+  "fabricatedClaims": 0,
+  "status": "PASS_WITH_EXPLICIT_ACCOUNT_HOLDS"
+}

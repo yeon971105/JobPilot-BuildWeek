@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "jobpilot.bw10.parent-baseline.v1",
+  "capturedAt": "2026-07-18T11:38:00-07:00",
+  "verifiedBeforeFirstWrite": true,
+  "repositoryRoot": "C:/Users/Jewon/Desktop/JobPilot-BuildWeek-Submission",
+  "branch": "build-week/jobpilot-2026",
+  "localHead": "029e2e8a31863ec185784c5699cf77a319099aea",
+  "remoteHead": "029e2e8a31863ec185784c5699cf77a319099aea",
+  "worktreeStatus": "CLEAN",
+  "parentTag": "build-week-2026-credibility-rc1",
+  "parentTagObject": "8abd47254e1317f34ebd9dd3a93669d2d55ab795",
+  "parentTagPeeledTarget": "029e2e8a31863ec185784c5699cf77a319099aea",
+  "decision": "GO_BUILD_WEEK_CREDIBILITY_RC_READY_FOR_OWNER_REVIEW",
+  "currentProductionBuildId": "eB4QlHynqo7SAP0uSqW5S",
+  "artifactInventory": {
+    "path": "build-week/bw10/parent-artifact-hashes.json",
+    "immutableParentArtifacts": 58
+  },
+  "coverage": {
+    "snapshotSha256": "68f2195f1e4a6d4dce155eb2dfcd9e209643d412e30d949ca65bd2bee6ae8414",
+    "coverageFileSha256": "8af42d1ea878988d885158e50658d5b3df576ce224908d3f6586b30bc90d914e",
+    "activeUniqueJobs": 145978,
+    "californiaUniqueJobs": 13164,
+    "bayAreaMemberships": 6426,
+    "losAngelesCountyMemberships": 1108,
+    "activeOfficialSourceEndpoints": 473,
+    "latestCompleteSnapshots": 446,
+    "originalPostingsRecorded": 145978,
+    "reachableUrls": 2727,
+    "applyDestinationsVerified": 2727,
+    "coverageMismatches": 0,
+    "geographyMismatches": 0
+  },
+  "integrity": {
+    "unverifiedApplyCta": 0,
+    "gptNamingInconsistencies": 0,
+    "openAiApiRequests": 0,
+    "openAiApiCostUsd": 0,
+    "applicationSubmissions": 0,
+    "productionMutations": 0
+  },
+  "validation": {
+    "generalTestsPassed": 104,
+    "authorizedSkips": 2,
+    "failed": 0,
+    "productionCssTestsPassed": 2,
+    "localSmokeCycles": 20,
+    "smokeRequests": 160,
+    "browserViewportChecks": 32,
+    "consoleErrors": 0,
+    "horizontalOverflow": 0,
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "productionBuild": "PASS",
+    "dependencyHighSeverityFindings": 0
+  },
+  "video": {
+    "path": "build-week/video/jobpilot-winning-rc1-demo.mp4",
+    "sha256": "610be551420d60f32c657276ccf569a36ca5dc2795a774c9e032fe7c164ce71e"
+  },
+  "study": {
+    "status": "READY_NOT_RUN",
+    "actualParticipants": 0,
+    "fabricatedParticipants": 0,
+    "publicMetricsPublished": false
+  },
+  "reproduction": "PASS_EXACT"
+}

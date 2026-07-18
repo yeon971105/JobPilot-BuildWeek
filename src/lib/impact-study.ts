@@ -2,6 +2,7 @@ import {
   BIGGEST_GAP_CHOICES,
   DECISION_STUDY_CONSENT_VERSION,
   DECISION_STUDY_CSV_HEADERS,
+  DECISION_STUDY_PREFERRED_PARTICIPANTS,
   PREFERRED_EXPERIENCE_CHOICES,
   REQUIRED_EXPERIENCE_CHOICES,
   studyCollectionState,
@@ -48,7 +49,7 @@ export type ImpactStudyAnalysis = {
   humanRows: number;
   syntheticToolingValidationRows: number;
   minimumParticipantTarget: 5;
-  preferredParticipantTarget: "8–12";
+  preferredParticipantTarget: string;
   conditionOrderCounts: Record<string, number>;
   conditions: Record<StudyCondition, {
     participantCount: number;
@@ -63,6 +64,7 @@ export type ImpactStudyAnalysis = {
   }>;
   paired: {
     medianTimeDifferenceSecondsJobPilotMinusRaw: number | null;
+    medianPercentageTimeChangeJobPilotVsRaw: number | null;
     requiredExperienceAccuracyDifferencePoints: number | null;
     preferredExperienceAccuracyDifferencePoints: number | null;
     workModeAccuracyDifferencePoints: number | null;
@@ -78,7 +80,7 @@ export type ImpactStudyAnalysis = {
   validation: { duplicateParticipantConditions: 0; incompleteParticipantSessions: 0; malformedRows: 0; prohibitedColumns: 0; fabricatedParticipants: 0 };
 };
 
-function parseCsv(value: string) {
+export function parseStudyCsv(value: string) {
   const rows: string[][] = [];
   let row: string[] = [];
   let field = "";
@@ -100,6 +102,14 @@ function parseCsv(value: string) {
   row.push(field);
   if (row.some((item) => item.length > 0)) rows.push(row);
   return rows;
+}
+
+function csvCell(value: string) {
+  return `"${value.replaceAll('"', '""')}"`;
+}
+
+export function formatStudyCsv(rows: string[][]) {
+  return rows.map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
 }
 
 const round = (value: number, digits = 1) => Number(value.toFixed(digits));
@@ -156,6 +166,7 @@ function pairedMetrics(pairs: Pair[]) {
   const gapJobPilot = jobPilot.map((row) => row.biggestGapAnswer === IMPACT_STUDY_ANSWER_KEY.biggestGapAnswer);
   return {
     medianTimeDifferenceSecondsJobPilotMinusRaw: median(pairs.map((pair) => pair.JOBPILOT.taskSeconds - pair.RAW_POSTING.taskSeconds)),
+    medianPercentageTimeChangeJobPilotVsRaw: median(pairs.map((pair) => round((pair.JOBPILOT.taskSeconds - pair.RAW_POSTING.taskSeconds) / pair.RAW_POSTING.taskSeconds * 100, 2))),
     requiredExperienceAccuracyDifferencePoints: difference(percentage(requiredJobPilot), percentage(requiredRaw)),
     preferredExperienceAccuracyDifferencePoints: difference(percentage(preferredJobPilot), percentage(preferredRaw)),
     workModeAccuracyDifferencePoints: difference(percentage(workJobPilot), percentage(workRaw)),
@@ -199,10 +210,10 @@ function summarizeCondition(rows: ImpactRow[]) {
 }
 
 export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIterations?: number; bootstrapSeed?: number } = {}): ImpactStudyAnalysis {
-  const parsed = parseCsv(csv);
+  const parsed = parseStudyCsv(csv);
   const expectedHeaders = [...DECISION_STUDY_CSV_HEADERS];
   const headers = parsed[0] ?? [];
-  if (headers.some((header) => /(^|_)(name|email|phone|resume|demographic|employment_status|health)(_|$)/i.test(header))) throw new Error("Study CSV contains a prohibited identifying column.");
+  if (headers.some((header) => /(^|_)(name|email|phone|resume|demographic|employment_status|health|home_address|ip|ip_address|address)(_|$)/i.test(header))) throw new Error("Study CSV contains a prohibited identifying column.");
   if (JSON.stringify(headers) !== JSON.stringify(expectedHeaders)) throw new Error("Study CSV headers do not match the frozen no-PII schema.");
   const indexes = Object.fromEntries(headers.map((header, index) => [header, index]));
   const rawRows = parsed.slice(1).filter((row) => JSON.stringify(row) !== JSON.stringify(headers));
@@ -274,7 +285,7 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
     humanRows: humanRows.length,
     syntheticToolingValidationRows,
     minimumParticipantTarget: 5,
-    preferredParticipantTarget: "8–12",
+    preferredParticipantTarget: DECISION_STUDY_PREFERRED_PARTICIPANTS,
     conditionOrderCounts: Object.fromEntries(["RAW_POSTING_THEN_JOBPILOT", "JOBPILOT_THEN_RAW_POSTING"].map((order) => [order, pairs.filter((pair) => pair.RAW_POSTING.conditionOrder === order).length])),
     conditions: { RAW_POSTING: summarizeCondition(raw), JOBPILOT: summarizeCondition(jobPilot) },
     paired,
@@ -303,6 +314,7 @@ export function publicImpactSummary(analysis: ImpactStudyAnalysis) {
       rawPostingMedianSeconds: analysis.conditions.RAW_POSTING.medianDecisionTimeSeconds,
       jobPilotMedianSeconds: analysis.conditions.JOBPILOT.medianDecisionTimeSeconds,
       pairedMedianTimeDifferenceSecondsJobPilotMinusRaw: analysis.paired.medianTimeDifferenceSecondsJobPilotMinusRaw,
+      pairedMedianPercentageTimeChangeJobPilotVsRaw: analysis.paired.medianPercentageTimeChangeJobPilotVsRaw,
       requiredExperienceAccuracy: { rawPosting: analysis.conditions.RAW_POSTING.requiredExperienceAccuracyPercent, jobPilot: analysis.conditions.JOBPILOT.requiredExperienceAccuracyPercent },
       preferredExperienceAccuracy: { rawPosting: analysis.conditions.RAW_POSTING.preferredExperienceAccuracyPercent, jobPilot: analysis.conditions.JOBPILOT.preferredExperienceAccuracyPercent },
       workModeAccuracy: { rawPosting: analysis.conditions.RAW_POSTING.workModeAccuracyPercent, jobPilot: analysis.conditions.JOBPILOT.workModeAccuracyPercent },
