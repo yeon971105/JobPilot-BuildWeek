@@ -31,26 +31,33 @@ async function walk(directory: string): Promise<string[]> {
   return nested.flat();
 }
 
-const discovered = (await Promise.all(roots.map(walk))).flat();
-const candidates = [...new Set([...discovered, ...exactFiles.map((file) => path.join(workspace, file))])]
-  .filter((file) => file !== outputPath)
-  .sort((left, right) => left.localeCompare(right));
-const artifacts = await Promise.all(candidates.map(async (file) => {
-  const bytes = await readFile(file);
-  const metadata = await stat(file);
-  return {
-    path: path.relative(workspace, file).replaceAll("\\", "/"),
-    bytes: metadata.size,
-    sha256: createHash("sha256").update(bytes).digest("hex"),
+async function main() {
+  const discovered = (await Promise.all(roots.map(walk))).flat();
+  const candidates = [...new Set([...discovered, ...exactFiles.map((file) => path.join(workspace, file))])]
+    .filter((file) => file !== outputPath)
+    .sort((left, right) => left.localeCompare(right));
+  const artifacts = await Promise.all(candidates.map(async (file) => {
+    const bytes = await readFile(file);
+    const metadata = await stat(file);
+    return {
+      path: path.relative(workspace, file).replaceAll("\\", "/"),
+      bytes: metadata.size,
+      sha256: createHash("sha256").update(bytes).digest("hex"),
+    };
+  }));
+  const output = {
+    schemaVersion: "jobpilot.bw10.artifact-index.v1",
+    generatedAt: new Date().toISOString(),
+    algorithm: "SHA-256",
+    participantLevelRecordsIncluded: false,
+    artifactCount: artifacts.length,
+    artifacts,
   };
-}));
-const output = {
-  schemaVersion: "jobpilot.bw10.artifact-index.v1",
-  generatedAt: new Date().toISOString(),
-  algorithm: "SHA-256",
-  participantLevelRecordsIncluded: false,
-  artifactCount: artifacts.length,
-  artifacts,
-};
-await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
-console.log(JSON.stringify({ artifactCount: artifacts.length, output: path.relative(workspace, outputPath).replaceAll("\\", "/") }, null, 2));
+  await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  console.log(JSON.stringify({ artifactCount: artifacts.length, output: path.relative(workspace, outputPath).replaceAll("\\", "/") }, null, 2));
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

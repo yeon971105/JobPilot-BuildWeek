@@ -1,0 +1,334 @@
+{
+  "schemaVersion": "jobpilot.bw10.artifact-index.v1",
+  "generatedAt": "2026-07-18T21:08:54.237Z",
+  "algorithm": "SHA-256",
+  "participantLevelRecordsIncluded": false,
+  "artifactCount": 65,
+  "artifacts": [
+    {
+      "path": "build-week/bw10/captures/public-landing-320x700.png",
+      "bytes": 31435,
+      "sha256": "676394630ed3648e55e81c3a26a0ce64bba171c3fd99aee69cf2cab4aa71d0f5"
+    },
+    {
+      "path": "build-week/bw10/captures/public-landing-390x844.png",
+      "bytes": 39642,
+      "sha256": "235349e9fa5cf34bcb29671022d1691771e0a103abd3625fc35d0591b71155c9"
+    },
+    {
+      "path": "build-week/bw10/captures/public-northstar-320x700.png",
+      "bytes": 22582,
+      "sha256": "8a37e63494cd97377a0678a97c775aa1998d0fda93b9b543afff1416880f8466"
+    },
+    {
+      "path": "build-week/bw10/captures/public-shortlist-1440x900.png",
+      "bytes": 94431,
+      "sha256": "da025496ad152f0fa4b2a88adf4288ddda51289f05ca59070aecc96f9a36ff45"
+    },
+    {
+      "path": "build-week/bw10/captures/public-verifier-1024x768.png",
+      "bytes": 64638,
+      "sha256": "ff0abaad487a9a42c91785c45d18e6950bf73249ecf1104f87ed645f9e701227"
+    },
+    {
+      "path": "build-week/bw10/codex-feedback-status.json",
+      "bytes": 672,
+      "sha256": "ebc1de97dff9ac0885fe5cfde71cd2fca41777e4d3b0eb255d0774f21ac76486"
+    },
+    {
+      "path": "build-week/bw10/codex-primary-thread-analysis.json",
+      "bytes": 2737,
+      "sha256": "16e0c9dce64239cbb9dd1a02d30531b11206a2fa093c6052f708336aef3d9bc3"
+    },
+    {
+      "path": "build-week/bw10/deployment-environment.json",
+      "bytes": 779,
+      "sha256": "540a7a83585d2e83d5b503787c9bc097e354acd93a9da9630f6e6d9c7e3e49c5"
+    },
+    {
+      "path": "build-week/bw10/deployment-health.json",
+      "bytes": 607,
+      "sha256": "f2857d109bb2b6e8d1e1edeeeec9ed387697c65b0cf68df78146d079e9398264"
+    },
+    {
+      "path": "build-week/bw10/deployment-manifest.json",
+      "bytes": 2042,
+      "sha256": "85d629793f1af73357c70d6b0077b532045d66c179a290724fe25ec53a93c28a"
+    },
+    {
+      "path": "build-week/bw10/deployment-privacy-audit.json",
+      "bytes": 616,
+      "sha256": "eb9816b5061bbbe508102cb54c71cd218fde4f384a2b3d4b38612f45b2759cf1"
+    },
+    {
+      "path": "build-week/bw10/devpost-draft-status.json",
+      "bytes": 605,
+      "sha256": "5843d14ed4906bc113fb22e0836fe472851483f5e6c833c15f4c765e4604fe7c"
+    },
+    {
+      "path": "build-week/bw10/eligibility-compliance-matrix.json",
+      "bytes": 2052,
+      "sha256": "d307164be9497d0a2477a69d2c8ef5e996a2ae16363ab34b387c60255326b666"
+    },
+    {
+      "path": "build-week/bw10/final-feature-freeze.json",
+      "bytes": 1651,
+      "sha256": "0a40eafc9e39e4129294b3e4adca755bd2098c7879bce7e1654a08bedaff2b1c"
+    },
+    {
+      "path": "build-week/bw10/judging-evidence-matrix.json",
+      "bytes": 12151,
+      "sha256": "d9e71c1f3cae53b63030a15d31af9e8eedabb57cb7fc984ac8fd380bb2af1f7c"
+    },
+    {
+      "path": "build-week/bw10/judging-evidence-matrix.md",
+      "bytes": 1901,
+      "sha256": "e096e28899b25c6cffaa8bff4778a5fc13f3d0ca1fb4be92ee3cf879b935f6f2"
+    },
+    {
+      "path": "build-week/bw10/owner-approval-template.json",
+      "bytes": 177,
+      "sha256": "35b3f82f7185c13c1819e86512628bf7721cb78d18e57d86ecbd4752321cf3cb"
+    },
+    {
+      "path": "build-week/bw10/owner-review-package.md",
+      "bytes": 9501,
+      "sha256": "9229b4d4023e50dbd558dde15877c830b166d6d003f8c0ff265baac01adaa5b4"
+    },
+    {
+      "path": "build-week/bw10/parent-artifact-hashes.json",
+      "bytes": 10365,
+      "sha256": "5a101630319955f6e0b442b8d19e5784620a4743f4aa29ab93e30ab035c62285"
+    },
+    {
+      "path": "build-week/bw10/parent-baseline.json",
+      "bytes": 2355,
+      "sha256": "4c17db779fb1aa4af1734dd470fee7eaa3678ea96fdcc104eca1e67962386e20"
+    },
+    {
+      "path": "build-week/bw10/process-lock-audit.json",
+      "bytes": 1098,
+      "sha256": "e14311fd4deb6b14f321565c99cdd1c255634f2d7355ca6c3da8c2849c29c55c"
+    },
+    {
+      "path": "build-week/bw10/public-browser-qa.json",
+      "bytes": 2649,
+      "sha256": "aeaa8aa8abe89d50ff02f45bae85223149ec4f0c985f670cd9a86d011ba54f22"
+    },
+    {
+      "path": "build-week/bw10/public-browser-qa.md",
+      "bytes": 1612,
+      "sha256": "624763d9aaa1afca156fc02838e2f3cb35016e2fab8176b9e8a5e3cb38751d26"
+    },
+    {
+      "path": "build-week/bw10/public-screenshot-manifest.json",
+      "bytes": 1738,
+      "sha256": "03ae49bdc84b992fe9141b02a6f7a61073f5c50caefb1b5ded8d84b565ee7d79"
+    },
+    {
+      "path": "build-week/bw10/public-smoke-results.json",
+      "bytes": 4488,
+      "sha256": "ff4feb642ae9b788dd2b6bdacb8af372c3cb2e8f08ac8288d0090067108fe2ee"
+    },
+    {
+      "path": "build-week/bw10/remote-parity-audit.json",
+      "bytes": 763,
+      "sha256": "08ea6abb521d6e0e7a575c93942d8bf0a49d6a62406c352f9f9ca0b56d302311"
+    },
+    {
+      "path": "build-week/bw10/rules-and-email-clarification.json",
+      "bytes": 1634,
+      "sha256": "e54d64a0f7319cd303b226c3d048ba898c8ce26b4fedf5e8c1c6dea5be3604af"
+    },
+    {
+      "path": "build-week/bw10/validation-summary.json",
+      "bytes": 2498,
+      "sha256": "b224d86ae48690dbc3e757fd3228edf8de0eeeca6994e82df6e073d82cb07f29"
+    },
+    {
+      "path": "build-week/bw10/video-access-test.json",
+      "bytes": 293,
+      "sha256": "18d145ec880befb11ac97460b26dc99cd8ae89a6646e39d182733feef5302766"
+    },
+    {
+      "path": "build-week/bw10/video-final-verification.json",
+      "bytes": 1364,
+      "sha256": "fa9e9f6afd3b6b7c736738a3d714fe8aacd5a663dd48d980120ff73f8c70be6f"
+    },
+    {
+      "path": "build-week/bw10/video-review-publication.json",
+      "bytes": 705,
+      "sha256": "445b15a15e4b7246a93a2e789fb285eb0a92c4990b630bc06af90d3fc91c374b"
+    },
+    {
+      "path": "build-week/codex-session.json",
+      "bytes": 356,
+      "sha256": "5b5d34986186b923649406994910fec855182e994495b1073b565f7eed036491"
+    },
+    {
+      "path": "build-week/devpost/application-fatigue-final-form-values.json",
+      "bytes": 604,
+      "sha256": "3987dcb73169a3baba22bc8a2ae2093fcd8dce966230e86c528b4ae979edd1f1"
+    },
+    {
+      "path": "build-week/devpost/application-fatigue-final-submission.json",
+      "bytes": 1012,
+      "sha256": "f29a50fca538ee104e821430fef97349e16a9932e168cedb1cd324e058437bb7"
+    },
+    {
+      "path": "build-week/devpost/application-fatigue-final-submission.md",
+      "bytes": 6548,
+      "sha256": "c3421f4e5104bf5e621affb04654d271d272fd6d7d9e0ca182512ad0a6e9f7d3"
+    },
+    {
+      "path": "build-week/devpost/application-fatigue-judging-map.md",
+      "bytes": 1714,
+      "sha256": "127c1f6e5a96a162ffd0fdf57d1fd784b6c22f85f9978e81d8bd4c18b23926d8"
+    },
+    {
+      "path": "build-week/devpost/final-form-values.json",
+      "bytes": 698,
+      "sha256": "ff51ebe09e5f16d4a130e412a2d116e156f3cd0450cf07725c96f88d9371a4b5"
+    },
+    {
+      "path": "build-week/devpost/final-judging-map.md",
+      "bytes": 578,
+      "sha256": "8d92c626174cfd4229b6aad3c9ce9d4500e6deb5d0992093b053077639caddbf"
+    },
+    {
+      "path": "build-week/devpost/final-submission.json",
+      "bytes": 1586,
+      "sha256": "d32d9e3b314236c2785e1f95975d0b8859097ec2575ac4bbe05c1f59f690be93"
+    },
+    {
+      "path": "build-week/devpost/final-submission.md",
+      "bytes": 2818,
+      "sha256": "7bc26e7327630ef485af13b2ce18e2f94a2e3c27920622b6390eacd500a42789"
+    },
+    {
+      "path": "build-week/devpost/hybrid-final-form-values.json",
+      "bytes": 491,
+      "sha256": "23c84e619615e10d53455bbc8d36d7f1ea88347665b1e058c720e2ab4c16395c"
+    },
+    {
+      "path": "build-week/devpost/hybrid-final-submission.json",
+      "bytes": 544,
+      "sha256": "3c82a1eca6eb71a80c4dcbb380b8470fa88b6ce56a0a3017e66ba7fdf14a3b1c"
+    },
+    {
+      "path": "build-week/devpost/hybrid-final-submission.md",
+      "bytes": 2803,
+      "sha256": "abce5f7b738e1caa18a58e623325a9284fe4cecd31242bcd98b84c28e2912114"
+    },
+    {
+      "path": "build-week/devpost/hybrid-judging-map.md",
+      "bytes": 926,
+      "sha256": "7fbcae0de3e4695563130be731e34aca1a9b714cd6c831a7d511b86a53215745"
+    },
+    {
+      "path": "build-week/devpost/judging-criteria-mapping.md",
+      "bytes": 866,
+      "sha256": "60d3fc940ccb154d5c8019f9c81300b95574bd7755a30a8595f47c8662386183"
+    },
+    {
+      "path": "build-week/devpost/owner-review-draft.md",
+      "bytes": 8777,
+      "sha256": "b93879fc8fe320ecf7579f35fe574e798f8e32defbd13fbe9098ce8f58c5d194"
+    },
+    {
+      "path": "build-week/devpost/owner-review-form-values.json",
+      "bytes": 4552,
+      "sha256": "b1bef06e6163bf3274c4509d315958061de6381090ff52aab1ad4ddc88544270"
+    },
+    {
+      "path": "build-week/devpost/owner-review-judging-map.md",
+      "bytes": 1717,
+      "sha256": "34d594d16c816c478718eb13dea066db5d78df26558e9def721fb50407e37d28"
+    },
+    {
+      "path": "build-week/devpost/owner-review-placeholder-audit.json",
+      "bytes": 876,
+      "sha256": "56bcb179a76a35c0a84b53d574e192c550e66ca593b28f67a737c5b02b08d36d"
+    },
+    {
+      "path": "build-week/devpost/product-ux-final-form-values.json",
+      "bytes": 688,
+      "sha256": "33d68d6cb7b924db41364bfa3613fa6d26115ce3ea3fdb96ecb7cf26aa3efb3f"
+    },
+    {
+      "path": "build-week/devpost/product-ux-final-submission.json",
+      "bytes": 875,
+      "sha256": "5d4fbb9ea083de7b89359897c8f0cbc62f7c4234d013bf2a33b8cbbd086e8950"
+    },
+    {
+      "path": "build-week/devpost/product-ux-final-submission.md",
+      "bytes": 2100,
+      "sha256": "4d3b9ac9b334dbc975c6c735066f6d93068d90070947a46d6b4d79d3bc50427b"
+    },
+    {
+      "path": "build-week/devpost/product-ux-judging-map.md",
+      "bytes": 1314,
+      "sha256": "ae79ec77fbce4086cb51bc363c8486d6f22cb4a35a47bdad1f8a5eebdc88ac34"
+    },
+    {
+      "path": "build-week/devpost/short-description.txt",
+      "bytes": 211,
+      "sha256": "15d51b6da34380b537159f65cd75d8a6d732b746807ba1ea89617acd8110ba7c"
+    },
+    {
+      "path": "build-week/devpost/submission.md",
+      "bytes": 3092,
+      "sha256": "aa07d095f7011848903b7b2caf48ed3e7e8b78a5987fc7d0e5062f16bb2f60d3"
+    },
+    {
+      "path": "build-week/study/analysis-provenance.json",
+      "bytes": 768,
+      "sha256": "67d40ff621fc8b90f18e690332dbf34c541d076652f838d4a55429a10c335a4c"
+    },
+    {
+      "path": "build-week/study/internal-report.md",
+      "bytes": 982,
+      "sha256": "ab5e80a013afeac64ef0340b1b6dfc1deb5dd1aa2807838061102361f1ed3ff4"
+    },
+    {
+      "path": "build-week/study/internal-results.json",
+      "bytes": 2375,
+      "sha256": "1614e1aaccd779087cf651fc79203af8c0de4bb41678d4fa1b6aa4139e900a82"
+    },
+    {
+      "path": "build-week/study/public-summary.json",
+      "bytes": 501,
+      "sha256": "887c44611c062d59517b44e6dccc273f371f6ce19343217ab302b1ade0f3acd3"
+    },
+    {
+      "path": "build-week/study/public-summary.md",
+      "bytes": 347,
+      "sha256": "053c32744213cd4f90c39ea6604f5b5d8ae1d14f8e30772fdfaea0dbd092e4fe"
+    },
+    {
+      "path": "build-week/video/jobpilot-winning-rc1-captions.srt",
+      "bytes": 1648,
+      "sha256": "ff8166f28f38f8b8ecd38636c3cafa291171b7a60e6dea02a16dd3638cf99439"
+    },
+    {
+      "path": "build-week/video/jobpilot-winning-rc1-demo.mp4",
+      "bytes": 5193564,
+      "sha256": "610be551420d60f32c657276ccf569a36ca5dc2795a774c9e032fe7c164ce71e"
+    },
+    {
+      "path": "build-week/video/jobpilot-winning-rc1-voiceover.md",
+      "bytes": 3286,
+      "sha256": "4718810d3fecdd267b87f69838f95bb0f5df940f081a4563640e11eaa0e420ca"
+    },
+    {
+      "path": "CODEX_BUILD_LOG.md",
+      "bytes": 2716,
+      "sha256": "f3947a26de771c96411b0894cffcfcc61e4e4a47e7c8d19584834d1e7d32f814"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9761,
+      "sha256": "6cebdf78cef01ac0f6653f127075f9a2392b2311dfa4fdc179d315ca34349b3c"
+    }
+  ]
+}

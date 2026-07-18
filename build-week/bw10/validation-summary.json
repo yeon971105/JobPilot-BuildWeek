@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "jobpilot.bw10.validation-summary.v1",
+  "checkedAt": "2026-07-18T14:08:00-07:00",
+  "cleanCloneCommit": "d0fe50a88a175b2c0563e77af7b50e343f6df132",
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "tests": {
+    "testFilesPassed": 20,
+    "testFilesSkipped": 1,
+    "testsPassed": 109,
+    "authorizedSkips": 2,
+    "failed": 0
+  },
+  "productionCss": {
+    "passed": 2,
+    "failed": 0
+  },
+  "providerValidation": "PASS",
+  "preparedGptProvenance": "PASS",
+  "receiptVerification": {
+    "status": "FULLY_REPRODUCED",
+    "checksPassed": 32,
+    "checksFailed": 0,
+    "externalRequests": 0
+  },
+  "study": {
+    "schemaPrivacyCombinationAnalysis": "PASS",
+    "status": "READY_NOT_RUN",
+    "actualParticipantCount": 0,
+    "fabricatedParticipantRows": 0,
+    "dryRunRowsCountedAsHumans": 0
+  },
+  "publicSmoke": {
+    "cyclesAttempted": 20,
+    "cyclesPassed": 20,
+    "requestsPassed": 560,
+    "failures": 0
+  },
+  "publicBrowserQa": {
+    "checksAttempted": 32,
+    "checksPassed": 32,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "horizontalOverflow": 0
+  },
+  "accessibilityAndVisualRegression": "PASS",
+  "secretScanFindings": 0,
+  "trackedParticipantCsvFiles": 0,
+  "trackedResumeBinaryFiles": 0,
+  "documentationLinks": {
+    "markdownFilesChecked": 83,
+    "brokenRelativeLinks": 0
+  },
+  "devpostPlaceholderAudit": "PASS_EXPLICIT_NULLS_ONLY",
+  "dependencyAuditVulnerabilities": 0,
+  "videoValidation": "PASS",
+  "productionBuild": "PASS",
+  "deployableWorkerBundle": "PASS",
+  "cleanCloneValidation": "PASS",
+  "cleanCloneRepair": {
+    "observed": "Windows checkout line-ending conversion changed byte hashes for frozen JSON artifacts.",
+    "repair": "Scoped .gitattributes rules require LF for prepared GPT and coverage snapshot JSON.",
+    "revalidation": "All frozen hashes, 109 tests, typecheck, lint, and the production worker build passed from a recreated detached worktree."
+  },
+  "requiredZeros": {
+    "openAiApiRequests": 0,
+    "openAiApiCostUsd": 0,
+    "coverageInconsistencies": 0,
+    "geographyInconsistencies": 0,
+    "unverifiedApplyCtas": 0,
+    "gptNamingInconsistencies": 0,
+    "receiptMismatches": 0,
+    "hiddenAdjustments": 0,
+    "applicationSubmissions": 0,
+    "automaticAppliedTransitions": 0,
+    "secrets": 0,
+    "privateProductionRows": 0,
+    "realResumesInPublicPackage": 0,
+    "consoleErrors": 0,
+    "horizontalOverflow": 0,
+    "brokenLinks": 0,
+    "finalLookingFabricatedPlaceholders": 0
+  },
+  "result": "PASS"
+}
