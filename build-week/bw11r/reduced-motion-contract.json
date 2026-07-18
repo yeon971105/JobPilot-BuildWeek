@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "jobpilot.bw11r.reduced-motion.v1",
+  "mediaQuery": "prefers-reduced-motion: reduce",
+  "animationDurationMilliseconds": 0.01,
+  "animationDelayMilliseconds": 0,
+  "animationIterationCount": 1,
+  "transitionDurationMilliseconds": 0.01,
+  "scoreBehavior": "Render the final integer directly.",
+  "hoverTransform": "none",
+  "meaningPreservedWithoutMotion": true,
+  "result": "PASS"
+}

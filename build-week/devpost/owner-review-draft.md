@@ -24,6 +24,12 @@ JobPilot connects that fragmented journey:
 
 ## What it does
 
+### Final product RC experience
+
+The public landing is now distinct from the app home. The landing explains the job-seeker value first; **For You** shows three focused roles with **Why these three?** visible above the cards. Job Detail makes the plain-language conclusion primary, then uses five visual fit dimensions, a relevant-experience comparison, practical-fit cards, grouped evidence, and visual Score Proof. Exact quotes and micro-point mathematics remain available through progressive disclosure and the collapsed Technical Ledger.
+
+The final RC adds restrained motion with a complete Reduced Motion fallback, intentional loading/empty/success/error states, a compact tracker with Undo, and the isolated `jobpilot-decision-utility.v2` study. Study V2 uses two different fictional roles, counterbalances Raw Posting and JobPilot conditions, requires primer comprehension, and rejects PREVIEW, PILOT, same-role, or unauthenticated rows from final evidence.
+
 The no-login public review uses six synthetic roles and one synthetic candidate. **Today’s 3 Roles Worth Your Time** replaces an endless feed with three transparent next decisions. The shortlist follows a published lexicographic order—numeric eligibility, blocker state, Fit Score, Evidence Quality, distance or Remote, freshness, then stable job ID—and exposes its rationale without a hidden shortlist score.
 
 Nearby discovery starts from profile-configured location and work-mode preferences. Job Detail separates required from preferred qualifications, calculates non-overlapping relevant experience by month, shows strongest matches and biggest gaps, and keeps practical constraints outside technical Fit Score. Comparison supports up to three roles.
@@ -67,8 +73,8 @@ These are processed-portfolio counts, not complete-market coverage. Unique-job t
 - Gemma-first private local architecture with a fully usable cached public review mode.
 - Four provenance-bound prepared GPT-5.6 reviews with zero API runtime.
 - Frozen aggregate production-coverage evidence and honest destination trust states.
-- 109 passing tests plus two authorized browser-only skips before final certification.
-- A no-PII, counterbalanced Decision Utility study harness with validator, combiner, and analysis pipeline.
+- 117 passing tests plus two authorized browser-only skips, two passing production-CSS tests, and 40/40 route–viewport browser checks.
+- A no-PII, two-role counterbalanced Decision Utility Study V2 harness with validator, combiner, analysis pipeline, and strict pilot exclusion.
 
 ## Lessons learned
 
@@ -97,7 +103,7 @@ Codex, GPT-5.6 (`gpt-5.6-sol`, prepared), Gemma 4 12B (`gemma4:12b`), determinis
 - Unlisted YouTube URL: pending authenticated upload and logged-out verification
 - Codex `/feedback` Session ID: pending exact action on the selected representative task
 
-Testing path: open the landing page, choose Today’s Shortlist, inspect Northstar’s summary/matches/gaps/experience/constraints, verify its receipt, tamper with the receipt, open the synthetic employer destination, return and explicitly mark Preparing, compare roles, then open Trust Lab and Coverage Proof. The study route is isolated at `/study/decision-utility` and dry runs are excluded from human analysis.
+Testing path: open the landing page, choose **See My Best Matches**, read **Why these three?**, inspect Northstar’s Overview, Evidence, Experience, Score Proof, and Technical Ledger, verify its receipt, tamper with the receipt, open the synthetic employer destination, return and explicitly move a saved role, then open Trust Lab. The Study Preview route is isolated at `/study/decision-utility?mode=preview`; Preview and Pilot sessions are excluded from human evidence.
 
 ## Team information
 

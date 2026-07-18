@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "jobpilot.bw11r.artifact-index.v1",
+  "groups": {
+    "baseline": ["parent-baseline.json", "parent-artifact-hashes.json", "process-lock-audit.json", "current-product-experience-audit.json", "current-motion-audit.json", "current-study-validity-audit.json"],
+    "architecture": ["information-architecture-contract.json", "route-purpose-contract.json", "product-state-contract.json", "state-coverage-results.json"],
+    "decisionUx": ["shortlist-rationale-contract.json", "shortlist-rationale-validation.json", "summary-group-contract.json", "summary-group-validation.json"],
+    "motion": ["motion-system-contract.json", "reduced-motion-contract.json", "motion-performance-results.json", "motion-accessibility-results.json"],
+    "study": ["study-protocol-v2.json", "study-v2-validation.json"],
+    "browser": ["visual-regression-contract.json", "visual-regression-results.json", "screenshot-manifest.json", "accessibility-results.json", "edge-case-results.json", "css-pipeline-results.json"],
+    "validation": ["video-validation-results.json"],
+    "preview": ["certified-preview-contract.json"],
+    "owner": ["owner-review-package.md", "owner-approval-template.json"],
+    "video": ["../video/jobpilot-final-product-script.md", "../video/jobpilot-final-product-voiceover.md", "../video/jobpilot-final-product-shot-list.md", "../video/jobpilot-final-product-captions.srt", "../video/jobpilot-final-product-recording-manifest.json", "../video/jobpilot-final-product-thumbnail.png", "../video/jobpilot-final-product-youtube-metadata.md", "../video/jobpilot-final-product-rc1.mp4"]
+  },
+  "ownerApproval": false,
+  "devpostSubmitted": false,
+  "videoPublic": false,
+  "finalTagCreated": false
+}

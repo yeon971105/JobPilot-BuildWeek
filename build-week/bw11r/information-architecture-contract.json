@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "jobpilot.bw11r.information-architecture.v1",
+  "publicLanding": "/",
+  "defaultAppHome": "/demo/shortlist",
+  "primaryNavigation": ["For You", "Jobs", "Tracker", "Trust Lab", "Build Week", "Profile selector"],
+  "profileSelector": ["View Profile", "Use Demo Profile", "Upload Resume Privately", "Edit Preferences", "Reset Demo Session"],
+  "isolatedResearchRoute": "/study/decision-utility",
+  "studyInPrimaryNavigation": false,
+  "standaloneProfileNavigationLink": false,
+  "progressiveProofPath": "Job Detail -> Evidence or Score Proof -> Technical Ledger",
+  "result": "PASS"
+}

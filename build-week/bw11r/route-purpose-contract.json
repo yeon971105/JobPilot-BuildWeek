@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "jobpilot.bw11r.route-purpose.v1",
+  "routes": {
+    "/": "Explain the job-seeker value and begin the product flow.",
+    "/demo/shortlist": "Show three roles worth attention and the visible selection rationale.",
+    "/demo/jobs": "Explore profile-aware discovery through deterministic filters and sorts.",
+    "/demo/jobs/[id]": "Make a role decision, then progressively disclose evidence and exact proof.",
+    "/demo/compare": "Compare up to three roles without an opaque aggregate score.",
+    "/demo/tracker": "Plan next steps in browser-local state without application submission.",
+    "/demo/trust": "Explain source, model, scoring, proof, privacy, and limitations.",
+    "/demo/verify-receipt": "Independently reproduce or reject a bounded Score Receipt.",
+    "/profile": "Review the active profile entry point.",
+    "/profile/preferences": "Configure practical work and location constraints.",
+    "/study/decision-utility": "Run isolated usability research tooling under protocol V2."
+  },
+  "result": "PASS"
+}

@@ -12,7 +12,9 @@ npm run build
 npm run start
 ```
 
-Open `http://localhost:3000`, choose **See Today's 3 Roles**, or start the optional **90-Second Tour**.
+Open `http://localhost:3000`, choose **See My Best Matches**, or start the optional **90-Second Tour**.
+
+JP-BW11R separates the public product landing from the app home. `/` explains the job-seeker value; `/demo/shortlist` is the distinct **For You** dashboard. The final-product RC adds restrained premium motion, reduced-motion behavior, intentional loading/empty/success/error states, visual decision summaries, grouped evidence, an exact collapsed Technical Ledger, and the isolated Decision Utility Study Protocol V2.
 
 ![JobPilot application-fatigue landing](build-week/bw7/captures/landing-1440x900.png)
 
@@ -30,7 +32,7 @@ Traditional job search often fragments discovery, resume comparison, employer ha
 
 ## Today's 3 Roles Worth Your Time
 
-`/demo/shortlist` defaults to four short rationale items on each card: fit, compatibility, freshness, and blocker state. Exact ordering remains available under **How this shortlist works** and applies one lexicographic policy:
+`/demo/shortlist` places **Why these three?** above the role cards with three visible reasons: Best evidence fit, Works with your preferences, and Recent enough to act on. **No hidden shortlist score.** Exact ordering remains available under **See the full ranking method** and applies one lexicographic policy:
 
 1. numeric-score eligibility;
 2. blocker state;
@@ -87,7 +89,7 @@ See [SCORE_RECEIPT_VERIFIER.md](SCORE_RECEIPT_VERIFIER.md).
 
 ## Decision Utility Study
 
-`/study/decision-utility` is intentionally absent from primary product navigation. After explicit consent, it creates an anonymous random ID and counterbalances one Raw Posting task and one JobPilot task. Each condition asks required-experience, preferred-experience, work-mode, biggest-gap, Apply / Review / Skip, confidence, and transparency questions while timing completion. Responses autosave browser-locally and export to CSV or JSON; there is no network submission path.
+`/study/decision-utility` is intentionally absent from primary product navigation. Protocol `jobpilot-decision-utility.v2` uses two different fictional roles: Analytics Operations Engineer and Data Enablement Engineer. Group 1 reviews A Raw then B JobPilot; Group 2 reviews B Raw then A JobPilot. A primer and two comprehension checks precede one-question-per-screen conditions. PREVIEW and PILOT are always excluded; only authentic, validated FINAL sessions can count. Responses stay browser-local and there is no network submission path.
 
 Status: **READY_NOT_RUN**. Actual participant count: **0**. Minimum target: **5**; preferred target: **8–12**. Synthetic tooling validation is never presented as human evidence. See [the protocol](build-week/study/protocol.md), [consent](build-week/study/consent.md), and [owner workflow](build-week/study/owner-collection-workflow.md).
 
@@ -118,7 +120,7 @@ npm run validate:local-gemma
 npm audit --audit-level=low
 ```
 
-The current BW8 certificate, route matrix, responsive QA, accessibility checks, privacy scans, and zero-value invariants are stored under `build-week/bw8/`.
+The JP-BW11R certificate covers 28 required states and a 40-check route–viewport matrix at 1440×900, 1024×768, 390×844, and 320×700. It records zero horizontal overflow, console errors, undersized primary controls, duplicate summary capabilities, default point decimals, fabricated participants, API calls, and application submissions under `build-week/bw11r/`.
 
 ## Key routes
 
@@ -135,13 +137,21 @@ The current BW8 certificate, route matrix, responsive QA, accessibility checks, 
 - [Architecture](ARCHITECTURE.md), [privacy](PRIVACY.md), and [zero-API GPT-5.6](ZERO_API_GPT56.md)
 - `build-week/bw8/` — production aggregates, provenance, validation, captures, and release evidence
 - `build-week/study/` — frozen decision-utility kit, status `READY_NOT_RUN`
-- `build-week/video/jobpilot-winning-rc1-demo.mp4` — current 175-second actual-product video
+- `build-week/video/jobpilot-final-product-rc1.mp4` — current 175-second final-product RC video with H.264 video, AAC English narration, and embedded English captions
 
 ## Development-phase boundary
 
 This remains a development release candidate. A non-final public owner-review environment may be available, but JobPilot has not made the video Public, submitted Devpost, obtained final owner approval, or created a final release tag. Code and original documentation are MIT licensed.
 
 Public owner-review environment: <https://jobpilot-build-week-review.yeon971105.chatgpt.site>. It uses synthetic demo data, cached prepared analyses, no OpenAI key, no production database, no Ollama connection, and no public resume upload.
+
+After the final production build, the exact local owner-approval surface starts only through:
+
+```bash
+npm run preview:certified -- --port 3209
+```
+
+The command rejects a dirty worktree or UI-source drift, validates the current commit and BUILD_ID, checks runtime CSS status/bytes/hash, computed-style and geometry sentinels, all owner routes, health, and build/server parity, then keeps the certified preview running.
 
 ## Codex `/feedback` status
 

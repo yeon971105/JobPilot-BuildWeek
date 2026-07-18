@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.bw11r.certified-preview.v1",
+  "command": "npm run preview:certified -- --port 3209",
+  "visualSourceCommit": "78851f1812aea35215d9446d946dde2aafd32acf",
+  "commitPolicy": "Validate the current clean HEAD and require the UI source tree to match visualSourceCommit.",
+  "css": {
+    "totalBytes": 53329,
+    "sha256": "d407e8c54905b97470e4ce731472612adfea87812c192aba4026d6d202ebb362"
+  },
+  "requiredChecks": ["current Git commit", "clean build", "BUILD_ID", "CSS HTTP 200", "CSS bytes", "CSS hash", "computed style", "geometry", "health", "no build/server mismatch"],
+  "ownerRoutes": [
+    "/", "/demo/shortlist", "/demo/jobs", "/demo/jobs/northstar-applied-ai-solutions-engineer",
+    "/demo/compare", "/demo/tracker", "/demo/trust", "/demo/verify-receipt", "/profile",
+    "/profile/preferences", "/study/decision-utility?mode=preview"
+  ]
+}

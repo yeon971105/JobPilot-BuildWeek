@@ -29,7 +29,8 @@
     "study:combine": "tsx scripts/bw10-study-combine.ts",
     "study:analyze": "tsx scripts/bw10-study-analyze.ts",
     "study:analyze:bw9": "tsx scripts/bw9-impact-results.ts",
-    "qa:public-smoke": "tsx scripts/bw10-public-smoke.ts"
+    "qa:public-smoke": "tsx scripts/bw10-public-smoke.ts",
+    "preview:certified": "node scripts/preview-certified.mjs"
   },
   "dependencies": {
     "fflate": "^0.8.3",

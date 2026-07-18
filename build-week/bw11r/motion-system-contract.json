@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "jobpilot.bw11r.motion-system.v1",
+  "durationsMilliseconds": { "fast": 140, "card": 180, "tab": 200, "overlay": 220, "page": 280, "score": 650, "evidenceBar": 520 },
+  "maximumStaggerMilliseconds": 40,
+  "maximumHoverLiftPixels": 3,
+  "surfaces": ["navigation", "landing copy", "landing artwork", "shortlist cards", "score ring", "evidence bars", "tabs", "modals", "skeletons", "tracker toast"],
+  "loopingDecorativeAnimation": false,
+  "inputDelay": false,
+  "layoutShiftRequired": false,
+  "result": "PASS"
+}

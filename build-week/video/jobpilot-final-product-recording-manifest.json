@@ -1,0 +1,93 @@
+{
+    "schemaVersion":  "jobpilot.final-product-video.v1",
+    "generatedAt":  "2026-07-18T23:39:14.0348719+00:00",
+    "commitAtRender":  "78851f1812aea35215d9446d946dde2aafd32acf",
+    "output":  "build-week/video/jobpilot-final-product-rc1.mp4",
+    "durationSeconds":  175,
+    "resolution":  "1920x1080",
+    "videoCodec":  "h264",
+    "audioCodec":  "aac",
+    "captionsCodec":  "mov_text",
+    "captionsLanguage":  "eng",
+    "narrationLanguage":  "English",
+    "music":  false,
+    "actualCertifiedProductCaptures":  true,
+    "publicSafeSynthetic":  true,
+    "privateData":  false,
+    "thirdPartyLogos":  false,
+    "openAiApiRequests":  0,
+    "openAiApiCostUsd":  0,
+    "applicationSubmissions":  0,
+    "humanStudyResultsClaimed":  false,
+    "videoSha256":  "82edffe5edaabd4a83fb4a7c9772cb880327aa5a97d624494d897f6b407f2f9a",
+    "thumbnailSha256":  "45405dc9d9b7fe82d57ca72c2332dded6233859681a27e0af188070c483fe093",
+    "segments":  [
+                     {
+                         "file":  "landing-certified-1440x900.png",
+                         "durationSeconds":  14,
+                         "story":  "Application fatigue",
+                         "sha256":  "4165a5eb6ac90b4015830918548ff809db985237290953b4d3fe20939f272f69"
+                     },
+                     {
+                         "file":  "for-you-certified-1440x900.png",
+                         "durationSeconds":  20,
+                         "story":  "Landing and For You shortlist",
+                         "sha256":  "81d68dafdfa947e838d15f93452d0806f4a4b9aa2c2326fb9bcc7c56b66a82fe"
+                     },
+                     {
+                         "file":  "jobs-certified-1440x900.png",
+                         "durationSeconds":  20,
+                         "story":  "Visible rationale and profile-aware discovery",
+                         "sha256":  "6e3fdde52bd38f80317f7918ef7724cb5ae68ca1b822104771769cdbc4f4b1e3"
+                     },
+                     {
+                         "file":  "detail-overview-certified-1440x900.png",
+                         "durationSeconds":  26,
+                         "story":  "Visual role decision",
+                         "sha256":  "e4a2a891efbbd845e6a7b8f39b9c008a6c14240969d4d0a7d521e332ea85d1fa"
+                     },
+                     {
+                         "file":  "detail-evidence-expanded-certified-1440x900.png",
+                         "durationSeconds":  16,
+                         "story":  "Evidence on demand",
+                         "sha256":  "1d6611c3975c2704fb8bf3f5b24e26421e3fa10a114bf53bddb0417edfa318b1"
+                     },
+                     {
+                         "file":  "detail-score-proof-certified-1440x900.png",
+                         "durationSeconds":  8,
+                         "story":  "Visual Score Proof",
+                         "sha256":  "2201702f25575c2499742e817dccd0807e057b886d343b9c9e243f43e1d0ea11"
+                     },
+                     {
+                         "file":  "receipt-valid-certified-1440x900.png",
+                         "durationSeconds":  7,
+                         "story":  "Independent receipt verifier",
+                         "sha256":  "99baf3099e5a266f51860114d7c81b5d9c511b0b07a07934121b6a1416998497"
+                     },
+                     {
+                         "file":  "employer-destination-certified-1440x900.png",
+                         "durationSeconds":  14,
+                         "story":  "Direct employer destination",
+                         "sha256":  "1b22eb36f9ea19f05f67148a6f349e09d42c93e7cb93ad73b34c240bba56c501"
+                     },
+                     {
+                         "file":  "tracker-populated-certified-1440x900.png",
+                         "durationSeconds":  13,
+                         "story":  "Browser-local tracker",
+                         "sha256":  "7709d8916389dfd741aa1abdfd22e9fda5de8f4ef2de8b4f3052d9d71639ca92"
+                     },
+                     {
+                         "file":  "trust-lab-certified-1440x900.png",
+                         "durationSeconds":  19,
+                         "story":  "Gemma, deterministic score, GPT-5.6, and Codex",
+                         "sha256":  "e6576f28be6e4134321219c520d5d7bc7518ceb8b0547fa0b001c6f641679fff"
+                     },
+                     {
+                         "file":  "landing-certified-1440x900.png",
+                         "durationSeconds":  18,
+                         "story":  "Impact, limitations, and closing",
+                         "sha256":  "4165a5eb6ac90b4015830918548ff809db985237290953b4d3fe20939f272f69"
+                     }
+                 ],
+    "result":  "PASS"
+}
