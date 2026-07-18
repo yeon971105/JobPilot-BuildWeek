@@ -1,0 +1,16 @@
+{
+  "purpose": "Freeze the independent Score Receipt Verifier statuses, checks, input limits, and source-reproduction rules.",
+  "timestamp": "2026-07-18T06:31:00.000Z",
+  "commit": "7ffb3e4",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Receipt verification",
+  "webRoute": "/demo/verify-receipt",
+  "apiRoute": "/api/verify-receipt",
+  "cli": "npm run verify:receipt -- <receipt-path>",
+  "statuses": ["FULLY_REPRODUCED", "ARITHMETICALLY_VALID", "INVALID", "UNSUPPORTED_VERSION"],
+  "fullReproduction": ["supported schema", "canonical serialization", "receipt hash", "frozen job input", "frozen candidate input", "job content hash", "candidate profile hash", "preference hash", "valid evidence IDs", "all point arithmetic"],
+  "security": {"maximumBytes":1048576,"jsonOnly":true,"maximumDepth":14,"maximumArrayLength":600,"maximumStringLength":12000,"maximumNodes":25000,"prototypePollutionRejected":true,"codeExecution":false,"externalRequests":0,"privateResumeRequired":false},
+  "hardcodedReceiptHashes": 0,
+  "result": "PASS_CONTRACT"
+}
