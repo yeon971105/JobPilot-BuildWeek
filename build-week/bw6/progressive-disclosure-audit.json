@@ -1,0 +1,22 @@
+{
+  "purpose": "Prove that advanced evidence remains available without dominating the default flow.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Progressive disclosure",
+  "defaultRawJson": false,
+  "visibleSectionLetters": false,
+  "defaultFullEvidenceQuotes": 0,
+  "topMatchesMaximum": 3,
+  "topGapsMaximum": 3,
+  "evidenceTab": true,
+  "experienceTab": true,
+  "scoreProofTab": true,
+  "capabilityModal": true,
+  "receiptModalClosedByDefault": true,
+  "strategyModalClosedByDefault": true,
+  "originalRoleDisclosure": true,
+  "evidenceDeleted": false,
+  "result": "PASS"
+}

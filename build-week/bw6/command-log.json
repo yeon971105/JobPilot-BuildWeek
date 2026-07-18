@@ -1,0 +1,25 @@
+{
+  "purpose": "Provide a concise public-safe audit trail of material commands.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Reproducibility",
+  "commands": [
+    "git baseline and remote/tag verification",
+    "npm install",
+    "npm audit --json",
+    "npm test -- --run",
+    "npm run typecheck",
+    "npm run lint",
+    "npm run build",
+    "npm start -- --port 3203 --hostname 127.0.0.1",
+    "npx tsx scripts/bw6-performance.ts",
+    "PowerShell render-bw6-product-video.ps1",
+    "ffprobe video validation",
+    "production browser certification at four viewports"
+  ],
+  "rawResumeContentLogged": false,
+  "secretValuesLogged": false,
+  "result": "PASS"
+}

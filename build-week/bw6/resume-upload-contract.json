@@ -1,0 +1,22 @@
+{
+  "purpose": "Freeze the real local resume intake behavior and public-mode boundary.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Private resume onboarding",
+  "formats": [
+    "PDF",
+    "DOCX",
+    "UTF-8 TXT"
+  ],
+  "maximumBytes": 10485760,
+  "mimeExtensionAgreementRequired": true,
+  "ocr": false,
+  "inMemory": true,
+  "rawBytesPersisted": false,
+  "rawTextPersisted": false,
+  "publicModeReadsUploadBody": false,
+  "localSyntheticFixtureAvailable": true,
+  "result": "PASS"
+}

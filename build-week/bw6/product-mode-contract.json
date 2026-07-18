@@ -1,0 +1,12 @@
+{
+  "purpose": "Freeze mutually exclusive public judge and local private product modes plus bounded optional heavy reasoning.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Product mode separation",
+  "publicJudgeMode": { "loginRequired": false, "data": "synthetic_only", "preparedGemma": true, "resumeUploadAccepted": false, "ollamaRequired": false, "openAiKeyRequired": false },
+  "localPrivateMode": { "enabledBy": "LOCAL_PRIVATE_MODE=true", "formats": ["PDF", "DOCX", "TXT"], "parser": "loopback_local_application", "rawFilePersisted": false, "externalModelCalls": false, "primaryModel": "gemma4:12b" },
+  "optionalHeavyMode": { "model": "gpt-5.6-terra", "uses": ["application strategy", "analysis critique", "difficult ambiguity", "strategy comparison"], "rawResumeAllowed": false, "scoreMutationAllowed": false },
+  "result": "CONTRACT_FROZEN"
+}

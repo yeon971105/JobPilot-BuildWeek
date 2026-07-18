@@ -1,0 +1,45 @@
+{
+  "purpose": "Freeze the exact JP-BW5 parent before JP-BW6 mutation.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "JP-BW5 parent reproduction",
+  "repository": {
+    "root": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+    "branch": "build-week/jobpilot-2026",
+    "head": "8a26828831305ccff4f1b06f96169a044de2acec",
+    "worktreeClean": true,
+    "remote": "https://github.com/yeon971105/JobPilot-BuildWeek.git",
+    "remoteBranchHead": "8a26828831305ccff4f1b06f96169a044de2acec",
+    "tag": "build-week-2026-visual-rc1",
+    "tagTarget": "8a26828831305ccff4f1b06f96169a044de2acec"
+  },
+  "tailwind": {
+    "active": true,
+    "postcssPlugin": "@tailwindcss/postcss",
+    "generatedCssBytes": 40578,
+    "generatedCssSha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4"
+  },
+  "certification": {
+    "desktop": "PASS",
+    "tablet": "PASS",
+    "mobile": "PASS",
+    "narrowMobile": "PASS",
+    "scorerVersion": "jobpilot-ai-fit-v2.2",
+    "arithmeticErrors": 0,
+    "hiddenAdjustments": 0,
+    "receiptMismatches": 0,
+    "productionMutations": 0,
+    "applicationSubmissions": 0
+  },
+  "expectedLimitationsConfirmed": {
+    "denseSerialDetail": true,
+    "visibleSectionLetters": true,
+    "repeatedEvidence": true,
+    "rawReceiptJsonInPage": true,
+    "syntheticProfileOnly": true,
+    "privateResumeOnboardingAbsent": true
+  },
+  "result": "PASS"
+}

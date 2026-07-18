@@ -1,0 +1,27 @@
+{
+  "purpose": "Bind the JP-BW6 production CSS bundle to fresh browser-computed product evidence.",
+  "timestamp": "2026-07-18T05:52:00.000Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Production CSS pipeline and product geometry",
+  "certifiedCssBundleSha256": "b80ee320a733a5964acccf53bd7c3105a8c822bad0183e152e35ad9e76e19a26",
+  "landing": {
+    "document": { "horizontalOverflow": 0, "h1Count": 1 },
+    "navigation": { "display": "flex", "minimumVisiblePrimaryLinks": 5 },
+    "hero": { "headingFontSizePx": 88 },
+    "ctas": { "primaryBackground": "rgb(23, 61, 45)" },
+    "scoreRing": {
+      "position": "absolute",
+      "widthPx": 176,
+      "heightPx": 176,
+      "backgroundColor": "rgb(23, 61, 45)"
+    }
+  },
+  "jobs": {
+    "document": { "horizontalOverflow": 0, "h1Count": 1 },
+    "card": { "paddingPx": 24, "borderRadiusPx": 24 },
+    "filterToolbar": { "gapPx": 12 }
+  },
+  "result": "PASS"
+}

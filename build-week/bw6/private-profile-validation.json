@@ -1,0 +1,39 @@
+{
+  "purpose": "Certify editable extraction review, preferences, clearing, and profile-specific scoring.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Private profile usability",
+  "reviewFields": [
+    "role history",
+    "projects",
+    "skills",
+    "education",
+    "certifications",
+    "date intervals",
+    "candidate evidence excerpts",
+    "warnings"
+  ],
+  "editsSupported": true,
+  "removalSupported": true,
+  "additionsSupported": true,
+  "confirmationRequired": true,
+  "preferences": [
+    "work modes",
+    "locations",
+    "remote eligibility",
+    "travel tolerance",
+    "relocation",
+    "authorization note"
+  ],
+  "clearProfileSupported": true,
+  "actualLocalGemmaRun": {
+    "model": "gemma4:12b",
+    "endpointClass": "loopback",
+    "providerLabel": "Gemma 4 12B — Live Local",
+    "completed": true
+  },
+  "profileModeCacheIsolation": "PASS_REPAIRED",
+  "result": "PASS"
+}

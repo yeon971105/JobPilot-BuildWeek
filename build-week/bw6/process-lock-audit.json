@@ -1,0 +1,16 @@
+{
+  "purpose": "Record active preview processes and repository locks before JP-BW6 mutation.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Process and lock safety",
+  "listeners": [
+    { "port": 3000, "pid": 43624, "ownership": "C:\\Users\\Jewon\\Desktop\\JobPilot", "action": "PRESERVE" },
+    { "port": 3202, "pid": 67548, "ownership": "submission repository parent preview", "action": "USE_FOR_BASELINE_THEN_STOP" }
+  ],
+  "port3203Available": true,
+  "repositoryGitLocks": [],
+  "ollama": { "endpoint": "http://127.0.0.1:11434", "available": true, "requiredModel": "gemma4:12b", "requiredModelAvailable": true },
+  "result": "PASS"
+}

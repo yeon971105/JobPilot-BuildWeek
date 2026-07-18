@@ -1,0 +1,17 @@
+{
+  "purpose": "Prove that parsing is network-free and semantic matching is loopback-only.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Private network isolation",
+  "parsingExternalRequests": 0,
+  "parsingLoopbackRequests": 0,
+  "localAnalysisExternalRequests": 0,
+  "localAnalysisLoopbackRequests": 1,
+  "permittedEndpoint": "http://127.0.0.1:11434/api/generate",
+  "cloudModelCalls": 0,
+  "rawResumeTransmission": 0,
+  "runtimeRejectsNonLoopbackOllama": true,
+  "result": "PASS"
+}

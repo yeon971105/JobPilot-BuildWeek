@@ -1,0 +1,45 @@
+{
+  "purpose": "Review direct runtime dependency licenses, including resume parser additions.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Dependency license audit",
+  "packages": [
+    {
+      "name": "fflate",
+      "license": "MIT"
+    },
+    {
+      "name": "mammoth",
+      "license": "BSD-2-Clause"
+    },
+    {
+      "name": "pdf-parse",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "next",
+      "license": "MIT"
+    },
+    {
+      "name": "react",
+      "license": "MIT"
+    },
+    {
+      "name": "react-dom",
+      "license": "MIT"
+    },
+    {
+      "name": "zod",
+      "license": "MIT"
+    },
+    {
+      "name": "lucide-react",
+      "license": "ISC"
+    }
+  ],
+  "deniedLicenses": [],
+  "unknownLicenses": [],
+  "result": "PASS"
+}

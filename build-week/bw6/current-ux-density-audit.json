@@ -1,0 +1,28 @@
+{
+  "purpose": "Measure the JP-BW5 Job Detail default document before progressive-disclosure redesign.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Before/after content density",
+  "route": "/demo/jobs/alder-data-platform-engineer",
+  "viewport": { "width": 1440, "height": 900 },
+  "visibleTextWords": 1932,
+  "visibleTextCharacters": 17434,
+  "documentHeightPx": 13477,
+  "majorSerialSections": 11,
+  "sectionLabels": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"],
+  "completeReceiptJsonVisible": true,
+  "rawJsonSignalOccurrences": 11,
+  "repeatedEvidenceSurfaces": ["Why This Score", "Requirement Evidence", "Matched Evidence", "Missing or Weak Evidence"],
+  "firstViewport": {
+    "roleVisible": true,
+    "fitScoreVisible": true,
+    "evidenceQualityVisible": true,
+    "applyPriorityVisible": true,
+    "strongestMatchVisible": false,
+    "biggestGapVisible": false,
+    "primaryActionVisible": false
+  },
+  "result": "FAIL_EXPECTED_SUPERSEDED_UX"
+}

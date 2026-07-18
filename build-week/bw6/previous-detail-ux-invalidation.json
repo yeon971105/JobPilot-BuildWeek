@@ -1,0 +1,20 @@
+{
+  "purpose": "Invalidate JP-BW5 Job Detail product UX while preserving its visual certification.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Previous detail UX superseded",
+  "visualCertificationPreserved": true,
+  "productUxStatus": "SUPERSEDED",
+  "reasons": [
+    "Eleven lettered sections render serially.",
+    "Capability evidence repeats across four surfaces.",
+    "The complete technical receipt appears in the main flow.",
+    "Technical metadata competes with the user decision.",
+    "The primary action is below the first viewport.",
+    "Prepared analysis and FIXTURE_ONLY labels conflict.",
+    "No real private resume path exists."
+  ],
+  "result": "PASS"
+}

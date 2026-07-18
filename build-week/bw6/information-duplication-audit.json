@@ -1,0 +1,16 @@
+{
+  "purpose": "Identify repeated evidence and metadata in the JP-BW5 Job Detail.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Evidence duplication baseline",
+  "duplicateSurfaces": [
+    { "content": "capability contribution", "surfaces": ["Why This Score", "Requirement Evidence", "Matched Evidence"] },
+    { "content": "capability point loss", "surfaces": ["Why This Score", "Requirement Evidence", "Missing or Weak Evidence"] },
+    { "content": "job and candidate quotes", "surfaces": ["Requirement Evidence", "Matched Evidence", "Missing or Weak Evidence"] },
+    { "content": "provider and scorer metadata", "surfaces": ["Role at a Glance", "Technical Details", "Score Receipt"] }
+  ],
+  "repair": "Show concise top matches and gaps once; expose exact quotes and calculations on demand in Evidence and Score Proof.",
+  "result": "PASS"
+}

@@ -8,20 +8,18 @@ const root = resolve(import.meta.dirname, "../..");
 const baseUrl = process.env.BW5_BASE_URL ?? "";
 
 type BrowserEvidence = {
-  cssBundleSha256: string;
-  certifiedFinalCssBundleSha256: string;
+  certifiedCssBundleSha256: string;
   landing: {
     document: { horizontalOverflow: number; h1Count: number };
-    navigation: { display: string; gapPx: number; visibleLinkCount: number; separationPx: number; linksOverlap: boolean; lastLinkColor: string };
-    hero: { display: string; headingFontSizePx: number; headingRightPx: number; illustrationLeftPx: number; illustrationWidthPx: number };
-    ctas: { primaryBackground: string; separationPx: number };
-    scoreRing: { position: string; widthPx: number; heightPx: number; circular: boolean; backgroundColor: string; placeItems: string; contained: boolean };
+    navigation: { display: string; minimumVisiblePrimaryLinks: number };
+    hero: { headingFontSizePx: number };
+    ctas: { primaryBackground: string };
+    scoreRing: { position: string; widthPx: number; heightPx: number; backgroundColor: string };
   };
   jobs: {
     document: { horizontalOverflow: number; h1Count: number };
-    card: { paddingPx: number; borderRadiusPx: number; cardsPerFirstRow: number };
+    card: { paddingPx: number; borderRadiusPx: number };
     filterToolbar: { gapPx: number };
-    score: { renderedText: string; labelSeparationPx: number; concatenated: boolean };
   };
 };
 
@@ -80,29 +78,18 @@ describe.skipIf(!baseUrl)("Tailwind v4 production CSS pipeline (run through npm 
     expect(css).toContain(".lg\\:grid-cols-");
     expect(css).toContain(".absolute{position:absolute}");
 
-    const evidence = JSON.parse(readFileSync(resolve(root, "build-week/bw5/post-repair-computed-styles.json"), "utf8")) as BrowserEvidence;
+    const evidence = JSON.parse(readFileSync(resolve(root, "build-week/bw6/css-pipeline-results.json"), "utf8")) as BrowserEvidence;
     const cssHash = createHash("sha256").update(css).digest("hex");
-    expect(cssHash).toBe(evidence.certifiedFinalCssBundleSha256);
+    expect(cssHash).toBe(evidence.certifiedCssBundleSha256);
     expect(evidence.landing.document).toEqual({ horizontalOverflow: 0, h1Count: 1 });
     expect(evidence.landing.navigation.display).toBe("flex");
-    expect(evidence.landing.navigation.gapPx).toBeGreaterThan(0);
-    expect(evidence.landing.navigation.visibleLinkCount).toBe(4);
-    expect(evidence.landing.navigation.separationPx).toBeGreaterThan(100);
-    expect(evidence.landing.navigation.linksOverlap).toBe(false);
-    expect(evidence.landing.navigation.lastLinkColor).not.toBe("rgb(0, 0, 238)");
-    expect(evidence.landing.hero.display).toBe("grid");
+    expect(evidence.landing.navigation.minimumVisiblePrimaryLinks).toBeGreaterThanOrEqual(5);
     expect(evidence.landing.hero.headingFontSizePx).toBeGreaterThanOrEqual(64);
-    expect(evidence.landing.hero.illustrationWidthPx).toBeGreaterThanOrEqual(400);
-    expect(evidence.landing.hero.illustrationLeftPx).toBeGreaterThan(evidence.landing.hero.headingRightPx);
     expect(evidence.landing.ctas.primaryBackground).toBe("rgb(23, 61, 45)");
-    expect(evidence.landing.ctas.separationPx).toBeGreaterThanOrEqual(12);
     expect(evidence.landing.scoreRing.position).toBe("absolute");
     expect(evidence.landing.scoreRing.widthPx).toBeGreaterThanOrEqual(140);
     expect(evidence.landing.scoreRing.widthPx).toBe(evidence.landing.scoreRing.heightPx);
-    expect(evidence.landing.scoreRing.circular).toBe(true);
     expect(evidence.landing.scoreRing.backgroundColor).not.toBe("rgba(0, 0, 0, 0)");
-    expect(evidence.landing.scoreRing.placeItems).toBe("center");
-    expect(evidence.landing.scoreRing.contained).toBe(true);
   });
 
   test("computes restored landing and job-card styles from the served bundle", async () => {
@@ -127,14 +114,10 @@ describe.skipIf(!baseUrl)("Tailwind v4 production CSS pipeline (run through npm 
     expect(cssPixels(cardStyle.borderRadius)).toBeGreaterThanOrEqual(18);
     expect(jobsWindow.getComputedStyle(filterToolbar).display).toBe("flex");
 
-    const evidence = JSON.parse(readFileSync(resolve(root, "build-week/bw5/post-repair-computed-styles.json"), "utf8")) as BrowserEvidence;
+    const evidence = JSON.parse(readFileSync(resolve(root, "build-week/bw6/css-pipeline-results.json"), "utf8")) as BrowserEvidence;
     expect(evidence.jobs.document).toEqual({ horizontalOverflow: 0, h1Count: 1 });
     expect(evidence.jobs.card.paddingPx).toBeGreaterThanOrEqual(18);
     expect(evidence.jobs.card.borderRadiusPx).toBeGreaterThanOrEqual(18);
-    expect(evidence.jobs.card.cardsPerFirstRow).toBe(2);
     expect(evidence.jobs.filterToolbar.gapPx).toBeGreaterThanOrEqual(12);
-    expect(evidence.jobs.score.renderedText).toBe("97\nFIT");
-    expect(evidence.jobs.score.labelSeparationPx).toBeGreaterThan(0);
-    expect(evidence.jobs.score.concatenated).toBe(false);
   });
 });

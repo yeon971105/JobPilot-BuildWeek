@@ -1,0 +1,16 @@
+{
+  "purpose": "Define security and behavior guarantees for Local Private Mode.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Local private mode",
+  "activation": { "LOCAL_PRIVATE_MODE": true, "OLLAMA_ENABLED": true },
+  "supportedFormats": ["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "text/plain"],
+  "maximumBytes": 10485760,
+  "persistence": { "rawBytes": false, "rawText": false, "structuredProfile": "browser_local_until_cleared", "processingMetadata": "hash_and_minimal_metadata_only" },
+  "network": { "allowed": ["same-origin loopback", "http://127.0.0.1:11434"], "cloud": false, "openAi": false },
+  "protectedAttributeInference": false,
+  "applicationSubmission": false,
+  "result": "CONTRACT_FROZEN"
+}

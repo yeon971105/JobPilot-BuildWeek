@@ -1,0 +1,42 @@
+{
+  "purpose": "Record every material failure found and repaired during JP-BW6.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Failure transparency",
+  "failures": [
+    {
+      "issue": "Static resume page froze public-mode configuration into the first build",
+      "repair": "Marked resume and private-mode pages force-dynamic",
+      "verification": "Production route exposed real local upload while public API remained fail-closed"
+    },
+    {
+      "issue": "Cached private analysis could appear after switching back to Demo Profile",
+      "repair": "Gated private analysis and provider selection on active profile mode in list and detail",
+      "verification": "Prepared public score and labels restored immediately"
+    },
+    {
+      "issue": "Nested PostCSS 8.4.31 advisory",
+      "repair": "Scoped Next dependency override to PostCSS 8.5.10",
+      "verification": "npm audit reports zero vulnerabilities and build passes"
+    },
+    {
+      "issue": "Mobile tabs and brand target needed accessibility tightening",
+      "repair": "Two-column mobile tabs, Arrow navigation, 44px brand target, 11px minimum uppercase labels, contrast overrides",
+      "verification": "All responsive and sampled contrast checks pass"
+    },
+    {
+      "issue": "First video concat inherited fractional pixel aspect ratio",
+      "repair": "Normalized every capture with setsar=1",
+      "verification": "175-second H.264/AAC/mov_text render passes"
+    },
+    {
+      "issue": "The final rebuild exposed a stale JP-BW5 CSS bundle fingerprint in the pipeline test",
+      "repair": "Rebound the CSS certificate and test to fresh JP-BW6 product geometry without mutating historical JP-BW5 evidence",
+      "verification": "Production CSS pipeline passes against the rebuilt bundle"
+    }
+  ],
+  "unresolved": [],
+  "result": "PASS"
+}

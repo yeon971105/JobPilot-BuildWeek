@@ -1,0 +1,120 @@
+{
+  "purpose": "Provide the complete machine-readable JP-BW6 RC decision record.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Final decision",
+  "decision": "GO_BUILD_WEEK_PRODUCT_UX_RC_READY_FOR_USER_APPROVAL",
+  "decisionClass": "GO_RC_USER_APPROVAL_REQUIRED",
+  "repository": {
+    "root": "C:\\Users\\Jewon\\Desktop\\JobPilot-BuildWeek-Submission",
+    "branch": "build-week/jobpilot-2026",
+    "startingHead": "8a26828831305ccff4f1b06f96169a044de2acec",
+    "certifiedHead": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+    "commits": [
+      {
+        "sha": "f12cd73a3b6e82e307084504423a3cb362a0cca9",
+        "subject": "feat: redesign JobPilot around progressive evidence disclosure"
+      },
+      {
+        "sha": "800a8fe19be23340982be27ed8cd12bc4965a90e",
+        "subject": "feat: add private local resume onboarding"
+      },
+      {
+        "sha": "2332c01c77001c3f4875a81820d944f5b519b016",
+        "subject": "test: certify product UX privacy and accessibility"
+      },
+      {
+        "sha": "27be5f07e5aed02f2387ef1fabb08a8af6f00895",
+        "subject": "fix: certify accessible product proof and media"
+      },
+      {
+        "sha": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+        "subject": "docs: package the final product UX submission"
+      }
+    ]
+  },
+  "productModes": {
+    "publicJudgeMode": true,
+    "localPrivateMode": true,
+    "optionalGptHeavyMode": true
+  },
+  "ux": {
+    "visibleSectionLettersRemoved": true,
+    "defaultRawJsonRemoved": true,
+    "topMatchesMaximum": 3,
+    "topGapsMaximum": 3,
+    "overviewTextReductionPercent": 86.13,
+    "documentHeightReductionPercent": 87.47,
+    "stickyDecisionPanel": true,
+    "progressiveDisclosure": true,
+    "providerProvenanceClear": true
+  },
+  "resume": {
+    "profileRoute": true,
+    "uploadRoute": true,
+    "preferencesRoute": true,
+    "pdfSupported": true,
+    "docxSupported": true,
+    "txtSupported": true,
+    "localOnly": true,
+    "externalRequests": 0,
+    "rawResumeLogs": 0,
+    "rawResumeArtifacts": 0,
+    "localGemmaAnalysis": true
+  },
+  "score": {
+    "version": "jobpilot-ai-fit-v2.2",
+    "arithmeticErrors": 0,
+    "receiptMismatches": 0,
+    "hiddenAdjustments": 0,
+    "preferredCapViolations": 0,
+    "workModeLeakage": 0
+  },
+  "browser": {
+    "desktop": "PASS",
+    "tablet": "PASS",
+    "mobile": "PASS",
+    "narrowMobile": "PASS",
+    "consoleErrors": 0,
+    "failedInternalRequests": 0,
+    "horizontalOverflow": 0,
+    "passed": true
+  },
+  "video": {
+    "path": "build-week/video/hybrid-product-ux-rc1-demo.mp4",
+    "durationSeconds": 175,
+    "audioPresent": true,
+    "captionsPresent": true,
+    "sha256": "70bcf7c81f897a53c29d3dd6adeb356178bb9c96a45233f708fcbb26939c0abb",
+    "productConsistencyPassed": true
+  },
+  "validation": {
+    "tests": "PASS",
+    "typecheck": "PASS",
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "build": "PASS",
+    "privacy": "PASS",
+    "accessibility": "PASS",
+    "visualRegression": "PASS",
+    "passed": true
+  },
+  "approval": {
+    "previewUrl": "http://127.0.0.1:3203/",
+    "userApproved": false
+  },
+  "holds": {
+    "active": [],
+    "cleared": [
+      "JP-BW5 dense detail UX superseded"
+    ],
+    "new": []
+  },
+  "nextStep": {
+    "workItem": "JP-BW7",
+    "objective": "Promote the user-approved product RC, deploy it publicly, publish the final video, obtain the Codex Session ID, and submit to Devpost."
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "purpose": "Recertify unchanged AI Fit V2.2 arithmetic and receipt properties.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Score invariants",
+  "scorerVersion": "jobpilot-ai-fit-v2.2",
+  "publicReceiptsChecked": 6,
+  "arithmeticErrors": 0,
+  "receiptMismatches": 0,
+  "hiddenAdjustments": 0,
+  "preferredCapViolations": 0,
+  "workModeLeakage": 0,
+  "duplicateScoring": 0,
+  "hardcodedScores": 0,
+  "publicReceiptHashesPreserved": true,
+  "result": "PASS"
+}

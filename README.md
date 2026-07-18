@@ -112,4 +112,4 @@ Independent hiring-outcome calibration is not yet available. The public demonstr
 
 ## License
 
-Code and original documentation are available under the [MIT License](LICENSE). Synthetic fixtures contain no third-party job text, resume, logo, or personal data. New parser dependencies are MIT-licensed and recorded in the JP-BW6 security and license audit.
+Code and original documentation are available under the [MIT License](LICENSE). Synthetic fixtures contain no third-party job text, resume, logo, or personal data. New parser dependencies use permissive MIT, BSD-2-Clause, and Apache-2.0 licenses recorded in the JP-BW6 security and license audit.

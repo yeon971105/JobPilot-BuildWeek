@@ -1,0 +1,36 @@
+{
+  "purpose": "Measure the default detail reduction against the frozen JP-BW5 baseline.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Content density",
+  "route": "/demo/jobs/alder-data-platform-engineer",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "before": {
+    "visibleWords": 1932,
+    "visibleCharacters": 17434,
+    "documentHeightPx": 13477,
+    "serialSections": 11
+  },
+  "after": {
+    "visibleWords": 268,
+    "visibleCharacters": 1865,
+    "documentHeightPx": 1689,
+    "tabs": 4,
+    "topMatches": 3,
+    "topGaps": 3,
+    "summaryWords": 33
+  },
+  "reduction": {
+    "visibleWordsPercent": 86.13,
+    "visibleCharactersPercent": 89.3,
+    "documentHeightPercent": 87.47
+  },
+  "targetWordsPercent": 45,
+  "targetHeightPercent": 35,
+  "result": "PASS"
+}

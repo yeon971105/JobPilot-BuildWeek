@@ -1,0 +1,19 @@
+{
+  "purpose": "Record the ambiguous provider labels present before JP-BW6.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Provider provenance baseline",
+  "conflict": {
+    "userFacing": "Local Gemma — Prepared Analysis",
+    "receiptEnum": "FIXTURE_ONLY",
+    "risk": "A user can misread prepared synthetic output as a fresh model call."
+  },
+  "repairContract": [
+    "Analysis pipeline: Gemma 4 12B analysis pipeline",
+    "Delivery mode: Prepared synthetic analysis",
+    "Scoring engine: Deterministic AI Fit V2.2"
+  ],
+  "result": "FAIL_EXPECTED_SUPERSEDED_LABEL"
+}

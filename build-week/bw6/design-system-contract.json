@@ -1,0 +1,15 @@
+{
+  "purpose": "Freeze the JP-BW6 professional design tokens and typography rules.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Professional design system",
+  "colors": { "canvas": "#fbf7ed", "surface": "#fffdf7", "surfaceMuted": "#edf1e8", "forest": "#173d2d", "forestMuted": "#587064", "sage": "#dce9df", "ochre": "#a1742d", "warning": "#fff4d8", "danger": "#f8e6df", "border": "rgba(23,61,45,.12)" },
+  "spacingPx": [4, 8, 12, 16, 20, 24, 32, 40, 56, 72, 96],
+  "radiusPx": { "card": 24, "control": 12, "pill": 999 },
+  "shadows": { "card": "0 18px 45px rgba(39,61,49,.08)", "elevated": "0 28px 70px rgba(39,61,49,.16)" },
+  "type": { "display": "Cormorant Garamond", "body": "Geist", "mono": "Geist Mono", "bodyLineLengthCharacters": [60, 75], "minimumAllCapsPx": 11 },
+  "contentWidthsPx": { "reading": 720, "page": 1280, "detail": 1180 },
+  "result": "CONTRACT_FROZEN"
+}

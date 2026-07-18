@@ -1,0 +1,75 @@
+{
+  "purpose": "Automate the ten required product tasks and interaction limits.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Usability",
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Identify role, score, priority, match, and gap",
+      "interactions": 0,
+      "result": "PASS"
+    },
+    {
+      "id": 2,
+      "task": "Determine experience is Preferred",
+      "interactions": 1,
+      "result": "PASS"
+    },
+    {
+      "id": 3,
+      "task": "Find why a capability lost points",
+      "interactions": 1,
+      "result": "PASS"
+    },
+    {
+      "id": 4,
+      "task": "Download Score Receipt",
+      "interactions": 2,
+      "result": "PASS"
+    },
+    {
+      "id": 5,
+      "task": "Change profiles",
+      "interactions": 2,
+      "result": "PASS"
+    },
+    {
+      "id": 6,
+      "task": "Open Private Resume Mode",
+      "interactions": 1,
+      "result": "PASS"
+    },
+    {
+      "id": 7,
+      "task": "Parse a synthetic local resume",
+      "interactions": 2,
+      "result": "PASS"
+    },
+    {
+      "id": 8,
+      "task": "Review and confirm experience",
+      "interactions": 1,
+      "result": "PASS"
+    },
+    {
+      "id": 9,
+      "task": "Set work preferences",
+      "interactions": 2,
+      "result": "PASS"
+    },
+    {
+      "id": 10,
+      "task": "Return to profile-specific role analysis",
+      "interactions": 1,
+      "result": "PASS"
+    }
+  ],
+  "deadEnds": 0,
+  "ambiguousProviderLabels": 0,
+  "strategyInteractions": 1,
+  "privateOnboardingFromLandingInteractions": 1,
+  "result": "PASS"
+}

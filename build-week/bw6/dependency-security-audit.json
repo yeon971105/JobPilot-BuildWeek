@@ -1,0 +1,18 @@
+{
+  "purpose": "Record the final npm advisory state after the scoped PostCSS override.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Dependency security audit",
+  "npmAudit": {
+    "total": 0,
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "repair": "Override Next's nested PostCSS to 8.5.10 to resolve GHSA-qx2v-qp2m-jg93 without changing Next.js APIs.",
+  "result": "PASS"
+}

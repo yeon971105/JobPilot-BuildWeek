@@ -1,0 +1,13 @@
+{
+  "purpose": "Define the user-first information hierarchy for JP-BW6.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Content hierarchy",
+  "jobDetailQuestions": ["What is this role?", "How well does it fit?", "Why?", "What should I do next?"],
+  "tabs": ["Overview", "Evidence", "Experience", "Score Proof"],
+  "defaultLimits": { "topMatches": 3, "topGaps": 3, "roleSummaryWords": 100, "experienceSummaryWords": 80, "technicalMetadataRows": 3, "rawReceiptJson": false },
+  "desktopFirstViewport": ["company and role", "concise summary", "Fit Score", "Evidence Quality", "Apply Priority", "strongest match", "biggest gap", "primary action"],
+  "result": "CONTRACT_FROZEN"
+}

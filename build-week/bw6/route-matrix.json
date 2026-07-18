@@ -1,0 +1,63 @@
+{
+  "purpose": "Validate every required approval route on the production preview.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Route matrix",
+  "baseUrl": "http://127.0.0.1:3203",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "route": "/profile",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "route": "/profile/resume",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "route": "/profile/preferences",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "route": "/demo/jobs",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "route": "/demo/jobs/alder-data-platform-engineer",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "route": "/demo/jobs/northstar-applied-ai-solutions-engineer",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "route": "/demo/tracker",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "route": "/demo/trust",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "route": "/about/build-week",
+      "status": 200,
+      "pass": true
+    }
+  ],
+  "failures": 0,
+  "result": "PASS"
+}

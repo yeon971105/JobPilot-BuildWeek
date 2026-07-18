@@ -1,0 +1,23 @@
+{
+  "purpose": "Validate the new media against the certified JP-BW6 product.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Video recertification",
+  "path": "build-week/video/hybrid-product-ux-rc1-demo.mp4",
+  "durationSeconds": 175,
+  "resolution": "1920x1080",
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "captionsCodec": "mov_text",
+  "englishNarration": true,
+  "englishCaptions": true,
+  "oldDenseDetailVisible": false,
+  "rawReceiptJsonInNormalPage": false,
+  "falseProviderLabels": 0,
+  "privateData": 0,
+  "copyrightedMusic": false,
+  "sha256": "70bcf7c81f897a53c29d3dd6adeb356178bb9c96a45233f708fcbb26939c0abb",
+  "result": "PASS"
+}

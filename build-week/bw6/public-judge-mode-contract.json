@@ -1,0 +1,15 @@
+{
+  "purpose": "Define the no-login, no-resume public judging path.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Public judge mode",
+  "candidate": "Demo Candidate A",
+  "roles": 6,
+  "analysis": "prepared Gemma synthetic analysis",
+  "scoring": "jobpilot-ai-fit-v2.2",
+  "tracker": "browser_local",
+  "forbidden": ["real resume upload", "personal data storage", "fresh inference claim", "Ollama requirement", "OpenAI key requirement", "production database access", "application submission"],
+  "result": "CONTRACT_FROZEN"
+}

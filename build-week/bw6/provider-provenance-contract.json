@@ -1,0 +1,21 @@
+{
+  "purpose": "Freeze user-facing analysis, delivery, scoring, and optional-heavy labels.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Provider clarity",
+  "public": {
+    "analysisPipeline": "Gemma 4 12B analysis pipeline",
+    "deliveryMode": "Prepared synthetic analysis",
+    "scoringEngine": "Deterministic AI Fit V2.2"
+  },
+  "local": {
+    "analysisPipeline": "Gemma 4 12B — Live Local",
+    "deliveryMode": "Private local analysis",
+    "scoringEngine": "Deterministic AI Fit V2.2"
+  },
+  "optionalHeavy": "GPT-5.6 Terra — Live",
+  "liveGptCertified": false,
+  "internalEnumsHiddenByDefault": true
+}

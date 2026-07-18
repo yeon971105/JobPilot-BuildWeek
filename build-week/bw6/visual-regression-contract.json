@@ -1,0 +1,51 @@
+{
+  "purpose": "Freeze responsive routes, viewports, captures, and visual assertions.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Visual regression",
+  "viewports": [
+    "1440x900",
+    "1024x768",
+    "390x844",
+    "320x700"
+  ],
+  "requiredCaptures": [
+    "build-week/bw6/captures/capability-detail-1440x900.png",
+    "build-week/bw6/captures/detail-overview-1024x768.png",
+    "build-week/bw6/captures/detail-overview-1440x900.png",
+    "build-week/bw6/captures/evidence-tab-1440x900.png",
+    "build-week/bw6/captures/experience-tab-1440x900.png",
+    "build-week/bw6/captures/jobs-1440x900.png",
+    "build-week/bw6/captures/landing-1440x900.png",
+    "build-week/bw6/captures/landing-390x844.png",
+    "build-week/bw6/captures/mobile-detail-390x844.png",
+    "build-week/bw6/captures/mobile-resume-onboarding-390x844.png",
+    "build-week/bw6/captures/narrow-mobile-detail-320x700.png",
+    "build-week/bw6/captures/preferences-1440x900.png",
+    "build-week/bw6/captures/private-analysis-1440x900.png",
+    "build-week/bw6/captures/profile-1440x900.png",
+    "build-week/bw6/captures/profile-private-1440x900.png",
+    "build-week/bw6/captures/receipt-modal-1440x900.png",
+    "build-week/bw6/captures/resume-onboarding-1440x900.png",
+    "build-week/bw6/captures/resume-review-1440x900.png",
+    "build-week/bw6/captures/score-change-1440x900.png",
+    "build-week/bw6/captures/score-proof-tab-1440x900.png",
+    "build-week/bw6/captures/strategy-drawer-1440x900.png",
+    "build-week/bw6/captures/tracker-empty-1440x900.png",
+    "build-week/bw6/captures/tracker-populated-1440x900.png",
+    "build-week/bw6/captures/trust-lab-1440x900.png"
+  ],
+  "assertions": [
+    "no overlap",
+    "no page overflow",
+    "no clipped score",
+    "no clipped tabs",
+    "sticky panel does not cover content",
+    "one H1",
+    "visible focus",
+    "no raw JSON by default",
+    "no developer enums by default"
+  ]
+}

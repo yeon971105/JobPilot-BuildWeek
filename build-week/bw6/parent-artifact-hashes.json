@@ -1,0 +1,18 @@
+{
+  "purpose": "Freeze the identity of the current production CSS, visual proof, score proof, privacy proof, and video.",
+  "timestamp": "2026-07-18T04:40:30.105Z",
+  "commit": "8a26828831305ccff4f1b06f96169a044de2acec",
+  "privacyClassification": "PUBLIC_SAFE",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "JP-BW5 artifact identity",
+  "artifacts": [
+    { "path": ".next/static/chunks/0wgl8jd.e.rug.css", "bytes": 40578, "sha256": "afdd67b23181e2d9bf03167babdabc0e9f41ae0c364f43f5577277d30ea9fdb4" },
+    { "path": "build-week/bw5/post-repair-screenshot-manifest.json", "bytes": 11103, "sha256": "ca3214605647cef32e4417a9b4827f8f1721e050cd36802f66ad032178cc04e1" },
+    { "path": "build-week/bw5/visual-regression-results.json", "bytes": 1469, "sha256": "1757a262f1c4ea8fc3df183b3755875a9111d55195036e12ea8a3c417649d21c" },
+    { "path": "build-week/bw5/accessibility-results.json", "bytes": 1321, "sha256": "fcc57615fbbe84f8c871aaad67eedf71eaf43ec4dc6dcdaa2e5d212ea9bf2efd" },
+    { "path": "build-week/score-proof/final-proof-summary.json", "bytes": 632, "sha256": "71d924b1b56a0f88a46910bb7c462d3e6bd56bc2efada4b21739ad3b311244ff" },
+    { "path": "build-week/phase12-privacy-audit.json", "bytes": 560, "sha256": "51b6a7761fccce7386997b1f73519e298435de0c8d1ac0a9b00e33f5c233c8ba" },
+    { "path": "build-week/video/hybrid-visual-rc1-demo.mp4", "bytes": 5071399, "sha256": "8a7f69e7fd751307156e20d2fe505d439a9c1a24461f65272aba86a5e9b46538" }
+  ],
+  "result": "PASS"
+}

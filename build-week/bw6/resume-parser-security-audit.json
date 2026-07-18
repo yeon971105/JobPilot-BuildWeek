@@ -1,0 +1,49 @@
+{
+  "purpose": "Record parser threats, dependency provenance, and fail-safe behavior.",
+  "timestamp": "2026-07-18T05:55:42.175Z",
+  "commit": "c7a41c31c85494bc59458f2ceea73ad7bdaa79db",
+  "privacyClassification": "PUBLIC_SAFE_SYNTHETIC",
+  "publicSafeStatus": "PUBLIC_SAFE",
+  "supportedGate": "Private resume security",
+  "originalOwnedCodeInspectedReadOnly": [
+    "src/server/resume/docx-extractor.ts",
+    "src/server/resume/pdf-extractor.ts",
+    "src/server/resume/resume-extractor.ts"
+  ],
+  "dependencies": [
+    {
+      "name": "fflate",
+      "version": "0.8.3",
+      "license": "MIT"
+    },
+    {
+      "name": "mammoth",
+      "version": "1.12.0",
+      "license": "BSD-2-Clause"
+    },
+    {
+      "name": "pdf-parse",
+      "version": "2.4.5",
+      "license": "Apache-2.0"
+    }
+  ],
+  "cases": {
+    "validPdf": "PASS",
+    "validDocx": "PASS",
+    "validTxt": "PASS",
+    "scannedPdf": "PASS_EXPLAINS_NO_OCR",
+    "malformedPdf": "PASS_REJECTED",
+    "malformedDocx": "PASS_REJECTED",
+    "oversized": "PASS_REJECTED",
+    "executable": "PASS_REJECTED",
+    "pathTraversal": "PASS_REJECTED",
+    "promptInjection": "PASS_INERT_EXCLUDED",
+    "missingDates": "PASS_WARNED",
+    "sensitiveAttributes": "PASS_EXCLUDED"
+  },
+  "externalRelationshipsStripped": true,
+  "activeContentExecuted": 0,
+  "pathTraversals": 0,
+  "rawBuffersReleasedInFinally": true,
+  "result": "PASS"
+}
