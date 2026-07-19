@@ -35,7 +35,8 @@ type ImpactRow = {
   preferredCorrect: boolean;
   workCorrect: boolean;
   gapCorrect: boolean;
-  decisionCorrect: boolean;
+  decisionAligned: boolean;
+  referenceDecision: Exclude<StudyDecision, "">;
   decision: Exclude<StudyDecision, "">;
   confidence: number;
   transparency: number;
@@ -63,6 +64,7 @@ export type ImpactStudyAnalysis = {
     preferredExperienceAccuracyPercent: number | null;
     workModeAccuracyPercent: number | null;
     biggestGapAccuracyPercent: number | null;
+    decisionAlignmentPercent: number | null;
     meanConfidence: number | null;
     meanTransparency: number | null;
     decisions: Record<Exclude<StudyDecision, "">, number>;
@@ -74,6 +76,7 @@ export type ImpactStudyAnalysis = {
     preferredExperienceAccuracyDifferencePoints: number | null;
     workModeAccuracyDifferencePoints: number | null;
     biggestGapAccuracyDifferencePoints: number | null;
+    decisionAlignmentDifferencePoints: number | null;
     decisionAgreementPercent: number | null;
     meanConfidenceDifferenceJobPilotMinusRaw: number | null;
     meanTransparencyDifferenceJobPilotMinusRaw: number | null;
@@ -169,6 +172,8 @@ function pairedMetrics(pairs: Pair[]) {
   const workJobPilot = jobPilot.map((row) => row.workCorrect);
   const gapRaw = raw.map((row) => row.gapCorrect);
   const gapJobPilot = jobPilot.map((row) => row.gapCorrect);
+  const alignmentRaw = raw.map((row) => row.decisionAligned);
+  const alignmentJobPilot = jobPilot.map((row) => row.decisionAligned);
   return {
     medianTimeDifferenceSecondsJobPilotMinusRaw: median(pairs.map((pair) => pair.JOBPILOT.taskSeconds - pair.RAW_POSTING.taskSeconds)),
     medianPercentageTimeChangeJobPilotVsRaw: median(pairs.map((pair) => round((pair.JOBPILOT.taskSeconds - pair.RAW_POSTING.taskSeconds) / pair.RAW_POSTING.taskSeconds * 100, 2))),
@@ -176,6 +181,7 @@ function pairedMetrics(pairs: Pair[]) {
     preferredExperienceAccuracyDifferencePoints: difference(percentage(preferredJobPilot), percentage(preferredRaw)),
     workModeAccuracyDifferencePoints: difference(percentage(workJobPilot), percentage(workRaw)),
     biggestGapAccuracyDifferencePoints: difference(percentage(gapJobPilot), percentage(gapRaw)),
+    decisionAlignmentDifferencePoints: difference(percentage(alignmentJobPilot), percentage(alignmentRaw)),
     decisionAgreementPercent: percentage(pairs.map((pair) => pair.RAW_POSTING.decision === pair.JOBPILOT.decision)),
     meanConfidenceDifferenceJobPilotMinusRaw: difference(mean(jobPilot.map((row) => row.confidence)), mean(raw.map((row) => row.confidence))),
     meanTransparencyDifferenceJobPilotMinusRaw: difference(mean(jobPilot.map((row) => row.transparency)), mean(raw.map((row) => row.transparency))),
@@ -204,6 +210,7 @@ function summarizeCondition(rows: ImpactRow[]) {
     preferredExperienceAccuracyPercent: percentage(rows.map((row) => row.preferredCorrect)),
     workModeAccuracyPercent: percentage(rows.map((row) => row.workCorrect)),
     biggestGapAccuracyPercent: percentage(rows.map((row) => row.gapCorrect)),
+    decisionAlignmentPercent: percentage(rows.map((row) => row.decisionAligned)),
     meanConfidence: mean(rows.map((row) => row.confidence)) === null ? null : round(mean(rows.map((row) => row.confidence))!, 2),
     meanTransparency: mean(rows.map((row) => row.transparency)) === null ? null : round(mean(rows.map((row) => row.transparency))!, 2),
     decisions: {
@@ -239,6 +246,7 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
     if (!/^anon-[a-z0-9-]+$/.test(participantId)) throw new Error("Study participant ID is not an anonymous generated ID.");
     if (field("protocol_version") !== DECISION_STUDY_PROTOCOL_VERSION) throw new Error("Study protocol version is invalid.");
     if (field("phase") !== "FINAL") throw new Error("Only FINAL study rows are accepted for impact analysis.");
+    if (field("exclusion_status") !== "ELIGIBLE_FINAL_PENDING_VALIDATION") throw new Error("Study row is excluded from final impact analysis.");
     if (!(assignmentGroup === "GROUP_1" || assignmentGroup === "GROUP_2")) throw new Error("Study assignment is invalid.");
     if (!(roleId in DECISION_STUDY_ROLES)) throw new Error("Study role ID is invalid.");
     if (conditionOrder !== "RAW_POSTING_THEN_JOBPILOT") throw new Error("Study condition order is invalid.");
@@ -256,10 +264,14 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
     if (answers.some((answer, answerIndex) => !ALLOWED_ANSWERS[answerIndex]!.has(answer))) throw new Error("Study answer is outside the frozen choice contract.");
     if (field("authentic_human_confirmation") !== "true") throw new Error("Study row lacks authentic-human confirmation.");
     const expected = DECISION_STUDY_ROLES[roleId as keyof typeof DECISION_STUDY_ROLES].answerKey;
-    const correctness = [field("required_correct"), field("preferred_correct"), field("work_mode_correct"), field("biggest_gap_correct"), field("decision_correct")];
+    const correctness = [field("required_correct"), field("preferred_correct"), field("work_mode_correct"), field("biggest_gap_correct")];
     if (correctness.some((value) => value !== "true" && value !== "false")) throw new Error("Study correctness fields must be true or false.");
-    const recomputed = [answers[0] === expected.requiredExperienceAnswer, answers[1] === expected.preferredExperienceAnswer, answers[2] === expected.workModeAnswer, answers[3] === expected.weakestQualificationAnswer, decision === expected.decision];
+    const recomputed = [answers[0] === expected.requiredExperienceAnswer, answers[1] === expected.preferredExperienceAnswer, answers[2] === expected.workModeAnswer, answers[3] === expected.weakestQualificationAnswer];
     if (correctness.some((value, index) => (value === "true") !== recomputed[index])) throw new Error("Study answer-key correctness mismatch.");
+    const referenceDecision = field("decision_reference");
+    const decisionAligned = decision === expected.decision;
+    if (referenceDecision !== expected.decision) throw new Error("Study reference decision mismatch.");
+    if (field("decision_alignment") !== String(decisionAligned)) throw new Error("Study decision-alignment mismatch.");
     const assigned = DECISION_STUDY_ASSIGNMENTS[assignmentGroup as "GROUP_1" | "GROUP_2"].find((item) => item.condition === condition);
     if (!assigned || assigned.roleId !== roleId) throw new Error("Study role and condition do not match the assignment group.");
     humanRows.push({
@@ -277,7 +289,8 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
       preferredCorrect: recomputed[1]!,
       workCorrect: recomputed[2]!,
       gapCorrect: recomputed[3]!,
-      decisionCorrect: recomputed[4]!,
+      decisionAligned,
+      referenceDecision: referenceDecision as Exclude<StudyDecision, "">,
       decision: decision as Exclude<StudyDecision, "">,
       confidence: numberInRange(field("confidence_1_to_7"), "confidence_1_to_7", 1, 7),
       transparency: numberInRange(field("clarity_1_to_7"), "clarity_1_to_7", 1, 7),

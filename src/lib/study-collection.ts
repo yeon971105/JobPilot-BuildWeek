@@ -59,6 +59,7 @@ export function validateStudyInbox(files: StudyInboxFile[]): StudyInboxValidatio
       if (values("consent_version").some((value) => value !== DECISION_STUDY_CONSENT_VERSION)) throw new Error("contains a missing or mismatched consent version");
       if (values("protocol_version").some((value) => value !== DECISION_STUDY_PROTOCOL_VERSION)) throw new Error("contains a missing or mismatched protocol version");
       if (values("phase").some((value) => value !== "FINAL")) throw new Error("contains PREVIEW, PILOT, or excluded rows; only FINAL is accepted");
+      if (values("exclusion_status").some((value) => value !== "ELIGIBLE_FINAL_PENDING_VALIDATION")) throw new Error("contains an export excluded from final impact analysis");
       if (values("authentic_human_confirmation").some((value) => value !== "true")) throw new Error("is missing authentic-human confirmation");
 
       const fileAnalysis = analyzeImpactStudyCsv(file.csvText, { bootstrapIterations: 100 });

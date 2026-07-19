@@ -12,6 +12,7 @@ export type StudyAssignment = "GROUP_1" | "GROUP_2";
 export type StudyCollectionState = "READY_NOT_RUN" | "IN_PROGRESS" | "COMPLETE_MINIMUM" | "COMPLETE_PREFERRED";
 export type StudyExclusionStatus = "EXCLUDED_PREVIEW" | "EXCLUDED_PILOT" | "EXCLUDED_BROWSER_TEST" | "ELIGIBLE_FINAL_PENDING_VALIDATION";
 export type StudyQuestionKey = "requiredExperienceAnswer" | "preferredExperienceAnswer" | "workModeAnswer" | "weakestQualificationAnswer" | "decision";
+export type FactualStudyQuestionKey = Exclude<StudyQuestionKey, "decision">;
 
 export type DecisionStudyRole = {
   id: "role-a-analytics-operations-engineer" | "role-b-data-enablement-engineer";
@@ -89,7 +90,8 @@ export type DecisionStudyResponse = {
   workModeAnswer: string;
   weakestQualificationAnswer: string;
   decision: StudyDecision;
-  correctness: Record<StudyQuestionKey, boolean | null>;
+  correctness: Record<FactualStudyQuestionKey, boolean | null>;
+  decisionAlignment: boolean | null;
   confidence: number;
   clarity: number;
   taskSeconds: number | null;
@@ -143,7 +145,7 @@ export function anonymousParticipantId(entropy?: Uint32Array) {
 }
 
 function emptyResponse(roleId: DecisionStudyRole["id"], condition: StudyCondition): DecisionStudyResponse {
-  return { roleId, condition, requiredExperienceAnswer: "", preferredExperienceAnswer: "", workModeAnswer: "", weakestQualificationAnswer: "", decision: "", correctness: { requiredExperienceAnswer: null, preferredExperienceAnswer: null, workModeAnswer: null, weakestQualificationAnswer: null, decision: null }, confidence: 0, clarity: 0, taskSeconds: null, completed: false, completedAt: null };
+  return { roleId, condition, requiredExperienceAnswer: "", preferredExperienceAnswer: "", workModeAnswer: "", weakestQualificationAnswer: "", decision: "", correctness: { requiredExperienceAnswer: null, preferredExperienceAnswer: null, workModeAnswer: null, weakestQualificationAnswer: null }, decisionAlignment: null, confidence: 0, clarity: 0, taskSeconds: null, completed: false, completedAt: null };
 }
 
 export function createDecisionStudySession(options: { randomValue?: number; participantEntropy?: Uint32Array; now?: Date; phase?: StudyMode; authenticHumanConfirmation?: boolean } = {}): DecisionStudySession {
@@ -155,7 +157,11 @@ export function createDecisionStudySession(options: { randomValue?: number; part
 
 export function scoreStudyResponse(response: DecisionStudyResponse) {
   const key = DECISION_STUDY_ROLES[response.roleId].answerKey;
-  return { requiredExperienceAnswer: response.requiredExperienceAnswer === key.requiredExperienceAnswer, preferredExperienceAnswer: response.preferredExperienceAnswer === key.preferredExperienceAnswer, workModeAnswer: response.workModeAnswer === key.workModeAnswer, weakestQualificationAnswer: response.weakestQualificationAnswer === key.weakestQualificationAnswer, decision: response.decision === key.decision };
+  return { requiredExperienceAnswer: response.requiredExperienceAnswer === key.requiredExperienceAnswer, preferredExperienceAnswer: response.preferredExperienceAnswer === key.preferredExperienceAnswer, workModeAnswer: response.workModeAnswer === key.workModeAnswer, weakestQualificationAnswer: response.weakestQualificationAnswer === key.weakestQualificationAnswer };
+}
+
+export function studyDecisionAlignment(response: DecisionStudyResponse) {
+  return response.decision === DECISION_STUDY_ROLES[response.roleId].answerKey.decision;
 }
 
 function isIso(value: unknown) { return typeof value === "string" && Number.isFinite(Date.parse(value)); }
@@ -175,7 +181,7 @@ export function parseDecisionStudySession(raw: string | null): DecisionStudySess
 }
 
 function csvCell(value: string | number | boolean | null) { const text = value === null ? "" : String(value); return `"${text.replaceAll('"', '""')}"`; }
-export const DECISION_STUDY_CSV_HEADERS = ["participant_id", "protocol_version", "consent_version", "phase", "exclusion_status", "assignment_group", "condition_order", "role_id", "condition", "task_seconds", "required_experience_answer", "preferred_experience_answer", "work_mode_answer", "biggest_gap_answer", "decision", "required_correct", "preferred_correct", "work_mode_correct", "biggest_gap_correct", "decision_correct", "confidence_1_to_7", "clarity_1_to_7", "completed_at", "authentic_human_confirmation", "synthetic_tooling_validation"] as const;
+export const DECISION_STUDY_CSV_HEADERS = ["participant_id", "protocol_version", "consent_version", "phase", "exclusion_status", "assignment_group", "condition_order", "role_id", "condition", "task_seconds", "required_experience_answer", "preferred_experience_answer", "work_mode_answer", "biggest_gap_answer", "decision", "decision_reference", "decision_alignment", "required_correct", "preferred_correct", "work_mode_correct", "biggest_gap_correct", "confidence_1_to_7", "clarity_1_to_7", "completed_at", "authentic_human_confirmation", "synthetic_tooling_validation"] as const;
 
 export function studyExclusionStatus(session: DecisionStudySession): StudyExclusionStatus {
   if (session.phase === "PREVIEW") return "EXCLUDED_PREVIEW";
@@ -212,7 +218,8 @@ export function studySessionToCsv(session: DecisionStudySession) {
   const syntheticToolingValidation = session.phase !== "FINAL" || !session.consent.authenticHumanConfirmation;
   const rows = session.responses.map((response) => {
     const correctness = scoreStudyResponse(response);
-    return [session.participantId, session.protocolVersion, session.consent.version, session.phase, exclusionStatus, session.assignmentGroup, "RAW_POSTING_THEN_JOBPILOT", response.roleId, response.condition, response.taskSeconds, response.requiredExperienceAnswer, response.preferredExperienceAnswer, response.workModeAnswer, response.weakestQualificationAnswer, response.decision, correctness.requiredExperienceAnswer, correctness.preferredExperienceAnswer, correctness.workModeAnswer, correctness.weakestQualificationAnswer, correctness.decision, response.confidence, response.clarity, response.completedAt, session.consent.authenticHumanConfirmation, syntheticToolingValidation].map(csvCell).join(",");
+    const referenceDecision = DECISION_STUDY_ROLES[response.roleId].answerKey.decision;
+    return [session.participantId, session.protocolVersion, session.consent.version, session.phase, exclusionStatus, session.assignmentGroup, "RAW_POSTING_THEN_JOBPILOT", response.roleId, response.condition, response.taskSeconds, response.requiredExperienceAnswer, response.preferredExperienceAnswer, response.workModeAnswer, response.weakestQualificationAnswer, response.decision, referenceDecision, studyDecisionAlignment(response), correctness.requiredExperienceAnswer, correctness.preferredExperienceAnswer, correctness.workModeAnswer, correctness.weakestQualificationAnswer, response.confidence, response.clarity, response.completedAt, session.consent.authenticHumanConfirmation, syntheticToolingValidation].map(csvCell).join(",");
   });
   return [DECISION_STUDY_CSV_HEADERS.map(csvCell).join(","), ...rows].join("\n");
 }

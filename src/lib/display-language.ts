@@ -39,6 +39,20 @@ const knownLabels: Readonly<Record<string, string>> = {
   APPLY: "Apply",
   REVIEW_FURTHER: "Review Further",
   SKIP: "Skip",
+  THREE_YEARS_ANALYTICS_OPERATIONS: "3 years in analytics operations",
+  FOUR_YEARS_DATA_PRODUCTS: "4 years working on data products",
+  TWO_YEARS_SOFTWARE: "2 years in software development",
+  NO_REQUIRED_EXPERIENCE: "No required experience stated",
+  WORKFLOW_ORCHESTRATION: "Workflow orchestration",
+  TRAINING_PROGRAM_DESIGN: "Training program design",
+  CLOUD_CERTIFICATION: "Cloud certification",
+  NO_PREFERRED_EXPERIENCE: "No preferred experience stated",
+  HYBRID_TWO_DAYS: "Hybrid, 2 office days each week",
+  REMOTE: "Remote",
+  ONSITE: "Onsite",
+  UNCLEAR: "Not stated clearly",
+  PYTHON_SQL: "Python and SQL",
+  PRODUCT_PARTNERSHIP: "Product and analyst partnership",
 };
 
 const acronymLabels: Readonly<Record<string, string>> = {
@@ -92,6 +106,10 @@ export function getDecisionDisplayLabel(value: string | null | undefined) {
 
 export function getConditionDisplayLabel(value: string | null | undefined) {
   return humanizeMachineValue(value, "Study condition");
+}
+
+export function getStudyAnswerDisplayLabel(value: string | null | undefined) {
+  return humanizeMachineValue(value, "No answer recorded");
 }
 
 export const MACHINE_ID_PATTERN = /\b(?:r|e|cg|analysis)-[a-z0-9-]+\b/gi;
