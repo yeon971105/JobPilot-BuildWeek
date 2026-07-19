@@ -1,5 +1,9 @@
 # Codex Build Log
 
+## JP-BW12
+
+Codex reproduced `fa2ae44117ae9dea12eeb1081e271223b2b896d9`, preserved the six receipt hashes and five prepared-artifact hashes, implemented the centralized human-language boundary, redesigned Application Strategy, completed Study exports and decision-alignment semantics, ran browser flows for all three Study phases, captured responsive evidence, and rendered the product-consistent owner-polish video. No OpenAI API request, application submission, participant fabrication, production mutation, Devpost submission, or owner approval occurred.
+
 ## JP-BW7
 
 Codex reproduced the exact JP-BW6 parent `2e4a5bb69290cd880e7dbe824322d891a4005114`, verified the clean worktree, preserved historical tags, read the installed Next.js 16.2.6 documentation, and implemented the application-fatigue product extension in seven intentionally named commits.

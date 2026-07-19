@@ -1,0 +1,27 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "typecheck": "PASS",
+  "lint": "PASS_NO_WARNINGS",
+  "tests": {
+    "passed": 125,
+    "authorizedSkips": 2
+  },
+  "cssPipelineTests": 2,
+  "productionBuild": "PASS",
+  "cleanCloneValidation": "PASS",
+  "browserViewports": 4,
+  "userFacingInternalIds": 0,
+  "rawEnums": 0,
+  "receiptMismatches": 0,
+  "preparedArtifactChanges": 0,
+  "openAiApiRequests": 0,
+  "openAiApiCostUsd": 0,
+  "fabricatedParticipants": 0,
+  "participantPii": 0,
+  "applicationSubmissions": 0,
+  "automaticAppliedTransitions": 0,
+  "secrets": 0,
+  "result": "PASS"
+}

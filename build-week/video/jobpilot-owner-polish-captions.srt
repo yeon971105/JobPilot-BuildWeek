@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:14,000
+Job search fatigue is searching separate sites, rereading requirements, comparing your experience, and deciding whether another application deserves the next hour.
+
+2
+00:00:14,000 --> 00:00:31,000
+JobPilot starts with one promise: find the roles worth your time. For You narrows the synthetic demo to three focused decisions with concise, transparent reasons.
+
+3
+00:00:31,000 --> 00:00:51,000
+Job Detail leads with an integer Fit Score, plain-language conclusion, Apply Priority, evidence, attention areas, relevant experience, practical fit, and the original destination.
+
+4
+00:00:51,000 --> 00:01:15,000
+Application Strategy answers whether to act, why, what to emphasize, what to prepare, and what to clarify. Evidence is translated. Provenance and limitations stay collapsed. Prepared GPT-5.6 never changes the deterministic score.
+
+5
+00:01:15,000 --> 00:01:30,000
+Evidence remains available on demand. The grouped view separates strong support, partial support, missing evidence, and items needing review without exposing internal identifiers.
+
+6
+00:01:30,000 --> 00:01:43,000
+Score Proof visualizes the frozen one-hundred-point contract while exact arithmetic remains in the Technical Ledger.
+
+7
+00:01:43,000 --> 00:01:53,000
+The Score Receipt Verifier reproduces hashing, micro-point arithmetic, caps, transfers, evidence checks, and rounding. Hidden adjustments remain zero.
+
+8
+00:01:53,000 --> 00:02:05,000
+JobPilot opens the fictional employer destination deliberately. There is no form, resume transmission, redirect, or automatic submission.
+
+9
+00:02:05,000 --> 00:02:18,000
+The tracker is browser-local. Applied is a planning label only; JobPilot never auto-applies.
+
+10
+00:02:18,000 --> 00:02:40,000
+Gemma 4 12B is the primary local semantic model. Deterministic code calculates every score. GPT-5.6 Sol was prepared through Codex. OpenAI API requests and cost are zero.
+
+11
+00:02:40,000 --> 00:02:50,000
+Fit Score is not a hiring probability, and no human-study result is claimed without authentic final participants. JobPilot helps people act on roles that fit.

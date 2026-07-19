@@ -1,0 +1,27 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "browserFlowsCompleted": [
+    "PREVIEW",
+    "PILOT",
+    "FINAL_BROWSER_TEST"
+  ],
+  "csvActionsPassed": 3,
+  "jsonActionsPassed": 3,
+  "matchingAnonymousId": true,
+  "matchingAssignment": true,
+  "differentRolesAcrossConditions": true,
+  "protocolVersionPresent": true,
+  "phasePresent": true,
+  "exclusionStatusPresent": true,
+  "piiFields": 0,
+  "factualAndDecisionFieldsSeparated": true,
+  "previewRejectedByFinalCombiner": true,
+  "pilotRejectedByFinalCombiner": true,
+  "browserTestFinalRejectedByFinalCombiner": true,
+  "authenticFinalSchemaAcceptedByAutomatedFixture": true,
+  "browserTestExportsDeleted": true,
+  "fabricatedParticipants": 0,
+  "result": "PASS"
+}

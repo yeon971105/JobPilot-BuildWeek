@@ -1,5 +1,11 @@
 # Product UX — Final Product RC
 
+## JP-BW12 comprehension boundary
+
+Machine identifiers are resolved centrally before they reach primary UI. Application Strategy now leads with a recommendation banner, then five decision questions across two desktop columns or one mobile column. The default is 209 visible words; all disclosures total 380. Body copy is at least 16 px, metadata at least 14 px, section headings at least 22 px, and the 800 px desktop surface becomes full usable height on mobile.
+
+Study completion keeps local save status persistent and puts phase-specific CSV and JSON actions above the fold, including at 320×700. Results translate answer codes, report four factual answers separately from subjective decision alignment, and keep detailed answers collapsed.
+
 JP-BW11R centers JobPilot on one user outcome: move from application fatigue to the next confident, controlled application through a calm decision surface with exact proof available on demand.
 
 ## Landing and discovery

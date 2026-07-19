@@ -1,0 +1,19 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "defaultVisibleWords": 209,
+  "defaultMaximumWords": 230,
+  "allExpandedVisibleWords": 380,
+  "expandedMaximumWords": 420,
+  "recommendationRationaleMaximumWords": 22,
+  "sectionLimits": {
+    "whyThisRoleFits": 3,
+    "whatNeedsAttention": 2,
+    "whatToEmphasize": 3,
+    "interviewPlan": 3,
+    "questionsToAsk": 2
+  },
+  "equalWeightBoxLayout": false,
+  "result": "PASS"
+}

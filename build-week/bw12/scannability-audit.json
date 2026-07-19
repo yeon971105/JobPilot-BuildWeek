@@ -1,0 +1,15 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "jobDetailDefaultActions": 3,
+  "jobDetailVisibleWordTarget": 360,
+  "strongEvidenceMaximum": 3,
+  "attentionAreasMaximum": 2,
+  "strategyRecommendationBanner": true,
+  "strategyDesktopColumns": 2,
+  "strategyMobileColumns": 1,
+  "repeatedProvenanceParagraphs": 0,
+  "repeatedLimitationParagraphs": 0,
+  "result": "PASS"
+}

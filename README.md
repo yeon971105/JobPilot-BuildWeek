@@ -1,5 +1,13 @@
 # JobPilot — Find the Roles Worth Your Time
 
+## JP-BW12 owner-polish candidate
+
+Primary UI now resolves machine identifiers through one display-language boundary. Raw IDs remain only in explicit technical disclosures and machine artifacts. Application Strategy is 209 words by default and 380 words with every disclosure expanded; it uses translated evidence names with collapsed provenance and limitations.
+
+The Study auto-saves locally and exposes phase-specific CSV and JSON downloads above the fold. Preview, Pilot, and browser-test Final exports are excluded from participant analysis. Factual accuracy covers four role facts; Apply / Review Further / Skip is reported separately as decision alignment. The authentic Final state remains `READY_NOT_RUN` with zero participants and no public impact claim.
+
+Owner-polish video: `build-week/video/jobpilot-owner-polish-rc1.mp4` (170 seconds, H.264, AAC English narration, embedded English captions, no Study scenes). Owner approval remains false.
+
 Job search fatigue comes from repeating the same discovery work, opening postings one by one, manually comparing a resume, and still not knowing which application deserves the next hour. JobPilot connects the decision loop:
 
 `DISCOVER → PRIORITIZE → UNDERSTAND → APPLY → TRACK`
@@ -148,7 +156,7 @@ Public owner-review environment: <https://jobpilot-build-week-review.yeon971105.
 After the final production build, the exact local owner-approval surface starts only through:
 
 ```bash
-npm run preview:certified -- --port 3209
+npm run preview:certified -- --port 3210
 ```
 
 The command rejects a dirty worktree or UI-source drift, validates the current commit and BUILD_ID, checks runtime CSS status/bytes/hash, computed-style and geometry sentinels, all owner routes, health, and build/server parity, then keeps the certified preview running.

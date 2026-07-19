@@ -1,0 +1,94 @@
+{
+    "schemaVersion":  "jobpilot.owner-polish-video.v1",
+    "generatedAt":  "2026-07-19T01:25:47.7748808+00:00",
+    "commitAtRender":  "4d6d713f9aac1cad4017926648955f303fee4766",
+    "output":  "build-week/video/jobpilot-owner-polish-rc1.mp4",
+    "durationSeconds":  170,
+    "resolution":  "1920x1080",
+    "videoCodec":  "h264",
+    "audioCodec":  "aac",
+    "captionsCodec":  "mov_text",
+    "captionsLanguage":  "eng",
+    "narrationLanguage":  "English",
+    "music":  false,
+    "actualCertifiedProductCaptures":  true,
+    "studyRouteShown":  false,
+    "publicSafeSynthetic":  true,
+    "privateData":  false,
+    "thirdPartyLogos":  false,
+    "openAiApiRequests":  0,
+    "openAiApiCostUsd":  0,
+    "applicationSubmissions":  0,
+    "humanStudyResultsClaimed":  false,
+    "videoSha256":  "337b10e648c9aee2206130d816365192c5d93b2b2b62969c0f80f7f7cc69afe7",
+    "thumbnailSha256":  "6733b276246d803c1655e968230fc082b797b375c55af7b3f1a23a5719cb2f21",
+    "segments":  [
+                     {
+                         "file":  "landing-1440x900.png",
+                         "durationSeconds":  14,
+                         "story":  "Application fatigue",
+                         "sha256":  "5476c666c73f14707518a59e8701ef3af5b4a8b74c1ce109d2990a9b9b2617a6"
+                     },
+                     {
+                         "file":  "for-you-1440x900.png",
+                         "durationSeconds":  17,
+                         "story":  "Focused shortlist",
+                         "sha256":  "7f8d3f494e33ad23e351d862d076a3ab7bd53964b7aa810bc040c5227f1d7e9d"
+                     },
+                     {
+                         "file":  "job-detail-overview-1440x900.png",
+                         "durationSeconds":  20,
+                         "story":  "Decision-first Job Detail",
+                         "sha256":  "9781bbaa885d81c83a57193f9c12897f7606f265ce40c89a68af8574c9d1e1c1"
+                     },
+                     {
+                         "file":  "application-strategy-default-1440x900.png",
+                         "durationSeconds":  24,
+                         "story":  "Concise Application Strategy",
+                         "sha256":  "6c3f1afe0dc3b2e0f4d6fa28e0599fd89a6f823e232c6bb7199bfecdecad5b00"
+                     },
+                     {
+                         "file":  "evidence-grouped-view-1440x900.png",
+                         "durationSeconds":  15,
+                         "story":  "Evidence on demand",
+                         "sha256":  "dd91b4c2f6b606b2302fe915c942ff444da50dcee2cd277c15c9365e4bc8f0e0"
+                     },
+                     {
+                         "file":  "score-proof-1440x900.png",
+                         "durationSeconds":  13,
+                         "story":  "Visual Score Proof",
+                         "sha256":  "e2f947e215bc00eb7c647d19b2a4ad498a4e3dd3ef3e902ee3eccd56f97f26bb"
+                     },
+                     {
+                         "file":  "receipt-verifier-result-900x900.png",
+                         "durationSeconds":  10,
+                         "story":  "Receipt verification",
+                         "sha256":  "f602d31c69d33cbe8aad68229c1e75a39dfc6cd6a2bccd2f7e491ebe33186d1b"
+                     },
+                     {
+                         "file":  "employer-destination-1440x900.png",
+                         "durationSeconds":  12,
+                         "story":  "Employer destination",
+                         "sha256":  "474f2e4b5b6cd8b4034065006fac08cf31e3da986859a2726df56103ce3bdb3b"
+                     },
+                     {
+                         "file":  "tracker-populated-1440x900.png",
+                         "durationSeconds":  13,
+                         "story":  "Browser-local tracker",
+                         "sha256":  "a9566c5d671c50f112af184835d811bacc9fb1fc0112e3057bb0efb91227260b"
+                     },
+                     {
+                         "file":  "trust-lab-1440x900.png",
+                         "durationSeconds":  22,
+                         "story":  "Gemma, deterministic scoring, GPT-5.6, and Codex",
+                         "sha256":  "27271aba3ded8f1f516242fc37b988a0dabc403427fa0eeb9b5325b78b5137da"
+                     },
+                     {
+                         "file":  "landing-1440x900.png",
+                         "durationSeconds":  10,
+                         "story":  "Honest closing",
+                         "sha256":  "5476c666c73f14707518a59e8701ef3af5b4a8b74c1ce109d2990a9b9b2617a6"
+                     }
+                 ],
+    "result":  "PASS"
+}

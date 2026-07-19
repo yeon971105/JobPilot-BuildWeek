@@ -1,0 +1,25 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "routesScanned": [
+    "/",
+    "/demo/shortlist",
+    "/demo/jobs/northstar-applied-ai-solutions-engineer",
+    "/demo/jobs/harbor-product-data-analyst",
+    "/demo/compare",
+    "/demo/tracker",
+    "/demo/trust",
+    "/study/decision-utility?mode=preview"
+  ],
+  "dialogsScanned": [
+    "Application Strategy",
+    "Challenge This Analysis",
+    "Ambiguous Requirement Review"
+  ],
+  "visibleInternalIds": 0,
+  "accessibleNameInternalIds": 0,
+  "visibleRawMachineEnums": 0,
+  "allowedTechnicalDisclosuresExcluded": true,
+  "result": "PASS"
+}

@@ -1,5 +1,9 @@
 # Zero-API GPT-5.6 Prepared Reviews
 
+## JP-BW12 presentation boundary
+
+The primary UI badge is **Prepared review**. Collapsed provenance states that the review was prepared with GPT-5.6 in Codex from frozen synthetic evidence, is not a live API response, made zero API requests, made zero direct score changes, and did not generate the final score. Prepared advice cannot mutate deterministic evidence, Evidence Quality, Fit Score, or a Score Receipt. All prepared artifact bytes and hashes remain frozen.
+
 Four structured review artifacts were prepared inside the verified Codex Desktop task using `gpt-5.6-sol` at `xhigh` reasoning effort:
 
 1. Northstar application strategy;

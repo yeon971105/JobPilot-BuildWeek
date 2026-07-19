@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "jobpilot.bw12.certified-preview-contract.v1",
+  "visualSourceCommit": "4d6d713f9aac1cad4017926648955f303fee4766",
+  "ownerRoutes": [
+    "/",
+    "/demo/shortlist",
+    "/demo/jobs/northstar-applied-ai-solutions-engineer",
+    "/demo/jobs/harbor-product-data-analyst",
+    "/demo/tracker",
+    "/demo/trust",
+    "/demo/verify-receipt",
+    "/study/decision-utility?mode=preview"
+  ],
+  "css": {
+    "assets": 1,
+    "totalBytes": 54169,
+    "sha256": "7ad3b05f350d0cfd8d7af5da5949ad272dd1b39e59a0b0389fbd69e4906ba16e"
+  },
+  "viewports": ["1440x900", "1024x768", "390x844", "320x700"],
+  "result": "PASS"
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "jobpilot.bw12.clean-clone-validation.v1",
+  "validatedCommit": "e9e9b92",
+  "locationClass": "isolated temporary directory outside repository",
+  "npmCi": "PASS",
+  "dependencyVulnerabilities": 0,
+  "typecheck": "PASS",
+  "testsPassed": 125,
+  "authorizedSkips": 2,
+  "productionBuild": "PASS",
+  "openNextDryRun": "PASS",
+  "result": "PASS"
+}

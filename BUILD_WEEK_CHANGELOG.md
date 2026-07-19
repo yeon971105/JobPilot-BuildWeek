@@ -1,5 +1,14 @@
 # Build Week Changelog
 
+## JP-BW12 — Final human-language polish
+
+- Added one typed display-language resolver for requirement IDs, evidence IDs, match classes, requirement classes, work modes, and Study answers.
+- Reduced Application Strategy to 209 default words and 380 fully expanded words while preserving grounded evidence references.
+- Added local Study auto-save status plus Preview, Pilot, and Final CSV/JSON exports.
+- Separated four factual checks from Apply / Review Further / Skip decision alignment.
+- Certified 65 screenshots, four exact viewports, zero primary-UI internal IDs, zero raw enums, and a new 170-second owner-review video.
+- Preserved all Score Receipt hashes and prepared GPT-5.6 artifact hashes; OpenAI API requests and cost remain zero.
+
 ## JP-BW7 — Application-fatigue winning product RC
 
 - Reframed the product around nearby discovery, resume-aware priority, and direct employer control.

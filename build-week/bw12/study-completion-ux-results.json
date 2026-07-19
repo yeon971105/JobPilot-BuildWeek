@@ -1,0 +1,35 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "phases": {
+    "PREVIEW": {
+      "title": "Study Preview Complete",
+      "exclusion": "EXCLUDED_PREVIEW",
+      "csv": true,
+      "json": true
+    },
+    "PILOT": {
+      "title": "Pilot Complete",
+      "exclusion": "EXCLUDED_PILOT",
+      "csv": true,
+      "json": true
+    },
+    "FINAL_BROWSER_TEST": {
+      "title": "Study Complete",
+      "exclusion": "EXCLUDED_BROWSER_TEST",
+      "csv": true,
+      "json": true,
+      "authenticHumanConfirmation": false
+    }
+  },
+  "saveStatusVisible": true,
+  "exportActionsAboveFoldAt320x700": true,
+  "ariaLiveSuccess": true,
+  "failedDownloadRecoveryCopy": true,
+  "clearConfirmation": true,
+  "touchTargetMinimumPx": 44,
+  "rawCodesVisible": 0,
+  "decisionCorrectnessLabels": 0,
+  "result": "PASS"
+}

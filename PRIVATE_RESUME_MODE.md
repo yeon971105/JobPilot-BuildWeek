@@ -1,5 +1,7 @@
 # Private Resume Mode
 
+JP-BW12 does not change this boundary. Application Strategy uses only frozen synthetic demo evidence, and Study exports never include a resume, name, email, phone number, address, IP address, demographic data, employment status, or health data.
+
 Private Resume Mode is the local-only path for profile-specific analysis. The public judge path uses synthetic data and rejects upload bodies before parsing.
 
 ## Setup

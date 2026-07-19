@@ -7,7 +7,7 @@ import { JSDOM } from "jsdom";
 
 const root = resolve(import.meta.dirname, "..");
 const portIndex = process.argv.indexOf("--port");
-if (portIndex < 0 || !process.argv[portIndex + 1]) throw new Error("Use npm run preview:certified -- --port 3209");
+if (portIndex < 0 || !process.argv[portIndex + 1]) throw new Error("Use npm run preview:certified -- --port 3210");
 const port = Number(process.argv[portIndex + 1]);
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error("The preview port must be an integer from 1024 through 65535.");
 const baseUrl = `http://127.0.0.1:${port}`;
@@ -25,16 +25,20 @@ if (!existsSync(buildIdPath)) throw new Error("No production BUILD_ID exists. Ru
 const buildId = readFileSync(buildIdPath, "utf8").trim();
 if (!buildId || !existsSync(resolve(root, `.next/static/${buildId}/_buildManifest.js`))) throw new Error("The production build is incomplete or its BUILD_ID does not match the static manifest.");
 
-const contract = JSON.parse(readFileSync(resolve(root, "build-week/bw11r/certified-preview-contract.json"), "utf8"));
-const visual = JSON.parse(readFileSync(resolve(root, "build-week/bw11r/visual-regression-results.json"), "utf8"));
+const contract = JSON.parse(readFileSync(resolve(root, "build-week/bw12/certified-preview-contract.json"), "utf8"));
+const visual = JSON.parse(readFileSync(resolve(root, "build-week/bw12/visual-regression-results.json"), "utf8"));
 const sourceDiff = runGit("diff", "--quiet", contract.visualSourceCommit, "--", "src", "tests/visual");
 if (sourceDiff.status !== 0) throw new Error("UI source differs from the browser-certified source commit.");
-if (visual.result !== "PASS" || Object.values(visual.zeroValues).some((value) => value !== 0)) throw new Error("Persisted browser geometry sentinels do not pass.");
+const visualFailures = ["horizontalOverflowFailures", "clippedDrawerFailures", "clippedExportButtonFailures", "internalIdFailures", "rawEnumFailures", "h1Failures", "primaryActionFailures"];
+if (visual.result !== "PASS" || visualFailures.some((key) => visual[key] !== 0)) throw new Error("Persisted browser geometry sentinels do not pass.");
 
-const cssDirectory = resolve(root, ".next/static/chunks");
-const cssFiles = readdirSync(cssDirectory).filter((file) => file.endsWith(".css")).sort();
+const cssDirectory = resolve(root, ".next/static");
+function walkCss(directory) {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => entry.isDirectory() ? walkCss(resolve(directory, entry.name)) : entry.name.endsWith(".css") ? [resolve(directory, entry.name)] : []);
+}
+const cssFiles = walkCss(cssDirectory).sort();
 if (!cssFiles.length) throw new Error("The clean build contains no generated CSS assets.");
-const localCss = cssFiles.map((file) => readFileSync(resolve(cssDirectory, file), "utf8")).join("\n");
+const localCss = cssFiles.map((file) => readFileSync(file, "utf8")).join("\n");
 const localCssBytes = Buffer.byteLength(localCss);
 const localCssHash = createHash("sha256").update(localCss).digest("hex");
 if (localCssBytes !== contract.css.totalBytes || localCssHash !== contract.css.sha256) throw new Error(`CSS build drift: ${localCssBytes} bytes, ${localCssHash}.`);
@@ -84,7 +88,9 @@ try {
   if (runtimeCssBytes !== localCssBytes || runtimeCssHash !== localCssHash) throw new Error("Runtime CSS does not match the clean local build.");
 
   const dom = new JSDOM(landingHtml, { pretendToBeVisual: true });
-  const ruleStarts = [".flex{", ".absolute{", ".rounded-full{", ".bg-\\[\\#173d2d\\]{", ".button-primary,.button-secondary{", ".button-primary{"];
+  // Tailwind may merge utilities with identical declarations. The final build
+  // emits the absolute-position utility together with the screen-reader rule.
+  const ruleStarts = [".flex{", ".absolute,.sr-only{", ".rounded-full{", ".bg-\\[\\#173d2d\\]{", ".button-primary,.button-secondary{", ".button-primary{"];
   const rules = ruleStarts.map((start) => {
     const startIndex = runtimeCss.indexOf(start);
     if (startIndex < 0) throw new Error(`Missing computed-style rule: ${start}`);

@@ -1,0 +1,24 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "primaryUi": {
+    "internalRequirementIds": 0,
+    "internalEvidenceIds": 0,
+    "rawCapabilityIds": 0,
+    "rawMachineEnums": 0,
+    "rawStudyAnswerCodes": 0,
+    "overviewPointDecimals": 0,
+    "repeatedProvenanceParagraphs": 0,
+    "repeatedLimitationParagraphs": 0,
+    "subjectiveDecisionIncorrectLabels": 0,
+    "missingStudyExportControls": 0
+  },
+  "preparedReview": {
+    "defaultVisibleWords": 209,
+    "expandedVisibleWords": 380,
+    "bodyMinimumPx": 16,
+    "metadataMinimumPx": 14
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,151 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "artifacts": [
+    {
+      "path": "build-week/bw12/accessibility-results.json",
+      "sha256": "6a5c48e36a76c1ade8eef0f8b0ddd466b8f16545ada9e548e776d1dda994eedf",
+      "bytes": 449
+    },
+    {
+      "path": "build-week/bw12/certified-preview-contract.json",
+      "sha256": "535d337b36cdffff03132760f33b9de928ad0b7c2bc3d2afb12dd22fe121fd9f",
+      "bytes": 630
+    },
+    {
+      "path": "build-week/bw12/clean-clone-validation.json",
+      "sha256": "695f7ed390e8c105a5f7ab1a818b06ce50e4b26afa8e85b531957516ba20fc5c",
+      "bytes": 366
+    },
+    {
+      "path": "build-week/bw12/content-regression-results.json",
+      "sha256": "e3ab0fd78ec4d449e179f37682f8cd47470f0d90f0e3c53a032dae8baaa80876",
+      "bytes": 658
+    },
+    {
+      "path": "build-week/bw12/css-pipeline-results.json",
+      "sha256": "5609698dafe6bb1fe4fe352565d594a750211b90a526f65a8e78d479b088b764",
+      "bytes": 752
+    },
+    {
+      "path": "build-week/bw12/human-language-boundary.json",
+      "sha256": "630f18805cf47eb90fa3ebbd007e810f2549e6df5b8dad88ae70b0fbc0436b21",
+      "bytes": 440
+    },
+    {
+      "path": "build-week/bw12/id-display-mapping.json",
+      "sha256": "de2567fd03fc4ae84579dd4190605bd2988afe6daf3cdd7d0ef933c4bbed7aea",
+      "bytes": 492
+    },
+    {
+      "path": "build-week/bw12/internal-id-regression-results.json",
+      "sha256": "cca8ef1656c6f385465f399431cd1cae1ad4eb11827932524eb20b6c54082fae",
+      "bytes": 681
+    },
+    {
+      "path": "build-week/bw12/owner-approval-template.json",
+      "sha256": "efd2712b2e6cba17a28eb55be477188a0c4ba3f92b80070b6bfee488a4856d34",
+      "bytes": 174
+    },
+    {
+      "path": "build-week/bw12/owner-review-package.md",
+      "sha256": "6f0b8a9d4b69356e80c8afba4356bdb346b5a72f8054958fa558a28fab460a8a",
+      "bytes": 1822
+    },
+    {
+      "path": "build-week/bw12/parent-artifact-hashes.json",
+      "sha256": "37c873cdc70ff6972090ea0d069c21d4580404f8cfc07bb5789fc3170a04e446",
+      "bytes": 1470
+    },
+    {
+      "path": "build-week/bw12/parent-baseline.json",
+      "sha256": "95334abf6896caef5783c19111630e18e74a292926759ec8e40ffec358a1f441",
+      "bytes": 931
+    },
+    {
+      "path": "build-week/bw12/prepared-review-density-audit.json",
+      "sha256": "0f4270da9e5c25062c3477a71c7c899d20da334f112510cefdbedad2b65ac36c",
+      "bytes": 339
+    },
+    {
+      "path": "build-week/bw12/prepared-review-density-results.json",
+      "sha256": "91ca56ef76ca6f75c17b9f5d23cf6f5a8cf071db6f30dac1e3ce50bb273a9c1f",
+      "bytes": 513
+    },
+    {
+      "path": "build-week/bw12/prepared-review-readability-results.json",
+      "sha256": "ec200ce84e170f49126817712ee984966d1875e4534e422eb1765a25dae65d1f",
+      "bytes": 544
+    },
+    {
+      "path": "build-week/bw12/process-lock-audit.json",
+      "sha256": "50d785e2b9a084d9fc23edc181e5d556c9a98c0ba8a4a9102e420dd97f9258e4",
+      "bytes": 318
+    },
+    {
+      "path": "build-week/bw12/scannability-audit.json",
+      "sha256": "d6a2e231cdf8cbeab428e20f13a13e26f06827a2e158dff4436778827591a49e",
+      "bytes": 459
+    },
+    {
+      "path": "build-week/bw12/score-and-artifact-integrity.json",
+      "sha256": "1a7a98932f3c4e40e32028f4098d0202dce30a1b44bfb17ae01c2080d3d88c9e",
+      "bytes": 1739
+    },
+    {
+      "path": "build-week/bw12/screenshot-manifest.json",
+      "sha256": "b99b974d4283f6e8b92c61d1e779581f3194da08d0cce23978df4202b523ea99",
+      "bytes": 33939
+    },
+    {
+      "path": "build-week/bw12/study-completion-ux-results.json",
+      "sha256": "89ae59e82b7419aaa976a0fe9d6b28d820aee9eed32c330f92476c0e25bea7b6",
+      "bytes": 892
+    },
+    {
+      "path": "build-week/bw12/study-export-contract.json",
+      "sha256": "5800112f4e3f67a319f1cc90765d8d4bc98cf8524de4e49bbef68d2aec70c679",
+      "bytes": 778
+    },
+    {
+      "path": "build-week/bw12/study-export-ux-audit.json",
+      "sha256": "4af84fc42f4d19a5325ced123d028d7c169b6732e0fc87df82437d5a4c5bba9e",
+      "bytes": 320
+    },
+    {
+      "path": "build-week/bw12/study-export-validation.json",
+      "sha256": "b93eeda8626b48363b70ae70441d2451441a92c4a22a891240bbec093bd222e1",
+      "bytes": 810
+    },
+    {
+      "path": "build-week/bw12/typography-audit.json",
+      "sha256": "aa9d38256569a4d7e5f667be87d7debc3216e5da4c87a3801b9f05c565f91ce7",
+      "bytes": 442
+    },
+    {
+      "path": "build-week/bw12/user-language-audit.json",
+      "sha256": "a37231fede0a2d8acaa744466aad75c4e32a4f4d1b0329589347f29b5156b948",
+      "bytes": 417
+    },
+    {
+      "path": "build-week/bw12/validation-matrix.json",
+      "sha256": "37a627435eceab424103c85558ca58d6b61d3678afca3ffdfbd77a7387874462",
+      "bytes": 676
+    },
+    {
+      "path": "build-week/bw12/video-final-verification.json",
+      "sha256": "ab5d7e0c4d0a0702c5db44c1c27413a546b68f759a3c0b94574f8773ecbb2350",
+      "bytes": 3516
+    },
+    {
+      "path": "build-week/bw12/visual-regression-results.json",
+      "sha256": "bd438ac9617e7eae38bcdd1b462eb8c1f954e606b319c170ccc3720f5706b5b2",
+      "bytes": 468
+    }
+  ],
+  "screenshotManifest": "build-week/bw12/screenshot-manifest.json",
+  "videoManifest": "build-week/video/jobpilot-owner-polish-recording-manifest.json",
+  "ownerApproved": false,
+  "devpostSubmitted": false
+}

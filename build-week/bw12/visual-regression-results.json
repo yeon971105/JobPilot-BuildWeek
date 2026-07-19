@@ -1,0 +1,20 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "screenshots": 65,
+  "requiredViewports": [
+    "1440x900",
+    "1024x768",
+    "390x844",
+    "320x700"
+  ],
+  "horizontalOverflowFailures": 0,
+  "clippedDrawerFailures": 0,
+  "clippedExportButtonFailures": 0,
+  "internalIdFailures": 0,
+  "rawEnumFailures": 0,
+  "h1Failures": 0,
+  "primaryActionFailures": 0,
+  "result": "PASS"
+}

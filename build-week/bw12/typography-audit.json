@@ -1,0 +1,19 @@
+{
+  "workItem": "JP-BW12",
+  "generatedAt": "2026-07-19T01:39:29.055Z",
+  "sourceCommit": "138ef06874949e9e89ba809786b634ed0e2d451f",
+  "viewports": [
+    "1440x900",
+    "1024x768",
+    "390x844",
+    "320x700"
+  ],
+  "bodyMinimumPx": 16,
+  "supportingBodyMinimumPx": 15,
+  "metadataMinimumPx": 14,
+  "buttonMinimumPx": 15,
+  "sectionHeadingMinimumPx": 22,
+  "smallestVisibleNonEssentialPx": 14,
+  "clippedHeadings": 0,
+  "result": "PASS"
+}

@@ -1,5 +1,11 @@
 # JobPilot Decision Utility Study protocol V2
 
+## JP-BW12 export and interpretation note
+
+Every completed answer auto-saves in the current browser. Preview, Pilot, and Final expose phase-specific CSV and JSON downloads, an anonymous Session ID, and clear/reset controls. Preview, Pilot, and Final browser-test files carry exclusion status and are rejected by the authentic participant combiner. Only an adult-confirmed authentic Final export can pass that gate.
+
+Factual accuracy contains required experience, preferred experience, work arrangement, and weakest-supported qualification. Apply / Review Further / Skip is a decision-alignment comparison against a frozen reference, not objective correctness. Confidence and clarity remain self-reported measures.
+
 Status: **READY_NOT_RUN**
 
 Actual participant count: **0**

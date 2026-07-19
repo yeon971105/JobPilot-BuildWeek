@@ -1,5 +1,9 @@
 # JobPilot Judge Guide — Impact RC
 
+## JP-BW12 review focus
+
+Open Northstar and choose **Application Strategy**. The default review is intentionally concise, uses human capability and evidence names, and keeps provenance, limitations, questions, and technical references collapsed. Primary-UI internal IDs and raw enums are zero. In Study Preview, complete the two-role flow and verify that Preview CSV and JSON remain visible at 320×700 and are labeled as excluded from participant evidence.
+
 The primary path requires no login, key, database, Ollama installation, browser location permission, or real resume. All interactive judge roles and employer destinations are synthetic.
 
 ## Fast product path: about 90 seconds
@@ -57,6 +61,6 @@ Actual participant count is `0`; the harness is `READY_NOT_RUN`. Minimum target:
 
 ## Owner-review preview
 
-Expected local preview: `http://127.0.0.1:3206/`.
+Expected local preview: `http://127.0.0.1:3210/`.
 
 This is a development RC. Do not deploy, publish the video, submit Devpost, or create a final release tag without explicit owner approval.

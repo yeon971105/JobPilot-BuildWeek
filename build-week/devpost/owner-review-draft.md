@@ -1,5 +1,13 @@
 # JobPilot — Devpost owner-review draft
 
+## JP-BW12 owner-polish update
+
+JobPilot now translates all machine IDs and enums before they reach primary UI. The concise Application Strategy answers whether to act, why, what to emphasize, what to prepare, and what to clarify, while grounded evidence, prepared GPT-5.6 provenance, and limitations remain available on demand. Prepared output is not live inference and does not change AI Fit V2.2.
+
+The Decision Utility Study now auto-saves locally and exports anonymous phase-labeled CSV and JSON. Factual accuracy and decision alignment are separate. Preview, Pilot, and browser-test Final exports are excluded from participant analysis. The authentic study remains `READY_NOT_RUN` with zero participants, so this draft claims no human-impact result.
+
+Owner-review video: `build-week/video/jobpilot-owner-polish-rc1.mp4`. Unlisted URL remains pending authenticated upload. This text remains a draft and must not be submitted before owner approval.
+
 Status: **Draft only. Not submitted.**
 
 ## Tagline
