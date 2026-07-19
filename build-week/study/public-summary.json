@@ -1,13 +1,43 @@
 {
   "schemaVersion": "jobpilot.bw10.public-impact-summary.v1",
-  "status": "READY_NOT_RUN",
-  "humanParticipantCount": 0,
+  "status": "COMPLETE_MINIMUM",
+  "humanParticipantCount": 5,
   "minimumParticipantTarget": 5,
   "preferredParticipantTarget": "8–12",
-  "summary": "Human sessions have not started. No usability result is claimed.",
-  "metrics": null,
+  "summary": "Minimum collection is complete. Results are directional early-usability evidence, not a population or hiring-outcome claim.",
+  "metrics": {
+    "rawPostingMedianSeconds": 39,
+    "jobPilotMedianSeconds": 18,
+    "rawPostingMeanSeconds": 36.4,
+    "jobPilotMeanSeconds": 20.8,
+    "factualAccuracyPercent": {
+      "rawPosting": 75,
+      "jobPilot": 100
+    },
+    "pairedMedianTimeDifferenceSecondsJobPilotMinusRaw": -12,
+    "pairedMedianPercentageTimeChangeJobPilotVsRaw": -33.33,
+    "requiredExperienceAccuracy": {
+      "rawPosting": 100,
+      "jobPilot": 100
+    },
+    "preferredExperienceAccuracy": {
+      "rawPosting": 80,
+      "jobPilot": 100
+    },
+    "workModeAccuracy": {
+      "rawPosting": 100,
+      "jobPilot": 100
+    },
+    "biggestGapAccuracy": {
+      "rawPosting": 20,
+      "jobPilot": 100
+    },
+    "decisionAgreementPercent": 20,
+    "confidenceDifference": 2.2,
+    "transparencyDifference": 2.6
+  },
   "statisticalSignificanceClaim": false,
   "fabricatedParticipants": 0,
-  "generatedAt": "2026-07-18T23:46:28.808Z",
-  "sourceSha256": "a3c51bf3f6c43669e6c0c0a507f714837d08d6490b0f5ea9af17f3167cc35129"
+  "generatedAt": "2026-07-19T03:25:40.247Z",
+  "sourceSha256": "ef3e72cb41e8f573031101609afafd00d7fe1a0fe3e1bab8927d24f3315dd0cc"
 }

@@ -29,6 +29,7 @@ Status: **${analysis.status}**
 | Measure | Raw Posting | JobPilot | Paired JobPilot − Raw |
 | --- | ---: | ---: | ---: |
 | Median completion time (seconds) | ${display(analysis.conditions.RAW_POSTING.medianDecisionTimeSeconds)} | ${display(analysis.conditions.JOBPILOT.medianDecisionTimeSeconds)} | ${display(analysis.paired.medianTimeDifferenceSecondsJobPilotMinusRaw)} |
+| Mean completion time (seconds) | ${display(analysis.conditions.RAW_POSTING.meanDecisionTimeSeconds)} | ${display(analysis.conditions.JOBPILOT.meanDecisionTimeSeconds)} | â€” |
 | Median percentage time change | — | — | ${display(analysis.paired.medianPercentageTimeChangeJobPilotVsRaw)}% |
 | Required-experience accuracy (%) | ${display(analysis.conditions.RAW_POSTING.requiredExperienceAccuracyPercent)} | ${display(analysis.conditions.JOBPILOT.requiredExperienceAccuracyPercent)} | ${display(analysis.paired.requiredExperienceAccuracyDifferencePoints)} pp |
 | Preferred-experience accuracy (%) | ${display(analysis.conditions.RAW_POSTING.preferredExperienceAccuracyPercent)} | ${display(analysis.conditions.JOBPILOT.preferredExperienceAccuracyPercent)} | ${display(analysis.paired.preferredExperienceAccuracyDifferencePoints)} pp |
@@ -39,7 +40,7 @@ Status: **${analysis.status}**
 
 Apply / Review / Skip agreement: ${display(analysis.paired.decisionAgreementPercent)}%.
 
-Bootstrap status: ${analysis.bootstrapStatus}. Statistical-significance claim: **No**.
+Confidence intervals and statistical-significance testing: **Not run for this fixed n=5 directional sample**.
 
 ${analysis.inferenceBoundary}
 `;
@@ -64,7 +65,7 @@ No participant-level records or anonymous participant IDs are published.
     completePairedSessions: analysis.humanParticipantCount,
     syntheticToolingRowsAccepted: 0,
     fabricatedParticipantRows: 0,
-    bootstrap: { status: analysis.bootstrapStatus, iterations: analysis.bootstrapConfidenceIntervals ? 5_000 : 0, deterministicSeed: analysis.bootstrapConfidenceIntervals ? 2_026_071_8 : null },
+    inference: { status: analysis.bootstrapStatus, confidenceIntervalsReported: false, statisticalSignificanceTested: false },
     claimBoundary: analysis.inferenceBoundary,
   };
   await Promise.all([

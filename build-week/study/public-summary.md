@@ -1,10 +1,10 @@
 # JobPilot early usability study
 
-Status: **READY_NOT_RUN**  
-Actual complete participants: **0**
+Status: **COMPLETE_MINIMUM**  
+Actual complete participants: **5**
 
-Human sessions have not started. No usability result is claimed.
+Minimum collection is complete. Results are directional early-usability evidence, not a population or hiring-outcome claim.
 
-No public impact metric is published because fewer than five authentic complete participants are available.
+Directional usability evidence from a small sample; not hiring-outcome calibration.
 
 No participant-level records or anonymous participant IDs are published.

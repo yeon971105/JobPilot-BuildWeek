@@ -12,7 +12,9 @@ Human participant sessions have not run. Replace no values manually; use `npm ru
 - required-experience, preferred-experience, work-mode, and biggest-gap accuracy by condition;
 - Apply / Review / Skip agreement;
 - confidence and transparency differences;
-- bootstrap confidence intervals when at least five complete sessions permit them;
-- explicit no-significance and directional-evidence limitations.
+- the fixed condition-order limitation;
+- explicit directional-evidence and no-significance boundaries.
+
+Do not calculate or publish confidence intervals or inferential significance tests for the fixed n=5 evidence lock.
 
 Do not include names, contact details, resumes, demographics, employment status, health data, personal histories, hiring outcomes, employer behavior, or population-level claims.

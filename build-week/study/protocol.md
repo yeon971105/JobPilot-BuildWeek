@@ -6,9 +6,9 @@ Every completed answer auto-saves in the current browser. Preview, Pilot, and Fi
 
 Factual accuracy contains required experience, preferred experience, work arrangement, and weakest-supported qualification. Apply / Review Further / Skip is a decision-alignment comparison against a frozen reference, not objective correctness. Confidence and clarity remain self-reported measures.
 
-Status: **READY_NOT_RUN**
+Status: **COMPLETE_MINIMUM**
 
-Actual participant count: **0**
+Actual participant count: **5**
 
 Protocol: `jobpilot-decision-utility.v2`
 
@@ -57,3 +57,9 @@ npm run study:analyze -- build-week/study/validated/combined.csv
 ```
 
 Do not edit records around the validator. No public metric is allowed below five authentic complete FINAL sessions. Any published result is directional usability evidence, not hiring-outcome calibration or proof of employment success.
+
+## Authentic evidence lock
+
+Five adult-confirmed Final sessions passed the validator: ten human condition rows, zero rejected files, zero fabricated rows, and zero Preview, Pilot, or tooling rows counted as humans. Participant exports and the combined CSV remain local and ignored by Git.
+
+All participants completed the traditional posting condition first and JobPilot second. Assignment groups counterbalanced which synthetic role appeared in each condition, and different roles prevented same-role carryover, but condition order was not counterbalanced. Practice or order effects may therefore contribute to the observed difference. This fixed n=5 result is directional; no confidence interval or statistical-significance test is reported.

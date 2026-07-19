@@ -60,6 +60,7 @@ export type ImpactStudyAnalysis = {
   conditions: Record<StudyCondition, {
     participantCount: number;
     medianDecisionTimeSeconds: number | null;
+    meanDecisionTimeSeconds: number | null;
     requiredExperienceAccuracyPercent: number | null;
     preferredExperienceAccuracyPercent: number | null;
     workModeAccuracyPercent: number | null;
@@ -82,7 +83,7 @@ export type ImpactStudyAnalysis = {
     meanTransparencyDifferenceJobPilotMinusRaw: number | null;
   };
   bootstrapConfidenceIntervals: Record<string, ConfidenceInterval> | null;
-  bootstrapStatus: "NOT_AVAILABLE_NO_PARTICIPANTS" | "NOT_AVAILABLE_BELOW_MINIMUM" | "AVAILABLE";
+  bootstrapStatus: "NOT_AVAILABLE_NO_PARTICIPANTS" | "NOT_AVAILABLE_BELOW_MINIMUM" | "NOT_RUN_DIRECTIONAL_SAMPLE";
   statisticalSignificanceClaim: false;
   inferenceBoundary: string;
   validation: { duplicateParticipantConditions: 0; incompleteParticipantSessions: 0; malformedRows: 0; prohibitedColumns: 0; fabricatedParticipants: 0 };
@@ -206,6 +207,7 @@ function summarizeCondition(rows: ImpactRow[]) {
   return {
     participantCount: rows.length,
     medianDecisionTimeSeconds: median(rows.map((row) => row.taskSeconds)),
+    meanDecisionTimeSeconds: mean(rows.map((row) => row.taskSeconds)) === null ? null : round(mean(rows.map((row) => row.taskSeconds))!, 1),
     requiredExperienceAccuracyPercent: percentage(rows.map((row) => row.requiredCorrect)),
     preferredExperienceAccuracyPercent: percentage(rows.map((row) => row.preferredCorrect)),
     workModeAccuracyPercent: percentage(rows.map((row) => row.workCorrect)),
@@ -222,6 +224,7 @@ function summarizeCondition(rows: ImpactRow[]) {
 }
 
 export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIterations?: number; bootstrapSeed?: number } = {}): ImpactStudyAnalysis {
+  void options;
   const parsed = parseStudyCsv(csv);
   const expectedHeaders = [...DECISION_STUDY_CSV_HEADERS];
   const headers = parsed[0] ?? [];
@@ -317,8 +320,6 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
   const raw = pairs.map((pair) => pair.RAW_POSTING);
   const jobPilot = pairs.map((pair) => pair.JOBPILOT);
   const paired = pairedMetrics(pairs);
-  const iterations = options.bootstrapIterations ?? 5_000;
-  const bootstrapAvailable = participantCount >= 5;
   return {
     schemaVersion: "jobpilot.bw9.impact-analysis.v1",
     status,
@@ -330,10 +331,10 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
     conditionOrderCounts: { RAW_POSTING_THEN_JOBPILOT: pairs.length },
     conditions: { RAW_POSTING: summarizeCondition(raw), JOBPILOT: summarizeCondition(jobPilot) },
     paired,
-    bootstrapConfidenceIntervals: bootstrapAvailable ? bootstrapIntervals(pairs, iterations, options.bootstrapSeed ?? 2_026_071_8) : null,
-    bootstrapStatus: participantCount === 0 ? "NOT_AVAILABLE_NO_PARTICIPANTS" : bootstrapAvailable ? "AVAILABLE" : "NOT_AVAILABLE_BELOW_MINIMUM",
+    bootstrapConfidenceIntervals: null,
+    bootstrapStatus: participantCount === 0 ? "NOT_AVAILABLE_NO_PARTICIPANTS" : participantCount < 5 ? "NOT_AVAILABLE_BELOW_MINIMUM" : "NOT_RUN_DIRECTIONAL_SAMPLE",
     statisticalSignificanceClaim: false,
-    inferenceBoundary: participantCount < 5 ? "Human results are withheld below the minimum target. No significance or population-level claim is permitted." : "Directional early-usability evidence only. Bootstrap intervals describe this small sample; no statistical-significance claim is made.",
+    inferenceBoundary: participantCount < 5 ? "Human results are withheld below the minimum target. No significance or population-level claim is permitted." : "Directional usability evidence from a fixed sample of five. No confidence interval or statistical-significance test is reported; the fixed condition order may contribute an order effect.",
     validation: { duplicateParticipantConditions: 0, incompleteParticipantSessions: 0, malformedRows: 0, prohibitedColumns: 0, fabricatedParticipants: 0 },
   };
 }
@@ -354,6 +355,12 @@ export function publicImpactSummary(analysis: ImpactStudyAnalysis) {
     metrics: publishMetrics ? {
       rawPostingMedianSeconds: analysis.conditions.RAW_POSTING.medianDecisionTimeSeconds,
       jobPilotMedianSeconds: analysis.conditions.JOBPILOT.medianDecisionTimeSeconds,
+      rawPostingMeanSeconds: analysis.conditions.RAW_POSTING.meanDecisionTimeSeconds,
+      jobPilotMeanSeconds: analysis.conditions.JOBPILOT.meanDecisionTimeSeconds,
+      factualAccuracyPercent: {
+        rawPosting: round(mean([analysis.conditions.RAW_POSTING.requiredExperienceAccuracyPercent, analysis.conditions.RAW_POSTING.preferredExperienceAccuracyPercent, analysis.conditions.RAW_POSTING.workModeAccuracyPercent, analysis.conditions.RAW_POSTING.biggestGapAccuracyPercent].filter((value): value is number => value !== null)) ?? 0),
+        jobPilot: round(mean([analysis.conditions.JOBPILOT.requiredExperienceAccuracyPercent, analysis.conditions.JOBPILOT.preferredExperienceAccuracyPercent, analysis.conditions.JOBPILOT.workModeAccuracyPercent, analysis.conditions.JOBPILOT.biggestGapAccuracyPercent].filter((value): value is number => value !== null)) ?? 0),
+      },
       pairedMedianTimeDifferenceSecondsJobPilotMinusRaw: analysis.paired.medianTimeDifferenceSecondsJobPilotMinusRaw,
       pairedMedianPercentageTimeChangeJobPilotVsRaw: analysis.paired.medianPercentageTimeChangeJobPilotVsRaw,
       requiredExperienceAccuracy: { rawPosting: analysis.conditions.RAW_POSTING.requiredExperienceAccuracyPercent, jobPilot: analysis.conditions.JOBPILOT.requiredExperienceAccuracyPercent },
@@ -363,7 +370,6 @@ export function publicImpactSummary(analysis: ImpactStudyAnalysis) {
       decisionAgreementPercent: analysis.paired.decisionAgreementPercent,
       confidenceDifference: analysis.paired.meanConfidenceDifferenceJobPilotMinusRaw,
       transparencyDifference: analysis.paired.meanTransparencyDifferenceJobPilotMinusRaw,
-      bootstrapConfidenceIntervals: analysis.bootstrapConfidenceIntervals,
     } : null,
     statisticalSignificanceClaim: false,
     fabricatedParticipants: 0,

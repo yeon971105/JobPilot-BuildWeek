@@ -1,20 +1,20 @@
 {
   "schemaVersion": "jobpilot.bw10.analysis-provenance.v1",
-  "generatedAt": "2026-07-18T23:46:28.808Z",
+  "generatedAt": "2026-07-19T03:25:40.247Z",
   "analyzer": "src/lib/impact-study.ts",
   "command": "npm run study:analyze -- build-week/study/validated/combined.csv",
   "source": {
     "path": "build-week/study/validated/combined.csv",
-    "sha256": "a3c51bf3f6c43669e6c0c0a507f714837d08d6490b0f5ea9af17f3167cc35129"
+    "sha256": "ef3e72cb41e8f573031101609afafd00d7fe1a0fe3e1bab8927d24f3315dd0cc"
   },
-  "actualParticipantCount": 0,
-  "completePairedSessions": 0,
+  "actualParticipantCount": 5,
+  "completePairedSessions": 5,
   "syntheticToolingRowsAccepted": 0,
   "fabricatedParticipantRows": 0,
-  "bootstrap": {
-    "status": "NOT_AVAILABLE_NO_PARTICIPANTS",
-    "iterations": 0,
-    "deterministicSeed": null
+  "inference": {
+    "status": "NOT_RUN_DIRECTIONAL_SAMPLE",
+    "confidenceIntervalsReported": false,
+    "statisticalSignificanceTested": false
   },
-  "claimBoundary": "Human results are withheld below the minimum target. No significance or population-level claim is permitted."
+  "claimBoundary": "Directional usability evidence from a fixed sample of five. No confidence interval or statistical-significance test is reported; the fixed condition order may contribute an order effect."
 }

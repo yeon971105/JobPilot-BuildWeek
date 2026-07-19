@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "jobpilot.bw13.authentic-study-aggregate.v1",
+  "status": "AUTHENTIC_DIRECTIONAL_USABILITY_EVIDENCE",
+  "evidenceLabel": "Moderated directional usability study, n=5",
+  "protocolVersion": "jobpilot-decision-utility.v2",
+  "generatedAt": "2026-07-19T03:20:10.224Z",
+  "sourceCombinedSha256": "ef3e72cb41e8f573031101609afafd00d7fe1a0fe3e1bab8927d24f3315dd0cc",
+  "participantCount": 5,
+  "humanRows": 10,
+  "acceptedFiles": 5,
+  "rejectedFiles": 0,
+  "fabricatedParticipantRows": 0,
+  "dryRunRowsCountedAsHumans": 0,
+  "roles": [
+    { "id": "role-a-analytics-operations-engineer", "name": "Analytics Operations Engineer" },
+    { "id": "role-b-data-enablement-engineer", "name": "Data Enablement Engineer" }
+  ],
+  "assignmentGroups": { "GROUP_1": 2, "GROUP_2": 3 },
+  "conditionOrder": { "RAW_POSTING_THEN_JOBPILOT": 5 },
+  "conditions": {
+    "traditionalPosting": {
+      "participants": 5,
+      "medianTaskTimeSeconds": 39,
+      "meanTaskTimeSeconds": 36.4,
+      "factualAccuracy": { "correct": 15, "total": 20, "percent": 75 },
+      "decisionAlignment": { "aligned": 2, "total": 5, "percent": 40 },
+      "meanConfidenceOutOf7": 3.8,
+      "meanClarityOutOf7": 3.6
+    },
+    "jobPilot": {
+      "participants": 5,
+      "medianTaskTimeSeconds": 18,
+      "meanTaskTimeSeconds": 20.8,
+      "factualAccuracy": { "correct": 20, "total": 20, "percent": 100 },
+      "decisionAlignment": { "aligned": 5, "total": 5, "percent": 100 },
+      "meanConfidenceOutOf7": 6.0,
+      "meanClarityOutOf7": 6.2
+    }
+  },
+  "limitation": "All participants completed the traditional posting condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference.",
+  "participantLevelDataPublished": false,
+  "confidenceIntervalsReported": false,
+  "statisticalSignificanceTested": false
+}

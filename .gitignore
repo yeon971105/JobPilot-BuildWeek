@@ -52,6 +52,16 @@ tmp*/
 /.jobpilot-artifacts-clean-replay/
 /.edg7-python/
 
+# participant-level Decision Utility evidence (local only)
+/build-week/study/inbox/**
+!/build-week/study/inbox/.gitignore
+!/build-week/study/inbox/README.md
+/build-week/study/validated/combined.csv
+/build-week/study/validated/combination-manifest.json
+/build-week/study/validated/local-*.json
+jobpilot-study-*.csv
+jobpilot-study-*.json
+
 # build outputs
 /dist
 /dist/

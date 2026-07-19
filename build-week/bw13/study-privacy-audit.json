@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "jobpilot.bw13.study-privacy-audit.v1",
+  "auditedAt": "2026-07-19T03:20:10.224Z",
+  "participantFilesTracked": 0,
+  "participantFilesStaged": 0,
+  "participantIdsInPublicArtifacts": 0,
+  "participantRowsInPublicArtifacts": 0,
+  "individualAnswersInPublicArtifacts": 0,
+  "individualTimesInPublicArtifacts": 0,
+  "participantFilenamesInPublicArtifacts": 0,
+  "participantLevelTimestampsInPublicArtifacts": 0,
+  "combinedCsvInPublicBuild": 0,
+  "combinedCsvInArtifactIndex": 0,
+  "publicParticipantData": false,
+  "result": "PASS"
+}
