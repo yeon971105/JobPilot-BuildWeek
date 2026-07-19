@@ -39,8 +39,10 @@ describe("JP-BW11R Decision Utility Study V2 harness", () => {
     const component = readFileSync(resolve("src/components/study/decision-utility-study.tsx"), "utf8");
     const navigation = readFileSync(resolve("src/components/demo/site-navigation.tsx"), "utf8");
     expect(component).toContain("window.localStorage");
-    expect(component).toContain("Export JSON");
-    expect(component).toContain("Start Pilot Mode");
+    expect(component).toContain("Download Preview JSON");
+    expect(component).toContain("Download Pilot JSON");
+    expect(component).toContain("Download Study JSON");
+    expect(component).toContain("Saved in this browser");
     expect(component).not.toMatch(/\bfetch\s*\(/);
     expect(component).not.toMatch(/XMLHttpRequest|sendBeacon|<form|action=/);
     expect(navigation).not.toContain("/study/decision-utility");

@@ -85,11 +85,11 @@ export function humanizeMachineValue(value: string | null | undefined, fallback 
 }
 
 export function getRequirementDisplayLabel(id: string | null | undefined, canonicalTitle?: string | null) {
-  return canonicalTitle?.trim() || (id ? requirementLabels.get(id) : undefined) || humanizeMachineValue(id, "Role requirement");
+  return canonicalTitle?.trim() || (id ? knownLabels[id] : undefined) || (id ? requirementLabels.get(id) : undefined) || humanizeMachineValue(id, "Role requirement");
 }
 
 export function getEvidenceDisplayLabel(id: string | null | undefined, canonicalTitle?: string | null) {
-  return canonicalTitle?.trim() || (id ? evidenceLabels.get(id) : undefined) || humanizeMachineValue(id, "Candidate evidence");
+  return canonicalTitle?.trim() || (id ? knownLabels[id] : undefined) || (id ? evidenceLabels.get(id) : undefined) || humanizeMachineValue(id, "Candidate evidence");
 }
 
 export function getMatchDisplayLabel(value: MatchClass | string | null | undefined) {

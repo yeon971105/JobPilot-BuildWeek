@@ -9,6 +9,7 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
+    ".jobpilot-artifacts-clean-replay/**",
     ".open-next/**",
     ".wrangler/**",
     "dist/**",

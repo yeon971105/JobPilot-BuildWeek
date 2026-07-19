@@ -78,7 +78,7 @@ describe.skipIf(!baseUrl)("Tailwind v4 production CSS pipeline (run through npm 
     expect(css).toContain(".lg\\:grid-cols-");
     expect(css).toContain(".absolute{position:absolute}");
 
-    const evidence = JSON.parse(readFileSync(resolve(root, "build-week/bw11r/css-pipeline-results.json"), "utf8")) as BrowserEvidence;
+    const evidence = JSON.parse(readFileSync(resolve(root, "build-week/bw12/css-pipeline-results.json"), "utf8")) as BrowserEvidence;
     const cssHash = createHash("sha256").update(css).digest("hex");
     expect(cssHash).toBe(evidence.certifiedCssBundleSha256);
     expect(evidence.landing.document).toEqual({ horizontalOverflow: 0, h1Count: 1 });
@@ -114,7 +114,7 @@ describe.skipIf(!baseUrl)("Tailwind v4 production CSS pipeline (run through npm 
     expect(cssPixels(cardStyle.borderRadius)).toBeGreaterThanOrEqual(18);
     expect(jobsWindow.getComputedStyle(filterToolbar).display).toBe("flex");
 
-    const evidence = JSON.parse(readFileSync(resolve(root, "build-week/bw11r/css-pipeline-results.json"), "utf8")) as BrowserEvidence;
+    const evidence = JSON.parse(readFileSync(resolve(root, "build-week/bw12/css-pipeline-results.json"), "utf8")) as BrowserEvidence;
     expect(evidence.jobs.document).toEqual({ horizontalOverflow: 0, h1Count: 1 });
     expect(evidence.jobs.card.paddingPx).toBeGreaterThanOrEqual(18);
     expect(evidence.jobs.card.borderRadiusPx).toBeGreaterThanOrEqual(18);

@@ -60,8 +60,9 @@ describe("no-key judge release contract", () => {
     expect(detail).toContain("Prepared synthetic analysis");
     expect(detail).toContain("Deterministic AI Fit V2.2");
     expect(detail).toContain("See a Score Change");
-    expect(detail).toContain("GPT-5.6 — Prepared Review");
-    expect(detail).toContain("not a live API response");
+    expect(detail).toContain("Prepared review");
+    expect(detail).toContain("GPT-5.6 in Codex");
+    expect(detail).toContain("Not a live API response");
     expect(detail).not.toContain("DetailSection letter=");
   });
 });
