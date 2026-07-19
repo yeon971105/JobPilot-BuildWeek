@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "jobpilot.bw12.parent-baseline.v1",
+  "capturedAt": "2026-07-18T17:29:00-07:00",
+  "verifiedBeforeFirstWrite": true,
+  "repositoryRoot": "C:/Users/Jewon/Desktop/JobPilot-BuildWeek-Submission",
+  "branch": "build-week/jobpilot-2026",
+  "localHead": "fa2ae44117ae9dea12eeb1081e271223b2b896d9",
+  "remoteHead": "fa2ae44117ae9dea12eeb1081e271223b2b896d9",
+  "parentTag": "build-week-2026-final-product-rc1",
+  "localTagTarget": "fa2ae44117ae9dea12eeb1081e271223b2b896d9",
+  "remoteTagTarget": "fa2ae44117ae9dea12eeb1081e271223b2b896d9",
+  "worktreeStatus": "CLEAN",
+  "parentReproduction": "PASS_EXACT",
+  "tests": { "expectedPassed": 117, "authorizedSkips": 2 },
+  "scoreReceiptChecks": 32,
+  "openAiApiRequests": 0,
+  "openAiApiCostUsd": 0,
+  "applicationSubmissions": 0,
+  "automaticAppliedTransitions": 0,
+  "study": { "state": "READY_NOT_RUN", "authenticFinalParticipants": 0, "fabricatedParticipants": 0 }
+}

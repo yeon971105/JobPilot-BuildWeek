@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "jobpilot.bw12.process-lock-audit.v1",
+  "capturedBeforeMutation": true,
+  "activeGitOperations": 0,
+  "gitLocks": 0,
+  "activeModelRequests": 0,
+  "pendingTransactions": 0,
+  "preExistingPortsPreserved": [3000, 3209],
+  "approvalPreviewPort": 3210,
+  "approvalPreviewInitiallyListening": false
+}

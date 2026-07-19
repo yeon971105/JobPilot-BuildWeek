@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "jobpilot.bw12.parent-artifact-hashes.v1",
+  "sourceCommit": "fa2ae44117ae9dea12eeb1081e271223b2b896d9",
+  "video": { "path": "build-week/video/jobpilot-final-product-rc1.mp4", "sha256": "82edffe5edaabd4a83fb4a7c9772cb880327aa5a97d624494d897f6b407f2f9a" },
+  "preparedArtifacts": {
+    "ambiguity-review.json": "9bfc2b4e7a401d0c65817a0451b0c7b1accc0f029c76200d84df42149bd68527",
+    "analysis-challenge.json": "0d6fc734fd3d33aed6dce8d4e041b1a8edcba1d1cb1fabf1f437355b985f6a90",
+    "application-strategy.json": "4e4345f1a99a0fd91739494241fcd5d93d777bf2cfd982401fb660445b3a8c2d",
+    "manifest.json": "ee9e9e3493ebc63486f122a7366724dc0e60c6e971cbde0bb3f07bc164f71bb1",
+    "strategy-comparison.json": "209d40c69b82d28043a4a2011f4c384e5cb94a0c03446e6fba5b803195949791"
+  },
+  "receiptHashes": {
+    "northstar-applied-ai-solutions-engineer": "62fdbaaf07763a5d82a312ef00647f98f111c83aa9ed683395f92723996a6b7e",
+    "alder-data-platform-engineer": "9258d1e87146183a639ecec54a79c13bc58024ce730502265110c065535f4b1e",
+    "harbor-product-data-analyst": "bcf412638bdb12870f80a97baa37b94ff386aa306ac2a75e37d0d238c4162487",
+    "meridian-ml-infrastructure-engineer": "094083cee01be779ca26be0abc28d7b2029800f422b170ee1922e20c934f91f5",
+    "juniper-customer-ai-enablement-lead": "b9c6ed8a868d2b29d4ae9391006baadf279137fcfba4a80cf7210ec51262b11f",
+    "mosaic-junior-software-engineer": "6b9f91dbcb0462df4b3081bd2e103246041073f166527be1e8101874752d008b"
+  }
+}

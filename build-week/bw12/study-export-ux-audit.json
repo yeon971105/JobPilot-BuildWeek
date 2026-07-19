@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "jobpilot.bw12.study-export-ux-audit.v1",
+  "baseline": "FAIL_REQUIRES_CORRECTION",
+  "previewCsvAvailable": false,
+  "previewJsonAvailable": false,
+  "persistentSaveStatus": false,
+  "humanReadableResults": false,
+  "decisionSeparatedFromFactualAccuracy": false,
+  "clearDataConfirmation": false
+}

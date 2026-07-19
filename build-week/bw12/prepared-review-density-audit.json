@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "jobpilot.bw12.prepared-review-density-audit.v1",
+  "baseline": "FAIL_REQUIRES_CORRECTION",
+  "equalWeightCards": 6,
+  "provenanceExpandedByDefault": true,
+  "limitationsExpandedByDefault": true,
+  "rawEvidenceArrowSyntax": true,
+  "targetDefaultVisibleWordsMaximum": 230,
+  "targetExpandedVisibleWordsMaximum": 420
+}

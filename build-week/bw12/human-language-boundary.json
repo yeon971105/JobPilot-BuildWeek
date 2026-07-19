@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "jobpilot.bw12.human-language-boundary.v1",
+  "resolver": "src/lib/display-language.ts",
+  "resolutionOrder": ["canonical title", "known display-name mapping", "safe humanized fallback"],
+  "machineOnlySurfaces": ["prepared artifact JSON", "Score Receipt JSON", "Technical Ledger", "developer reports", "explicit Technical details disclosures"],
+  "primaryUiInternalIdTarget": 0,
+  "fallbackMayReturnRawValue": false
+}

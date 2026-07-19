@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "jobpilot.bw12.id-display-mapping.v1",
+  "examples": {
+    "r-ha-sql": "SQL analysis",
+    "r-ha-metrics": "Product metric design",
+    "r-ha-communication": "Decision communication",
+    "e-product": "Product analytics experience",
+    "e-python": "Python engineering experience",
+    "MATCHED": "Strong evidence",
+    "PARTIAL": "Some evidence",
+    "NOT_EVIDENCED": "No evidence found",
+    "CORE": "Core requirement",
+    "PREFERRED": "Preferred qualification"
+  }
+}

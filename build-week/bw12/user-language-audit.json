@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "jobpilot.bw12.user-language-audit.v1",
+  "baseline": "FAIL_REQUIRES_CORRECTION",
+  "findings": [
+    "Application Strategy exposed requirement and evidence IDs.",
+    "Prepared critique and ambiguity review exposed raw IDs and match enums.",
+    "Study completion exposed raw answer codes and machine condition labels."
+  ],
+  "targetUserFacingInternalIds": 0,
+  "targetUserFacingRawEnums": 0
+}
