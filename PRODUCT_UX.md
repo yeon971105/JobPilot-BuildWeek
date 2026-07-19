@@ -1,5 +1,11 @@
 # Product UX — Final Product RC
 
+## JP-BW13 aggregate impact surface
+
+Trust Lab and Build Week now present one aggregate-only **Directional usability study** section. It compares median task time (39 seconds traditional, 18 seconds JobPilot), factual accuracy (75%, 100%), and clarity (3.6, 6.2 out of 7) using three restrained visual cards. The n=5 label and fixed-order caveat sit immediately below the metric group; methodology remains available through one native disclosure.
+
+No participant row, identifier, filename, individual answer, individual time, or participant timestamp enters the product bundle. The component imports the frozen aggregate artifact directly, so the public metric surface cannot build without its evidence contract.
+
 ## JP-BW12 comprehension boundary
 
 Machine identifiers are resolved centrally before they reach primary UI. Application Strategy now leads with a recommendation banner, then five decision questions across two desktop columns or one mobile column. The default is 209 visible words; all disclosures total 380. Body copy is at least 16 px, metadata at least 14 px, section headings at least 22 px, and the 800 px desktop surface becomes full usable height on mobile.

@@ -1,0 +1,26 @@
+{
+  "workItem": "JP-BW13",
+  "publicArtifacts": [
+    "build-week/bw13/authentic-study-aggregate.json",
+    "build-week/bw13/authentic-study-report.md",
+    "build-week/bw13/study-methodology.md",
+    "build-week/bw13/study-claim-contract.json",
+    "build-week/bw13/study-privacy-audit.json",
+    "build-week/bw13/study-reproduction.json",
+    "build-week/bw13/parent-baseline.json",
+    "build-week/bw13/css-pipeline-results.json",
+    "build-week/bw13/visual-regression-results.json",
+    "build-week/bw13/browser-qa.json",
+    "build-week/bw13/certified-preview-contract.json",
+    "build-week/bw13/clean-clone-validation.json",
+    "build-week/bw13/validation-matrix.json",
+    "build-week/bw13/video-decision.json",
+    "build-week/bw13/owner-review-package.md",
+    "build-week/bw13/owner-approval-template.json"
+  ],
+  "participantLevelFilesIncluded": 0,
+  "combinedCsvIncluded": false,
+  "participantIdentifiersIncluded": 0,
+  "ownerApproved": false,
+  "devpostSubmitted": false
+}

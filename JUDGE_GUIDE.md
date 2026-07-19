@@ -1,6 +1,12 @@
 # JobPilot Judge Guide — Impact RC
 
-## JP-BW12 review focus
+## JP-BW13 authentic impact review
+
+Open `/demo/trust#directional-usability-study` or `/about/build-week#directional-usability-study`. The aggregate-only section shows median task time, factual accuracy, and clarity for five authentic participants. **View methodology** explains the synthetic roles, factual questions, decision alignment, anonymous local collection, and the fixed-order limitation. The public aggregate artifact is `build-week/bw13/authentic-study-aggregate.json`; participant CSVs are intentionally unlinked and untracked.
+
+All participants completed the traditional posting condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference. Treat the results as directional usability evidence, not causal proof or hiring-outcome evidence.
+
+## JP-BW12 product review focus
 
 Open Northstar and choose **Application Strategy**. The default review is intentionally concise, uses human capability and evidence names, and keeps provenance, limitations, questions, and technical references collapsed. Primary-UI internal IDs and raw enums are zero. In Study Preview, complete the two-role flow and verify that Preview CSV and JSON remain visible at 320×700 and are labeled as excluded from participant evidence.
 
@@ -46,7 +52,7 @@ The study route is intentionally not in primary product navigation. Open `/study
 5. Delete and reset; confirm local storage clears and consent is required again.
 6. Confirm no name, email, resume, demographics, employment status, or health data is requested.
 
-Actual participant count is `0`; the harness is `READY_NOT_RUN`. Minimum target: `5`; preferred target: `8–12`.
+Actual participant count is `5`; status is `COMPLETE_MINIMUM`. Participant-level exports and the combined CSV remain local and untracked. Preview, Pilot, and browser-test Final rows remain excluded.
 
 ## Truthful claims
 
@@ -57,10 +63,10 @@ Actual participant count is `0`; the harness is `READY_NOT_RUN`. Minimum target:
 - OpenAI API requests: `0`; OpenAI API cost: `$0`.
 - Fit Score is not a hiring probability; independent hiring-outcome calibration is unavailable.
 - JobPilot never submits an application.
-- No human study results have been fabricated.
+- Authentic Study evidence is aggregate-only, directional, n=5, and carries the fixed-order limitation beside the metrics. No participant result was fabricated.
 
 ## Owner-review preview
 
-Expected local preview: `http://127.0.0.1:3210/`.
+Expected local preview: `http://127.0.0.1:3211/`.
 
 This is a development RC. Do not deploy, publish the video, submit Devpost, or create a final release tag without explicit owner approval.

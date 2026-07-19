@@ -1,0 +1,12 @@
+{
+  "workItem": "JP-BW13",
+  "repositoryRoot": "C:/Users/Jewon/Desktop/JobPilot-BuildWeek-Submission",
+  "branch": "build-week/jobpilot-2026",
+  "expectedParent": "5247554974306308b775ce5ceeba0b326e0ca70e",
+  "reproducedParent": "5247554974306308b775ce5ceeba0b326e0ca70e",
+  "remoteParentAtStart": "5247554974306308b775ce5ceeba0b326e0ca70e",
+  "expectedParentTag": "build-week-2026-owner-polish-rc1",
+  "peeledParentTagTarget": "5247554974306308b775ce5ceeba0b326e0ca70e",
+  "worktreeExplanation": "Only owner-generated aggregate study reports were modified at entry; participant source records were ignored local files.",
+  "result": "PASS"
+}

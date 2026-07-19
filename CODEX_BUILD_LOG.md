@@ -1,5 +1,11 @@
 # Codex Build Log
 
+## JP-BW13
+
+Codex reproduced the five authentic Final study exports without editing source data, verified five complete participants, ten human rows, zero rejects, zero fabricated or dry-run rows, and the exact combined SHA-256 `ef3e72cb41e8f573031101609afafd00d7fe1a0fe3e1bab8927d24f3315dd0cc`. Participant records remained local and untracked.
+
+Codex froze an aggregate-only claim contract, disabled confidence-interval and significance reporting for the fixed n=5 sample, added the restrained Trust Lab and Build Week evidence surface, and placed the condition-order limitation directly beside every metric group. It did not call an OpenAI API, alter AI Fit V2.2, modify prepared GPT-5.6 bytes, submit Devpost, publish a video, or approve the release.
+
 ## JP-BW12
 
 Codex reproduced `fa2ae44117ae9dea12eeb1081e271223b2b896d9`, preserved the six receipt hashes and five prepared-artifact hashes, implemented the centralized human-language boundary, redesigned Application Strategy, completed Study exports and decision-alignment semantics, ran browser flows for all three Study phases, captured responsive evidence, and rendered the product-consistent owner-polish video. No OpenAI API request, application submission, participant fabrication, production mutation, Devpost submission, or owner approval occurred.

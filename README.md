@@ -1,10 +1,16 @@
 # JobPilot — Find the Roles Worth Your Time
 
-## JP-BW12 owner-polish candidate
+## JP-BW13 authentic impact candidate
+
+**Authentic Study: Five participants completed a moderated directional comparison of a traditional posting and JobPilot.** Median task time was 39 seconds with the traditional posting and 18 seconds with JobPilot; factual accuracy was 75% versus 100%. Average confidence was 3.8 versus 6.0 out of 7, and clarity was 3.6 versus 6.2 out of 7.
+
+All participants completed the traditional condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference. The result is directional usability evidence, not causal proof or hiring-outcome evidence. See the aggregate-only [public report](build-week/bw13/authentic-study-report.md), [methodology](build-week/bw13/study-methodology.md), and [frozen aggregate](build-week/bw13/authentic-study-aggregate.json).
+
+## JP-BW12 owner-polish foundation
 
 Primary UI now resolves machine identifiers through one display-language boundary. Raw IDs remain only in explicit technical disclosures and machine artifacts. Application Strategy is 209 words by default and 380 words with every disclosure expanded; it uses translated evidence names with collapsed provenance and limitations.
 
-The Study auto-saves locally and exposes phase-specific CSV and JSON downloads above the fold. Preview, Pilot, and browser-test Final exports are excluded from participant analysis. Factual accuracy covers four role facts; Apply / Review Further / Skip is reported separately as decision alignment. The authentic Final state remains `READY_NOT_RUN` with zero participants and no public impact claim.
+The Study auto-saves locally and exposes phase-specific CSV and JSON downloads above the fold. Preview, Pilot, and browser-test Final exports are excluded from participant analysis. Factual accuracy covers four role facts; Apply / Review Further / Skip is reported separately as decision alignment.
 
 Owner-polish video: `build-week/video/jobpilot-owner-polish-rc1.mp4` (170 seconds, H.264, AAC English narration, embedded English captions, no Study scenes). Owner approval remains false.
 
@@ -99,7 +105,7 @@ See [SCORE_RECEIPT_VERIFIER.md](SCORE_RECEIPT_VERIFIER.md).
 
 `/study/decision-utility` is intentionally absent from primary product navigation. Protocol `jobpilot-decision-utility.v2` uses two different fictional roles: Analytics Operations Engineer and Data Enablement Engineer. Group 1 reviews A Raw then B JobPilot; Group 2 reviews B Raw then A JobPilot. A primer and two comprehension checks precede one-question-per-screen conditions. PREVIEW and PILOT are always excluded; only authentic, validated FINAL sessions can count. Responses stay browser-local and there is no network submission path.
 
-Status: **READY_NOT_RUN**. Actual participant count: **0**. Minimum target: **5**; preferred target: **8–12**. Synthetic tooling validation is never presented as human evidence. See [the protocol](build-week/study/protocol.md), [consent](build-week/study/consent.md), and [owner workflow](build-week/study/owner-collection-workflow.md).
+Status: **COMPLETE_MINIMUM**. Actual participant count: **5**. Five authentic Final files produced ten human rows with zero rejected or fabricated rows. The combined data remains local and untracked; only aggregate values and its SHA-256 are public. Synthetic tooling validation is never presented as human evidence. See [the protocol](build-week/study/protocol.md), [consent](build-week/study/consent.md), [methodology](build-week/bw13/study-methodology.md), and [aggregate report](build-week/bw13/authentic-study-report.md).
 
 ```bash
 npm run study:validate -- build-week/study/inbox

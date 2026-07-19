@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "jobpilot.bw13.clean-clone-validation.v1",
+  "validatedCandidateCommit": "fbda3a9c106feace4e9f5f6ef01b9b0d41e2f129",
+  "npmCi": "PASS",
+  "typecheck": "PASS",
+  "tests": { "passed": 130, "authorizedSkips": 2, "result": "PASS" },
+  "productionBuild": "PASS",
+  "participantStudyFilesPresent": 0,
+  "combinedCsvPresent": false,
+  "result": "PASS"
+}

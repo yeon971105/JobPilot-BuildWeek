@@ -1,10 +1,16 @@
 # JobPilot — Devpost owner-review draft
 
-## JP-BW12 owner-polish update
+## JP-BW13 authentic impact update
+
+Five authentic Final sessions reached the minimum sample for a moderated directional usability study. Median task time was 39 seconds with a traditional posting and 18 seconds with JobPilot. Factual accuracy was 75% versus 100%; average confidence was 3.8 versus 6.0 out of 7, and clarity was 3.6 versus 6.2 out of 7.
+
+All participants completed the traditional condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference. These results are directional usability evidence, not causal proof, population inference, or hiring-outcome evidence.
+
+## JP-BW12 owner-polish foundation
 
 JobPilot now translates all machine IDs and enums before they reach primary UI. The concise Application Strategy answers whether to act, why, what to emphasize, what to prepare, and what to clarify, while grounded evidence, prepared GPT-5.6 provenance, and limitations remain available on demand. Prepared output is not live inference and does not change AI Fit V2.2.
 
-The Decision Utility Study now auto-saves locally and exports anonymous phase-labeled CSV and JSON. Factual accuracy and decision alignment are separate. Preview, Pilot, and browser-test Final exports are excluded from participant analysis. The authentic study remains `READY_NOT_RUN` with zero participants, so this draft claims no human-impact result.
+The Decision Utility Study auto-saves locally and exports anonymous phase-labeled CSV and JSON. Factual accuracy and decision alignment are separate. Preview, Pilot, and browser-test Final exports are excluded from participant analysis. Five authentic Final sessions passed validation; participant-level files remain local and untracked.
 
 Owner-review video: `build-week/video/jobpilot-owner-polish-rc1.mp4`. Unlisted URL remains pending authenticated upload. This text remains a draft and must not be submitted before owner approval.
 
@@ -74,6 +80,10 @@ These are processed-portfolio counts, not complete-market coverage. Unique-job t
 - Preserving user control at the employer handoff and preventing any automatic Applied transition.
 - Creating authentic usability evidence without inventing participants or letting dry-run rows enter the human dataset.
 
+## Potential impact — directional usability study
+
+In a moderated directional usability study with five participants, median task time was 18 seconds with JobPilot versus 39 seconds with a traditional posting. Factual accuracy was 100% versus 75%, while average confidence increased from 3.8 to 6.0 out of 7 and clarity increased from 3.6 to 6.2 out of 7. All participants completed the traditional condition first and JobPilot second, so the results are directional and may include an order effect. The minimum sample was achieved; no participant-level record is public.
+
 ## Accomplishments
 
 - One concise decision path from shortlist through employer destination and local tracking.
@@ -94,7 +104,7 @@ The public review requires no account, production database, OpenAI key, Ollama, 
 
 ## Limitations
 
-Public candidate, roles, employer destinations, captures, and video are synthetic. Coverage describes the processed portfolio, not the complete market. Fit Score is not a hiring probability. Independent hiring-outcome calibration is unavailable. The Decision Utility study is `READY_NOT_RUN` with 0 actual participants, so no public human-impact metric is claimed.
+Public candidate, roles, employer destinations, captures, and video are synthetic. Coverage describes the processed portfolio, not the complete market. Fit Score is not a hiring probability. Independent hiring-outcome calibration is unavailable. The Decision Utility result is a small fixed-order directional usability study with five participants, not causal or population evidence.
 
 ## Build Week extension
 

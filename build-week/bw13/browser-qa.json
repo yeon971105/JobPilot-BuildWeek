@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "jobpilot.bw13.browser-qa.v1",
+  "baseUrl": "http://127.0.0.1:3212",
+  "routes": ["/demo/trust", "/about/build-week"],
+  "viewports": ["1440x900", "1024x768", "390x844", "320x700"],
+  "routeViewportChecks": 8,
+  "studySectionVisible": true,
+  "directionalLabelVisible": true,
+  "participantCountLabelVisible": true,
+  "limitationAdjacent": true,
+  "methodologyDisclosurePresent": true,
+  "participantIdentifiersRendered": 0,
+  "horizontalOverflowFailures": 0,
+  "h1Failures": 0,
+  "consoleErrors": 0,
+  "consoleWarnings": 0,
+  "result": "PASS"
+}

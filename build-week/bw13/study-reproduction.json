@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "jobpilot.bw13.study-reproduction.v1",
+  "validatedAt": "2026-07-18T20:25:40-07:00",
+  "status": "COMPLETE_MINIMUM",
+  "acceptedFiles": 5,
+  "rejectedFiles": 0,
+  "authenticParticipants": 5,
+  "humanRows": 10,
+  "fabricatedParticipantRows": 0,
+  "dryRunRowsCountedAsHumans": 0,
+  "previewOrPilotRowsCountedAsHumans": 0,
+  "combinedSha256": "ef3e72cb41e8f573031101609afafd00d7fe1a0fe3e1bab8927d24f3315dd0cc",
+  "expectedCombinedSha256": "ef3e72cb41e8f573031101609afafd00d7fe1a0fe3e1bab8927d24f3315dd0cc",
+  "conditionOrder": { "RAW_POSTING_THEN_JOBPILOT": 5 },
+  "assignmentGroupCounts": { "GROUP_1": 2, "GROUP_2": 3 },
+  "validator": "PASS",
+  "combiner": "PASS",
+  "analyzer": "PASS",
+  "sourceRecordsModified": false,
+  "result": "PASS"
+}

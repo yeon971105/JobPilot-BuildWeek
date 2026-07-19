@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "jobpilot.bw13.video-decision.v1",
+  "decision": "RETAIN_OWNER_POLISH_RC1",
+  "path": "build-week/video/jobpilot-owner-polish-rc1.mp4",
+  "sha256": "337b10e648c9aee2206130d816365192c5d93b2b2b62969c0f80f7f7cc69afe7",
+  "durationSeconds": 170,
+  "videoCodec": "h264",
+  "resolution": "1920x1080",
+  "audioCodec": "aac",
+  "audioLanguage": "eng",
+  "captionsCodec": "mov_text",
+  "captionsLanguage": "eng",
+  "studyMetricsAdded": false,
+  "reason": "A truthful metric scene needs the n=5 directional label and a legible fixed-order caveat. Replacing an existing 10-second segment would weaken the main product story or make that limitation too small to review confidently.",
+  "participantLevelDataShown": false,
+  "uploaded": false,
+  "public": false,
+  "result": "PASS_RETAINED_WITHOUT_STUDY_CLAIM"
+}

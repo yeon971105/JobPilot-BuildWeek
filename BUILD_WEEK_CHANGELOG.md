@@ -1,5 +1,13 @@
 # Build Week Changelog
 
+## JP-BW13 — Authentic directional study evidence
+
+- Reproduced five accepted Final files, five authentic participants, ten human rows, zero rejects, and combined SHA-256 `ef3e72cb41e8f573031101609afafd00d7fe1a0fe3e1bab8927d24f3315dd0cc`.
+- Kept participant files and the combined CSV local, ignored, untracked, absent from deployment output, and absent from public artifact indexes.
+- Added aggregate-only directional evidence to Trust Lab and Build Week with the fixed condition-order limitation immediately adjacent.
+- Published no confidence interval, significance test, causal claim, population claim, or hiring-outcome claim.
+- Retained the existing 170-second video because a legible result plus order-effect caveat could not replace a lower-value segment without weakening the product story.
+
 ## JP-BW12 — Final human-language polish
 
 - Added one typed display-language resolver for requirement IDs, evidence IDs, match classes, requirement classes, work modes, and Study answers.

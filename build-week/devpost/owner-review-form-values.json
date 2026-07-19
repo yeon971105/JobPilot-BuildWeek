@@ -20,7 +20,7 @@
   "accomplishments": ["transparent three-role decision loop", "independently verifiable exact score", "local-first privacy", "prepared GPT provenance", "frozen coverage proof", "authentic study pipeline"],
   "lessons": "Trust comes from progressive proof, explicit model boundaries, reproducible arithmetic, and disciplined claim limits.",
   "privacy": "Synthetic public data, no account, no production database, no OpenAI key, no public resume upload, no application submission.",
-  "limitations": "Processed-portfolio coverage only; Fit Score is not a hiring probability; public data is synthetic; Decision Utility is READY_NOT_RUN with 0 actual participants.",
+  "limitations": "Processed-portfolio coverage only; Fit Score is not a hiring probability; public product data is synthetic. The n=5 usability result is directional: all participants completed the traditional condition first, so practice or order effects may contribute.",
   "buildWeekExtension": "Added the no-login Golden Path, application-fatigue story, nearby discovery, transparent shortlist, private resume isolation, concise detail, comparison, safe handoff, tracker, verifier, GPT review surfaces, tour, Trust Lab, defect timeline, coverage proof, and study workflow.",
   "technologies": ["Codex", "GPT-5.6", "Gemma 4 12B", "Next.js 16.2.6", "React 19", "TypeScript", "Tailwind CSS 4", "Ollama", "Vitest", "SHA-256", "OpenAI Sites"],
   "repositoryUrl": "https://github.com/yeon971105/JobPilot-BuildWeek",
@@ -30,6 +30,7 @@
   "testingInstructions": "Landing → Today’s Shortlist → Northstar detail → receipt FULLY_REPRODUCED → tamper INVALID → synthetic employer destination → return and explicitly mark Preparing → Trust Lab → Coverage Proof.",
   "teamInformation": "Single entrant; confirm the authenticated Devpost profile and owner-visible team label before submission.",
   "finalProductRc": "Distinct public landing and For You app home; visible Why these three rationale; visual decision, dimension, experience, practical-fit, Evidence, Score Proof, and collapsed exact Technical Ledger; restrained motion and complete states.",
-  "studyV2": "jobpilot-decision-utility.v2 uses Analytics Operations Engineer and Data Enablement Engineer, counterbalances different roles and conditions, requires primer comprehension, and excludes PREVIEW and PILOT from final evidence.",
+  "studyV2": "jobpilot-decision-utility.v2 uses Analytics Operations Engineer and Data Enablement Engineer, counterbalances role assignment, requires primer comprehension, and excludes PREVIEW and PILOT from final evidence. Five authentic Final sessions achieved the minimum sample; condition order was fixed traditional-first.",
+  "potentialImpact": "In a moderated directional usability study with five participants, median task time was 18 seconds with JobPilot versus 39 seconds with a traditional posting. Factual accuracy was 100% versus 75%; confidence was 6.0 versus 3.8 and clarity was 6.2 versus 3.6 out of 7. Everyone completed the traditional condition first, so results may include an order effect.",
   "submitted": false
 }
