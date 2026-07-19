@@ -7,7 +7,7 @@ import { JSDOM } from "jsdom";
 
 const root = resolve(import.meta.dirname, "..");
 const portIndex = process.argv.indexOf("--port");
-if (portIndex < 0 || !process.argv[portIndex + 1]) throw new Error("Use npm run preview:certified -- --port 3210");
+if (portIndex < 0 || !process.argv[portIndex + 1]) throw new Error("Use npm run preview:certified -- --port 3211");
 const port = Number(process.argv[portIndex + 1]);
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error("The preview port must be an integer from 1024 through 65535.");
 const baseUrl = `http://127.0.0.1:${port}`;
@@ -25,8 +25,8 @@ if (!existsSync(buildIdPath)) throw new Error("No production BUILD_ID exists. Ru
 const buildId = readFileSync(buildIdPath, "utf8").trim();
 if (!buildId || !existsSync(resolve(root, `.next/static/${buildId}/_buildManifest.js`))) throw new Error("The production build is incomplete or its BUILD_ID does not match the static manifest.");
 
-const contract = JSON.parse(readFileSync(resolve(root, "build-week/bw12/certified-preview-contract.json"), "utf8"));
-const visual = JSON.parse(readFileSync(resolve(root, "build-week/bw12/visual-regression-results.json"), "utf8"));
+const contract = JSON.parse(readFileSync(resolve(root, "build-week/bw13/certified-preview-contract.json"), "utf8"));
+const visual = JSON.parse(readFileSync(resolve(root, "build-week/bw13/visual-regression-results.json"), "utf8"));
 const sourceDiff = runGit("diff", "--quiet", contract.visualSourceCommit, "--", "src", "tests/visual");
 if (sourceDiff.status !== 0) throw new Error("UI source differs from the browser-certified source commit.");
 const visualFailures = ["horizontalOverflowFailures", "clippedDrawerFailures", "clippedExportButtonFailures", "internalIdFailures", "rawEnumFailures", "h1Failures", "primaryActionFailures"];

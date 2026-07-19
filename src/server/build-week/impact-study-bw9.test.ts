@@ -35,7 +35,7 @@ describe("JP-BW11R human impact importer and calculations", () => {
     expect(publicImpactSummary(analysis).metrics).toBeNull();
   });
 
-  it("calculates a valid n=5 two-role paired fixture and deterministic bootstrap intervals", () => {
+  it("calculates a valid n=5 two-role paired fixture without population inference", () => {
     const analysis = analyzeImpactStudyCsv(combined(5, (index) => ({ rawSeconds: 100 + index * 10, jobPilotSeconds: 50 + index * 10, wrongRawRequired: index >= 3 })), { bootstrapIterations: 250, bootstrapSeed: 41 });
     expect(analysis.status).toBe("COMPLETE_MINIMUM");
     expect(analysis.humanParticipantCount).toBe(5);
@@ -45,10 +45,10 @@ describe("JP-BW11R human impact importer and calculations", () => {
     expect(analysis.conditions.RAW_POSTING.requiredExperienceAccuracyPercent).toBe(60);
     expect(analysis.conditions.JOBPILOT.requiredExperienceAccuracyPercent).toBe(100);
     expect(analysis.paired.medianTimeDifferenceSecondsJobPilotMinusRaw).toBe(-50);
-    expect(analysis.bootstrapStatus).toBe("AVAILABLE");
-    expect(analysis.bootstrapConfidenceIntervals?.medianTimeDifferenceSecondsJobPilotMinusRaw.iterations).toBe(250);
+    expect(analysis.bootstrapStatus).toBe("NOT_RUN_DIRECTIONAL_SAMPLE");
+    expect(analysis.bootstrapConfidenceIntervals).toBeNull();
     expect(analysis.statisticalSignificanceClaim).toBe(false);
-    expect(publicImpactSummary(analysis).metrics).not.toBeNull();
+    expect(publicImpactSummary(analysis).metrics).toMatchObject({ rawPostingMeanSeconds: 120, jobPilotMeanSeconds: 70 });
   });
 
   it("accepts repeated export headers but rejects duplicate and incomplete sessions", () => {

@@ -1,0 +1,21 @@
+{
+  "workItem": "JP-BW13",
+  "generatedAt": "2026-07-18T00:00:00-07:00",
+  "sourceCommit": "26fe569720ea81790114e38e75b4d9bf0936bc33",
+  "screenshots": 8,
+  "requiredViewports": ["1440x900", "1024x768", "390x844", "320x700"],
+  "routes": ["/demo/trust", "/about/build-week"],
+  "directionalStudySectionFailures": 0,
+  "limitationAdjacencyFailures": 0,
+  "participantIdentifierFailures": 0,
+  "consoleErrorFailures": 0,
+  "consoleWarningFailures": 0,
+  "horizontalOverflowFailures": 0,
+  "clippedDrawerFailures": 0,
+  "clippedExportButtonFailures": 0,
+  "internalIdFailures": 0,
+  "rawEnumFailures": 0,
+  "h1Failures": 0,
+  "primaryActionFailures": 0,
+  "result": "PASS"
+}
