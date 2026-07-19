@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowLeft, CheckCircle2, Download, HardDrive, RefreshCcw, ShieldCheck } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Clipboard, Download, HardDrive, RefreshCcw, ShieldCheck, Trash2 } from "lucide-react";
 import {
   BIGGEST_GAP_CHOICES,
   createDecisionStudySession,
@@ -15,6 +15,8 @@ import {
   PREFERRED_EXPERIENCE_CHOICES,
   REQUIRED_EXPERIENCE_CHOICES,
   scoreStudyResponse,
+  studyExportBaseName,
+  studySessionToJson,
   studySessionToCsv,
   WORK_MODE_CHOICES,
   type DecisionStudyResponse,
@@ -22,6 +24,9 @@ import {
   type StudyMode,
   type StudyQuestionKey,
 } from "@/lib/decision-study";
+
+const STUDY_SAVE_EVENT = "jobpilot-study-save-status";
+type SaveStatus = "Saving…" | "Saved in this browser" | "Save failed — retry";
 
 const questions: Array<{ key: StudyQuestionKey; label: string; options: ReadonlyArray<readonly [string, string]> }> = [
   { key: "requiredExperienceAnswer", label: "Which experience is required?", options: REQUIRED_EXPERIENCE_CHOICES },
@@ -51,7 +56,16 @@ export function DecisionUtilityStudy() {
     }, 0);
     return () => window.clearTimeout(timer);
   }, []);
-  useEffect(() => { if (session) window.localStorage.setItem(DECISION_STUDY_STORAGE_KEY, JSON.stringify(session)); }, [session]);
+  useEffect(() => {
+    if (!session) return;
+    window.dispatchEvent(new CustomEvent<SaveStatus>(STUDY_SAVE_EVENT, { detail: "Saving…" }));
+    try {
+      window.localStorage.setItem(DECISION_STUDY_STORAGE_KEY, JSON.stringify(session));
+      window.dispatchEvent(new CustomEvent<SaveStatus>(STUDY_SAVE_EVENT, { detail: "Saved in this browser" }));
+    } catch {
+      window.dispatchEvent(new CustomEvent<SaveStatus>(STUDY_SAVE_EVENT, { detail: "Save failed — retry" }));
+    }
+  }, [session]);
 
   if (!hydrated) return <StudyShell><p className="py-20 text-center text-sm text-[#587064]">Preparing the local-only study…</p></StudyShell>;
   if (!session && preScreen === 0) return <Introduction mode={mode} onNext={() => setPreScreen(1)} />;
@@ -76,7 +90,7 @@ export function DecisionUtilityStudy() {
 }
 
 function Introduction({ mode, onNext }: { mode: StudyMode; onNext: () => void }) {
-  return <StudyShell mode={mode}><section className="mx-auto max-w-3xl py-8"><p className="eyebrow">Independent usability research</p><h1 className="mt-4 font-serif text-5xl leading-tight">Can JobPilot make a job decision easier?</h1><div className="paper-card mt-7 space-y-4 text-lg leading-8 text-[#587064]"><p>You will review two fictional roles.</p><p>For one role, you will use a traditional job posting and candidate profile.</p><p>For the other, you will use JobPilot.</p><p>We measure how quickly and accurately you can understand each role.</p><p className="font-bold text-[#173d2d]">This is a usability study, not a job application.</p></div><button type="button" onClick={onNext} className="button-primary mt-6">Continue</button><LocalOnly /></section></StudyShell>;
+  return <StudyShell mode={mode}><section className="mx-auto max-w-3xl py-8"><p className="eyebrow">Independent usability research</p><h1 className="mt-4 font-serif text-5xl leading-tight">Can JobPilot make a job decision easier?</h1>{mode === "PREVIEW" && <div className="mt-7 rounded-2xl border border-[#a1742d]/20 bg-[#fff4d8] p-5 text-base leading-7"><h2 className="font-serif text-2xl">Preview Mode</h2><p className="mt-3">This lets the product owner verify the Study instructions, questions, timing, result display, and downloads.</p><p className="mt-2 font-bold">Preview data is not participant evidence.</p></div>}<div className="paper-card mt-7 space-y-4 text-lg leading-8 text-[#587064]"><p>You will review two fictional roles.</p><p>For one role, you will use a traditional job posting and candidate profile.</p><p>For the other, you will use JobPilot.</p><p>We measure how quickly and accurately you can understand each role.</p><p className="font-bold text-[#173d2d]">This is a usability study, not a job application.</p></div><button type="button" onClick={onNext} className="button-primary mt-6">Continue</button><LocalOnly /></section></StudyShell>;
 }
 
 function Consent({ mode, confirmed, setConfirmed, onConsent }: { mode: StudyMode; confirmed: boolean; setConfirmed: (value: boolean) => void; onConsent: () => void }) {
@@ -121,10 +135,32 @@ function Transition({ mode, onNext }: { mode: StudyMode; onNext: () => void }) {
 }
 
 function Completion({ mode, session, onReset }: { mode: StudyMode; session: DecisionStudySession; onReset: () => void }) {
-  return <StudyShell mode={mode}><section className="mx-auto max-w-5xl py-8"><CheckCircle2 className="size-10 text-[#a1742d]" /><p className="eyebrow mt-5">Session complete</p><h1 className="mt-3 font-serif text-5xl">Thank you for reviewing both roles.</h1><p className="mt-4 max-w-2xl text-lg leading-8 text-[#587064]">Your anonymous responses remain in this browser until you export or reset them.</p>{mode === "PREVIEW" && <PreviewSummary session={session} />}<div className="mt-8 flex flex-wrap gap-3">{mode !== "PREVIEW" && <><button type="button" className="button-primary" onClick={() => download(`jobpilot-study-${session.participantId}.csv`, studySessionToCsv(session), "text/csv")}><Download className="size-4" /> Export {mode === "PILOT" ? "Pilot" : "Final"} CSV</button><button type="button" className="button-secondary" onClick={() => download(`jobpilot-study-${session.participantId}.json`, JSON.stringify(session, null, 2), "application/json")}><Download className="size-4" /> Export JSON</button></>}<button type="button" className="button-secondary" onClick={onReset}><RefreshCcw className="size-4" /> Reset</button>{mode === "PREVIEW" && <button type="button" className="button-primary" onClick={() => { window.localStorage.removeItem(DECISION_STUDY_STORAGE_KEY); window.location.href = "/study/decision-utility?mode=pilot"; }}>Start Pilot Mode</button>}</div><LocalOnly /></section></StudyShell>;
+  const [announcement, setAnnouncement] = useState("");
+  const [confirmClear, setConfirmClear] = useState(false);
+  const baseName = studyExportBaseName(session);
+  const labels = completionLabels(mode);
+  function exportFile(kind: "CSV" | "JSON") {
+    try {
+      download(`${baseName}.${kind.toLowerCase()}`, kind === "CSV" ? studySessionToCsv(session) : studySessionToJson(session), kind === "CSV" ? "text/csv" : "application/json");
+      setAnnouncement(`${labels.phase} ${kind} download ready.`);
+    } catch {
+      setAnnouncement(`Download failed. Retry the ${kind} export.`);
+    }
+  }
+  async function copySessionId() {
+    try { await navigator.clipboard.writeText(session.participantId); setAnnouncement("Anonymous Session ID copied."); }
+    catch { setAnnouncement("Copy failed. Select the Anonymous Session ID and copy it manually."); }
+  }
+  return <StudyShell mode={mode}><section className="study-completion-enter mx-auto max-w-5xl py-4 sm:py-8"><CheckCircle2 className="size-10 text-[#a1742d]" /><p className="eyebrow mt-4">Session complete</p><h1 className="mt-2 font-serif text-4xl leading-tight sm:text-5xl">{labels.title}</h1><p className="mt-3 max-w-3xl text-base leading-7 text-[#587064]">Your responses are saved only in this browser until you download or clear them.</p>{mode === "PREVIEW" && <p className="mt-2 max-w-3xl text-base leading-7 text-[#587064]">Your preview results were saved locally. Download them only if you want to inspect the Study export format.</p>}<div className="mt-5 rounded-2xl border border-[#173d2d]/10 bg-[#fffdf7] p-4 sm:p-5"><p className="text-sm font-bold text-[#6f6248]">{labels.supporting}</p><div className="mt-4 grid gap-3 sm:grid-cols-2"><button type="button" className="button-primary w-full justify-center" aria-label={labels.csv} onClick={() => exportFile("CSV")}><Download className="size-4" /> {labels.csv}</button><button type="button" className="button-secondary w-full justify-center" aria-label={labels.json} onClick={() => exportFile("JSON")}><Download className="size-4" /> {labels.json}</button></div><div className="mt-3 grid gap-3 sm:grid-cols-3"><button type="button" className="button-secondary w-full justify-center" onClick={() => void copySessionId()}><Clipboard className="size-4" /> Copy Anonymous Session ID</button><button type="button" className="button-secondary w-full justify-center" onClick={() => setConfirmClear(true)}><Trash2 className="size-4" /> Clear Local Study Data</button><button type="button" className="button-secondary w-full justify-center" onClick={() => setConfirmClear(true)}><RefreshCcw className="size-4" /> Restart Study</button></div><p className="mt-3 break-all text-sm text-[#62796f]"><b>Anonymous Session ID:</b> {session.participantId}</p><p aria-live="polite" className="mt-2 min-h-6 text-sm font-bold text-[#315c49]">{announcement}</p></div>{confirmClear && <div role="alertdialog" aria-modal="true" aria-labelledby="clear-study-title" className="mt-4 rounded-2xl border border-[#a1742d]/25 bg-[#fff4d8] p-5"><h2 id="clear-study-title" className="font-serif text-2xl">Clear local Study data?</h2><p className="mt-2 text-base">This removes this anonymous session from this browser. Download it first if you want to keep it.</p><div className="mt-4 flex flex-wrap gap-3"><button type="button" className="button-primary" onClick={onReset}>Clear and restart</button><button type="button" className="button-secondary" onClick={() => setConfirmClear(false)}>Keep my data</button></div></div>}<StudyResultsSummary session={session} /><LocalOnly /></section></StudyShell>;
 }
 
-function PreviewSummary({ session }: { session: DecisionStudySession }) {
+function completionLabels(mode: StudyMode) {
+  if (mode === "PREVIEW") return { title: "Study Preview Complete", phase: "Preview", csv: "Download Preview CSV", json: "Download Preview JSON", supporting: "Preview export — excluded from participant evidence." };
+  if (mode === "PILOT") return { title: "Pilot Complete", phase: "Pilot", csv: "Download Pilot CSV", json: "Download Pilot JSON", supporting: "Pilot export — excluded from final impact analysis." };
+  return { title: "Study Complete", phase: "Study", csv: "Download Study CSV", json: "Download Study JSON", supporting: "Keep this anonymous file and send it only through the study collection process provided by the project owner." };
+}
+
+function StudyResultsSummary({ session }: { session: DecisionStudySession }) {
   return <section className="paper-card mt-8 min-w-0"><h2 className="font-serif text-3xl">Preview validation summary</h2><p className="mt-2 text-sm">Assignment: <b>{session.assignmentGroup}</b> · Preview data is excluded from participant evidence.</p><div className="mt-5 grid min-w-0 gap-4 md:grid-cols-2">{session.responses.map((response) => { const role = DECISION_STUDY_ROLES[response.roleId]; const correctness = scoreStudyResponse(response); const warnings = response.clarity <= 3 ? "Clarity warning: review these instructions before pilot." : "No clarity warning."; return <article key={response.roleId} className="min-w-0 rounded-2xl bg-[#edf1e8] p-5"><h3 className="break-words font-serif text-2xl">{role.title}</h3><p className="mt-1 text-xs font-bold">{response.condition} · {response.taskSeconds ?? 0} seconds</p><dl className="mt-4 min-w-0 space-y-2 text-sm">{questions.map((question) => <div key={question.key} className="min-w-0"><dt className="font-bold">{question.label}</dt><dd className="break-all sm:break-words">{String(response[question.key]) || "No answer"} · {correctness[question.key] ? "Correct" : "Incorrect"}</dd></div>)}</dl><p className="mt-4 text-sm">Confidence {response.confidence}/7 · Clarity {response.clarity}/7</p><p className="mt-2 text-xs font-bold">{warnings}</p></article>; })}</div></section>;
 }
 
@@ -138,7 +174,7 @@ function DecisionItem({ label, value }: { label: string; value: string }) { retu
 function MaterialList({ title, items }: { title: string; items: string[] }) { return <section><h3 className="font-serif text-xl">{title}</h3><ul className="mt-2 space-y-2">{items.map((item) => <li key={item}>• {item}</li>)}</ul></section>; }
 function Progress({ step, label }: { step: number; label: string }) { const percent = Math.round(step / 12 * 100); return <div className="mx-auto mb-7 max-w-7xl" aria-label={`Study progress: ${label}, step ${step} of 12`}><div className="flex justify-between gap-3 text-xs font-bold"><span>{label}</span><span>Step {step} of 12</span></div><div className="mt-2 h-2 overflow-hidden rounded-full bg-[#dfe6dc]"><div className="h-full rounded-full bg-[#6f927c]" style={{ width: `${percent}%` }} /></div></div>; }
 function LocalOnly() { return <aside className="mt-7 flex items-start gap-3 rounded-2xl border border-[#315c49]/15 bg-[#e8efe6] p-5 text-sm leading-6"><HardDrive className="mt-0.5 size-5 shrink-0 text-[#a1742d]" /><p><b>Local-only storage.</b> Nothing is sent over the network. Export and reset remain under your control.</p></aside>; }
-function StudyShell({ children, mode }: { children: React.ReactNode; mode?: StudyMode }) { return <div className="min-h-screen bg-[#fbf7ed] text-[#173d2d]">{mode === "PREVIEW" && <div className="bg-[#fff4d8] px-5 py-4 text-center text-sm"><b>Study Preview Mode</b><br />This session validates instructions and interaction only.<br />It will not be counted as participant evidence.</div>}{mode === "PILOT" && <div className="bg-[#fff4d8] px-5 py-3 text-center text-sm font-bold">Pilot Mode · This session validates clarity and will never be counted as final participant evidence.</div>}<header className="border-b border-[#173d2d]/10"><div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4"><span className="font-serif text-xl font-semibold">JobPilot Research</span><Link href="/" className="inline-flex min-h-11 items-center gap-2 text-sm font-bold"><ArrowLeft className="size-4" /> Exit study</Link></div></header><main className="mx-auto max-w-7xl px-5 py-8">{children}</main></div>; }
+function StudyShell({ children, mode }: { children: React.ReactNode; mode?: StudyMode }) { const [saveStatus, setSaveStatus] = useState<SaveStatus>("Saved in this browser"); useEffect(() => { const listener = (event: Event) => setSaveStatus((event as CustomEvent<SaveStatus>).detail); window.addEventListener(STUDY_SAVE_EVENT, listener); return () => window.removeEventListener(STUDY_SAVE_EVENT, listener); }, []); return <div className="min-h-screen bg-[#fbf7ed] text-[#173d2d]">{mode === "PREVIEW" && <div className="bg-[#fff4d8] px-5 py-4 text-center text-sm"><b>Study Preview Mode</b><br />This session validates instructions and interaction only.<br />It will not be counted as participant evidence.</div>}{mode === "PILOT" && <div className="bg-[#fff4d8] px-5 py-3 text-center text-sm font-bold">Pilot Mode · This session validates clarity and will never be counted as final participant evidence.</div>}<header className="border-b border-[#173d2d]/10"><div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-5 py-4"><span className="font-serif text-xl font-semibold">JobPilot Research</span><div className="flex flex-wrap items-center gap-3"><span role="status" aria-live="polite" className="rounded-full bg-[#e8efe6] px-3 py-2 text-sm font-bold"><HardDrive className="mr-1 inline size-4" /> {saveStatus}</span><Link href="/" className="inline-flex min-h-11 items-center gap-2 text-sm font-bold"><ArrowLeft className="size-4" /> Exit study</Link></div></div></header><main className="mx-auto max-w-7xl px-5 py-8">{children}</main></div>; }
 
 function patchSession(setter: React.Dispatch<React.SetStateAction<DecisionStudySession | null>>, patch: Partial<DecisionStudySession>) { setter((current) => current ? { ...current, ...patch } : current); window.scrollTo({ top: 0 }); }
 function updateResponse(setter: React.Dispatch<React.SetStateAction<DecisionStudySession | null>>, index: number, patch: Partial<DecisionStudyResponse>) { setter((current) => { if (!current) return current; const responses = [...current.responses] as [DecisionStudyResponse, DecisionStudyResponse]; responses[index] = { ...responses[index], ...patch }; return { ...current, responses }; }); }

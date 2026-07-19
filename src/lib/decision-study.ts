@@ -10,6 +10,7 @@ export type StudyCondition = "RAW_POSTING" | "JOBPILOT";
 export type StudyDecision = "APPLY" | "REVIEW_FURTHER" | "SKIP" | "";
 export type StudyAssignment = "GROUP_1" | "GROUP_2";
 export type StudyCollectionState = "READY_NOT_RUN" | "IN_PROGRESS" | "COMPLETE_MINIMUM" | "COMPLETE_PREFERRED";
+export type StudyExclusionStatus = "EXCLUDED_PREVIEW" | "EXCLUDED_PILOT" | "EXCLUDED_BROWSER_TEST" | "ELIGIBLE_FINAL_PENDING_VALIDATION";
 export type StudyQuestionKey = "requiredExperienceAnswer" | "preferredExperienceAnswer" | "workModeAnswer" | "weakestQualificationAnswer" | "decision";
 
 export type DecisionStudyRole = {
@@ -174,12 +175,44 @@ export function parseDecisionStudySession(raw: string | null): DecisionStudySess
 }
 
 function csvCell(value: string | number | boolean | null) { const text = value === null ? "" : String(value); return `"${text.replaceAll('"', '""')}"`; }
-export const DECISION_STUDY_CSV_HEADERS = ["participant_id", "protocol_version", "consent_version", "phase", "assignment_group", "condition_order", "role_id", "condition", "task_seconds", "required_experience_answer", "preferred_experience_answer", "work_mode_answer", "biggest_gap_answer", "decision", "required_correct", "preferred_correct", "work_mode_correct", "biggest_gap_correct", "decision_correct", "confidence_1_to_7", "clarity_1_to_7", "completed_at", "authentic_human_confirmation", "synthetic_tooling_validation"] as const;
+export const DECISION_STUDY_CSV_HEADERS = ["participant_id", "protocol_version", "consent_version", "phase", "exclusion_status", "assignment_group", "condition_order", "role_id", "condition", "task_seconds", "required_experience_answer", "preferred_experience_answer", "work_mode_answer", "biggest_gap_answer", "decision", "required_correct", "preferred_correct", "work_mode_correct", "biggest_gap_correct", "decision_correct", "confidence_1_to_7", "clarity_1_to_7", "completed_at", "authentic_human_confirmation", "synthetic_tooling_validation"] as const;
+
+export function studyExclusionStatus(session: DecisionStudySession): StudyExclusionStatus {
+  if (session.phase === "PREVIEW") return "EXCLUDED_PREVIEW";
+  if (session.phase === "PILOT") return "EXCLUDED_PILOT";
+  if (!session.consent.authenticHumanConfirmation) return "EXCLUDED_BROWSER_TEST";
+  return "ELIGIBLE_FINAL_PENDING_VALIDATION";
+}
+
+export function studyExportBaseName(session: DecisionStudySession) {
+  const phase = session.phase === "PREVIEW" ? "preview" : session.phase === "PILOT" ? "pilot" : "final";
+  return `jobpilot-study-${phase}-${session.participantId}`;
+}
+
+export function studySessionToJson(session: DecisionStudySession) {
+  return JSON.stringify({
+    exportSchemaVersion: "jobpilot.decision-utility-export.v1",
+    studyPhase: session.phase,
+    exclusionStatus: studyExclusionStatus(session),
+    protocolVersion: session.protocolVersion,
+    consentVersion: session.consent.version,
+    anonymousId: session.participantId,
+    assignmentGroup: session.assignmentGroup,
+    roleIds: session.responses.map((response) => response.roleId),
+    conditionResults: session.responses,
+    authenticHumanConfirmation: session.consent.authenticHumanConfirmation,
+    syntheticToolingValidation: session.phase !== "FINAL" || !session.consent.authenticHumanConfirmation,
+    storageMode: session.storageMode,
+    piiFields: [],
+  }, null, 2);
+}
 
 export function studySessionToCsv(session: DecisionStudySession) {
+  const exclusionStatus = studyExclusionStatus(session);
+  const syntheticToolingValidation = session.phase !== "FINAL" || !session.consent.authenticHumanConfirmation;
   const rows = session.responses.map((response) => {
     const correctness = scoreStudyResponse(response);
-    return [session.participantId, session.protocolVersion, session.consent.version, session.phase, session.assignmentGroup, "RAW_POSTING_THEN_JOBPILOT", response.roleId, response.condition, response.taskSeconds, response.requiredExperienceAnswer, response.preferredExperienceAnswer, response.workModeAnswer, response.weakestQualificationAnswer, response.decision, correctness.requiredExperienceAnswer, correctness.preferredExperienceAnswer, correctness.workModeAnswer, correctness.weakestQualificationAnswer, correctness.decision, response.confidence, response.clarity, response.completedAt, session.consent.authenticHumanConfirmation, false].map(csvCell).join(",");
+    return [session.participantId, session.protocolVersion, session.consent.version, session.phase, exclusionStatus, session.assignmentGroup, "RAW_POSTING_THEN_JOBPILOT", response.roleId, response.condition, response.taskSeconds, response.requiredExperienceAnswer, response.preferredExperienceAnswer, response.workModeAnswer, response.weakestQualificationAnswer, response.decision, correctness.requiredExperienceAnswer, correctness.preferredExperienceAnswer, correctness.workModeAnswer, correctness.weakestQualificationAnswer, correctness.decision, response.confidence, response.clarity, response.completedAt, session.consent.authenticHumanConfirmation, syntheticToolingValidation].map(csvCell).join(",");
   });
   return [DECISION_STUDY_CSV_HEADERS.map(csvCell).join(","), ...rows].join("\n");
 }

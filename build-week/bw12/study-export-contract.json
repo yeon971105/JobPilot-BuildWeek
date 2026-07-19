@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "jobpilot.bw12.study-export-contract.v1",
+  "storage": "BROWSER_LOCAL_ONLY",
+  "autoSaveAfterEveryAnswer": true,
+  "formats": ["CSV", "JSON"],
+  "fileNames": {
+    "PREVIEW": "jobpilot-study-preview-<anonymous-id>.<csv|json>",
+    "PILOT": "jobpilot-study-pilot-<anonymous-id>.<csv|json>",
+    "FINAL": "jobpilot-study-final-<anonymous-id>.<csv|json>"
+  },
+  "exclusionStatus": {
+    "PREVIEW": "EXCLUDED_PREVIEW",
+    "PILOT": "EXCLUDED_PILOT",
+    "FINAL_BROWSER_TEST": "EXCLUDED_BROWSER_TEST",
+    "FINAL_AUTHENTIC": "ELIGIBLE_FINAL_PENDING_VALIDATION"
+  },
+  "requiredFields": ["study phase", "exclusion status", "protocol version", "anonymous ID", "assignment group", "role IDs", "condition results"],
+  "piiFields": [],
+  "networkSubmission": false
+}
