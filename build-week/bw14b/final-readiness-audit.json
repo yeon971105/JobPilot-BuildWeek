@@ -1,0 +1,65 @@
+{
+  "artifact": "JP-BW14B final readiness audit",
+  "auditedAt": "2026-07-20T16:41:24.0241261-07:00",
+  "decision": "GO_VERCEL_PUBLIC_APPROVED_COMMIT_VERIFIED",
+  "publicReviewUrl": "https://job-pilot-build-week.vercel.app",
+  "immutableRelease": {
+    "productCommit": "173bf67db276e4639c5a57b6c4a02070222ca8ba",
+    "deploymentCommit": "0b3aaba8aa8e8b91a41bf21062ab11cb51325b41",
+    "releaseTag": "build-week-2026-study-evidence-rc1",
+    "environment": "public-review"
+  },
+  "versionEndpoint": {
+    "path": "/api/version?final-readiness=20260720",
+    "productCommitExact": true,
+    "deploymentCommitExact": true,
+    "releaseTagExact": true,
+    "environmentExact": true
+  },
+  "activeFinalDocumentation": {
+    "scope": [
+      "README.md",
+      "build-week/bw13/owner-review-package.md",
+      "build-week/bw14b/",
+      "build-week/devpost/owner-review-draft.md",
+      "build-week/devpost/owner-review-form-values.json",
+      "build-week/video/jobpilot-final-product-youtube-metadata.md",
+      "build-week/video/jobpilot-owner-polish-youtube-metadata.md"
+    ],
+    "staleChatGptSiteReferences": 0,
+    "filesReferencingVercelPublicUrl": 15,
+    "secretTokenMatches": 0,
+    "localUserPathMatches": 0,
+    "openAiKeyAssignmentMatches": 0
+  },
+  "publicPagePrivacyScan": {
+    "routes": [
+      "/",
+      "/demo/jobs/harbor-product-data-analyst",
+      "/demo/trust",
+      "/about/build-week",
+      "/profile/resume"
+    ],
+    "localUserPathMatches": 0,
+    "secretTokenMatches": 0,
+    "openAiKeyAssignmentMatches": 0,
+    "participantIdentifierMatches": 0
+  },
+  "repositoryIntegrity": {
+    "head": "16715b0f814eee060c142f577762dd7cf64cf4aa",
+    "remoteHead": "16715b0f814eee060c142f577762dd7cf64cf4aa",
+    "trackedWorktreeChanges": 0,
+    "untrackedFiles": 20,
+    "untrackedFilesDisposition": "Pre-existing local video-candidate and support artifacts were preserved, excluded from this documentation-only audit, and were not staged or deployed."
+  },
+  "releaseConstraintsPreserved": {
+    "devpostSubmitted": false,
+    "youtubeUploaded": false,
+    "ownerApprovalChanged": false,
+    "openAiRuntimeCalls": 0
+  },
+  "notes": [
+    "Historical provenance artifacts are intentionally outside the active-final-documentation scope and were not rewritten.",
+    "This audit records no product, deployment, video, or Devpost mutation."
+  ]
+}
