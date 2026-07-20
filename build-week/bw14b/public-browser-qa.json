@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "publicUrl": "https://job-pilot-build-week.vercel.app",
+  "mode": "unauthenticated public browser",
+  "viewports": ["1440x900", "1024x768", "390x844", "320x700"],
+  "pageViewportChecks": 48,
+  "pageViewportChecksPassed": 48,
+  "apiVersionVerification": "PASS via direct uncached HTTPS; browser JSON navigation is client-blocked",
+  "consoleErrors": 0,
+  "consoleWarnings": 0,
+  "horizontalOverflow": 0,
+  "oneH1Failures": 0,
+  "localPathLeaks": 0,
+  "participantIdLeaks": 0,
+  "harborExpectedStrings": ["Strong Evidence", "Attention Areas", "Application Strategy"],
+  "harborLegacyStrings": [],
+  "harborDefaultPointDecimals": 0,
+  "receiptVerifier": { "valid": "FULLY_REPRODUCED", "tampered": "INVALID", "externalRequests": 0 },
+  "result": "PASS_PUBLIC_RESPONSIVE_QA"
+}

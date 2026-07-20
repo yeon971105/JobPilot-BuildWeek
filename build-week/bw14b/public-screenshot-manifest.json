@@ -1,0 +1,7 @@
+{
+  "status": "QA_COMPLETE",
+  "publicUrl": "https://job-pilot-build-week.vercel.app",
+  "surfacesValidated": ["landing", "shortlist", "Harbor job detail", "Northstar job detail", "Trust Lab", "Build Week", "Receipt Verifier"],
+  "viewports": ["1440x900", "1024x768", "390x844", "320x700"],
+  "note": "Responsive DOM, layout, console, privacy, and content assertions are recorded in public-browser-qa.json."
+}

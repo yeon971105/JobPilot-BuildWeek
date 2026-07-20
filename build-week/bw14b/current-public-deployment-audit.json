@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "jobpilot.bw14b.current-public-deployment-audit.v2",
+  "publicUrl": "https://job-pilot-build-week.vercel.app",
+  "auditDate": "2026-07-20",
+  "accessMode": "unauthenticated public HTTPS",
+  "result": "APPROVED_COMMIT_VERIFIED",
+  "versionEndpoint": {
+    "status": 200,
+    "cacheControl": "no-store, max-age=0",
+    "productCommit": "173bf67db276e4639c5a57b6c4a02070222ca8ba",
+    "deploymentCommit": "0b3aaba8aa8e8b91a41bf21062ab11cb51325b41",
+    "releaseTag": "build-week-2026-study-evidence-rc1",
+    "environment": "public-review",
+    "buildId": "0b3aaba8aa8e8b91a41bf21062ab11cb51325b41"
+  },
+  "responseHeaders": { "server": "Vercel", "harborCacheControl": "public, max-age=0, must-revalidate" },
+  "harborOverview": {
+    "expectedVisible": ["Strong Evidence", "Attention Areas", "Application Strategy"],
+    "legacyVisible": [],
+    "defaultPointDecimals": 0
+  }
+}

@@ -157,7 +157,7 @@ The JP-BW11R certificate covers 28 required states and a 40-check route–viewpo
 
 This remains a development release candidate. A non-final public owner-review environment may be available, but JobPilot has not made the video Public, submitted Devpost, obtained final owner approval, or created a final release tag. Code and original documentation are MIT licensed.
 
-Public owner-review environment: <https://jobpilot-build-week-review.yeon971105.chatgpt.site>. It uses synthetic demo data, cached prepared analyses, no OpenAI key, no production database, no Ollama connection, and no public resume upload.
+Public owner-review environment: <https://job-pilot-build-week.vercel.app>. It uses synthetic demo data, cached prepared analyses, no OpenAI key, no production database, no Ollama connection, and no public resume upload. Its public version record distinguishes approved product commit `173bf67` from deployment wrapper commit `0b3aaba`.
 
 After the final production build, the exact local owner-approval surface starts only through:
 

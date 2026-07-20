@@ -1,7 +1,7 @@
 {
   "schemaVersion": "jobpilot.bw10.public-smoke-results.v1",
-  "generatedAt": "2026-07-18T20:41:19.286Z",
-  "target": "https://jobpilot-build-week-review.yeon971105.chatgpt.site",
+  "generatedAt": "2026-07-20T23:13:00.049Z",
+  "target": "https://job-pilot-build-week.vercel.app",
   "method": "GET-only external HTTPS smoke; no mutation or submission routes called",
   "cyclesAttempted": 20,
   "cyclesPassed": 20,
@@ -10,9 +10,9 @@
   "http200": 560,
   "routeFailures": 0,
   "failedInternalRequests": 0,
-  "consoleErrors": 0,
-  "consoleWarnings": 0,
-  "maximumResponseMilliseconds": 3063.34,
+  "consoleErrors": null,
+  "consoleWarnings": null,
+  "maximumResponseMilliseconds": 658.13,
   "minimumResponseBytes": 179,
   "providerStatusReached": true,
   "openAiApiRequests": 0,
@@ -24,142 +24,142 @@
     "/": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2092.14
+      "maximumResponseMilliseconds": 577.1
     },
     "/demo": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2259.01
+      "maximumResponseMilliseconds": 658.13
     },
     "/demo/shortlist": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 842.49
+      "maximumResponseMilliseconds": 655.89
     },
     "/demo/jobs": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2102.61
+      "maximumResponseMilliseconds": 621.78
     },
     "/demo/compare": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2055.27
+      "maximumResponseMilliseconds": 325.13
     },
     "/demo/jobs/northstar-applied-ai-solutions-engineer": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 1243.96
+      "maximumResponseMilliseconds": 433.94
     },
     "/demo/jobs/alder-data-platform-engineer": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 1998.11
+      "maximumResponseMilliseconds": 620.13
     },
     "/demo/jobs/harbor-product-data-analyst": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 3063.34
+      "maximumResponseMilliseconds": 464.67
     },
     "/demo/jobs/meridian-ml-infrastructure-engineer": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2073.58
+      "maximumResponseMilliseconds": 648.89
     },
     "/demo/jobs/juniper-customer-ai-enablement-lead": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 899.55
+      "maximumResponseMilliseconds": 301.4
     },
     "/demo/jobs/mosaic-junior-software-engineer": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2268.16
+      "maximumResponseMilliseconds": 286.18
     },
     "/demo/employer-posting/northstar-applied-ai-solutions-engineer": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2491.34
+      "maximumResponseMilliseconds": 317.18
     },
     "/demo/employer-posting/alder-data-platform-engineer": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2134.2
+      "maximumResponseMilliseconds": 347.07
     },
     "/demo/employer-posting/harbor-product-data-analyst": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2065.88
+      "maximumResponseMilliseconds": 285.08
     },
     "/demo/employer-posting/meridian-ml-infrastructure-engineer": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2158.38
+      "maximumResponseMilliseconds": 284.49
     },
     "/demo/employer-posting/juniper-customer-ai-enablement-lead": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2133.28
+      "maximumResponseMilliseconds": 290.31
     },
     "/demo/employer-posting/mosaic-junior-software-engineer": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 738.99
+      "maximumResponseMilliseconds": 365.2
     },
     "/demo/verify-receipt": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 802.46
+      "maximumResponseMilliseconds": 316.99
     },
     "/demo/tracker": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2059.01
+      "maximumResponseMilliseconds": 435.4
     },
     "/demo/trust": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 1323.96
+      "maximumResponseMilliseconds": 656.92
     },
     "/about/coverage": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 1983.58
+      "maximumResponseMilliseconds": 297.41
     },
     "/about/build-week": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2852.86
+      "maximumResponseMilliseconds": 275.41
     },
     "/profile": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 1988.93
+      "maximumResponseMilliseconds": 285.07
     },
     "/profile/resume": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2338.87
+      "maximumResponseMilliseconds": 346.39
     },
     "/profile/preferences": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 2121.53
+      "maximumResponseMilliseconds": 261.06
     },
     "/study/decision-utility": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 1610.68
+      "maximumResponseMilliseconds": 281.38
     },
     "/api/health": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 725.88
+      "maximumResponseMilliseconds": 251.15
     },
     "/api/provider-status": {
       "attempts": 20,
       "passed": 20,
-      "maximumResponseMilliseconds": 1936.16
+      "maximumResponseMilliseconds": 233.46
     }
   },
   "result": "PASS_EXTERNAL_20_OF_20"

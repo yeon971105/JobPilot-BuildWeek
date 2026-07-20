@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "jobpilot.bw14b.public-deployment-manifest.v2",
+  "approvedProductCommit": "173bf67db276e4639c5a57b6c4a02070222ca8ba",
+  "deploymentCommit": "0b3aaba8aa8e8b91a41bf21062ab11cb51325b41",
+  "releaseTag": "build-week-2026-study-evidence-rc1",
+  "publicUrl": "https://job-pilot-build-week.vercel.app",
+  "deploymentProvider": "Vercel",
+  "deploymentStatus": "PUBLISHED_AND_VERIFIED",
+  "publiclyServedProductCommit": "173bf67db276e4639c5a57b6c4a02070222ca8ba",
+  "publiclyServedDeploymentCommit": "0b3aaba8aa8e8b91a41bf21062ab11cb51325b41",
+  "publicBuildId": "0b3aaba8aa8e8b91a41bf21062ab11cb51325b41",
+  "publicDeploymentTimestamp": "2026-07-20T23:09:07.4680728Z",
+  "publicVersionEndpointStatus": 200,
+  "legacyStringCount": 0,
+  "expectedStringCount": 3,
+  "loggedOutQa": "PASS",
+  "finalDecision": "GO_VERCEL_PUBLIC_APPROVED_COMMIT_VERIFIED"
+}

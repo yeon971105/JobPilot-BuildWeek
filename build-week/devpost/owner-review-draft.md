@@ -117,7 +117,7 @@ Codex, GPT-5.6 (`gpt-5.6-sol`, prepared), Gemma 4 12B (`gemma4:12b`), determinis
 ## Links and testing
 
 - Repository: https://github.com/yeon971105/JobPilot-BuildWeek
-- Public owner-review URL: https://jobpilot-build-week-review.yeon971105.chatgpt.site
+- Public owner-review URL: https://job-pilot-build-week.vercel.app
 - Unlisted YouTube URL: pending authenticated upload and logged-out verification
 - Codex `/feedback` Session ID: pending exact action on the selected representative task
 

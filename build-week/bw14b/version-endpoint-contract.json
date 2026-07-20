@@ -1,0 +1,17 @@
+{
+  "route": "/api/version",
+  "method": "GET",
+  "cacheControl": "no-store, max-age=0",
+  "response": {
+    "product": "JobPilot",
+    "productCommit": "full approved product commit",
+    "productShortCommit": "seven-character approved product commit",
+    "deploymentCommit": "full commit containing the operational deployment wrapper",
+    "deploymentShortCommit": "seven-character deployment wrapper commit",
+    "releaseTag": "release tag for the approved product",
+    "buildId": "Next.js BUILD_ID, equal to deploymentCommit",
+    "deployedAt": "ISO-8601 deployment timestamp",
+    "environment": "public-review"
+  },
+  "ambiguityPolicy": "The deployment wrapper commit must never be represented as the approved product commit."
+}

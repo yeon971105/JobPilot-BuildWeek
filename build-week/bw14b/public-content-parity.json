@@ -1,0 +1,10 @@
+{
+  "result": "PASS_PUBLIC_APPROVED_COMMIT",
+  "publicUrl": "https://job-pilot-build-week.vercel.app",
+  "approvedProductCommit": "173bf67db276e4639c5a57b6c4a02070222ca8ba",
+  "deploymentCommit": "0b3aaba8aa8e8b91a41bf21062ab11cb51325b41",
+  "releaseTag": "build-week-2026-study-evidence-rc1",
+  "publicVersionEndpoint": { "status": 200, "cacheControl": "no-store, max-age=0", "environment": "public-review" },
+  "harborOverview": { "legacyStringCount": 0, "expectedStringCount": 3, "defaultPointDecimals": 0 },
+  "cacheModes": { "normal": "PASS", "hardRefresh": "PASS", "cacheBusting": "PASS" }
+}

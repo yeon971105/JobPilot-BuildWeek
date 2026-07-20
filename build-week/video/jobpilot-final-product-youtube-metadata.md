@@ -12,6 +12,6 @@ This 175-second owner-review video uses synthetic public roles and the certified
 
 Repository: https://github.com/yeon971105/JobPilot-BuildWeek
 
-Public review: https://jobpilot-build-week-review.yeon971105.chatgpt.site
+Public review: https://job-pilot-build-week.vercel.app
 
 Captions: embedded English. Music: none. Public data: synthetic.

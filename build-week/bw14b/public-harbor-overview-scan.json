@@ -1,0 +1,9 @@
+{
+  "route": "/demo/jobs/harbor-product-data-analyst",
+  "cacheBustingRoute": "/demo/jobs/harbor-product-data-analyst?build=0b3aaba",
+  "result": "PASS",
+  "presentLegacy": [],
+  "presentExpected": ["Strong Evidence", "Attention Areas", "Application Strategy"],
+  "defaultOverviewExactPointDecimals": 0,
+  "horizontalOverflow": false
+}

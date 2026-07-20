@@ -15,6 +15,6 @@ JobPilot turns application fatigue into a focused, inspectable decision. This sy
 Gemma 4 12B is the primary local semantic model. AI Fit V2.2 is deterministic. Prepared GPT-5.6 Sol review was created in Codex and is not live inference. OpenAI API requests and cost: 0. JobPilot never auto-applies.
 
 Repository: https://github.com/yeon971105/JobPilot-BuildWeek
-Public review: https://jobpilot-build-week-review.yeon971105.chatgpt.site
+Public review: https://job-pilot-build-week.vercel.app
 
 No human-impact metric is claimed because the authentic Final Study has not yet been run.

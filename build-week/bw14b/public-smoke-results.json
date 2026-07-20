@@ -1,0 +1,13 @@
+{
+  "target": "https://job-pilot-build-week.vercel.app",
+  "cyclesAttempted": 20,
+  "cyclesPassed": 20,
+  "requests": 560,
+  "routeFailures": 0,
+  "failedInternalRequests": 0,
+  "openAiApiRequests": 0,
+  "openAiApiCostUsd": 0,
+  "productionMutations": 0,
+  "applicationSubmissions": 0,
+  "result": "PASS_EXTERNAL_20_OF_20"
+}

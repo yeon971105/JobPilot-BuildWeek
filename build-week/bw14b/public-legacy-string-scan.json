@@ -1,0 +1,8 @@
+{
+  "publicUrl": "https://job-pilot-build-week.vercel.app/demo/jobs/harbor-product-data-analyst?build=0b3aaba",
+  "result": "PASS",
+  "legacyStringsVisible": [],
+  "expectedStringsVisible": ["Strong Evidence", "Attention Areas", "Application Strategy"],
+  "defaultOverviewExactPointDecimals": 0,
+  "cacheBustingQueryServesApprovedInterface": true
+}

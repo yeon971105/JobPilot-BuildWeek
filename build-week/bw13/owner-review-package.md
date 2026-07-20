@@ -5,7 +5,7 @@ Owner approval remains **false**. Devpost was not submitted, and the video was n
 ## Review surfaces
 
 - Repository: https://github.com/yeon971105/JobPilot-BuildWeek
-- Existing public review: https://jobpilot-build-week-review.yeon971105.chatgpt.site
+- Public review: https://job-pilot-build-week.vercel.app
 - Certified local preview: http://127.0.0.1:3211/
 - Study UI: `/demo/trust#directional-usability-study` and `/about/build-week#directional-usability-study`
 - Public methodology: `build-week/bw13/study-methodology.md`
