@@ -3,9 +3,17 @@ import path from "node:path";
 
 const workspace = process.cwd();
 const nextCli = path.join(workspace, "node_modules", "next", "dist", "bin", "next");
+const immutableMetadata = {
+  JOBPILOT_BUILD_COMMIT: process.env.JOBPILOT_BUILD_COMMIT?.trim(),
+  JOBPILOT_RELEASE_TAG: process.env.JOBPILOT_RELEASE_TAG?.trim(),
+  JOBPILOT_DEPLOYMENT_ENVIRONMENT: process.env.JOBPILOT_DEPLOYMENT_ENVIRONMENT?.trim(),
+  JOBPILOT_DEPLOYED_AT: process.env.JOBPILOT_DEPLOYED_AT?.trim() || new Date().toISOString(),
+};
+const missing = Object.entries(immutableMetadata).filter(([, value]) => !value).map(([name]) => name);
+if (missing.length > 0) throw new Error(`Production build is missing immutable JobPilot metadata: ${missing.join(", ")}`);
 const build = spawnSync(process.execPath, [nextCli, "build", "--webpack"], {
   cwd: workspace,
-  env: { ...process.env, JOBPILOT_SITES_STANDALONE: "true" },
+  env: { ...process.env, ...immutableMetadata, JOBPILOT_SITES_STANDALONE: "true" },
   stdio: "inherit",
 });
 

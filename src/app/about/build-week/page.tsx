@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { DemoHeader } from "@/components/demo/demo-header";
 import { DirectionalStudyEvidence } from "@/components/demo/directional-study-evidence";
+import { getBuildVersion } from "@/server/build-week/version";
 
 const proofMoments = [
   { title: "Incorrect work-mode interpretation", observed: "A practical work-mode mismatch could read like a technical capability failure.", reproduced: "Frozen cases showed identical technical evidence receiving a different user interpretation when only work mode changed.", repaired: "Technical Fit Score and practical compatibility were separated in data, UI, and explanation.", regression: "Work-mode mutation cases prove unchanged technical points, score, and receipt arithmetic." },
@@ -13,7 +14,9 @@ const proofMoments = [
 const journey = ["DISCOVER", "PRIORITIZE", "UNDERSTAND", "APPLY", "TRACK"];
 
 export default function Page() {
+  const version = getBuildVersion();
   return <div className="min-h-screen bg-[#fbf7ed] text-[#173d2d]"><DemoHeader /><main className="mx-auto max-w-6xl px-5 py-12"><p className="eyebrow">OpenAI Build Week · Apps for Your Life</p><h1 className="mt-4 max-w-5xl font-serif text-5xl leading-tight sm:text-6xl">Codex helped turn application fatigue into five reproducible product repairs.</h1><p className="mt-6 max-w-3xl text-lg leading-8 text-[#587064]">The build story is not “AI generated an interface.” Codex helped observe defects, reproduce them with evidence, repair the product boundary, and preserve each correction in regression tests.</p>
+    <p className="mt-4 text-xs font-semibold tracking-[.08em] text-[#587064]">Build {version.shortCommit} Â· Study Evidence RC</p>
     <ol aria-label="JobPilot product journey" className="mt-9 grid overflow-hidden rounded-2xl border border-[#173d2d]/10 bg-[#e8efe6] sm:grid-cols-5">{journey.map((item, index) => <li key={item} className="flex min-h-20 items-center gap-3 border-b border-[#173d2d]/10 p-4 text-xs font-bold tracking-[.08em] last:border-0 sm:border-b-0 sm:border-r"><span className="text-[#a1742d]">{index + 1}</span>{item}</li>)}</ol>
     <DirectionalStudyEvidence compact />
     <section className="mt-12"><div className="flex flex-wrap items-end justify-between gap-4"><div><p className="eyebrow">Observed development evidence</p><h2 className="mt-2 font-serif text-4xl">Five proof moments</h2></div><Link href="/demo/trust" className="button-secondary">Inspect Trust Lab</Link></div><div className="mt-6 space-y-5">{proofMoments.map((moment, index) => <article key={moment.title} className="paper-card"><div className="grid gap-5 lg:grid-cols-[64px_1fr]"><span className="grid size-12 place-items-center rounded-full bg-[#173d2d] font-mono text-sm text-[#fffaf0]">{String(index + 1).padStart(2, "0")}</span><div><h3 className="font-serif text-3xl">{moment.title}</h3><dl className="mt-5 grid gap-3 md:grid-cols-2"><ProofStep label="Observed" body={moment.observed} /><ProofStep label="Reproduced" body={moment.reproduced} /><ProofStep label="Repaired" body={moment.repaired} /><ProofStep label="Regression tested" body={moment.regression} /></dl></div></div></article>)}</div></section>
