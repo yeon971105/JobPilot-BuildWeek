@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const immutableMetadataNames = [
-  "JOBPILOT_BUILD_COMMIT",
+  "JOBPILOT_APPROVED_PRODUCT_COMMIT",
+  "JOBPILOT_DEPLOYMENT_COMMIT",
   "JOBPILOT_RELEASE_TAG",
   "JOBPILOT_DEPLOYED_AT",
   "JOBPILOT_DEPLOYMENT_ENVIRONMENT",
@@ -11,7 +12,8 @@ function immutableBuildMetadata() {
   const metadata = Object.fromEntries(immutableMetadataNames.map((name) => [name, process.env[name]?.trim()])) as Record<(typeof immutableMetadataNames)[number], string | undefined>;
   const missing = immutableMetadataNames.filter((name) => !metadata[name]);
   if (missing.length > 0) throw new Error(`Production build is missing immutable JobPilot metadata: ${missing.join(", ")}`);
-  if (!/^[0-9a-f]{40}$/.test(metadata.JOBPILOT_BUILD_COMMIT!)) throw new Error("JOBPILOT_BUILD_COMMIT must be a full Git SHA-1 commit.");
+  if (!/^[0-9a-f]{40}$/.test(metadata.JOBPILOT_APPROVED_PRODUCT_COMMIT!)) throw new Error("JOBPILOT_APPROVED_PRODUCT_COMMIT must be a full Git SHA-1 commit.");
+  if (!/^[0-9a-f]{40}$/.test(metadata.JOBPILOT_DEPLOYMENT_COMMIT!)) throw new Error("JOBPILOT_DEPLOYMENT_COMMIT must be a full Git SHA-1 commit.");
   if (metadata.JOBPILOT_DEPLOYMENT_ENVIRONMENT !== "public-review") throw new Error("JOBPILOT_DEPLOYMENT_ENVIRONMENT must be public-review.");
   if (Number.isNaN(Date.parse(metadata.JOBPILOT_DEPLOYED_AT!))) throw new Error("JOBPILOT_DEPLOYED_AT must be an ISO-8601 timestamp.");
   return metadata as Record<(typeof immutableMetadataNames)[number], string>;
@@ -24,7 +26,7 @@ const nextConfig: NextConfig = {
   output: process.env.JOBPILOT_SITES_STANDALONE === "true" ? "standalone" : undefined,
   logging: process.env.JOBPILOT_SITES_STANDALONE === "true" ? { browserToTerminal: false } : undefined,
   env: buildMetadata,
-  generateBuildId: async () => buildMetadata.JOBPILOT_BUILD_COMMIT,
+  generateBuildId: async () => buildMetadata.JOBPILOT_DEPLOYMENT_COMMIT,
 };
 
 export default nextConfig;

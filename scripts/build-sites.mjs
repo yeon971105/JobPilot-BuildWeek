@@ -3,8 +3,10 @@ import path from "node:path";
 
 const workspace = process.cwd();
 const nextCli = path.join(workspace, "node_modules", "next", "dist", "bin", "next");
+const deploymentCommit = process.env.JOBPILOT_DEPLOYMENT_COMMIT?.trim() || spawnSync("git", ["rev-parse", "HEAD"], { cwd: workspace, encoding: "utf8" }).stdout.trim();
 const immutableMetadata = {
-  JOBPILOT_BUILD_COMMIT: process.env.JOBPILOT_BUILD_COMMIT?.trim(),
+  JOBPILOT_APPROVED_PRODUCT_COMMIT: process.env.JOBPILOT_APPROVED_PRODUCT_COMMIT?.trim(),
+  JOBPILOT_DEPLOYMENT_COMMIT: deploymentCommit,
   JOBPILOT_RELEASE_TAG: process.env.JOBPILOT_RELEASE_TAG?.trim(),
   JOBPILOT_DEPLOYMENT_ENVIRONMENT: process.env.JOBPILOT_DEPLOYMENT_ENVIRONMENT?.trim(),
   JOBPILOT_DEPLOYED_AT: process.env.JOBPILOT_DEPLOYED_AT?.trim() || new Date().toISOString(),
