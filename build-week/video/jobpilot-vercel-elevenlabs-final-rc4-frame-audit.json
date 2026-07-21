@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "jobpilot.bw14g.public-safe-frame-audit.v1",
+  "status": "PASS",
+  "video": {
+    "file": "build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4",
+    "sha256": "7b9c572379f0c131395aca8abfc739ac05b1d124393a9c8e8c6b881667aa1c32",
+    "renderCanvas": "1920x1080 at 30 fps"
+  },
+  "publicSource": {
+    "demoUrl": "https://job-pilot-build-week.vercel.app",
+    "productCommit": "173bf67db276e4639c5a57b6c4a02070222ca8ba",
+    "deploymentCommit": "0b3aaba8aa8e8b91a41bf21062ab11cb51325b41",
+    "releaseTag": "build-week-2026-study-evidence-rc1"
+  },
+  "samplePlan": {
+    "count": 16,
+    "frameDirectory": "not committed; hashes are recorded in the RC4 caption audit",
+    "timesSeconds": [2.6, 17, 31, 38.5, 50, 67, 83, 95, 100.5, 107, 120, 130, 138, 152, 166, 171]
+  },
+  "checks": {
+    "burnedCaptionsVisibleWithoutCc": true,
+    "captionClipping": 0,
+    "captionOverTwoLines": 0,
+    "rightSideDecisionCardCropping": 0,
+    "receiptValidationObscured": 0,
+    "employerHandoffWarningObscured": 0,
+    "trackerStatusControlsObscured": 0,
+    "trustLabModelLabelsObscured": 0,
+    "finalLiveDemoUrlObscured": 0,
+    "horizontalOverflow": 0,
+    "staleInterfaceFrames": 0,
+    "privateDataFindings": 0,
+    "participantLevelDataFindings": 0,
+    "localhostFindings": 0,
+    "chatgptSitesFindings": 0
+  },
+  "safeAreaException": {
+    "cue": 34,
+    "text": "JobPilot never auto-applies.",
+    "placement": "upper safe area",
+    "reason": "The tracker status toast and Undo control remain fully visible."
+  },
+  "result": "PASS"
+}

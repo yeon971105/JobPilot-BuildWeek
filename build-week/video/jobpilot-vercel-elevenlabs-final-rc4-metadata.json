@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "jobpilot.bw14g.final-video-metadata.v1",
+  "status": "OWNER_APPROVED_VIDEO",
+  "finalCompetitionVideo": "build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4",
+  "sha256": "7b9c572379f0c131395aca8abfc739ac05b1d124393a9c8e8c6b881667aa1c32",
+  "durationSeconds": 173.133333,
+  "video": {
+    "codec": "h264",
+    "resolution": "1920x1080",
+    "frameRate": 30
+  },
+  "audio": {
+    "codec": "aac",
+    "narration": "approved ElevenLabs narration preserved from RC3",
+    "bitstreamSha256": "817da51545ae62ee7295b530575216f542ef9f82e6b302bd7f688a736e30d103"
+  },
+  "captions": {
+    "burnedIntoVideo": true,
+    "embeddedSoftTrack": {
+      "codec": "mov_text",
+      "language": "eng"
+    },
+    "finalSrt": "build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.srt",
+    "finalSrtSha256": "812d733c925cc1cfdf99d9b628ba97d7986ac28802ffa7af069e90489d41c5c0",
+    "cueCount": 42,
+    "maximumLines": 2
+  },
+  "publicProvenance": {
+    "demoUrl": "https://job-pilot-build-week.vercel.app",
+    "productCommit": "173bf67db276e4639c5a57b6c4a02070222ca8ba",
+    "deploymentCommit": "0b3aaba8aa8e8b91a41bf21062ab11cb51325b41",
+    "releaseTag": "build-week-2026-study-evidence-rc1",
+    "environment": "public-review"
+  },
+  "codexFeedbackSessionId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "validation": {
+    "captionAudit": "build-week/video/jobpilot-vercel-elevenlabs-final-rc4-caption-audit.json",
+    "validationManifest": "build-week/video/jobpilot-vercel-elevenlabs-final-rc4-validation.json",
+    "publicSafeFrameAudit": "build-week/video/jobpilot-vercel-elevenlabs-final-rc4-frame-audit.json",
+    "result": "PASS"
+  },
+  "publication": {
+    "youtubeUploaded": false,
+    "devpostSubmitted": false,
+    "submittedFinalTagCreated": false
+  }
+}

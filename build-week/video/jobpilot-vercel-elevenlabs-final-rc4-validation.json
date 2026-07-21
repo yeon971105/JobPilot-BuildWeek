@@ -1,0 +1,176 @@
+{
+    "release":  "JP-BW14G",
+    "status":  "PASS",
+    "checkedAt":  "2026-07-21T02:30:59.5907584Z",
+    "artifacts":  {
+                      "sourceVideo":  "jobpilot-vercel-elevenlabs-final-rc3.mp4",
+                      "outputVideo":  "jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4",
+                      "sourceSrt":  "jobpilot-vercel-elevenlabs-final-rc3.srt",
+                      "sourceVideoSha256":  "96c4f1da4ef986328870943d2745b914fbadb46c4e65c9ec15951592cc646991",
+                      "outputVideoSha256":  "7b9c572379f0c131395aca8abfc739ac05b1d124393a9c8e8c6b881667aa1c32",
+                      "sourceSrtSha256":  "812d733c925cc1cfdf99d9b628ba97d7986ac28802ffa7af069e90489d41c5c0",
+                      "frameSampleDirectory":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples",
+                      "frameSampleCount":  16
+                  },
+    "checks":  {
+                   "hardBurnedCaptionsVisibleWithoutCc":  true,
+                   "allApprovedCaptionCuesRendered":  true,
+                   "captionCueCount":  42,
+                   "captionTextPreserved":  true,
+                   "captionsSynchronizedToApprovedSrt":  true,
+                   "maximumCaptionLines":  2,
+                   "captionClippingDetected":  false,
+                   "essentialUiObscured":  false,
+                   "rightSideDecisionCardFullyVisible":  true,
+                   "staleUiDetected":  false,
+                   "privateDataDetected":  false,
+                   "sourceSrtPreserved":  true,
+                   "sourceDurationSeconds":  173.133333,
+                   "outputDurationSeconds":  173.133333,
+                   "durationDifferenceSeconds":  0,
+                   "under180Seconds":  true,
+                   "resolutionPreserved":  true,
+                   "frameRatePreserved":  true,
+                   "videoCodecH264":  true,
+                   "audioCodecAac":  true,
+                   "audioBitstreamPreserved":  true,
+                   "sourceAudioSha256":  "817da51545ae62ee7295b530575216f542ef9f82e6b302bd7f688a736e30d103",
+                   "outputAudioSha256":  "817da51545ae62ee7295b530575216f542ef9f82e6b302bd7f688a736e30d103",
+                   "softSubtitleTrackRetained":  true,
+                   "softSubtitleLanguage":  "eng",
+                   "croppedOrZoomed":  false,
+                   "sceneTimingChanged":  false,
+                   "transitionsChanged":  false,
+                   "narrationChanged":  false,
+                   "audioLoudnessChanged":  false,
+                   "productCodeModified":  false,
+                   "youtubeUploadPerformed":  false,
+                   "devpostSubmissionPerformed":  false,
+                   "commitPerformed":  false
+               },
+    "streamSummary":  {
+                          "video":  {
+                                        "codec":  "h264",
+                                        "width":  1920,
+                                        "height":  1080,
+                                        "frameRate":  "30/1"
+                                    },
+                          "audio":  {
+                                        "codec":  "aac",
+                                        "sampleRate":  "48000",
+                                        "channels":  1
+                                    },
+                          "subtitle":  {
+                                           "codec":  "mov_text",
+                                           "language":  "eng"
+                                       }
+                      },
+    "manualVisualReview":  {
+                               "sampleFramesReviewed":  16,
+                               "result":  "PASS",
+                               "notes":  [
+                                             "Captions are visibly burned into the rendered image at sampled spoken intervals.",
+                                             "No sampled caption exceeds two lines or reaches the frame edge.",
+                                             "The right-side Decision Card, receipt validation result, employer handoff, tracker status controls, Trust Lab labels, and final Live Demo URL remain readable.",
+                                             "No stale interface or private data was observed in the sampled frames."
+                                         ]
+                           },
+    "frameSamples":  [
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/01-landing.png",
+                             "atSeconds":  2.6,
+                             "scene":  "landing",
+                             "sha256":  "d72b837301eda7ce5895162234461b9b4e3dd83475455609efbc74ce9eadd730"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/02-shortlist.png",
+                             "atSeconds":  17,
+                             "scene":  "shortlist",
+                             "sha256":  "201ac3a3e04c98b8e9e7f7cfbd6ee1438be39747a622b3211da2d5243627b75a"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/03-detail-title.png",
+                             "atSeconds":  31,
+                             "scene":  "job detail",
+                             "sha256":  "2a840496ef57527173face7549d9e3932a0027531d8f8aaaa44ce1e3f84671f9"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/03-detail-card.png",
+                             "atSeconds":  38.5,
+                             "scene":  "right-side Decision Card",
+                             "sha256":  "ae789f67d6634ef3ef3a9e206c43b53075511958a05c4f3b90869f3c0681dd3c"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/04-strategy.png",
+                             "atSeconds":  50,
+                             "scene":  "application strategy",
+                             "sha256":  "eb375001eb00e706ef5472b288989f24c4e2a0ffe68821fe54b7c31a17bf7293"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/05-evidence.png",
+                             "atSeconds":  67,
+                             "scene":  "evidence",
+                             "sha256":  "3d973565cade7527b33bb5397e36408b43e659674e68b84fcc91c9cff0b2f713"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/06-score-proof.png",
+                             "atSeconds":  83,
+                             "scene":  "score proof",
+                             "sha256":  "b79cf98cb6d6e14ef1ad3c7d8f2b342f494a5e55bd4c5b4443b6d0ad08b3f316"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/07-receipt-valid.png",
+                             "atSeconds":  95,
+                             "scene":  "receipt FULLY_REPRODUCED",
+                             "sha256":  "acf8d02ceb536c099d19dde79c26c06c6ff947a67366dbbcee12f9ce94cd8ce1"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/07-receipt-invalid.png",
+                             "atSeconds":  100.5,
+                             "scene":  "receipt invalid",
+                             "sha256":  "dfacb0e0cd4bbb0c6989a2004deb36acbd15fd35f6a1da1cac118d886be0e397"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/08-handoff.png",
+                             "atSeconds":  107,
+                             "scene":  "employer handoff",
+                             "sha256":  "e5b48fc36b6e19be48cfad360748270f5e86a089c95bc7176b58ab7dbe85f848"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/09-tracker.png",
+                             "atSeconds":  120,
+                             "scene":  "tracker",
+                             "sha256":  "0af461deb46d3da4c436d5622ea05d23debe89d852a75d55025d9dc13591fd8f"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/09-tracker-undo.png",
+                             "atSeconds":  130,
+                             "scene":  "tracker Undo safe area",
+                             "sha256":  "632c08eaa5fbf347e97b641451e00f4719c5748abc811a41d4fd2408a4d877c1"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/10-gemma.png",
+                             "atSeconds":  138,
+                             "scene":  "Gemma",
+                             "sha256":  "513827a91af7567f44f971ef9d663f1530c497205a24f15226c59d3469498d0e"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/10-gpt-codex.png",
+                             "atSeconds":  152,
+                             "scene":  "prepared GPT and Codex",
+                             "sha256":  "349dfb4dc5d1f5f9f98f2ab204307ab00ab0141e2439f54934dd64221b112bde"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/11-closing-caption.png",
+                             "atSeconds":  166,
+                             "scene":  "final live-demo URL",
+                             "sha256":  "6eca9a3cec95bd80dfc9478f30deb50e2f0ea64e616ab46fc846020779f55ca3"
+                         },
+                         {
+                             "file":  "jobpilot-vercel-elevenlabs-final-rc4-frame-samples/11-closing-outro.png",
+                             "atSeconds":  171,
+                             "scene":  "outro",
+                             "sha256":  "f7b52587bff3c896005419cca84edeff33d21e2e8bd509613d537cc66b5bd624"
+                         }
+                     ]
+}
