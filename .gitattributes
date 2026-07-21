@@ -1,3 +1,7 @@
 # These frozen artifacts are hashed byte-for-byte by release tests.
 build-week/gpt56-prepared/*.json text eol=lf
 build-week/bw8/production-coverage-snapshot.json text eol=lf
+# The approved RC4 caption payload is SHA-256 certified. Preserve its exact
+# mixed line endings across Windows clean clones rather than applying autocrlf.
+build-week/video/jobpilot-vercel-elevenlabs-final-rc3.srt -text
+build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.srt -text
