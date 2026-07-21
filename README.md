@@ -2,7 +2,11 @@
 
 **Find the roles worth your time.**
 
-JobPilot helps a job seeker decide where to spend the next hour. Its public demo turns a small set of synthetic roles into a transparent decision path: discover, prioritize, understand the evidence, open a synthetic employer destination, and track a deliberate next step. It never auto-applies.
+JobPilot helps a job seeker decide where to spend the next hour. Its public demo turns a small set of synthetic roles into a transparent decision path:
+
+`DISCOVER → PRIORITIZE → UNDERSTAND → APPLY → TRACK`
+
+It never auto-applies.
 
 **Public demo:** <https://job-pilot-build-week.vercel.app>
 
