@@ -2,6 +2,7 @@ import aggregate from "../../../build-week/bw13/authentic-study-aggregate.json";
 
 const traditional = aggregate.conditions.traditionalPosting;
 const jobPilot = aggregate.conditions.jobPilot;
+const fullLimitation = "All participants completed the traditional condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference.";
 
 export function DirectionalStudyEvidence({ compact = false }: { compact?: boolean }) {
   return (
@@ -39,7 +40,7 @@ export function DirectionalStudyEvidence({ compact = false }: { compact?: boolea
         />
       </div>
 
-      <p data-limitation-adjacent="true" className="mt-5 rounded-2xl bg-[#fff4d8] p-4 text-base font-semibold leading-7 text-[#5e4a25]">Small directional study, n=5. All participants used the traditional condition first, so results may include an order effect.</p>
+      <p data-limitation-adjacent="true" className="mt-5 rounded-2xl bg-[#fff4d8] p-4 text-base font-semibold leading-7 text-[#5e4a25]">Small directional study, n=5. {fullLimitation}</p>
       <p className="mt-4 text-base leading-7 text-[#587064]">Confidence: <b>3.8 → 6.0 out of 7</b>. Decision alignment: <b>40% → 100%</b>. These are aggregate usability observations, not hiring-outcome evidence.</p>
 
       <details className="mt-5 rounded-2xl border border-[#173d2d]/10 bg-[#edf1e8] p-5">
@@ -48,7 +49,7 @@ export function DirectionalStudyEvidence({ compact = false }: { compact?: boolea
           <p>Participants reviewed two synthetic roles: Analytics Operations Engineer and Data Enablement Engineer. Different roles were used between conditions to prevent same-role carryover.</p>
           <p>Four factual questions covered required experience, preferred experience, work arrangement, and the weakest-supported qualification. Apply / Review Further / Skip was analyzed separately as decision alignment. Confidence and clarity used seven-point self-reported scales.</p>
           <p>Collection was anonymous and browser-local under <code>{aggregate.protocolVersion}</code>. It collected no PII, and participant-level rows are not public.</p>
-          <p><b>Limitation:</b> {aggregate.limitation}</p>
+          <p><b>Limitation:</b> {fullLimitation}</p>
         </div>
       </details>
     </section>

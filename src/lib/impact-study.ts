@@ -300,7 +300,7 @@ export function analyzeImpactStudyCsv(csv: string, options: { bootstrapIteration
     bootstrapConfidenceIntervals: null,
     bootstrapStatus: participantCount === 0 ? "NOT_AVAILABLE_NO_PARTICIPANTS" : participantCount < 5 ? "NOT_AVAILABLE_BELOW_MINIMUM" : "NOT_RUN_DIRECTIONAL_SAMPLE",
     statisticalSignificanceClaim: false,
-    inferenceBoundary: participantCount < 5 ? "Human results are withheld below the minimum target. No significance or population-level claim is permitted." : "Directional usability evidence from a fixed sample of five. No confidence interval or statistical-significance test is reported; the fixed condition order may contribute an order effect.",
+    inferenceBoundary: participantCount < 5 ? "Human results are withheld below the minimum target. No significance or population-level claim is permitted." : "Directional usability evidence from a fixed sample of five. All participants completed the traditional condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference. No confidence interval or statistical-significance test is reported.",
     validation: { duplicateParticipantConditions: 0, incompleteParticipantSessions: 0, malformedRows: 0, prohibitedColumns: 0, fabricatedParticipants: 0 },
   };
 }

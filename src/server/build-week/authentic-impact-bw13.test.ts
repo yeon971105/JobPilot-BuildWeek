@@ -24,8 +24,10 @@ describe("JP-BW13 authentic aggregate impact and participant privacy gate", () =
 
   it("renders directional aggregate metrics with the order limitation adjacent", () => {
     const source = read("src/components/demo/directional-study-evidence.tsx");
+    const canonicalLimitation = "All participants completed the traditional condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference.";
+    expect(aggregate.limitation).toBe(canonicalLimitation);
     expect(source).toContain('import aggregate from "../../../build-week/bw13/authentic-study-aggregate.json"');
-    for (const text of ["Directional usability study", "Moderated directional usability study, n=5", "Median task time", "Factual accuracy", "Self-reported clarity", "Small directional study, n=5", "order effect", "View methodology"]) expect(source).toContain(text);
+    for (const text of ["Directional usability study", "Moderated directional usability study, n=5", "Median task time", "Factual accuracy", "Self-reported clarity", "Small directional study, n=5", canonicalLimitation, "View methodology"]) expect(source).toContain(text);
     expect(source).toContain('data-study-metric-group="aggregate-only"');
     expect(source).toContain('data-limitation-adjacent="true"');
     expect(source).not.toMatch(/participant_?id|anonymous session|individual row/i);
