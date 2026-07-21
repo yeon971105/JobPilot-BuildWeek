@@ -1,11 +1,15 @@
 {
-  "schemaVersion": "jobpilot.bw4-codex-feedback.v1",
-  "timestamp": "2026-07-18T01:17:13.457Z",
+  "schemaVersion": "jobpilot.bw15c.codex-feedback.v1",
+  "timestamp": null,
   "privacyClassification": "PUBLIC_SAFE",
   "publicSafe": true,
   "supportedGate": "CODEX_FEEDBACK",
-  "status": "HOLD",
+  "status": "OWNER_CONFIRMED",
   "primaryThreadIdentified": true,
-  "feedbackSessionId": null,
-  "reason": "The current tool surface cannot invoke the Codex /feedback client command."
+  "taskTitle": "Finalize JobPilot product UX",
+  "feedbackSessionId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "feedbackSessionValidated": true,
+  "validationSource": "owner completed the /feedback command in the primary Codex task",
+  "intendedSubmissionUse": "OpenAI Build Week Devpost Session ID field",
+  "timestampNote": "No feedback submission timestamp was supplied or invented."
 }

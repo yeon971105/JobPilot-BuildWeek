@@ -1,6 +1,7 @@
 {
   "schemaVersion": "jobpilot.bw14g.final-video-metadata.v1",
   "status": "OWNER_APPROVED_VIDEO",
+  "canonicalUploadMetadataFile": "build-week/video/jobpilot-final-rc4-youtube-metadata.md",
   "finalCompetitionVideo": "build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4",
   "sha256": "7b9c572379f0c131395aca8abfc739ac05b1d124393a9c8e8c6b881667aa1c32",
   "durationSeconds": 173.133333,
@@ -20,7 +21,7 @@
       "codec": "mov_text",
       "language": "eng"
     },
-    "finalSrt": "build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.srt",
+    "finalSrt": "build-week/video/jobpilot-vercel-elevenlabs-final-rc3.srt",
     "finalSrtSha256": "812d733c925cc1cfdf99d9b628ba97d7986ac28802ffa7af069e90489d41c5c0",
     "cueCount": 42,
     "maximumLines": 2

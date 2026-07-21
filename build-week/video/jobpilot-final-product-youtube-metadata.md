@@ -2,6 +2,8 @@
 
 Title: JobPilot — Find the Roles Worth Your Time | Final Product RC1
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 upload metadata. The sole canonical upload metadata is `build-week/video/jobpilot-final-rc4-youtube-metadata.md`.
+
 Visibility: Unlisted after authenticated owner upload. Do not make Public before owner approval.
 
 Description:

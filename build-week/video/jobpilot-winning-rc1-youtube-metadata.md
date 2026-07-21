@@ -1,5 +1,7 @@
 # YouTube metadata — account action required
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 upload metadata. The sole canonical upload metadata is `build-week/video/jobpilot-final-rc4-youtube-metadata.md`.
+
 ## Title
 
 JobPilot: Find the Roles Worth Your Time | OpenAI Build Week 2026

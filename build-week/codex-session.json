@@ -1,10 +1,22 @@
 {
-  "schemaVersion": "jobpilot.codex-session.v1",
+  "schemaVersion": "jobpilot.codex-session.v2",
+  "taskTitle": "Finalize JobPilot product UX",
   "primaryThreadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
   "primaryThreadTitle": "Finalize JobPilot product UX",
-  "feedbackSessionId": null,
-  "feedbackSessionIdValidated": false,
+  "feedbackSessionId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "feedbackSessionValidated": true,
+  "validationSource": "owner completed the /feedback command in the primary Codex task",
+  "feedbackSubmissionTimestamp": null,
+  "externalValidationTimestamp": null,
+  "timestampNote": "The identifier was owner-confirmed; no feedback submission or external validation timestamp was supplied.",
+  "intendedSubmissionUse": "OpenAI Build Week Devpost Session ID field",
+  "identifierDistinction": {
+    "codexFeedbackSessionId": "Codex /feedback Session ID only",
+    "gitCommit": "Git commit identifiers are separate release-history records",
+    "repositoryId": "The GitHub repository URL is separate from the Session ID",
+    "vercelDeploymentId": "Vercel deployment identifiers are separate from the Session ID"
+  },
   "fabricated": false,
-  "status": "OWNER_FEEDBACK_ACTION_REQUIRED",
-  "hold": "HOLD_BUILD_WEEK_CODEX_FEEDBACK_ACTION"
+  "status": "OWNER_CONFIRMED_FOR_DEVPOST_FIELD",
+  "hold": null
 }

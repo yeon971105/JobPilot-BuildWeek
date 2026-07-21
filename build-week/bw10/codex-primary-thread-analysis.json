@@ -4,7 +4,7 @@
   "selectedThread": {
     "threadId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
     "title": "Finalize JobPilot product UX",
-    "cwd": "C:/Users/Jewon/Desktop/JobPilot",
+    "workspace": "local JobPilot workspace",
     "description": "JP-BW6: progressive evidence UX, private resume onboarding, local analysis, and final submission media"
   },
   "selectionRule": "Most representative Build Week product thread, not newest thread",
@@ -39,6 +39,9 @@
     }
   ],
   "preparedArtifactThreadIdMatch": true,
+  "feedbackSessionId": "019f7382-0ef9-7d10-bf26-d6e5615924dd",
+  "feedbackSessionValidated": true,
+  "validationSource": "owner completed the /feedback command in the primary Codex task",
   "representativeCoverage": "HIGHEST_AVAILABLE",
   "status": "SELECTED_EXACT_THREAD"
 }

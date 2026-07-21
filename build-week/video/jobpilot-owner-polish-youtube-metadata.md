@@ -1,5 +1,7 @@
 # YouTube Owner-Review Metadata
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 upload metadata. The sole canonical upload metadata is `build-week/video/jobpilot-final-rc4-youtube-metadata.md`.
+
 ## Title
 
 JobPilot — Know Which Job Is Worth Your Time | Build Week Owner Polish RC1
