@@ -142,26 +142,6 @@ function validIso(value: string) {
   return value.length > 0 && Number.isFinite(Date.parse(value));
 }
 
-function mulberry32(seed: number) {
-  let state = seed >>> 0;
-  return () => {
-    state += 0x6D2B79F5;
-    let value = state;
-    value = Math.imul(value ^ value >>> 15, value | 1);
-    value ^= value + Math.imul(value ^ value >>> 7, value | 61);
-    return ((value ^ value >>> 14) >>> 0) / 4_294_967_296;
-  };
-}
-
-function percentile(values: number[], fraction: number) {
-  const ordered = [...values].sort((left, right) => left - right);
-  const index = (ordered.length - 1) * fraction;
-  const lower = Math.floor(index);
-  const upper = Math.ceil(index);
-  if (lower === upper) return ordered[lower]!;
-  return ordered[lower]! + (ordered[upper]! - ordered[lower]!) * (index - lower);
-}
-
 function pairedMetrics(pairs: Pair[]) {
   const raw = pairs.map((pair) => pair.RAW_POSTING);
   const jobPilot = pairs.map((pair) => pair.JOBPILOT);
@@ -187,20 +167,6 @@ function pairedMetrics(pairs: Pair[]) {
     meanConfidenceDifferenceJobPilotMinusRaw: difference(mean(jobPilot.map((row) => row.confidence)), mean(raw.map((row) => row.confidence))),
     meanTransparencyDifferenceJobPilotMinusRaw: difference(mean(jobPilot.map((row) => row.transparency)), mean(raw.map((row) => row.transparency))),
   };
-}
-
-function bootstrapIntervals(pairs: Pair[], iterations: number, seed: number) {
-  const random = mulberry32(seed);
-  const buckets: Record<string, number[]> = {};
-  for (let iteration = 0; iteration < iterations; iteration += 1) {
-    const sample = Array.from({ length: pairs.length }, () => pairs[Math.floor(random() * pairs.length)]!);
-    const metrics = pairedMetrics(sample);
-    for (const [key, value] of Object.entries(metrics)) {
-      if (typeof value !== "number" || !Number.isFinite(value)) continue;
-      (buckets[key] ??= []).push(value);
-    }
-  }
-  return Object.fromEntries(Object.entries(buckets).map(([key, values]) => [key, { lower: round(percentile(values, 0.025), 2), upper: round(percentile(values, 0.975), 2), confidence: 0.95 as const, iterations }]));
 }
 
 function summarizeCondition(rows: ImpactRow[]) {
