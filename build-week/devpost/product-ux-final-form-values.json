@@ -1,4 +1,6 @@
 {
+  "historicalStatus": "HISTORICAL_SUPERSEDED",
+  "supersededBy": "build-week/devpost/owner-review-form-values.json",
   "projectName": "JobPilot",
   "tagline": "Know why a job fits.",
   "shortDescription": "Transparent job-fit decisions with evidence behind every point and private local resume analysis.",

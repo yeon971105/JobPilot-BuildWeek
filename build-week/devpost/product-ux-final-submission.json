@@ -1,4 +1,6 @@
 {
+  "historicalStatus": "HISTORICAL_SUPERSEDED",
+  "supersededBy": "build-week/devpost/owner-review-form-values.json",
   "project": "JobPilot",
   "tagline": "Know why a job fits.",
   "status": "product RC awaiting user approval",

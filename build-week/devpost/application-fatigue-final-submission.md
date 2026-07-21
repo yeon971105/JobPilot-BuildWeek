@@ -1,5 +1,7 @@
 # JobPilot — Find the Roles Worth Your Time
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 draft evidence. Do not use for the current submission; use `build-week/devpost/owner-review-draft.md`.
+
 Status: owner-review draft. Not submitted.
 
 ## Inspiration

@@ -16,6 +16,6 @@ JP-BW7 adds:
 - the seven-stage optional judge-tour contract;
 - a 320-pixel verifier shrinkability regression found during production browser QA.
 
-Release results: 73 passing tests, two authorized skips, zero arithmetic errors, zero hidden adjustments, zero receipt mismatches, and unchanged frozen receipt hashes. Browser QA adds 44 production route/viewport checks with zero overflow and zero console warnings/errors.
+Current release validation: 132 passing tests, two authorized skips, zero lint errors, zero lint warnings, zero arithmetic errors, zero hidden adjustments, zero receipt mismatches, unchanged frozen receipt hashes, and 2 / 2 passing production-CSS checks. Certified public browser QA records zero overflow and zero console warnings or errors.
 
-No hiring-outcome sample exists. The usability study kit is `READY_NOT_RUN`; it contains no participant results.
+The authentic moderated usability study is `COMPLETE_MINIMUM`: five participants, ten human rows, and zero fabricated or dry-run rows counted as humans. Its aggregate-only result is directional, fixed-order evidence rather than a hiring-outcome claim.

@@ -1,6 +1,8 @@
 # JP-BW10 owner-review package
 
-**Decision boundary:** `FINAL_DECISION=GO_BUILD_WEEK_OWNER_REVIEW_PACKAGE_READY` may be used after the final repository and clean-clone checks complete. This is a non-final development release candidate. It has not been submitted to Devpost, the video has not been made Public, and owner approval remains false.
+> **HISTORICAL_SUPERSEDED:** Retained BW10 owner-review evidence. The current RC4 and submission records are `README.md`, `JUDGE_GUIDE.md`, `build-week/devpost/owner-review-draft.md`, and `build-week/video/jobpilot-final-rc4-youtube-metadata.md`.
+
+**Historical decision boundary:** `FINAL_DECISION=GO_BUILD_WEEK_OWNER_REVIEW_PACKAGE_READY` was recorded before the authentic-study and RC4 reconciliation. This non-final development release candidate had not been submitted to Devpost, the video had not been made Public, and owner approval remained false.
 
 ## Review links and release state
 

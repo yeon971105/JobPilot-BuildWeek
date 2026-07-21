@@ -1,4 +1,6 @@
 {
+  "historicalStatus": "HISTORICAL_SUPERSEDED",
+  "supersededBy": "build-week/video/jobpilot-final-rc4-youtube-metadata.md and the JP-BW15C reconciliation audit",
   "artifact": "JP-BW14B final readiness audit",
   "auditedAt": "2026-07-20T16:41:24.0241261-07:00",
   "decision": "GO_VERCEL_PUBLIC_APPROVED_COMMIT_VERIFIED",
@@ -23,8 +25,7 @@
       "build-week/bw14b/",
       "build-week/devpost/owner-review-draft.md",
       "build-week/devpost/owner-review-form-values.json",
-      "build-week/video/jobpilot-final-product-youtube-metadata.md",
-      "build-week/video/jobpilot-owner-polish-youtube-metadata.md"
+      "build-week/video/jobpilot-final-rc4-youtube-metadata.md"
     ],
     "staleChatGptSiteReferences": 0,
     "filesReferencingVercelPublicUrl": 15,

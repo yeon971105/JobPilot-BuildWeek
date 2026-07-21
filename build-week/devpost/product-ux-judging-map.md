@@ -1,5 +1,7 @@
 # Product UX Judging Map
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 mapping. The current map is `build-week/devpost/owner-review-judging-map.md`.
+
 | Judge question | Product evidence |
 | --- | --- |
 | Is the problem clear? | Landing: “Know why a job fits.” and an immediate no-login demo. |

@@ -1,6 +1,8 @@
 # JP-BW11R final-product owner-review package
 
-This is a non-final release candidate for explicit owner approval. Devpost is not submitted, the video is not Public, no final tag exists, and `ownerApproved` remains `false`.
+> **HISTORICAL_SUPERSEDED:** Retained BW11R owner-review evidence. The current RC4 and submission records are `README.md`, `JUDGE_GUIDE.md`, `build-week/devpost/owner-review-draft.md`, and `build-week/video/jobpilot-final-rc4-youtube-metadata.md`.
+
+This was a non-final release candidate for explicit owner approval. Devpost was not submitted, the video was not Public, no final tag existed, and `ownerApproved` remained `false`.
 
 ## Review surfaces
 

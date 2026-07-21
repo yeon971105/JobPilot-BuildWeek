@@ -1,4 +1,6 @@
 {
+  "historicalStatus": "HISTORICAL_SUPERSEDED",
+  "supersededBy": "build-week/codex-session.json and build-week/devpost/owner-review-draft.md",
   "schemaVersion": "jobpilot.codex-handoff.v1",
   "identity": {
     "project": "JobPilot",

@@ -1,12 +1,12 @@
 # JobPilot owner-review judging map
 
-| Official criterion | Claim | Judge route/action | Evidence | Current weakness | Exact clearance condition |
+| Official criterion | Claim | Public judge action | Evidence | Current limitation | Exact boundary |
 | --- | --- | --- | --- | --- | --- |
-| Technological implementation | Exact deterministic scoring is independently reproducible | Northstar → Score Receipt → Verify → tamper | V2.2 proof suite, web/API/CLI verifier, receipt artifacts | None material locally | Public receipt journey passes |
-| Technological implementation | AI roles are bounded and inspectable | Trust Lab → Gemma and GPT tabs | Provider tests, prepared manifests, zero-API audit | Public hosting not yet certified | Provider routes and network audit pass publicly |
-| Design | Three concise next decisions lead to progressive proof | Landing → Today’s Shortlist → Job Detail | UX tests, responsive captures, accessibility evidence | Public external QA pending | Four viewports pass with zero overflow/errors |
-| Design | Employer handoff preserves control | Open destination → return → mark Preparing | Destination-state audit and tracker tests | Public journey pending | No submission and no automatic Applied transition |
-| Potential impact | JobPilot addresses application decision fatigue | Landing story → shortlist → local tracker | Complete decision loop and frozen reach snapshot | Human study has 0 participants | Five authentic paired sessions before any public metric |
-| Quality of idea | Discovery, evidence, verification, handoff, and tracking are one inspectable system | Judge Tour and Trust Lab | Product routes, receipts, prepared critique, no auto-apply | Account URLs pending | Deployment/video/draft links verified |
+| Technological implementation | Deterministic scoring is independently reproducible | Harbor Score Proof, then Receipt Verifier and tamper test | V2.2 proof suite; web/API/CLI receipt verifier | Public demo uses synthetic roles | Receipt must be `FULLY_REPRODUCED`; a tampered receipt must be `INVALID` |
+| Technological implementation | Model responsibilities are bounded and inspectable | Trust Lab, Gemma and GPT disclosure | Prepared artifact manifests, provider tests, zero-API contract | Public review uses cached preparation | GPT-5.6 Sol is prepared through Codex and never calculates Fit Score |
+| Design | Three concise next decisions lead to progressive proof | Landing, For You, Harbor detail | Responsive public QA, accessibility checks, visible shortlist rationale | The demo is synthetic | No hidden shortlist score; no overflow or console error in certified public QA |
+| Design | Employer handoff preserves control | Open synthetic destination, return, inspect Tracker | Destination-state and tracker tests | No real application form is offered | No submission and no automatic Applied transition |
+| Potential impact | JobPilot reduces application decision friction | Trust Lab directional study disclosure | Five authentic moderated participants; aggregate-only report | Fixed order and small n=5 sample | Report as directional usability evidence only, with the exact limitation beside metrics |
+| Quality of the idea | Discovery, evidence, verification, handoff, and tracking form one inspectable loop | Landing through Tracker | Product routes, receipts, prepared critique, no-auto-apply contract | Coverage is processed-portfolio, not complete-market | Do not claim hiring prediction, complete coverage, or live GPT runtime |
 
 No judge score is assigned or implied.

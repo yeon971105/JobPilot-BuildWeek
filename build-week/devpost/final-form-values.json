@@ -1,4 +1,6 @@
 {
+  "historicalStatus": "HISTORICAL_SUPERSEDED",
+  "supersededBy": "build-week/devpost/owner-review-form-values.json",
   "schemaVersion": "jobpilot.devpost-final.v1",
   "projectName": "JobPilot — Evidence-First AI Job Search",
   "tagline": "Know why a job fits before you apply.",

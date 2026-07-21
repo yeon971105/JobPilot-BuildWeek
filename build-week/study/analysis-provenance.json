@@ -16,5 +16,5 @@
     "confidenceIntervalsReported": false,
     "statisticalSignificanceTested": false
   },
-  "claimBoundary": "Directional usability evidence from a fixed sample of five. No confidence interval or statistical-significance test is reported; the fixed condition order may contribute an order effect."
+  "claimBoundary": "Directional usability evidence from a fixed sample of five. All participants completed the traditional condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference. No confidence interval or statistical-significance test is reported."
 }

@@ -1,5 +1,7 @@
 # Application-Fatigue Impact RC Judging Map
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 mapping. The current map is `build-week/devpost/owner-review-judging-map.md`.
+
 | Criterion | Judge action | Evidence |
 | --- | --- | --- |
 | Potential impact | Open `/demo/shortlist`, then `/about/coverage` | Three transparent next decisions plus current public-safe aggregate production reach |

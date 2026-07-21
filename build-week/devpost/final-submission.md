@@ -1,5 +1,7 @@
 # JobPilot — Evidence-First AI Job Search
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 draft evidence. Do not use for the current submission; use `build-week/devpost/owner-review-draft.md`.
+
 **Tagline:** Know why a job fits before you apply.
 
 **Category:** Apps for Your Life

@@ -1,5 +1,7 @@
 # Judging criteria mapping
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 mapping. The current map is `build-week/devpost/owner-review-judging-map.md`.
+
 | Criterion | Evidence |
 | --- | --- |
 | Technological Implementation | Deterministic 100-point score reconciliation; versioned provider modes; Responses API Structured Outputs; grounding validation of requirement/evidence IDs; timeout, quota, health endpoint, tests. |

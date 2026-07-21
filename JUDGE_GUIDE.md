@@ -1,78 +1,61 @@
-# JobPilot Judge Guide — Impact RC
+# JobPilot Judge Guide
 
-## Final competition video and public demo
+**Public demo:** <https://job-pilot-build-week.vercel.app>
 
-The sole owner-approved competition video is `build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4` (SHA-256 `7b9c572379f0c131395aca8abfc739ac05b1d124393a9c8e8c6b881667aa1c32`). Its approved RC3 picture and AAC narration are preserved; English captions are burned into the image for guaranteed visibility, and the English soft-subtitle track remains available.
+**Repository:** <https://github.com/yeon971105/JobPilot-BuildWeek>
 
-Review the matching public demo at <https://job-pilot-build-week.vercel.app>. The video has not been uploaded to YouTube and this Devpost entry remains a draft. The primary Codex `/feedback` Session ID is `019f7382-0ef9-7d10-bf26-d6e5615924dd`.
+**Codex `/feedback` Session ID:** `019f7382-0ef9-7d10-bf26-d6e5615924dd`
 
-## JP-BW13 authentic impact review
+JobPilot is a solo project by Jewon Yeon. The public review contains synthetic roles and a synthetic profile; it needs no account, API key, Ollama installation, real resume, or local file.
 
-Open `/demo/trust#directional-usability-study` or `/about/build-week#directional-usability-study`. The aggregate-only section shows median task time, factual accuracy, and clarity for five authentic participants. **View methodology** explains the synthetic roles, factual questions, decision alignment, anonymous local collection, and the fixed-order limitation. The public aggregate artifact is `build-week/bw13/authentic-study-aggregate.json`; participant CSVs are intentionally unlinked and untracked.
+## Primary public path: under three minutes
 
-All participants completed the traditional posting condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference. Treat the results as directional usability evidence, not causal proof or hiring-outcome evidence.
+1. **Landing — about 15 seconds**
+   Open <https://job-pilot-build-week.vercel.app>. Read the application-fatigue story and click **See My Best Matches**. Observe the public, no-login decision path rather than an endless job feed.
 
-## JP-BW12 product review focus
+2. **For You — about 20 seconds**
+   Open <https://job-pilot-build-week.vercel.app/demo/shortlist>. Observe exactly three roles, the visible **Why these three?** rationale, and the explicit shortlist policy. The shortlist has no hidden combined score.
 
-Open Northstar and choose **Application Strategy**. The default review is intentionally concise, uses human capability and evidence names, and keeps provenance, limitations, questions, and technical references collapsed. Primary-UI internal IDs and raw enums are zero. In Study Preview, complete the two-role flow and verify that Preview CSV and JSON remain visible at 320×700 and are labeled as excluded from participant evidence.
+3. **Harbor Job Detail — about 25 seconds**
+   Open <https://job-pilot-build-week.vercel.app/demo/jobs/harbor-product-data-analyst>. Observe the plain-language decision, work-mode context, required versus preferred evidence, and direct synthetic employer destination language.
 
-The primary path requires no login, key, database, Ollama installation, browser location permission, or real resume. All interactive judge roles and employer destinations are synthetic.
+4. **Application Strategy — about 20 seconds**
+   From Harbor Job Detail, open **Application Strategy**. Observe a concise, evidence-grounded plan with limitations and provenance available on demand. The prepared GPT-5.6 Sol output is not live inference and does not calculate Fit Score.
 
-## Fast product path: about 90 seconds
+5. **Score Proof — about 20 seconds**
+   From Harbor Job Detail, choose **Score Proof**. Observe the deterministic score evidence and the link to independent receipt verification.
 
-1. Open `/` and read the neutral `DISCOVER → PRIORITIZE → UNDERSTAND → APPLY → TRACK` comparison.
-2. Choose **See Today's 3 Roles**.
-3. Confirm exactly three cards explain why they were selected and expose Fit Score, Evidence Quality, blocker state, distance or Remote, freshness, strongest match, biggest gap, and Apply Priority.
-4. Open the first role's evidence, then return.
-5. Choose **Apply on Employer Site ↗** and confirm the verified fictional destination opens in a safe new tab with no application form.
-6. Save the role, open Tracker, and confirm the role is Saved—not Applied.
+6. **Receipt Verifier — about 20 seconds**
+   Open <https://job-pilot-build-week.vercel.app/demo/verify-receipt>. Verify the bundled receipt to see `FULLY_REPRODUCED`, then change a displayed score value to see `INVALID`.
 
-No hidden shortlist score exists. The exact policy appears below the cards. Distance, work mode, and freshness do not change technical Fit Score.
+7. **Trust Lab — about 20 seconds**
+   Open <https://job-pilot-build-week.vercel.app/demo/trust>. Observe the separate responsibilities of Gemma, deterministic AI Fit V2.2, prepared GPT-5.6 Sol artifacts, and the directional usability-study disclosure.
 
-## Impact and production-reality path: 2–3 minutes
+8. **Tracker — about 15 seconds**
+   Open <https://job-pilot-build-week.vercel.app/demo/tracker>. Observe browser-local planning state and explicit user-controlled progress. JobPilot never submits an application or automatically marks one Applied.
 
-1. Open `/about/coverage`.
-2. Confirm the required disclosure distinguishes synthetic judge roles from aggregate evidence in the larger acquisition system.
-3. Inspect active jobs, California jobs, Bay Area and Los Angeles County memberships, active/complete sources, and the separately labeled recorded, reachable, and verified destination evidence.
-4. Confirm that only `APPLY_DESTINATION_VERIFIED` says `Apply on Employer Site ↗`; recorded or reachable destinations say `Open Original Posting ↗`, and pending/unavailable states expose no link.
-5. Confirm the page says the snapshot covers the processed catalog—not every role in a market.
-6. Open `/about/build-week` and inspect the five `Observed → Reproduced → Repaired → Regression tested` proof moments.
+Total target: **under three minutes**.
 
-## Trust and technical path: 4–6 minutes
+## Authentic moderated directional usability evidence
 
-1. Open `/demo/trust`; inspect the five-stage user journey and the neutral fragmented-search comparison.
-2. Open **What GPT-5.6 Contributed**. Confirm four prepared artifacts show generation surface, model family, three hashes, valid evidence IDs, API requests `0`, and model final score `No`.
-3. Read the concrete application-strategy and challenge examples.
-4. Open `/demo/jobs/northstar-applied-ai-solutions-engineer`; inspect required/preferred evidence, relevant experience, practical constraints, and Score Proof.
-5. Choose **Verify This Receipt**. Bundled status must be `FULLY_REPRODUCED`; a tampered displayed score must become `INVALID`.
-6. Confirm the model never generates or mutates the score.
+The Trust Lab and [Build Week page](https://job-pilot-build-week.vercel.app/about/build-week) show aggregate-only evidence from `jobpilot-decision-utility.v2`: five authentic, moderated participants, five accepted files, zero rejected files, ten human rows, and zero fabricated or dry-run rows counted as people.
 
-## Isolated study-harness review
+The traditional posting median task time was 39 seconds and the JobPilot median was 18 seconds. Factual accuracy was 75% and 100%, confidence was 3.8 and 6.0 out of 7, and clarity was 3.6 and 6.2 out of 7.
 
-The study route is intentionally not in primary product navigation. Open `/study/decision-utility` directly.
+All participants completed the traditional condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference.
 
-1. Read the consent screen; confirm no session ID or timer begins until **I consent and begin** is chosen.
-2. Confirm the anonymous participant ID, task timer, and counterbalanced Raw Posting / JobPilot order.
-3. Complete required-experience, preferred-experience, work-mode, biggest-gap, decision, confidence, and transparency fields.
-4. Continue to the second condition and export local CSV/JSON.
-5. Delete and reset; confirm local storage clears and consent is required again.
-6. Confirm no name, email, resume, demographics, employment status, or health data is requested.
+Role assignment was counterbalanced: the two synthetic roles were assigned across conditions in different orders. Condition order was not counterbalanced. Every participant completed Traditional first and JobPilot second. Treat the `n=5` result as authentic, moderated, directional usability evidence, not causal proof, population inference, statistical significance, or hiring-outcome evidence. Participant CSVs remain local and untracked.
 
-Actual participant count is `5`; status is `COMPLETE_MINIMUM`. Participant-level exports and the combined CSV remain local and untracked. Preview, Pilot, and browser-test Final rows remain excluded.
+## Technical and trust checks
 
-## Truthful claims
+- **Gemma 4 12B** is the primary local semantic model. Public review uses cached preparation and does not contact Ollama.
+- **Deterministic AI Fit V2.2** owns every numeric score, micro-point allocation, experience rule, and Score Receipt.
+- **GPT-5.6 Sol** contributed four prepared, hash-bound strategy and critique artifacts through Codex. It is not a live public-runtime model and cannot change a score.
+- **OpenAI runtime use:** 0 API requests and $0 runtime cost.
+- **Safety:** the public demo uses synthetic data, public resume upload is disabled, Fit Score is not a hiring probability, and JobPilot never auto-applies.
 
-- Public candidate, roles, employer destinations, captures, and media are synthetic.
-- The public-safe production snapshot reports aggregates only and claims processed-portfolio coverage, not complete market coverage.
-- Gemma 4 12B is primary; deterministic code owns every score and receipt.
-- GPT-5.6 artifacts are prepared, hash-bound, and provenance-verified—not live API inference.
-- OpenAI API requests: `0`; OpenAI API cost: `$0`.
-- Fit Score is not a hiring probability; independent hiring-outcome calibration is unavailable.
-- JobPilot never submits an application.
-- Authentic Study evidence is aggregate-only, directional, n=5, and carries the fixed-order limitation beside the metrics. No participant result was fabricated.
+## Final video and submission status
 
-## Owner-review preview
+The sole competition video is `build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4`: 173.133333 seconds, 1920x1080 H.264/AAC, burned English captions, and SHA-256 `7b9c572379f0c131395aca8abfc739ac05b1d124393a9c8e8c6b881667aa1c32`.
 
-Public review demo: <https://job-pilot-build-week.vercel.app>.
-
-This is a development RC. Do not deploy, publish the video, submit Devpost, or create a final release tag without explicit owner approval.
+The video has not been uploaded to YouTube. The Devpost material is an owner-review draft and has not been submitted. No final submitted tag exists.

@@ -24,4 +24,4 @@ Apply / Review / Skip agreement: 20%.
 
 Confidence intervals and statistical-significance testing: **Not run for this fixed n=5 directional sample**.
 
-Directional usability evidence from a fixed sample of five. No confidence interval or statistical-significance test is reported; the fixed condition order may contribute an order effect.
+Directional usability evidence from a fixed sample of five. All participants completed the traditional condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference. No confidence interval or statistical-significance test is reported.

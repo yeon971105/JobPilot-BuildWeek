@@ -1,4 +1,6 @@
 {
+  "historicalStatus": "HISTORICAL_SUPERSEDED",
+  "supersededBy": "build-week/devpost/owner-review-form-values.json",
   "projectName": "JobPilot",
   "tagline": "Find the roles worth your time.",
   "category": "Apps for Your Life",

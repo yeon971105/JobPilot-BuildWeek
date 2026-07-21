@@ -4,7 +4,9 @@
 
 Five consenting adults completed a moderated comparison using two synthetic roles: Analytics Operations Engineer and Data Enablement Engineer. Every participant reviewed a traditional posting first and the JobPilot presentation second. Assignment groups counterbalanced which role appeared in each condition, and each participant saw a different role per condition to prevent same-role carryover.
 
-Condition order was not counterbalanced. Practice or order effects may contribute to the observed difference, so the evidence is directional rather than causal.
+All participants completed the traditional condition first and JobPilot second. Different roles prevented same-role carryover, but practice or order effects may contribute to the observed difference.
+
+Condition order was not counterbalanced, so the evidence is directional rather than causal.
 
 ## Measures
 

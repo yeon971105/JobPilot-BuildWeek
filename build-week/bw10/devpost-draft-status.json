@@ -1,15 +1,16 @@
 {
-  "schemaVersion": "jobpilot.bw10.devpost-draft-status.v1",
-  "checkedAt": "2026-07-18T12:30:00-07:00",
+  "schemaVersion": "jobpilot.bw15c.devpost-draft-status.v1",
+  "checkedAt": null,
+  "checkTimeNote": "No authenticated Devpost save or timestamp is claimed.",
   "draftUrl": null,
   "draftIdentifier": null,
   "lastSavedAt": null,
-  "populatedFieldCount": 28,
-  "missingFieldCount": 3,
-  "unresolvedAccountFields": ["authenticated Devpost team/profile label"],
+  "localDraftPath": "build-week/devpost/owner-review-draft.md",
+  "populatedFieldCount": 35,
+  "missingFieldCount": 1,
+  "unresolvedAccountFields": ["actual YouTube URL after owner upload and logged-out playback verification"],
   "authenticatedAccess": false,
-  "accountCheckResult": "Official draft URL redirected to Devpost registration/login; no credentials were requested or entered.",
   "submitted": false,
-  "status": "LOCAL_DRAFT_COMPLETE_DEVPOST_NOT_AUTHENTICATED",
-  "hold": "HOLD_BUILD_WEEK_DEVPOST_ACCOUNT_ACTION"
+  "status": "LOCAL_DRAFT_RECONCILED_NOT_SUBMITTED",
+  "hold": "HOLD_BUILD_WEEK_YOUTUBE_UPLOAD_ACTION"
 }

@@ -1,5 +1,7 @@
 # Hybrid Judging Map
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 mapping. The current map is `build-week/devpost/owner-review-judging-map.md`.
+
 | Judging question | Product proof |
 |---|---|
 | Is the problem clear? | Landing headline and opaque-score problem statement |

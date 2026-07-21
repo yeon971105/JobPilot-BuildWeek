@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "jobpilot.bw15c.devpost-human-voice-audit.v1",
+  "source": "build-week/devpost/owner-review-draft.md",
+  "method": "deterministic heading, banned-term, paragraph-length, and punctuation review",
+  "requiredSections": {
+    "Inspiration": true,
+    "What it does": true,
+    "How it works": true,
+    "How Codex was used": true,
+    "How GPT-5.6 was used": true,
+    "Technical architecture": true,
+    "Challenges": true,
+    "Accomplishments": true,
+    "What I learned": true,
+    "Directional usability evidence": true,
+    "Limitations": true,
+    "What is next": true
+  },
+  "bannedTerms": ["revolutionary", "cutting-edge", "game-changing", "AI-powered"],
+  "bannedTermMatches": [],
+  "paragraphsOver95Words": [],
+  "emDashCount": 0,
+  "unnaturalParagraphs": [],
+  "result": "PASS"
+}

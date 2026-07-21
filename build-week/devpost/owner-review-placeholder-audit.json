@@ -1,13 +1,15 @@
 {
-  "schemaVersion": "jobpilot.bw10.devpost-placeholder-audit.v1",
-  "auditedAt": "2026-07-18T13:55:00-07:00",
-  "narrativeFields": 31,
-  "verifiedNarrativeFieldsPopulated": 28,
+  "schemaVersion": "jobpilot.bw15c.devpost-placeholder-audit.v1",
+  "auditedAt": null,
+  "auditTimeNote": "No new timestamp was invented during documentation reconciliation.",
   "unresolvedVerifiedOnlyFields": [
-    { "field": "unlistedVideoUrl", "value": null, "reason": "Authenticated upload and logged-out access test pending" },
-    { "field": "codexFeedbackSessionId", "value": null, "reason": "Exact /feedback action pending" },
-    { "field": "teamInformation", "value": "review required", "reason": "Authenticated account label must be confirmed" }
+    {
+      "field": "unlistedVideoUrl",
+      "value": "PENDING_OWNER_UPLOAD",
+      "reason": "The approved RC4 video has not yet been uploaded and verified while logged out. The placeholder is permitted only in this local owner-review draft."
+    }
   ],
+  "ownerConfirmedFields": ["project identity", "solo team", "public demo URL", "repository URL", "Codex feedback Session ID", "study aggregate"],
   "fabricatedSessionIds": 0,
   "fabricatedDeploymentUrls": 0,
   "fabricatedVideoUrls": 0,
@@ -17,5 +19,5 @@
   "liveGptClaims": 0,
   "apiRuntimeClaims": 0,
   "finalLookingFabricatedPlaceholders": 0,
-  "status": "PASS_EXPLICIT_NULLS_ONLY"
+  "status": "PASS_ONLY_AUTHENTIC_YOUTUBE_URL_PENDING"
 }

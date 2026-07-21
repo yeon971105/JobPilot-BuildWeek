@@ -1,6 +1,8 @@
 # JP-BW13 Owner Review Package
 
-Owner approval remains **false**. Devpost was not submitted, and the video was not uploaded or made Public.
+> **HISTORICAL_SUPERSEDED:** Retained BW13 owner-review evidence. The current RC4 and submission records are `README.md`, `JUDGE_GUIDE.md`, `build-week/devpost/owner-review-draft.md`, and `build-week/video/jobpilot-final-rc4-youtube-metadata.md`.
+
+Owner approval remained **false** at this BW13 checkpoint. Devpost was not submitted, and the video was not uploaded or made Public.
 
 ## Review surfaces
 

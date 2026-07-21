@@ -1,5 +1,7 @@
 # JobPilot — Know why a job fits
 
+> **HISTORICAL_SUPERSEDED:** Retained pre-RC4 draft evidence. Do not use for the current submission; use `build-week/devpost/owner-review-draft.md`.
+
 Most job tools show a score before they show a reason. JobPilot turns a fictional role and candidate evidence into an inspectable career decision: required versus preferred qualifications, relevant experience, practical constraints, exact point allocation, and a downloadable Score Receipt. The redesigned Overview shows the decision immediately, while Evidence, Experience, and Score Proof keep full transparency one click away.
 
 Gemma 4 12B is the primary semantic model. Deterministic code—not a model—calculates AI Fit V2.2, reconciles 100 visible points, keeps hidden adjustments at zero, and hashes the receipt. GPT-5.6 Terra is optional heavy reasoning for explicit strategy and critique; the no-key public demo uses clearly labeled prepared strategy output, and GPT-5.6 never owns the score.

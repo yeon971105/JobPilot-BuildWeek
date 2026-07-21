@@ -1,4 +1,6 @@
 {
+  "historicalStatus": "HISTORICAL_SUPERSEDED",
+  "supersededBy": "build-week/video/jobpilot-vercel-elevenlabs-final-rc4-metadata.json",
   "schemaVersion": "jobpilot.bw13.video-decision.v1",
   "decision": "RETAIN_OWNER_POLISH_RC1",
   "path": "build-week/video/jobpilot-owner-polish-rc1.mp4",

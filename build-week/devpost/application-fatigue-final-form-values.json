@@ -1,4 +1,6 @@
 {
+  "historicalStatus": "HISTORICAL_SUPERSEDED",
+  "supersededBy": "build-week/devpost/owner-review-form-values.json",
   "name": "JobPilot",
   "tagline": "Discover, prioritize, understand, apply, and track—without the endless search.",
   "category": ["Apps for Your Life"],
