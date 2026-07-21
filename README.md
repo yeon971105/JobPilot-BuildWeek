@@ -12,7 +12,7 @@ Primary UI now resolves machine identifiers through one display-language boundar
 
 The Study auto-saves locally and exposes phase-specific CSV and JSON downloads above the fold. Preview, Pilot, and browser-test Final exports are excluded from participant analysis. Factual accuracy covers four role facts; Apply / Review Further / Skip is reported separately as decision alignment.
 
-Owner-polish video: `build-week/video/jobpilot-owner-polish-rc1.mp4` (170 seconds, H.264, AAC English narration, embedded English captions, no Study scenes). Owner approval remains false.
+Final competition video: `build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4` (173.133333 seconds; H.264 video; AAC English narration; burned captions plus an embedded English subtitle track; SHA-256 `7b9c572379f0c131395aca8abfc739ac05b1d124393a9c8e8c6b881667aa1c32`). It is the sole approved competition video and matches the public demo at <https://job-pilot-build-week.vercel.app>.
 
 Job search fatigue comes from repeating the same discovery work, opening postings one by one, manually comparing a resume, and still not knowing which application deserves the next hour. JobPilot connects the decision loop:
 
@@ -151,7 +151,9 @@ The JP-BW11R certificate covers 28 required states and a 40-check route–viewpo
 - [Architecture](ARCHITECTURE.md), [privacy](PRIVACY.md), and [zero-API GPT-5.6](ZERO_API_GPT56.md)
 - `build-week/bw8/` — production aggregates, provenance, validation, captures, and release evidence
 - `build-week/study/` — frozen decision-utility kit, status `READY_NOT_RUN`
-- `build-week/video/jobpilot-final-product-rc1.mp4` — current 175-second final-product RC video with H.264 video, AAC English narration, and embedded English captions
+- `build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4` — sole owner-approved competition video, with permanently visible burned captions
+- `build-week/video/jobpilot-vercel-elevenlabs-final-rc4-metadata.json` — public-safe final video metadata and Vercel provenance
+- `build-week/video/jobpilot-vercel-elevenlabs-final-rc4-frame-audit.json` — public-safe frame and right-edge review
 
 ## Development-phase boundary
 
@@ -169,4 +171,4 @@ The command rejects a dirty worktree or UI-source drift, validates the current c
 
 ## Codex `/feedback` status
 
-The representative Build Week task is `Finalize JobPilot product UX` (`019f7382-0ef9-7d10-bf26-d6e5615924dd`). It covers the concentrated JP-BW6–JP-BW10 product, proof, prepared-review, QA, and release sequence, and the four prepared GPT-5.6 artifacts bind to this thread ID. The required `/feedback` Session ID is intentionally `null` until the owner runs `/feedback` in that exact task; no ID is fabricated.
+The representative Build Week task is `Finalize JobPilot product UX`. Its primary Codex `/feedback` Session ID is `019f7382-0ef9-7d10-bf26-d6e5615924dd`; it covers the concentrated JP-BW6–JP-BW10 product, proof, prepared-review, QA, and release sequence, and the four prepared GPT-5.6 artifacts bind to that task.

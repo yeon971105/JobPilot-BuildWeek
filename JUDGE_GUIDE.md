@@ -1,5 +1,11 @@
 # JobPilot Judge Guide — Impact RC
 
+## Final competition video and public demo
+
+The sole owner-approved competition video is `build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4` (SHA-256 `7b9c572379f0c131395aca8abfc739ac05b1d124393a9c8e8c6b881667aa1c32`). Its approved RC3 picture and AAC narration are preserved; English captions are burned into the image for guaranteed visibility, and the English soft-subtitle track remains available.
+
+Review the matching public demo at <https://job-pilot-build-week.vercel.app>. The video has not been uploaded to YouTube and this Devpost entry remains a draft. The primary Codex `/feedback` Session ID is `019f7382-0ef9-7d10-bf26-d6e5615924dd`.
+
 ## JP-BW13 authentic impact review
 
 Open `/demo/trust#directional-usability-study` or `/about/build-week#directional-usability-study`. The aggregate-only section shows median task time, factual accuracy, and clarity for five authentic participants. **View methodology** explains the synthetic roles, factual questions, decision alignment, anonymous local collection, and the fixed-order limitation. The public aggregate artifact is `build-week/bw13/authentic-study-aggregate.json`; participant CSVs are intentionally unlinked and untracked.
@@ -67,6 +73,6 @@ Actual participant count is `5`; status is `COMPLETE_MINIMUM`. Participant-level
 
 ## Owner-review preview
 
-Expected local preview: `http://127.0.0.1:3211/`.
+Public review demo: <https://job-pilot-build-week.vercel.app>.
 
 This is a development RC. Do not deploy, publish the video, submit Devpost, or create a final release tag without explicit owner approval.

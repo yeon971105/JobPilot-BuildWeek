@@ -12,7 +12,7 @@ JobPilot now translates all machine IDs and enums before they reach primary UI. 
 
 The Decision Utility Study auto-saves locally and exports anonymous phase-labeled CSV and JSON. Factual accuracy and decision alignment are separate. Preview, Pilot, and browser-test Final exports are excluded from participant analysis. Five authentic Final sessions passed validation; participant-level files remain local and untracked.
 
-Owner-review video: `build-week/video/jobpilot-owner-polish-rc1.mp4`. Unlisted URL remains pending authenticated upload. This text remains a draft and must not be submitted before owner approval.
+Final competition video: `build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4` (SHA-256 `7b9c572379f0c131395aca8abfc739ac05b1d124393a9c8e8c6b881667aa1c32`). RC4 preserves the approved Vercel visual sequence and ElevenLabs narration, and burns the approved English captions directly into the image. The unlisted YouTube URL remains pending authenticated upload. This text remains a draft and must not be submitted before owner approval.
 
 Status: **Draft only. Not submitted.**
 
@@ -64,7 +64,7 @@ The public runtime makes **0 OpenAI API requests** and incurs **$0 OpenAI API co
 
 Codex built and regression-tested the product across the Build Week sequence, including the Golden Path, deterministic scorer, nearby discovery, private resume boundary, Score Receipt Verifier, progressive proof disclosure, destination trust states, public-safe coverage freeze, Decision Utility harness, and release evidence.
 
-The public defect timeline shows five concrete `Observed → Reproduced → Repaired → Regression tested` moments: work-mode interpretation, scoring-budget allocation, receipt verification, the Tailwind production pipeline, and dense Job Detail UX. The representative Codex task is identified in the owner package; the required `/feedback` Session ID is not fabricated and remains an exact owner action until the command is available.
+The public defect timeline shows five concrete `Observed → Reproduced → Repaired → Regression tested` moments: work-mode interpretation, scoring-budget allocation, receipt verification, the Tailwind production pipeline, and dense Job Detail UX. The representative Codex task is identified in the owner package; its primary `/feedback` Session ID is `019f7382-0ef9-7d10-bf26-d6e5615924dd`.
 
 ## Production reality
 
@@ -112,14 +112,15 @@ During Build Week, JobPilot extended the existing acquisition and scoring founda
 
 ## Technologies
 
-Codex, GPT-5.6 (`gpt-5.6-sol`, prepared), Gemma 4 12B (`gemma4:12b`), deterministic TypeScript scoring, Next.js 16.2.6, React 19, TypeScript, Tailwind CSS 4, Ollama for the local edition, Vitest, Playwright-compatible browser QA, SHA-256, CSV, JSON, and OpenAI Sites for the owner-review environment.
+Codex, GPT-5.6 (`gpt-5.6-sol`, prepared), Gemma 4 12B (`gemma4:12b`), deterministic TypeScript scoring, Next.js 16.2.6, React 19, TypeScript, Tailwind CSS 4, Ollama for the local edition, Vitest, Playwright-compatible browser QA, SHA-256, CSV, JSON, and the Vercel public-review deployment.
 
 ## Links and testing
 
 - Repository: https://github.com/yeon971105/JobPilot-BuildWeek
 - Public owner-review URL: https://job-pilot-build-week.vercel.app
+- Final competition video: `build-week/video/jobpilot-vercel-elevenlabs-final-rc4-burned-captions.mp4` (owner-approved; YouTube upload still pending)
 - Unlisted YouTube URL: pending authenticated upload and logged-out verification
-- Codex `/feedback` Session ID: pending exact action on the selected representative task
+- Codex `/feedback` Session ID: 019f7382-0ef9-7d10-bf26-d6e5615924dd
 
 Testing path: open the landing page, choose **See My Best Matches**, read **Why these three?**, inspect Northstar’s Overview, Evidence, Experience, Score Proof, and Technical Ledger, verify its receipt, tamper with the receipt, open the synthetic employer destination, return and explicitly move a saved role, then open Trust Lab. The Study Preview route is isolated at `/study/decision-utility?mode=preview`; Preview and Pilot sessions are excluded from human evidence.
 
