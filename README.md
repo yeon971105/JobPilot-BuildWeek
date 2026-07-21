@@ -92,7 +92,12 @@ Run the public-safe validation path with:
 ```powershell
 npm run typecheck
 npm run lint
+# The suite's local-Gemma adapter case uses an injected mock fetcher only; this
+# test-only flag does not start or contact Ollama and is reset immediately.
+$env:OLLAMA_ENABLED = "true"
 npm test
+
+$env:OLLAMA_ENABLED = "false"
 npm run test:css-pipeline
 npm run validate:providers
 npm run verify:receipt -- build-week/bw7/receipts/northstar-demo-receipt.json
