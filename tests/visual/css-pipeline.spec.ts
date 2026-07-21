@@ -46,7 +46,7 @@ async function productionDocument(pathname: string) {
   dom.window.document.head.append(style);
   const ruleStarts = [
     ".flex{",
-    ".absolute{",
+    ".absolute,.sr-only{",
     ".rounded-full{",
     ".bg-\\[\\#173d2d\\]{",
     ".paper-card{",
@@ -76,7 +76,7 @@ describe.skipIf(!baseUrl)("Tailwind v4 production CSS pipeline (run through npm 
     expect(css).toContain(".grid{display:grid}");
     expect(css).toContain(".max-w-7xl");
     expect(css).toContain(".lg\\:grid-cols-");
-    expect(css).toContain(".absolute{position:absolute}");
+    expect(css).toContain(".absolute,.sr-only{position:absolute}");
 
     const evidence = JSON.parse(readFileSync(resolve(root, "build-week/bw13/css-pipeline-results.json"), "utf8")) as BrowserEvidence;
     const cssHash = createHash("sha256").update(css).digest("hex");
