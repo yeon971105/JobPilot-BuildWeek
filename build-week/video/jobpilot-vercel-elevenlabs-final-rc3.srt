@@ -1,0 +1,183 @@
+﻿1
+00:00:01,900 --> 00:00:04,600
+Job searching can feel like a second job,
+
+2
+00:00:04,600 --> 00:00:07,100
+switching sites, rereading requirements,
+
+3
+00:00:07,100 --> 00:00:09,900
+and wondering which application
+deserves your time.
+
+4
+00:00:09,900 --> 00:00:12,950
+JobPilot helps you focus on roles worth pursuing.
+
+5
+00:00:15,440 --> 00:00:19,050
+For You replaces an endless feed
+with three focused choices.
+
+6
+00:00:19,050 --> 00:00:22,750
+Each role shows why it was selected
+using evidence fit, preferences,
+
+7
+00:00:22,750 --> 00:00:25,450
+location, and freshness.
+
+8
+00:00:25,450 --> 00:00:27,550
+The public demo uses synthetic data.
+
+9
+00:00:30,030 --> 00:00:33,850
+Open a role, and the decision comes first.
+
+10
+00:00:33,850 --> 00:00:37,300
+Fit Score, plain-language conclusion,
+strong evidence, attention areas,
+
+11
+00:00:37,300 --> 00:00:41,400
+experience, practical fit,
+and the employer destination.
+
+12
+00:00:41,400 --> 00:00:45,350
+Technical proof stays available when needed.
+
+13
+00:00:47,870 --> 00:00:51,550
+Application Strategy answers what
+to emphasize, prepare, and clarify.
+
+14
+00:00:51,550 --> 00:00:56,550
+GPT-5.6 Sol created this prepared review
+through Codex, not live inference,
+
+15
+00:00:56,550 --> 00:00:59,800
+and it never calculates or changes
+
+16
+00:00:59,800 --> 00:01:02,850
+the deterministic Fit Score.
+
+17
+00:01:05,340 --> 00:01:08,700
+The Evidence view separates strong support,
+
+18
+00:01:08,700 --> 00:01:12,300
+partial support, missing evidence,
+and items needing review.
+
+19
+00:01:12,300 --> 00:01:15,350
+Capability names stay readable,
+
+20
+00:01:15,350 --> 00:01:17,850
+while exact proof remains available
+on demand.
+
+21
+00:01:20,300 --> 00:01:23,300
+Score Proof shows the 100-point contract.
+
+22
+00:01:23,300 --> 00:01:26,700
+Deterministic AI Fit V2.2 calculates every score,
+
+23
+00:01:26,700 --> 00:01:29,700
+while the Technical Ledger preserves exact arithmetic
+
+24
+00:01:29,700 --> 00:01:31,350
+with zero hidden adjustments.
+
+25
+00:01:33,830 --> 00:01:36,500
+Every Score Receipt is independently verifiable.
+
+26
+00:01:36,500 --> 00:01:39,200
+A valid receipt fully reproduces the score,
+
+27
+00:01:39,200 --> 00:01:41,850
+while a tampered receipt becomes invalid.
+
+28
+00:01:44,310 --> 00:01:47,600
+JobPilot opens the employer
+destination deliberately.
+
+29
+00:01:47,600 --> 00:01:52,400
+It never fills forms, sends resumes,
+redirects, or submits applications.
+
+30
+00:01:52,400 --> 00:01:55,950
+This public demo uses a fictional employer page.
+
+31
+00:01:58,420 --> 00:02:02,500
+Saving a role updates only browser-local planning.
+
+32
+00:02:02,500 --> 00:02:06,700
+The tracker supports Saved, Interested,
+Preparing, and Applied.
+
+33
+00:02:06,700 --> 00:02:09,950
+Applied is only a planning label.
+
+34
+00:02:09,950 --> 00:02:13,450
+JobPilot never auto-applies.
+
+35
+00:02:15,900 --> 00:02:20,250
+Gemma 4 12B is the primary local semantic model.
+
+36
+00:02:20,250 --> 00:02:24,700
+Deterministic code calculates every Fit Score.
+
+37
+00:02:24,700 --> 00:02:30,300
+GPT-5.6 Sol adds prepared strategy and critique
+through Codex, not live inference.
+
+38
+00:02:30,300 --> 00:02:35,250
+Codex also helped build, debug, repair,
+and test the product.
+
+39
+00:02:35,250 --> 00:02:39,150
+OpenAI API requests and cost are zero.
+
+40
+00:02:41,650 --> 00:02:44,250
+Fit Score is not a hiring probability.
+
+41
+00:02:44,250 --> 00:02:47,400
+JobPilot helps people spend less time
+decoding job posts
+
+42
+00:02:47,400 --> 00:02:50,050
+and more time acting on roles that fit.
+
